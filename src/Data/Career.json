@@ -1,0 +1,94 @@
+[
+    {
+        "title": "UI/UX Designer",
+        "experience": "0-1",
+        "qualification": "Computer Science / Related Fields",
+        "jobType": "Internship",
+        "location": "Chennai",
+        "natureOfJob": "On-Site",
+        "description": "UI/UX designers are responsible for creating and improving the visual and interactive elements of digital products such as websites, mobile applications, and software. They work closely with developers, product managers, and other stakeholders to ensure that the product meets the needs of users and the business.UI/UX designers play a crucial role in creating digital products that are intuitive, visually appealing, and functional. They work with cross-functional teams to ensure that the product meets the needs of users and the business, and continuously iterate and improve the design based on feedback and research. If you have a passion for design and a desire to",
+        "responsibilities": [
+            "Conduct research to understand user needs, preferences, and behaviours",
+            "Develop user personas, user flows, and wireframes to guide the design process",
+            "Create high-fidelity mockups and prototypes to demonstrate the look and feel of the product",
+            "Collaborate with developers to ensure that designs are implemented correctly and according to specifications",
+            "Conduct usability testing and gather feedback to continuously improve the product",
+            "Stay up-to-date with design trends, tools, and technologies to ensure the product remains competitive and effective"
+        ],
+        "requiredSkills": [
+            "Bachelor's degree in design or a related field",
+            "Proficiency in design tools such as Sketch, Figma, Adobe Creative Suite, or similar",
+            "Strong understanding of user-centered design principles and practices",
+            "Excellent communication skills and ability to work in a collaborative environment",
+            "Portfolio demonstrating your design work and process",
+            "Understanding of marketing, production, website design, corporate identity, advertisements, and multimedia design",
+            "Great sense of typography, iconography, color theory, and visual composition",
+            "Effectively communicate design concepts and detailed logic both verbally and visually to internal stakeholders",
+            "Ability to work with clients to understand detailed requirements and design complete user experiences that meet client needs and vision",
+            "Extensive experience in using UX design best practices to design solutions, and a deep understanding of mobile-first and responsive design",
+            "A solid grasp of user-centered design (UCD), planning and conducting user research, user testing, A/B testing, rapid prototyping, heuristic analysis, usability and accessibility concerns",
+            "Ability to iterate designs and solutions efficiently and intelligently",
+            "Ability to clearly and effectively communicate design processes, ideas, and solutions to teams and clients",
+            "A clear understanding of the importance of user-centered design and design thinking",
+            "Ability to work effectively in a team setting including synthesizing abstract ideas into concrete design implications",
+            "Be excited about collaborating and communicating closely with teams and other stakeholders via a distributed model, to regularly deliver design solutions for approval",
+            "Be passionate about resolving user pain points through great design",
+            "Be open to receiving feedback and constructive criticism",
+            "Be passionate about all things UX and other areas of design and innovation",
+            "Research and showcase knowledge in the industry’s latest trends and technologies"
+        ],
+        "preferredSkills": [
+            "Knowledge about front-end development technologies such as HTML, CSS, and JavaScript",
+            "Experience with motion graphics and animation",
+            "Knowledge of accessibility standards and best practices",
+            "Familiarity with design thinking and agile development methodologies",
+            "Experience in creating and working with Design Systems"
+        ],
+        "requiredTools": [
+            "Wireframe.cc, Balsamiq, Figjam",
+            "Figma",
+            "Protopie",
+            "Adobe Illustrator",
+            "Affinity Designer 2"
+        ]
+    },
+    {
+        "title": "Brand Manager Marketing (Driving Brand Growth and Innovation)",
+        "experience": "1",
+        "qualification": "MBA Marketing",
+        "jobType": "Full-time",
+        "location": "Chennai",
+        "natureOfJob": "On-Site",
+        "description": "You will play a pivotal role in shaping the company's future and driving its success across multiple markets.",
+        "responsibilities": [
+            "As the Marketing Lead at Stacia Corp, you will be instrumental in developing and executing comprehensive marketing",
+            "strategies that drive brand awareness, generate leads, and accelerate business growth.",
+            "You will have the opportunity to shape our brand identity and position us as a thought leader in our target markets.",
+            "This is a high-impact role with a clear path to becoming the Chief Marketing Officer (CMO) as the company grows.",
+            "Collaborate with the sales team to develop compelling sales collateral, training materials, and sales enablement programs.",
+            "Build and lead a high-performing marketing team, fostering a culture of excellence and innovation."
+        ],
+        "requiredSkills": [
+            "Excellent analytical skills and data-driven decision-making capabilities.",
+            "Experience in B2B and B2C marketing.",
+            "Strong understanding of digital marketing channels and technologies.",
+            "Ability to thrive in a fast-paced, dynamic startup environment.",
+            "Proven track record of developing and executing successful marketing campaigns in a startup environment.",
+            "Strong leadership and communication skills with the ability to inspire and motivate teams.",
+            "Demonstrated ability to think strategically and execute tactically."
+        ],
+        "preferredSkills": [
+            "Ability to generate innovative and original ideas for brand campaigns, messaging, and design.",
+            "Ability to effectively communicate brand messaging to internal and external stakeholders",
+            "In-depth knowledge of digital marketing channels and tactics, including social media, SEO, content marketing, and email marketing.",
+            "Proficiency in data analysis and reporting.",
+            "Lead digital marketing efforts, including SEO, SEM, social media marketing, email marketing, and content marketing.",
+            "Strong project management skills to oversee multiple marketing initiatives simultaneously."
+        ],
+        "requiredTools": [
+            "SEO",
+            "Google Analytics",
+            "Mailchimp"
+        ]
+    }
+]

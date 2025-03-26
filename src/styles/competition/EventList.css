@@ -1,0 +1,156 @@
+.event-list {
+    padding: 20px;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status-filter button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #E5E7EB;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .status-filter button:hover {
+    background-color: #2563EB;
+    color: white;
+  }
+   
+  .department-filter select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #B9BCC7;
+    cursor: pointer;
+  }
+  
+  /* EventCard styles */
+  .event-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #B9BCC7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px; 
+    background: #F8FAFF;
+  }
+  
+  .event-content {
+    flex: 1;
+  }
+  
+  .event-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .event-description {
+    color: #6B6084;
+    margin-bottom: 10px;
+  }
+  
+  .event-details {
+    color: #374151;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .event-icon {
+    width: 4%;
+  }
+  
+  .learn-more-btn {
+    border: none;
+    color: #0047FF;
+    background: #F8FAFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .arrow-icon {
+    margin-left: 5px;
+  }
+  
+  .button-group {
+    display: flex;
+  }
+  
+  .register-btn {
+    padding: 10px 20px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .download-btn {
+    padding: 10px 20px;
+    background-color: #E5E7EB;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .download-icon {
+    width: 15px;
+    margin-right: 5px;
+  }
+  
+  .event-image-container {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .event-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+
+
+
+  .winner-section1-btn-container {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.winner-section1-mob-btn-container {
+    display: none;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .winner-section1-btn-container {
+        display: none;
+    }
+
+    .winner-section1-mob-btn-container {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+
+
+}

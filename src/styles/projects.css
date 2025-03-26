@@ -1,0 +1,120 @@
+.project-page-hero-section {
+  width: 100%;
+  height: 100vh;
+  background: rgb(49, 8, 139);
+  background: linear-gradient(
+    0deg,
+    rgba(49, 8, 139, 1) 0%,
+    rgba(13, 2, 37, 1) 80%,
+    rgba(13, 2, 37, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 7vw;
+  font-weight: 600;
+}
+.project-page-hero-section > div {
+  position: relative;
+  width: fit-content;
+}
+.project-section {
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: #0d0225; */
+}
+.project-department-container {
+  margin: 0rem 5rem;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+.project-hidden-departments {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #0001;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  width: 10rem;
+  filter: drop-shadow(4px 4px 4px #cbcbcb);
+}
+.project-item-tabs-container {
+  display: flex;
+  column-gap: 0.5rem;
+  overflow-x: auto;
+  margin: 0rem 5rem;
+  padding-top: 1.5rem;
+  /* padding-bottom: 3rem; */
+}
+.project-hidden-departments > div {
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.project-hidden-departments > div:hover {
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+  padding-left: 1rem;
+  background-color: #eaeffc;
+  border-left: 5px solid #0047ff;
+}
+.project-active-dept {
+  color: #0047ff;
+  font-family: EuclidSemibold;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.projecct-section-overlay {
+  width: 100%;
+  min-height: calc(100vh - 109px);
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+}
+
+.projecct-title {
+  color: #fff;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .project-page-hero-section {
+    width: 100%;
+    height: 37rem;
+  }
+  .project-department-container {
+    margin: 0rem 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+  }
+  .project-active-dept {
+    font-size: 1.5rem;
+  }
+  .project-item-tabs-container {
+    display: flex;
+    column-gap: 0.5rem;
+    overflow-x: auto;
+    margin: 0rem 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .project-hidden-departments > div {
+    font-size: 1.25rem;
+  }
+}

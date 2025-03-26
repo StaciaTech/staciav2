@@ -1,0 +1,121 @@
+@font-face {
+  font-family: Euclid;
+  src: url(../fonts/Euclid\ Circular\ A\ Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: EuclidBold;
+  src: url(../fonts/Euclid\ Circular\ A\ Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EuclidLight;
+  src: url(../fonts/Euclid\ Circular\ A\ Light.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: EuclidMedium;
+  src: url(../fonts/Euclid\ Circular\ A\ Medium.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: EuclidSemiBold;
+  src: url(../fonts/Euclid\ Circular\ A\ SemiBold.ttf);
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: Euclid;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.pointer {
+  cursor: pointer;
+}
+.all-know-more {
+  color: #0047ff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: fit-content;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+.all-know-more:hover {
+  text-shadow: 2px -1px 27px rgba(0, 71, 255, 0.64);
+}
+.test-seclection-blue::selection {
+  background-color: #1c39bb;
+  color: #fff;
+}
+.test-seclection-white::selection {
+  background-color: #fff;
+  color: #1c39bb;
+}
+
+/*custom curser styles*/
+/* CustomCursor.css */
+.custom-cursor {
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  background-color: #0047ff;
+  border-radius: 50%;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  z-index: 9999;
+  transform: translate(-50%, -50%) translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  will-change: transform, opacity, font-size; /* Include font-size if scaling text */
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* border: 1px solid #008e2f; */
+}
+
+/* HoverComponent.css */
+.hover-component {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-component img {
+  display: block;
+}
+
+.hide-default-cursor {
+  cursor: none; /* Hide the default cursor */
+}
+
+/* Additional styles */
+a {
+  text-decoration: none;
+  color: #222222;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .custom-cursor {
+    display: none;
+  }
+}

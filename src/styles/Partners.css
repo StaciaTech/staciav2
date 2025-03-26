@@ -1,0 +1,113 @@
+.partners-hero {
+  width: 100%;
+  height: 100vh;
+  background: rgb(49, 8, 139);
+  background: linear-gradient(
+    0deg,
+    rgba(49, 8, 139, 1) 0%,
+    rgba(13, 2, 37, 1) 80%,
+    rgba(13, 2, 37, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7vw;
+  color: #fff;
+  font-weight: 600;
+}
+.partners-container {
+  padding: 7rem 5rem;
+  box-sizing: border-box;
+}
+.partner-title {
+  color: #0047ff;
+  font-family: EuclidSemibold;
+  font-size: 1.25rem;
+  padding: 1rem 0rem;
+}
+.partner-heading {
+  font-family: EuclidSemibold;
+  font-size: 2rem;
+  width: 30%;
+}
+.partner-des {
+  color: #6b6084;
+  width: 40%;
+  font-size: 1.25rem;
+}
+.partners-img-container {
+  display: flex;
+  column-gap: 5rem;
+  overflow-x: auto;
+  margin: 5rem 0rem;
+}
+.partners-img-container > div {
+  width: 23rem;
+}
+.partners-img-container > div > img {
+  width: 100%;
+  object-fit: cover;
+}
+.partner-data-card {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.partner-data-card-content > div {
+  font-family: EuclidSemibold;
+  font-size: 2.25rem;
+}
+.partner-data-card-content > p {
+  width: 50%;
+  color: #6b6084;
+  font-size: 1.25rem;
+}
+.partner-data-card-img {
+  width: 50rem;
+}
+.partner-data-card-img > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .partners-hero {
+    height: 37rem;
+  }
+  .partners-container {
+    padding: 2rem 1.55rem;
+    box-sizing: border-box;
+  }
+  .partner-heading {
+    width: 100%;
+    font-size: 1.25rem;
+  }
+  .partner-des {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .partners-img-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 100%;
+  }
+  .partners-img-container > div {
+    width: 100%;
+  }
+  .partner-data-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .partner-data-card-img {
+    width: 100%;
+  }
+  .partner-data-card-content > div {
+    font-size: 1.5rem;
+  }
+  .partner-data-card-content > p {
+    font-size: 1rem;
+    width: 100%;
+  }
+}

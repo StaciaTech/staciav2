@@ -1,0 +1,246 @@
+/*temp1 css*/
+.temp1-hero-img {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.para-temp-styles {
+  font-size: 1.25rem;
+  color: #6b6084;
+}
+.head-temp-style {
+  padding: 1rem 0rem;
+  color: #0d0225;
+  font-size: 3rem;
+  font-family: EuclidSemibold;
+}
+.head2-temp-style {
+  color: #0d0225;
+  font-size: 2.5rem;
+  font-family: EuclidSemibold;
+}
+.head3-temp-style {
+  color: #0d0225;
+  font-size: 1.75rem;
+  font-family: EuclidSemibold;
+}
+.head4-temp-style {
+  color: #0d0225;
+  font-size: 1.5rem;
+  font-family: EuclidMedium;
+}
+.temp1-hero-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.temp1-hero-img-text {
+  position: absolute;
+  inset: 0;
+  padding: 5rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: end;
+}
+.temp1-hero-img-text {
+  color: #fff;
+  font-size: 6rem;
+  font-family: EuclidMedium;
+}
+.temp2-hero-img-text {
+  position: absolute;
+  inset: 0;
+  padding: 5rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 6rem;
+  font-family: EuclidMedium;
+}
+.temp1-sec1-title {
+  padding: 2rem 0rem;
+  color: #0d0225;
+  font-size: 3rem;
+  font-family: EuclidSemibold;
+}
+.temp1-content-container {
+  padding: 2rem 10rem;
+  box-sizing: border-box;
+}
+.temp1-sec1-container {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 5rem; */
+}
+.temp1-sec1-content {
+  width: 55%;
+  background: #f8f8f8;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+.temp1-sec1-content > div {
+  color: #0d0225;
+  font-size: 1.75rem;
+  font-family: EuclidSemibold;
+}
+.temp1-sec1-content > p {
+  color: #6b6084;
+  font-size: 1.25rem;
+}
+.temp1-sec1-img {
+  width: 40%;
+}
+.temp1-sec1-img > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 600 / 517;
+  border-radius: 1rem;
+}
+.temp1-sec2-list-container {
+  margin: 2rem 0rem;
+  display: flex;
+  column-gap: 3rem;
+}
+.temp1-sec2-list-num {
+  color: #0047ff;
+  font-size: 5rem;
+}
+.temp1-sec2-list-title {
+  color: #0d0225;
+  font-size: 1.75rem;
+  font-family: EuclidSemibold;
+}
+.temp1-sec3-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+.temp1-sec3-subtitle {
+  font-size: 1.25rem;
+  font-family: EuclidSemibold;
+  color: #0d0225;
+}
+.temp1-sec4-title {
+  border-left: 8px solid #0047ff;
+  padding-left: 1rem;
+  color: #0d0225;
+  font-size: 3rem;
+  font-family: EuclidSemibold;
+  margin: 1rem 0rem;
+}
+.temp1-sec4-img {
+  width: 100%;
+}
+.temp1-sec4-img > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  aspect-ratio: 752 / 447;
+}
+.temp1-sec3-content-container {
+  margin-top: 1rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+/*temp2css*/
+.temp2-hero-img {
+  height: 600px;
+  width: 100%;
+  position: relative;
+}
+.temp2-hero-img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.temp2-section1-img {
+  margin: 3rem 0rem;
+  width: 100%;
+}
+.temp2-section1-img > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  aspect-ratio: 1487/600;
+}
+
+@media screen and (max-width: 1024px) {
+  .temp1-hero-img {
+    width: 100%;
+    height: 600px;
+  }
+  .temp1-hero-img-text,
+  .temp2-hero-img-text {
+    font-size: 1.5rem;
+  }
+  .temp1-hero-img-text,
+  .temp2-hero-img-text {
+    padding: 1.5rem;
+  }
+  .temp1-content-container {
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  .para-temp-styles {
+    font-size: 1rem;
+    color: #6b6084;
+  }
+  .head-temp-style {
+    padding: 1rem 0rem;
+    color: #0d0225;
+    font-size: 1.5rem;
+    font-family: EuclidSemibold;
+  }
+  .temp1-sec1-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .temp1-sec1-content {
+    width: 100%;
+    background: #f8f8f8;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  .temp1-sec1-content > div,
+  .temp1-sec2-list-title {
+    color: #0d0225;
+    font-size: 1.25rem;
+    font-family: EuclidSemibold;
+  }
+  .temp1-sec1-content > p {
+    color: #6b6084;
+    font-size: 1rem;
+  }
+  .temp1-sec1-img {
+    width: 100%;
+  }
+  .temp1-sec2-list-num {
+    font-size: 2rem;
+  }
+  .temp1-sec2-list-container {
+    display: flex;
+    column-gap: 1.5rem;
+  }
+  .temp1-sec3-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .temp1-sec4-title {
+    font-size: 1.25rem;
+  }
+  .temp1-sec1-title {
+    font-size: 1.5rem;
+  }
+  .head2-temp-style {
+    font-size: 1.5rem;
+  }
+  .head3-temp-style {
+    font-size: 1.25rem;
+  }
+  .head4-temp-style {
+    font-size: 1.15rem;
+  }
+}
