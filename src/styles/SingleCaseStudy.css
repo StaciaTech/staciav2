@@ -1,0 +1,189 @@
+.single-casestudy-section {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(49, 8, 139);
+
+  background: linear-gradient(
+    0deg,
+    rgba(49, 8, 139, 1) 0%,
+    rgba(13, 2, 37, 1) 80%,
+    rgba(13, 2, 37, 1) 100%
+  );
+}
+.single-casestudy-section-overlay {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.single-casestudy-title {
+  color: rgba(255, 255, 255);
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.single-casestudy-heading-card-container {
+  width: 100%;
+  min-height: calc(100vh - 109px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+.single-casestudy-heading-card-container::after {
+  content: "";
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  background: linear-gradient(to top, #000000, transparent);
+}
+.single-casestudy-heading {
+  font-size: 6rem;
+  font-family: EuclidSemiBold;
+  padding: 4rem;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+/* overall */
+.single-casestudy-content-container {
+  /* padding: 7rem 8rem;    */
+  padding-left: 8rem;
+  padding-right: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+
+}
+.single-casestudy-layout1-title {
+  font-family: EuclidSemiBold;
+  font-size: 3rem;
+
+}
+.single-casestudy-layout1-des {
+  color: #5e5e5e;
+}
+.single-casestudy-layout1-img-content-container {
+  display: flex;
+  column-gap: 2rem;
+  padding: 1rem 0rem;
+  align-items: center;
+}
+.single-casestudy-layout1-img-content-container > div {
+  width: 70%;
+}
+.single-casestudy-layout1-img-content-container > p {
+  width: 30%;
+
+}
+.single-casestudy-layout2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  
+}
+.single-casestudy-layout2 > *:nth-child(4) {
+  grid-column: span 3;
+}
+.single-casestudy-layout2-title {
+  font-family: EuclidSemiBold;
+    font-size: 2rem;
+  margin: 3rem 0rem;
+ 
+}
+.single-casestudy-layout3 {
+  align-items: center;
+  column-gap: 1.5rem;
+  padding: 3rem 0rem;
+}
+.single-casestudy-layout3 > *:nth-child(1) {
+  width: 70%;
+}
+.single-casestudy-layout3 > *:nth-child(2) {
+  width: 30%;
+}
+.single-casestudy-layout3-title {
+  font-family: EuclidSemiBold;
+  font-size: 2rem;
+}
+.single-casestudy-layout4 {
+  padding: 1rem 7.5rem;
+}
+.single-casestudy-layout4-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.single-casestudy-layout4-title {
+  font-family: EuclidSemiBold;
+  font-size: 3rem;
+  color: #dcd9e3;
+  margin-bottom: 2rem;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .single-casestudy-title,
+  .single-casestudy-heading {
+    font-size: 2rem;
+    text-align: center;
+    
+  }
+  .single-casestudy-content-container {
+    padding: 1.5rem;
+  }
+  .single-casestudy-layout1-img-content-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .single-casestudy-layout3 > *:nth-child(1),
+  .single-casestudy-layout3 > *:nth-child(2),
+  .single-casestudy-layout1-img-content-container > div,
+  .single-casestudy-layout1-img-content-container > p {
+    width: 100%;
+  }
+  .single-casestudy-layout2-title {
+    font-size: 1.5rem;
+    margin: 1.5rem 0rem;
+
+    
+  }
+  .single-casestudy-layout3 {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .single-casestudy-layout4-grid-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  .single-casestudy-layout4 {
+    padding: 1.5rem;
+  }
+  .single-casestudy-layout4-grid-container > div {
+    min-width: 100%;
+  }
+  .single-casestudy-layout4-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .single-casestudy-layout2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .single-casestudy-layout2 > *:nth-child(4) {
+    grid-column: span 2;
+  }
+  .single-casestudy-layout1-title {
+    font-size: 2rem;
+  }
+  
+ 
+}

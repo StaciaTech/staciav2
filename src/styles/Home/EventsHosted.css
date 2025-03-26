@@ -1,0 +1,70 @@
+.events-hosted-container{
+    width:90%;
+    margin: 1rem auto;
+    /* background-color: lightblue; */
+    min-height: 80vh;
+   
+}
+
+.events-hosted-title {
+    color: #E0E0E0;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.events-img-container{
+    background-image:  linear-gradient(to right, #0D0225, #0D022500),url("../../assets/eventshosted.png");
+    height: 609px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem 0 0 0;
+    border-radius: 1.2rem;
+   
+}
+
+.events-text-holder{
+    width: 30%;
+    /* background-color: lightcoral; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 0 3rem;
+}
+
+.events-header{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.events-details{
+    font-size: 1.2rem;
+    font-size: 400;
+    line-height: 35.8px;
+    margin: 1.5rem 0 4.5rem 0;
+   
+}
+.events-button-holder{
+display: flex;
+
+}
+.event-btn{
+    font-size: 1.2rem;
+    font-weight: 400; 
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    color: white;
+    margin-right: 2rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: "Euclid";
+}
+.register-now-btn{
+    background-color: #0047FF;
+}
+.events-view-details-btn{
+    background-color: transparent;
+    border: #FFFFFF 1px solid;
+}

@@ -1,0 +1,25 @@
+.star-container {
+  position: absolute;
+  right: 0;
+  bottom: 70%;
+  user-select: none;
+}
+@keyframes blink-star {
+  0% {
+    transform: scale(0); /* Start at scale 0 */
+    opacity: 0; /* Hidden initially */
+  }
+  50% {
+    transform: scale(1.5); /* Scale up to 1.5 */
+    opacity: 1; /* Fully visible */
+  }
+  100% {
+    transform: scale(0); /* Back to scale 0 */
+    opacity: 0; /* Hidden again */
+  }
+}
+
+.star-container img {
+  animation: blink-star 3s ease-in-out infinite; /* Animation duration and loop */
+  transform-origin: center center; /* Ensure the scaling happens from the center */
+}
