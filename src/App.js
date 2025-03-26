@@ -1,0 +1,125 @@
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import CareerPage from "./pages/CareerPage";
+import CommunityPage from "./pages/CommunityPage";
+import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/ProductPage";
+import ProjectPage from "./pages/ProjectPage";
+import ServicePage from "./pages/ServicePage";
+import WhatsNewPage from "./pages/WhatsNewPage";
+import SingleProduct from "./components/Product/SingleProduct";
+import CaseStudy from "./pages/CaseStudy";
+// import Box1 from "./pages/Box1";
+import SpecificService from "./components/Services/SpecificService";
+import ArticlesPage from "./pages/ArticlesPage";
+// import StackScroll from "./pages/StackScroll";
+import PageNotFound from "./pages/PageNotFound";
+import SingleArticle from "./pages/SingleArticle";
+import SingleProject from "./pages/SingleProject";
+import SingleCaseStudy from "./pages/SingleCaseStudy";
+import ProductCategoryPage from "./components/Product/ProductCategoryPage";
+import ScrollArrow from "./components/ReUsableComp/ScrollArrow";
+import EachServicePage from "./components/Services/EachServicePage";
+import About from "./pages/About";
+import EventsPage from "./pages/EventsPage";
+import SpecificEvent from "./pages/SpecificEvent";
+import NewsRoomPage from "./pages/NewsRoomPage";
+import LeaderPage from "./pages/LeaderPage";
+import MediaKit from "./pages/MediaKit";
+import Partners from './pages/Partners'
+
+function App() {
+  return (
+    <div className="App">
+      {/* Lwdnkjgkufefkl */}
+      {/* <StackScroll /> */}
+      {/* <Box1 /> */}
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/career" element={<CareerPage />} />
+        <Route path="/community" element={<CommunityPage />} />
+        <Route
+          path="/products/:department/:category"
+          element={<ProductPage />}
+        />
+        <Route path="/products" element={<ProductCategoryPage />} />
+        <Route path="/products/:department" element={<ProductCategoryPage />} />
+        <Route
+          path="/products/:department/:category/:id"
+          element={<SingleProduct />}
+        />
+        {/* <Route path="/products/:id" element={<SingleProduct />} /> */}
+        <Route path="/article/:department/:title" element={<SingleArticle />} />
+        <Route
+          path="/project/:department/:category/:title"
+          element={<SingleProject />}
+        />
+        <Route
+          path="/case-study/:department/:title"
+          element={<SingleCaseStudy />}
+        />
+        <Route path="/project" element={<ProjectPage />} />
+        <Route path="/project/:department" element={<ProjectPage />} />
+        <Route
+          path="/project/:department/:category"
+          element={<ProjectPage />}
+        />
+        <Route path="/case-study" element={<CaseStudy />} />
+        <Route path="/case-study/:department" element={<CaseStudy />} />
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/services/:department" element={<ServicePage />} />
+        <Route
+          path="/services/:department/:category"
+          element={<SpecificService />}
+        />
+        <Route
+          path="/services/:department/:category/:title"
+          element={<EachServicePage />}
+        />
+        <Route path="/whatsnew" element={<WhatsNewPage />} />
+        <Route path="/article" element={<ArticlesPage />} />
+        <Route path="/article/:department" element={<ArticlesPage />} />
+        <Route path="/about/:key" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/media-kit" element={<MediaKit />} />
+        <Route path="/about/leader/:name" element={<LeaderPage />} />
+        <Route path="/news" element={<NewsRoomPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/events/:title" element={<SpecificEvent />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+      <ScrollArrow />
+
+    </div>
+  );
+}
+
+export default App;
+
+// import React from 'react';
+// import ImageSlider from './components/Home/ImageSlider';
+// import p1 from "../src/assets/baling.png"
+// import p2 from "../src/assets/speaker.png"
+// import p3 from "../src/assets/spinach.png"
+
+// function App() {
+//   const images = [ p1,p2, p3 ];
+//   const textItems = [
+//     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eaque exercitationem quae animi saepe, libero, laudantium tenetur odio corrupti eos distinctio excepturi nesciunt recusandae reiciendis qui autem a reprehenderit commodi?',
+//     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eaque exercitationem quae animi saepe, libero, laudantium tenetur odio corrupti eos distinctio excepturi nesciunt recusandae reiciendis qui autem a reprehenderit commodi?',
+//     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eaque exercitationem quae animi saepe, libero, laudantium tenetur odio corrupti eos distinctio excepturi nesciunt recusandae reiciendis qui autem a reprehenderit commodi?',
+
+//   ];
+//   const slideInterval = 3000;
+
+//   return (
+//     <div className="App">
+//       <h1>Image Slider with Text</h1>
+//       <ImageSlider images={images} textItems={textItems} slideInterval={slideInterval} />
+//     </div>
+//   );
+// }
+
+// export default App;
