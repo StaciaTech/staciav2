@@ -1,0 +1,210 @@
+.each-service-hero-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(49, 8, 139);
+  background: linear-gradient(
+    0deg,
+    rgba(49, 8, 139, 1) 0%,
+    rgba(13, 2, 37, 1) 80%,
+    rgba(13, 2, 37, 1) 100%
+  );
+}
+.each-service-title {
+  font-size: 7vw;
+  font-weight: 800;
+  color: #fff;
+  width: fit-content;
+  position: relative;
+}
+.each-service-container {
+  padding: 14.25rem 4.5rem;
+}
+.each-service-section1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 11.25rem;
+  align-items: center;
+}
+.each-service-section1-img {
+  width: 100%;
+}
+.each-service-section1-img > img {
+  object-fit: cover;
+  aspect-ratio: 1.4952/1;
+  width: 100%;
+}
+.each-service-howWeDo-step {
+  min-width: 18rem;
+}
+.each-service-section1-content > div,
+.each-service-howWeDo-step-title {
+  font-size: 30px;
+  color: #0d0225;
+  font-family: EuclidMedium;
+}
+.each-service-section1-content > p,
+.each-service-howWeDo-step-des,
+.each-service-howWeDo-des {
+  font-size: 20px;
+  color: #0d0225;
+  font-family: Euclid;
+  margin-bottom: 4rem;
+}
+.each-service-howWeDo-step-des {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.each-service-howWeDo-section {
+  margin: 10rem 0rem;
+  /* position: sticky;
+  top: 160px; */
+}
+.each-service-howWeDo-step-container {
+  display: flex;
+  column-gap: 6rem;
+}
+.each-service-howWeDo-step-container > div {
+  width: 30%;
+  min-width: 18rem;
+}
+.each-service-howWeDo-step-container::-webkit-scrollbar {
+  display: none;
+}
+.each-service-howWeDo-step-icon {
+  background-color: #607d8b;
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 0rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.each-service-howWeDo-title {
+  font-size: 36px;
+  color: #0d0225;
+  font-family: EuclidSemibold;
+  margin-bottom: 2rem;
+}
+.each-service-card-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10rem 0rem;
+  column-gap: 2rem;
+}
+.each-service-card > div {
+  width: 100%;
+}
+.each-service-card > div > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1.5643;
+}
+.each-service-whyus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+.each-service-whyus-grid > div {
+  width: 80%;
+  margin: 3rem 0rem;
+}
+.each-service-whyus-num {
+  color: #0047ff;
+  font-size: 4rem;
+}
+.each-service-whyus-title {
+  color: #0d0225;
+  font-size: 24px;
+  font-family: EuclidMedium;
+}
+.each-service-whyus-des {
+  font-size: 20px;
+  color: #6b6084;
+}
+.each-service-whyus-section-title {
+  font-family: EuclidSemibold;
+  color: #0d0225;
+  font-size: 2.25rem;
+}
+.each-service-howWeDo-section-mob {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  /*change this */
+  .each-service-hero-section {
+    height: 37rem;
+  }
+  .each-service-howWeDo-section {
+    display: none;
+  }
+  .each-service-howWeDo-section-mob {
+    display: block;
+    margin-top: 2rem;
+  }
+  .each-service-hero-section {
+    /* padding: 1.5rem;*/
+    box-sizing: border-box;
+  }
+  .each-service-container {
+    padding: 3.5rem 1.5rem;
+  }
+  .each-service-section1 {
+    display: flex;
+    flex-direction: column-reverse;
+    /* grid-template-columns: 1fr 1fr; */
+    column-gap: 11.25rem;
+    align-items: center;
+  }
+  .each-service-section1-content > p,
+  .each-service-howWeDo-step-des,
+  .each-service-howWeDo-des {
+    font-size: 1rem;
+    color: #6b6084;
+    font-family: Euclid;
+    margin-bottom: 1rem;
+  }
+  .each-service-section1-content > div,
+  .each-service-howWeDo-step-title {
+    font-size: 24px;
+    color: #0d0225;
+    font-family: EuclidMedium;
+  }
+  .each-service-howWeDo-title,
+  .each-service-whyus-section-title {
+    font-size: 24px;
+    color: #0d0225;
+    font-family: EuclidSemibold;
+    margin-bottom: 0rem;
+  }
+  .each-service-howWeDo-section {
+    margin: 3.5rem 0rem;
+  }
+  .each-service-card-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 3.5rem 0rem;
+    column-gap: 2rem;
+  }
+  .each-service-whyus-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+  }
+  .each-service-whyus-grid > div {
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+  .each-service-whyus-des {
+    font-size: 1rem;
+  }
+  .each-service-whyus-title {
+    font-size: 20px;
+  }
+}
