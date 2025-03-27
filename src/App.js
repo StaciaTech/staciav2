@@ -43,12 +43,14 @@ function App() {
           path="/products/:department/:category"
           element={<ProductPage />}
         />
+        {/* <Route path="/products/:department-id/:category-id" element={<ProductPage/>}/> */}
         <Route path="/products" element={<ProductCategoryPage />} />
         <Route path="/products/:department" element={<ProductCategoryPage />} />
-        <Route
-          path="/products/:department/:category/:id"
-          element={<SingleProduct />}
-        />
+        {/* <Route path="products/:department-id" element={<ProductCategoryPage/>}/> */}
+        <Route path="/products/:department/:category/:id" element={<SingleProduct/>} />
+        {/* <Route
+          path="/products/:department-id/:category-id/:product-id"
+          element={<SingleProduct />}  /> */}
         {/* <Route path="/products/:id" element={<SingleProduct />} /> */}
         <Route path="/article/:department/:title" element={<SingleArticle />} />
         <Route
