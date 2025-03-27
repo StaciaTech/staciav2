@@ -243,12 +243,12 @@ function ProductPage() {
   // console.log(productData, "ProductPage**Data")
 
     const FoundDept = productData?.find(
-      (eachItem)=>eachItem.name === params.department.split("-").join(" ")
+      (eachItem)=>eachItem.id === params.department 
       )
       // console.log(FoundDept,"Department");
     
     const FoundCat = FoundDept?.category.find(
-      (eachItem)=> eachItem.name === params.category.split('-').join(" "))
+      (eachItem)=> eachItem.id === params.category)
 
       // console.log(FoundCat,"Category");
 
