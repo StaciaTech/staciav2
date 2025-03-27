@@ -34,7 +34,7 @@ function ReUsableArticle({ data, path }) {
                 onClick={() => {
                   navigate(
                     `${path}/${
-                      eachItem.title.split(" ").join("-") ||
+                      eachItem.id.split(" ").join("-") ||
                       eachItem.mainTitle.split(" ").join("-")
                     }`
                   );

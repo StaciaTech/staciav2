@@ -61,11 +61,18 @@
 }
 .single-casestudy-layout1-title {
   font-family: EuclidSemiBold;
-  font-size: 3rem;
-
+  font-size: 2rem; 
+  line-height: 1.7;
 }
 .single-casestudy-layout1-des {
   color: #5e5e5e;
+ 
+}
+.test-seclection-blue-img-cont{
+  color: #5e5e5e;
+    line-height: 1.7;
+ 
+
 }
 .single-casestudy-layout1-img-content-container {
   display: flex;
@@ -99,6 +106,12 @@
   align-items: center;
   column-gap: 1.5rem;
   padding: 3rem 0rem;
+  
+}
+.test-seclection-blue-challenge{
+  line-height: 1.7;
+  color: #5e5e5e;
+ 
 }
 .single-casestudy-layout3 > *:nth-child(1) {
   width: 70%;
@@ -182,7 +195,8 @@
     grid-column: span 2;
   }
   .single-casestudy-layout1-title {
-    font-size: 2rem;
+    font-size: 2rem; 
+
   }
   
  

@@ -35,10 +35,18 @@ const CaseStudyaudio = () => {
         </div>
 
         <div className="topics">
-          Topics:
-          <span className="topic">#Nano</span>
-          <span className="topic">#lorem</span>
-          <span className="topic">#lorem</span>
+          <div >
+            <span className="topic-head">Topics:</span>
+            <span className="topic">
+              <span>#</span>Nano
+            </span>
+            <span className="topic">
+              <span>#</span>lorem
+            </span>
+            <span className="topic">
+              <span>#</span>lorem
+            </span>
+          </div>
           <div className="details">
             Duration: 12m 16s | 26 Dec, 2023 | Podcast
           </div>
@@ -48,7 +56,12 @@ const CaseStudyaudio = () => {
       </div>
 
       <div className="audio-section">
-        <audio ref={audioRef} controls className="audio">
+        <audio
+          ref={audioRef}
+          controlsList="nodownload noplaybackrate noaudio"
+          controls
+          className="audio"
+        >
           <source src="/assets/audio.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>

@@ -335,7 +335,7 @@ function SingleCaseStudy() {
         <div className="single-casestudy-section">
           <div className="single-casestudy-section-overlay">
             <div className="single-casestudy-title test-seclection-white">
-              {caseStudy.title}
+              {caseStudy?.title}
             </div>
           </div>
         </div>
@@ -348,7 +348,7 @@ function SingleCaseStudy() {
             }}
           >
             <div className="single-casestudy-heading test-seclection-white">
-              {caseStudy.title}
+              {caseStudy?.title}
             </div>
           </div>
         </div>
@@ -358,17 +358,17 @@ function SingleCaseStudy() {
         <div className="single-casestudy-content-container">
           <div>
             <div className="single-casestudy-layout1-title test-seclection-blue">
-              {caseStudy.overview?.overviewtitle}
+              {caseStudy?.overview?.overviewtitle}
             </div>
             <p className="single-casestudy-layout1-des test-seclection-blue">
-              {caseStudy.overview?.description}
+              {caseStudy?.overview?.description}
             </p>
 
             <div className="single-casestudy-layout1-img-content-container">
-              {caseStudy.imageContent?.imageSrc && (
+              {caseStudy?.imageContent?.imageSrc && (
                 <div>
                   <img
-                    src={caseStudy.imageContent.imageSrc}
+                    src={caseStudy?.imageContent.imageSrc}
                     alt="Overview"
                     style={{
                       width: "100%",
@@ -380,8 +380,8 @@ function SingleCaseStudy() {
                 </div>
               )}
               <div>
-                {caseStudy.imageContent?.content?.map((text, index) => (
-                  <p key={index} className="test-seclection-blue">
+                {caseStudy?.imageContent?.content?.map((text, index) => (
+                  <p key={index} className="test-seclection-blue-img-cont">
                     {text}
                   </p>
                 ))}
@@ -391,10 +391,10 @@ function SingleCaseStudy() {
 
           {/* gallery-tittle */}
           <div className="single-casestudy-layout1-title test-seclection-blue">
-            <p>{caseStudy.gallerytittle}</p>
+            <p>{caseStudy?.gallerytittle}</p>
           </div>
 
-          {caseStudy.gallery && caseStudy.gallery.length > 0 && (
+          {caseStudy?.gallery && caseStudy.gallery.length > 0 && (
             <div className="single-casestudy-layout2">
               {caseStudy.gallery.map((img, index) => (
                 <div key={index}>
@@ -417,18 +417,18 @@ function SingleCaseStudy() {
               style={{ display: "flex" }}
             >
               <div>
-                {caseStudy.challenges?.map((challenge, index) => (
+                {caseStudy?.challenges?.map((challenge, index) => (
                   <div key={index}>
                     <div className="single-casestudy-layout3-title test-seclection-blue">
                       {challenge.challengestitle}
                     </div>
-                    <p className="test-seclection-blue">
+                    <p className="test-seclection-blue-challenge">
                       {challenge.description}
                     </p>
                   </div>
                 ))}
               </div>
-              {caseStudy.imageContent?.imageSrc && (
+              {caseStudy?.imageContent?.imageSrc && (
                 <div>
                   <img
                     src={caseStudy.imageContent.imageSrc}

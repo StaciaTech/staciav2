@@ -169,23 +169,23 @@ import { useParams } from "react-router-dom";
 
 const data = [
   {
-    id: "1",
-    title: "Case Study - 1",
+    id: "Case Study-1",
+    title: "Chili Ladling Machine",
     description: "Analysis of electronics case study.",
     image: { imageUrl: "/assets/caseStudy-1.webp" },
     category: "Electronics",
   },
   {
-    id: "2",
-    title: "Case Study-2",
+    id: "Case Study-2",
+    title: "Chili Ladling Machine",
     description: "Analysis of mechanical case study.",
     image: { imageUrl: "/assets/caseStudy-2.webp" },
     category: "Mechanical",
   },
   {
-    id: "3",
-    title: "Case Study-3",
-    description: "There are many variations of passages of Lorem Ipsum.",
+    id: "Case Study-3",
+    title: "Chili Ladling Machine",
+    description: "Analysis of mechanical case study.",
     image: { imageUrl: "/assets/caseStudy-3.webp" },
     category: "IT",
   },
@@ -220,7 +220,7 @@ export default function CaseStudy() {
   
   const uniqueCategories = [
     "All",
-    ...new Set(data.map((item) => item.category)),
+    ...new Set(data?.map((item) => item.category)),
   ];
   
 
@@ -239,7 +239,7 @@ export default function CaseStudy() {
 
      
       <div className="article-item-tabs-container">
-        {uniqueCategories.map((category, i) => (
+        {uniqueCategories?.map((category, i) => (
           <div
             key={i}
             className={`article-item-tab ${
