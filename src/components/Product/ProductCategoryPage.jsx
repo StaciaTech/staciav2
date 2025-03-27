@@ -460,11 +460,11 @@ function ProductCategoryPage() {
                             key={i}
                             onClick={() => {
                               window.scrollTo(0, 0);
-                              const deptKey = eachItem.name
+                              const deptKey = eachItem.id
                                 .split(" ")
                                 .join("-");
-                              const catKey = eachCat.name.split(" ").join("-");
-                              const productKey = eachPro.title
+                              const catKey = eachCat.id
+                              const productKey = eachPro.id
                                 .split(" ")
                                 .join("-");
                               navigate(
@@ -481,8 +481,11 @@ function ProductCategoryPage() {
                         style={{ margin: "10px 0px" }}
                         onClick={() => {
                           window.scrollTo(0, 0);
-                          const deptKey = eachItem.name.split(" ").join("-");
-                          const catKey = eachCat.name.split(" ").join("-");
+                          // const deptKey = eachItem.name.split(" ").join("-");
+                          const deptKey = eachItem.id;
+
+                          // const catKey = eachCat.name.split(" ").join("-");
+                          const catKey = eachCat.id;
                           navigate(`/products/${deptKey}/${catKey}`);
                         }}
                       >
@@ -500,8 +503,12 @@ function ProductCategoryPage() {
                     onMouseLeave={() => setCursorVisible(false)}
                     onClick={() => {
                       window.scrollTo(0, 0);
-                      const deptKey = eachItem.name.split(" ").join("-");
-                      const catKey = eachCat.name.split(" ").join("-");
+                      // const deptKey = eachItem.name.split(" ").join("-");
+                      const deptKey = eachItem.id
+
+                      // const catKey = eachCat.name.split(" ").join("-");
+                      const catKey = eachCat.id
+
                       navigate(`/products/${deptKey}/${catKey}`);
                     }}
                   >
