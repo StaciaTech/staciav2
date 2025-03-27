@@ -328,10 +328,10 @@ export default function SingleProduct() {
   const params = useParams();
   // console.log(params.department,"paramsDepartment");
 
-  const productKey = params.id.split("-").join(" ");
+  const productKey = params.product;
   // console.log(productKey, "ProductKey");
 
-  const DeptKey = params.department.split("-").join(" ");
+  const DeptKey = params.department 
 
   const [productData, setProductData] = useState([]);
 
@@ -359,16 +359,16 @@ export default function SingleProduct() {
   });
   // console.log(FoundCat, "Category");
 
-  const CatogeryKey = FoundCat?.name.split(" ").join("-");
+  const CatogeryKey = FoundCat?.id
   // console.log(CatogeryKey, "CatogeryKey");
 
   const proData = FoundCat?.products;
   // console.log(proData, "Moses**ProdData");
 
   const product = proData?.find(
-    (eachPro) => eachPro.title.split(" ").join("-") === params.id
-  );
-  // console.log(product, "Product");
+    (eachPro) => eachPro.name.split(" ").join("-") === params.id
+    );
+  console.log(product, "Product");
 
   const [SelectedProduct, setSelectedProduct] = useState({});
 
@@ -398,7 +398,9 @@ export default function SingleProduct() {
   //   (eachProduct) => eachProduct.title !== productKey
   // );
 
-  const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.title.split(" ").join("-") !== params.id)
+  // const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.title.split(" ").join("-") !== params.id)
+  const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.id !== params.product)
+ 
   // console.log(RemainingProducts, "Remaining Product");
 
   const [currentSlide, setCurrentSlide] = useState(0);
