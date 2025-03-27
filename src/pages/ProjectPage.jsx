@@ -16,8 +16,8 @@ import ProjectsData from "../Data/ProjectsData.json"
 
 function ProjectPage() {
   const params = useParams();
-  console.log("Department: ",params.department);
-  console.log(params.category);
+  // console.log("Department: ",params.department);
+  // console.log(params.category);
 
   // const navigate = useNavigate();
   const [projectsData, setProjectsData] = useState();
@@ -38,7 +38,7 @@ function ProjectPage() {
       setActiveDepartment(projectsData ? projectsData[0]?.name : "");
     }
   }, [projectsData, params]);
-  console.log(activeDepartment);
+  // console.log(activeDepartment);
 
   useEffect(() => {
     if (activeDepartment && projectsData) {
@@ -50,8 +50,8 @@ function ProjectPage() {
       setActiveCategory(departmentObj?.categories[0]?.name);
     }
   }, [activeDepartment, projectsData, departmentObj, params]);
-  console.log(activeCategory);
-  console.log(departmentObj);
+  // console.log(activeCategory);
+  // console.log(departmentObj);
 
   useEffect(() => {
     if (activeCategory && departmentObj) {
@@ -63,7 +63,7 @@ function ProjectPage() {
     }
   }, [activeCategory, departmentObj]);
 
-  console.log(foundProjectsObj?.projects);
+  // console.log(foundProjectsObj?.projects);
 
   const [showHiddenDepts, setShowHiddenDepts] = useState(false);
 
@@ -105,7 +105,7 @@ function ProjectPage() {
                         onClick={() => {
                           setActiveDepartment(eachproject.name);
                           setShowHiddenDepts(false);
-                        }}
+                        }} key={i}
                       >
                         {eachproject.name}
                       </div>

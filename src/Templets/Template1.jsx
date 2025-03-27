@@ -1,21 +1,28 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data//Templates.json";
 
 function Template1() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    setData(Data);
-  }, []);
-
-  if (!data || Object.keys(data).length === 0) {
-    return <div>Loading...</div>;
-  }
-
-  // Assuming we need to display only the first project
-  const project = data?.projects?.[1];
+    const { title } = useParams(); // Get title from URL
+    const [project, setProject] = useState(null);
+  
+    useEffect(() => {
+      // Find the project that matches the URL title
+      const matchedProject = Data.projects.find(
+        (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
+      );
+  
+      if (matchedProject) {
+        setProject(matchedProject);
+      }
+    }, [title]);
+  
+    if (!project) {
+      return <div>Loading...</div>;
+    }
+  
   return (
     <div>
       <div className="temp5-project_container">

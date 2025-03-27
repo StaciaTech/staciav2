@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
@@ -9,26 +9,13 @@ import Template3 from "../Templets/Template3";
 import Template4 from "../Templets/Template4";
 import Template5 from "../Templets/Template5";
 import { useLocation } from "react-router-dom";
-// import projectData from "../Data/ProjectsData.json"
+import templatesData from "../Data/Templates.json"
 
 function SingleProject() {
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
-  const projectTitle = pathSegments[pathSegments.length - 1]; // Extract project title from URL
-
-  console.log("Current Path:", location.pathname);
-  console.log("Extracted Project Title:", projectTitle);
-
-  // Project-to-Template Mapping as an Array
-  const projectTemplates = [
-    { title: "One-Drill", template: "template5" },
-    { title: "ismart", template: "template2" },
-    { title: "Automobile-&-Automotive-SPM", template: "template3" },
-    { title: "Smart-Implementation", template: "template4" },
-    { title: "Smart-Grid-Implementation", template: "template5" },
-    { title: "AI-Chatbot", template: "template2" },
-    { title: "AI-Chatbot-version", template: "template1" },
-  ];
+  const projectTitle = pathSegments[pathSegments.length - 1]; // Extract and decode project title
+  const [projectData, setProjectData] = useState(null);
 
   // Templates Object
   const templates = {
@@ -39,22 +26,42 @@ function SingleProject() {
     template5: <Template5 />,
   };
 
-  // Find the project in the array using .find()
-  const projectData = projectTemplates.find((item) => item.title === projectTitle);
-
-  // Get the corresponding template component
-  const SelectedTemplate = projectData ? templates[projectData.template] : null;
+  useEffect(() => {
+    if (templatesData?.projects) {
+      console.log("Project Data Structure:", templatesData.projects);
+  
+      // Normalize projectTitle from URL
+      const normalizedTitle = decodeURIComponent(projectTitle)
+        .replace(/-/g, " ") // Replace hyphens with spaces
+        .trim()
+        .toLowerCase();
+  
+      console.log("url title: ", normalizedTitle)
+      // Find the project
+      const project = templatesData.projects.find(
+        (item) => item.title.trim().toLowerCase() === normalizedTitle
+      );
+  
+      console.log("Matching Project:", project);
+  
+      if (project) {
+        setProjectData(project);
+      } else {
+        console.error("Project not found!");
+      }
+    }
+  }, [projectTitle, templatesData]);
+  
 
   return (
     <div className="single-project-container">
       <NavBar />
       <SideBar />
-      {SelectedTemplate || <p>No matching template found.</p>}
+      {projectData ? templates[projectData.template] : <p>No matching template found.</p>}
       <Footer />
       <MobileFooter />
     </div>
   );
-
 }
 
 export default SingleProject;

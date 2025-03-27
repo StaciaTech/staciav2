@@ -27,7 +27,7 @@ function ProjectDropdown({ handleClose }) {
     setProjectsData(ProjectsData.Projects)
   },[])
 
-  console.log(projectsData);
+  // console.log(projectsData);
 
   const [activeDept, setActiveDept] = useState();
   const [activeCategory, setActiveCategory] = useState();
@@ -82,7 +82,7 @@ function ProjectDropdown({ handleClose }) {
               }}
               className={`project-main-item ${
                 eachitem.name === activeDept ? "project-main-item-active" : ""
-              }`}
+              }`} key={i}
             >
               <span>{eachitem.name}</span>
               {eachitem.name === activeDept && (

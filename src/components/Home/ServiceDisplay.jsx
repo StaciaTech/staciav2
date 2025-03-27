@@ -17,7 +17,7 @@ export default function ServiceDisplay() {
     dispatch(fetchServices());
   }, [dispatch]);
 
-  const homeServiceData = homeServData.data.servicePSPosition;
+  const homeServiceData = homeServData?.data?.servicePSPosition;
 
   console.log(homeServiceData);
 
