@@ -103,7 +103,7 @@ export default function ProductComponent2({
   const bigText2Trim = trimAfterTwoWords(bigText2);
 
    const params = useParams();
-   const categoryKey = params.category.split(" ").join("-");
+   const categoryKey = params.category
    console.log(params.category, "Category");
 
 
