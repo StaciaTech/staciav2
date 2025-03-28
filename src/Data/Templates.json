@@ -1,6 +1,7 @@
 {
   "projects": [
     {
+      "id": "mech-001",
       "title": "One Drill",
       "starComponent": true,
       "template": "template5",
@@ -10,7 +11,11 @@
       },
       "industry": {
         "title": "Industry's",
-        "topics": ["Solar Radiation", "Solar Radiation", "Solar Radiation"]
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ]
       },
       "section1": {
         "title": "Development of dehydrated food processing industry and the prominent difficulties faced by producers in 21st century.",
@@ -72,11 +77,16 @@
         }
       },
       "conclusion": [
-        {"para":"Currently the prototype which was designed and developed by Stacia Corp has been used in Aachi Masala, which is one of the leading food processor in and around the globe to dry chillies for manufacturing spicy food items, as the CLM ensuring the no/ minimal breakage of the chilli, fine quality chillies which are sufficiently dried were produced, resulting in good quality end products for the producers of the food processing industry."},
-         {"para":"Considering the chilli production alone, it can be witnessed that there is a significant grown in the spciy food industry. To illustrate, the statistics provided by Statista suggests that production value of the chillies will be around 1.5 to 2 million metric tons in India by the year 2022, which shows the promising growth in the industry. As India being the highest producer and consumer the market for chillies are currently found to be in a minimal risk zone. Apart from considering chilies alone, markets for many other dry food items are also remarkably growing in the rapid world, which also demands the reduction of hazards as well as production cost in order to gain better profits. The extensive expenses which are mostly spent on the preserving processes can be substantially reduced by employing modern methods."}
-       ]
+        {
+          "para": "Currently the prototype which was designed and developed by Stacia Corp has been used in Aachi Masala, which is one of the leading food processor in and around the globe to dry chillies for manufacturing spicy food items, as the CLM ensuring the no/ minimal breakage of the chilli, fine quality chillies which are sufficiently dried were produced, resulting in good quality end products for the producers of the food processing industry."
+        },
+        {
+          "para": "Considering the chilli production alone, it can be witnessed that there is a significant grown in the spciy food industry. To illustrate, the statistics provided by Statista suggests that production value of the chillies will be around 1.5 to 2 million metric tons in India by the year 2022, which shows the promising growth in the industry. As India being the highest producer and consumer the market for chillies are currently found to be in a minimal risk zone. Apart from considering chilies alone, markets for many other dry food items are also remarkably growing in the rapid world, which also demands the reduction of hazards as well as production cost in order to gain better profits. The extensive expenses which are mostly spent on the preserving processes can be substantially reduced by employing modern methods."
+        }
+      ]
     },
     {
+      "id": "elec-001",
       "title": "Smart Implementation",
       "starComponent": true,
       "template": "template1",
@@ -86,7 +96,11 @@
       },
       "industry": {
         "title": "Industry's",
-        "topics": ["Solar Radiation", "Solar Radiation", "Solar Radiation"],
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ],
         "image": "/assets/Engine2.webp"
       },
       "product": {
@@ -118,7 +132,7 @@
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!",
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!"
         ],
-        "subDescription":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea praesentium nulla deleniti, minus, voluptates aliquam magnam inventore tenetur natus adipisci aut earum veritatis. Animi odio incidunt veniam quidem minus id, nisi saepe exercitationem eveniet dolore nesciunt neque eligendi dolores, nobis vel magnam sunt hic autem quae? Est dolor, tempora incidunt recusandae minus nihil excepturi. Laborum nostrum magni quos quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea praesentium nulla deleniti, minus, voluptates aliquam magnam inventore tenetur natus adipisci aut earum veritatis. Animi odio incidunt veniam quidem minus id, nisi saepe exercitationem eveniet dolore nesciunt neque eligendi dolores, nobis vel magnam sunt hic autem quae? Est dolor, tempora incidunt recusandae minus nihil excepturi. Laborum nostrum magni quos quia?"
+        "subDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea praesentium nulla deleniti, minus, voluptates aliquam magnam inventore tenetur natus adipisci aut earum veritatis. Animi odio incidunt veniam quidem minus id, nisi saepe exercitationem eveniet dolore nesciunt neque eligendi dolores, nobis vel magnam sunt hic autem quae? Est dolor, tempora incidunt recusandae minus nihil excepturi. Laborum nostrum magni quos quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea praesentium nulla deleniti, minus, voluptates aliquam magnam inventore tenetur natus adipisci aut earum veritatis. Animi odio incidunt veniam quidem minus id, nisi saepe exercitationem eveniet dolore nesciunt neque eligendi dolores, nobis vel magnam sunt hic autem quae? Est dolor, tempora incidunt recusandae minus nihil excepturi. Laborum nostrum magni quos quia?"
       },
       "staciaHelp": {
         "title": "How Stacia can help",
@@ -134,19 +148,24 @@
       }
     },
     {
+      "id": "mech-002",
       "title": "ismart",
       "starComponent": "true",
-      "template":"template2",
+      "template": "template2",
       "heading": {
         "title": "Lorem ipsum has been the industry's standard dummy",
         "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
       },
       "industry": {
         "title": "Industry's",
-        "topics": ["Solar Radiation", "Solar Radiation", "Solar Radiation"],
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ],
         "image": "/assets/Engine2.webp"
       },
-      "Heading2":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+      "Heading2": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
       "product": {
         "title": "The Product",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque inventore rerum deserunt facere aliquid. Ratione dolorum, pariatur exercitationem est obcaecati nostrum doloribus numquam, a blanditiis accusamus iure eaque ex eligendi distinctio? Harum iste impedit temporibus maxime, eum repellat quidem accusantium, obcaecati blanditiis aspernatur fuga optio, consectetur doloremque esse dolores a."
@@ -196,16 +215,21 @@
       }
     },
     {
+      "id": "elec-002",
       "title": "Reverse Kettle",
       "starComponent": "true",
-      "template":"template3",
+      "template": "template3",
       "banner": {
         "image": "/assets/Reverse-Kettle.webp",
         "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
       },
       "industry": {
         "title": "Industry's",
-        "topics": ["Solar Radiation", "Solar Radiation", "Solar Radiation"]
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ]
       },
       "product": {
         "title": "The Product",
@@ -214,69 +238,124 @@
           "Traditional solar cells are made up of a large number of small, individual cells that are interconnected to create a solar panel. This architecture is not well suited to capturing the energy of light because it is difficult to make the cells small enough and efficiently connect them."
         ]
       },
-      "testimonial1":  {
-      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
-      "name": "Nithish Kumar K",
-      "designation": "Head of Operations."
+      "testimonial1": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+        "name": "Nithish Kumar K",
+        "designation": "Head of Operations."
+      },
+      "Heading1": {
+        "title": "Lorem ipsum has been the industry's standard dummy",
+        "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
+      },
+      "Approach": {
+        "title": "Approach:",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "Result": {
+        "title": "Result:",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur."
+        ]
+      },
+      "testimonial2": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+        "name": "Nithish Kumar K",
+        "designation": "Head of Operations."
+      },
+      "Heading2": {
+        "title": "Lorem ipsum has been the industry's standard dummy",
+        "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
+      },
+      "Approach1": {
+        "title": "Approach:",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "Result1": {
+        "title": "Result:",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur."
+        ]
+      },
+      "testimonial3": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+        "name": "Nithish Kumar K",
+        "designation": "Head of Operations."
+      },
+      "solution": {
+        "title": "Solution",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      }
     },
-     "Heading1": {
-       "title": "Lorem ipsum has been the industry's standard dummy",
-       "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
-     },
-     "Approach": {
-      "title": "Approach:",
-      "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
-      "points":[
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
-      ]
-     },
-     "Result": {
-      "title": "Result:",
-      "content": [
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur."
-      ]
-     },
-     "testimonial2": {
-      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
-      "name": "Nithish Kumar K",
-      "designation": "Head of Operations."
-     },
-     "Heading2": {
-       "title": "Lorem ipsum has been the industry's standard dummy",
-       "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
-     },
-     "Approach1": {
-      "title": "Approach:",
-      "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
-      "points":[
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
-      ]
-     },
-     "Result1": {
-      "title": "Result:",
-      "content": [
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur."
-      ]
-     },
-     "testimonial3": {
-      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
-      "name": "Nithish Kumar K",
-      "designation": "Head of Operations."
-     },
-     "solution": {
-      "title": "Solution",
-      "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
-      "points": [
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
-        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
-      ]
-     }
+    {
+      "id": "mech-003",
+      "title": "Chilli Solar House",
+      "starComponent": "true",
+      "template":"template4",
+      "banner": {
+        "image": "/assets/Green-House2.webp",
+        "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
+      },
+      "section1": {
+        "title": "Lorem ipsum dolor Lorem ipsum dolorLorem ipsum dolorLorem Lorem ipsum dolor Lorem ipsum",
+        "summaryHeading": "Lorem ipsum dolor lorem ipsum dolor lorem",
+        "executiveSummary": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+          "Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant."
+        ],
+        "image": "/assets/Green-house.webp"
+      },
+      "midContainer": {
+        "chilli": "/assets/Chilli2.webp",
+        "dryChilli": "/assets/dryChilli.webp",
+        "title": "Lorem ipsum dolor Lorem ipsum dolorLoremLorem ipsum dolor Lorem ipsum dolorLoremLorem",
+        "content": "The goal of this project is to streamline and digitize the supplychain for oil production. By offering specialized apps and websites for farmers, surveyors, procurement managers, and logistics teams, this ecosystem aims to make it a better around the world and make the problem solved once and for all."
+      },
+      "section2": {
+        "listItems": [
+          {
+            "number": "01",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+            "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+          },
+          {
+            "number": "02",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+            "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+          },
+          {
+            "number": "03",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+            "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+          },
+          {
+            "number": "04",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+            "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+          }
+        ]
+      },
+      "section3": {
+        "title": "Lorem ipsum dolor sit amet consectetur.",
+        "image": "/assets/chilli3.webp",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam."
+      }
     }
   ]
 }

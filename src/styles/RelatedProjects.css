@@ -1,0 +1,43 @@
+.related-projects-container {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+  }
+  
+  .related-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .related-project-card {
+    width: 250px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .related-project-card:hover {
+    background-color: #e9ecef;
+  }
+  
+  .related-project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .related-project-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .related-project-card p {
+    font-size: 14px;
+    color: #666;
+  }
+  
