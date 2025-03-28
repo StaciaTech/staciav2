@@ -80,6 +80,7 @@ import { Link, useParams } from "react-router-dom";
 export default function ProductComponent2({
   bigText1,
   bigText2,
+  product,
   productName,
   productImg,
   des,
@@ -103,16 +104,16 @@ export default function ProductComponent2({
   const bigText2Trim = trimAfterTwoWords(bigText2);
 
    const params = useParams();
-   const categoryKey = params.category
-   console.log(params.category, "Category");
+
+    const departmentKey = FoundDept.id;
+    console.log(departmentKey,"departmentKey");    
+
+   const categoryKey = FoundCat.id
+   console.log(categoryKey, "CategoryKey");
 
 
-  const CategoryName = FoundCat.name.split(" ").join("-");
-  console.log(CategoryName,"CategoryNameNew")
-
-
-  const productKey = productName?.split(" ").join("-");
-
+  const productKey = product.id
+  console.log(productKey, "productKey")
   
 
   return (
@@ -121,7 +122,7 @@ export default function ProductComponent2({
       <div className="pro2-container">
         <div className="pro2-left">
           <div className="pname test-seclection-blue">
-            {productName} 
+            {productName}  
             </div>
           <p
             style={{ marginTop: "30px" }}
@@ -131,7 +132,7 @@ export default function ProductComponent2({
           </p>
           <Link
             className="all-know-more"
-            to={`/products/${FoundDept.name}/${categoryKey}/${productKey}`}
+            to={`/products/${departmentKey}/${categoryKey}/${productKey}`}
             onClick={() => window.scrollTo(0, 0)}
           >
             Read more
