@@ -388,9 +388,9 @@ function ResourceDropDown({ handleClose }) {
                   }`}
                   onClick={() => {
                     window.scrollTo(0, 0);
-                   navigate(
-                     `/case-study/single-caseStudy/${eachItem?.id || ""}`
-                   );
+                    navigate(
+                      `/case-study/single-caseStudy/${eachItem?.id || ""}` //----
+                    );
                     handleClose();
                   }}
                 >
@@ -409,11 +409,13 @@ function ResourceDropDown({ handleClose }) {
         </div>
       )}
 
+      {/* know more page -------------- */}
+
       {foundItem && activeArt && (
         <div className="res-item-contaienr">
           <div>
             <div className="res-item-card-image">
-              <img src={foundItem?.image?.imageUrl} alt="" />
+              <img src={foundItem?.imageURL} alt="" />
             </div>
             <div className="res-item-card-title">{foundItem?.title}</div>
             <p className="res-item-card-des">{foundItem?.description}</p>
@@ -423,8 +425,9 @@ function ResourceDropDown({ handleClose }) {
             className="know-more"
             onClick={() => {
               window.scrollTo(0, 0);
+              navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`);// path casestudy
+              handleClose();
               navigate(
-                
                 `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${
                   activeDept?.replace(/\s+/g, "-") || ""
                 }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
@@ -432,7 +435,7 @@ function ResourceDropDown({ handleClose }) {
               handleClose();
             }}
           >
-            Know More
+            Know more
           </div>
         </div>
       )}
