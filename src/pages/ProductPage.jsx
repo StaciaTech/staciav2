@@ -223,37 +223,43 @@ const productBg = [
 
 function ProductPage() {
   const params = useParams();
-
+  const depKey = params.department
+  const categoryKey = params.category
+  const productKey = params.id
   // const apiUrl = process.env.REACT_APP_API_URL;
 
   const [productData, setProductData] = useState();
 
-  const FetchProducts = () => {
-    try {
-      setProductData(data.department);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const FetchProducts = () => {
+  //   try {
+  //     setProductData(data.department);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   useEffect(() => {
-    FetchProducts();
-  }, [productData]);
+    // FetchProducts();
+    setProductData(data.department)
+  }, []);
 
   // console.log(productData, "ProductPage**Data")
 
     const FoundDept = productData?.find(
       (eachItem)=>eachItem.id === params.department 
       )
-      // console.log(FoundDept,"Department");
+      console.log(FoundDept,"Department");
     
     const FoundCat = FoundDept?.category.find(
       (eachItem)=> eachItem.id === params.category)
 
-      // console.log(FoundCat,"Category");
+      console.log(FoundCat,"Category");
 
     const proData = FoundCat?.products;
-    // console.log(proData,"ProData")
+    console.log(proData,"ProData")
+      
+    
+    
 
   return (
     <>
@@ -277,7 +283,7 @@ function ProductPage() {
                 <div className="product_description">
                   <p className="test-seclection-white">
                     <div style={{ userSelect: "none" }}>OverView</div>
-                    {FoundCat?.description}
+                    {FoundCat?.description} 
                   </p>
                 </div>
               </div>
@@ -296,6 +302,7 @@ function ProductPage() {
                       {/* {data.position !== 1 && ( */}
                       <ProductComponent2
                         bigText1={wordArr[0]}
+                        product={eachPro}
                         productName={eachPro?.title}
                         productImg={eachPro?.imageUrl}
                         bigText2={wordArr[1] || wordArr[0]}
