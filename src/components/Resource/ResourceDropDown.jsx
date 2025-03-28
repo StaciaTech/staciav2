@@ -213,33 +213,37 @@
 
 // export default ResourceDropDown;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useEffect, useState } from "react";
 import "../../styles/ResourceDropDown.css";
 import Star from "../../assets/loadingStar.svg";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import pk from "../../Data/SingleCaseStudy.json";
 
 function ResourceDropDown({ handleClose }) {
   const navigate = useNavigate();
-  const apiUrl = process.env.REACT_APP_API_URL;
 
-  // ✅ Default state as empty array
-  const [articlesData, setArticlesData] = useState([]); // array of objects----
+
+  const [articlesData, setArticlesData] = useState([]);
   const [caseStudyData, setCaseStudyData] = useState([]);
 
-  const FetchData = async (path, setFun) => {
-    try {
-      const res = await axios.get(`${apiUrl}${path}`);
-      setFun(res.data.docs || []); //  Ensure it's always an array----
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setFun([]); //  Prevent undefined issues
-    }
-  };
-
   useEffect(() => {
-    FetchData("/articles/list", setArticlesData);
-    FetchData("/case-study/list", setCaseStudyData);
+    setCaseStudyData(pk?.singlecasestudy || []);
   }, []);
 
   const ResourceArr = [
@@ -284,7 +288,10 @@ function ResourceDropDown({ handleClose }) {
       <div className="res-main-container">
         <div className="res-top-tilte">Section</div>
         {ResourceArr.map((eachRes, i) => {
-          const routKey = eachRes.name.toLowerCase().replace(/\s+/g, "-"); //spaces in route
+          const routKey = eachRes?.name
+            ? eachRes.name.toLowerCase().replace(/\s+/g, "-")
+            : "";
+
           return (
             <div
               key={i}
@@ -316,8 +323,10 @@ function ResourceDropDown({ handleClose }) {
           <div className="res-top-tilte">Department</div>
           {activeResArr.cats?.length > 0 ? (
             activeResArr.cats.map((eachDept, i) => {
-              const resRouteKey = activeRes.toLowerCase().replace(/\s+/g, "-");
-              const deptRouteKey = eachDept.name.replace(/\s+/g, "-");
+              const resRouteKey =
+                activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
+              const deptRouteKey = eachDept?.name?.replace(/\s+/g, "-") || "";
+
               return (
                 <div
                   key={i}
@@ -365,9 +374,11 @@ function ResourceDropDown({ handleClose }) {
           <div className="res-title-holder">
             <div className="res-top-tilte">{activeRes}</div>
             {currentcat.data.map((eachItem, i) => {
-              const resRouteKey = activeRes.toLowerCase().replace(/\s+/g, "-");
-              const deptRouteKey = activeDept.replace(/\s+/g, "-");
-              const artRouteKey = eachItem.title.replace(/\s+/g, "-");
+              const resRouteKey =
+                activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
+              const deptRouteKey = activeDept?.replace(/\s+/g, "-") || "";
+              const artRouteKey = eachItem?.title?.replace(/\s+/g, "-") || "";
+
               return (
                 <div
                   key={i}
@@ -377,7 +388,9 @@ function ResourceDropDown({ handleClose }) {
                   }`}
                   onClick={() => {
                     window.scrollTo(0, 0);
-                    navigate(`/${resRouteKey}/${deptRouteKey}/${artRouteKey}`);
+                   navigate(
+                     `/case-study/single-caseStudy/${eachItem?.id || ""}`
+                   );
                     handleClose();
                   }}
                 >
@@ -411,12 +424,10 @@ function ResourceDropDown({ handleClose }) {
             onClick={() => {
               window.scrollTo(0, 0);
               navigate(
-                `/${activeRes
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")}/${activeDept.replace(
-                  /\s+/g,
-                  "-"
-                )}/${foundItem?.title.replace(/\s+/g, "-")}`
+                
+                `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${
+                  activeDept?.replace(/\s+/g, "-") || ""
+                }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
               );
               handleClose();
             }}

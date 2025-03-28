@@ -154,7 +154,6 @@
 //   );
 // }
 
-
 //Static
 
 import React, { useEffect, useState } from "react";
@@ -166,6 +165,7 @@ import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
 import { useParams } from "react-router-dom";
+
 
 const data = [
   {
@@ -184,6 +184,7 @@ const data = [
   },
   {
     id: "Case Study-3",
+    name:"pk",
     title: "Chili Ladling Machine",
     description: "Analysis of mechanical case study.",
     image: { imageUrl: "/assets/caseStudy-3.webp" },
@@ -195,9 +196,11 @@ export default function CaseStudy() {
   const [casestudyData, setCasestudyData] = useState([]);
   const [activeDepartment, setActiveDepartment] = useState("All");
 
+  const details = data.caseStudy;
+  console.log(details,"Details");
+
   useEffect(() => {
     if (activeDepartment === "All") {
-      
       const uniqueCategoryStudies = [];
       const addedCategories = new Set();
 
@@ -210,19 +213,16 @@ export default function CaseStudy() {
 
       setCasestudyData(uniqueCategoryStudies);
     } else {
-      
       setCasestudyData(
         data.filter((article) => article.category === activeDepartment)
       );
     }
   }, [activeDepartment]);
 
-  
   const uniqueCategories = [
     "All",
     ...new Set(data?.map((item) => item.category)),
   ];
-  
 
   return (
     <>
@@ -237,7 +237,6 @@ export default function CaseStudy() {
         </div>
       </div>
 
-     
       <div className="article-item-tabs-container">
         {uniqueCategories?.map((category, i) => (
           <div
@@ -261,12 +260,3 @@ export default function CaseStudy() {
     </>
   );
 }
-
-
-
-
-
-
-
-
-
