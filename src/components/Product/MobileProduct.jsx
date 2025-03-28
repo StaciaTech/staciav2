@@ -20,13 +20,14 @@ export default function MobileProduct({ productData, FoundCat, FoundDept }) {
         </div>
       </div> */}
       <div className="mobile-product-section2">
-        {productData.map((data) => (
+        {productData.map((eachPro) => (
           <MobileProductCard
-            proName={data.title}
-            proImg={data.imageUrl}
+            proId = {eachPro.id}
+            proName={eachPro.title}
+            proImg={eachPro.imageUrl}
             // color={data.color}
-            proDesc={data.des}
-            proId={data._id}
+            proDesc={eachPro.description}
+            // proId={data._id}
             FoundDept={FoundDept}
             FoundCat={FoundCat}
           />
