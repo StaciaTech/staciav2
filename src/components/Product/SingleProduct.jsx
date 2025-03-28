@@ -326,47 +326,51 @@ import data from "../../Data/ProductPage.json";
 export default function SingleProduct() {
   const navigateTo = useNavigate();
   const params = useParams();
+  console.log(params,"params")
+
   // console.log(params.department,"paramsDepartment");
 
-  const productKey = params.product;
-  // console.log(productKey, "ProductKey");
+  const productKey = params.id;
+  console.log(productKey, "ProductKey");
 
   const DeptKey = params.department 
+  console.log(DeptKey,"DepartmentKey")
 
   const [productData, setProductData] = useState([]);
 
-  const FetchProducts = () => {
-    try {
-      setProductData(data.department);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const FetchProducts = () => {
+  //   try {
+  //     setProductData(data.department);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   useEffect(() => {
-    FetchProducts();
+    // FetchProducts();
+    setProductData(data.department)
   }, []);
 
   // console.log(productData, "ProductData");
 
   const FoundDep = productData.find((eachDep) => {
-    return eachDep.name === params.department;
+    return eachDep.id === params.department;
   });
-  // console.log(FoundDep, "Department");
+  console.log(FoundDep, "Department");
 
   const FoundCat = FoundDep?.category.find((eachCat) => {
-    return eachCat.name.split(" ").join("-") === params.category;
+    return eachCat.id === params.category;
   });
-  // console.log(FoundCat, "Category");
+  console.log(FoundCat, "Category");
 
   const CatogeryKey = FoundCat?.id
-  // console.log(CatogeryKey, "CatogeryKey");
+  console.log(CatogeryKey, "CatogeryKey");
 
   const proData = FoundCat?.products;
-  // console.log(proData, "Moses**ProdData");
+  console.log(proData, "Moses**ProdData");
 
   const product = proData?.find(
-    (eachPro) => eachPro.name.split(" ").join("-") === params.id
+    (eachPro) => eachPro.id === params.id
     );
   console.log(product, "Product");
 
@@ -399,9 +403,9 @@ export default function SingleProduct() {
   // );
 
   // const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.title.split(" ").join("-") !== params.id)
-  const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.id !== params.product)
+  const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.id !== params.id)
  
-  // console.log(RemainingProducts, "Remaining Product");
+  console.log(RemainingProducts, "Remaining Products");
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -645,7 +649,7 @@ export default function SingleProduct() {
               <div className="single-other-service-title">Other Products</div>
               <div className="remaining-products-card-container">
                 {RemainingProducts?.map((eachPro, i) => {
-                  const ProductKey = eachPro?.title.split(" ").join("-");
+                  const ProductKey = eachPro?.id;
                   return (
                     <>
                       {i < 6 && (
