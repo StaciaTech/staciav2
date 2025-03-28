@@ -111,6 +111,36 @@ function EventDetails() {
     },
   };
 
+
+  // Function to format date as "2nd February 2025"
+  const formatDate = (dateString) => {
+    const [day, month, year] = dateString.split("/").map(Number);
+    const dateObj = new Date(year, month - 1, day); // month - 1 because months are 0-based
+    const dayNum = dateObj.getDate();
+    const monthName = dateObj.toLocaleString("default", { month: "long" });
+    const yearNum = dateObj.getFullYear();
+
+    // Add ordinal suffix (st, nd, rd, th) to day
+    const getOrdinalSuffix = (day) => {
+      if (day > 3 && day < 21) return "th"; // 11th to 20th are always "th"
+      switch (day % 10) {
+        case 1:
+          return "st";
+        case 2:
+          return "nd";
+        case 3:
+          return "rd";
+        default:
+          return "th";
+      }
+    };
+
+    return `${dayNum}${getOrdinalSuffix(dayNum)} ${monthName} ${yearNum}`;
+  };
+
+
+  const date = singleEvent?.date;
+
   return (
     <div style={showEventForm ? { position: "fixed" } : { position: "static" }}>
       <div className="nav_style">
@@ -129,12 +159,12 @@ function EventDetails() {
           <div className="single-event-details-container">
             <div>
               <FaCalendarAlt />
-              <div>{singleEvent?.eventDate}</div>
+              <div>{date ? formatDate(date) : "No date available"}</div>
             </div>
             <div style={{ height: "2rem", borderLeft: "2px solid #e5e5e5" }} />
             <div>
               <GoClockFill />
-              <div>{singleEvent?.displayTime}</div>
+              <div>{singleEvent?.startTime}-{singleEvent?.endTime}</div>
             </div>
             <div style={{ height: "2rem", borderLeft: "2px solid #e5e5e5" }} />
             <div>
@@ -144,7 +174,7 @@ function EventDetails() {
           </div>
           <div className="single-event-content-container">
             <div className="single-event-text">
-              <p>{singleEvent?.description}</p>
+              <p>{singleEvent?.detail}</p>
             </div>
             <div className="single-event-img">
               <img src={singleEvent?.imageUrl} alt="" />

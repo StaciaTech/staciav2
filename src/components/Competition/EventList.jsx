@@ -1,246 +1,275 @@
-// import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import vector from "../../assets/vector1.png";
-// // import download from "../../assets/downarrow.png";
-// // import evelivetag from "../../assets/evelivetag.png";
-// import '../../styles/competition/EventxList.css';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import vector from "../../assets/vector1.png";
+import "../../styles/competition/EventList.css";
+import { GoArrowLeft, GoArrowRight, GoArrowDown } from "react-icons/go";
+import { FaCalendarAlt, FaDownload } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
+import dateimg from "../../assets/calendar.png";
+import eventtag from "../../assets/event-tag.png";
+
+import eventData from "../../Data/Compition.json";
 
 
-// import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-
-// import { FaCalendarAlt, FaDownload } from "react-icons/fa";
-// import { IoIosArrowForward } from "react-icons/io";
-
-
-// // import "../../styles/competition/EventCard.css";
-
-// // Sample event data (replace with real data as needed)
+// Sample event data
 // const eventsData = [
-//     // {
-//     //     id: 1,
-//     //     title: "Electronics Symposium 2025",
-//     //     description: "A deep dive into next-gen circuits.",
-//     //     date: "March 22, 2025",
-//     //     eventTags: "Electronics, Innovation",
-//     //     imageUrl: "https://example.com/electronics.jpg",
-//     //     department: "Electronics",
-//     // },
-//     // {
-//     //     id: 2,
-//     //     title: "Tech Summit",
-//     //     description: "Exploring AI and cloud tech.",
-//     //     date: "March 24, 2025", // Today
-//     //     eventTags: "AI, Technology",
-//     //     imageUrl: "https://example.com/tech.jpg",
-//     //     department: "Technology",
-//     // },
-//     // {
-//     //     id: 3,
-//     //     title: "Mech Design Workshop",
-//     //     description: "Hands-on mechanical design session.",
-//     //     date: "March 25, 2025", // Next day
-//     //     eventTags: "MechEng, Design",
-//     //     imageUrl: "https://example.com/mech.jpg",
-//     //     department: "Mechanical Engineering",
-//     // },
-//     // {
-//     //     id: 4,
-//     //     title: "Circuit Debugging Contest",
-//     //     description: "Electronics challenge.",
-//     //     date: "March 26, 2025", // Day after next
-//     //     eventTags: "Electronics, Contest",
-//     //     imageUrl: "https://example.com/circuit.jpg",
-//     //     department: "Electronics",
-//     // },
-//     // {
-//     //     id: 5,
-//     //     title: "Future Robotics Expo",
-//     //     description: "Robotics showcase.",
-//     //     date: "April 1, 2025", // Future event
-//     //     eventTags: "Tech, Robotics",
-//     //     imageUrl: "https://example.com/robotics.jpg",
-//     //     department: "Technology",
-//     // },
+//     {
+//         id: 1,
+//         title: "Electronics Symposium 2025",
+//         description: "Passion fueled creativity and innovation within the company. Team members are driven to develop groundbreaking solutions to address the oddest pressing industry needs and challenges.",
+//         date: "March 22, 2025",
+//         eventTags: "Electronics, Innovation",
+//         imageUrl: "https://example.com/electronics.jpg",
+//         department: "Electronics",
+//     },
+//     {
+//         id: 2,
+//         title: "Tech Summit",
+//         description: "Passion fueled creativity and innovation within the company. Team members are driven to develop groundbreaking solutions to address the oddest pressing industry needs and challenges.",
+//         date: "March 24, 2025",
+//         eventTags: "AI, Technology",
+//         imageUrl: "https://example.com/tech.jpg",
+//         department: "Technology",
+//     },
+//     {
+//         id: 3,
+//         title: "Mech Design Workshop",
+//         description: "Passion fueled creativity and innovation within the company. Team members are driven to develop groundbreaking solutions to address the oddest pressing industry needs and challenges.",
+//         date: "March 25, 2025",
+//         eventTags: "MechEng, Design",
+//         imageUrl: "https://example.com/mech.jpg",
+//         department: "Mechanical",
+//     },
+//     {
+//         id: 4,
+//         title: "Circuit Debugging Contest",
+//         description: "Passion fueled creativity and innovation within the company. Team members are driven to develop groundbreaking solutions to address the oddest pressing industry needs and challenges.",
+//         date: "March 26, 2025",
+//         eventTags: "Electronics, Contest",
+//         imageUrl: "https://example.com/circuit.jpg",
+//         department: "Electronics",
+//     },
+//     {
+//         id: 5,
+//         title: "Future Robotics Expo",
+//         description: "Passion fueled creativity and innovation within the company. Team members are driven to develop groundbreaking solutions to address the oddest pressing industry needs and challenges.",
+//         date: "April 1, 2025",
+//         eventTags: "Tech, Robotics",
+//         imageUrl: "https://example.com/robotics.jpg",
+//         department: "Technology",
+//     },
 // ];
 
+const EventList = () => {
+    const navigate = useNavigate();
+    const [filter, setFilter] = useState("All"); // All, Ongoing, Upcoming
+    const [department, setDepartment] = useState("All"); // All, Electronics, Technology, Mechanical 
+    const [currentIndex, setCurrentIndex] = useState(0); // Carousel state
+    // const currentDate = new Date("March 24, 2025");
 
-// //   Handle navigation
-// const nextSlide = () => {
-//     setCurrentIndex((prevIndex) =>
-//         prevIndex === winners.length - 1 ? 0 : prevIndex + 1
-//     );
-// };
-
-// const prevSlide = () => {
-//     setCurrentIndex((prevIndex) =>
-//         prevIndex === 0 ? winners.length - 1 : prevIndex - 1
-//     );
-// };
-
-// const goToSlide = (index) => {
-//     setCurrentIndex(index);
-// };
-
-// if (winners.length === 0) {
-//     return <div>Loading...</div>;
-// }
-
-// const currentWinner = winners[currentIndex];
+    const [events, setEvents] = useState([]);
 
 
-// const EventList = () => {
-//     const navigate = useNavigate();
-//     const [filter, setFilter] = useState("All"); // All, Ongoing, Upcoming
-//     const [department, setDepartment] = useState("All"); // All, Electronics, Technology, Mechanical Engineering
-//     const currentDate = new Date("March 24, 2025"); // Current date from your input
+    const currentDate = new Date();
 
-//     // Filter events based on status and department
-//     const filteredEvents = eventsData.filter(event => {
-//         const eventDate = new Date(event.date);
-//         const isToday = eventDate.toDateString() === currentDate.toDateString();
+    useEffect(() => {
 
-//         // Calculate the difference in days
-//         const timeDiff = eventDate - currentDate;
-//         const dayDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-//         const isNextOneOrTwoDays = dayDiff > 0 && dayDiff <= 2;
-//         const isFuture = dayDiff > 0;
-
-//         // Status filter
-//         if (filter === "Ongoing" && !isToday) return false;
-//         if (filter === "Upcoming" && !(isNextOneOrTwoDays || isFuture)) return false;
-
-//         // Department filter
-//         if (department !== "All" && event.department !== department) return false;
-
-//         return true;
-//     });
-
-//     //   const EventCard = ({ event }) => (
-//     //     <div className="event-card">
-//     //       <div className="event-content">
-//     //         <h2 className="event-title">{event.title}</h2>
-//     //         <p className="event-description">{event.description}</p>
-//     //         <p className="event-details">
-//     //           <img src={vector} className="event-icon" alt="icon" /> {event.date}   
-//     //           <img src={vector} className="event-icon" alt="icon" /> {event.eventTags}
-//     //         </p>
-//     //         <button 
-//     //           onClick={() => navigate(`/event/${event.id}`)}
-//     //           className="learn-more-btn"
-//     //         >
-//     //           Learn More <img src={vector} alt="arrow" className="arrow-icon" />
-//     //         </button>
-//     //         <div className="button-group">
-//     //           <button className="register-btn">Register Now</button>
-//     //           <button className="download-btn">
-//     //             <img src={vector} className="download-icon" alt="download" /> Download Details
-//     //           </button>
-//     //         </div>
-//     //       </div>
-//     //       <div className="event-image-container">
-//     //         <img src={event.imageUrl} alt="Event" className="event-image" />
-//     //       </div>
-//     //     </div>
-//     //   );
+        setEvents(eventData);
+    }, []);
 
 
 
+    // Function to format date as "2nd February 2025"
+    const formatDate = (dateString) => {
+        const [day, month, year] = dateString.split("/").map(Number);
+        const dateObj = new Date(year, month - 1, day); // month - 1 because months are 0-based
+        const dayNum = dateObj.getDate();
+        const monthName = dateObj.toLocaleString("default", { month: "long" });
+        const yearNum = dateObj.getFullYear();
 
-//     const EventCard = ({ event }) => {
-//         const navigate = useNavigate();
+        // Add ordinal suffix (st, nd, rd, th) to day
+        const getOrdinalSuffix = (day) => {
+            if (day > 3 && day < 21) return "th"; // 11th to 20th are always "th"
+            switch (day % 10) {
+                case 1:
+                    return "st";
+                case 2:
+                    return "nd";
+                case 3:
+                    return "rd";
+                default:
+                    return "th";
+            }
+        };
 
-//         return (
-//             <div className="event-card">
-//                 <div className="event-content">
-//                     <h2 className="event-title">{event.title}</h2>
-//                     <p className="event-description">{event.description}</p>
-//                     <p className="event-details">
-//                         <FaCalendarAlt />{event.date}
-//                         <FaCalendarAlt />{event.eventTags}
-//                     </p>
-//                     <button
-//                         onClick={() => navigate(`/event/${event.id}`)}
-//                         className="learn-more-btn"
-//                     >
-//                         Learn More <IoIosArrowForward />
-//                     </button>
-//                     <div className="button-group">
-//                         <button className="register-btn">
-//                             Register Now
-//                         </button>
-//                         <button className="download-btn">
-//                             <FaDownload />Download Details
-//                         </button>
-//                     </div>
-//                 </div>
-//                 <div className="event-image-container">
-//                     <img
-//                         src={event.imageUrl}
-//                         alt="Event"
-//                         className="event-image"
-//                     />
-//                 </div>
-//             </div>
-//         );
-//     };
+        return `${dayNum}${getOrdinalSuffix(dayNum)} ${monthName} ${yearNum}`;
+    };
+
+    const parseDate = (dateString) => {
+        const [day, month, year] = dateString.split("/").map(Number);
+        return new Date(year, month - 1, day);
+    };
 
 
-//     return (
-//         <div className="event-list">
-//             <h1>Events</h1>
-//             <div className="filters">
 
-//                 <div className="department-filter">
-//                     <select value={department} onChange={(e) => setDepartment(e.target.value)}>
-//                         <option value="All">All Departments</option>
-//                         <option value="Electronics">Electronics</option>
-//                         <option value="Technology">Technology</option>
-//                         <option value="Mechanical Engineering">Mechanical Engineering</option>
-//                     </select>
-//                 </div>
+    // Filter events based on status and department
+    const filteredEvents = events.filter(event => {
+        const eventDate = parseDate(event.date);
+        const isToday = eventDate.toDateString() === currentDate.toDateString();
+        const timeDiff = eventDate - currentDate;
+        const dayDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+        const isNextOneOrTwoDays = dayDiff > 0 && dayDiff <= 2;
+        const isFuture = dayDiff > 0;
 
-//                 <div className="status-filter">
-//                     <button onClick={() => setFilter("All")}>All</button>
-//                     <button onClick={() => setFilter("Ongoing")}>Ongoing</button>
-//                     <button onClick={() => setFilter("Upcoming")}>Upcoming</button>
-//                 </div>
-//                 <div className="winner-section1-btn-container">
-//                     <div>
-//                         <GoArrowLeft onClick={prevSlide} size={24} />
-//                     </div>
-//                     <div>
-//                         <GoArrowRight onClick={nextSlide} size={24} />
-//                     </div>
-//                 </div>
+        if (filter === "Ongoing" && !isToday) return false;
+        if (filter === "Upcoming" && !(isNextOneOrTwoDays || isFuture)) return false;
+        if (department !== "All" && event.department !== department) return false;
 
-//                 <div className="winner-section1-mob-btn-container">
-//                     <div>
-//                         <GoArrowLeft onClick={prevSlides} size={24} />
-//                     </div>
-//                     <div>
-//                         <GoArrowRight onClick={nextSlide} size={24} />
-//                     </div>
-//                 </div>
-//             </div>
-//             <div className="events-container">
-//                 {filteredEvents.length > 0 ? (
-//                     filteredEvents.map(event => <EventCard key={event.id} event={event} />)
-//                 ) : (
-//                     <p>No events found for this filter.</p>
-//                 )}
-//             </div>
+        return true;
+    });
 
-//             <div className="carousel-dots">
-//                 {winners.map((_, index) => (
-//                     <span
-//                         key={index}
-//                         className={`dot ${index === currentIndex ? "active" : ""}`}
-//                         onClick={() => goToSlide(index)}
-//                     ></span>
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// };
+    // Carousel navigation functions
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === filteredEvents.length - 1 ? 0 : prevIndex + 1
+        );
+    };
 
-// export default EventList;
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? filteredEvents.length - 1 : prevIndex - 1
+        );
+    };
+
+    const goToSlide = (index) => {
+        setCurrentIndex(index);
+    };
+
+    // EventCard component
+    const EventCard = ({ event }) => {
+        console.log("EventCard received event:", event);
+        if (!event || typeof event !== 'object') {
+            console.error("EventCard: event prop is invalid:", event);
+            return <div className="event-card1">Error: Invalid event data</div>;
+        }
+
+        const title = event.title || "No Title";
+        const description = event.description || "No Description";
+        const date = event.date;
+        const eventTags = event.eventTags || "No Tags";
+        const imageUrl = event.imageUrl || "https://via.placeholder.com/150";
+        const id = event.id || "unknown";
+
+        return (
+            <div className="event-card1">
+                <div className="event-content1">
+                    <h2 className="event-title1">{title}</h2>
+                    <p className="event-description1">{description}</p>
+                    <p className="event-details1">
+                        <img src={dateimg} className="event-icon1" alt="icon" /> {date ? formatDate(date) : "No date available"}
+                        <img src={eventtag} className="event-icon1" alt="icon" /> {eventTags}
+                    </p>
+                    <button
+                        onClick={() => {
+                            window.scrollTo(0, 0);
+                            title && navigate(`/event/${title}`);
+                        }}
+                        className="learn-more-btn1"
+                    >
+                        Learn More <img src={vector} alt="arrow" className="arrow-icon" />
+                    </button>
+                    <div className="button-group1">
+                        <button className="register-btn1">Register Now</button>
+                        <button className="download-btn1">
+                            <GoArrowDown /> Download Details
+                        </button>
+                    </div>
+                </div>
+                <div className="event-image-container1">
+                    <img src={imageUrl} alt="Event" className="event-image1" />
+                </div>
+            </div>
+        );
+    };
+
+    return (
+        <div className="event-list">
+            {/* <h1>Events</h1> */}
+            <div className="filters">
+                <div className="department-filter">
+
+                    <div className="all-btn-evt">
+
+                        <button value="All" className="all-btn" onClick={(e) => setDepartment(e.target.value)} >All Events</button>
+                        <button value="Electronics" className="all-btn" onClick={(e) => setDepartment(e.target.value)}> Tech Events </button>
+                        <button value="Technology" className="all-btn" onClick={(e) => setDepartment(e.target.value)}> Mechanical Events </button>
+                        <button value="Mechanical" className="all-btn" onClick={(e) => setDepartment(e.target.value)}> Electronic Events </button>
+
+
+                    </div>
+
+
+
+                    {/* mobile view */}
+                    <div className="winner-section1-mob-btn-container">
+                        <select value={department} onChange={(e) => setDepartment(e.target.value)}>
+                            <option value="All">All Departments</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Mechanical">Mechanical</option>
+                        </select>
+                    </div>
+
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        flexWrap: "wrap",
+                        gap: "1rem"
+                    }}>
+                        <div className="status-filter">
+                            <button onClick={() => setFilter("All")}>All</button>
+                            <button onClick={() => setFilter("Ongoing")}>Ongoing</button>
+                            <button onClick={() => setFilter("Upcoming")}>Upcoming</button>
+                        </div>
+                        <div className="winner-section1-btn-container">
+                            <div>
+                                <GoArrowLeft onClick={prevSlide} size={24} />
+                            </div>
+                            <div>
+                                <GoArrowRight onClick={nextSlide} size={24} />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="winner-section1-mob-btn-container">
+                    <div>
+                        <GoArrowLeft onClick={prevSlide} size={24} />
+                    </div>
+                    <div>
+                        <GoArrowRight onClick={nextSlide} size={24} />
+                    </div>
+                </div>
+            </div>
+            <div className="events-container1">
+                {filteredEvents.length > 0 ? (
+                    <EventCard event={filteredEvents[currentIndex]} /> // Display only the current event
+                ) : (
+                    <p>No events found for this filter.</p>
+                )}
+            </div>
+            <div className="carousel-dots">
+                {filteredEvents.map((_, index) => (
+                    <span
+                        key={index}
+                        className={`dot ${index === currentIndex ? "active" : ""}`}
+                        onClick={() => goToSlide(index)}
+                    ></span>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default EventList;

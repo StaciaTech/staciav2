@@ -246,7 +246,7 @@ function HomePage() {
 
 
       {/* Home Projects */}
-      <OurProjects /> /
+      <OurProjects /> 
 
 
       {/* Home Articles  */}

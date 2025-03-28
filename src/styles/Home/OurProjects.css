@@ -184,3 +184,8 @@
   color: #0047ff;
   text-align: center;
 }
+@media screen and (max-width: 720px) {
+  .our-projects-container{
+    display: none;
+  }
+}
