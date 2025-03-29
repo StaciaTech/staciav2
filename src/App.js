@@ -32,7 +32,7 @@ import Partners from "./pages/Partners";
 import CompetitionPage from "./pages/Competition";
 
 
-import EventDetails from "./componentzs/Competition/Event-Detail";
+import EventDetails from "./components/Competition/Event-Detail";
 
 function App() {
   return (
@@ -61,7 +61,7 @@ function App() {
           element={<SingleProject />}
         />
         <Route
-          path="/case-study/:department/:title"
+          path="/case-study/:department/:id" //--------------
           element={<SingleCaseStudy />}
         />
         <Route path="/project" element={<ProjectPage />} />
@@ -70,8 +70,9 @@ function App() {
           path="/project/:department/:category"
           element={<ProjectPage />}
         />
+       
         <Route path="/case-study" element={<CaseStudy />} />
-        <Route path="/case-study/:department" element={<CaseStudy />} />
+        <Route path="/case-study/:department:id" element={<CaseStudy />} />
         <Route path="/services" element={<ServicePage />} />
         <Route path="/services/:department" element={<ServicePage />} />
         <Route
