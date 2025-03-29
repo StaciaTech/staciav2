@@ -11,29 +11,39 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { IoIosArrowForward } from "react-icons/io";
 
+
+import serviceData from "../Data/Services.json";
+
 function ServicePage() {
   const navigate = useNavigate();
   const params = useParams();
 
   const [ServiceData, setServiceData] = useState([]);
   const [activeDepartment, setActiveDepartment] = useState("");
-  const apiUrl = process.env.REACT_APP_API_URL;
+  // const apiUrl = process.env.REACT_APP_API_URL;
 
   const sectionsRef = useRef([]); // To track section DOM nodes
 
   // Fetch Services Data
-  const FetchServices = async () => {
-    try {
-      const res = await axios.get(`${apiUrl}/service/all-service-index`);
-      setServiceData(res.data.docs);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const FetchServices = async () => {
+  //   try {
+  //     const res = await axios.get(`${apiUrl}/service/all-service-index`);
+  //     setServiceData(res.data.docs);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    FetchServices();
-  }, []);
+  // useEffect(() => {
+  //   FetchServices();
+  // }, []);
+
+  
+  
+    useEffect(() => {
+      // Simulate fetching data from a local JSON file
+      setServiceData(serviceData);
+    }, []);
 
   // Update activeDepartment from URL params or default to first department
   useEffect(() => {
@@ -81,6 +91,10 @@ function ServicePage() {
     // Cleanup observer on component unmount
     return () => observer.disconnect();
   }, [sectionsRef]);
+
+
+
+
 
   return (
     <>
@@ -192,11 +206,10 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
   return (
     <div className="service-page-dept-container">
       <div
-        className={`service-page-main-dots ${
-          eachItem.name === activeDepartment
-            ? "service-page-main-dots-active"
-            : ""
-        }`}
+        className={`service-page-main-dots ${eachItem.name === activeDepartment
+          ? "service-page-main-dots-active"
+          : ""
+          }`}
         onClick={() => {
           setActiveDepartment(eachItem.name);
           document
@@ -212,3 +225,39 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
     </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+// function ServicePage() {
+//   const navigate = useNavigate();
+//   const params = useParams();
+//   const [activeDepartment, setActiveDepartment] = useState("");
+//   const sectionsRef = useRef([]); // To track section DOM nodes
+
+//   useEffect(() => {
+//     if (params.department) {
+//       setActiveDepartment(params.department);
+//     } else if (serviceData.services.length > 0) {
+//       setActiveDepartment(serviceData.services[0].id);
+//     }
+//   }, [params.department]);
+
+//   // Scroll to the active department on mount
+//   useEffect(() => {
+//     if (activeDepartment) {
+//       const section = document.getElementById(activeDepartment);
+//       if (section) {
+//         const yOffset = -80; // Adjust for the navbar height
+//         const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+//         window.scrollTo({ top: y, behavior: "smooth" });
+//       }
+//     }
+//   }, [activeDepartment]);

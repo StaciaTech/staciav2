@@ -1,0 +1,180 @@
+.event-list {
+    padding: 20px;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status-filter button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #E5E7EB;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .status-filter button:hover {
+    background-color: #e0e0e0;
+    color: #0047ff;
+    transform: scale(1.05);
+  }
+   
+
+  .department-filter{
+    width: 100%;
+
+    /* allows the container to grow if needed */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .department-filter select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #B9BCC7;
+    cursor: pointer;
+  }
+  .events-container1 {}
+  /* EventCard styles */
+  .event-card1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #B9BCC7;
+
+    padding: 40px;
+    margin-bottom: 20px; 
+
+  }
+  
+  .event-content1 {
+    flex: 1;
+  }
+  
+  .event-title1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .event-description1 {
+    color: #6B6084;
+    margin-bottom: 10px;
+  }
+  
+  .event-details1 {
+    color: #374151;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .event-icon1 {
+    width: 4%;
+  }
+  
+  .learn-more-btn1 {
+    border: none;
+    color: #0047FF;
+    background: #F8FAFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .arrow-icon {
+    margin-left: 5px;
+  }
+  
+  .button-group1 {
+    display: flex;
+  }
+  
+  .register-btn1 {
+    padding: 10px 20px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .download-btn1 {
+    padding: 10px 20px;
+    background-color: #E5E7EB;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .download-icon1 {
+    width: 15px;
+    margin-right: 5px;
+  }
+  
+  .event-image-container1 {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .event-image1 {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+
+
+
+  .winner-section1-btn-container {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.winner-section1-mob-btn-container {
+    display: none;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: #717171;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .winner-section1-btn-container {
+        display: none;
+    }
+
+    .winner-section1-mob-btn-container {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+
+    .all-btn-evt {
+      display: none;
+    }
+
+
+}

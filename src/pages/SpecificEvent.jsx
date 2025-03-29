@@ -15,32 +15,64 @@ import JobForm from "../components/careers/JobForm";
 import EventForm from "../components/EventForm";
 import { IoIosArrowForward } from "react-icons/io";
 
+import eventData from "../Data/Event.json";
+
+
+
+
+// function SpecificEvent() {
+//   const params = useParams();
+//   const paramsTitle = params.title.split("-").join(" ");
+//   console.log(paramsTitle);
+
+//   const apiUrl = process.env.REACT_APP_API_URL;
+//   // const [events, setEvents] = useState();
+//   const [singleEvent, setSingleEvent] = useState();
+
+//   // const FetchEvents = async () => {
+//   //   try {
+//   //     const res = await axios.get(`${apiUrl}/event/index`);
+//   //     setEvents(res.data.docs);
+//   //   } catch (error) {
+//   //     console.log(error);
+//   //   }
+//   // };
+
+//   // useEffect(() => {
+//   //   FetchEvents();
+//   // }, []);
+
+//   const [events, setEvents] = useState([]);
+
+//     useEffect(() => {
+//       setEvents(eventsData.events);
+//     }, []);
+//   useEffect(() => {
+//     setSingleEvent(
+//       events?.find((eachEvent) => eachEvent.title === paramsTitle)
+//     );
+//   }, [paramsTitle, events]);
+//   console.log(singleEvent);
+
+//   const [showEventForm, setShowEventForm] = useState(false);
+
+//   const FormCloseHandler = () => {
+//     setShowEventForm(false);
+//   };
+
+
 function SpecificEvent() {
   const params = useParams();
   const paramsTitle = params.title.split("-").join(" ");
   console.log(paramsTitle);
 
-  const apiUrl = process.env.REACT_APP_API_URL;
-  const [events, setEvents] = useState();
-  const [singleEvent, setSingleEvent] = useState();
-
-  const FetchEvents = async () => {
-    try {
-      const res = await axios.get(`${apiUrl}/event/index`);
-      setEvents(res.data.docs);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [singleEvent, setSingleEvent] = useState(null);
 
   useEffect(() => {
-    FetchEvents();
-  }, []);
-  useEffect(() => {
-    setSingleEvent(
-      events?.find((eachEvent) => eachEvent.title === paramsTitle)
-    );
-  }, [paramsTitle, events]);
+    const foundEvent = eventData.events.find((eachEvent) => eachEvent.title === paramsTitle);
+    setSingleEvent(foundEvent);
+  }, [paramsTitle]);
+
   console.log(singleEvent);
 
   const [showEventForm, setShowEventForm] = useState(false);
@@ -103,7 +135,7 @@ function SpecificEvent() {
             <div style={{ height: "2rem", borderLeft: "2px solid #e5e5e5" }} />
             <div>
               <FaLocationDot />
-              <div>{singleEvent?.eventDate}</div>
+              <div>{singleEvent?.location}</div>
             </div>
           </div>
           <div className="single-event-content-container">

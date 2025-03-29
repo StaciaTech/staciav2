@@ -9,23 +9,36 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import eventsData from "../Data/Event.json";
+
+
+
+
 function EventsPage() {
   const navigate = useNavigate();
-  const apiUrl = process.env.REACT_APP_API_URL;
-  const [events, setEvents] = useState();
+  // const apiUrl = process.env.REACT_APP_API_URL;
+  // const [events, setEvents] = useState();
 
-  const FetchEvents = async () => {
-    try {
-      const res = await axios.get(`${apiUrl}/event/index`);
-      setEvents(res.data.docs);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const FetchEvents = async () => {
+  //   try {
+  //     const res = await axios.get(`${apiUrl}/event/index`);
+  //     setEvents(res.data.docs);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   FetchEvents();
+  // }, []);
+  // console.log(events);
+
+  const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    FetchEvents();
+    setEvents(eventsData.events);
   }, []);
+
   console.log(events);
 
   return (

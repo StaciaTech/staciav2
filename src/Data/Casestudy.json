@@ -1,0 +1,41 @@
+{
+    "data": [
+      {
+        "id": "6740072c9aaba7f2aa10d14e",
+        "title": "caseStudy - 1",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+        "desc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "image": {
+          "imageUrl": "/assets/casestudy1.webp"
+        },
+        "category": "Electronics",
+        "services": [],
+        "departmenttype": "Electronics",
+        "departmentname": "Electronics",
+        "department": "672eefbf81be8191d93ce4bd",
+        "service": [],
+        "serviceId": "",
+        "des": "Electronics Case Study",
+        "whatwedo": "Analysis of electronics case study."
+      },
+      {
+        "id": "6740092c3f91447edb16f9dd",
+        "title": "case study - 2",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+        "desc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "image": {
+          "imageUrl": "/assets/casestudy2.webp"
+        },
+        "category": "Electronics",
+        "services": [],
+        "departmenttype": "Electronics",
+        "departmentname": "Electronics",
+        "department": "672eefbf81be8191d93ce4bd",
+        "service": [],
+        "serviceId": "",
+        "des": "Electronics Case Study",
+        "whatwedo": "Analysis of electronics case study."
+      }
+    ]
+  }
+  

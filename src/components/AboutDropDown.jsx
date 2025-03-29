@@ -1,102 +1,19 @@
+
 import React, { useEffect, useState } from "react";
 import "../styles/AboutDropdown.css";
-import axios from "axios";
-import PlcImg from "../assets/abt-dd-logo.png";
 import { useNavigate } from "react-router-dom";
+import PlcImg from "../assets/abt-dd-logo.png";
 import Star from "../assets/loadingStar.svg";
+import data from "../Data/About.json"; // Importing JSON data
 
 function AboutDropDown({ handleClose }) {
-  const apiUrl = process.env.REACT_APP_API_URL;
   const navigate = useNavigate();
+  const [Leaders, setLeaders] = useState(data.leaders);
+  
+  const AboutArr = data.aboutSections;
 
-  const [Leaders, setLeaders] = useState();
-  const FetchData = async (endpoint, setData) => {
-    try {
-      const res = await axios.get(`${apiUrl}/${endpoint}`);
-      setData(res.data.docs);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    FetchData("founders/index", setLeaders);
-  }, []);
-
-  const AboutArr = [
-    {
-      section: "Who are We",
-      path: "about",
-      SectionItems: [
-        {
-          name: "About us",
-          path: "about/about-us",
-        },
-        {
-          name: "Our Story",
-          path: "about/out-story",
-        },
-        {
-          name: "Milestone",
-          path: "about/milestone",
-        },
-        {
-          name: "Our Mission",
-          path: "about/our-mission",
-        },
-        {
-          name: "Our Vision",
-          path: "about/our-vision",
-        },
-        {
-          name: "Why us",
-          path: "about/why-us?",
-        },
-        {
-          name: "Our Purpose",
-          path: "about/our-purpose",
-        },
-        {
-          name: "Our Expertise",
-          path: "about/our-expertise",
-        },
-        {
-          name: "Industries Covered",
-          path: "about/industries-covered",
-        },
-        {
-          name: "Partnerships and clients",
-          path: "about/partnership-clients",
-        },
-        {
-          name: "Our Leadership",
-          path: "about/leadership",
-        },
-        {
-          name: "Meet our team",
-          path: "about/team",
-        },
-      ],
-    },
-    {
-      section: "Leadership",
-      path: "about/our-leadership",
-      SectionItems: Leaders,
-    },
-    {
-      section: "Partnerships",
-      path: "partners",
-      SectionItems: [],
-    },
-
-    {
-      section: "MediaKit",
-      path: "Media-kit",
-      SectionItems: [],
-    },
-  ];
-
-  const [sectionTitles, setSectionTitles] = useState();
-  const [subSectionTitles, setSubSectionTitles] = useState();
+  const [sectionTitles, setSectionTitles] = useState([]);
+  const [subSectionTitles, setSubSectionTitles] = useState([]);
   const [foundLeader, setFoundLeader] = useState();
   const [activeTitle, setActiveTitle] = useState();
   const [activeSubTitle, setActiveSubTitle] = useState();
@@ -128,9 +45,7 @@ function AboutDropDown({ handleClose }) {
         {AboutArr?.map((eachTitle, i) => (
           <div
             key={i}
-            onMouseEnter={() => {
-              setActiveTitle(eachTitle.section);
-            }}
+            onMouseEnter={() => setActiveTitle(eachTitle.section)}
             className={`about-dd-main-title ${
               eachTitle.section === activeTitle
                 ? "about-dd-main-title-active"
@@ -143,11 +58,7 @@ function AboutDropDown({ handleClose }) {
           >
             <span>{eachTitle.section}</span>
             {eachTitle.section === activeTitle && (
-              <img
-                src={Star}
-                alt=""
-                style={{ width: "18px", marginLeft: "1rem" }}
-              />
+              <img src={Star} alt="" style={{ width: "18px", marginLeft: "1rem" }} />
             )}
           </div>
         ))}
@@ -169,17 +80,11 @@ function AboutDropDown({ handleClose }) {
         </div>
         <div className="about-dd-sub-title-holder">
           {subSectionTitles?.map((eachItem, i) => {
-            const subtitleKey = activeSubTitle
-              ?.toLowerCase()
-              .split(" ")
-              .join("-");
-
+            const subtitleKey = eachItem.name.split(" ").join("-");
             return (
               <div
                 key={i}
-                onMouseEnter={() => {
-                  setActiveSubTitle(eachItem.name);
-                }}
+                onMouseEnter={() => setActiveSubTitle(eachItem.name)}
                 className={`about-dd-main-title ${
                   eachItem.name === activeSubTitle
                     ? "about-dd-main-title-active"
@@ -188,9 +93,8 @@ function AboutDropDown({ handleClose }) {
                 onClick={() => {
                   window.scrollTo(0, 0);
                   if (activeTitle === "Leadership") {
-                    navigate(
-                      `/about/leader/${eachItem?.name.split(" ").join("-")}`
-                    );
+                    // navigate(`/about/leader/${subtitleKey}`);
+                    //  navigate(`/about/leader/${foundLeader?.name.split(" ").join("-")}`);
                   } else {
                     navigate(`/about/${subtitleKey}`);
                   }
@@ -199,11 +103,7 @@ function AboutDropDown({ handleClose }) {
               >
                 <span>{eachItem.name}</span>
                 {eachItem.name === activeSubTitle && (
-                  <img
-                    src={Star}
-                    alt=""
-                    style={{ width: "18px", marginLeft: "1rem" }}
-                  />
+                  <img src={Star} alt="" style={{ width: "18px", marginLeft: "1rem" }} />
                 )}
               </div>
             );
@@ -234,9 +134,7 @@ function AboutDropDown({ handleClose }) {
                 }}
                 onClick={() => {
                   window.scrollTo(0, 0);
-                  navigate(
-                    `/about/leader/${foundLeader?.name.split(" ").join("-")}`
-                  );
+                  navigate(`/about/leader/${foundLeader?.name.split(" ").join("-")}`);
                   handleClose();
                 }}
               >
@@ -255,3 +153,6 @@ function AboutDropDown({ handleClose }) {
 }
 
 export default AboutDropDown;
+
+
+

@@ -1,0 +1,1164 @@
+[
+    {
+      "name": "Electronics",
+      "des": "Department focusing on electronic systems, circuits, and hardware design.",
+      "position": 1,
+      "categories": [
+        {
+          "description": "Embedded Systems Development involves creating sophisticated solutions that seamlessly integrate hardware and software for a wide range of applications. From designing reliable hardware components to developing optimized firmware, this service ensures the highest performance and efficiency of embedded devices. It includes IoT-specific hardware, system-level integration, and custom solutions tailored to your needs. Whether it’s for industrial automation, consumer electronics, or smart devices, Embedded Systems Development ensures functionality, scalability, and reliability. Our comprehensive approach focuses on robust design principles, cutting-edge technologies, and tailored solutions to meet your unique challenges in the rapidly evolving electronics landscape.",
+          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpF9ut07hutVP_U33AtWNqVB0NvKwqe3Irja8kQrZl0PkIoNpgzG1wva7Od3e8KB79x3U&usqp=CAU",
+          "departmentId": "672eefbf81be8191d93ce4bd",
+          "id": "67528ab3d6387bac980467a9",
+          "name": "Embedded Systems Development",
+          "position": 1,
+          "services": [
+            {
+              "description": "Embedded Hardware Design focuses on crafting robust, efficient, and tailored hardware solutions for embedded systems. This includes designing microcontrollers, processors, memory modules, and interfaces to create a functional foundation for any embedded application. Our process involves requirements analysis, schematic creation, component selection, and PCB layout to ensure seamless integration and performance. We cater to diverse industries such as IoT, automotive, medical devices, and consumer electronics. By prioritizing reliability, power efficiency, and manufacturability, our designs are optimized for both prototyping and large-scale production, ensuring your product meets all functional and industrial standards with excellence.",
+              "imageUrl": null,
+              "id": "67528b84d6387bac980467aa",
+              "categoryId": "67528ab3d6387bac980467a9",
+              "title": "Embedded Hardware Design",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "Analyze functional, environmental, and power requirements for robust hardware tailored to client needs and operational constraints.",
+                  "id": "67529b81d6387bac980467c1",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "Requirement Analysis",
+                  "position": 1
+                },
+                {
+                  "des": "Create detailed schematics defining hardware connectivity and functional flow for seamless integration.",
+                  "id": "67529bb9d6387bac980467c2",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "Schematic Design",
+                  "position": 2
+                },
+                {
+                  "des": "Choose suitable microcontrollers, sensors, and interfaces, balancing performance, cost, and reliability.",
+                  "id": "67529bcdd6387bac980467c3",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "Component Selection",
+                  "position": 3
+                },
+                {
+                  "des": "Develop an optimized PCB layout for efficient power distribution and minimal signal interference",
+                  "id": "67529beed6387bac980467c4",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "PCB Layout Design",
+                  "position": 4
+                },
+                {
+                  "des": "Conduct thorough tests to ensure hardware reliability under various operational scenarios.",
+                  "id": "67529c0ad6387bac980467c5",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "Validation and Testing",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "Firmware Development Services specialize in creating optimized software that runs directly on embedded hardware. This includes low-level programming of microcontrollers and processors to ensure smooth communication between hardware components and higher-level systems. Our team develops custom firmware tailored to your product’s requirements, ensuring performance, energy efficiency, and reliability. We cover tasks like real-time operating system (RTOS) integration, communication protocol implementation (e.g., UART, I2C, SPI), and feature enhancement through software updates. Ideal for IoT devices, industrial automation, and consumer electronics, our services guarantee that your embedded system achieves the desired functionality and operates seamlessly under varying conditions.",
+              "imageUrl": null,
+              "id": "67528bb2d6387bac980467ab",
+              "categoryId": "67528ab3d6387bac980467a9",
+              "title": "Firmware Development Services",
+              "position": 2,
+              "whatWeDo": [
+                {
+                  "des": "Collaborate with clients to identify functional and performance needs for firmware development.",
+                  "id": "67529c56d6387bac980467c6",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Requirement Gathering",
+                  "position": 1
+                },
+                {
+                  "des": "Design a scalable and efficient firmware architecture, including task scheduling and resource allocation.",
+                  "id": "67529c88d6387bac980467c7",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Architecture Design",
+                  "position": 2
+                },
+                {
+                  "des": "Develop and integrate firmware with embedded hardware for seamless device operation.",
+                  "id": "67529c9bd6387bac980467c8",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Firmware Implementation",
+                  "position": 3
+                },
+                {
+                  "des": "Optimize code for speed, memory, and compatibility using advanced debugging tools.",
+                  "id": "67529cbad6387bac980467c9",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Debugging and Optimization",
+                  "position": 4
+                },
+                {
+                  "des": "Perform end-to-end testing to validate firmware performance in real-world conditions.",
+                  "id": "67529cdbd6387bac980467ca",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Integration Testing",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "Embedded System Design provides end-to-end development of embedded solutions, integrating both hardware and software seamlessly. We handle the entire process, from concept design and component selection to firmware development and system testing. Our focus is on creating systems that are efficient, scalable, and tailored to your application, whether it's industrial automation, medical devices, or consumer electronics. Our expertise ensures seamless communication between components, robust system architecture, and compliance with industry standards. By unifying hardware and software design, we deliver solutions that maximize functionality, reliability, and cost-efficiency for complex embedded systems.",
+              "imageUrl": null,
+              "id": "67528bcfd6387bac980467ac",
+              "categoryId": "67528ab3d6387bac980467a9",
+              "title": "Embedded System Design",
+              "position": 3,
+              "whatWeDo": [
+                {
+                  "des": "Define the embedded system's purpose, features, and user requirements.",
+                  "id": "67529d1ad6387bac980467cb",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Concept Development",
+                  "position": 1
+                },
+                {
+                  "des": "Simultaneously develop hardware and software for seamless integration and compatibility.",
+                  "id": "67529d35d6387bac980467cc",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Hardware-Software Co-Design",
+                  "position": 2
+                },
+                {
+                  "des": "Create working prototypes to validate design concepts and address issues early.",
+                  "id": "67529d4ed6387bac980467cd",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Prototyping",
+                  "position": 3
+                },
+                {
+                  "des": "Enhance system efficiency, reliability, and speed for optimal functionality.",
+                  "id": "67529d68d6387bac980467ce",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Performance Optimization",
+                  "position": 4
+                },
+                {
+                  "des": "Finalize the design for production and provide post-deployment support.",
+                  "id": "67529d7ed6387bac980467cf",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Deployment and Support",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "IoT Hardware Development focuses on creating specialized hardware for smart, connected devices. This includes designing and integrating sensors, microcontrollers, communication modules (WiFi, Bluetooth, LoRa), and power management systems. Our team ensures that your hardware is optimized for IoT-specific requirements like low power consumption, miniaturization, and seamless connectivity. Ideal for applications in smart homes, industrial IoT, and healthcare, our designs meet global standards for reliability and interoperability. From prototyping to scalable production, we ensure that your IoT hardware is robust, efficient, and ready to handle the demands of modern IoT ecosystems.",
+              "imageUrl": null,
+              "id": "67528bf7d6387bac980467ad",
+              "categoryId": "67528ab3d6387bac980467a9",
+              "title": "IoT Hardware Development",
+              "position": 4,
+              "whatWeDo": [
+                {
+                  "des": "Understand IoT-specific needs like connectivity, scalability, and power efficiency.",
+                  "id": "67529df0d6387bac980467d0",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Requirement Analysis",
+                  "position": 1
+                },
+                {
+                  "des": "Select suitable sensors, modules, and processors for IoT applications.",
+                  "id": "67529e23d6387bac980467d1",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Component Selection",
+                  "position": 2
+                },
+                {
+                  "des": "Build prototypes to test connectivity, performance, and scalability.",
+                  "id": "67529e31d6387bac980467d2",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Hardware Prototyping",
+                  "position": 3
+                },
+                {
+                  "des": "Implement Bluetooth, Wi-Fi, or cellular modules for smart device functionality.",
+                  "id": "67529e48d6387bac980467d3",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Connectivity Integration",
+                  "position": 4
+                },
+                {
+                  "des": "Conduct tests for compliance, durability, and performance under real-world conditions.",
+                  "id": "67529e5ed6387bac980467d4",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Validation Testing",
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "PCB Design and Manufacturing services cover the entire lifecycle of printed circuit boards, from concept to production. Our design process includes schematic creation, multilayer layout design, and signal integrity optimization, ensuring performance and manufacturability. For manufacturing, we offer prototyping, small batch runs, and large-scale production, adhering to industrial standards. We also provide review services to identify and resolve design flaws, reducing costs and enhancing reliability. Whether it’s for consumer electronics, automotive applications, or industrial equipment, our PCB solutions are tailored to meet specific requirements, ensuring your product’s success in competitive markets.",
+          "imageUrl": "https://customtechnologies.com/wp-content/uploads/DALL%C2%B7E-2024-01-22-17.49.17-Create-a-detailed-vector-image-illustrating-the-final-assembly-and-quality-control-stages-in-PCB-manufacturing.-The-image-should-depict-the-integratio.jpg",
+          "departmentId": "672eefbf81be8191d93ce4bd",
+          "id": "67528c41d6387bac980467ae",
+          "name": "PCB Design and Manufacturing",
+          "position": 2,
+          "services": []
+        },
+        {
+          "description": "We specialize in designing cutting-edge electronics products that combine innovation, functionality, and aesthetics. Our Electronics Product Design services cover the full lifecycle, from conceptualizing the initial idea to prototyping and production. Our team works on diverse applications, including consumer electronics, industrial devices, and complex electronic systems. We focus on ensuring the products are not only high-performing but also cost-effective and manufacturable. We consider all aspects such as circuit design, compliance with standards, and user experience, making sure the final product is ready for market success. Let us help you turn your vision into a reality with our comprehensive design solutions.",
+          "imageUrl": "https://www.shutterstock.com/shutterstock/videos/1104402021/thumb/4.jpg?ip=x480",
+          "departmentId": "672eefbf81be8191d93ce4bd",
+          "id": "675296cfd6387bac980467b6",
+          "name": "Electronics Product Design",
+          "position": 3,
+          "services": [
+            {
+              "description": "Electronics Circuit Design involves creating reliable circuits for analog, digital, and mixed-signal applications. Our process includes schematic design, simulation, and optimization to ensure functionality and performance. We consider factors like signal integrity, power efficiency, and noise reduction to meet your specific needs. Whether for consumer electronics, automotive systems, or industrial equipment, our designs are tailored to meet industry standards. We also provide testing and debugging services to validate circuit performance before production, ensuring a smooth transition to the next development phase.",
+              "imageUrl": null,
+              "id": "675296dbd6387bac980467b7",
+              "categoryId": "675296cfd6387bac980467b6",
+              "title": "Electronics Circuit Design",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "Define functional and environmental needs for the circuit.",
+                  "id": "6752a42fd6387bac980467f3",
+                  "serviceId": "675296dbd6387bac980467b7",
+                  "title": "Circuit Requirements",
+                  "position": 1
+                },
+                {
+                  "des": "Create detailed schematics for efficient circuit operation.",
+                  "id": "6752a491d6387bac980467f4",
+                  "serviceId": "675296dbd6387bac980467b7",
+                  "title": "Schematic Design",
+                  "position": 2
+                },
+                {
+                  "des": "Test circuits virtually to predict performance and address issues.",
+                  "id": "6752a4a7d6387bac980467f5",
+                  "serviceId": "675296dbd6387bac980467b7",
+                  "title": "Simulation",
+                  "position": 3
+                },
+                {
+                  "des": "Build and test physical circuit prototypes for validation.",
+                  "id": "6752a4c1d6387bac980467f6",
+                  "serviceId": "675296dbd6387bac980467b7",
+                  "title": "Prototype Development",
+                  "position": 4
+                },
+                {
+                  "des": "Optimize circuits for better efficiency and reliability.",
+                  "id": "6752a4e4d6387bac980467f7",
+                  "serviceId": "675296dbd6387bac980467b7",
+                  "title": "Design Refinement",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "Electronics Design Services encompass end-to-end development, from concept to production. We create designs tailored to meet the specific requirements of your application, ensuring functionality, reliability, and cost-efficiency. Our services include circuit design, PCB layout, component selection, and system integration. We cater to diverse industries like IoT, automotive, and medical devices. Our team prioritizes innovative solutions, compliance with standards, and seamless integration of hardware and software. Whether developing new products or upgrading existing designs, we deliver electronics solutions that meet your goals and exceed your expectations.",
+              "imageUrl": null,
+              "id": "67529738d6387bac980467b8",
+              "categoryId": "675296cfd6387bac980467b6",
+              "title": "Electronics Design Services",
+              "position": 2,
+              "whatWeDo": [
+                {
+                  "des": "Understand the product’s functional goals and constraints.",
+                  "id": "6752a56ed6387bac980467f8",
+                  "serviceId": "67529738d6387bac980467b8",
+                  "title": "Requirement Gathering",
+                  "position": 1
+                },
+                {
+                  "des": "Develop initial designs, including schematics and 3D models.",
+                  "id": "6752a5d4d6387bac980467f9",
+                  "serviceId": "67529738d6387bac980467b8",
+                  "title": "Concept Development",
+                  "position": 2
+                },
+                {
+                  "des": "Create functional prototypes for testing and validation.",
+                  "id": "6752a5e9d6387bac980467fa",
+                  "serviceId": "67529738d6387bac980467b8",
+                  "title": "Prototyping",
+                  "position": 3
+                },
+                {
+                  "des": "Refine designs for performance and manufacturability.",
+                  "id": "6752a60ed6387bac980467fb",
+                  "serviceId": "67529738d6387bac980467b8",
+                  "title": "Optimization",
+                  "position": 4
+                },
+                {
+                  "des": "Deliver a complete design package for production.",
+                  "id": "6752a620d6387bac980467fc",
+                  "serviceId": "67529738d6387bac980467b8",
+                  "title": "Final Documentation",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "Electronics Product Design transforms ideas into market-ready devices, balancing functionality, aesthetics, and user experience. From initial concept to prototype, we design products optimized for manufacturing and performance. Our process includes hardware design, software integration, enclosure development, and rigorous testing to ensure quality and compliance. Applications range from consumer gadgets to industrial devices. We focus on scalability, energy efficiency, and reliability, ensuring your product meets market demands. With our expertise, you can launch innovative electronics products that stand out in competitive markets.",
+              "imageUrl": null,
+              "id": "67529754d6387bac980467b9",
+              "categoryId": "675296cfd6387bac980467b6",
+              "title": "Electronics Product Design",
+              "position": 3,
+              "whatWeDo": [
+                {
+                  "des": "Collaborate to define product functionality, aesthetics, and safety requirements.",
+                  "id": "6752a6b2d6387bac980467fd",
+                  "serviceId": "67529754d6387bac980467b9",
+                  "title": "Requirement Definition",
+                  "position": 1
+                },
+                {
+                  "des": "Develop initial design concepts for feedback and iteration.",
+                  "id": "6752a6d6d6387bac980467fe",
+                  "serviceId": "67529754d6387bac980467b9",
+                  "title": "Concept Sketching",
+                  "position": 2
+                },
+                {
+                  "des": "Build functional and visual prototypes for review.",
+                  "id": "6752a6e6d6387bac980467ff",
+                  "serviceId": "67529754d6387bac980467b9",
+                  "title": "Prototyping",
+                  "position": 3
+                },
+                {
+                  "des": "Optimize designs for performance and manufacturability.",
+                  "id": "6752a6f7d6387bac98046800",
+                  "serviceId": "67529754d6387bac980467b9",
+                  "title": "Testing and Refinement",
+                  "position": 4
+                },
+                {
+                  "des": "Prepare finalized designs for mass production.",
+                  "id": "6752a710d6387bac98046801",
+                  "serviceId": "67529754d6387bac980467b9",
+                  "title": "Production Handoff",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "Industrial Design focuses on creating functional and aesthetically pleasing products that enhance user experience. Our services integrate ergonomic design, material selection, and manufacturing considerations to create products that are both practical and visually appealing. We work across industries like consumer electronics, medical devices, and industrial equipment, ensuring that designs align with your brand identity and meet customer expectations.",
+              "imageUrl": null,
+              "id": "67529778d6387bac980467ba",
+              "categoryId": "675296cfd6387bac980467b6",
+              "title": "Industrial Design",
+              "position": 4,
+              "whatWeDo": []
+            }
+          ]
+        },
+        {
+          "description": "",
+          "imageUrl": "https://www.takachi-enclosure.com/assets/attachments/images/cat_skl.jpg",
+          "departmentId": "672eefbf81be8191d93ce4bd",
+          "id": "675297bcd6387bac980467bb",
+          "name": "Enclosure and Industrial Design",
+          "position": 4,
+          "services": [
+            {
+              "description": "Enclosure Design Services create protective casings for electronic products, ensuring durability, thermal management, and aesthetic appeal. We design custom enclosures tailored to your product’s requirements, considering factors like material selection, mechanical strength, and manufacturing methods. Our expertise spans industries, including IoT, automotive, and consumer electronics. Prototyping and testing are integral to our process, ensuring the enclosure provides optimal protection and meets industrial standards. From waterproof housings to lightweight designs, we deliver solutions that enhance product performance and user satisfaction.",
+              "imageUrl": null,
+              "id": "6752982ed6387bac980467bc",
+              "categoryId": "675297bcd6387bac980467bb",
+              "title": "Enclosure Design Services",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "Identify product-specific enclosure needs, such as size, thermal management, and durability.",
+                  "id": "6752a802d6387bac98046807",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Requirement Analysis",
+                  "position": 1
+                },
+                {
+                  "des": "Choose appropriate materials for the enclosure, balancing protection, cost, and aesthetics.",
+                  "id": "6752a819d6387bac98046808",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Material Selection",
+                  "position": 2
+                },
+                {
+                  "des": "Develop detailed 3D CAD models to visualize the enclosure's structure and fit.",
+                  "id": "6752a82cd6387bac98046809",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "3D Modeling",
+                  "position": 3
+                },
+                {
+                  "des": "Create a physical prototype to validate the design and assess functionality.",
+                  "id": "6752a83cd6387bac9804680a",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Prototyping",
+                  "position": 4
+                },
+                {
+                  "des": "Refine the design for manufacturability and compliance with industry standards.",
+                  "id": "6752a850d6387bac9804680b",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Final Optimization",
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mechanical",
+      "des": "Department specializing in mechanical design and enclosure solutions.",
+      "position": 2,
+      "categories": [
+        {
+          "description": "",
+          "imageUrl": "https://www.takachi-enclosure.com/assets/attachments/images/cat_skl.jpg",
+          "departmentId": "672eefbf81be8191d93ce4bd",
+          "id": "675297bcd6387bac980467bb",
+          "name": "Enclosure and Industrial Design",
+          "position": 1,
+          "services": [
+            {
+              "description": "Enclosure Design Services create protective casings for electronic products, ensuring durability, thermal management, and aesthetic appeal. We design custom enclosures tailored to your product’s requirements, considering factors like material selection, mechanical strength, and manufacturing methods. Our expertise spans industries, including IoT, automotive, and consumer electronics. Prototyping and testing are integral to our process, ensuring the enclosure provides optimal protection and meets industrial standards. From waterproof housings to lightweight designs, we deliver solutions that enhance product performance and user satisfaction.",
+              "imageUrl": null,
+              "id": "6752982ed6387bac980467bc",
+              "categoryId": "675297bcd6387bac980467bb",
+              "title": "Enclosure Design Services",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "Identify product-specific enclosure needs, such as size, thermal management, and durability.",
+                  "id": "6752a802d6387bac98046807",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Requirement Analysis",
+                  "position": 1
+                },
+                {
+                  "des": "Choose appropriate materials for the enclosure, balancing protection, cost, and aesthetics.",
+                  "id": "6752a819d6387bac98046808",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Material Selection",
+                  "position": 2
+                },
+                {
+                  "des": "Develop detailed 3D CAD models to visualize the enclosure's structure and fit.",
+                  "id": "6752a82cd6387bac98046809",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "3D Modeling",
+                  "position": 3
+                },
+                {
+                  "des": "Create a physical prototype to validate the design and assess functionality.",
+                  "id": "6752a83cd6387bac9804680a",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Prototyping",
+                  "position": 4
+                },
+                {
+                  "des": "Refine the design for manufacturability and compliance with industry standards.",
+                  "id": "6752a850d6387bac9804680b",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Final Optimization",
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tech",
+      "des": "Department focused on software, IoT, and IT consulting solutions.",
+      "position": 3,
+      "categories": [
+        {
+          "description": "Our IoT Solutions provide end-to-end development for connected devices, enabling seamless integration of sensors, connectivity modules, and software. We specialize in creating innovative IoT products that enhance automation, data collection, and real-time monitoring for diverse industries. Whether it's designing IoT-specific hardware or developing custom firmware, our team delivers scalable and secure solutions that improve operational efficiency. From concept development to deployment, we ensure that every IoT device meets the highest standards of functionality and performance. Trust us to bring your IoT ideas to life with smart, connected, and reliable solutions tailored to your business needs.",
+          "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/iot_devices.jpg",
+          "departmentId": "672eefbf81be8191d93ce4bd",
+          "id": "67529615d6387bac980467b3",
+          "name": "IoT Solutions",
+          "position": 1,
+          "services": [
+            {
+              "description": "IoT Product Development delivers end-to-end solutions for creating smart, connected devices. This includes designing hardware, integrating sensors and communication modules, and developing software for data management and analytics. Our process involves concept design, prototyping, testing, and scaling for production. We ensure IoT systems are optimized for low power consumption, secure connectivity, and real-time performance. Applications range from smart homes and healthcare to industrial automation and agriculture. By leveraging our expertise, we help businesses launch innovative IoT products that enhance efficiency, improve decision-making, and provide seamless user experiences.",
+              "imageUrl": null,
+              "id": "6752966fd6387bac980467b4",
+              "categoryId": "67529615d6387bac980467b3",
+              "title": "IoT Product Development",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "Identify IoT product goals, target users, and core functionality.",
+                  "id": "6752a160d6387bac980467e9",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "Needs Assessment",
+                  "position": 1
+                },
+                {
+                  "des": "Create designs for hardware, firmware, and software integration.",
+                  "id": "6752a17dd6387bac980467ea",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "System Design",
+                  "position": 2
+                },
+                {
+                  "des": "Develop prototypes for functionality and connectivity testing.",
+                  "id": "6752a190d6387bac980467eb",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "Prototyping",
+                  "position": 3
+                },
+                {
+                  "des": "Implement cloud-based data management and analytics systems.",
+                  "id": "6752a1a6d6387bac980467ec",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "Cloud Integration",
+                  "position": 4
+                },
+                {
+                  "des": "Conduct performance and usability tests before deployment.",
+                  "id": "6752a1b9d6387bac980467ed",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "Final Validation",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "IoT Sensor Integration focuses on selecting, configuring, and implementing sensors to capture real-time data for various applications. Our services include analyzing requirements, sourcing sensors, and integrating them with hardware and software systems. We ensure compatibility with IoT platforms, optimizing sensor placement for accuracy and reliability. Whether it’s temperature, pressure, motion, or environmental monitoring, our expertise ensures efficient data acquisition and processing. Applications include smart cities, industrial IoT, and healthcare systems. By seamlessly integrating sensors, we enable robust IoT solutions that deliver actionable insights and drive smarter decision-making.",
+              "imageUrl": null,
+              "id": "67529694d6387bac980467b5",
+              "categoryId": "67529615d6387bac980467b3",
+              "title": "IoT Sensor Integration",
+              "position": 2,
+              "whatWeDo": [
+                {
+                  "des": "Choose sensors suited for the intended application and environment.",
+                  "id": "6752a225d6387bac980467ee",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "Sensor Selection",
+                  "position": 1
+                },
+                {
+                  "des": "Plan sensor placement and connectivity within the device architecture.",
+                  "id": "6752a278d6387bac980467ef",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "Integration Design",
+                  "position": 2
+                },
+                {
+                  "des": "Embed sensors into devices, ensuring proper signal transmission.",
+                  "id": "6752a29ad6387bac980467f0",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "Hardware Integration",
+                  "position": 3
+                },
+                {
+                  "des": "Develop firmware for seamless sensor communication with other components.",
+                  "id": "6752a315d6387bac980467f1",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "Firmware Development",
+                  "position": 4
+                },
+                {
+                  "des": "Validate sensor performance and data accuracy under real-world conditions.",
+                  "id": "6752a32fd6387bac980467f2",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "System Testing",
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Application Support and Maintenance services ensure that your applications remain operational, secure, and up-to-date. Our team provides ongoing support, including troubleshooting, updates, and performance monitoring, to keep your software running smoothly. We address issues proactively, apply patches, and implement enhancements to adapt to changing needs. Whether it’s fixing bugs, optimizing performance, or ensuring compatibility with new systems, we help extend the lifespan of your applications and maintain a high-quality user experience.",
+          "imageUrl": "https://media.licdn.com/dms/image/D4D12AQEfRjF8z1Qlew/article-cover_image-shrink_720_1280/0/1686143528922?e=2147483647&v=beta&t=RvG0M6t0oHCe5wxwEfCZUs8a05b3uFIntnQEkp0mX_E",
+          "departmentId": "672eefd2bf4e5705ff670c69",
+          "id": "6769383a51dcda17a0f93888",
+          "name": "Application Support and Maintenance",
+          "position": 2,
+          "services": [
+            {
+              "description": "Application Maintenance ensures that your software remains functional, efficient, and aligned with your business needs. We provide regular updates, performance tuning, and bug fixes to keep applications running smoothly. Our team monitors system health, resolves issues quickly, and implements enhancements to improve usability and reliability. This service helps businesses avoid downtime, maintain security, and adapt applications to evolving requirements.",
+              "imageUrl": null,
+              "id": "676e5561e0bbb25e4ee93315",
+              "categoryId": "6769383a51dcda17a0f93888",
+              "title": "Application Maintenance",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "We provide round-the-clock support to address any application issues as they arise.",
+                  "id": "676e56cde0bbb25e4ee93319",
+                  "serviceId": "676e5561e0bbb25e4ee93315",
+                  "title": "24/7 Support",
+                  "position": 1
+                },
+                {
+                  "des": "We monitor application performance and health in real-time, identifying issues before they escalate.",
+                  "id": "676e56e9e0bbb25e4ee9331a",
+                  "serviceId": "676e5561e0bbb25e4ee93315",
+                  "title": "Proactive Monitoring",
+                  "position": 2
+                },
+                {
+                  "des": "We apply regular updates and patches to keep applications secure and compatible with current systems.",
+                  "id": "676e56fce0bbb25e4ee9331b",
+                  "serviceId": "676e5561e0bbb25e4ee93315",
+                  "title": "Regular Updates",
+                  "position": 3
+                },
+                {
+                  "des": "We resolve technical issues quickly to minimize downtime and maintain smooth operations.",
+                  "id": "676e570ce0bbb25e4ee9331c",
+                  "serviceId": "676e5561e0bbb25e4ee93315",
+                  "title": "Issue Resolution",
+                  "position": 4
+                },
+                {
+                  "des": "We optimize application performance by fine-tuning code, databases, and infrastructure.",
+                  "id": "676e570ce0bbb25e4ee9331d",
+                  "serviceId": "676e5561e0bbb25e4ee93315",
+                  "title": "Performance Tuning",
+                  "position": 5
+                },
+                {
+                  "des": "We implement new features and improvements to keep applications aligned with new technologies and user needs.",
+                  "id": "676e571ee0bbb25e4ee9331e",
+                  "serviceId": "676e5561e0bbb25e4ee93315",
+                  "title": "Application Enhancements",
+                  "position": 6
+                }
+              ]
+            },
+            {
+              "description": "Bug Fixes and Updates are an essential part of maintaining application functionality. Our team ensures that any bugs or issues are quickly addressed and fixed, minimizing disruptions to the user experience. We also implement updates to improve performance, enhance features, and address security vulnerabilities. Our approach to bug fixing and updates is focused on maintaining system stability and improving overall user satisfaction. By staying proactive with maintenance, we ensure that your applications remain reliable and continue to meet user needs effectively.",
+              "imageUrl": null,
+              "id": "676e5597e0bbb25e4ee93316",
+              "categoryId": "6769383a51dcda17a0f93888",
+              "title": "Bug Fixes and Updates",
+              "position": 2,
+              "whatWeDo": [
+                {
+                  "des": "We use automated testing and monitoring tools to detect bugs before they impact users.",
+                  "id": "676e5758e0bbb25e4ee9331f",
+                  "serviceId": "676e5597e0bbb25e4ee93316",
+                  "title": "Proactive Bug Identification",
+                  "position": 1
+                },
+                {
+                  "des": "We prioritize critical bugs and address them swiftly to minimize impact on your users.",
+                  "id": "676e5787e0bbb25e4ee93320",
+                  "serviceId": "676e5597e0bbb25e4ee93316",
+                  "title": "Prioritization and Resolution",
+                  "position": 2
+                },
+                {
+                  "des": "We refactor code to eliminate bugs, enhance performance, and improve code readability.",
+                  "id": "676e579fe0bbb25e4ee93321",
+                  "serviceId": "676e5597e0bbb25e4ee93316",
+                  "title": "Code Refactoring",
+                  "position": 3
+                },
+                {
+                  "des": "We schedule regular updates to keep applications up to date with new features and improvements.",
+                  "id": "676e57bbe0bbb25e4ee93322",
+                  "serviceId": "676e5597e0bbb25e4ee93316",
+                  "title": "Routine Updates",
+                  "position": 4
+                },
+                {
+                  "des": "We apply security patches to address vulnerabilities and ensure the application is secure.",
+                  "id": "676e57e2e0bbb25e4ee93323",
+                  "serviceId": "676e5597e0bbb25e4ee93316",
+                  "title": "Security Patches",
+                  "position": 5
+                },
+                {
+                  "des": "We ensure that updates are compatible with existing systems and do not cause new issues.",
+                  "id": "676e5801e0bbb25e4ee93324",
+                  "serviceId": "676e5597e0bbb25e4ee93316",
+                  "title": "Compatibility Testing",
+                  "position": 6
+                },
+                {
+                  "des": "We use version control systems to manage code changes, ensuring smooth updates and rollbacks if necessary.",
+                  "id": "676e581de0bbb25e4ee93325",
+                  "serviceId": "676e5597e0bbb25e4ee93316",
+                  "title": "Version Control",
+                  "position": 7
+                }
+              ]
+            },
+            {
+              "description": "Performance Optimization focuses on improving the speed, responsiveness, and overall performance of applications. Our team identifies bottlenecks, optimizes code, and implements best practices to ensure that your applications run smoothly under heavy traffic and resource constraints. Whether it’s optimizing databases, improving front-end performance, or tuning back-end servers, we ensure that your users experience minimal delays and maximum efficiency. We also monitor application performance over time and make adjustments as needed to maintain a high standard of performance.",
+              "imageUrl": null,
+              "id": "676e55bce0bbb25e4ee93317",
+              "categoryId": "6769383a51dcda17a0f93888",
+              "title": "Performance Optimization",
+              "position": 3,
+              "whatWeDo": [
+                {
+                  "des": "We review and optimize code to ensure efficient resource use and faster execution.",
+                  "id": "676e584fe0bbb25e4ee93326",
+                  "serviceId": "676e55bce0bbb25e4ee93317",
+                  "title": "Code Optimization",
+                  "position": 1
+                },
+                {
+                  "des": "We optimize database queries and indexing to reduce latency and improve data retrieval times.",
+                  "id": "676e588de0bbb25e4ee93327",
+                  "serviceId": "676e55bce0bbb25e4ee93317",
+                  "title": "Database Tuning",
+                  "position": 2
+                },
+                {
+                  "des": "We enhance user interfaces for faster load times and smoother interactions.",
+                  "id": "676e58a6e0bbb25e4ee93328",
+                  "serviceId": "676e55bce0bbb25e4ee93317",
+                  "title": "Front-End Improvements",
+                  "position": 3
+                },
+                {
+                  "des": "We optimize server configurations and APIs to ensure fast data processing and scalability.",
+                  "id": "676e58c8e0bbb25e4ee93329",
+                  "serviceId": "676e55bce0bbb25e4ee93317",
+                  "title": "Backend Optimization",
+                  "position": 4
+                },
+                {
+                  "des": "We implement real-time performance monitoring to track the health of your applications and identify performance bottlenecks.",
+                  "id": "676e5923e0bbb25e4ee9332a",
+                  "serviceId": "676e55bce0bbb25e4ee93317",
+                  "title": "Performance Monitoring",
+                  "position": 5
+                },
+                {
+                  "des": "We conduct load testing to simulate high traffic and assess how your systems handle peak demands, making necessary optimizations.",
+                  "id": "676e5940e0bbb25e4ee9332b",
+                  "serviceId": "676e55bce0bbb25e4ee93317",
+                  "title": "Load Testing",
+                  "position": 6
+                },
+                {
+                  "des": "We implement caching mechanisms to store frequently accessed data, reducing load times and improving responsiveness.",
+                  "id": "676e595ae0bbb25e4ee9332c",
+                  "serviceId": "676e55bce0bbb25e4ee93317",
+                  "title": "Caching Strategies",
+                  "position": 7
+                },
+                {
+                  "des": "We design scalable infrastructure and solutions that grow with your business, ensuring consistent performance even as demands increase.",
+                  "id": "676e5974e0bbb25e4ee9332d",
+                  "serviceId": "676e55bce0bbb25e4ee93317",
+                  "title": "Scalability Improvements",
+                  "position": 8
+                }
+              ]
+            },
+            {
+              "description": "Server Monitoring and Maintenance ensures the health, security, and performance of your server infrastructure. We provide continuous monitoring of server metrics like CPU usage, memory, and disk space to detect potential issues before they cause system failures. Our team handles routine maintenance tasks such as software updates, patches, and backups to ensure servers remain secure and efficient. With our monitoring services, businesses can reduce downtime, improve system reliability, and ensure that their server infrastructure supports growth without interruptions.",
+              "imageUrl": null,
+              "id": "676e55dbe0bbb25e4ee93318",
+              "categoryId": "6769383a51dcda17a0f93888",
+              "title": "Server Monitoring and Maintenance",
+              "position": 4,
+              "whatWeDo": [
+                {
+                  "des": "We analyze server performance to identify potential bottlenecks and optimize resource allocation.",
+                  "id": "676e5a08e0bbb25e4ee9332e",
+                  "serviceId": "676e55dbe0bbb25e4ee93318",
+                  "title": "Performance Analytics",
+                  "position": 1
+                },
+                {
+                  "des": "We apply regular software updates and security patches to maintain system stability and security.",
+                  "id": "676e5a39e0bbb25e4ee9332f",
+                  "serviceId": "676e55dbe0bbb25e4ee93318",
+                  "title": "Routine Patches & Updates",
+                  "position": 2
+                },
+                {
+                  "des": "We set up automated alerts to notify your team of any server performance issues, allowing for immediate action.",
+                  "id": "676e5a63e0bbb25e4ee93330",
+                  "serviceId": "676e55dbe0bbb25e4ee93318",
+                  "title": "Automated Alerts",
+                  "position": 3
+                },
+                {
+                  "des": "We fine-tune server configurations, updating software and managing resources to enhance performance and prevent bottlenecks.",
+                  "id": "676e5a81e0bbb25e4ee93331",
+                  "serviceId": "676e55dbe0bbb25e4ee93318",
+                  "title": "Server Optimization",
+                  "position": 4
+                },
+                {
+                  "des": "We implement and test backup solutions regularly to ensure that your server data is secure and can be restored in the event of a disaster.",
+                  "id": "676e5aa0e0bbb25e4ee93332",
+                  "serviceId": "676e55dbe0bbb25e4ee93318",
+                  "title": "Backup and Recovery",
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Our Quality Assurance (QA) and Testing Services ensure that your applications are robust, secure, and meet the highest quality standards. We conduct thorough testing, including functional, performance, and security testing, to ensure that your software delivers a seamless user experience. Our team applies best practices and industry standards to identify and fix issues before your application is deployed, helping to reduce the risk of defects and ensuring that your software functions as expected in real-world scenarios.",
+          "imageUrl": "https://t4.ftcdn.net/jpg/05/47/39/37/360_F_547393714_5MB4xb2cYaHi2x2h1RrIVNe7Q7xcDc1b.jpg",
+          "departmentId": "672eefd2bf4e5705ff670c69",
+          "id": "6769386151dcda17a0f93889",
+          "name": "Quality Assurance (QA) and Testing Services",
+          "position": 3,
+          "services": [
+            {
+              "description": "Functional Testing ensures that all features of an application work as intended. Our team tests the functionality of each feature to ensure it performs as expected under different conditions. We identify and address any discrepancies or defects, ensuring that the application meets functional requirements. Functional testing includes verifying that each feature works properly, the user interface functions smoothly, and the system behaves correctly across various devices and platforms.",
+              "imageUrl": null,
+              "id": "676e5ae7e0bbb25e4ee93333",
+              "categoryId": "6769386151dcda17a0f93889",
+              "title": "Functional Testing",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "We thoroughly analyze your application’s requirements to design test cases that cover all functional aspects of the product.",
+                  "id": "676e5ba5e0bbb25e4ee93337",
+                  "serviceId": "676e5ae7e0bbb25e4ee93333",
+                  "title": "Requirement Analysis",
+                  "position": 1
+                },
+                {
+                  "des": "We create detailed test plans based on functional specifications to ensure all features are tested thoroughly.",
+                  "id": "676e5be0e0bbb25e4ee93338",
+                  "serviceId": "676e5ae7e0bbb25e4ee93333",
+                  "title": "Test Planning",
+                  "position": 2
+                },
+                {
+                  "des": "We identify and report defects or issues with functionality, ensuring prompt resolution.",
+                  "id": "676e5bfbe0bbb25e4ee93339",
+                  "serviceId": "676e5ae7e0bbb25e4ee93333",
+                  "title": "Defect Identification",
+                  "position": 3
+                },
+                {
+                  "des": "We test the application across different devices and platforms to ensure consistent performance.",
+                  "id": "676e5c13e0bbb25e4ee9333a",
+                  "serviceId": "676e5ae7e0bbb25e4ee93333",
+                  "title": "Cross-Device Testing",
+                  "position": 4
+                },
+                {
+                  "des": "We perform regression testing to verify that new updates or features do not affect existing functionality.",
+                  "id": "676e5c30e0bbb25e4ee9333b",
+                  "serviceId": "676e5ae7e0bbb25e4ee93333",
+                  "title": "Regression Testing",
+                  "position": 5
+                },
+                {
+                  "des": "We perform both manual and automated testing to ensure comprehensive test coverage and efficiency.",
+                  "id": "676e5c50e0bbb25e4ee9333c",
+                  "serviceId": "676e5ae7e0bbb25e4ee93333",
+                  "title": "Manual and Automated Testing",
+                  "position": 6
+                },
+                {
+                  "des": "We simulate real-world usage scenarios to ensure the application meets user expectations under various conditions.",
+                  "id": "676e5c70e0bbb25e4ee9333d",
+                  "serviceId": "676e5ae7e0bbb25e4ee93333",
+                  "title": "User Scenario Testing",
+                  "position": 7
+                }
+              ]
+            },
+            {
+              "description": "Automation testing focuses on improving the efficiency, accuracy, and consistency of the testing process by using specialized tools and scripts to execute test cases. It reduces human intervention, accelerates testing timelines, and ensures extensive test coverage across different features, platforms, and browsers. Ideal for repetitive and time-intensive tasks, automation testing enhances software quality by detecting defects early in the development cycle. With frameworks like Selenium, Appium, and Cypress, automation ensures seamless integration with CI/CD pipelines. This approach empowers teams to focus on innovation while maintaining software reliability, making it a critical part of modern development and quality assurance processes.",
+              "imageUrl": null,
+              "id": "676e5b1ee0bbb25e4ee93334",
+              "categoryId": "6769386151dcda17a0f93889",
+              "title": "Automation Testing",
+              "position": 2,
+              "whatWeDo": [
+                {
+                  "des": "We select the best automation testing tools based on your project requirements, including Selenium, Appium, and others.",
+                  "id": "676e5ca5e0bbb25e4ee9333e",
+                  "serviceId": "676e5b1ee0bbb25e4ee93334",
+                  "title": "Tool Selection",
+                  "position": 1
+                },
+                {
+                  "des": "We write efficient, reusable test scripts to automate various test cases, ensuring high test coverage.",
+                  "id": "676e5cd5e0bbb25e4ee9333f",
+                  "serviceId": "676e5b1ee0bbb25e4ee93334",
+                  "title": "Test Script Development",
+                  "position": 2
+                },
+                {
+                  "des": "We integrate automated testing into your CI/CD pipeline to ensure ongoing quality throughout the development process.",
+                  "id": "676e5ce8e0bbb25e4ee93340",
+                  "serviceId": "676e5b1ee0bbb25e4ee93334",
+                  "title": "Continuous Testing",
+                  "position": 3
+                },
+                {
+                  "des": "We ensure that your application functions correctly across different browsers and platforms through automated tests.",
+                  "id": "676e5d02e0bbb25e4ee93341",
+                  "serviceId": "676e5b1ee0bbb25e4ee93334",
+                  "title": "Cross-Browser and Cross-Platform Testing",
+                  "position": 4
+                },
+                {
+                  "des": "We continuously update and maintain test scripts to accommodate changes in the codebase, keeping automation effective.",
+                  "id": "676e5d1fe0bbb25e4ee93342",
+                  "serviceId": "676e5b1ee0bbb25e4ee93334",
+                  "title": "Maintenance of Test Scripts",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "Performance Testing focuses on assessing how well an application performs under various loads. Our team conducts stress tests, load tests, and scalability tests to determine how the application behaves under different traffic volumes and system configurations. Performance testing ensures that the application can handle heavy user traffic and continue to deliver a smooth user experience. By identifying performance bottlenecks, we help businesses optimize their applications for speed and responsiveness.",
+              "imageUrl": null,
+              "id": "676e5b43e0bbb25e4ee93335",
+              "categoryId": "6769386151dcda17a0f93889",
+              "title": "Performance Testing",
+              "position": 3,
+              "whatWeDo": [
+                {
+                  "des": "We simulate high traffic scenarios to understand how your application performs under peak loads.",
+                  "id": "676e5d4fe0bbb25e4ee93343",
+                  "serviceId": "676e5b43e0bbb25e4ee93335",
+                  "title": "Load Testing",
+                  "position": 1
+                },
+                {
+                  "des": "We test the application beyond normal operational limits to identify breaking points and areas that need improvement.",
+                  "id": "676e5d81e0bbb25e4ee93344",
+                  "serviceId": "676e5b43e0bbb25e4ee93335",
+                  "title": "Stress Testing",
+                  "position": 2
+                },
+                {
+                  "des": "We assess the ability of the application to scale under increasing user load and optimize performance accordingly.",
+                  "id": "676e5d98e0bbb25e4ee93345",
+                  "serviceId": "676e5b43e0bbb25e4ee93335",
+                  "title": "Scalability Testing",
+                  "position": 3
+                },
+                {
+                  "des": "We identify performance bottlenecks and recommend solutions to optimize the application",
+                  "id": "676e5db3e0bbb25e4ee93346",
+                  "serviceId": "676e5b43e0bbb25e4ee93335",
+                  "title": "Bottleneck Analysis",
+                  "position": 4
+                },
+                {
+                  "des": "We implement improvements to enhance speed, reduce latency, and optimize resource usage.",
+                  "id": "676e5dd0e0bbb25e4ee93347",
+                  "serviceId": "676e5b43e0bbb25e4ee93335",
+                  "title": "Optimization",
+                  "position": 5
+                },
+                {
+                  "des": "We monitor application performance throughout the testing phase, ensuring resource consumption is balanced and performance is consistent.",
+                  "id": "676e5debe0bbb25e4ee93348",
+                  "serviceId": "676e5b43e0bbb25e4ee93335",
+                  "title": "Performance Monitoring",
+                  "position": 6
+                },
+                {
+                  "des": "Based on testing results, we provide actionable recommendations to enhance performance and improve user experience.",
+                  "id": "676e5e09e0bbb25e4ee93349",
+                  "serviceId": "676e5b43e0bbb25e4ee93335",
+                  "title": "Optimization Recommendations",
+                  "position": 7
+                }
+              ]
+            },
+            {
+              "description": "Security Testing ensures that applications are secure and resistant to cyber threats. Our team performs vulnerability assessments, penetration testing, and risk analysis to identify potential security flaws and weaknesses. We work proactively to protect your data and systems from cyber threats by implementing robust security measures. Security testing ensures that your application is compliant with industry regulations and protects both your business and your users from security breaches.",
+              "imageUrl": null,
+              "id": "676e5b60e0bbb25e4ee93336",
+              "categoryId": "6769386151dcda17a0f93889",
+              "title": "Security Testing",
+              "position": 4,
+              "whatWeDo": [
+                {
+                  "des": "We scan applications for potential security vulnerabilities that could be exploited by attackers.",
+                  "id": "676e5e44e0bbb25e4ee9334a",
+                  "serviceId": "676e5b60e0bbb25e4ee93336",
+                  "title": "Vulnerability Assessment",
+                  "position": 1
+                },
+                {
+                  "des": "We simulate cyberattacks to test the system’s defenses and identify weaknesses.",
+                  "id": "676e5e9ee0bbb25e4ee9334b",
+                  "serviceId": "676e5b60e0bbb25e4ee93336",
+                  "title": "Penetration Testing",
+                  "position": 2
+                },
+                {
+                  "des": "We ensure that your application complies with relevant security regulations, such as GDPR, HIPAA, and PCI DSS.",
+                  "id": "676e5eafe0bbb25e4ee9334c",
+                  "serviceId": "676e5b60e0bbb25e4ee93336",
+                  "title": "Compliance Testing",
+                  "position": 3
+                },
+                {
+                  "des": "We conduct thorough security audits to assess the effectiveness of your security measures and recommend improvements.",
+                  "id": "676e5ed1e0bbb25e4ee9334d",
+                  "serviceId": "676e5b60e0bbb25e4ee93336",
+                  "title": "Security Audits",
+                  "position": 4
+                },
+                {
+                  "des": "We help you develop an incident response plan to quickly respond to security breaches and minimize damage.",
+                  "id": "676e5ef4e0bbb25e4ee9334e",
+                  "serviceId": "676e5b60e0bbb25e4ee93336",
+                  "title": "Incident Response Planning",
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Our Consulting Services provide expert guidance to help organizations optimize their IT strategies, digital transformation processes, and technology adoption. From aligning IT infrastructure with business objectives to implementing the latest technologies, we offer solutions that drive operational efficiency and innovation. Our consultants leverage their expertise across industries to offer actionable insights and strategies for businesses to thrive in the digital age, ensuring long-term growth and success",
+          "imageUrl": "https://www.shutterstock.com/image-vector/banner-consulting-concept-text-icons-260nw-770977666.jpg",
+          "departmentId": "672eefd2bf4e5705ff670c69",
+          "id": "6769388d51dcda17a0f9388a",
+          "name": "Consulting Services",
+          "position": 4,
+          "services": [
+            {
+              "description": "IT Strategy Consulting helps organizations align their IT investments with business goals, ensuring that technology serves as a catalyst for growth. Our consultants assess current IT systems, identify opportunities for improvement, and develop comprehensive IT strategies that focus on performance, scalability, and cost-efficiency. We help businesses optimize their technology infrastructure and develop a roadmap that supports long-term goals, enabling them to leverage technology to gain a competitive edge and drive digital transformation.",
+              "imageUrl": null,
+              "id": "676e5f95e0bbb25e4ee9334f",
+              "categoryId": "6769388d51dcda17a0f9388a",
+              "title": "IT Strategy Consulting",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "We conduct thorough assessments of existing IT systems to identify inefficiencies and areas for improvement.",
+                  "id": "676e60bbe0bbb25e4ee93351",
+                  "serviceId": "676e5f95e0bbb25e4ee9334f",
+                  "title": "IT Assessment",
+                  "position": 1
+                },
+                {
+                  "des": "We ensure that IT infrastructure aligns with business goals to drive efficiency and scalability.",
+                  "id": "676e6144e0bbb25e4ee93352",
+                  "serviceId": "676e5f95e0bbb25e4ee9334f",
+                  "title": "Technology Alignment",
+                  "position": 2
+                },
+                {
+                  "des": "We create a strategic roadmap for future IT investments that align with business growth.",
+                  "id": "676e615ee0bbb25e4ee93353",
+                  "serviceId": "676e5f95e0bbb25e4ee9334f",
+                  "title": "Roadmap Development",
+                  "position": 3
+                },
+                {
+                  "des": "We analyze potential risks and implement strategies to mitigate them, ensuring business continuity.",
+                  "id": "676e617fe0bbb25e4ee93354",
+                  "serviceId": "676e5f95e0bbb25e4ee9334f",
+                  "title": "Risk Management",
+                  "position": 4
+                },
+                {
+                  "des": "We provide cost-effective solutions that optimize IT spending and maximize ROI on technology investments.",
+                  "id": "676e619ae0bbb25e4ee93355",
+                  "serviceId": "676e5f95e0bbb25e4ee9334f",
+                  "title": "Cost Optimization",
+                  "position": 5
+                },
+                {
+                  "des": "We help you transition to the cloud, selecting the right cloud solutions and architectures for scalability, flexibility, and cost-effectiveness.",
+                  "id": "676e61b3e0bbb25e4ee93356",
+                  "serviceId": "676e5f95e0bbb25e4ee9334f",
+                  "title": "Cloud Strategy",
+                  "position": 6
+                }
+              ]
+            },
+            {
+              "description": "Digital Transformation Consulting guides businesses through the process of adopting digital technologies to enhance operations, customer experiences, and business models. Our consultants work closely with organizations to implement cloud computing, automation, AI, and data analytics, helping them stay competitive in a rapidly evolving market. We focus on delivering value through innovation and helping businesses become more agile, efficient, and customer-centric, positioning them for future growth in the digital economy.",
+              "imageUrl": null,
+              "id": "676e607de0bbb25e4ee93350",
+              "categoryId": "6769388d51dcda17a0f9388a",
+              "title": "Digital Transformation Consulting",
+              "position": 2,
+              "whatWeDo": [
+                {
+                  "des": "We evaluate the latest digital technologies to identify opportunities for adoption.",
+                  "id": "676e625ce0bbb25e4ee93357",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Technology Evaluation",
+                  "position": 1
+                },
+                {
+                  "des": "We manage the change process, helping organizations adopt new technologies smoothly and effectively.",
+                  "id": "676e628fe0bbb25e4ee93358",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Change Management",
+                  "position": 2
+                },
+                {
+                  "des": "We help you identify and implement the best digital tools, platforms, and technologies that can optimize your workflows and business operations.",
+                  "id": "676e62b9e0bbb25e4ee93359",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Technology Selection",
+                  "position": 3
+                },
+                {
+                  "des": "We analyze and streamline business processes, leveraging automation, AI, and other technologies to boost efficiency and reduce operational costs.",
+                  "id": "676e62d6e0bbb25e4ee9335a",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Process Optimization",
+                  "position": 4
+                },
+                {
+                  "des": "We focus on improving customer experience by leveraging digital channels and technologies.",
+                  "id": "676e62f6e0bbb25e4ee9335b",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Customer-Centric Solutions",
+                  "position": 5
+                },
+                {
+                  "des": "We implement solutions that enable organizations to become more agile, adaptive, and innovative.",
+                  "id": "676e6316e0bbb25e4ee9335c",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Agility & Innovation",
+                  "position": 6
+                },
+                {
+                  "des": "We work with your team to understand your current operations and business objectives, tailoring the transformation plan to your unique needs.",
+                  "id": "676e6334e0bbb25e4ee9335d",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Needs and Goals Analysis",
+                  "position": 7
+                },
+                {
+                  "des": "We offer continued support to refine and evolve your digital transformation initiatives, helping you stay competitive in a rapidly changing market.",
+                  "id": "676e6351e0bbb25e4ee9335e",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Ongoing Support and Evolution",
+                  "position": 8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]

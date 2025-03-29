@@ -1,7 +1,13 @@
 import React from "react";
 import "../../styles/Home/EventsHosted.css";
 import { FaChevronRight } from "react-icons/fa";
+
+
+import { useNavigate } from "react-router-dom";
+
 function EventsHosted() {
+
+  const navigateTo = useNavigate();
   return (
     <div className="events-hosted-container">
       <div className="events-hosted-title">Events</div>
@@ -29,6 +35,20 @@ function EventsHosted() {
             </button>
           </div>
         </div>
+      </div>
+
+      <div className="more-case-mobile"
+
+
+        onClick={() => {
+          navigateTo("/competition");
+          window.scrollTo(0, 0);
+        }}
+        style={{ cursor: "pointer" }}
+      >
+        More Case Studys{""}
+        < FaChevronRight />
+
       </div>
     </div>
   );

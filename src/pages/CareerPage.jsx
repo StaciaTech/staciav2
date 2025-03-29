@@ -23,6 +23,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, useTransform, useScroll } from "framer-motion";
 
+
+
+
+import careersData from "../Data/Career.json";
+
 //hiring data
 const HiringData = [
   {
@@ -56,23 +61,33 @@ gsap.registerPlugin(ScrollTrigger);
 function CareerPage() {
   const [showApplication, setShowApplication] = useState(false);
   // console.log(showApplication);  //api fetch
-  const apiUrl = process.env.REACT_APP_API_URL;
+
+  
   const [careers, setCareers] = useState([]);
   const closeForm = () => {
     setShowApplication(false);
   };
+  
+  
+  // const apiUrl = process.env.REACT_APP_API_URL;
+  
+  
+  // const fetchCareers = async () => {
+  //   try {
+  //     const res = await axios.get(`${apiUrl}/career/list`);
+  //     // console.log(res.data.data);
+  //     setCareers(res.data.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  const fetchCareers = async () => {
-    try {
-      const res = await axios.get(`${apiUrl}/career/list`);
-      // console.log(res.data.data);
-      setCareers(res.data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // useEffect(() => {
+  //   fetchCareers();
+  // }, []);
+
   useEffect(() => {
-    fetchCareers();
+    setCareers(careersData);
   }, []);
 
   const [showMore, setShowMore] = useState(null);

@@ -1,0 +1,232 @@
+.past-events-container {
+    padding: 0 4%;
+}
+
+/* Title styling remains mostly the same, just reduced margin on mobile */
+.past-events-title {
+    color: #E0E0E0;
+    margin: 2rem 0;
+}
+
+.error-message {
+    color: red;
+}
+
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.past-event-card {
+    width: 33%;
+    margin-left: 4px;
+    margin-right: 0cap;
+    margin-bottom: 4%;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    /* border-radius: 5px; */
+}
+
+/* Rest of your existing styles remain unchanged */
+.event-image {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.event-content {
+    padding: 15px;
+}
+
+.event-tag {
+    background-color: #F6D0FE;
+    color: #BA24D5;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.event-title-past {
+    font-size: 1.35vw;
+    font-family: EuclidSemibold;
+    color: black;
+    margin-bottom: 10px;
+
+}
+
+.event-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.event-date {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.date-icon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.learn {
+    border: none;
+    color: #6B6084;
+    background: #F8FAFF;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.arrow-icon {
+    width: 6px;
+    margin-left: 5px;
+}
+
+.show-more-container {
+    margin: 2rem 0;
+}
+
+.show-more-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.line-1 {
+    flex: 1;
+    height: 1px;
+    background-color: #6B6084;
+    margin: 0;
+}
+
+.show-more-btn {
+    border: 2px solid #6B6084;
+    color: #6B6084;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.plus-icon {
+    width: 20px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet and smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .past-events-container {
+        padding: 0 2%;
+    }
+
+    .past-event-card {
+        width: 48%;
+        /* Two cards per row */
+        margin-left: 1%;
+        margin-bottom: 2%;
+    }
+
+    .event-image {
+        height: 150px;
+        /* Reduced height for smaller screens */
+    }
+
+    .event-title-past {
+        font-size: 1vw;
+        margin-bottom: 7px;
+    }
+
+    .event-description {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .event-date {
+        font-size: 13px;
+        margin-bottom: 7px;
+    }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .past-events-container {
+        padding: 0 1%;
+    }
+
+    .past-events-title {
+        margin: 1rem 0;
+        font-size: 20px;
+    }
+
+    .past-event-card {
+        width: 100%;
+        /* Full width for single column */
+        margin-left: 0;
+        margin-bottom: 3%;
+    }
+
+    .event-image {
+        height: 120px;
+    }
+
+    .event-content {
+        padding: 20px;
+    }
+
+    .event-title-past {
+        font-size: 1vw;
+        margin-bottom: 7px;
+    }
+
+    .event-description {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    .event-date {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    .event-tag {
+        font-size: 10px;
+        padding: 4px 8px;
+        margin-bottom: 7px;
+    }
+
+    .learn {
+        padding: 8px;
+        font-size: 11px;
+        margin-bottom: 7px;
+    }
+
+    .show-more-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .plus-icon {
+        width: 16px;
+    }
+}
