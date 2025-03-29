@@ -1,28 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import "../styles/Partners.css";
-import axios from "axios";
+import data from "../Data/About.json"; // Import the JSON file
 
 function Partners() {
-  const apiUrl = process.env.REACT_APP_API_URL;
-  const [partnersData, setPartnersData] = useState();
-
-  const FetchPartners = async () => {
-    try {
-      const res = await axios.get(`${apiUrl}/partnership/index`);
-      setPartnersData(res.data.docs);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    FetchPartners();
-  }, []);
-  console.log(partnersData?.data);
+  // No need for useState or useEffect since data is static
+  console.log(data.partners); // Logging the data for debugging
 
   return (
     <div>
@@ -31,33 +17,31 @@ function Partners() {
         <SideBar />
       </div>
       <div>
-        <div className="partners-hero">Partners</div>
+        <div className="partners-hero" >Partners</div>
       </div>
       <div className="partners-container">
         <div className="partner-title">Our Partnership</div>
-        <div className="partner-heading">Stacia fkjdslk fhsjkfjsa fsdafj</div>
+        <div className="partner-heading">Stacia: Empowering Futures, Engineering Solutions</div>
         <p className="partner-des">
-          Lorem, ipsum dolor. Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Suscipit labore corrupti consectetur. Quo
-          consequatur labore quae incidunt quis autem rem.
+          Our mission is to empower businesses with innovative and reliable IT solutions that enhance productivity and drive sustainable growth.
         </p>
 
         <div className="partners-img-container">
-          {partnersData?.images.map((eachItem, i) => (
+          {data.images.map((eachItem, i) => (
             <div key={i}>
-              <img src={eachItem} alt="" />
+              <img src={eachItem} alt={`Partner image ${i + 1}`} />
             </div>
           ))}
         </div>
         <div>
-          {partnersData?.data.map((eachItem, i) => (
+          {data.partners.map((eachItem, i) => (
             <div key={i} className="partner-data-card">
               <div className="partner-data-card-content">
                 <div>{eachItem.title}</div>
                 <p>{eachItem.description}</p>
               </div>
               <div className="partner-data-card-img">
-                <img src={eachItem.image.imageUrl} alt="" />
+                <img src={eachItem.image.imageUrl} alt={eachItem.title} />
               </div>
             </div>
           ))}

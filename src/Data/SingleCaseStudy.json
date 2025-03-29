@@ -1,0 +1,115 @@
+{
+  "singlecasestudy": [
+    {
+      "id":"Case-Study-1",
+      "name": "Electronics ",
+      "data": [
+        {
+          "id": "Case-Study-1",
+          "departmentSector": "Electronics Sector",
+          "title": "Mechanization and Precision Sowing-1",
+          "backgroundImage": "/assets/singlepage-1.webp",
+          "imageURL": "/assets/caseStudy-1.webp",
+          "overview": {
+            "overviewtitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+            "description": "India is one of the largest producers of sesame, with cultivation spread across various states under diverse climatic conditions such as summer, rainfed, cold weather, and rain fallow regions. Approximately 1.8 million hectares of land are used for sesame cultivation each year. However, the average yield remains less than 500 kg per acre due to outdated farming practices such as broadcasting. Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs "
+          },
+          "imageContent": {
+            "imageSrc": "/assets/singlepage-2.webp",
+            "content": [
+              "Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. ",
+              "In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanization."
+            ]
+          },
+          "gallerytittle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+          "gallery": [
+            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
+            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
+            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1567274333060-04b18e634717?w=500&auto=format&fit=crop&q=60"
+          ],
+          "challenges": [
+            {
+              "challengestitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+              "description": "Sowing, thinning, and harvesting require significant manual labor, consuming over 50% of the total cultivation cost.In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanizationIn some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Case-Study-2",
+      "name": "Mechanical",
+      "data": [
+        {
+          "id": "Case-Study-2",
+          "departmentSector": "Electronics Sector",
+          "title": "Mechanization and Precision Sowing-2",
+          "backgroundImage": "/assets/singlepage-1.webp",
+          "imageURL": "/assets/caseStudy-2.webp",
+          "overview": {
+            "overviewtitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+            "description": "India is one of the largest producers of sesame, with cultivation spread across various states under diverse climatic conditions such as summer, rainfed, cold weather, and rain fallow regions. Approximately 1.8 million hectares of land are used for sesame cultivation each year. However, the average yield remains less than 500 kg per acre due to outdated farming practices such as broadcasting. Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs "
+          },
+          "imageContent": {
+            "imageSrc": "/assets/singlepage-2.webp",
+            "content": [
+              "Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. ",
+              "In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanization."
+            ]
+          },
+          "gallerytittle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+          "gallery": [
+            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
+            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
+            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1567274333060-04b18e634717?w=500&auto=format&fit=crop&q=60"
+          ],
+          "challenges": [
+            {
+              "challengestitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+              "description": "Sowing, thinning, and harvesting require significant manual labor, consuming over 50% of the total cultivation cost.In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanizationIn some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Case-Study-3",
+      "name": "IT ",
+      "data": [
+        {
+          "id": "Case-Study-3",
+          "departmentSector": "Electronics Sector",
+          "title": "Mechanization and Precision Sowing-3",
+          "backgroundImage": "/assets/singlepage-1.webp",
+          "imageURL": "/assets/caseStudy-3.webp",
+          "overview": {
+            "overviewtitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+            "description": "India is one of the largest producers of sesame, with cultivation spread across various states under diverse climatic conditions such as summer, rainfed, cold weather, and rain fallow regions. Approximately 1.8 million hectares of land are used for sesame cultivation each year. However, the average yield remains less than 500 kg per acre due to outdated farming practices such as broadcasting. Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs "
+          },
+          "imageContent": {
+            "imageSrc": "/assets/singlepage-2.webp",
+            "content": [
+              "Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. ",
+              "In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanization."
+            ]
+          },
+          "gallerytittle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+          "gallery": [
+            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
+            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
+            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1567274333060-04b18e634717?w=500&auto=format&fit=crop&q=60"
+          ],
+          "challenges": [
+            {
+              "challengestitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+              "description": "Sowing, thinning, and harvesting require significant manual labor, consuming over 50% of the total cultivation cost.In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanizationIn some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

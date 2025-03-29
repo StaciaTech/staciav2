@@ -137,7 +137,7 @@ function JobForm({ closeForm }) {
         setTimeout(() => {
           closeForm();
         }, 1000);
-      }
+      }      
     } catch (error) {
       console.log(error);
     }

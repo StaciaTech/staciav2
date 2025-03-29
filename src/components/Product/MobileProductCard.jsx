@@ -10,6 +10,7 @@ export default function MobileProductCard({
   FoundDept,
 }) {
   const productKey = proId;
+  // const productKey = proName.split(" ").join("-");
   console.log(productKey, "productKey");
 
 
@@ -28,6 +29,7 @@ export default function MobileProductCard({
       <Link
         className="mb-pro-read-more"
         to={`/products/${FoundDept.id}/${FoundCat.id}/${productKey}`}
+        // to={`/products/${FoundDept.name}/${FoundCat.name}/${productKey}`}
         onClick={() => window.scrollTo(0, 0)}
       >
         Read More

@@ -15,9 +15,15 @@ export default function MobileStackScroll() {
     dispatch(fetchProducts());
   }, []);
 
+
+
+  console.log("Redux State:", homeMobileProducts);
+
+
   // console.log(homeMobileProducts.isLoading);
 
-  const homeMobileProductData = homeMobileProducts.data.productPSPosition;
+  const homeMobileProductData = homeMobileProducts.data || [];
+  // const homeMobileProductData = homeMobileProducts.data.productPSPosition;
   // console.log(homeMobileProductData);
 
   return (
@@ -69,7 +75,9 @@ export default function MobileStackScroll() {
           </div>
         ) : (
           <div>
-            {homeMobileProductData.map((eachProduct, index) => (
+            {homeMobileProductData?.map((eachProduct, index) => (
+
+              // {homeMobileProductData.map((eachProduct, index) => (
               <div
                 className="mobile-stack-card"
                 style={{ position: "sticky", top: "12%" }}

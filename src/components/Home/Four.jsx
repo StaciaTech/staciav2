@@ -48,7 +48,7 @@ export default function Four() {
   return (
     <div className="four">
       <div className="four2">
-        <div className="four-text test-seclection-blue">Founders</div>
+        <div className="four-text test-seclection-blue">Management Team</div>
         <div className="four-grid">
           {fourData.map((data, i) => (
             <FourCard data={data} key={i} />

@@ -6,7 +6,7 @@
   line-height: normal;
   width: 90%;
   margin: 0rem auto;
-  margin-top: 12rem;
+  margin-top: 1rem;
 }
 .article-outline-holder {
   max-height: 40vh;
@@ -113,7 +113,7 @@
   display: none;
 }
 .mobile-article-card {
-  min-width: 90%;
+  min-width: 100%;
   background-image: linear-gradient(to bottom, #0d022500, #0d0225cc),
     url("../../assets/artHomeImg.png");
   border-radius: 2rem;

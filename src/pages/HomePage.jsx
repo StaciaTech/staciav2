@@ -234,13 +234,22 @@ function HomePage() {
         </div>
         </div>
       </div> */}
+
+
       {/* Events */}
-      {/* <EventsHosted /> */}
+      <EventsHosted />
+
+
       {/* case study */}
-      {/* <HomeCaseStudy /> */}
+      <HomeCaseStudy />
+
+
       {/* Home Projects */}
-      {/* <OurProjects /> / */}
+      <OurProjects /> 
+
+
       {/* Home Articles  */}
+
       <React.Suspense fallback={<LoadingStar />}>
         <Articles />
       </React.Suspense>

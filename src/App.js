@@ -26,7 +26,13 @@ import SpecificEvent from "./pages/SpecificEvent";
 import NewsRoomPage from "./pages/NewsRoomPage";
 import LeaderPage from "./pages/LeaderPage";
 import MediaKit from "./pages/MediaKit";
-import Partners from './pages/Partners'
+import Partners from "./pages/Partners";
+
+
+import CompetitionPage from "./pages/Competition";
+
+
+import EventDetails from "./components/Competition/Event-Detail";
 
 function App() {
   return (
@@ -34,7 +40,6 @@ function App() {
       {/* Lwdnkjgkufefkl */}
       {/* <StackScroll /> */}
       {/* <Box1 /> */}
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/career" element={<CareerPage />} />
@@ -43,14 +48,12 @@ function App() {
           path="/products/:department/:category"
           element={<ProductPage />}
         />
-        {/* <Route path="/products/:department-id/:category-id" element={<ProductPage/>}/> */}
         <Route path="/products" element={<ProductCategoryPage />} />
         <Route path="/products/:department" element={<ProductCategoryPage />} />
-        {/* <Route path="products/:department-id" element={<ProductCategoryPage/>}/> */}
-        <Route path="/products/:department/:category/:id" element={<SingleProduct/>} />
-        {/* <Route
-          path="/products/:department-id/:category-id/:product-id"
-          element={<SingleProduct />}  /> */}
+        <Route
+          path="/products/:department/:category/:id"
+          element={<SingleProduct />}
+        />
         {/* <Route path="/products/:id" element={<SingleProduct />} /> */}
         <Route path="/article/:department/:title" element={<SingleArticle />} />
         <Route
@@ -58,7 +61,8 @@ function App() {
           element={<SingleProject />}
         />
         <Route
-          path="/case-study/:department/:title"
+          // path="/case-study/:department/:title"
+          path="/case-study/:department/:id" //--------------
           element={<SingleCaseStudy />}
         />
         <Route path="/project" element={<ProjectPage />} />
@@ -67,8 +71,11 @@ function App() {
           path="/project/:department/:category"
           element={<ProjectPage />}
         />
+        {/* <Route path="/case-study" element={<CaseStudy />} />
+        <Route path="/case-study/:department" element={<CaseStudy />} /> */}
+       
         <Route path="/case-study" element={<CaseStudy />} />
-        <Route path="/case-study/:department" element={<CaseStudy />} />
+        <Route path="/case-study/:department:id" element={<CaseStudy />} />
         <Route path="/services" element={<ServicePage />} />
         <Route path="/services/:department" element={<ServicePage />} />
         <Route
@@ -79,6 +86,25 @@ function App() {
           path="/services/:department/:category/:title"
           element={<EachServicePage />}
         />
+
+        {/* competition */}
+        <Route path="/competition" element={<CompetitionPage />} />
+        {/* <Route path="/competition/:department" element={<CompetitionPage />} /> */}
+
+        {/* < Route path="all-event" component={<AllEvents  />} >
+            <Route index element={<AllEvents />} />
+            <Route path="all" element={< AllEvents />} />
+            <Route path="ongoing" element={<EventFilter />} />
+            <Route path="upcoming" element={<EventFilter />} />
+          </Route>
+ */}
+
+        <Route path="/event/:title" element={<EventDetails />} />
+
+
+
+
+
         <Route path="/whatsnew" element={<WhatsNewPage />} />
         <Route path="/article" element={<ArticlesPage />} />
         <Route path="/article/:department" element={<ArticlesPage />} />
@@ -93,7 +119,6 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <ScrollArrow />
-
     </div>
   );
 }

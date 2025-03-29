@@ -8,26 +8,32 @@ const StackScroll = () => {
   const proDetails = [
     {
       id: 1,
-      background: "linear-gradient(259deg, #003362 -8.27%, #81497B 95.27%)",
+      // background: "linear-gradient(259deg,  -8.27%, #81497B 95.27%)",
+      background: "linear-gradient(259.24deg, #8501FF -8.27%, #052B8E 95.27%) ",
     },
     {
       id: 2,
-      background: "linear-gradient(259deg, #8566ea -8.27%, #d296fa 86.58%)",
+      // background: "linear-gradient(259deg, #8566ea -8.27%, #d296fa 86.58%)",
+      background: "linear-gradient(259.24deg, #DA06FF -8.27%, #052B8E 95.27%)",
     },
     {
       id: 3,
-      background: "linear-gradient(259deg, #2A35B3 4.78%, #1485CB 94.3%)",
+      // background: "linear-gradient(259deg, #2A35B3 4.78%, #1485CB 94.3%)",
+      background: "linear-gradient(259.24deg, #03FFD5 -8.27%, #052B8E 95.27%)",
     },
     {
       id: 4,
-      background: "linear-gradient(259deg, #CB2B5E -8.27%, #773987 86.58%)",
+      // background: "linear-gradient(259deg, #CB2B5E -8.27%, #773987 86.58%)",
+      background: "linear-gradient(259.24deg, #FF035B -8.27%, #052B8E 95.27%)",
     },
     {
       id: 5,
+      // background: "linear-gradient(259deg, #260931 4.78%, #C9B0CE 94.3%)",
       background: "linear-gradient(259deg, #260931 4.78%, #C9B0CE 94.3%)",
     },
     {
       id: 6,
+      // background: "linear-gradient(259deg, #232131 -8.27%, #8C87A4 86.58%)",
       background: "linear-gradient(259deg, #232131 -8.27%, #8C87A4 86.58%)",
     },
   ];
@@ -36,7 +42,8 @@ const StackScroll = () => {
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
-  const homeProductData = homeData?.data?.productPSPosition || [];
+  // const homeProductData = homeData?.data?.productPSPosition || [];
+  const homeProductData = homeData?.data || [];
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,

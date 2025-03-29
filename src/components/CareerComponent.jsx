@@ -15,7 +15,7 @@ function CareerComponent({
   showMore,
   toggleShowMore,
 }) {
-  // console.log(data);
+  console.log(data);
 
   return (
     <div className="opportunities-container pointer">
