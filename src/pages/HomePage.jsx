@@ -159,7 +159,6 @@ function HomePage() {
       <React.Suspense fallback={<LoadingStar />}>
         <MobileStackScroll />
       </React.Suspense>
-
       {/* client */}
       <div className="clientWrapper">
         <div className="clients">

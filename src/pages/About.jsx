@@ -662,7 +662,6 @@ function About() {
     }
   }, [params.key]);
 
-
   return (
     <div>
       <div className="nav_style">
@@ -1053,7 +1052,6 @@ function About() {
           </div>
         </div>
       </div>
-
       <Footer />
       <MobileFooter />
     </div>

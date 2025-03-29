@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/ReUsableArticle.css";
-import { useNavigate } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 function ReUsableArticle({ data, path }) {
   const navigate = useNavigate();
@@ -41,8 +41,8 @@ function ReUsableArticle({ data, path }) {
                   window.scrollTo(0, 0);
                 }}
               >
-               <span>Know More </span>
-               <IoIosArrowForward />
+                <span>Know More</span>
+                <IoIosArrowForward />
               </div>
             </div>
           </div>
