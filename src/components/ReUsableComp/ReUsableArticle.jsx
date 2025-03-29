@@ -35,10 +35,10 @@ function ReUsableArticle({ data, path }) {
                 onClick={() => {
                   navigate(
                     `${path}/${
-                      eachItem.id.split(" ").join("-") ||  //caseStudy- id track
+                      // eachItem.id.split(" ").join("-") ||  //caseStudy- id track
 
                       // article page
-                      // eachItem.title.split(" ").join("-") ||
+                      eachItem.title.split(" ").join("-") ||
                       eachItem.mainTitle.split(" ").join("-")
                     }`
                   );

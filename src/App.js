@@ -32,7 +32,7 @@ import Partners from "./pages/Partners";
 import CompetitionPage from "./pages/Competition";
 
 
-import EventDetails from "./componentzs/Competition/Event-Detail";
+import EventDetails from "./components/Competition/Event-Detail";
 
 function App() {
   return (
