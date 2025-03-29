@@ -1,0 +1,77 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "imageUrl": "/assets/onedrillssm.webp",
+            "title": "Onedril (SSM)",
+            "pDes1": "Designed to handle a wide range of seed sizes, from tiny 2mm to larger 25mm seeds, OneDril ensures precision and efficiency in your planting process. With its ability to accommodate various seed types, this versatile machine is the perfect companion for farmers seeking to optimize their operations.",
+            "pDes2": "Tailored for micro millets and small-sized seeds, this innovative machine ensures accurate and efficient planting. With OneDril, farmers can optimize their yields and enhance their agricultural practices.",
+            "domainName": "Onedril (SSM)"
+        },
+        {
+            "id": "2",
+            "imageUrl": "/assets/ThermoHydrate.webp",
+            "title": "Hydrogen (Smart water bottle)",
+            "pDes1": "Hydrogen is an AI-powered smart water bottle that features rapid heating and cooling, hydration tracking with advanced sensors, and personalized reminders for optimal water intake. Its ergonomic squircle design ensures style and comfort, while its innovative technology offers superior functionality. Perfect for on-the-go hydration, it redefines smart drinking solutions with intelligence, performance, and modern aesthetics.",
+            "pDes2": "",
+            "domainName": "Hydrogen (Smart water bottle)"
+        },
+        {
+            "id": "3",
+            "imageUrl": "/assets/Side_Table.webp",
+            "title": "Smart Furniture",
+            "pDes1": "Elevate your living space with carBon's immersive features. Enjoy ambient lighting, motion-activated night lights, and a smart speaker activated by \"Hey Stacy.\" Immerse yourself in Dolby Atmos surround sound from your bedside tables.",
+            "pDes2": "Stay organized with retractable trays, wireless charging, and pop-up sockets. Experience minimalist elegance with built-in lamps and drawer finder lights.",
+            "domainName": "Smart Furniture"
+        },
+        {
+            "id": "4",
+            "imageUrl": "/assets/smart-speaker.webp",
+            "title": "S Connect (Smart Speaker)",
+            "pDes1": "Experience the perfect blend of style and functionality with the Connect S. Its sleek design and retro aesthetic add a touch of modern vintage to any space. Enjoy the convenience of inbuilt Alexa and Google Assistant, Bluetooth and aux connectivity, and a built-in radio.",
+            "pDes2": "The Connect S is the perfect addition to your home, office, or studio. With its user-friendly interface and compact size, it's easy to integrate into your daily life. Enjoy the convenience of voice control, wireless streaming, and classic radio features.",
+            "domainName": "S Connect (Smart Speaker)"
+        },
+        {
+            "id": "5",
+            "imageUrl": "/assets/chilli-table.webp",
+            "title": "Chilli Ladling Machine",
+            "pDes1": "Experience unmatched efficiency with our battery-powered chilli ladling machine. Lightweight and compact, it is perfect for various spaces. Engineered for high-temperature operation, this machine seamlessly handles large chilli volumes, ensuring optimal performance.",
+            "pDes2": "Designed specifically for the Aachi Group, our custom chilli ladling machine is a testament to precision engineering. Its portability, lightweight design, and space-saving features make it a valuable asset. Experience the power of automation as this machine efficiently handles your chilli processing needs.",
+            "domainName": "Chilli Ladling Machine"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "imageUrl": "/assets/Rectangle.webp",
+            "title": "Research & Development"
+        },
+        {
+            "id": "2",
+            "imageUrl": "/assets/3D model.webp",
+            "title": "3D Modeling"
+        },
+        {
+            "id": "3",
+            "imageUrl": "/assets/product-development.webp",
+            "title": "New Product Development"
+        },
+        {
+            "id": "4",
+            "imageUrl": "/assets/IOT-solutions.webp",
+            "title": "IoT Solutions"
+        },
+        {
+            "id": "5",
+            "imageUrl": "/assets/Robotic-Process.webp",
+            "title": "Robotic Process Automation"
+        },
+        {
+            "id": "6",
+            "imageUrl": "/assets/Custom-software-solutions.webp",
+            "title": "Custom Software Solutions"
+        }
+    ]
+    
+}

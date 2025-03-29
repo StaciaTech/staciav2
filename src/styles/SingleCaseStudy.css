@@ -85,7 +85,6 @@
 }
 .single-casestudy-layout1-img-content-container > p {
   width: 30%;
-
 }
 .single-casestudy-layout2 {
   display: grid;
@@ -169,7 +168,6 @@
   .single-casestudy-layout3 {
     display: flex;
     flex-direction: column;
-
   }
   .single-casestudy-layout4-grid-container {
     display: flex;

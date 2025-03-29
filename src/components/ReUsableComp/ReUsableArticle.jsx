@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/ReUsableArticle.css";
+import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
 function ReUsableArticle({ data, path }) {
@@ -21,7 +22,6 @@ function ReUsableArticle({ data, path }) {
                   borderRadius: "1rem",
                 }}
               />
-
             </div>
             <div className="reusable-art-content-container">
               <div className="reusable-art-title test-seclection-blue">
@@ -35,14 +35,18 @@ function ReUsableArticle({ data, path }) {
                 onClick={() => {
                   navigate(
                     `${path}/${
-                      eachItem.id.split(" ").join("-") ||
+                      eachItem.id.split(" ").join("-") ||  //caseStudy- id track
+
+                      // article page
+                      // eachItem.title.split(" ").join("-") ||
                       eachItem.mainTitle.split(" ").join("-")
                     }`
                   );
                   window.scrollTo(0, 0);
                 }}
               >
-                Know More
+                <span>Know More</span>
+                <IoIosArrowForward />
               </div>
             </div>
           </div>
@@ -56,7 +60,7 @@ export default ReUsableArticle;
 
 
 
-
+// for know more blue circle---
 
 // import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";

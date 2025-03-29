@@ -29,6 +29,11 @@ import MediaKit from "./pages/MediaKit";
 import Partners from "./pages/Partners";
 
 
+import CompetitionPage from "./pages/Competition";
+
+
+import EventDetails from "./componentzs/Competition/Event-Detail";
+
 function App() {
   return (
     <div className="App">
@@ -78,6 +83,25 @@ function App() {
           path="/services/:department/:category/:title"
           element={<EachServicePage />}
         />
+
+        {/* competition */}
+        <Route path="/competition" element={<CompetitionPage />} />
+        {/* <Route path="/competition/:department" element={<CompetitionPage />} /> */}
+
+        {/* < Route path="all-event" component={<AllEvents  />} >
+            <Route index element={<AllEvents />} />
+            <Route path="all" element={< AllEvents />} />
+            <Route path="ongoing" element={<EventFilter />} />
+            <Route path="upcoming" element={<EventFilter />} />
+          </Route>
+ */}
+
+        <Route path="/event/:title" element={<EventDetails />} />
+
+
+
+
+
         <Route path="/whatsnew" element={<WhatsNewPage />} />
         <Route path="/article" element={<ArticlesPage />} />
         <Route path="/article/:department" element={<ArticlesPage />} />

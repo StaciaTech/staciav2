@@ -465,7 +465,7 @@
 
 
 
-// new json
+
 
 
 
@@ -526,7 +526,6 @@ function SingleCaseStudy() {
     <>
       <NavBar />
       <SideBar />
-
       <div>
         <div className="single-casestudy-section">
           <div className="single-casestudy-section-overlay">

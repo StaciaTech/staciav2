@@ -9,7 +9,13 @@ import project7 from "../../assets/project7.png";
 import project8 from "../../assets/project8.png";
 import project9 from "../../assets/project9.png";
 
+
+import { useNavigate } from "react-router-dom";
+import { FaChevronRight} from "react-icons/fa";
+
 function OurProjects() {
+
+  const navigateTo = useNavigate();
   return (
     <div className="our-projects-container">
       <div className="our-projects-title">Our Projects</div>
@@ -107,7 +113,18 @@ function OurProjects() {
           </div>
         </div>
       </div>
-      <div className="image5-link">See more &gt;</div>
+      <div className="image5-link"
+       onClick={() => {
+        navigateTo("/project");
+        window.scrollTo(0, 0);
+      }}
+        style={{ cursor: "pointer" }}
+      >
+        See More {""}
+        < FaChevronRight
+          style={{ verticalAlign: "middle" }}
+        />
+      </div>
     </div>
   );
 }

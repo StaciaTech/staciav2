@@ -93,16 +93,6 @@ a {
   position: relative;
   cursor: pointer;
 }
-/* pk */
-.dropdown:hover{
-  color: #fff;
-  
-}
-.dropdown-name:hover{
-  color: #fff;
-
-
-}
 
 .dropdown-links {
   background-color: #fff;

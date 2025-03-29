@@ -1,0 +1,42 @@
+{
+    "events": [
+      {
+        "title": "Tech Conference 2025",
+        "des": "Annual technology conference featuring latest innovations",
+        "imageUrl": "/images/event1.jpg"
+      },
+      {
+        "title": "Developer Meetup",
+        "des": "Local developer community gathering",
+        "imageUrl": "/images/event2.jpg"
+      }
+    ],
+    "products": [
+      {
+        "title": "New Widget Release",
+        "des": "Version 2.0 with enhanced features",
+        "imageUrl": "/images/product1.jpg"
+      }
+    ],
+    "caseStudy": [
+      {
+        "title": "E-commerce Success",
+        "des": "How Company X increased sales by 200%",
+        "imageUrl": "/images/case1.jpg"
+      }
+    ],
+    "articles": [
+      {
+        "title": "AI Trends",
+        "des": "Future of artificial intelligence",
+        "imageUrl": "/images/article1.jpg"
+      }
+    ],
+    "newsroom": [
+      {
+        "title": "Company Milestone",
+        "des": "Celebrating 10 years in business",
+        "imageUrl": "/images/news1.jpg"
+      }
+    ]
+  }

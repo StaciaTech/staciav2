@@ -41,7 +41,6 @@
   margin: 0rem 5rem;
   padding: 3rem 0rem;
   border-bottom: 1px solid #e5e5e5;
- 
 }
 .article-item-tab {
   font-size: 20px;
@@ -51,7 +50,6 @@
   border-radius: 0.5rem;
   transition: all 0.3s;
   min-width: fit-content;
-   cursor: pointer;
 }
 .article-item-tab.article-item-tab-active {
   color: #0047ff;

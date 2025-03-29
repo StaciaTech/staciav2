@@ -17,7 +17,8 @@ export default function ServiceDisplay() {
     dispatch(fetchServices());
   }, [dispatch]);
 
-  const homeServiceData = homeServData?.data?.servicePSPosition;
+  const homeServiceData = homeServData.data || [];
+  // const homeServiceData = homeServData.data.servicePSPosition;
 
   console.log(homeServiceData);
 
@@ -83,33 +84,33 @@ export default function ServiceDisplay() {
                   cursor: "pointer",
                 }}
                 onClick={() => {
-                  navigateTo(`/services/${data?.title}`);
+                  navigateTo(`/services/${data.title}`);
                   window.scrollTo(0, 0);
                 }}
               >
-                {homeServiceData[currentSlide].title === data?.title ? (
+                {homeServiceData[currentSlide].title === data.title ? (
                   <div className="service-text">
                     {homeServiceData[currentSlide].title}
                   </div>
                 ) : (
-                  <div className="service-text1">{data?.title}</div>
+                  <div className="service-text1">{data.title}</div>
                 )}
                 <img
                   src={
-                    homeServiceData[currentSlide].title === data?.title
+                    homeServiceData[currentSlide].title === data.title
                       ? activearrow
                       : arrow
                   }
                   alt=""
                   onClick={() => {
-                    navigateTo(`/services/${data?.title}`);
+                    navigateTo(`/services/${data.title}`);
                     window.scrollTo(0, 0);
                   }}
                 />
               </div>
               <div
                 className={
-                  homeServiceData[currentSlide].title === data?.title
+                  homeServiceData[currentSlide].title === data.title
                     ? "box-line"
                     : "box-line1"
                 }

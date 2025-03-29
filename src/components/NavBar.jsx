@@ -18,6 +18,15 @@ import AboutDropDown from "./AboutDropDown";
 import ResourceDropDown from "./Resource/ResourceDropDown";
 import ProjectDropdown from "./ProjectDropdown";
 
+
+import CompetitionPage from "../pages/Competition";
+import BlueStar from "./Blue-Star";
+import down from "../assets/Vector-down.png";
+
+import { FaChevronDown } from "react-icons/fa";
+
+
+
 function NavBar() {
   const [openWhatsNew, setOpenWhatsNew] = useState(0);
   const [showContact, setShowContact] = useState(false);
@@ -435,7 +444,7 @@ function NavBar() {
                     }, 100);
                   }}
                 >
-                  Resource 
+                  Resource
                 </div>
               </div>
               <NavLink
@@ -447,6 +456,22 @@ function NavBar() {
               >
                 Careers
               </NavLink>
+
+
+              {/* competition */}
+              <NavLink
+                to={"/competition"}
+                className="nav-items"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+                style={{ position: "relative" }}
+              >
+                Competition <BlueStar />
+
+              </NavLink>
+
+
               <NavLink
                 to={"/about"}
                 className="nav-items"
@@ -484,7 +509,11 @@ function NavBar() {
                   }, 100);
                 }}
               >
-                What' New
+                What's New
+                <FaChevronDown
+                  style={{ verticalAlign: "middle"}}
+                />
+                {/* <img src={down} /> */}
               </div>
             </div>
           </div>

@@ -17,6 +17,7 @@ function StackCard({
 
   const CategoryKey = eachHomeProduct.domainName.split(" ").join("-");
 
+  
   return (
     <motion.li
       style={{

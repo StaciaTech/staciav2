@@ -1,0 +1,35 @@
+{
+  "docs": [
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant et mecaenas praesent congue ac.",
+      "event": "Bonus Special Drops for December Event",
+      "date": "25th December 2025",
+      "category": "Tech Targets",
+      "data": [
+        {
+         
+          "imageUrl": "https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-young-indian-man-png-image_10149662.png",
+          "title": "Lorem Ipsum",
+          "details": "Passion fueled creativity and innovation within the company. Team members are driven to develop groundbreaking solutions to address the oddest pressing industry needs and challenges."
+        },
+        {
+         
+          "imageUrl": "https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-young-indian-man-png-image_10149662.png",
+          "title": "Dolor Sit Amet",
+          "details": "A team dedicated to pushing the boundaries of technology with creative solutions for modern challenges."
+        },
+        {
+          "imageUrl": "https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-young-indian-man-png-image_10149662.png",
+          "title": "Code Masters",
+          "details": "Elite programmers compete to solve complex technical challenges."
+        },
+        {
+        
+          "imageUrl": "https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-young-indian-man-png-image_10149662.png",
+          "title": "AI Revolution",
+          "details": "Showcasing cutting-edge AI solutions for real-world problems."
+        }
+      ]
+    }
+  ]
+}

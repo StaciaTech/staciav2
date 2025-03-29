@@ -88,6 +88,15 @@
 }
  */
 
+
+ /* dyamic css */
+ 
+/* .all-know-more {
+  display: flex;
+  align-items: center;
+
+} */
+
 @media screen and (max-width: 1024px) {
   .reusable-art-container {
     display: grid;

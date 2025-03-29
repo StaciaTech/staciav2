@@ -5,7 +5,14 @@ import case2 from "../../assets/case2.png";
 import case3 from "../../assets/case3.png";
 import case4 from "../../assets/case4.png";
 
+
+import { useNavigate } from "react-router-dom";
+import { FaChevronRight} from "react-icons/fa";
+
+
 export default function HomeCaseStudy() {
+
+  const navigateTo = useNavigate();
   return (
     <div className="home-case-study">
       <div className="home-case-study2">
@@ -34,12 +41,34 @@ export default function HomeCaseStudy() {
           </div>
         </div>
 
-        <div className="more-case">
-          <p>More Case Studys</p>
+        <div className="more-case"
+
+
+          onClick={() => {
+            navigateTo("/case-study");
+            window.scrollTo(0, 0);
+          }}
+          style={{ cursor: "pointer" }}
+        >
+           More Case Studys{""}
+           < FaChevronRight
+           style={{ verticalAlign: "middle"}}
+           />
+
         </div>
 
-        <div className="more-case-mobile">
-          <p>More Case Studys</p>
+        <div className="more-case-mobile"
+
+
+          onClick={() => {
+            navigateTo("/case-study");
+            window.scrollTo(0, 0);
+          }}
+          style={{ cursor: "pointer" }}
+        >
+          More Case Studys{""}
+          < FaChevronRight/>
+
         </div>
       </div>
     </div>

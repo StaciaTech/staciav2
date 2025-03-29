@@ -1,7 +1,6 @@
 .resource-nav-bar {
     width: 100%;
     padding: 50px 0px;
-
 }
 
 .resource-nav-links {
@@ -10,11 +9,6 @@
     display: flex;
     justify-content: center;
     gap: 124px;
-    background-color: red;
-}
-
-.resource-link:hover {
-    color: #ffffff; 
 }
 
 

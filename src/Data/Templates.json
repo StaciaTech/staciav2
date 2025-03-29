@@ -1,0 +1,361 @@
+{
+  "projects": [
+    {
+      "id": "mech-001",
+      "title": "One Drill",
+      "starComponent": true,
+      "template": "template5",
+      "banner": {
+        "image": "/assets/Banner.webp",
+        "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
+      },
+      "industry": {
+        "title": "Industry's",
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ]
+      },
+      "section1": {
+        "title": "Development of dehydrated food processing industry and the prominent difficulties faced by producers in 21st century.",
+        "summaryHeading": "Executive Summary",
+        "executiveSummary": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quidem perspiciatis, omnis neque veniam maxime quo, voluptas aspernatur, atque voluptatum?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quidem perspiciatis, omnis neque veniam maxime quo, voluptas aspernatur, atque voluptatum?"
+        ],
+        "image": "/assets/Green-house.webp"
+      },
+      "section2": {
+        "heading": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet placeat veritatis sed",
+        "paragraphs": [
+          "Food, the primary component in the hierarchy of needs for the human being to survive, is also the industry which is essential for the economy of the world. There are hundreds of cuisines in the world,each holding its specialty and distinct flavours which is binded to the land of its origin. The Global food industry is expected to grow by 4431.5 Billion USD by 2023 with an average growth rate of 9.7%.In this 21st century, along with the awareness about diversity in lifestyle and thoughts, the cuisines are also spreading with increased demand for preserved and processed foods."
+        ],
+        "listItems": [
+          {
+            "number": "01",
+            "title": "Lorem ipsum dolor sit amet.",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam ut iusto reprehenderit! Quam, quos!"
+          },
+          {
+            "number": "02",
+            "title": "Lorem ipsum dolor sit amet.",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, dolore nulla omnis nesciunt repudiandae optio?"
+          },
+          {
+            "number": "03",
+            "title": "Lorem ipsum dolor sit amet.",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, sapiente cum! Voluptas dolores aut harum."
+          }
+        ]
+      },
+      "section3": {
+        "midSection": [
+          {
+            "para": "When it comes to preserved foods, individuals prefer foods which are processed by more natural methods rather than preserved by artificial food preservatives and chemicals. The artificially preserved foods which are mostly the plunderer of the riches of cuisines were mostly hated by the native eaters. In order to eliminate the effects caused by additives, a traditional method which has been used in abundance for a great period of time is the Sun Drying method, which has been employed extensively. Dry fruits, spices and fishes are mostly processed by sun drying method. Foods processed by this method were found to hold 6x more fibre than fresh ones. Studies show that nutrients in dehydrated foods are also more easily absorbed by our bodies and helps to feel energised for a great deal of time. As they are completely dried and out of moist, these foods hold minimal levels of congestion of bacterial and other microorganisms which might cause ailments to people."
+          },
+          {
+            "para": "Among the dried foods, spices hold an extensive share in computing the whole industry. Almost every cuisine has its own composition of spices, it is becoming essential to process them accordingly for household purposes and exporting. Species should be extremely moist free in order to ensure authenticity of the food. The drying process of the species is hectic as the temperature for drying them is ranging from 95°F to 115°F. Chillies, The king of SPICES originated long back in the central regions of South America. This key player has established a great deal in the households and chefs tables in almost every cuisine of the world. There are almost 400 varieties of chillies currently present and 16% of the world's food production is attributed to the chilli and interestingly India is the largest producer of chilli followed by China. In India, 70% of chillies are consumed internally with increasing demand and 30% of the production is being exported. Chilli is one of the major cash crops, with extensive usage in various fields such as food, medicine, fragrance etc. McCormick & Company, Everest Food Products Pvt Ltd, Aachi Group of Industry are renowned producers of chilli based products such as ready made species, sauces etc."
+          }
+        ]
+      },
+      "section4": {
+        "content": "In this dried chilli production there are a series of processes from harvesting it to making it ready for market,the process includes removing bases of chilies, selecting, cleaning and drying chilies into crispy chilies, packaging the chilies into a vacuum bag, and sealing and storing. Among the above mentioned processes, the cleaning and drying stages are crucial as it determines the quality of the end product.During this process, the component which is being dried should be turned upside down in equal intervals for uniform drying.This turning process has been carried out in traditional methods which is turning the components by using ladles for maintaining better quality. Extensive human labour has been employed in the drying cabinets of spices to carry out the process with care. The workers of this particular industry are entitled to undergo high heat and powerful acridity.",
+        "midSection": {
+          "heading": "How Stacia Can Help",
+          "subheading": "Lorem ipsum dolor sit amet.",
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem error animi alias, minus fugit quaerat odit! Est eveniet facilis fugiat nostrum atque excepturi corporis nisi."
+        }
+      },
+      "section5": {
+        "content": "In order to attain top-most quality, chillies should be dried at 140°F to 158°F at least, whereas working at this high temperature might trigger hyperthermia in individuals and prolonged working in high pungent odour areas might result in difficulty in breathing, skin problems. To minimise the difficulties caused by manual labouring in this drying process, stacia corp has performed a deep background study along with Aachi Group for resolving the situation. There are many other minor difficulties such as reminiscing of moist, distinct quality mixtures in the final output etc. Being a part of the entire production helped in observing and arriving with alternations of ideas for resolving the hassles. The chilli ladling machine CLM is a prototype, which helps the manufacturer to eliminate the toils which are interfering in production.",
+        "title": "Lorem ipsum dolor sit amet.",
+        "image": "/assets/Chilli-Image.webp",
+        "subsection": {
+          "title": "Lorem ipsum dolor sit amet.",
+          "description": "The CLM is operated by remote control which helps in exempting humans from encountering hazardous environments, using the CLM also helps to turn the chillies equally throughout the solar shed resulting in high quality of end product. This machinery can be used for almost every component where it requires to be spiralled equally"
+        }
+      },
+      "conclusion": [
+        {
+          "para": "Currently the prototype which was designed and developed by Stacia Corp has been used in Aachi Masala, which is one of the leading food processor in and around the globe to dry chillies for manufacturing spicy food items, as the CLM ensuring the no/ minimal breakage of the chilli, fine quality chillies which are sufficiently dried were produced, resulting in good quality end products for the producers of the food processing industry."
+        },
+        {
+          "para": "Considering the chilli production alone, it can be witnessed that there is a significant grown in the spciy food industry. To illustrate, the statistics provided by Statista suggests that production value of the chillies will be around 1.5 to 2 million metric tons in India by the year 2022, which shows the promising growth in the industry. As India being the highest producer and consumer the market for chillies are currently found to be in a minimal risk zone. Apart from considering chilies alone, markets for many other dry food items are also remarkably growing in the rapid world, which also demands the reduction of hazards as well as production cost in order to gain better profits. The extensive expenses which are mostly spent on the preserving processes can be substantially reduced by employing modern methods."
+        }
+      ]
+    },
+    {
+      "id": "elec-001",
+      "title": "Smart Implementation",
+      "starComponent": true,
+      "template": "template1",
+      "banner": {
+        "image": "/assets/Engine1.webp",
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, neque?"
+      },
+      "industry": {
+        "title": "Industry's",
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ],
+        "image": "/assets/Engine2.webp"
+      },
+      "product": {
+        "title": "The Product",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque inventore rerum deserunt facere aliquid. Ratione dolorum, pariatur exercitationem est obcaecati nostrum doloribus numquam, a blanditiis accusamus iure eaque ex eligendi distinctio? Harum iste impedit temporibus maxime, eum repellat quidem accusantium, obcaecati blanditiis aspernatur fuga optio, consectetur doloremque esse dolores a.",
+        "subTitle": "lorem ipsum lorem ipsum lorem ipsum",
+        "subDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque inventore rerum deserunt facere aliquid. Ratione dolorum, pariatur exercitationem est obcaecati nostrum doloribus numquam, a blanditiis accusamus iure eaque ex eligendi distinctio? Harum iste impedit temporibus maxime, eum repellat quidem accusantium, obcaecati blanditiis aspernatur fuga optio, consectetur doloremque esse dolores a."
+      },
+      "problem": {
+        "title": "Problem",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur laboriosam, magni esse voluptate, repellendus explicabo exercitationem tempore, porro numquam ea sed quia culpa perspiciatis maxime voluptates veniam quibusdam error ratione a praesentium laborum debitis? Nam perspiciatis repudiandae ab nulla illum.",
+        "points": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores.",
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores."
+        ],
+        "subDescription": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi labore ratione, necessitatibus adipisci iure in cum quia sed ex eaque vero incidunt reprehenderit, accusantium dignissimos corporis molestias. Corporis blanditiis voluptates, atque quis consequatur necessitatibus laborum enim quidem eius provident labore.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi labore ratione, necessitatibus adipisci iure in cum quia sed ex eaque vero incidunt reprehenderit, accusantium dignissimos corporis molestias. Corporis blanditiis voluptates, atque quis consequatur necessitatibus laborum enim quidem eius provident labore.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, iusto ea officia, ullam quis modi blanditiis natus corporis molestiae aliquam porro? Reprehenderit libero explicabo blanditiis adipisci voluptates, enim, quasi, eaque vel minima fugit magni. Voluptatibus incidunt, facere provident cum ea vero iure modi ullam? Aperiam libero tenetur mollitia eveniet atque! Quis, in voluptates eligendi quas saepe iusto. Beatae, aut aliquid."
+        ]
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur laboriosam, magni esse voluptate, repellendus explicabo exercitationem tempore, porro numquam ea sed quia culpa perspiciatis maxime voluptates veniam quibusdam error ratione a praesentium laborum debitis? Nam perspiciatis repudiandae ab nulla illum.",
+        "points": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!"
+        ],
+        "subDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea praesentium nulla deleniti, minus, voluptates aliquam magnam inventore tenetur natus adipisci aut earum veritatis. Animi odio incidunt veniam quidem minus id, nisi saepe exercitationem eveniet dolore nesciunt neque eligendi dolores, nobis vel magnam sunt hic autem quae? Est dolor, tempora incidunt recusandae minus nihil excepturi. Laborum nostrum magni quos quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea praesentium nulla deleniti, minus, voluptates aliquam magnam inventore tenetur natus adipisci aut earum veritatis. Animi odio incidunt veniam quidem minus id, nisi saepe exercitationem eveniet dolore nesciunt neque eligendi dolores, nobis vel magnam sunt hic autem quae? Est dolor, tempora incidunt recusandae minus nihil excepturi. Laborum nostrum magni quos quia?"
+      },
+      "staciaHelp": {
+        "title": "How Stacia can help",
+        "subtitle": "Lorem ipsum dolor sit amet.",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus deserunt eum quod similique, explicabo officia voluptatibus minima commodi deleniti.",
+        "subDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, qui laborum! Incidunt accusantium consectetur qui odio aspernatur fugit laboriosam reprehenderit, sunt ipsum ipsa facere a tempora dolorem, expedita vitae dignissimos, quam quae distinctio voluptas pariatur laborum officiis. Autem dicta deserunt amet repudiandae non, voluptates quae beatae ratione dolores libero ad explicabo repellat magnam molestiae blanditiis reprehenderit assumenda consectetur ea. Amet consequuntur reiciendis fugiat minus voluptatum. Quisquam et nesciunt dolorem cum?",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates dolor eos voluptate, illo laborum fuga possimus iusto quasi.",
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa consectetur tenetur, labore ex molestiae sed fugit fugiat eaque! Porro, possimus!",
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem soluta facere voluptatibus dolores quidem impedit fugiat minima, laudantium doloribus eligendi?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vitae, dolore recusandae in similique accusamus accusantium aut quos mollitia impedit?"
+        ]
+      }
+    },
+    {
+      "id": "mech-002",
+      "title": "ismart",
+      "starComponent": "true",
+      "template": "template2",
+      "heading": {
+        "title": "Lorem ipsum has been the industry's standard dummy",
+        "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
+      },
+      "industry": {
+        "title": "Industry's",
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ],
+        "image": "/assets/Engine2.webp"
+      },
+      "Heading2": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+      "product": {
+        "title": "The Product",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque inventore rerum deserunt facere aliquid. Ratione dolorum, pariatur exercitationem est obcaecati nostrum doloribus numquam, a blanditiis accusamus iure eaque ex eligendi distinctio? Harum iste impedit temporibus maxime, eum repellat quidem accusantium, obcaecati blanditiis aspernatur fuga optio, consectetur doloremque esse dolores a."
+      },
+      "midContent": {
+        "title": "lorem ipsum lorem ipsum lorem ipsum",
+        "para": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "problem": {
+        "title": "Problem",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur laboriosam, magni esse voluptate, repellendus explicabo exercitationem tempore, porro numquam ea sed quia culpa perspiciatis maxime voluptates veniam quibusdam error ratione a praesentium laborum debitis? Nam perspiciatis repudiandae ab nulla illum....",
+        "points": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores....",
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores."
+        ]
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur laboriosam, magni esse voluptate, repellendus explicabo exercitationem tempore, porro numquam ea sed quia culpa perspiciatis maxime voluptates veniam quibusdam error ratione a praesentium laborum debitis? Nam perspiciatis repudiandae ab nulla illum.",
+        "points": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!"
+        ],
+        "subDescription": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "staciaHelp": {
+        "title": "How Stacia can help",
+        "subtitle": "Lorem ipsum dolor sit amet.",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus deserunt eum quod similique, explicabo officia voluptatibus minima commodi deleniti.",
+        "subDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, qui laborum! Incidunt accusantium consectetur qui odio aspernatur fugit laboriosam reprehenderit, sunt ipsum ipsa facere a tempora dolorem, expedita vitae dignissimos, quam quae distinctio voluptas pariatur laborum officiis. Autem dicta deserunt amet repudiandae non, voluptates quae beatae ratione dolores libero ad explicabo repellat magnam molestiae blanditiis reprehenderit assumenda consectetur ea. Amet consequuntur reiciendis fugiat minus voluptatum. Quisquam et nesciunt dolorem cum?",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates dolor eos voluptate, illo laborum fuga possimus iusto quasi.",
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa consectetur tenetur, labore ex molestiae sed fugit fugiat eaque! Porro, possimus!",
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem soluta facere voluptatibus dolores quidem impedit fugiat minima, laudantium doloribus eligendi?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vitae, dolore recusandae in similique accusamus accusantium aut quos mollitia impedit?"
+        ]
+      }
+    },
+    {
+      "id": "elec-002",
+      "title": "Reverse Kettle",
+      "starComponent": "true",
+      "template": "template3",
+      "banner": {
+        "image": "/assets/Reverse-Kettle.webp",
+        "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
+      },
+      "industry": {
+        "title": "Industry's",
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ]
+      },
+      "product": {
+        "title": "The Product",
+        "description": [
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, eveniet dolore. Veritatis accusantium rerum magnam cumque esse distinctio, deleniti ullam ut beatae optio alias quaerat a sunt, repellat delectus quidem.",
+          "Traditional solar cells are made up of a large number of small, individual cells that are interconnected to create a solar panel. This architecture is not well suited to capturing the energy of light because it is difficult to make the cells small enough and efficiently connect them."
+        ]
+      },
+      "testimonial1": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+        "name": "Nithish Kumar K",
+        "designation": "Head of Operations."
+      },
+      "Heading1": {
+        "title": "Lorem ipsum has been the industry's standard dummy",
+        "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
+      },
+      "Approach": {
+        "title": "Approach:",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "Result": {
+        "title": "Result:",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur."
+        ]
+      },
+      "testimonial2": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+        "name": "Nithish Kumar K",
+        "designation": "Head of Operations."
+      },
+      "Heading2": {
+        "title": "Lorem ipsum has been the industry's standard dummy",
+        "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
+      },
+      "Approach1": {
+        "title": "Approach:",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "Result1": {
+        "title": "Result:",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur."
+        ]
+      },
+      "testimonial3": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+        "name": "Nithish Kumar K",
+        "designation": "Head of Operations."
+      },
+      "solution": {
+        "title": "Solution",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      }
+    },
+    {
+      "id": "mech-003",
+      "title": "Chilli Solar House",
+      "starComponent": "true",
+      "template":"template4",
+      "banner": {
+        "image": "/assets/Green-House2.webp",
+        "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
+      },
+      "section1": {
+        "title": "Lorem ipsum dolor Lorem ipsum dolorLorem ipsum dolorLorem Lorem ipsum dolor Lorem ipsum",
+        "summaryHeading": "Lorem ipsum dolor lorem ipsum dolor lorem",
+        "executiveSummary": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+          "Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant."
+        ],
+        "image": "/assets/Green-house.webp"
+      },
+      "midContainer": {
+        "chilli": "/assets/Chilli2.webp",
+        "dryChilli": "/assets/dryChilli.webp",
+        "title": "Lorem ipsum dolor Lorem ipsum dolorLoremLorem ipsum dolor Lorem ipsum dolorLoremLorem",
+        "content": "The goal of this project is to streamline and digitize the supplychain for oil production. By offering specialized apps and websites for farmers, surveyors, procurement managers, and logistics teams, this ecosystem aims to make it a better around the world and make the problem solved once and for all."
+      },
+      "section2": {
+        "listItems": [
+          {
+            "number": "01",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+            "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+          },
+          {
+            "number": "02",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+            "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+          },
+          {
+            "number": "03",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+            "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+          },
+          {
+            "number": "04",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+            "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+          }
+        ]
+      },
+      "section3": {
+        "title": "Lorem ipsum dolor sit amet consectetur.",
+        "image": "/assets/chilli3.webp",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam."
+      }
+    }
+  ]
+}

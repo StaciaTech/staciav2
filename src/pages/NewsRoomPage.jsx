@@ -9,6 +9,9 @@ import axios from "axios";
 import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
 import { el } from "intl-tel-input/i18n";
 
+
+import newsRoom from "../Data/Newroom.json";
+
 const newsArr = [
   {
     name: "All",
@@ -35,21 +38,34 @@ const CarouselArr = [
 ];
 
 function NewsRoomPage() {
-  const apiUrl = process.env.REACT_APP_API_URL;
-  const [selectedTab, setSelectedTab] = useState("");
-  const [newsData, setNewsData] = useState();
+  // const apiUrl = process.env.REACT_APP_API_URL;
+  // const [selectedTab, setSelectedTab] = useState("");
+  // const [newsData, setNewsData] = useState();
 
-  const FetchNewsRoom = async () => {
-    try {
-      const res = await axios.get(
-        `${apiUrl}/client/newsroom?query=${selectedTab}`
-      );
-      setNewsData(res.data.docs);
-    } catch (error) {}
-  };
+  // const FetchNewsRoom = async () => {
+  //   try {
+  //     const res = await axios.get(
+  //       `${apiUrl}/client/newsroom?query=${selectedTab}`
+  //     );
+  //     setNewsData(res.data.docs);
+  //   } catch (error) {}
+  // };
+  // useEffect(() => {
+  //   FetchNewsRoom();
+  // }, [selectedTab]);
+
+
+  const [selectedTab, setSelectedTab] = useState("");
+  const [newsData, setNewsData] = useState(newsRoom.news);
+
   useEffect(() => {
-    FetchNewsRoom();
+    if (selectedTab) {
+      setNewsData(newsRoom.news.filter((news) => news.category === selectedTab));
+    } else {
+      setNewsData(newsRoom.news);
+    }
   }, [selectedTab]);
+   
 
   console.log(newsData);
 

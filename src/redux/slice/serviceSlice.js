@@ -1,15 +1,25 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+// import axios from "axios";
+
+import data from "../../Data/Home.json"; 
 
 const apiUrl = process.env.REACT_APP_API_URL;
 export const fetchServices = createAsyncThunk("fetchservices", async () => {
-  try {
-    const res = await axios(`${apiUrl}/service/all-service`);
-    console.log(res.data);
-    return res.data;
-  } catch (error) {
-    console.log(error);
-  }
+  // try {
+  //   const res = await axios(`${apiUrl}/service/all-service`);
+  //   console.log(res.data);
+  //   return res.data;
+  // } catch (error) {
+  //   console.log(error);
+  // }
+
+
+   return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(data.services); // Ensure you return the product array correctly
+      }, 1000);
+    });
+
 });
 
 const serviceSlice = createSlice({

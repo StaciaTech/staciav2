@@ -2,40 +2,29 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/projects.css";
-import WorkInProgress from "../components/WorkInProgress";
+// import WorkInProgress from "../components/WorkInProgress";
 import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
 import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+// import { useNavigate } from "react-router-dom";
+// import axios from "axios";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import { useParams } from "react-router-dom";
 import Star from "../components/Star";
+import ProjectsData from "../Data/ProjectsData.json"
 
 function ProjectPage() {
-  // console.log(firstproduct);
-  const apiUrl = process.env.REACT_APP_API_URL;
   const params = useParams();
-  console.log(params.department);
+  console.log("Department: ",params.department);
   console.log(params.category);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [projectsData, setProjectsData] = useState();
 
-  const FetchProjects = async () => {
-    try {
-      const res = await axios.get(`${apiUrl}/projects/list`);
-      setProjectsData(res.data.docs);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
-    FetchProjects();
-  }, []);
-  // console.log(projectsData);
+    setProjectsData(ProjectsData.Projects)
+  },[])
 
   const [activeDepartment, setActiveDepartment] = useState("");
   const [activeCategory, setActiveCategory] = useState("");
@@ -57,11 +46,12 @@ function ProjectPage() {
         projectsData?.find((eachItem) => eachItem.name === activeDepartment)
       );
     }
-    if (departmentObj && !params.category) {
+    if (departmentObj && !params.categories) {
       setActiveCategory(departmentObj?.categories[0]?.name);
     }
   }, [activeDepartment, projectsData, departmentObj, params]);
   // console.log(activeCategory);
+  // console.log(departmentObj);
 
   useEffect(() => {
     if (activeCategory && departmentObj) {
@@ -73,7 +63,7 @@ function ProjectPage() {
     }
   }, [activeCategory, departmentObj]);
 
-  console.log(foundProjectsObj?.projects);
+  // console.log(foundProjectsObj?.projects);
 
   const [showHiddenDepts, setShowHiddenDepts] = useState(false);
 
@@ -91,12 +81,6 @@ function ProjectPage() {
       </div>
       <div>
         <div>
-          {/* <div className="projecct-title">
-            <span>Our Projects</span>
-          </div> */}
-          {/* <div style={{ width: "100%" }}>
-            <img src={WorkInProgress} alt="" />
-          </div> */}
           <div className="project-department-container">
             <div
               onClick={() => setShowHiddenDepts(!showHiddenDepts)}
@@ -121,7 +105,7 @@ function ProjectPage() {
                         onClick={() => {
                           setActiveDepartment(eachproject.name);
                           setShowHiddenDepts(false);
-                        }}
+                        }} key={i}
                       >
                         {eachproject.name}
                       </div>
@@ -153,7 +137,7 @@ function ProjectPage() {
       <div>
         <ReUsableArticle
           data={foundProjectsObj?.projects}
-          path={`/${activeDepartment}/${activeCategory}`}
+          path={`/project/${activeDepartment}/${activeCategory}`}
         />
       </div>
       <Footer />

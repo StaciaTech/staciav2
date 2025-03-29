@@ -1,0 +1,50 @@
+{
+    "articles": [
+      {
+        "name": "Technology",
+        "data": [
+          {
+            "title": "The Future of AI",
+            "description": "An in-depth look at how AI is shaping the future of technology.",
+            "image": {
+              "imageUrl": "https://example.com/ai-future.jpg"
+            }
+          },
+          {
+            "title": "Blockchain Innovations",
+            "description": "Exploring the latest advancements in blockchain technology.",
+            "image": {
+              "imageUrl": "https://example.com/blockchain.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Health",
+        "data": [
+          {
+            "title": "Mental Wellness in the Digital Age",
+            "description": "Understanding the impact of digital technology on mental health.",
+            "image": {
+              "imageUrl": "https://example.com/mental-wellness.jpg"
+            }
+          }
+        ]
+      }
+    ],
+    "caseStudies": [
+      {
+        "name": "Business",
+        "data": [
+          {
+            "title": "Startup Growth Strategies",
+            "description": "How startups can scale effectively in competitive markets.",
+            "image": {
+              "imageUrl": "https://example.com/startup-growth.jpg"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

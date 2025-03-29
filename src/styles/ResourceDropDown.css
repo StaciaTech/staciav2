@@ -42,7 +42,6 @@
 .res-title-container {
   display: flex;
 }
-
 .res-item-contaienr {
 }
 .res-item-card-title {
@@ -81,7 +80,6 @@
 }
 .res-title-container:hover .res-title-dot-container {
   display: block;
- 
 }
 .res-title-dot-container > div {
   display: flex;

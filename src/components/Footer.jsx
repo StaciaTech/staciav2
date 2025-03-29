@@ -103,7 +103,12 @@ function Footer() {
         {/* <div className="footer-nav-tabs"> */}
         <div>
           <div>Company</div>
-          <div className="footer-grey-tabs">About</div>
+          <div className="footer-grey-tabs"
+           onClick={() => {
+            navigate("/about");
+            window.scrollTo(0, 0);
+          }}
+          >About</div>
           <div
             className="footer-grey-tabs"
             onClick={() => {
@@ -170,7 +175,13 @@ function Footer() {
           >
             Articles
           </div>
-          <div className="footer-grey-tabs">What's New</div>
+          <div className="footer-grey-tabs"
+           onClick={() => {
+            navigate("/whatsnew");
+            window.scrollTo(0, 0);
+          }}
+          >
+            What's New</div>
         </div>
 
         <div>

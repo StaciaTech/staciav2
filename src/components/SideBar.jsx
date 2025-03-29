@@ -50,6 +50,11 @@ function SideBar() {
       Mainpath: "/about",
     },
     {
+      title: "Competition",
+      subRouts: false,
+      Mainpath: "/competition",
+    },
+    {
       title: "Events",
       subRouts: false,
       Mainpath: "/events",

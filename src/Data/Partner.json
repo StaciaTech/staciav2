@@ -1,0 +1,30 @@
+{
+  "images": [
+    "https://example.com/partner1.jpg",
+    "https://example.com/partner2.jpg",
+    "https://example.com/partner3.jpg"
+  ],
+  "data": [
+    {
+      "title": "Partner 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": {
+        "imageUrl": "https://example.com/partner1-logo.jpg"
+      }
+    },
+    {
+      "title": "Partner 2",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": {
+        "imageUrl": "https://example.com/partner2-logo.jpg"
+      }
+    },
+    {
+      "title": "Partner 3",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": {
+        "imageUrl": "https://example.com/partner3-logo.jpg"
+      }
+    }
+  ]
+}
