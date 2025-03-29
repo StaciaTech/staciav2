@@ -61,6 +61,7 @@ function App() {
           element={<SingleProject />}
         />
         <Route
+          // path="/case-study/:department/:title"
           path="/case-study/:department/:id" //--------------
           element={<SingleCaseStudy />}
         />
@@ -70,6 +71,8 @@ function App() {
           path="/project/:department/:category"
           element={<ProjectPage />}
         />
+        {/* <Route path="/case-study" element={<CaseStudy />} />
+        <Route path="/case-study/:department" element={<CaseStudy />} /> */}
        
         <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/case-study/:department:id" element={<CaseStudy />} />

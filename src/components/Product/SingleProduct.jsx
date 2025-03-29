@@ -1,3 +1,313 @@
+// import React, { useState, useEffect } from "react";
+// import NavBar from "../NavBar";
+// import Footer from "../Footer";
+// import "../../styles/ProductDetails.css";
+// import { useParams } from "react-router-dom";
+// import prev from "../../assets/prev.png";
+// import next from "../../assets/next.png";
+// import Model from "./Model";
+// import MobileFooter from "../MobileFooter";
+// import SideBar from "../SideBar";
+// import LoadingStar from "../LoadingStar";
+// import { useNavigate } from "react-router-dom";
+// import Star from "../Star";
+// import axios from "axios";
+
+// export default function SingleProduct() {
+//   const navigateTo = useNavigate();
+//   const params = useParams();
+
+//   const apiUrl = process.env.REACT_APP_API_URL;
+
+//   const productKey = params.id.split("-").join(" ");
+//   // console.log(productKey);
+//   const [SelectedProduct, setSelectedProduct] = useState({});
+//   const FetchSingleProduct = async () => {
+//     try {
+//       const res = await axios.get(`${apiUrl}/product/show/${productKey}`);
+//       // console.log(res);
+//       setSelectedProduct(res.data.doc);
+//       // console.log(res.data.doc);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+//   useEffect(() => {
+//     FetchSingleProduct();
+//   }, [params.id]);
+//   // console.log(SelectedProduct);
+//   const [productData, setProductData] = useState();
+//   const FetchProducts = async () => {
+//     try {
+//       const res = await axios.get(`${apiUrl}/product/all-products-index`);
+//       // console.log(res.data.docs);
+//       setProductData(res.data.docs);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+//   useEffect(() => {
+//     FetchProducts();
+//   }, []);
+//   const FoundDept = productData?.find(
+//     (eachItem) => eachItem.name === params.department
+//   );
+//   // console.log(FoundDept);
+//   const DeptKey = FoundDept?.name.split(" ").join("-");
+//   const FoundCat = FoundDept?.categories.find(
+//     (eachItem) => eachItem.name === params.category
+//   );
+//   const CatogeryKey = FoundCat?.name.split(" ").join("-");
+//   const proData = FoundCat?.products;
+
+//   // useEffect(() => {
+//   //   setSelectedProduct(
+//   //     FoundCat?.products?.find(
+//   //       (eachProduct) => eachProduct.title !== productKey
+//   //   )
+//   //   );
+//   // }, [params, productData]);
+
+//   const RemainingProducts = FoundCat?.products?.filter(
+//     (eachProduct) => eachProduct.title !== productKey
+//   );
+//   const [currentSlide, setCurrentSlide] = useState(0);
+//   const nextSlide = () => {
+//     setCurrentSlide(
+//       (currentSlide + 1) % SelectedProduct?.productDetails.length
+//     );
+//   };
+//   const previousSlide = () => {
+//     setCurrentSlide(
+//       (currentSlide - 1 + SelectedProduct?.productDetails.length) %
+//         SelectedProduct?.productDetails.length
+//     );
+//   };
+//   console.log(SelectedProduct.productDetails);
+//   return (
+//     <>
+//       <div>
+//         <NavBar />
+//         <SideBar />
+//       </div>
+//       {!SingleProduct ? (
+//         <div>
+//           <LoadingStar />
+//         </div>
+//       ) : (
+//         <div>
+//           <div>
+//             <div className="product-details">
+//               <div className="product-details2">
+//                 <div style={{ marginTop: "40px" }}>
+//                   <div className="single-product-name test-seclection-white">
+//                     <Star />
+//                     {SelectedProduct?.title}
+//                   </div>
+//                   {/* <div className="product-category">
+//                     <span className="test-seclection-white">
+//                       {SelectedProduct?.domainName}
+//                     </span>
+//                   </div> */}
+//                 </div>
+//                 <div className="single-pro-container">
+//                   <div className="single-pro-container2">
+//                     <div className="single-pro-overview">
+//                       {/* <Star /> */}
+//                       <span style={{ userSelect: "none" }}>Overview</span>
+//                     </div>
+//                     <p className="test-seclection-white">
+//                       {SelectedProduct?.des}
+//                     </p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//             {/* <div className="product-3d-img">
+//                 <div className="img-box">
+//                     <img src={thisProduct.productImg} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+//                 </div>
+//                 <div style={{ width: '100%', textAlign: 'end', fontSize: '18px', fontWeight: '900', color: 'rgba(13, 2, 37, 0.20)' }}>Rotate the Object for Real Experience</div>
+//             </div> */}
+//             {SelectedProduct?.animationUrl && (
+//               <Model
+//                 ModelFile={SelectedProduct?.animationUrl}
+//                 sizeMultiplier={5}
+//               />
+//             )}
+//             <div className="rotate-text">
+//               <div className="mobile-rotate-text">
+//                 Rotate the Object for Real Experience
+//               </div>
+//             </div>
+//             {SelectedProduct.productDetails && (
+//               <div
+//                 style={{
+//                   minHeight: "100vh",
+//                   width: "100%",
+//                   // display: "flex",
+//                   justifyContent: "center",
+//                   alignItems: "center",
+//                 }}
+//               >
+//                 <div>
+//                   <div className="split-screen-carousel">
+//                     <div className="split">
+//                       <div className="image-area">
+//                         <img
+//                           src={
+//                             SelectedProduct?.productDetails[currentSlide]
+//                               ?.imageUrl
+//                           }
+//                           alt="slide "
+//                           style={{ userSelect: "none" }}
+//                         />
+//                       </div>
+//                       <div className="text-area">
+//                         <div className="paras">
+//                           <p className="test-seclection-blue">
+//                             {
+//                               SelectedProduct?.productDetails[currentSlide]
+//                                 ?.title
+//                             }
+//                           </p>
+//                           <p className="test-seclection-blue">
+//                             {
+//                               SelectedProduct?.productDetails[currentSlide]
+//                                 ?.description
+//                             }
+//                           </p>
+//                         </div>
+//                         <div
+//                           className=""
+//                           style={{
+//                             display: "flex",
+//                             justifyContent: "space-between",
+//                             alignItems: "center",
+//                           }}
+//                         >
+//                           <p className="skip">{""}</p>
+//                           <div
+//                             style={{
+//                               display: "flex",
+//                               alignItems: "center",
+//                               gap: "20px",
+//                               userSelect: "none",
+//                             }}
+//                           >
+//                             <div
+//                               onClick={previousSlide}
+//                               style={{
+//                                 width: "40px",
+//                                 height: "40px",
+//                                 cursor: "pointer",
+//                               }}
+//                             >
+//                               <img
+//                                 src={prev}
+//                                 alt=""
+//                                 style={{ width: "100%", height: "100%" }}
+//                               />
+//                             </div>
+//                             <div
+//                               onClick={nextSlide}
+//                               style={{
+//                                 width: "40px",
+//                                 height: "40px",
+//                                 cursor: "pointer",
+//                               }}
+//                             >
+//                               <img
+//                                 src={next}
+//                                 alt=""
+//                                 style={{ width: "100%", height: "100%" }}
+//                               />
+//                             </div>
+//                           </div>
+//                         </div>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//                 {/* <div>varitaion</div> */}
+//               </div>
+//             )}
+//             {/* <div className="full-desc">
+//               <div className="pro-title test-seclection-blue">
+//                 {SelectedProduct?.title}
+//               </div>
+//               <div className="prodesc test-seclection-blue">
+//                 {SelectedProduct?.des}
+//               </div>
+//             </div> */}
+//           </div>
+//           <>
+//             <div className="remaining-products-card-container-holder">
+//               <div className="single-other-service-title">Other Products</div>
+//               <div className="remaining-products-card-container">
+//                 {RemainingProducts?.map((eachPro, i) => {
+//                   const ProductKey = eachPro?.title.split(" ").join("-");
+//                   return (
+//                     <>
+//                       {i < 6 && (
+//                         <div key={i}>
+//                           <div className="single-product-card">
+//                             <div
+//                               // style={{ width: "100%", height: "20rem" }}
+//                               className="single-product-card-img-container pointer"
+//                               onClick={() => {
+//                                 navigateTo(
+//                                   `/products/${DeptKey}/${CatogeryKey}/${ProductKey}`
+//                                 );
+//                                 window.scrollTo(0, 0);
+//                               }}
+//                             >
+//                               <img
+//                                 src={eachPro?.imageUrl}
+//                                 alt=""
+//                                 style={{
+//                                   width: "100%",
+//                                   height: "100%",
+//                                   objectFit: "contain",
+//                                 }}
+//                               />
+//                             </div>
+//                             <div
+//                               className="single-product-card-title pointer test-seclection-blue"
+//                               onClick={() => {
+//                                 navigateTo(
+//                                   `/products/${DeptKey}/${CatogeryKey}/${ProductKey}`
+//                                 );
+//                                 window.scrollTo(0, 0);
+//                               }}
+//                             >
+//                               {eachPro?.title}
+//                             </div>
+//                             <p className="single-product-card-des test-seclection-blue">
+//                               {eachPro?.des}
+//                             </p>
+//                           </div>
+//                         </div>
+//                       )}
+//                     </>
+//                   );
+//                 })}
+//               </div>
+//             </div>
+//           </>
+//         </div>
+//       )}
+//       <Footer />
+//       <MobileFooter />
+//     </>
+//   );
+// }
+
+
+
+
+// Static
+
 import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar";
 import Footer from "../Footer";
@@ -11,93 +321,106 @@ import SideBar from "../SideBar";
 import LoadingStar from "../LoadingStar";
 import { useNavigate } from "react-router-dom";
 import Star from "../Star";
-import axios from "axios";
+import data from "../../Data/ProductPage.json";
 
 export default function SingleProduct() {
   const navigateTo = useNavigate();
-
   const params = useParams();
+  console.log(params,"params")
 
-  const apiUrl = process.env.REACT_APP_API_URL;
+  // console.log(params.department,"paramsDepartment");
 
-  const productKey = params.id.split("-").join(" ");
-  // console.log(productKey);
+  const productKey = params.id;
+  console.log(productKey, "ProductKey");
+
+  const DeptKey = params.department 
+  console.log(DeptKey,"DepartmentKey")
+
+  const [productData, setProductData] = useState([]);
+
+  // const FetchProducts = () => {
+  //   try {
+  //     setProductData(data.department);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
+  useEffect(() => {
+    // FetchProducts();
+    setProductData(data.department)
+  }, []);
+
+  // console.log(productData, "ProductData");
+
+  const FoundDep = productData.find((eachDep) => {
+    return eachDep.id === params.department;
+  });
+  console.log(FoundDep, "Department");
+
+  const FoundCat = FoundDep?.category.find((eachCat) => {
+    return eachCat.id === params.category;
+  });
+  console.log(FoundCat, "Category");
+
+  const CatogeryKey = FoundCat?.id
+  console.log(CatogeryKey, "CatogeryKey");
+
+  const proData = FoundCat?.products;
+  console.log(proData, "Moses**ProdData");
+
+  const product = proData?.find(
+    (eachPro) => eachPro.id === params.id
+    );
+  console.log(product, "Product");
 
   const [SelectedProduct, setSelectedProduct] = useState({});
 
-  const FetchSingleProduct = async () => {
-    try {
-      const res = await axios.get(`${apiUrl}/product/show/${productKey}`);
-      // console.log(res);
-      setSelectedProduct(res.data.doc);
-      // console.log(res.data.doc);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const FetchSingleProduct = () => {
+  //   try{
+  //     if(product){
+  //       setSelectedProduct(product);
+  //     }
+  //   } catch(error){
+  //     console.error(error)
+  //   }
+  //   };
 
   useEffect(() => {
-    FetchSingleProduct();
-  }, [params.id]);
-
-  // console.log(SelectedProduct);
-
-  const [productData, setProductData] = useState();
-
-  const FetchProducts = async () => {
-    try {
-      const res = await axios.get(`${apiUrl}/product/all-products-index`);
-      // console.log(res.data.docs);
-      setProductData(res.data.docs);
-    } catch (error) {
-      console.log(error);
+    if (product) {
+      setSelectedProduct(product);
     }
-  };
+  }, [product]);
 
-  useEffect(() => {
-    FetchProducts();
-  }, []);
+  // console.log(SelectedProduct, "SelectedProduct");
 
-  const FoundDept = productData?.find(
-    (eachItem) => eachItem.name === params.department
-  );
-  // console.log(FoundDept);
-  const DeptKey = FoundDept?.name.split(" ").join("-");
+  // const RemainingProducts = FoundCat?.products.filter(
+  //   (eachPro) => eachPro.title !== productKey
+  // );
 
-  const FoundCat = FoundDept?.categories.find(
-    (eachItem) => eachItem.name === params.category
-  );
+  // const RemainingProducts = FoundCat?.products?.filter(
+  //   (eachProduct) => eachProduct.title !== productKey
+  // );
 
-  const CatogeryKey = FoundCat?.name.split(" ").join("-");
-
-  const proData = FoundCat?.products;
-
-  // useEffect(() => {
-  //   setSelectedProduct(
-  //     FoundCat?.products?.find(
-  //       (eachProduct) => eachProduct.title !== productKey
-  //     )
-  //   );
-  // }, [params, productData]);
-
-  const RemainigProducts = FoundCat?.products?.filter(
-    (eachProduct) => eachProduct.title !== productKey
-  );
+  // const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.title.split(" ").join("-") !== params.id)
+  const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.id !== params.id)
+ 
+  console.log(RemainingProducts, "Remaining Products");
 
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const nextSlide = () => {
     setCurrentSlide(
-      (currentSlide + 1) % SelectedProduct?.productDetails.length
+      (currentSlide + 1) % SelectedProduct?.productDetails?.length
     );
   };
-
   const previousSlide = () => {
     setCurrentSlide(
-      (currentSlide - 1 + SelectedProduct?.productDetails.length) %
+      (currentSlide - 1 + SelectedProduct?.productDetails?.length) %
         SelectedProduct?.productDetails.length
     );
   };
-  console.log(SelectedProduct.productDetails);
+  // console.log(SelectedProduct.productDetails, "Product**Details");
 
   return (
     <>
@@ -132,7 +455,7 @@ export default function SingleProduct() {
                       <span style={{ userSelect: "none" }}>Overview</span>
                     </div>
                     <p className="test-seclection-white">
-                      {SelectedProduct?.des}
+                      {SelectedProduct?.description}
                     </p>
                   </div>
                 </div>
@@ -144,12 +467,28 @@ export default function SingleProduct() {
                 </div>
                 <div style={{ width: '100%', textAlign: 'end', fontSize: '18px', fontWeight: '900', color: 'rgba(13, 2, 37, 0.20)' }}>Rotate the Object for Real Experience</div>
             </div> */}
-            {SelectedProduct?.animationUrl && (
+
+            {/* {SelectedProduct?.animationUrl && (
               <Model
                 ModelFile={SelectedProduct?.animationUrl}
                 sizeMultiplier={5}
               />
-            )}
+            )} */}
+            {
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={SelectedProduct?.imageUrl}
+                  style={{ width: "50%", minHeight: "40vh" }}
+                />
+              </div>
+            }
+
             <div className="rotate-text">
               <div className="mobile-rotate-text">
                 Rotate the Object for Real Experience
@@ -167,6 +506,54 @@ export default function SingleProduct() {
               >
                 <div>
                   <div className="split-screen-carousel">
+                    <div
+                      className=""
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p className="skip">{""}</p>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "20px",
+                          userSelect: "none",
+                        }}
+                      >
+                        <div
+                          onClick={previousSlide}
+                          style={{
+                            width: "40px",
+                            height: "40px",
+                            cursor: "pointer",
+                          }}
+                        >
+                          <img
+                            src={prev}
+                            alt=""
+                            style={{ width: "100%", height: "100%" }}
+                          />
+                        </div>
+                        <div
+                          onClick={nextSlide}
+                          style={{
+                            width: "40px",
+                            height: "40px",
+                            cursor: "pointer",
+                          }}
+                        >
+                          <img
+                            src={next}
+                            alt=""
+                            style={{ width: "100%", height: "100%" }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="split">
                       <div className="image-area">
                         <img
@@ -193,7 +580,8 @@ export default function SingleProduct() {
                             }
                           </p>
                         </div>
-                        <div
+
+                        {/* <div
                           className=""
                           style={{
                             display: "flex",
@@ -239,7 +627,7 @@ export default function SingleProduct() {
                               />
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -247,22 +635,21 @@ export default function SingleProduct() {
                 {/* <div>varitaion</div> */}
               </div>
             )}
-
-            {/* <div className="full-desc">
+            <div className="full-desc">
               <div className="pro-title test-seclection-blue">
                 {SelectedProduct?.title}
               </div>
               <div className="prodesc test-seclection-blue">
-                {SelectedProduct?.des}
+                {SelectedProduct?.description}
               </div>
-            </div> */}
+            </div>
           </div>
           <>
             <div className="remaining-products-card-container-holder">
               <div className="single-other-service-title">Other Products</div>
               <div className="remaining-products-card-container">
-                {RemainigProducts?.map((eachPro, i) => {
-                  const ProductKey = eachPro?.title.split(" ").join("-");
+                {RemainingProducts?.map((eachPro, i) => {
+                  const ProductKey = eachPro?.id;
                   return (
                     <>
                       {i < 6 && (
@@ -316,5 +703,23 @@ export default function SingleProduct() {
       <Footer />
       <MobileFooter />
     </>
+    // <>
+    // <h1>Single Product</h1>
+    // </>
   );
 }
+
+
+
+// import React from 'react'
+// import Template5 from '../../Templets/Template5'
+
+// const SingleProduct = () => {
+//   return (
+//     <div>
+//       <Template5/>
+//     </div>
+//   )
+// }
+
+// export default SingleProduct
