@@ -231,6 +231,9 @@
 }
 .mobile-navigation-tabs {
   display: none;
+ 
+  
+
 }
 .mobile-navigation-tabs > div {
   padding: 10px 14px;
@@ -320,6 +323,7 @@
     top: 80px;
     z-index: 1;
     background: #fff;
+    transform: translateY(-100%);
   }
   .all-service-dept-title {
     display: none;

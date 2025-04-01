@@ -6,7 +6,7 @@
       "data": [
         {
           "id": "Case-Study-1",
-          "departmentSector": "Electronics Sector",
+          "department": "Electronics Sector",
           "title": "Mechanization and Precision Sowing-1",
           "backgroundImage": "/assets/singlepage-1.webp",
           "imageURL": "/assets/caseStudy-1.webp",
@@ -43,7 +43,7 @@
       "data": [
         {
           "id": "Case-Study-2",
-          "departmentSector": "Electronics Sector",
+          "department": "Electronics Sector",
           "title": "Mechanization and Precision Sowing-2",
           "backgroundImage": "/assets/singlepage-1.webp",
           "imageURL": "/assets/caseStudy-2.webp",
@@ -80,7 +80,7 @@
       "data": [
         {
           "id": "Case-Study-3",
-          "departmentSector": "Electronics Sector",
+          "department": "Electronics Sector",
           "title": "Mechanization and Precision Sowing-3",
           "backgroundImage": "/assets/singlepage-1.webp",
           "imageURL": "/assets/caseStudy-3.webp",

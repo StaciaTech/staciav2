@@ -93,7 +93,9 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/articles.css";
+import ReUsableArticlePage from "../components/ReUsableComp/ReUsableArticlePage";
 import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
+
 import MobileFooter from "../components/MobileFooter";
 import SideBar from "../components/SideBar";
 import Star from "../components/Star";
@@ -146,7 +148,8 @@ function ArticlesPage() {
         ))}
       </div>
       <div>
-        <ReUsableArticle data={articleObj?.data} path={"single-article"} />
+        {/* <ReUsableArticle data={articleObj?.data} path={"single-article"} /> */}
+        <ReUsableArticlePage data={articleObj?.data} path={"single-article"} />
       </div>
       <Footer /> <MobileFooter />
     </div>
