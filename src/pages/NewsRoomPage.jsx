@@ -9,7 +9,7 @@ import axios from "axios";
 import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
 import { el } from "intl-tel-input/i18n";
 import { IoIosArrowForward } from "react-icons/io";
-import stacia from "../assets/chililanding.png";
+import stacia from "../assets/newsroom.png";
 
 import { useNavigate } from "react-router-dom";
 
@@ -123,15 +123,12 @@ function NewsRoomPage() {
               <img src={stacia} alt="" />
             </div>
             <div className="news-container-top1">
-              <div className="news-container-top2">qewrgytuyhtgfdsdfghjhgfdsdfghjhgfdsdfghj</div>
+              <div className="news-container-top2"><h1>Lorem ipsum dolor sit amet, consectetur elit.</h1></div>
               <div className="news-container-top3">Read more <IoIosArrowForward /></div>
 
             </div>
           </div>
-          <div>
-            <img src="" />
-
-          </div>
+          
           <div>
             {CarouselArr.map((eachItem, i) => {
               return <div></div>;

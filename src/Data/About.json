@@ -119,58 +119,49 @@
  
   "staciaHistory": [
     {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet.",
+      "description": "With a burning desire to shape our country with unparalleled Research and Development, we established our company to pioneer groundbreaking technological advancements",
       "id": "67344ec833378f0bfe66253a",
       "imageUrl": "/assets/Resilience in Motion.webp",
       "isAchievement": false,
-      "title": "Resilience in Motion",
-      "year": 2019,
+      "title": "Our Journey Starts",
+      "year":"Sept 2019",
       "_id": "67344ec833378f0bfe66253a"
     },
     {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet.",
+      "description": "Our first major milestone was achieved with MSME certification. This opens up new opportunities for growth and development.",
       "id": "673450557a970b308b574ea1",
       "imageUrl": "/assets/Resilience in Motion.webp",
       "isAchievement": false,
-      "title": "Resilience in Motion",
-      "year": 2020,
+      "title": "MSME Recognition ",
+      "year": "May 2020",
       "_id": "673450557a970b308b574ea1"
     },
     {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet.",
+      "description": "We successfully commenced our operations in July 2020. This marked a significant achievement for our company.",
       "id": "6734505a7a970b308b574ea2",
       "imageUrl": "/assets/Resilience in Motion.webp",
       "isAchievement": false,
-      "title": "Resilience in Motion",
-      "year": 2021,
+      "title": "Operations initiation",
+      "year":  "Jul 2020",
       "_id": "6734505a7a970b308b574ea2"
     },
     {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet.",
+      "description": "Startup india certification recognized by DPIIT in July 2020",
       "id": "673450607a970b308b574ea3",
       "imageUrl": "/assets/Resilience in Motion.webp",
       "isAchievement": true,
-      "title": "Resilience in Motion",
-      "year": 2022,
+      "title": "Startup India Certification",
+      "year": "Jul 2020",
       "_id": "673450607a970b308b574ea3"
     },
     {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet.",
+      "description": "Our Notable innovation Onedril kicked off in August 2020, which was a significant achievement by our team.",
       "id": "673450667a970b308b574ea4",
       "imageUrl": "/assets/Resilience in Motion.webp",
       "isAchievement": false,
-      "title": "Resilience in Motion",
-      "year": 2023,
+      "title": "Commencement of OneDril",
+      "year": "Aug 2020",
       "_id": "673450667a970b308b574ea4"
-    },
-    {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet.",
-      "id": "6734506c7a970b308b574ea5",
-      "imageUrl": "/assets/Resilience in Motion.webp",
-      "isAchievement": false,
-      "title": "Resilience in Motion",
-      "year": 2024,
-      "_id": "6734506c7a970b308b574ea5"
     }
   ],
   "teamData": [
