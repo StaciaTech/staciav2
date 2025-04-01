@@ -59,8 +59,8 @@ const Template3 = () => {
         <div>
           <div className="head-temp-style">{project?.product?.title}</div>
           {project?.product?.description?.map((para, index) => (
-            <p className="para-temp-styles" key={index}>{para}</p>
-          ))}
+              <p className="para-temp-styles temp-margin"key={index}>{para}</p>
+            ))}
         </div>
         <div className="temp3-sec1-title">
           <p>
@@ -79,20 +79,20 @@ const Template3 = () => {
         </div>
         <div>
           <div className="head-temp-style">{project?.Approach?.title}</div>
-          <p className="para-temp-styles para-content">
-            {project?.Approach?.content}
+          <p className="para-temp-styles temp-margin">
+          {project?.Approach?.content}
           </p>
         </div>
-        <ul className="para-temp-styles">
-          {project?.Approach?.points?.map((para, index) => (
-            <li key={index}>{para}</li>
-          ))}
-        </ul>
+        <ul className="temp2-points">
+              {project?.Approach?.points?.map((para, index) => (
+                <li className="para-temp-styles" key={index}>{para}</li>
+              ))}
+          </ul>
         <div>
           <div className="head-temp-style">{project?.Result?.title}</div>
           {project?.Result?.content?.map((para, index) => (
-            <p className="para-temp-styles para-content" key={index}>{para}</p>
-          ))}
+              <p className="para-temp-styles temp-margin"key={index}>{para}</p>
+            ))}
         </div>
         <div className="temp3-sec1-title">
           <p>
@@ -111,20 +111,20 @@ const Template3 = () => {
         </div>
         <div>
           <div className="head-temp-style">{project?.Approach1?.title}</div>
-          <p className="para-temp-styles para-content">
-            {project?.Approach1?.content}
+          <p className="para-temp-styles temp-margin">
+          {project?.Approach1?.content}
           </p>
         </div>
-        <ul className="para-temp-styles">
-          {project?.Approach1?.points?.map((para, index) => (
-            <li key={index}>{para}</li>
-          ))}
-        </ul>
+        <ul className="temp2-points">
+              {project?.Approach1?.points?.map((para, index) => (
+                <li className="para-temp-styles" key={index}>{para}</li>
+              ))}
+          </ul>
         <div>
           <div className="head-temp-style">{project?.Result1?.title}</div>
           {project?.Result1?.content?.map((para, index) => (
-            <p className="para-temp-styles para-content" key={index}>{para}</p>
-          ))}
+              <p className="para-temp-styles temp-margin"key={index}>{para}</p>
+            ))}
         </div>
         <div className="temp3-sec1-title">
           <p>
@@ -135,19 +135,15 @@ const Template3 = () => {
         <p className="designation">{project?.testimonial3?.designation}</p>
         <div>
           <div className="head-temp-style">{project?.solution?.title}</div>
-          <p className="para-temp-styles para-content">
+          <p className="para-temp-styles temp-margin">
             {project?.solution?.content}
           </p>
         </div>
-        <ul className="para-temp-styles">
-          {project?.solution?.points?.map((para, index) => (
-            <li key={index}>{para}</li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <Footer />
-        <MobileFooter />
+        <ul className="temp2-points">
+              {project?.solution?.points?.map((para, index) => (
+                <li className="para-temp-styles" key={index}>{para}</li>
+              ))}
+          </ul>
       </div>
     </div>
   );

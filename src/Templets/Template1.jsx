@@ -65,19 +65,19 @@ function Template1() {
         </div>
         <div>
           <div className="head-temp-style">{project?.product?.title}</div>
-          <p className="para-temp-styles">{project?.product?.description}</p>
+          <p className="para-temp-styles temp-margin">{project?.product?.description}</p>
           <div className="head-temp1-style">{project?.product?.subTitle}</div>
           <p className="para-temp-styles">{project?.product?.subDescription}</p>
           <div className="Problem-solution-temp-style">
             <div className="head-temp-style">{project?.problem?.title}</div>
             <p className="para-temp-styles">{project?.problem?.description}</p>
-            <ul className="para-temp-styles">
+            <ul className="temp2-points">
               {project?.problem?.points?.map((para, index) => (
-                <li key={index}>{para}</li>
+                <li className="para-temp-styles" key={index}>{para}</li>
               ))}
             </ul>
             {project?.problem?.subDescription?.map((para, index) => (
-              <p className="para-temp-styles" key={index}>{para}</p>
+              <p className="para-temp-styles temp-margin"key={index}>{para}</p>
             ))}
           </div>
           <div className="Problem-solution-temp-style">
@@ -85,13 +85,13 @@ function Template1() {
             <p className="para-temp-styles">
               {project?.solution?.description}
             </p>
-            <ul className="para-temp-styles">
+            <ul className="temp2-points">
               {project?.solution?.points?.map((para, index) => (
-                <li key={index}>{para}</li>
+                <li className="para-temp-styles" key={index}>{para}</li>
               ))}
             </ul>
           </div>
-          <p className="para-temp-styles">
+          <p className="para-temp-styles temp-margin">
             {project?.solution?.subDescription}
           </p>
           <hr />
@@ -101,19 +101,19 @@ function Template1() {
               <div className="temp1-sec3-subtitle">
                 {project?.staciaHelp?.subtitle}
               </div>
-              <p className="para-temp-styles">
+              <p className="para-temp-styles temp-margin">
                 {project?.staciaHelp?.description}
               </p>
             </div>
           </div>
-          <p className="para-temp-styles">
+          <p className="para-temp-styles temp-margin">
             {project?.staciaHelp?.subDescription}
           </p>
-          <ul className="para-temp-styles">
-            {project?.staciaHelp?.points?.map((para, index) => (
-              <li key={index}>{para}</li>
-            ))}
-          </ul>
+          <ul className="temp2-points">
+              {project?.staciaHelp?.points?.map((para, index) => (
+                <li className="para-temp-styles" key={index}>{para}</li>
+              ))}
+            </ul>
         </div>
       </div>
       <div>

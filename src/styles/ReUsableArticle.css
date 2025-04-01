@@ -26,6 +26,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 1rem 0 1rem 0;
   font-size: 1.25rem;
 }
 .reusable-art-content-container {
@@ -50,7 +51,13 @@
   border-radius: 1rem;
   overflow: hidden;
 }
- /* know more */
+.all-know-more {
+  display: flex;
+  align-items: center;
+
+}
+
+/* know more */
 /* 
  .reusable-art-img-container {
   position: relative;
@@ -91,11 +98,6 @@
 
  /* dyamic css */
  
-/* .all-know-more {
-  display: flex;
-  align-items: center;
-
-} */
 
 @media screen and (max-width: 1024px) {
   .reusable-art-container {
