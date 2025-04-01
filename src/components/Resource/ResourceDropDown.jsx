@@ -448,7 +448,9 @@ import React, { useEffect, useState } from "react";
 import "../../styles/ResourceDropDown.css";
 import Star from "../../assets/loadingStar.svg";
 import { useNavigate } from "react-router-dom";
-import pk from "../../Data/SingleCaseStudy.json";
+import casedoc from "../../Data/SingleCaseStudy.json";
+import artical from '../../Data/Articles.json'
+
 
 function ResourceDropDown({ handleClose }) {
   const navigate = useNavigate();
@@ -458,7 +460,8 @@ function ResourceDropDown({ handleClose }) {
   const [caseStudyData, setCaseStudyData] = useState([]);
 
   useEffect(() => {
-    setCaseStudyData(pk?.singlecasestudy || []);
+    setCaseStudyData(casedoc?.singlecasestudy || []);
+    setArticlesData(artical?.docs || []);
   }, []);
 
   const ResourceArr = [

@@ -38,7 +38,7 @@ function SingleArticleCard() {
 }
 function Articles() {
   return (
-    <div style={{ marginBottom: "8rem" }}>
+    <div>
       <div className="articles-title">Articles</div>
       <div className="article-slider">
         {/* <Marquee

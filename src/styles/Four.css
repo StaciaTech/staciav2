@@ -21,6 +21,7 @@
 .four-card {
   /* width: 23%; */
   margin-top: 40px;
+  cursor: pointer;
 }
 
 .four-img {
@@ -50,6 +51,7 @@
   font-weight: 400;
   line-height: normal;
   margin-bottom: 1rem;
+
 }
 
 .four-name {
@@ -59,6 +61,7 @@
   font-weight: 600;
   line-height: normal;
   padding: 2rem 0rem 1rem 0rem;
+  
 }
 
 .four-para > p {

@@ -11,7 +11,7 @@ const fourData = [
     id: 1,
     pos: "Founder Partner, CEO",
     img: p1,
-    name: "Sarabesh Sriram",
+    name: "Sarabesh Sriram ",
     about: `Founder of Stacia Corp, Sastem Global, and Stacia Tech. Expert in mechanical engineering and data science, leading innovations in agriculture and smart homes. His "OneDril" machine revolutionized farming and earned government recognition.`,
     proId: "https://www.linkedin.com/in/sarabeshsriram/",
   },
@@ -44,14 +44,14 @@ const fourData = [
   },
 ];
 
-export default function Four() {
+export default function Four(data,path) {
   return (
     <div className="four">
       <div className="four2">
         <div className="four-text test-seclection-blue">Management Team</div>
         <div className="four-grid">
           {fourData.map((data, i) => (
-            <FourCard data={data} key={i} />
+            <FourCard data={data} path={"about/leader"} key={i} />
           ))}
         </div>
       </div>

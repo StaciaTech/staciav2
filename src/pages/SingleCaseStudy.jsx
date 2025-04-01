@@ -481,6 +481,7 @@ import data from "../Data/SingleCaseStudy.json";
 import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
 import RelatedCaseStudy from "../components/CaseStudy/RelatedCaseStudy";
 
+
 function SingleCaseStudy() {
   const [caseStudy, setCaseStudy] = useState(null);
   const { id } = useParams();

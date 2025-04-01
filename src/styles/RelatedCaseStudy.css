@@ -32,6 +32,13 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
+/* .case-study-card >cursor{
+   border-radius: 50%;
+   width: 10%;
+   height: 10%;
+   background-color: #210fe0;
+
+} */
 
 .case-study-card:hover {
   transform: translateY(-5px);

@@ -50,6 +50,7 @@
   border-radius: 0.5rem;
   transition: all 0.3s;
   min-width: fit-content;
+ 
 }
 .article-item-tab.article-item-tab-active {
   color: #0047ff;
