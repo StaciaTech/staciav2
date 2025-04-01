@@ -326,7 +326,7 @@ import data from "../../Data/ProductPage.json";
 export default function SingleProduct() {
   const navigateTo = useNavigate();
   const params = useParams();
-  console.log(params,"params")
+  // console.log(params,"params")
 
   // console.log(params.department,"paramsDepartment");
 
@@ -351,28 +351,28 @@ export default function SingleProduct() {
     setProductData(data.department)
   }, []);
 
-  // console.log(productData, "ProductData");
+  console.log(productData, "ProductData");
 
   const FoundDep = productData.find((eachDep) => {
-    return eachDep.id === params.department;
+    return eachDep.name === params.department;
   });
   console.log(FoundDep, "Department");
 
   const FoundCat = FoundDep?.category.find((eachCat) => {
-    return eachCat.id === params.category;
+    return eachCat.name.split(" ").join("-") === params.category;
   });
   console.log(FoundCat, "Category");
 
-  const CatogeryKey = FoundCat?.id
-  console.log(CatogeryKey, "CatogeryKey");
+  const CatogeryKey = FoundCat?.name.split(" ").join("-")
+  // console.log(CatogeryKey, "CatogeryKey");
 
   const proData = FoundCat?.products;
-  console.log(proData, "Moses**ProdData");
+  // console.log(proData, "Moses**ProdData");
 
   const product = proData?.find(
-    (eachPro) => eachPro.id === params.id
+    (eachPro) => eachPro?.title?.split(" ").join("-") === params.id
     );
-  console.log(product, "Product");
+  // console.log(product, "Product");
 
   const [SelectedProduct, setSelectedProduct] = useState({});
 
@@ -402,10 +402,10 @@ export default function SingleProduct() {
   //   (eachProduct) => eachProduct.title !== productKey
   // );
 
-  // const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.title.split(" ").join("-") !== params.id)
-  const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.id !== params.id)
+  const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro?.title?.split(" ").join("-") !== params.id)
+  // const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.title.split() !== params.id)
  
-  console.log(RemainingProducts, "Remaining Products");
+  // console.log(RemainingProducts, "Remaining Products");
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -484,7 +484,7 @@ export default function SingleProduct() {
               >
                 <img
                   src={SelectedProduct?.imageUrl}
-                  style={{ width: "50%", minHeight: "40vh" }}
+                  style={{ width: "40%", minHeight: "40vh",padding:"25px" }}
                 />
               </div>
             }
@@ -499,7 +499,7 @@ export default function SingleProduct() {
                 style={{
                   minHeight: "100vh",
                   width: "100%",
-                  // display: "flex",
+                  display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
@@ -649,7 +649,7 @@ export default function SingleProduct() {
               <div className="single-other-service-title">Other Products</div>
               <div className="remaining-products-card-container">
                 {RemainingProducts?.map((eachPro, i) => {
-                  const ProductKey = eachPro?.id;
+                  const ProductKey = eachPro?.title?.split(" ").join("-");
                   return (
                     <>
                       {i < 6 && (

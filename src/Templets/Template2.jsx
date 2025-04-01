@@ -4,8 +4,7 @@ import Star from "../components/Star";
 import "../styles/Templet.css";
 // import Engine2 from "../assets/Engine2.webp";
 import Data from "../Data//Templates.json";
-import Footer from "../components/Footer";
-import MobileFooter from "../components/MobileFooter";
+
 
 function Template2() {
   const { title } = useParams();
@@ -40,7 +39,9 @@ function Template2() {
         <div className="temp2-heading-content">
           <div className="temp2-head">
             <div className="temp2-title1">{project?.heading?.title}</div>
-            <div className="temp2-content1">Goal: <span>{project?.heading?.topic}</span></div>
+            <div className="temp2-content1">
+              Goal: <span>{project?.heading?.topic}</span>
+            </div>
           </div>
           <div>
             <div className="temp2-title1">{project?.industry?.title}</div>
@@ -56,10 +57,7 @@ function Template2() {
           </div>
           <div className="temp2-section1-container">
             <div className="temp2-section1-img">
-              <img
-                src={project?.industry?.image}
-                alt="Engine"
-              />
+              <img src={project?.industry?.image} alt="Engine" />
             </div>
           </div>
         </div>
@@ -77,28 +75,36 @@ function Template2() {
         <div>
           <div className="head2-temp-style">{project?.midContent?.title}</div>
           {project?.midContent?.para?.map((para, index) => (
-            <p className="para-temp-styles" key={index}>{para}</p>
+            <p className="para-temp-styles temp-margin" key={index}>
+              {para}
+            </p>
           ))}
         </div>
         <div className="Problem-solution-temp-style">
           <div className="head-temp-style">{project?.problem?.title}</div>
           <p className="para-temp-styles">{project?.problem?.description}</p>
-          <ul className="para-temp-styles">
+          <ul className="temp2-points">
             {project?.problem?.points?.map((para, index) => (
-              <li key={index}>{para}</li>
+              <li className="para-temp-styles" key={index}>
+                {para}
+              </li>
             ))}
           </ul>
         </div>
         <div className="Problem-solution-temp-style">
           <div className="head-temp-style">{project?.solution?.title}</div>
           <p className="para-temp-styles">{project?.solution?.description}</p>
-          <ul className="para-temp-styles">
+          <ul className="temp2-points">
             {project?.solution?.points?.map((para, index) => (
-              <li key={index}>{para}</li>
+              <li className="para-temp-styles" key={index}>
+                {para}
+              </li>
             ))}
           </ul>
           {project?.solution?.subDescription?.map((para, index) => (
-            <p className="para-temp-styles" key={index}>{para}</p>
+            <p className="para-temp-styles temp-margin" key={index}>
+              {para}
+            </p>
           ))}
         </div>
         <hr />
@@ -108,7 +114,7 @@ function Template2() {
             <div className="temp1-sec3-subtitle">
               {project?.staciaHelp?.subtitle}
             </div>
-            <p className="para-temp-styles">
+            <p className="para-temp-styles temp-margin">
               {project?.staciaHelp?.description}
             </p>
           </div>
@@ -116,15 +122,13 @@ function Template2() {
         <p className="para-temp-styles">
           {project?.staciaHelp?.subDescription}
         </p>
-        <ul className="para-temp-styles">
+        <ul className="temp2-points">
           {project?.staciaHelp?.points?.map((para, index) => (
-            <li key={index}>{para}</li>
+            <li className="para-temp-styles" key={index}>
+              {para}
+            </li>
           ))}
         </ul>
-      </div>
-      <div>
-        <Footer />
-        <MobileFooter />
       </div>
     </div>
   );

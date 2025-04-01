@@ -321,14 +321,6 @@ function MediaKit() {
             <Star />
           </div>
         </div>
-        {/* <Templet1 /> */}
-        {/* <Templet2 /> */}
-        {/* <Templet3 /> */}
-        {/* <ProjectDropdown /> */}
-        {/* <Templet4 /> */}
-        {/* <NpcArticle /> */}
-        {/* <ChiililadlingArticle /> */}
-        {/* <IsmartArticle /> */}
         <div className="media-container">
           <div style={{ borderBottom: "1px solid #e5e5e5" }}>
             <div className="media-section-heading">Logos</div>

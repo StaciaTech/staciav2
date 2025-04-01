@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTransform, motion } from "framer-motion";
+// import data from "../../Data/Home.json"
 function StackCard({
   eachHomeProduct,
   i,
@@ -13,9 +14,16 @@ function StackCard({
   const scale = useTransform(progress, range, [1, targetScale]);
   const topPosition = `calc(100% - 90% + ${40 * i}px)`;
 
+  // const depKey = 
+ 
+  const depKey = eachHomeProduct.depName.split(" ").join("-");
   const productKey = eachHomeProduct.title.split(" ").join("-");
+  const CategoryKey = eachHomeProduct.catName.split(" ").join("-");
 
-  const CategoryKey = eachHomeProduct.domainName.split(" ").join("-");
+  // const productKey = eachHomeProduct.title.split(" ").join("-");
+
+  // const CategoryKey = eachHomeProduct.domainName.split(" ").join("-");
+  
 
   
   return (
@@ -68,7 +76,9 @@ function StackCard({
           <div
             className="learn-more"
             onClick={() => {
-              navigateTo(`/products/department/${CategoryKey}/${productKey}`);
+              // navigateTo(`/products/department/${CategoryKey}/${productKey}`);
+              navigateTo(`/products/${depKey}/${CategoryKey}/${productKey}`);
+
               window.scrollTo(0, 0);
             }}
             style={{ cursor: "pointer" }}

@@ -224,8 +224,11 @@ const productBg = [
 function ProductPage() {
   const params = useParams();
   const depKey = params.department
+  console.log(depKey, "DepartmentKey")
   const categoryKey = params.category
+  console.log(categoryKey, "CategoryKey")
   const productKey = params.id
+  console.log(productKey,"ProductKey")
   // const apiUrl = process.env.REACT_APP_API_URL;
 
   const [productData, setProductData] = useState();
@@ -240,20 +243,20 @@ function ProductPage() {
 
   useEffect(() => {
     // FetchProducts();
-    setProductData(data.department)
+    setProductData(data.department || [])
   }, []);
 
   // console.log(productData, "ProductPage**Data")
 
     const FoundDept = productData?.find(
-      (eachItem)=>eachItem.id === params.department 
+      (eachItem)=>eachItem.name === params.department.split("-").join(" ") 
       )
       console.log(FoundDept,"Department");
     
     const FoundCat = FoundDept?.category.find(
-      (eachItem)=> eachItem.id === params.category)
+      (eachItem)=> eachItem.name === params.category.split("-").join(" "))
 
-      console.log(FoundCat,"Category");
+      console.log(FoundCat ,"Category");
 
     const proData = FoundCat?.products;
     console.log(proData,"ProData")
@@ -288,9 +291,10 @@ function ProductPage() {
                 </div>
               </div>
               <div className="mob-hidden">
-                {proData?.map((eachPro, index) => { 
+                {proData?.map((eachPro, index) => {  
                   const wordArr = eachPro?.title.split(" ");
-                  return (
+                  console.log(wordArr,"WordArr")
+                  return (  
                     <div
                       style={{
                         zIndex: "1",
@@ -303,7 +307,7 @@ function ProductPage() {
                       <ProductComponent2
                         bigText1={wordArr[0]}
                         product={eachPro}
-                        productName={eachPro?.title}
+                        productName={eachPro?.name}
                         productImg={eachPro?.imageUrl}
                         bigText2={wordArr[1] || wordArr[0]}
                         FoundCat={FoundCat}

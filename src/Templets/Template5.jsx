@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data/Templates.json";
-import Footer from "../components/Footer";
-import MobileFooter from "../components/MobileFooter";
+
 
 function Template5() {
   const { title } = useParams(); // Get title from URL
@@ -62,7 +61,7 @@ function Template5() {
             <div className="temp5-sec1-content">
               <div>{project?.section1?.summaryHeading}</div>
               {project?.section1?.executiveSummary?.map((para, index) => (
-                <p key={index}>{para}</p>
+                <p className="para-temp-styles temp-margin" key={index}>{para}</p>
               ))}
             </div>
             <div className="temp5-sec1-img">
@@ -73,7 +72,7 @@ function Template5() {
         <div>
           <div className="head-temp-style">{project?.section2?.heading}</div>
           {project?.section2?.paragraphs?.map((para, index) => (
-            <p className="para-temp-styles" key={index}>
+            <p className="para-temp-styles temp-margin" key={index}>
               {para}
             </p>
           ))}
@@ -87,14 +86,14 @@ function Template5() {
             </div>
           ))}
           {project?.section3?.midSection?.map((item, index) => (
-            <p className="para-temp-styles" key={index}>
+            <p className="para-temp-styles temp-margin" key={index}>
               {item.para}
             </p>
           ))}
           <div className="temp5-sec4-container">
             <div className="temp5-sec3-container">
               <div>
-                <p className="para-temp-styles">{project?.section4?.content}</p>
+                <p className="para-temp-styles temp-margin">{project?.section4?.content}</p>
               </div>
               <div className="temp5-sec4-mid">
                 <hr />
@@ -114,7 +113,7 @@ function Template5() {
           </div>
           {project?.section5 && (
             <>
-              <p className="para-temp-styles">{project?.section5?.content}</p>
+              <p className="para-temp-styles temp-margin">{project?.section5?.content}</p>
               <div className="temp5-sec4-container">
                 <div className="temp5-sec4-title">{project?.section5?.title}</div>
                 <div className="temp5-sec3-container">
@@ -125,7 +124,7 @@ function Template5() {
                     <div className="temp5-sec3-subtitle">
                       {project?.section5?.subsection?.title}
                     </div>
-                    <p className="para-temp-styles">
+                    <p className="para-temp-styles temp-margin">
                       {project?.section5?.subsection?.description}
                     </p>
                   </div>
@@ -134,16 +133,13 @@ function Template5() {
             </>
           )}
           {project?.conclusion?.map((item, index) => (
-            <p className="para-temp-styles" key={index}>
+            <p className="para-temp-styles temp-margin" key={index}>
               {item.para}
             </p>
           ))}
         </div>
       </div>
-      <div>
-        <Footer />
-        <MobileFooter />
-      </div>
+      
     </div>
   );
 }

@@ -9,13 +9,15 @@ import Template3 from "../Templets/Template3";
 import Template4 from "../Templets/Template4";
 import Template5 from "../Templets/Template5";
 import { useLocation } from "react-router-dom";
-import templatesData from "../Data/Templates.json"
+import templatesData from "../Data/Templates.json";
+import ProjectsData from "../Data/ProjectsData.json"
 
 function SingleProject() {
     const location = useLocation();
     const pathSegments = location.pathname.split("/");
     const projectTitle = pathSegments[pathSegments.length - 1]; // Extract and decode project title
     const [projectData, setProjectData] = useState(null);
+    // const [relatedProjects, setRelatedProjects] = useState(null);
   
     // Templates Object
     const templates = {
