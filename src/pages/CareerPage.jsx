@@ -32,28 +32,28 @@ import careersData from "../Data/Career.json";
 const HiringData = [
   {
     image: CareerSvg1,
-    title: "Resume Review",
-    des: "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+    title: "Resume Screening",
+    des: "The first step in our hiring process is reviewing resumes to assess candidates' qualifications, experience, and relevance to the job role. Our HR team evaluates key aspects such as educational background, work experience, technical skills, and achievements. Candidates who meet the required criteria are shortlisted for the next stage.",
   },
   {
     image: CareerSvg2,
-    title: "Calling you",
-    des: "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+    title: "Telephonic Interview",
+    des: "Shortlisted candidates are contacted for a brief telephonic interview. This step helps us understand the candidate’s communication skills, career aspirations, and initial fit for the role. Basic technical and role-specific questions may be asked to gauge their familiarity with the job requirements.",
   },
   {
     image: CareerSvg3,
-    title: "Testing Skills",
-    des: "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+    title: "Technical Interview",
+    des: "Candidates who clear the telephonic round proceed to the technical interview. This stage is conducted by subject matter experts or hiring managers to assess the candidate’s problem-solving abilities, domain knowledge, and hands-on experience. Depending on the role, this interview may include:",
   },
   {
     image: CareerSvg4,
-    title: "Interview",
-    des: "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+    title: "Assignment Round",
+    des: "For certain roles, candidates are given a practical assignment or project to complete within a specified timeframe. This allows us to evaluate their ability to apply theoretical knowledge to real-world problems, their approach to problem-solving, and their efficiency in execution. The assignment is reviewed by the hiring team to determine the candidate’s technical proficiency and creativity",
   },
   {
     image: CareerSvg5,
     title: "Onbording",
-    des: "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+    des: "Once a candidate successfully clears all interview stages, they receive an offer letter and begin the onboarding process. This includes: 1) Document verification and completion of necessary formalities, 2) Introduction to company policies, teams, and work environment, 3) Training sessions (if applicable), 4) Allocation of necessary resources and tools for their role",
   },
 ];
 gsap.registerPlugin(ScrollTrigger);
