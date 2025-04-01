@@ -154,10 +154,10 @@ function CareerComponent({
             })}
           </>
           <div
-            className="career-apply"
-            onClick={() => {
-              setShowApplication(true);
-            }}
+            // className="career-apply"
+            // onClick={() => {
+            //   setShowApplication(true);
+            // }}
           >
             Apply
           </div>

@@ -2,27 +2,29 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
+import Footer from "../components/Footer";
+import MobileFooter from "../components/MobileFooter";
 import Data from "../Data//Templates.json";
 
 function Template1() {
-    const { title } = useParams(); // Get title from URL
-    const [project, setProject] = useState(null);
-  
-    useEffect(() => {
-      // Find the project that matches the URL title
-      const matchedProject = Data.projects.find(
-        (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
-      );
-  
-      if (matchedProject) {
-        setProject(matchedProject);
-      }
-    }, [title]);
-  
-    if (!project) {
-      return <div>Loading...</div>;
+  const { title } = useParams(); // Get title from URL
+  const [project, setProject] = useState(null);
+
+  useEffect(() => {
+    // Find the project that matches the URL title
+    const matchedProject = Data.projects.find(
+      (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
+    );
+
+    if (matchedProject) {
+      setProject(matchedProject);
     }
-  
+  }, [title]);
+
+  if (!project) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div>
       <div className="temp5-project_container">
@@ -75,7 +77,7 @@ function Template1() {
               ))}
             </ul>
             {project?.problem?.subDescription?.map((para, index) => (
-              <p className="para-temp-styles"key={index}>{para}</p>
+              <p className="para-temp-styles" key={index}>{para}</p>
             ))}
           </div>
           <div className="Problem-solution-temp-style">
@@ -108,11 +110,15 @@ function Template1() {
             {project?.staciaHelp?.subDescription}
           </p>
           <ul className="para-temp-styles">
-              {project?.staciaHelp?.points?.map((para, index) => (
-                <li key={index}>{para}</li>
-              ))}
-            </ul>
+            {project?.staciaHelp?.points?.map((para, index) => (
+              <li key={index}>{para}</li>
+            ))}
+          </ul>
         </div>
+      </div>
+      <div>
+        <Footer />
+        <MobileFooter />
       </div>
     </div>
   );

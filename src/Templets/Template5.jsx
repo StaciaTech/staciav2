@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data/Templates.json";
+import Footer from "../components/Footer";
+import MobileFooter from "../components/MobileFooter";
 
 function Template5() {
   const { title } = useParams(); // Get title from URL
@@ -137,6 +139,10 @@ function Template5() {
             </p>
           ))}
         </div>
+      </div>
+      <div>
+        <Footer />
+        <MobileFooter />
       </div>
     </div>
   );
