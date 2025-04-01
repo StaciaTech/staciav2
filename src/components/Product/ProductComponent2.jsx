@@ -105,14 +105,13 @@ export default function ProductComponent2({
 
    const params = useParams();
 
-    const departmentKey = FoundDept.id;
+    const departmentKey = FoundDept.name.split(" ").join("-");
     console.log(departmentKey,"departmentKey");    
 
-   const categoryKey = FoundCat.id
+   const categoryKey = FoundCat.name.split(" ").join("-")
    console.log(categoryKey, "CategoryKey");
 
-
-  const productKey = product.id
+  const productKey = product.title.split(" ").join("-")
   console.log(productKey, "productKey")
   
 

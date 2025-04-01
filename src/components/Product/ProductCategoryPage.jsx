@@ -380,7 +380,7 @@ function ProductCategoryPage() {
 
   const FetchProducts = () => {
     try {
-      setProductData(data.department);
+      setProductData(data.department || []);
     } catch (error) {
       console.log(error);
     }
@@ -460,19 +460,15 @@ function ProductCategoryPage() {
                             key={i}
                             onClick={() => {
                               window.scrollTo(0, 0);
-                              const deptKey = eachItem.id
-                                .split(" ")
-                                .join("-");
-                              const catKey = eachCat.id
-                              const productKey = eachPro.id
-                                .split(" ")
-                                .join("-");
+                              const deptKey = eachItem?.name.split(" ").join("-");
+                              const catKey = eachCat?.name.split(" ").join("-");
+                              const productKey = eachPro?.title.split(" ").join("-");
                               navigate(
-                                `/products/${deptKey}/${catKey}/${productKey}`
+                                `/products/${deptKey}/${catKey}/${productKey}` 
                               );
                             }}
                           >
-                            {eachPro.title}
+                            {eachPro.title} 
                           </div>
                         ))}
                       </div>
@@ -482,10 +478,10 @@ function ProductCategoryPage() {
                         onClick={() => {
                           window.scrollTo(0, 0);
                           // const deptKey = eachItem.name.split(" ").join("-");
-                          const deptKey = eachItem.id;
+                          const deptKey = eachItem?.name;
 
                           // const catKey = eachCat.name.split(" ").join("-");
-                          const catKey = eachCat.id;
+                          const catKey = eachCat?.name.split(" ").join("-");
                           navigate(`/products/${deptKey}/${catKey}`);
                         }}
                       >
@@ -503,11 +499,11 @@ function ProductCategoryPage() {
                     onMouseLeave={() => setCursorVisible(false)}
                     onClick={() => {
                       window.scrollTo(0, 0);
-                      // const deptKey = eachItem.name.split(" ").join("-");
-                      const deptKey = eachItem.id
+                      const deptKey = eachItem.name.split(" ").join("-");
+                      // const deptKey = eachItem.id
 
-                      // const catKey = eachCat.name.split(" ").join("-");
-                      const catKey = eachCat.id
+                      const catKey = eachCat.name.split(" ").join("-");
+                      // const catKey = eachCat.id
 
                       navigate(`/products/${deptKey}/${catKey}`);
                     }}
