@@ -507,6 +507,7 @@ function SingleCaseStudy() {
     });
 
     console.log("Selected Case Study:", selectedCaseStudy);
+//filter realted casestudy
 
     if (selectedCaseStudy) {
       setCaseStudy(selectedCaseStudy);

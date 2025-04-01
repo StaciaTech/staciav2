@@ -3,9 +3,24 @@
   /* min-height: 100vh; */
 }
 
+
 .home-case-study2 {
   width: 90%;
   margin: 4rem auto;
+}
+.image-box-full1{
+  display: flex; 
+  width: 100%;
+  gap: 2rem;
+}
+.image-box-left{
+  width: 40%;  
+}
+.image-box-right{
+  width: 40px;
+}
+.row-span{
+    grid-row: span 2;
 }
 
 .case-study-title {
@@ -30,16 +45,16 @@
     border-radius: 30px;
 }
 
-.row-span{
+/* .row-span{
     grid-row: span 2;
-}
+} */
 
 .col-span{
     grid-column: span 2;
 } */
 
 .image-box-full {
-  width: 100%;
+  width: 10%;
   height: 100%;
   display: flex;
   gap: 20px;
@@ -52,18 +67,18 @@
   width: 50%;
   /* background-color: pink; */
   max-height: 100%;
-  background-image: url("../assets/case1.png");
+
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 30px;
   
 }
 
-/* .image-box-left > img{
+.image-box-left > img{
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-} */
+}
 
 .image-box-right {
   width: 50%;

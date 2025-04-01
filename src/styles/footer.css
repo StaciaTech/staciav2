@@ -131,7 +131,7 @@
 }
 
 .start-conversation {
-  color: #6b6084;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
