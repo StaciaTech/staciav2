@@ -42,12 +42,12 @@ function Template4() {
       </div>
       <div className="temp5-content-container">
         <div>
-          <div className="temp5-sec1-title">L{project?.section1?.title}</div>
+          <div className="temp5-sec1-title">{project?.section1?.title}</div>
           <div className="temp5-sec1-container">
             <div className="temp5-sec1-content">
               <div>{project?.section1?.summaryHeading}</div>
               {project?.section1?.executiveSummary?.map((para, index) => (
-                <p key={index}>{para}</p>
+                <p className="para-temp-styels temp-margin" key={index}>{para}</p>
               ))}
             </div>
             <div className="temp5-sec1-img">
@@ -68,7 +68,7 @@ function Template4() {
             <div className="head2-temp-style head2-mid-container">
               {project?.midContainer?.title}
             </div>
-            <p className="para-temp-styles para-mid-container">
+            <p className="para-temp-styles temp-margin">
               {project?.midContainer?.content}
             </p>
           </div>
@@ -79,7 +79,7 @@ function Template4() {
               <div className="temp5-sec2-list-num">{item.number}</div>
               <div>
                 <div className="temp5-sec2-list-title">{item.title}</div>
-                <p className="para-temp-styles">{item.description}</p>
+                <p className="para-temp-styles temp-margin">{item.description}</p>
               </div>
             </div>
           ))}

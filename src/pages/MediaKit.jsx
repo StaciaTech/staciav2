@@ -278,14 +278,6 @@ import MobileFooter from "../components/MobileFooter";
 import "../styles/MediaKit.css";
 import axios from "axios";
 import { FiDownload } from "react-icons/fi";
-import Templet1 from "../Templets/Templet1";
-import Templet2 from "../Templets/Templet2";
-import Templet3 from "../Templets/Templet3";
-import Templet4 from "../Templets/Templet4";
-import ProjectDropdown from "../components/ProjectDropdown";
-import NpcArticle from "../Templets/NpcArticle";
-import ChiililadlingArticle from "../Templets/ChiililadlingArticle";
-import IsmartArticle from "../Templets/IsmartArticle";
 import Star from "../components/Star";
 import data from "../Data/MediaKit.json";
 
@@ -321,14 +313,6 @@ function MediaKit() {
             <Star />
           </div>
         </div>
-        {/* <Templet1 /> */}
-        {/* <Templet2 /> */}
-        {/* <Templet3 /> */}
-        {/* <ProjectDropdown /> */}
-        {/* <Templet4 /> */}
-        {/* <NpcArticle /> */}
-        {/* <ChiililadlingArticle /> */}
-        {/* <IsmartArticle /> */}
         <div className="media-container">
           <div style={{ borderBottom: "1px solid #e5e5e5" }}>
             <div className="media-section-heading">Logos</div>

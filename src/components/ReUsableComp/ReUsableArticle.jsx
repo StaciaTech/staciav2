@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 function ReUsableArticle({ data, path }) {
   const navigate = useNavigate();
   console.log("data", data);
+  console.log("path", path)
   return (
     <>
       <div className="reusable-art-container">
