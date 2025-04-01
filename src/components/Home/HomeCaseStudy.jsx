@@ -124,7 +124,17 @@ const data = [
         </div> */}
         <div className="image-box-full1">
           <div className="image-box-left">
-            {/* <img src={case1} alt="" /> */}
+            <img
+              src={case1}
+              alt=""
+              onClick={() => {
+                navigate(
+                  `/case-study/single-caseStudy/Case-Study-1
+                    `
+                );
+                window.scrollTo(0, 0);
+              }}
+            />
           </div>
           <div className="image-box-right">
             <div className="image-box">

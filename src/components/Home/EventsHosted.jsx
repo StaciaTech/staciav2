@@ -27,7 +27,10 @@ function EventsHosted() {
                 style={{ verticalAlign: "middle", marginLeft: "1rem" }}
               />
             </button>
-            <button className="event-btn events-view-details-btn">
+            <button className="event-btn events-view-details-btn" onClick={() => {
+                        window.scrollTo(0, 0);
+                        navigateTo(`/competition`);
+                      }}>
               View Details{" "}
               <FaChevronRight
                 style={{ verticalAlign: "middle", marginLeft: "1rem" }}

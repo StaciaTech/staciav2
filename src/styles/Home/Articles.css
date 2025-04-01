@@ -12,6 +12,7 @@
   max-height: 40vh;
   align-items: flex-end;
   display: flex;
+  padding: 2rem;
 }
 
 .single-article-card-image {

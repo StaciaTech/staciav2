@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
-import Footer from "../components/Footer";
-import MobileFooter from "../components/MobileFooter";
+
 // import ReverseKettle from "../assets/Reverse-Kettle.webp";
 import Data from "../Data//Templates.json";
 
