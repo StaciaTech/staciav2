@@ -11,7 +11,7 @@ const fourData = [
     id: 1,
     pos: "Founder Partner, CEO",
     img: p1,
-    name: "Sarabesh Sriram",
+    name: "Mr Sarabesh",
     about: `Founder of Stacia Corp, Sastem Global, and Stacia Tech. Expert in mechanical engineering and data science, leading innovations in agriculture and smart homes. His "OneDril" machine revolutionized farming and earned government recognition.`,
     proId: "https://www.linkedin.com/in/sarabeshsriram/",
   },
@@ -19,7 +19,7 @@ const fourData = [
     id: 2,
     pos: "Founder Partner, COO",
     img: p2,
-    name: "Lakshman PV",
+    name: " Mr Lakshman ",
     about:
       "Founder of Stacia Corp and Director at SASTEM Global. Expert in mechanical engineering and business analytics. Leads AI-powered ERP solutions and innovative machinery development for food processing and agriculture sectors.",
     proId: "https://www.linkedin.com/in/lakshman-p-v-50522a168/",
@@ -28,7 +28,7 @@ const fourData = [
     id: 3,
     pos: "Founder Partner, CTO",
     img: p3,
-    name: "Revanth S",
+    name: "Mr Revanth",
     about:
       "Co-founder of Stacia Tech. Specializes in mechanical engineering, software development, and DevOps. Drives ERP systems and digital transformation in manufacturing with a focus on efficient, scalable solutions.",
     proId: "https://www.linkedin.com/in/revanth-s-36b2bb18a/",
@@ -44,14 +44,16 @@ const fourData = [
   },
 ];
 
-export default function Four() {
+export default function Four( data, path) {
   return (
     <div className="four">
       <div className="four2">
         <div className="four-text test-seclection-blue">Management Team</div>
         <div className="four-grid">
           {fourData.map((data, i) => (
-            <FourCard data={data} key={i} />
+            <FourCard data={data} 
+            path={"about/leader"}
+            key={i} />
           ))}
         </div>
       </div>

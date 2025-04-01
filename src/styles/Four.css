@@ -18,9 +18,17 @@
   line-height: normal;
 }
 
+
+.sty{
+  color: #0047FF;
+  font-weight: 600;
+  padding: 0.5rem 0rem;
+  width: fit-content;
+}
 .four-card {
   /* width: 23%; */
   margin-top: 40px;
+  cursor: pointer;
 }
 
 .four-img {

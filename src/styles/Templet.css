@@ -91,7 +91,6 @@
   background-color: #fff;
   color: #1c39bb;
 }
-
 .temp2-hero-img-text {
   position: absolute;
   inset: 0;
@@ -216,14 +215,14 @@
 .temp5-sec3-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* padding: 2rem 0 2rem 0; */
+  padding: 2rem 0 2rem 0;
   /* text-align: justify; */
   column-gap: 2rem;
 }
 .temp5-sec3-subtitle {
   font-size: 1.25rem;
   font-family: EuclidSemibold;
-  padding: 2rem 0 0 0;
+  padding: 1rem 0 1rem 0;
   color: #0d0225;
 }
 .temp5-sec4-title {
@@ -267,7 +266,6 @@
   border-radius: 0.5rem;
   aspect-ratio: 591 / 549;
 }
-
 /* temp1 css */
 .temp1-banner-img {
   width: 100%;
@@ -332,7 +330,6 @@
   padding-top: 1rem;
   color: #0d0225;
 }
-
 /*temp2css*/
 .temp2-title1{
   font-weight: 600;
@@ -372,7 +369,6 @@
  padding-top: 2.2rem;
  margin: 0;
 }
-
 .designation {
   font-weight: 400;
   font-size: 2rem;
@@ -561,7 +557,6 @@
     font-size: 1.15rem;
   }
 }
-
 @media screen and (max-width: 300px) {
   .temp1-img-text{
     font-size: 1rem;

@@ -1,34 +1,9 @@
 {
   "department": [
     {
-      "id":"electronics-001",
+      "id": "electronics-001",
       "name": "Electronics",
       "category": [
-        {
-          "id": "category-001",
-          "name": "Research and Development",
-          "description": "Explore cutting-edge innovation with our Research and Development team. We specialize in creating tailored solutions for complex challenges, leveraging advanced technologies and industry expertise. From concept design to prototyping and testing, we deliver groundbreaking products that redefine efficiency and functionality. Partner with us to transform ideas into reality, ensuring your business stays ahead of the competition in a rapidly evolving technological landscape",
-          "imageUrl": "/assets/ProductPage/istockphoto.webp",
-          "products": [
-            {
-              "id": "product-001",
-              "title": "Hydration tracking (G-sensor)",
-              "description":"An innovative R&D project designed to measure water levels inside a bottle and track the amount consumed with exceptional accuracy of 10mm. It provides hydration reminders at user-specified or AI-recommended intervals, enhancing hydration habits. This technology integrates advanced sensors for real-time monitoring and ensures precision, making it ideal for personalized hydration management and improving overall wellness"
-            },
-            {
-              "id": "product-002",
-              "title": "Portable Heating, cooling device using semiconductor",
-              "description": "A groundbreaking R&D innovation featuring a compact semiconductor-based heating and cooling system. This portable device is small enough to integrate seamlessly into a water bottle and versatile for applications like kettles, tiffin boxes, table coffee warmers/coolers, kitchen appliances, and medical devices. It redefines thermal management, offering convenience, efficiency, and adaptability for diverse personal, professional, and industrial use cases",
-              "productDetails": []
-            },
-            {
-              "id": "product-003",
-              "title": "LoRa mesh system with encryption",
-              "description": "This R&D project introduces a highly secure LoRa mesh communication system capable of transmitting signals over a 10km radius. It offers encrypted, long-range connectivity ideal for remote monitoring, smart agriculture, disaster management, industrial automation, and IoT networks. Its robust design enables seamless communication in isolated or large-scale environments, making it an excellent choice for applications demanding extended coverage and reliable data transfer.",
-              "productDetails": []
-            }
-          ]
-        },
         {
           "id": "category-002",
           "name": "IoT Smart Products",
@@ -48,7 +23,6 @@
                   "description": "The soft touch button enables users to easily change modes, allowing for seamless transitions between heating, cooling, standby, and off settings. Its responsive design ensures quick activation and enhances user convenience, making it simple to adjust the bottle’s functions according to personal preferences."
                 },
                 {
-
                   "id": "detail-002",
                   "imageUrl": "/assets/ProductPage/Responsive-Led.webp",
                   "title": "Responsive Led",
@@ -75,7 +49,7 @@
               ]
             },
             {
-              "id":"product-002",
+              "id": "product-002",
               "title": "RFID Child Tracking Device",
               "description": "A versatile child safety solution available as a card, module, or watch, this RFID tracking device ensures real-time location updates and customizable alerts. It’s adaptable for school, play, and travel, and extends its utility to applications like pet tracking, asset management, and workforce monitoring. This device offers parents peace of mind and provides efficient tracking for a wide range of needs",
               "imageUrl": "/assets/ProductPage/RFID-Child-Tracking-Device.webp",
@@ -98,7 +72,7 @@
               ]
             },
             {
-              "id":"product-003",
+              "id": "product-003",
               "title": "Smart Furniture",
               "description": "Experience the future of home and office living with Smart Furniture. Featuring wireless charging, a built-in beverage heating and cooling system, intelligent lighting, and a retractable arm system for holding laptops or books with a nightlight. It also includes pop-up sockets and AI voice assistance for basic electronic controls like lights and AC. Smart Furniture combines functionality, comfort, and technology to redefine your personal and professional spaces",
               "imageUrl": "/assets/ProductPage/Smart Furniture.webp",
@@ -131,7 +105,7 @@
               ]
             },
             {
-              "id":"product-004",
+              "id": "product-004",
               "title": "S Connect (Smart Speaker)",
               "description": "S Connect is a next-gen smart speaker combining premium sound quality with intelligent voice control. It connects seamlessly to your smart devices, enabling hands-free operation and integration with IoT systems. Designed for versatility, it fits effortlessly into any setting, offering personalized assistance, dynamic entertainment, and superior connectivity. S Connect transforms your space into a hub of convenience and innovation.",
               "imageUrl": "/assets/ProductPage/S Connect (Smart Speaker).webp",
@@ -159,227 +133,280 @@
               ]
             }
           ]
-        },
-        {
-          "id": "category-003",
-          "name": "Industrial Automation",
-          "description": "Optimize your production processes with our Industrial Automation solutions. We provide customized systems that streamline operations, improve accuracy, and reduce downtime. Utilizing the latest in robotics, control systems, and sensors, our solutions enhance productivity while lowering costs. Whether for assembly lines, material handling, or quality inspection, our automation technology ensures consistent performance and maximized efficiency for your industrial needs.",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp"
         }
       ]
     },
-
     {
-      "id":"mechanical-002",
+      "id": "mechanical-002",
       "name": "Mechanical",
       "category": [
         {
-          "id":"category-001",
-          "name": "Agri and Food Processing SPM",
-          "description": "Empower your agri-business with our specialized machinery for food processing and agriculture. We design and build SPMs (Special Purpose Machines) tailored to optimize post-harvest processing, packaging, and quality assurance. From seed sorting to product packaging, our innovative solutions enhance productivity, reduce waste, and ensure compliance with food safety standards. Trust our expertise to deliver efficiency and value to your agricultural operations",
-          "imageUrl": "/assets/istockphoto.webp",
+          "id": "category-002",
+          "name": "IoT Smart Products",
+          "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
+          "imageUrl": "/assets/ProductPage/iot_devices.webp",
           "products": [
             {
-              "id":"product-001",
-              "name": "Onedril (SSM)",
-              "description": "OneDril is a manual, portable seed-sowing machine designed for precise and efficient planting. Capable of handling seeds between 2 to 25mm, it follows the line-sowing principle for uniform crop growth. Ideal for micro and large seeds alike, OneDril’s ergonomic design ensures convenience and accuracy. It empowers farmers with a cost-effective, versatile solution for boosting agricultural productivity.",
+              "id": "product-001",
+              "title": "Hydrogen (Smart-water-bottle)",
+              "description": "Hydrogen is an AI-powered smart water bottle that features rapid heating and cooling, hydration tracking with advanced sensors, and personalized reminders for optimal water intake. Its ergonomic squircle design ensures style and comfort, while its innovative technology offers superior functionality. Perfect for on-the-go hydration, it redefines smart drinking solutions with intelligence, performance, and modern aesthetics",
+              "imageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
               "productDetails": [
                 {
-                  "imageUrl": "",
-                  "title": "Seed Plunger",
-                  "description": "The Seed Plunger is a stainless steel mechanism with a cone for opening and closing to plunge seeds into the soil. It can vary the plunging depth from 1 cm to 6 cm. The plunging action is driven by a crank mechanism consisting of a crank, crankshaft, and connecting rod"
+                  "id": "detail-001",
+                  "imageUrl": "/assets/ProductPage/Soft-Touch-Button.webp",
+                  "title": "Soft Touch button",
+                  "description": "The soft touch button enables users to easily change modes, allowing for seamless transitions between heating, cooling, standby, and off settings. Its responsive design ensures quick activation and enhances user convenience, making it simple to adjust the bottle’s functions according to personal preferences."
                 },
                 {
-                  "imageUrl": "",
-                  "title": "Seed Hopper",
-                  "description": "The Seed Hopper holds seeds, and inside, a seed disk picks the required number of seeds (2mm to 25mm) and drops them into the plunger. The hopper is adjustable to sow one or more seeds at even intervals, depending on the seed type and spacing needs"
+                  "id": "detail-002",
+                  "imageUrl": "/assets/ProductPage/Responsive-Led.webp",
+                  "title": "Responsive Led",
+                  "description": "The responsive LED lights on the Hydrogen bottle visually indicate various statuses, such as temperature, hydration goals, or mode selection. These vibrant lights change colors based on user interactions, providing clear feedback on the current function and enhancing user engagement while promoting healthy hydration habits"
                 },
                 {
-                  "imageUrl": "",
-                  "title": "Handle",
-                  "description": "The handle is used to push the machine forward, driving the wheel to actuate the plunger and seed disk. Designed for operators of various heights, it has a grip for comfortable handling. The handle's mechanism ensures smooth sowing operation and seed distribution"
+                  "id": "detail-003",
+                  "imageUrl": "/assets/ProductPage/PCB-Board.webp",
+                  "title": "PCB Board",
+                  "description": "The PCB board serves as the brain of the Hydrogen smart water bottle, integrating all electronic components and ensuring efficient communication between sensors, the app screen, and LED indicators. This compact board manages power distribution, data processing, and connectivity, facilitating seamless operation of the bottle's smart features."
                 },
                 {
-                  "imageUrl": "",
-                  "title": "Depth Adjustor",
-                  "description": "The Depth Adjustor is an adapter that controls the wire tension for opening and closing the cone, adjusting the plunging depth. By changing the adapter's position, the cone’s slot changes accordingly, ensuring seeds are sown at the desired depth in the soil"
+                  "id": "detail-004",
+                  "imageUrl": "/assets/ProductPage/Air-Vent.webp",
+                  "title": "Air vent",
+                  "description": "The Hydrogen smart water bottle features an air vent that allows hot air from the fan to escape, effectively releasing heat generated by the heatsink. This ventilation system ensures optimal temperature control, preventing overheating and maintaining the efficiency of the heating and cooling functions."
+                },
+                {
+                  "id": "detail-005",
+                  "imageUrl": "/assets/ProductPage/Air-Vent.webp",
+                  "title": "App screen",
+                  "description": "The integrated app screen offers a user-friendly interface for monitoring hydration levels, tracking water intake, and customizing settings. Through Bluetooth connectivity, users can sync their smart water bottle with their smartphones, providing real-time data and reminders to help maintain healthy hydration habits effortlessly."
                 }
               ]
             },
             {
-              "id":"product-002",
-              "name": "Chilli Ladling Machine",
-              "description": "This remote-operated Chilli Ladling Machine is engineered for efficient handling and ladling of chilies inside solar sheds. Its versatile design allows it to handle other crops like groundnuts and grains, ensuring optimal operation. With enhanced precision and ease of use, this machine reduces labor efforts and maximizes productivity for solar drying and similar agricultural processes.",
+              "id": "product-002",
+              "title": "RFID Child Tracking Device",
+              "description": "A versatile child safety solution available as a card, module, or watch, this RFID tracking device ensures real-time location updates and customizable alerts. It’s adaptable for school, play, and travel, and extends its utility to applications like pet tracking, asset management, and workforce monitoring. This device offers parents peace of mind and provides efficient tracking for a wide range of needs",
+              "imageUrl": "/assets/ProductPage/RFID-Child-Tracking-Device.webp",
               "productDetails": [
                 {
-                  "imageUrl": "",
-                  "title": "Motor",
-                  "description": "The machine features a variable frequency drive motor that allows the conveyor speed to be adjusted according to the size and type of chili seeds being processed. This adjustable speed control ensures optimal handling and accurate ladling for different seed varieties."
+                  "imageUrl": "/assets/ProductPage/Watch-Model.webp",
+                  "title": "Watch model",
+                  "description": "The watch model is designed like a tag that can be securely tied to a child’s wrist. It offers a comfortable and non-intrusive way to track the child’s location, resembling a simple wristband while containing essential tracking technology for safety purposes"
                 },
                 {
-                  "imageUrl": "",
-                  "title": "Food Grade Belt",
-                  "description": "The conveyor belt is made of lightweight, food-grade plastic and is equipped with arm-like provisions across its surface for efficiently picking and transferring chilies. The durable belt ensures smooth, hygienic operation, moving the chilies with minimal friction and contamination."
+                  "imageUrl": "/assets/ProductPage/RFID-Reader.webp",
+                  "title": "RFID Reader",
+                  "description": "The RFID Reader includes multiple antennas that emit radio waves to detect and communicate with nearby RFID tags. It captures signals from the tag and relays the information, allowing parents or guardians to monitor the child's location accurately through the tracking system."
                 },
                 {
-                  "imageUrl": "",
-                  "title": "AFD Wheel drive",
-                  "description": "The machine employs an all-wheel drive (AWD) system, where the motor powers all four wheels. This allows the machine to make crab turns with negligible turning radius. The remote-controlled knob enables smooth and precise directional changes with minimal effort."
+                  "imageUrl": "/assets/ProductPage/Tag-Model.webp",
+                  "title": "Tag Model",
+                  "description": "The tag uses radio waves to transmit its identity and information to RFID readers. It can be passive or active, with passive tags relying on the reader for power and lacking a battery. This energy-efficient design ensures longer-term tracking without frequent maintenance."
                 }
               ]
             },
             {
-              "id":"product-003",
-              "name": "Precision Slicing Machine",
-              "description": "The Precision Slicing Machine delivers ultra-thin slices, as fine as 3mm, with exceptional accuracy. Designed for diverse food items, it can slice fruits, vegetables, and even delicate items like bread with high precision. This machine ensures uniformity and efficiency, making it a valuable asset for food processing, catering, and kitchen applications demanding consistent slicing quality.",
+              "id": "product-003",
+              "title": "Smart Furniture",
+              "description": "Experience the future of home and office living with Smart Furniture. Featuring wireless charging, a built-in beverage heating and cooling system, intelligent lighting, and a retractable arm system for holding laptops or books with a nightlight. It also includes pop-up sockets and AI voice assistance for basic electronic controls like lights and AC. Smart Furniture combines functionality, comfort, and technology to redefine your personal and professional spaces",
+              "imageUrl": "/assets/ProductPage/Smart Furniture.webp",
               "productDetails": [
                 {
-                  "imageUrl": "",
-                  "title": "Slider Involute Blade",
-                  "description": "This is a specially designed involute blade with its center of mass strategically placed for precise and sharp slicing. It ensures thin cuts, allowing for slices even less than 2.5 mm. Made of stainless steel, the blade guarantees durability and accuracy in slicing various products."
+                  "imageUrl": "/assets/ProductPage/Beverage-Warmer-And-Cooler.webp",
+                  "title": "Beverage warmer and cooler",
+                  "description": "The smart table includes a Beverage Warmer and Cooler, which adjusts or maintains the temperature of a beverage placed on it according to the user’s input. It provides a convenient way to keep drinks warm or cool without manual intervention, enhancing the overall experience."
                 },
                 {
-                  "imageUrl": "",
-                  "'title": "Loft loading section",
-                  "description": "The loft loading section has five compartments, each holding a loaf ready for slicing. A linear actuator pushes each loaf towards the blade for precise cutting, enabling continuous operation and smooth processing of multiple loaves one at a time."
+                  "imageUrl": "/assets/ProductPage/Wireless-Charger.webp",
+                  "title": "Wireless Charger",
+                  "description": "The table features an omnidirectional wireless charger, allowing electronic devices like phones, watches, and earbuds to charge efficiently. Devices with wireless charging capabilities can be placed in any direction on the surface, ensuring fast and convenient charging for multiple gadgets."
                 },
                 {
-                  "imageUrl": "",
-                  "title": "Receiving conveyor",
-                  "description": "After slicing, the slices drop onto the receiving conveyor. The speed of the conveyor determines how the slices are arranged, ensuring that the product is neatly placed. This system maintains an orderly flow of sliced products for easy handling."
+                  "imageUrl": "/assets/ProductPage/360-Sound-Speaker.webp",
+                  "title": "360 Sound Speaker",
+                  "description": "The 360 Sound Speaker is a 3D surround system integrated into the table, delivering high-quality sound. It adapts to the music and atmosphere, creating an immersive audio experience. The speaker is designed to enhance ambiance and provide consistent sound from all directions"
                 },
                 {
-                  "imageUrl": "",
-                  "title": "Slider blade motor",
-                  "description": "A variable frequency drive motor controls the slider blade, adjusting its speed based on the conveyor’s pace. As the conveyor speed varies, the motor ensures that the placement of bread slices aligns with the loaf production, maintaining consistency in output."
+                  "imageUrl": "/assets/ProductPage/Floating-Light-Effect.webp",
+                  "title": "Floating Light Effect",
+                  "description": "The Floating Light Effect adds an elegant touch to the table, adjusting its intensity based on the music being played. It also functions as a night path light, offering soft illumination during the night, making it both a stylish and practical feature for any environment"
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Retractable-Table.webp",
+                  "title": "Retractable Table",
+                  "description": "The Retractable Table is designed for convenience, transforming into a laptop or book table with a simple press. The adjustable arms allow for easy use while in bed, and it includes a light, making it ideal for reading or working in various comfortable positions."
                 }
               ]
             },
             {
-              "id":"product-004",
-              "name": "Tamarind Breaking machine",
-              "description": "This innovative Tamarind Breaking Machine simplifies the process of breaking tamarind pods while preserving seed and pulp quality. Designed for agricultural efficiency, it is robust and user-friendly, suitable for small and large-scale operations. The machine boosts productivity and minimizes manual effort, making it an essential tool for tamarind producers.",
+              "id": "product-004",
+              "title": "S Connect (Smart Speaker)",
+              "description": "S Connect is a next-gen smart speaker combining premium sound quality with intelligent voice control. It connects seamlessly to your smart devices, enabling hands-free operation and integration with IoT systems. Designed for versatility, it fits effortlessly into any setting, offering personalized assistance, dynamic entertainment, and superior connectivity. S Connect transforms your space into a hub of convenience and innovation.",
+              "imageUrl": "/assets/ProductPage/S Connect (Smart Speaker).webp",
               "productDetails": [
                 {
-                  "imageUrl": "",
-                  "title": "Tamarind OUT conveyor",
-                  "description": "The Tamarind OUT conveyor is responsible for moving the tamarind pods after they have been broken. It ensures a smooth flow of processed tamarind, transporting it efficiently for further handling or packaging."
+                  "imageUrl": "/assets/ProductPage/Surround-Speaker.webp",
+                  "title": "Surround Speaker",
+                  "description": "The Connect S features a high-quality surround speaker system that delivers immersive 360-degree sound. Designed to fill the room with clear, crisp audio, the speaker adapts to various sound profiles, providing an exceptional listening experience for music, podcasts, and voice commands from any corner of the room."
                 },
                 {
-                  "imageUrl": "",
-                  "title": "Actuator arm",
-                  "description": "The actuator arm is positioned above the Tamarind IN conveyor. Once the tamarind pods are arranged, the actuator applies a calculated amount of force to precisely break the pods. This controlled action ensures the tamarind is broken without damaging the pulp"
+                  "imageUrl": "/assets/ProductPage/Display.webp",
+                  "title": "Display",
+                  "description": "The smart speaker includes a built-in display that shows essential information like time, track details, weather updates, and notifications. This sleek, user-friendly screen offers a visual complement to the voice interaction, enhancing the overall functionality and convenience of the Connect S."
                 },
                 {
-                  "imageUrl": "",
-                  "title": "Tamarind IN conveyor",
-                  "description": "The Tamarind IN conveyor features a square wedge section where the tamarind pods are carefully arranged. Made of food-grade plastic, this area ensures safe, hygienic handling of the tamarind while positioning it optimally for the breaking process"
+                  "imageUrl": "/assets/ProductPage/Responsive-Light.webp",
+                  "title": "Responsive light",
+                  "description": "The Connect S is equipped with a responsive light feature that adjusts its brightness and color based on sound or voice activity. It enhances the ambiance of the room, reacting dynamically to music, commands, or notifications, making the interaction with the speaker visually engaging and stylish."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Volume-Nobu.webp",
+                  "title": "Volume Nobe",
+                  "description": "The Connect S features a tactile volume knob for easy and precise audio control. Designed for intuitive use, this smooth, responsive knob allows users to quickly adjust the volume level, offering a simple yet effective alternative to voice commands or app-based controls."
                 }
               ]
-            },
-            {
-              "id":"product-005",
-              "name": "Bailing Machine",
-              "description": "A cost-effective Bailing Machine designed to compress carton boxes to one-fourth of their original volume. Its robust design ensures reliability and efficiency, reducing storage space and simplifying waste management. Suitable for warehouses, recycling centers, and packaging units, this machine offers an economical and practical solution for handling bulk waste materials",
-              "productDetails": [
-                {
-                  "imageUrl": "",
-                  "title": "Motorized screw jack",
-                  "description": "The machine uses a Variable Frequency Drive (VFD) motor, allowing the drum speed to be adjusted based on the type of food product being cleaned. This flexibility ensures optimal cleaning efficiency for different produce, making the machine versatile for various applications."
-                },
-                {
-                  "imageUrl": "",
-                  "title": "Loading and unloading area",
-                  "description": "The Rotatable Handle allows the drum to tilt for easy unloading. It features a locking mechanism with a needle; when removed, the drum rotates freely, and when inserted, the drum locks in place. This ensures secure operation and controlled product handling."
-                },
-                {
-                  "imageUrl": "",
-                  "title": "Container",
-                  "description": "A lightweight belt drive mechanism is used to rotate the drum. The belt system is efficient, with minimal transition distance, ensuring smooth operation and reducing the mechanical load on the motor, making it ideal for this cleaning application."
-                }
-              ]
-            },
-            {
-              "id":"product-006",
-              "name":"Spinach Cleaning Machine",
-              "description":"This Spinach Cleaning Machine cleans and semi-dries spinach with ease and precision. Its adaptable design allows it to handle other crops like lettuce, coriander, and fenugreek. Ideal for agricultural and food processing operations, it ensures hygiene and quality while saving time and labor. This machine is a perfect solution for pre-processing leafy vegetables and herbs"
             }
           ]
-        },
-        {
-          "id":"category-002",
-          "name":"Special Purpose Machines (SPM)for Autoancilary or Automobile/Automotive SPM",
-          "description":"Drive innovation in the automotive industry with our custom-built SPMs. Designed for precision and reliability, our machines cater to various applications, including assembly, testing, and component manufacturing. Leveraging cutting-edge technology, we ensure streamlined workflows and high-quality output. Partner with us for tailored solutions that meet the rigorous demands of the automotive sector, enhancing both efficiency and profitability.",
-          "products":[
-            {
-              "id":"product-001",
-              "name":"Brake Shoe Grinding Machine."
-            },
-            {
-              "id":"product-002",
-              "name":"Fully autotmated paint booth with dryer"
-            },
-            {
-              "id":"product-003",
-              "name":"Automated Adhesive applying machines for wind shields, housings, and Brake pads"
-            }
-          ] 
-        },         
-        {
-          "id":"category-003",
-          "name":"Test Rig",
-          "description":"Experience precision and reliability with our advanced Test Rigs. Designed to simulate real-world conditions, our rigs provide accurate testing for components and systems across various industries. Whether for endurance, performance, or failure analysis, we deliver customized solutions that meet stringent standards. Trust our expertise to ensure your products are tested thoroughly and perform optimally under all conditions",
-          "products":[
-            {
-              "id":"product-001",
-              "name":"Air and Vaccum Leak Test Rigs"
-            },
-            {
-              "id":"product-002",
-              "name":"Vision based Inspection Test Rigs"
-            },
-            {
-              "id":"product-003",
-              "name":"End of Line Test Rigs (EOL)"
-            },
-            {
-              "id":"product-004",
-              "name":"Endurance Test Rigs"
-            },
-            {
-              "id":"product-005",
-              "name":" Durability Test Rigs."
-            },
-            {
-              "id":"product-006",
-              "name":" Performance Test Rigs"
-            }
-          ]
-        },        
-        {
-          "id":"category-004",
-          "name": "Reciprocating Arm",
-          "description": "Achieve mechanical precision with our Reciprocating Arms. These versatile solutions are engineered for applications requiring linear motion, including material handling, assembly, and automation tasks. Built with durable materials and cutting-edge design, our arms ensure smooth operation and consistent performance. Enhance your workflow with our customizable reciprocating arm systems, tailored to meet the specific demands of your industrial processes.",
-          "imageUrl": "/assets/istockphoto.webp",
-          "products":[
-              {
-              "id":"product-001",
-              "name":"1. GEMA Reciprocator"
-              }
-          ]
-        },
-        {
-          "id":"category-005",
-          "name": "Actuator",
-          "description": "Power your operations with our high-performance Actuators. Designed for precision and efficiency, our actuators deliver smooth and controlled motion across a variety of applications. From industrial automation to heavy machinery, we offer a range of electric, hydraulic, and pneumatic actuators to suit your needs. Experience enhanced productivity and reliability with our innovative actuator solutions",
-          "imageUrl": "/assets/istockphoto.webp"
-        }            
+        }
       ]
     },
-
     {
-      "id":"tech-003",
-      "name": "Tech"
+      "id": "tech-003",
+      "name": "Tech",
+      "category": [
+        {
+          "id": "category-002",
+          "name": "IoT Smart Products",
+          "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
+          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "products": [
+            {
+              "id": "product-001",
+              "title": "Hydrogen (Smart-water-bottle)",
+              "description": "Hydrogen is an AI-powered smart water bottle that features rapid heating and cooling, hydration tracking with advanced sensors, and personalized reminders for optimal water intake. Its ergonomic squircle design ensures style and comfort, while its innovative technology offers superior functionality. Perfect for on-the-go hydration, it redefines smart drinking solutions with intelligence, performance, and modern aesthetics",
+              "imageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
+              "productDetails": [
+                {
+                  "id": "detail-001",
+                  "imageUrl": "/assets/ProductPage/Soft-Touch-Button.webp",
+                  "title": "Soft Touch button",
+                  "description": "The soft touch button enables users to easily change modes, allowing for seamless transitions between heating, cooling, standby, and off settings. Its responsive design ensures quick activation and enhances user convenience, making it simple to adjust the bottle’s functions according to personal preferences."
+                },
+                {
+                  "id": "detail-002",
+                  "imageUrl": "/assets/ProductPage/Responsive-Led.webp",
+                  "title": "Responsive Led",
+                  "description": "The responsive LED lights on the Hydrogen bottle visually indicate various statuses, such as temperature, hydration goals, or mode selection. These vibrant lights change colors based on user interactions, providing clear feedback on the current function and enhancing user engagement while promoting healthy hydration habits"
+                },
+                {
+                  "id": "detail-003",
+                  "imageUrl": "/assets/ProductPage/PCB-Board.webp",
+                  "title": "PCB Board",
+                  "description": "The PCB board serves as the brain of the Hydrogen smart water bottle, integrating all electronic components and ensuring efficient communication between sensors, the app screen, and LED indicators. This compact board manages power distribution, data processing, and connectivity, facilitating seamless operation of the bottle's smart features."
+                },
+                {
+                  "id": "detail-004",
+                  "imageUrl": "/assets/ProductPage/Air-Vent.webp",
+                  "title": "Air vent",
+                  "description": "The Hydrogen smart water bottle features an air vent that allows hot air from the fan to escape, effectively releasing heat generated by the heatsink. This ventilation system ensures optimal temperature control, preventing overheating and maintaining the efficiency of the heating and cooling functions."
+                },
+                {
+                  "id": "detail-005",
+                  "imageUrl": "/assets/ProductPage/Air-Vent.webp",
+                  "title": "App screen",
+                  "description": "The integrated app screen offers a user-friendly interface for monitoring hydration levels, tracking water intake, and customizing settings. Through Bluetooth connectivity, users can sync their smart water bottle with their smartphones, providing real-time data and reminders to help maintain healthy hydration habits effortlessly."
+                }
+              ]
+            },
+            {
+              "id": "product-002",
+              "title": "RFID Child Tracking Device",
+              "description": "A versatile child safety solution available as a card, module, or watch, this RFID tracking device ensures real-time location updates and customizable alerts. It’s adaptable for school, play, and travel, and extends its utility to applications like pet tracking, asset management, and workforce monitoring. This device offers parents peace of mind and provides efficient tracking for a wide range of needs",
+              "imageUrl": "/assets/ProductPage/RFID-Child-Tracking-Device.webp",
+              "productDetails": [
+                {
+                  "imageUrl": "/assets/ProductPage/Watch-Model.webp",
+                  "title": "Watch model",
+                  "description": "The watch model is designed like a tag that can be securely tied to a child’s wrist. It offers a comfortable and non-intrusive way to track the child’s location, resembling a simple wristband while containing essential tracking technology for safety purposes"
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/RFID-Reader.webp",
+                  "title": "RFID Reader",
+                  "description": "The RFID Reader includes multiple antennas that emit radio waves to detect and communicate with nearby RFID tags. It captures signals from the tag and relays the information, allowing parents or guardians to monitor the child's location accurately through the tracking system."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Tag-Model.webp",
+                  "title": "Tag Model",
+                  "description": "The tag uses radio waves to transmit its identity and information to RFID readers. It can be passive or active, with passive tags relying on the reader for power and lacking a battery. This energy-efficient design ensures longer-term tracking without frequent maintenance."
+                }
+              ]
+            },
+            {
+              "id": "product-003",
+              "title": "Smart Furniture",
+              "description": "Experience the future of home and office living with Smart Furniture. Featuring wireless charging, a built-in beverage heating and cooling system, intelligent lighting, and a retractable arm system for holding laptops or books with a nightlight. It also includes pop-up sockets and AI voice assistance for basic electronic controls like lights and AC. Smart Furniture combines functionality, comfort, and technology to redefine your personal and professional spaces",
+              "imageUrl": "/assets/ProductPage/Smart Furniture.webp",
+              "productDetails": [
+                {
+                  "imageUrl": "/assets/ProductPage/Beverage-Warmer-And-Cooler.webp",
+                  "title": "Beverage warmer and cooler",
+                  "description": "The smart table includes a Beverage Warmer and Cooler, which adjusts or maintains the temperature of a beverage placed on it according to the user’s input. It provides a convenient way to keep drinks warm or cool without manual intervention, enhancing the overall experience."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Wireless-Charger.webp",
+                  "title": "Wireless Charger",
+                  "description": "The table features an omnidirectional wireless charger, allowing electronic devices like phones, watches, and earbuds to charge efficiently. Devices with wireless charging capabilities can be placed in any direction on the surface, ensuring fast and convenient charging for multiple gadgets."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/360-Sound-Speaker.webp",
+                  "title": "360 Sound Speaker",
+                  "description": "The 360 Sound Speaker is a 3D surround system integrated into the table, delivering high-quality sound. It adapts to the music and atmosphere, creating an immersive audio experience. The speaker is designed to enhance ambiance and provide consistent sound from all directions"
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Floating-Light-Effect.webp",
+                  "title": "Floating Light Effect",
+                  "description": "The Floating Light Effect adds an elegant touch to the table, adjusting its intensity based on the music being played. It also functions as a night path light, offering soft illumination during the night, making it both a stylish and practical feature for any environment"
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Retractable-Table.webp",
+                  "title": "Retractable Table",
+                  "description": "The Retractable Table is designed for convenience, transforming into a laptop or book table with a simple press. The adjustable arms allow for easy use while in bed, and it includes a light, making it ideal for reading or working in various comfortable positions."
+                }
+              ]
+            },
+            {
+              "id": "product-004",
+              "title": "S Connect (Smart Speaker)",
+              "description": "S Connect is a next-gen smart speaker combining premium sound quality with intelligent voice control. It connects seamlessly to your smart devices, enabling hands-free operation and integration with IoT systems. Designed for versatility, it fits effortlessly into any setting, offering personalized assistance, dynamic entertainment, and superior connectivity. S Connect transforms your space into a hub of convenience and innovation.",
+              "imageUrl": "/assets/ProductPage/S Connect (Smart Speaker).webp",
+              "productDetails": [
+                {
+                  "imageUrl": "/assets/ProductPage/Surround-Speaker.webp",
+                  "title": "Surround Speaker",
+                  "description": "The Connect S features a high-quality surround speaker system that delivers immersive 360-degree sound. Designed to fill the room with clear, crisp audio, the speaker adapts to various sound profiles, providing an exceptional listening experience for music, podcasts, and voice commands from any corner of the room."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Display.webp",
+                  "title": "Display",
+                  "description": "The smart speaker includes a built-in display that shows essential information like time, track details, weather updates, and notifications. This sleek, user-friendly screen offers a visual complement to the voice interaction, enhancing the overall functionality and convenience of the Connect S."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Responsive-Light.webp",
+                  "title": "Responsive light",
+                  "description": "The Connect S is equipped with a responsive light feature that adjusts its brightness and color based on sound or voice activity. It enhances the ambiance of the room, reacting dynamically to music, commands, or notifications, making the interaction with the speaker visually engaging and stylish."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Volume-Nobu.webp",
+                  "title": "Volume Nobe",
+                  "description": "The Connect S features a tactile volume knob for easy and precise audio control. Designed for intuitive use, this smooth, responsive knob allows users to quickly adjust the volume level, offering a simple yet effective alternative to voice commands or app-based controls."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

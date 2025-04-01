@@ -1,7 +1,7 @@
 .reusable-art-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 3rem;
   padding: 3rem 5rem;
 }
 .reusable-art-card {

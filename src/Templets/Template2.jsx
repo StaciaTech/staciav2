@@ -4,6 +4,8 @@ import Star from "../components/Star";
 import "../styles/Templet.css";
 // import Engine2 from "../assets/Engine2.webp";
 import Data from "../Data//Templates.json";
+import Footer from "../components/Footer";
+import MobileFooter from "../components/MobileFooter";
 
 function Template2() {
   const { title } = useParams();

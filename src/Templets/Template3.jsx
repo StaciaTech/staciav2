@@ -1,28 +1,30 @@
-import React,{ useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
+import Footer from "../components/Footer";
+import MobileFooter from "../components/MobileFooter";
 // import ReverseKettle from "../assets/Reverse-Kettle.webp";
 import Data from "../Data//Templates.json";
 
 const Template3 = () => {
-      const { title } = useParams(); 
-      const [project, setProject] = useState(null);
-      
-      useEffect(() => {
-        // Find the project that matches the URL title
-        const matchedProject = Data.projects.find(
-          (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
-        );
-      
-        if (matchedProject) {
-          setProject(matchedProject);
-        }
-      }, [title]);
-      
-      if (!project) {
-        return <div>Loading...</div>;
-      }
+  const { title } = useParams();
+  const [project, setProject] = useState(null);
+
+  useEffect(() => {
+    // Find the project that matches the URL title
+    const matchedProject = Data.projects.find(
+      (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
+    );
+
+    if (matchedProject) {
+      setProject(matchedProject);
+    }
+  }, [title]);
+
+  if (!project) {
+    return <div>Loading...</div>;
+  }
   return (
     <div>
       <div className="temp5-project_container">
@@ -45,7 +47,7 @@ const Template3 = () => {
         <div>
           <div className="temp2-title1">{project?.industry?.title}</div>
           <div className="temp2-topic">
-          Topics:{" "}
+            Topics:{" "}
             {project?.industry?.topics?.map((topic, index) => (
               <span key={index}>
                 <span style={{ color: "#0047FF" }}> #</span>
@@ -101,7 +103,7 @@ const Template3 = () => {
         <p className="designation">{project?.testimonial2?.designation}</p>
         <div className="temp2-head">
           <div className="temp2-title1">
-          {project?.Heading2?.title}
+            {project?.Heading2?.title}
           </div>
           <div className="temp2-content1">
             Goal: <span>{project?.Heading1?.topic}</span>
@@ -126,7 +128,7 @@ const Template3 = () => {
         </div>
         <div className="temp3-sec1-title">
           <p>
-          {project?.testimonial3?.description}
+            {project?.testimonial3?.description}
           </p>
         </div>
         <p className="name">{project?.testimonial3?.name}</p>
