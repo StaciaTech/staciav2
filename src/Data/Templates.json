@@ -1,7 +1,6 @@
 {
   "projects": [
     {
-      "id": "mech-001",
       "title": "One Drill",
       "starComponent": true,
       "template": "template5",
@@ -86,7 +85,6 @@
       ]
     },
     {
-      "id": "elec-001",
       "title": "Smart Implementation",
       "starComponent": true,
       "template": "template1",
@@ -148,7 +146,6 @@
       }
     },
     {
-      "id": "mech-002",
       "title": "ismart",
       "starComponent": "true",
       "template": "template2",
@@ -215,7 +212,6 @@
       }
     },
     {
-      "id": "elec-002",
       "title": "Reverse Kettle",
       "starComponent": "true",
       "template": "template3",
@@ -303,7 +299,6 @@
       }
     },
     {
-      "id": "mech-003",
       "title": "Chilli Solar House",
       "starComponent": "true",
       "template":"template4",
@@ -357,7 +352,6 @@
       }
     },
     {
-      "id": "mech-004",
       "title": "Hydrogen Bottle",
       "starComponent": "true",
       "template": "template3",
@@ -445,7 +439,6 @@
       }
     },
     {
-      "id": "tech-001",
       "title": "AI Chatbot",
       "starComponent": true,
       "template": "template1",
@@ -507,7 +500,6 @@
       }
     },
     {
-      "id": "tech-002",
       "title": "AI Chatbot Version",
       "starComponent": "true",
       "template": "template2",
