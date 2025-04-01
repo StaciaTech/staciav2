@@ -19,7 +19,7 @@
 
 .related-cases-grid {
   display: flex; 
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   gap: 20px;
 
@@ -63,6 +63,7 @@
   font-size: 13px; 
   color: #666;
   line-height: 1.4;
+  padding-bottom: 5px;
  
 }
 

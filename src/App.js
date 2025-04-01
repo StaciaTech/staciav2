@@ -29,6 +29,9 @@ import MediaKit from "./pages/MediaKit";
 import Partners from "./pages/Partners";
 
 
+import Template6 from "./Templets/Template6";
+
+
 import CompetitionPage from "./pages/Competition";
 
 
@@ -55,7 +58,8 @@ function App() {
           element={<SingleProduct />}
         />
         {/* <Route path="/products/:id" element={<SingleProduct />} /> */}
-        <Route path="/article/:department/:title" element={<SingleArticle />} />
+        {/* <Route path="/article/:department/:title" element={<SingleArticle />} /> */}
+        <Route path="/article/:department/:title" element={<Template6 />} />
         <Route
           path="/project/:department/:category/:title"
           element={<SingleProject />}

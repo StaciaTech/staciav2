@@ -240,7 +240,7 @@
       },
       "testimonial1": {
         "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
-        "name": "Nithish Kumar K",
+        "name": "Dilip Kumar",
         "designation": "Head of Operations."
       },
       "Heading1": {
@@ -264,7 +264,7 @@
       },
       "testimonial2": {
         "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
-        "name": "Nithish Kumar K",
+        "name": "Dilip Kumar",
         "designation": "Head of Operations."
       },
       "Heading2": {
@@ -288,7 +288,7 @@
       },
       "testimonial3": {
         "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
-        "name": "Nithish Kumar K",
+        "name": "Dilip Kumar",
         "designation": "Head of Operations."
       },
       "solution": {
@@ -312,12 +312,11 @@
         "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
       },
       "section1": {
-        "title": "Lorem ipsum dolor Lorem ipsum dolorLorem ipsum dolorLorem Lorem ipsum dolor Lorem ipsum",
+        "title": "Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolorLorem Lorem ipsum dolor Lorem ipsum",
         "summaryHeading": "Lorem ipsum dolor lorem ipsum dolor lorem",
         "executiveSummary": [
           "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
-          "Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant."
+          "Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
         ],
         "image": "/assets/Green-house.webp"
       },
@@ -354,7 +353,224 @@
       "section3": {
         "title": "Lorem ipsum dolor sit amet consectetur.",
         "image": "/assets/chilli3.webp",
-        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam."
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. "
+      }
+    },
+    {
+      "id": "mech-004",
+      "title": "Hydrogen Bottle",
+      "starComponent": "true",
+      "template": "template3",
+      "banner": {
+        "image": "/assets/Reverse-Kettle.webp",
+        "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
+      },
+      "industry": {
+        "title": "Industry's",
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ]
+      },
+      "product": {
+        "title": "The Product",
+        "description": [
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, eveniet dolore. Veritatis accusantium rerum magnam cumque esse distinctio, deleniti ullam ut beatae optio alias quaerat a sunt, repellat delectus quidem.",
+          "Traditional solar cells are made up of a large number of small, individual cells that are interconnected to create a solar panel. This architecture is not well suited to capturing the energy of light because it is difficult to make the cells small enough and efficiently connect them."
+        ]
+      },
+      "testimonial1": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+        "name": "Dilip Kumar",
+        "designation": "Head of Operations."
+      },
+      "Heading1": {
+        "title": "Lorem ipsum has been the industry's standard dummy",
+        "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
+      },
+      "Approach": {
+        "title": "Approach:",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "Result": {
+        "title": "Result:",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur."
+        ]
+      },
+      "testimonial2": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+        "name": "Dilip Kumar",
+        "designation": "Head of Operations."
+      },
+      "Heading2": {
+        "title": "Lorem ipsum has been the industry's standard dummy",
+        "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
+      },
+      "Approach1": {
+        "title": "Approach:",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "Result1": {
+        "title": "Result:",
+        "content": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur."
+        ]
+      },
+      "testimonial3": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate temporsagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+        "name": "Dilip Kumar",
+        "designation": "Head of Operations."
+      },
+      "solution": {
+        "title": "Solution",
+        "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur.",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      }
+    },
+    {
+      "id": "tech-001",
+      "title": "AI Chatbot",
+      "starComponent": true,
+      "template": "template1",
+      "banner": {
+        "image": "/assets/Engine1.webp",
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, neque?"
+      },
+      "industry": {
+        "title": "Industry's",
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ],
+        "image": "/assets/Engine2.webp"
+      },
+      "product": {
+        "title": "The Product",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque inventore rerum deserunt facere aliquid. Ratione dolorum, pariatur exercitationem est obcaecati nostrum doloribus numquam, a blanditiis accusamus iure eaque ex eligendi distinctio? Harum iste impedit temporibus maxime, eum repellat quidem accusantium, obcaecati blanditiis aspernatur fuga optio, consectetur doloremque esse dolores a.",
+        "subTitle": "lorem ipsum lorem ipsum lorem ipsum",
+        "subDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque inventore rerum deserunt facere aliquid. Ratione dolorum, pariatur exercitationem est obcaecati nostrum doloribus numquam, a blanditiis accusamus iure eaque ex eligendi distinctio? Harum iste impedit temporibus maxime, eum repellat quidem accusantium, obcaecati blanditiis aspernatur fuga optio, consectetur doloremque esse dolores a."
+      },
+      "problem": {
+        "title": "Problem",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur laboriosam, magni esse voluptate, repellendus explicabo exercitationem tempore, porro numquam ea sed quia culpa perspiciatis maxime voluptates veniam quibusdam error ratione a praesentium laborum debitis? Nam perspiciatis repudiandae ab nulla illum.",
+        "points": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores.",
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores."
+        ],
+        "subDescription": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi labore ratione, necessitatibus adipisci iure in cum quia sed ex eaque vero incidunt reprehenderit, accusantium dignissimos corporis molestias. Corporis blanditiis voluptates, atque quis consequatur necessitatibus laborum enim quidem eius provident labore.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi labore ratione, necessitatibus adipisci iure in cum quia sed ex eaque vero incidunt reprehenderit, accusantium dignissimos corporis molestias. Corporis blanditiis voluptates, atque quis consequatur necessitatibus laborum enim quidem eius provident labore.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, iusto ea officia, ullam quis modi blanditiis natus corporis molestiae aliquam porro? Reprehenderit libero explicabo blanditiis adipisci voluptates, enim, quasi, eaque vel minima fugit magni. Voluptatibus incidunt, facere provident cum ea vero iure modi ullam? Aperiam libero tenetur mollitia eveniet atque! Quis, in voluptates eligendi quas saepe iusto. Beatae, aut aliquid."
+        ]
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur laboriosam, magni esse voluptate, repellendus explicabo exercitationem tempore, porro numquam ea sed quia culpa perspiciatis maxime voluptates veniam quibusdam error ratione a praesentium laborum debitis? Nam perspiciatis repudiandae ab nulla illum.",
+        "points": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!"
+        ],
+        "subDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea praesentium nulla deleniti, minus, voluptates aliquam magnam inventore tenetur natus adipisci aut earum veritatis. Animi odio incidunt veniam quidem minus id, nisi saepe exercitationem eveniet dolore nesciunt neque eligendi dolores, nobis vel magnam sunt hic autem quae? Est dolor, tempora incidunt recusandae minus nihil excepturi. Laborum nostrum magni quos quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea praesentium nulla deleniti, minus, voluptates aliquam magnam inventore tenetur natus adipisci aut earum veritatis. Animi odio incidunt veniam quidem minus id, nisi saepe exercitationem eveniet dolore nesciunt neque eligendi dolores, nobis vel magnam sunt hic autem quae? Est dolor, tempora incidunt recusandae minus nihil excepturi. Laborum nostrum magni quos quia?"
+      },
+      "staciaHelp": {
+        "title": "How Stacia can help",
+        "subtitle": "Lorem ipsum dolor sit amet.",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus deserunt eum quod similique, explicabo officia voluptatibus minima commodi deleniti.",
+        "subDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, qui laborum! Incidunt accusantium consectetur qui odio aspernatur fugit laboriosam reprehenderit, sunt ipsum ipsa facere a tempora dolorem, expedita vitae dignissimos, quam quae distinctio voluptas pariatur laborum officiis. Autem dicta deserunt amet repudiandae non, voluptates quae beatae ratione dolores libero ad explicabo repellat magnam molestiae blanditiis reprehenderit assumenda consectetur ea. Amet consequuntur reiciendis fugiat minus voluptatum. Quisquam et nesciunt dolorem cum?",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates dolor eos voluptate, illo laborum fuga possimus iusto quasi.",
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa consectetur tenetur, labore ex molestiae sed fugit fugiat eaque! Porro, possimus!",
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem soluta facere voluptatibus dolores quidem impedit fugiat minima, laudantium doloribus eligendi?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vitae, dolore recusandae in similique accusamus accusantium aut quos mollitia impedit?"
+        ]
+      }
+    },
+    {
+      "id": "tech-002",
+      "title": "AI Chatbot Version",
+      "starComponent": "true",
+      "template": "template2",
+      "heading": {
+        "title": "Lorem ipsum has been the industry's standard dummy",
+        "topic": "ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis."
+      },
+      "industry": {
+        "title": "Industry's",
+        "topics": [
+          "Solar Radiation",
+          "Solar Radiation",
+          "Solar Radiation"
+        ],
+        "image": "/assets/Engine2.webp"
+      },
+      "Heading2": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+      "product": {
+        "title": "The Product",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque inventore rerum deserunt facere aliquid. Ratione dolorum, pariatur exercitationem est obcaecati nostrum doloribus numquam, a blanditiis accusamus iure eaque ex eligendi distinctio? Harum iste impedit temporibus maxime, eum repellat quidem accusantium, obcaecati blanditiis aspernatur fuga optio, consectetur doloremque esse dolores a."
+      },
+      "midContent": {
+        "title": "lorem ipsum lorem ipsum lorem ipsum",
+        "para": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "problem": {
+        "title": "Problem",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur laboriosam, magni esse voluptate, repellendus explicabo exercitationem tempore, porro numquam ea sed quia culpa perspiciatis maxime voluptates veniam quibusdam error ratione a praesentium laborum debitis? Nam perspiciatis repudiandae ab nulla illum....",
+        "points": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores....",
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores."
+        ]
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur laboriosam, magni esse voluptate, repellendus explicabo exercitationem tempore, porro numquam ea sed quia culpa perspiciatis maxime voluptates veniam quibusdam error ratione a praesentium laborum debitis? Nam perspiciatis repudiandae ab nulla illum.",
+        "points": [
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore fuga voluptatum corporis repellendus similique excepturi quae fugiat laudantium non asperiores.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut veniam quod inventore cum quo ullam voluptatibus dolores minima delectus dolore!"
+        ],
+        "subDescription": [
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac.",
+          "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac."
+        ]
+      },
+      "staciaHelp": {
+        "title": "How Stacia can help",
+        "subtitle": "Lorem ipsum dolor sit amet.",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus deserunt eum quod similique, explicabo officia voluptatibus minima commodi deleniti.",
+        "subDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, qui laborum! Incidunt accusantium consectetur qui odio aspernatur fugit laboriosam reprehenderit, sunt ipsum ipsa facere a tempora dolorem, expedita vitae dignissimos, quam quae distinctio voluptas pariatur laborum officiis. Autem dicta deserunt amet repudiandae non, voluptates quae beatae ratione dolores libero ad explicabo repellat magnam molestiae blanditiis reprehenderit assumenda consectetur ea. Amet consequuntur reiciendis fugiat minus voluptatum. Quisquam et nesciunt dolorem cum?",
+        "points": [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores voluptates dolor eos voluptate, illo laborum fuga possimus iusto quasi.",
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa consectetur tenetur, labore ex molestiae sed fugit fugiat eaque! Porro, possimus!",
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem soluta facere voluptatibus dolores quidem impedit fugiat minima, laudantium doloribus eligendi?",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vitae, dolore recusandae in similique accusamus accusantium aut quos mollitia impedit?"
+        ]
       }
     }
   ]

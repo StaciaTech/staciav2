@@ -1,7 +1,7 @@
 {
   "department": [
     {
-      "id":"electronics-001",
+      "id": "electronics-001",
       "name": "Electronics",
       "category": [
         {
@@ -52,7 +52,6 @@
                   "description": "The soft touch button enables users to easily change modes, allowing for seamless transitions between heating, cooling, standby, and off settings. Its responsive design ensures quick activation and enhances user convenience, making it simple to adjust the bottle’s functions according to personal preferences."
                 },
                 {
-
                   "id": "detail-002",
                   "imageUrl": "/assets/ProductPage/Responsive-Led.webp",
                   "title": "Responsive Led",
@@ -79,7 +78,7 @@
               ]
             },
             {
-              "id":"product-002",
+              "id": "product-002",
               "title": "RFID Child Tracking Device",
               "description": "A versatile child safety solution available as a card, module, or watch, this RFID tracking device ensures real-time location updates and customizable alerts. It’s adaptable for school, play, and travel, and extends its utility to applications like pet tracking, asset management, and workforce monitoring. This device offers parents peace of mind and provides efficient tracking for a wide range of needs",
               "imageUrl": "/assets/ProductPage/RFID-Child-Tracking-Device.webp",
@@ -102,7 +101,7 @@
               ]
             },
             {
-              "id":"product-003",
+              "id": "product-003",
               "title": "Smart Furniture",
               "description": "Experience the future of home and office living with Smart Furniture. Featuring wireless charging, a built-in beverage heating and cooling system, intelligent lighting, and a retractable arm system for holding laptops or books with a nightlight. It also includes pop-up sockets and AI voice assistance for basic electronic controls like lights and AC. Smart Furniture combines functionality, comfort, and technology to redefine your personal and professional spaces",
               "imageUrl": "/assets/ProductPage/Smart Furniture.webp",
@@ -135,7 +134,7 @@
               ]
             },
             {
-              "id":"product-004",
+              "id": "product-004",
               "title": "S Connect (Smart Speaker)",
               "description": "S Connect is a next-gen smart speaker combining premium sound quality with intelligent voice control. It connects seamlessly to your smart devices, enabling hands-free operation and integration with IoT systems. Designed for versatility, it fits effortlessly into any setting, offering personalized assistance, dynamic entertainment, and superior connectivity. S Connect transforms your space into a hub of convenience and innovation.",
               "imageUrl": "/assets/ProductPage/S Connect (Smart Speaker).webp",
@@ -180,16 +179,15 @@
         }
       ]
     },
-
     {
-      "id":"mechanical-002",
+      "id": "mechanical-002",
       "name": "Mechanical",
       "category": [
         {
-          "id":"category-001",
-          "name": "Agri and Food Processing SPM",
-          "description": "Empower your agri-business with our specialized machinery for food processing and agriculture. We design and build SPMs (Special Purpose Machines) tailored to optimize post-harvest processing, packaging, and quality assurance. From seed sorting to product packaging, our innovative solutions enhance productivity, reduce waste, and ensure compliance with food safety standards. Trust our expertise to deliver efficiency and value to your agricultural operations",
-          "imageUrl": "/assets/istockphoto.webp",
+          "id": "category-002",
+          "name": "IoT Smart Products",
+          "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
+          "imageUrl": "/assets/ProductPage/iot_devices.webp",
           "products": [
             {
               "id":"product-001",
@@ -397,7 +395,6 @@
         }            
       ]
     },
-
     {
       "id":"tech-003",
       "name": "Tech",
