@@ -1,28 +1,53 @@
-import React,{ useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
+
 // import ReverseKettle from "../assets/Reverse-Kettle.webp";
 import Data from "../Data//Templates.json";
 
 const Template3 = () => {
-      const { title } = useParams(); 
-      const [project, setProject] = useState(null);
-      
-      useEffect(() => {
-        // Find the project that matches the URL title
-        const matchedProject = Data.projects.find(
-          (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
-        );
-      
-        if (matchedProject) {
-          setProject(matchedProject);
-        }
-      }, [title]);
-      
-      if (!project) {
-        return <div>Loading...</div>;
+  const { title } = useParams();
+  const [project, setProject] = useState(null);
+
+  useEffect(() => {
+      if (!Data || !Data.Projects) {
+        console.error("Data is undefined or does not contain Projects", Data);
+        return;
       }
+    
+      console.log("Template5 Data Structure:", Data.Projects);
+    
+      // Normalize projectTitle from URL
+      const normalizedTitle = decodeURIComponent(title)
+        .replace(/-/g, " ") // Replace hyphens with spaces
+        .trim()
+        .toLowerCase();
+    
+      console.log("url title: ", normalizedTitle);
+    
+      let foundProject = null;
+    
+      // Loop through each category to find the matching project
+      Data.Projects.forEach((projectCategory) => {
+        projectCategory.categories.forEach((category) => {
+          category.projects.forEach((item) => {
+            if (item.title.trim().toLowerCase() === normalizedTitle) {
+              foundProject = item;
+            }
+          });
+        });
+      });
+    
+      console.log("Matching Project in Template5:", foundProject);
+    
+      if (foundProject) {
+        setProject(foundProject);
+      } else {
+        console.error("Project not found in Template5!");
+      }
+    }, [title, Data]);
+    
   return (
     <div>
       <div className="temp5-project_container">
@@ -45,7 +70,7 @@ const Template3 = () => {
         <div>
           <div className="temp2-title1">{project?.industry?.title}</div>
           <div className="temp2-topic">
-          Topics:{" "}
+            Topics:{" "}
             {project?.industry?.topics?.map((topic, index) => (
               <span key={index}>
                 <span style={{ color: "#0047FF" }}> #</span>
@@ -57,7 +82,7 @@ const Template3 = () => {
         <div>
           <div className="head-temp-style">{project?.product?.title}</div>
           {project?.product?.description?.map((para, index) => (
-              <p className="para-temp-styles"key={index}>{para}</p>
+              <p className="para-temp-styles temp-margin"key={index}>{para}</p>
             ))}
         </div>
         <div className="temp3-sec1-title">
@@ -77,19 +102,19 @@ const Template3 = () => {
         </div>
         <div>
           <div className="head-temp-style">{project?.Approach?.title}</div>
-          <p className="para-temp-styles para-content">
+          <p className="para-temp-styles temp-margin">
           {project?.Approach?.content}
           </p>
         </div>
-        <ul className="para-temp-styles">
+        <ul className="temp2-points">
               {project?.Approach?.points?.map((para, index) => (
-                <li key={index}>{para}</li>
+                <li className="para-temp-styles" key={index}>{para}</li>
               ))}
           </ul>
         <div>
           <div className="head-temp-style">{project?.Result?.title}</div>
           {project?.Result?.content?.map((para, index) => (
-              <p className="para-temp-styles para-content"key={index}>{para}</p>
+              <p className="para-temp-styles temp-margin"key={index}>{para}</p>
             ))}
         </div>
         <div className="temp3-sec1-title">
@@ -101,7 +126,7 @@ const Template3 = () => {
         <p className="designation">{project?.testimonial2?.designation}</p>
         <div className="temp2-head">
           <div className="temp2-title1">
-          {project?.Heading2?.title}
+            {project?.Heading2?.title}
           </div>
           <div className="temp2-content1">
             Goal: <span>{project?.Heading1?.topic}</span>
@@ -109,37 +134,37 @@ const Template3 = () => {
         </div>
         <div>
           <div className="head-temp-style">{project?.Approach1?.title}</div>
-          <p className="para-temp-styles para-content">
+          <p className="para-temp-styles temp-margin">
           {project?.Approach1?.content}
           </p>
         </div>
-        <ul className="para-temp-styles">
+        <ul className="temp2-points">
               {project?.Approach1?.points?.map((para, index) => (
-                <li key={index}>{para}</li>
+                <li className="para-temp-styles" key={index}>{para}</li>
               ))}
           </ul>
         <div>
           <div className="head-temp-style">{project?.Result1?.title}</div>
           {project?.Result1?.content?.map((para, index) => (
-              <p className="para-temp-styles para-content"key={index}>{para}</p>
+              <p className="para-temp-styles temp-margin"key={index}>{para}</p>
             ))}
         </div>
         <div className="temp3-sec1-title">
           <p>
-          {project?.testimonial3?.description}
+            {project?.testimonial3?.description}
           </p>
         </div>
         <p className="name">{project?.testimonial3?.name}</p>
         <p className="designation">{project?.testimonial3?.designation}</p>
         <div>
           <div className="head-temp-style">{project?.solution?.title}</div>
-          <p className="para-temp-styles para-content">
+          <p className="para-temp-styles temp-margin">
             {project?.solution?.content}
           </p>
         </div>
-        <ul className="para-temp-styles">
+        <ul className="temp2-points">
               {project?.solution?.points?.map((para, index) => (
-                <li key={index}>{para}</li>
+                <li className="para-temp-styles" key={index}>{para}</li>
               ))}
           </ul>
       </div>

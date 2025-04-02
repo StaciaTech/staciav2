@@ -553,8 +553,6 @@
 
 
 
-
-
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/About.css";
 import NavBar from "../components/NavBar";
@@ -785,7 +783,7 @@ function About() {
                           <p className="about-section3-achivment-des test-seclection-blue">
                             {eachAch.des}
                           </p>
-                          <div>Read More</div>
+                          {/* <div>Read More</div> */}
                         </div>
                       ))}
                     </div>
@@ -989,7 +987,11 @@ function About() {
               libero quam accusamus cum voluptatem obcaecati labore explicabo.
               Sit voluptatibus quae molestiae modi temporibus!
             </p>
-            <div className="know-more">Read More</div>
+            <div className="know-more"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              navigate(`/partners`);
+            }}>Read More</div>
           </div>
           <div>
             <img

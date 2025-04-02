@@ -4,24 +4,49 @@ import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data/Templates.json";
 
+
 function Template5() {
   const { title } = useParams(); // Get title from URL
   const [project, setProject] = useState(null);
 
   useEffect(() => {
-    // Find the project that matches the URL title
-    const matchedProject = Data.projects.find(
-      (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
-    );
-
-    if (matchedProject) {
-      setProject(matchedProject);
+    if (!Data || !Data.Projects) {
+      console.error("Data is undefined or does not contain Projects", Data);
+      return;
     }
-  }, [title]);
-
-  if (!project) {
-    return <div>Loading...</div>;
-  }
+  
+    console.log("Template5 Data Structure:", Data.Projects);
+  
+    // Normalize projectTitle from URL
+    const normalizedTitle = decodeURIComponent(title)
+      .replace(/-/g, " ") // Replace hyphens with spaces
+      .trim()
+      .toLowerCase();
+  
+    console.log("url title: ", normalizedTitle);
+  
+    let foundProject = null;
+  
+    // Loop through each category to find the matching project
+    Data.Projects.forEach((projectCategory) => {
+      projectCategory.categories.forEach((category) => {
+        category.projects.forEach((item) => {
+          if (item.title.trim().toLowerCase() === normalizedTitle) {
+            foundProject = item;
+          }
+        });
+      });
+    });
+  
+    console.log("Matching Project in Template5:", foundProject);
+  
+    if (foundProject) {
+      setProject(foundProject);
+    } else {
+      console.error("Project not found in Template5!");
+    }
+  }, [title, Data]);
+  
 
   return (
     <div>
@@ -60,7 +85,7 @@ function Template5() {
             <div className="temp5-sec1-content">
               <div>{project?.section1?.summaryHeading}</div>
               {project?.section1?.executiveSummary?.map((para, index) => (
-                <p key={index}>{para}</p>
+                <p className="para-temp-styles temp-margin" key={index}>{para}</p>
               ))}
             </div>
             <div className="temp5-sec1-img">
@@ -71,7 +96,7 @@ function Template5() {
         <div>
           <div className="head-temp-style">{project?.section2?.heading}</div>
           {project?.section2?.paragraphs?.map((para, index) => (
-            <p className="para-temp-styles" key={index}>
+            <p className="para-temp-styles temp-margin" key={index}>
               {para}
             </p>
           ))}
@@ -85,14 +110,14 @@ function Template5() {
             </div>
           ))}
           {project?.section3?.midSection?.map((item, index) => (
-            <p className="para-temp-styles" key={index}>
+            <p className="para-temp-styles temp-margin" key={index}>
               {item.para}
             </p>
           ))}
           <div className="temp5-sec4-container">
             <div className="temp5-sec3-container">
               <div>
-                <p className="para-temp-styles">{project?.section4?.content}</p>
+                <p className="para-temp-styles temp-margin">{project?.section4?.content}</p>
               </div>
               <div className="temp5-sec4-mid">
                 <hr />
@@ -112,7 +137,7 @@ function Template5() {
           </div>
           {project?.section5 && (
             <>
-              <p className="para-temp-styles">{project?.section5?.content}</p>
+              <p className="para-temp-styles temp-margin">{project?.section5?.content}</p>
               <div className="temp5-sec4-container">
                 <div className="temp5-sec4-title">{project?.section5?.title}</div>
                 <div className="temp5-sec3-container">
@@ -123,7 +148,7 @@ function Template5() {
                     <div className="temp5-sec3-subtitle">
                       {project?.section5?.subsection?.title}
                     </div>
-                    <p className="para-temp-styles">
+                    <p className="para-temp-styles temp-margin">
                       {project?.section5?.subsection?.description}
                     </p>
                   </div>
@@ -132,12 +157,13 @@ function Template5() {
             </>
           )}
           {project?.conclusion?.map((item, index) => (
-            <p className="para-temp-styles" key={index}>
+            <p className="para-temp-styles temp-margin" key={index}>
               {item.para}
             </p>
           ))}
         </div>
       </div>
+      
     </div>
   );
 }

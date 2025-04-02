@@ -8,6 +8,11 @@ import "../styles/NewsRoom.css";
 import axios from "axios";
 import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
 import { el } from "intl-tel-input/i18n";
+import { IoIosArrowForward } from "react-icons/io";
+import stacia from "../assets/newsroom.png";
+
+import { useNavigate } from "react-router-dom";
+
 
 
 import newsRoom from "../Data/Newroom.json";
@@ -26,7 +31,15 @@ const newsArr = [
     key: "news",
   },
   {
-    name: "Achievements & Awards",
+    name: "Featuring",
+    key: "featuring",
+  },
+  {
+    name: "Achievements ",
+    key: "achievements",
+  },
+  {
+    name: "Awards",
     key: "awards",
   },
 ];
@@ -38,6 +51,8 @@ const CarouselArr = [
 ];
 
 function NewsRoomPage() {
+
+  const navigate = useNavigate();
   // const apiUrl = process.env.REACT_APP_API_URL;
   // const [selectedTab, setSelectedTab] = useState("");
   // const [newsData, setNewsData] = useState();
@@ -65,7 +80,7 @@ function NewsRoomPage() {
       setNewsData(newsRoom.news);
     }
   }, [selectedTab]);
-   
+
 
   console.log(newsData);
 
@@ -103,22 +118,31 @@ function NewsRoomPage() {
         </div>
         <div className="news-container">
           <div>News For You</div>
+          <div className="news-container-top">
+            <div className="news-container-top1">
+              <img src={stacia} alt="" />
+            </div>
+            <div className="news-container-top1">
+              <div className="news-container-top2"><h1>Lorem ipsum dolor sit amet, consectetur elit.</h1></div>
+              <div className="news-container-top3">Read more <IoIosArrowForward /></div>
+
+            </div>
+          </div>
+          
           <div>
             {CarouselArr.map((eachItem, i) => {
               return <div></div>;
             })}
           </div>
           <div
-            className={`news-tab-container ${
-              itemsPos ? "move-up" : "move-down"
-            }`}
+            className={`news-tab-container ${itemsPos ? "move-up" : "move-down"
+              }`}
           >
             {newsArr.map((eachNews, i) => (
               <div
                 key={i}
-                className={`news-tab ${
-                  eachNews.key === selectedTab ? "news-tab-active" : ""
-                }`}
+                className={`news-tab ${eachNews.key === selectedTab ? "news-tab-active" : ""
+                  }`}
                 onClick={() => setSelectedTab(eachNews.key)}
               >
                 {eachNews.name}
@@ -126,15 +150,94 @@ function NewsRoomPage() {
             ))}
           </div>
           {/* <div>{FoundObj.video && <video src={FoundObj.video} />}</div> */}
-          {selectedTab !== "awards" ? (
+
+
+          {selectedTab == "featuring" ? (
+            <div>
+              {newsData?.map((newsItem, i) => (
+                <div key={i}>
+                  <div className="news-card-item-video">
+                    <video src={newsItem.video} alt="" controls />
+                  </div>
+                  <div className="news-card-item-detail">{newsItem.detail}</div>
+                  <div className="news-card-item-date">{newsItem.date}</div>
+
+
+                  <div className="news-cards-container">
+                    <div >
+                      <div className="news-card-item-img">
+                        <img src={newsItem.image.imageUrl} alt="" />
+                      </div>
+                      <div className="news-card-item-title">{newsItem.title}</div>
+                      <div className="news-card-item-date">{newsItem.date}</div>
+                    </div>
+                  </div>
+
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div>
+              {selectedTab !== "awards" ? (
+
+
+                <div className="news-cards-container">
+
+                  {newsData?.map((newsItem, i) => (
+                    <div key={i}
+                      onClick={() => {
+                        navigate(
+                          `${selectedTab}/${
+                          // eachItem.id.split(" ").join("-") ||  //caseStudy- id track
+
+                          // article page
+                          newsItem.title.split(" ").join("-") ||
+                          newsItem.mainTitle.split(" ").join("-")
+                          }`
+                        );
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <div className="news-card-item-img">
+                        <img src={newsItem.image.imageUrl} alt="" />
+                      </div>
+                      <div className="news-card-item-title">{newsItem.title}</div>
+                      <div className="news-card-item-date">{newsItem.date}</div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div>
+                  {newsData?.map((newsItem, i) => {
+                    return (
+                      <div key={i} className="news-achivement-container">
+                        <div className="news-chive-content">
+                          <div>{newsItem.title}</div>
+                          <p>{newsItem.description}</p>
+                        </div>
+                        <div className="news-achive-img">
+                          <img src={newsItem.image.imageUrl} alt="" />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}</div>)}
+
+
+
+          {/* {selectedTab !== "awards" ? (
+
+
             <div className="news-cards-container">
+
               {newsData?.map((newsItem, i) => (
                 <div key={i}>
                   <div className="news-card-item-img">
                     <img src={newsItem.image.imageUrl} alt="" />
                   </div>
                   <div className="news-card-item-title">{newsItem.title}</div>
-                  <div className="news-card-item-date">Jan 2 2025</div>
+                  <div className="news-card-item-date">{newsItem.date}</div>
                 </div>
               ))}
             </div>
@@ -154,7 +257,7 @@ function NewsRoomPage() {
                 );
               })}
             </div>
-          )}
+          )} */}
         </div>
       </div>
 

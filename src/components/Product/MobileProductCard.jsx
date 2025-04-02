@@ -2,14 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function MobileProductCard({
+  proId,
   proName,
   proImg,
-  proDesc,
-  proId,
+  proDesc, 
   FoundCat,
   FoundDept,
 }) {
+  const depKey = FoundDept.name.split(" ").join("-");
+  console.log(depKey, "MobileProductCard")
+
   const productKey = proName.split(" ").join("-");
+  // const productKey = proName.split(" ").join("-");
+  console.log(productKey, "productKey");
+
 
   return (
     <div className="mobile-product-card" style={{ backgroundColor: "" }}>
@@ -25,10 +31,11 @@ export default function MobileProductCard({
 
       <Link
         className="mb-pro-read-more"
-        to={`/products/${FoundDept.name}/${FoundCat.name}/${productKey}`}
+        // to={`/products/${FoundDept}/${FoundCat.id}/${productKey}`}
+        to={`/products/${FoundDept.name}/${FoundCat.name.split(" ").join("-")}/${productKey}`}
         onClick={() => window.scrollTo(0, 0)}
       >
-        Read more
+        Read More
       </Link>
     </div>
   );

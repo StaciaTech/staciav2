@@ -2,27 +2,51 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
+
 import Data from "../Data//Templates.json";
 
 function Template1() {
-    const { title } = useParams(); // Get title from URL
-    const [project, setProject] = useState(null);
-  
-    useEffect(() => {
-      // Find the project that matches the URL title
-      const matchedProject = Data.projects.find(
-        (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
-      );
-  
-      if (matchedProject) {
-        setProject(matchedProject);
+  const { title } = useParams(); // Get title from URL
+  const [project, setProject] = useState(null);
+
+  useEffect(() => {
+      if (!Data || !Data.Projects) {
+        console.error("Data is undefined or does not contain Projects", Data);
+        return;
       }
-    }, [title]);
-  
-    if (!project) {
-      return <div>Loading...</div>;
-    }
-  
+    
+      console.log("Template5 Data Structure:", Data.Projects);
+    
+      // Normalize projectTitle from URL
+      const normalizedTitle = decodeURIComponent(title)
+        .replace(/-/g, " ") // Replace hyphens with spaces
+        .trim()
+        .toLowerCase();
+    
+      console.log("url title: ", normalizedTitle);
+    
+      let foundProject = null;
+    
+      // Loop through each category to find the matching project
+      Data.Projects.forEach((projectCategory) => {
+        projectCategory.categories.forEach((category) => {
+          category.projects.forEach((item) => {
+            if (item.title.trim().toLowerCase() === normalizedTitle) {
+              foundProject = item;
+            }
+          });
+        });
+      });
+    
+      console.log("Matching Project in Template5:", foundProject);
+    
+      if (foundProject) {
+        setProject(foundProject);
+      } else {
+        console.error("Project not found in Template5!");
+      }
+    }, [title, Data]);
+
   return (
     <div>
       <div className="temp5-project_container">
@@ -63,19 +87,19 @@ function Template1() {
         </div>
         <div>
           <div className="head-temp-style">{project?.product?.title}</div>
-          <p className="para-temp-styles">{project?.product?.description}</p>
+          <p className="para-temp-styles temp-margin">{project?.product?.description}</p>
           <div className="head-temp1-style">{project?.product?.subTitle}</div>
           <p className="para-temp-styles">{project?.product?.subDescription}</p>
           <div className="Problem-solution-temp-style">
             <div className="head-temp-style">{project?.problem?.title}</div>
             <p className="para-temp-styles">{project?.problem?.description}</p>
-            <ul className="para-temp-styles">
+            <ul className="temp2-points">
               {project?.problem?.points?.map((para, index) => (
-                <li key={index}>{para}</li>
+                <li className="para-temp-styles" key={index}>{para}</li>
               ))}
             </ul>
             {project?.problem?.subDescription?.map((para, index) => (
-              <p className="para-temp-styles"key={index}>{para}</p>
+              <p className="para-temp-styles temp-margin"key={index}>{para}</p>
             ))}
           </div>
           <div className="Problem-solution-temp-style">
@@ -83,13 +107,13 @@ function Template1() {
             <p className="para-temp-styles">
               {project?.solution?.description}
             </p>
-            <ul className="para-temp-styles">
+            <ul className="temp2-points">
               {project?.solution?.points?.map((para, index) => (
-                <li key={index}>{para}</li>
+                <li className="para-temp-styles" key={index}>{para}</li>
               ))}
             </ul>
           </div>
-          <p className="para-temp-styles">
+          <p className="para-temp-styles temp-margin">
             {project?.solution?.subDescription}
           </p>
           <hr />
@@ -99,21 +123,22 @@ function Template1() {
               <div className="temp1-sec3-subtitle">
                 {project?.staciaHelp?.subtitle}
               </div>
-              <p className="para-temp-styles">
+              <p className="para-temp-styles temp-margin">
                 {project?.staciaHelp?.description}
               </p>
             </div>
           </div>
-          <p className="para-temp-styles">
+          <p className="para-temp-styles temp-margin">
             {project?.staciaHelp?.subDescription}
           </p>
-          <ul className="para-temp-styles">
+          <ul className="temp2-points">
               {project?.staciaHelp?.points?.map((para, index) => (
-                <li key={index}>{para}</li>
+                <li className="para-temp-styles" key={index}>{para}</li>
               ))}
             </ul>
         </div>
       </div>
+     
     </div>
   );
 }

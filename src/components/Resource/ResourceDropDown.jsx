@@ -449,8 +449,7 @@ import "../../styles/ResourceDropDown.css";
 import Star from "../../assets/loadingStar.svg";
 import { useNavigate } from "react-router-dom";
 import casedoc from "../../Data/SingleCaseStudy.json";
-import artical from '../../Data/Articles.json'
-
+import article from "../../Data/Articles.json";
 
 function ResourceDropDown({ handleClose }) {
   const navigate = useNavigate();
@@ -461,7 +460,7 @@ function ResourceDropDown({ handleClose }) {
 
   useEffect(() => {
     setCaseStudyData(casedoc?.singlecasestudy || []);
-    setArticlesData(artical?.docs || []);
+    setArticlesData(article.docs);
   }, []);
 
   const ResourceArr = [
@@ -488,7 +487,7 @@ function ResourceDropDown({ handleClose }) {
     if (activeDept && activeResArr?.cats) {
       setCurrentCat(
         activeResArr.cats.find((eachItem) => eachItem.name === activeDept) ||
-          null
+        null
       );
     }
   }, [activeDept, activeResArr]);
@@ -514,9 +513,8 @@ function ResourceDropDown({ handleClose }) {
             <div
               key={i}
               onMouseEnter={() => setActiveRes(eachRes.name)}
-              className={`res-main-item pointer ${
-                eachRes.name === activeRes ? "res-main-item-active" : ""
-              }`}
+              className={`res-main-item pointer ${eachRes.name === activeRes ? "res-main-item-active" : ""
+                }`}
               onClick={() => {
                 window.scrollTo(0, 0);
                 navigate(`/${routKey}`);
@@ -549,9 +547,8 @@ function ResourceDropDown({ handleClose }) {
                 <div
                   key={i}
                   onMouseEnter={() => setActiveDept(eachDept.name)}
-                  className={`res-main-item pointer ${
-                    eachDept.name === activeDept ? "res-main-item-active" : ""
-                  }`}
+                  className={`res-main-item pointer ${eachDept.name === activeDept ? "res-main-item-active" : ""
+                    }`}
                   onClick={() => {
                     window.scrollTo(0, 0);
                     navigate(`/${resRouteKey}/${deptRouteKey}`);
@@ -582,9 +579,8 @@ function ResourceDropDown({ handleClose }) {
               {currentcat.data.map((dot, i) => (
                 <div
                   key={i}
-                  className={`res-title-dot ${
-                    dot.title === activeArt ? "res-title-dot-active" : ""
-                  }`}
+                  className={`res-title-dot ${dot.title === activeArt ? "res-title-dot-active" : ""
+                    }`}
                 />
               ))}
             </div>
@@ -601,14 +597,15 @@ function ResourceDropDown({ handleClose }) {
                 <div
                   key={i}
                   onMouseEnter={() => setActiveArt(eachItem.title)}
-                  className={`res-main-item pointer ${
-                    eachItem.title === activeArt ? "res-main-item-active" : ""
-                  }`}
+                  className={`res-main-item pointer ${eachItem.title === activeArt ? "res-main-item-active" : ""
+                    }`}
                   onClick={() => {
                     window.scrollTo(0, 0);
                     navigate(
-                      `/case-study/single-caseStudy/${eachItem?.id || ""}` //----
+                      // `/case-study/single-caseStudy/${eachItem?.id || ""}` //----
+
                     );
+                    navigate(`/${resRouteKey}/${deptRouteKey}/${eachItem?.id ||artRouteKey}`);
                     handleClose();
                   }}
                 >
@@ -646,8 +643,7 @@ function ResourceDropDown({ handleClose }) {
               navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`);// path casestudy
               handleClose();
               navigate(
-                `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${
-                  activeDept?.replace(/\s+/g, "-") || ""
+                `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "-") || ""
                 }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
               );
               handleClose();

@@ -166,8 +166,8 @@ const EventList = () => {
                     <h2 className="event-title1">{title}</h2>
                     <p className="event-description1">{description}</p>
                     <p className="event-details1">
-                        <img src={dateimg} className="event-icon1" alt="icon" /> {date ? formatDate(date) : "No date available"}
-                        <img src={eventtag} className="event-icon1" alt="icon" /> {eventTags}
+                        <img src={dateimg} className="event-icon1" alt="icon" /> <h4>{date ? formatDate(date) : "No date available"}</h4>
+                        <img src={eventtag} className="event-icon1" alt="icon" /> <h4>{eventTags}</h4>
                     </p>
                     <button
                         onClick={() => {
@@ -176,7 +176,7 @@ const EventList = () => {
                         }}
                         className="learn-more-btn1"
                     >
-                        Learn More <img src={vector} alt="arrow" className="arrow-icon" />
+                        Learn More <IoIosArrowForward />
                     </button>
                     <div className="button-group1">
                         <button className="register-btn1">Register Now</button>
@@ -201,9 +201,9 @@ const EventList = () => {
                     <div className="all-btn-evt">
 
                         <button value="All" className="all-btn" onClick={(e) => setDepartment(e.target.value)} >All Events</button>
-                        <button value="Electronics" className="all-btn" onClick={(e) => setDepartment(e.target.value)}> Tech Events </button>
-                        <button value="Technology" className="all-btn" onClick={(e) => setDepartment(e.target.value)}> Mechanical Events </button>
-                        <button value="Mechanical" className="all-btn" onClick={(e) => setDepartment(e.target.value)}> Electronic Events </button>
+                        <button value="Electronics" className="all-btn" onClick={(e) => setDepartment(e.target.value)}> Electronic Events </button>
+                        <button value="Mechanical" className="all-btn" onClick={(e) => setDepartment(e.target.value)}> Mechanical Events </button>
+                        <button value="Technology" className="all-btn" onClick={(e) => setDepartment(e.target.value)}> Tech Events </button>
 
 
                     </div>

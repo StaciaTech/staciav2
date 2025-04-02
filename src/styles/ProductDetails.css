@@ -28,6 +28,8 @@
   color: #fff;
   position: relative;
   width: fit-content;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .product-category {
@@ -150,6 +152,8 @@
 }
 .single-pro-container2 > p {
   color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  line-height: 0.9cm;
 }
 .mobile-rotate-text {
   color: rgba(13, 2, 37, 0.2);
@@ -275,6 +279,8 @@
 }
 .product-category-content-container > p {
   width: 70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

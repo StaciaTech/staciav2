@@ -1,3 +1,5 @@
+
+
 import React, { useRef } from "react";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "../../styles/About.css";
@@ -108,4 +110,4 @@ function AboutCarousel() {
   );
 }
 
-export default AboutCarousel;
+export default AboutCarousel; 

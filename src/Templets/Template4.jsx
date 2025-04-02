@@ -4,24 +4,49 @@ import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data//Templates.json";
 
+
 function Template4() {
   const { title } = useParams();
   const [project, setProject] = useState(null);
 
   useEffect(() => {
-    // Find the project that matches the URL title
-    const matchedProject = Data.projects.find(
-      (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
-    );
-
-    if (matchedProject) {
-      setProject(matchedProject);
-    }
-  }, [title]);
-
-  if (!project) {
-    return <div>Loading...</div>;
-  }
+      if (!Data || !Data.Projects) {
+        console.error("Data is undefined or does not contain Projects", Data);
+        return;
+      }
+    
+      console.log("Template5 Data Structure:", Data.Projects);
+    
+      // Normalize projectTitle from URL
+      const normalizedTitle = decodeURIComponent(title)
+        .replace(/-/g, " ") // Replace hyphens with spaces
+        .trim()
+        .toLowerCase();
+    
+      console.log("url title: ", normalizedTitle);
+    
+      let foundProject = null;
+    
+      // Loop through each category to find the matching project
+      Data.Projects.forEach((projectCategory) => {
+        projectCategory.categories.forEach((category) => {
+          category.projects.forEach((item) => {
+            if (item.title.trim().toLowerCase() === normalizedTitle) {
+              foundProject = item;
+            }
+          });
+        });
+      });
+    
+      console.log("Matching Project in Template5:", foundProject);
+    
+      if (foundProject) {
+        setProject(foundProject);
+      } else {
+        console.error("Project not found in Template5!");
+      }
+    }, [title, Data]);
+    
   return (
     <div>
       <div className="temp5-project_container">
@@ -42,12 +67,12 @@ function Template4() {
       </div>
       <div className="temp5-content-container">
         <div>
-          <div className="temp5-sec1-title">L{project?.section1?.title}</div>
+          <div className="temp5-sec1-title">{project?.section1?.title}</div>
           <div className="temp5-sec1-container">
             <div className="temp5-sec1-content">
               <div>{project?.section1?.summaryHeading}</div>
               {project?.section1?.executiveSummary?.map((para, index) => (
-                <p key={index}>{para}</p>
+                <p className="para-temp-styels temp-margin" key={index}>{para}</p>
               ))}
             </div>
             <div className="temp5-sec1-img">
@@ -68,7 +93,7 @@ function Template4() {
             <div className="head2-temp-style head2-mid-container">
               {project?.midContainer?.title}
             </div>
-            <p className="para-temp-styles para-mid-container">
+            <p className="para-temp-styles temp-margin">
               {project?.midContainer?.content}
             </p>
           </div>
@@ -79,7 +104,7 @@ function Template4() {
               <div className="temp5-sec2-list-num">{item.number}</div>
               <div>
                 <div className="temp5-sec2-list-title">{item.title}</div>
-                <p className="para-temp-styles">{item.description}</p>
+                <p className="para-temp-styles temp-margin">{item.description}</p>
               </div>
             </div>
           ))}
@@ -100,6 +125,7 @@ function Template4() {
           </div>
         </div>
       </div>
+     
     </div>
   );
 }
