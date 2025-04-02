@@ -8,15 +8,15 @@ import Template2 from "../Templets/Template2";
 import Template3 from "../Templets/Template3";
 import Template4 from "../Templets/Template4";
 import Template5 from "../Templets/Template5";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
+import RelatedProjects from "../components/RelatedProjects";
 import templatesData from "../Data/Templates.json";
-import ProjectsData from "../Data/ProjectsData.json"
+// import ProjectsData from "../Data/ProjectsData.json"
 
 function SingleProject() {
-    const location = useLocation();
-    const pathSegments = location.pathname.split("/");
-    const projectTitle = pathSegments[pathSegments.length - 1]; // Extract and decode project title
-    const [projectData, setProjectData] = useState(null);
+  const { department, category, title } = useParams(); // 🟢 Extract from URL
+  const [projectData, setProjectData] = useState(null);
     // const [relatedProjects, setRelatedProjects] = useState(null);
   
     // Templates Object
@@ -29,30 +29,68 @@ function SingleProject() {
       };
     
       useEffect(() => {
-          if (templatesData?.projects) {
-              console.log("Project Data Structure:", templatesData.projects);
+        if (!templatesData || !templatesData.Projects) {
+          console.error("templatesData is undefined or not structured properly");
+          return;
+        }
+      
+        console.log("Project Data Structure:", templatesData.Projects);
+      
+        // Normalize projectTitle from URL
+        const normalizedTitle = decodeURIComponent(title)
+          .replace(/-/g, " ") // Replace hyphens with spaces
+          .trim()
+          .toLowerCase();
+      
+        console.log("url title: ", normalizedTitle);
+      
+        let foundProject = null;
+      
+        // Loop through each category to find the matching project
+        templatesData.Projects.forEach((projectCategory) => {
+          projectCategory.categories.forEach((category) => {
+            category.projects.forEach((item) => {
+              if (item.title.trim().toLowerCase() === normalizedTitle) {
+                foundProject = item;
+              }
+            });
+          });
+        });
+      
+        console.log("Matching Project:", foundProject);
+      
+        if (foundProject) {
+          setProjectData(foundProject);
+        } else {
+          console.error("Project not found!");
+        }
+      }, [title, templatesData]);
+      
+      // useEffect(() => {
+      //     if (templatesData?.projects.categories.projects) {
+      //         console.log("Project Data Structure:", templatesData.projects);
   
-      // Normalize projectTitle from URL
-      const normalizedTitle = decodeURIComponent(projectTitle)
-        .replace(/-/g, " ") // Replace hyphens with spaces
-        .trim()
-        .toLowerCase();
+      // // Normalize projectTitle from URL
+      // const normalizedTitle = decodeURIComponent(projectTitle)
+      //   .replace(/-/g, " ") // Replace hyphens with spaces
+      //   .trim()
+      //   .toLowerCase();
 
-      console.log("url title: ", normalizedTitle)
-      // Find the project
-      const project = templatesData.projects.find(
-          (item) => item.title.trim().toLowerCase() === normalizedTitle
-        );
+      // console.log("url title: ", normalizedTitle)
+      // // Find the project
+      // const project = templatesData.projects.categories.projects.find(
+      //     (item) => item.title.trim().toLowerCase() === normalizedTitle
+      //   );
   
-        console.log("Matching Project:", project);
+      //   console.log("Matching Project:", project);
   
-        if (project) {
-            setProjectData(project);
-          } else {
-              console.error("Project not found!");
-            }
-          }
-        }, [projectTitle, templatesData]);
+      //   if (project) {
+      //       setProjectData(project);
+      //     } else {
+      //         console.error("Project not found!");
+      //       }
+      //     }
+      //   }, [projectTitle, templatesData]);
       
       
         return (
@@ -60,6 +98,7 @@ function SingleProject() {
               <NavBar />
               <SideBar />
               {projectData ? templates[projectData.template] : <p>No matching template found.</p>}
+              {/* <RelatedProjects department={department} category={category} projectTitle={title} /> */}
               <Footer />
               <MobileFooter />
             </div>

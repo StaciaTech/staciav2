@@ -10,19 +10,42 @@ function Template1() {
   const [project, setProject] = useState(null);
 
   useEffect(() => {
-    // Find the project that matches the URL title
-    const matchedProject = Data.projects.find(
-      (p) => p.title.replace(/\s+/g, "-").toLowerCase() === title.toLowerCase()
-    );
-
-    if (matchedProject) {
-      setProject(matchedProject);
-    }
-  }, [title]);
-
-  if (!project) {
-    return <div>Loading...</div>;
-  }
+      if (!Data || !Data.Projects) {
+        console.error("Data is undefined or does not contain Projects", Data);
+        return;
+      }
+    
+      console.log("Template5 Data Structure:", Data.Projects);
+    
+      // Normalize projectTitle from URL
+      const normalizedTitle = decodeURIComponent(title)
+        .replace(/-/g, " ") // Replace hyphens with spaces
+        .trim()
+        .toLowerCase();
+    
+      console.log("url title: ", normalizedTitle);
+    
+      let foundProject = null;
+    
+      // Loop through each category to find the matching project
+      Data.Projects.forEach((projectCategory) => {
+        projectCategory.categories.forEach((category) => {
+          category.projects.forEach((item) => {
+            if (item.title.trim().toLowerCase() === normalizedTitle) {
+              foundProject = item;
+            }
+          });
+        });
+      });
+    
+      console.log("Matching Project in Template5:", foundProject);
+    
+      if (foundProject) {
+        setProject(foundProject);
+      } else {
+        console.error("Project not found in Template5!");
+      }
+    }, [title, Data]);
 
   return (
     <div>
