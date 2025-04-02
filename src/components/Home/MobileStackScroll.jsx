@@ -15,10 +15,7 @@ export default function MobileStackScroll() {
     dispatch(fetchProducts());
   }, []);
 
-
-
   console.log("Redux State:", homeMobileProducts);
-
 
   // console.log(homeMobileProducts.isLoading);
 
@@ -76,7 +73,6 @@ export default function MobileStackScroll() {
         ) : (
           <div>
             {homeMobileProductData?.map((eachProduct, index) => (
-
               // {homeMobileProductData.map((eachProduct, index) => (
               <div
                 className="mobile-stack-card"
@@ -115,7 +111,12 @@ export default function MobileStackScroll() {
                   <div
                     className="mobile-card-stack-learn-more"
                     onClick={() => {
-                      navigateTo(`/products/${eachProduct.title}`);
+                      // navigateTo(`/products/${eachProduct.title}`);
+                      navigateTo(
+                        `/products/${eachProduct.depName}/${eachProduct.catName
+                          .split(" ")
+                          .join("-")}/${eachProduct.title.split(" ").join("-")}`
+                      );
                       window.scrollTo(0, 0);
                     }}
                   >
