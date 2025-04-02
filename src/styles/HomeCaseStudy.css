@@ -43,8 +43,9 @@
   width: 100%;
   padding: 1.5rem 2rem;
   font-size: 10px;
-  bottom: 1.3rem;
-  overflow: hidden;
+  bottom: 1.5rem;
+  border-radius: 32px;
+
 }
 .image-box-right {
   width: 40px;
