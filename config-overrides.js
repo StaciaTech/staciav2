@@ -11,7 +11,7 @@ module.exports = function override(config, env) {
           },
         },
       }),
-      new CssMinimizerPlugin(), // Minify CSS
+      // new CssMinimizerPlugin(), // Minify CSS
     ];
   }
   return config;
