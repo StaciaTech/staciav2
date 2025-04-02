@@ -14,22 +14,22 @@
               "id": "product-001",
               "title": "Hydration tracking (G-sensor)",
               "description":"An innovative R&D project designed to measure water levels inside a bottle and track the amount consumed with exceptional accuracy of 10mm. It provides hydration reminders at user-specified or AI-recommended intervals, enhancing hydration habits. This technology integrates advanced sensors for real-time monitoring and ensures precision, making it ideal for personalized hydration management and improving overall wellness",
-              "imageUrl": "",
-              "productDetails":[]
+              "imageUrl": "/assets/ProductPage/Default.webp"
+              
             },
             {
               "id": "product-002",
               "title": "Portable Heating, cooling device using semiconductor",
               "description": "A groundbreaking R&D innovation featuring a compact semiconductor-based heating and cooling system. This portable device is small enough to integrate seamlessly into a water bottle and versatile for applications like kettles, tiffin boxes, table coffee warmers/coolers, kitchen appliances, and medical devices. It redefines thermal management, offering convenience, efficiency, and adaptability for diverse personal, professional, and industrial use cases",
-              "imageUrl": "",
-              "productDetails": []
+              "imageUrl": "/assets/ProductPage/Default.webp"
+              
             },
             {
               "id": "product-003",
               "title": "LoRa mesh system with encryption",
               "description": "This R&D project introduces a highly secure LoRa mesh communication system capable of transmitting signals over a 10km radius. It offers encrypted, long-range connectivity ideal for remote monitoring, smart agriculture, disaster management, industrial automation, and IoT networks. Its robust design enables seamless communication in isolated or large-scale environments, making it an excellent choice for applications demanding extended coverage and reliable data transfer.",
-              "imageUrl": "",
-              "productDetails": []
+              "imageUrl": "/assets/ProductPage/Default.webp"
+              
             }
           ]
         },
@@ -173,7 +173,7 @@
               "id": "product-005",
               "title": "Product",
               "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dicta, itaque ab voluptates dolore molestias ea hic vel cupiditate, soluta laboriosam. Debitis voluptatum quo aut esse amet eum necessitatibus adipisci.",
-              "imageUrl": ""
+              "imageUrl": "/assets/ProductPage/Default.webp"
             }
           ]
         }
@@ -185,7 +185,7 @@
       "category": [
         {
           "id": "category-002",
-          "name": "IoT Smart Products",
+          "name": "Agri and Food Processing SPM",
           "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
           "imageUrl": "/assets/ProductPage/iot_devices.webp",
           "products": [
@@ -295,6 +295,7 @@
               "id":"product-005",
               "title": "Bailing Machine",
               "description": "A cost-effective Bailing Machine designed to compress carton boxes to one-fourth of their original volume. Its robust design ensures reliability and efficiency, reducing storage space and simplifying waste management. Suitable for warehouses, recycling centers, and packaging units, this machine offers an economical and practical solution for handling bulk waste materials",
+              "imageUrl":"/assets/ProductPage/Default.webp",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/motorized screw jack.webp",
@@ -316,27 +317,36 @@
             {
               "id":"product-006",
               "title":"Spinach Cleaning Machine",
-              "description":"This Spinach Cleaning Machine cleans and semi-dries spinach with ease and precision. Its adaptable design allows it to handle other crops like lettuce, coriander, and fenugreek. Ideal for agricultural and food processing operations, it ensures hygiene and quality while saving time and labor. This machine is a perfect solution for pre-processing leafy vegetables and herbs"
+              "description":"This Spinach Cleaning Machine cleans and semi-dries spinach with ease and precision. Its adaptable design allows it to handle other crops like lettuce, coriander, and fenugreek. Ideal for agricultural and food processing operations, it ensures hygiene and quality while saving time and labor. This machine is a perfect solution for pre-processing leafy vegetables and herbs",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+
             }
           ]
         },
         {
           "id":"category-002",
-          "name":"Special Purpose Machines (SPM)for Autoancilary or Automobile/Automotive SPM",
+          "name":"Automobile or Automotive SPM",
           "description":"Drive innovation in the automotive industry with our custom-built SPMs. Designed for precision and reliability, our machines cater to various applications, including assembly, testing, and component manufacturing. Leveraging cutting-edge technology, we ensure streamlined workflows and high-quality output. Partner with us for tailored solutions that meet the rigorous demands of the automotive sector, enhancing both efficiency and profitability.",
           "imageUrl": "/assets/ProductPage/iot_devices.webp",
           "products":[
             {
               "id":"product-001",
-              "title":"Brake Shoe Grinding Machine."
+              "title":"Brake Shoe Grinding Machine.",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+              
             },
             {
               "id":"product-002",
-              "title":"Fully autotmated paint booth with dryer"
+              "title":"Fully autotmated paint booth with dryer",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-003",
-              "title":"Automated Adhesive applying machines for wind shields, housings, and Brake pads"
+              "title":"Automated Adhesive applying machines",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
             }
           ] 
         },         
@@ -348,27 +358,39 @@
           "products":[
             {
               "id":"product-001",
-              "title":"Air and Vaccum Leak Test Rigs"
+              "title":"Air and Vaccum Leak Test Rigs",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-002",
-              "title":"Vision based Inspection Test Rigs"
+              "title":"Vision based Inspection Test Rigs",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-003",
-              "title":"End of Line Test Rigs (EOL)"
+              "title":"End of Line Test Rigs (EOL)",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-004",
-              "title":"Endurance Test Rigs"
+              "title":"Endurance Test Rigs",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-005",
-              "title":" Durability Test Rigs."
+              "title":" Durability Test Rigs.",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-006",
-              "title":" Performance Test Rigs"
+              "title":" Performance Test Rigs",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
             }
           ]
         },        
@@ -380,7 +402,9 @@
           "products":[
               {
               "id":"product-001",
-              "title":"1. GEMA Reciprocator"
+              "title":"1. GEMA Reciprocator",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
               }
           ]
         },
@@ -390,7 +414,12 @@
           "description": "Power your operations with our high-performance Actuators. Designed for precision and efficiency, our actuators deliver smooth and controlled motion across a variety of applications. From industrial automation to heavy machinery, we offer a range of electric, hydraulic, and pneumatic actuators to suit your needs. Experience enhanced productivity and reliability with our innovative actuator solutions",
           "imageUrl": "/assets/ProductPage/iot_devices.webp",
           "products":[
-            {}
+            {
+              "id":"product-002",
+              "title":"Product2",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            }
           ]
         }            
       ]
@@ -409,7 +438,7 @@
               "id":"product-001",
               "title":"Product 1",
               "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dicta,",
-              "imageUrl": ""
+              "imageUrl": "/assets/ProductPage/Default.webp"
             }
           ]
         }

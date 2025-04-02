@@ -20,6 +20,7 @@ function StackCard({
   const productKey = eachHomeProduct.title.split(" ").join("-");
   const CategoryKey = eachHomeProduct.catName.split(" ").join("-");
 
+  console.log(depKey,productKey,CategoryKey)
   // const productKey = eachHomeProduct.title.split(" ").join("-");
 
   // const CategoryKey = eachHomeProduct.domainName.split(" ").join("-");
