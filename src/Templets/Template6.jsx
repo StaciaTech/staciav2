@@ -7,8 +7,7 @@ import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data/Articles.json";
 
-import Footer from "../components/Footer";
-import MobileFooter from "../components/MobileFooter";
+
 
 function Template6() {
   const { title } = useParams();
@@ -120,10 +119,7 @@ function Template6() {
           </div>
         </div>
       </div>
-      <div>
-        <Footer />
-        <MobileFooter />
-      </div>
+      
     </div>
   );
 }

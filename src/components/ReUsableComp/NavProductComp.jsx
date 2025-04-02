@@ -382,7 +382,7 @@ function NavProductComp({ handleClose }) {
   const Details = data.department;
   console.log(Details,"Details")
 
-  const [productData, setProductData] = useState(Details);
+  const [productData, setProductData] = useState();
 
   // const FetchProducts = () => {
   //   try {
@@ -432,7 +432,7 @@ function NavProductComp({ handleClose }) {
   const HandleMainCatHover = (MainCat) => {
     // console.log(MainCat);
 
-    const MainCatArrObj = productData?.find((item) => item.name === deptname);
+    const MainCatArrObj = productData?.find((item) => item.name=== deptname);
     // console.log(MainCatArrObj?.category);
 
     setMainCatName(MainCat);
@@ -542,7 +542,7 @@ function NavProductComp({ handleClose }) {
       console.log("Product not found");
     }
   };
-
+  
   // const result = findProductPath(productData, productTitle);
 
   return (

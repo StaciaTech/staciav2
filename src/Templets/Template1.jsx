@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
-import Footer from "../components/Footer";
-import MobileFooter from "../components/MobileFooter";
+
 import Data from "../Data//Templates.json";
 
 function Template1() {
@@ -116,10 +115,7 @@ function Template1() {
             </ul>
         </div>
       </div>
-      <div>
-        <Footer />
-        <MobileFooter />
-      </div>
+     
     </div>
   );
 }

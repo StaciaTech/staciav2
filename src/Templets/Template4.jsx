@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data//Templates.json";
-import Footer from "../components/Footer";
-import MobileFooter from "../components/MobileFooter";
+
 
 function Template4() {
   const { title } = useParams();
@@ -102,10 +101,7 @@ function Template4() {
           </div>
         </div>
       </div>
-      <div>
-        <Footer />
-        <MobileFooter />
-      </div>
+     
     </div>
   );
 }

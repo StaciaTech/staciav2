@@ -553,8 +553,6 @@
 
 
 
-
-
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/About.css";
 import NavBar from "../components/NavBar";
@@ -704,16 +702,25 @@ function About() {
                 <img src={Stacialogo} alt="" />
               </div>
               <p className="about-section1-right-text test-seclection-blue">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis
-                ut architecto vel sunt in, soluta nam distinctio molestias
-                laudantium cupiditate reiciendis explicabo tempora atque
-                repellendus inventore harum nulla, ex, expedita sit sequi
-                dolorem praesentium perspiciatis officiis. Reiciendis qui sequi
-                fuga ipsam adipisci, est sunt voluptatem, odio, unde voluptas
-                culpa nam! Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Ducimus dolore voluptatum consequuntur quod odit a, aut
-                unde dignissimos tempora atque fugit blanditiis alias cum
-                laborum facilis cumque explicabo voluptates veritatis!
+                At Stacia Corp, we are dedicated to transforming industries
+                through cutting-edge innovation and sustainable practices.
+                Founded with a mission to address real-world challenges, Stacia
+                Corp is more than just a company—it’s a movement aimed at
+                redefining efficiency, productivity, and impact across critical
+                sectors. We specialize in: Designing Special Purpose Machines
+                (SPMs) and test rigs. Customized software solutions and SaaS
+                products. Electronic product innovation, integrating advanced
+                technology with everyday needs. Recognized as a Government of
+                India-certified startup, Stacia Corp has been honored with
+                numerous awards and accolades. In December 2024, our founders,
+                Mr. Sarabesh Sriram, and Mr. Lakshman PV, were bestowed with the
+                "Entrepreneur of the Year" award by Krishi Jagran and ICAR,
+                solidifying our leadership in innovation and entrepreneurship.
+                With over 200 completed projects across diverse industries,
+                Stacia Corp is a recognized leader in: Special Purpose Machines
+                (SPMs). Test rigs and industrial machinery. Industry 4.0
+                solutions, empowering businesses to embrace the future of
+                automation and smart manufacturing
               </p>
             </div>
           </div>
@@ -750,8 +757,9 @@ function About() {
             {staciaHistory?.map((a, i) => (
               <div
                 key={i}
-                className={`about-section3-dots pointer ${i === activeIndex ? "about-active-dot" : ""
-                  }`}
+                className={`about-section3-dots pointer ${
+                  i === activeIndex ? "about-active-dot" : ""
+                }`}
                 ref={(el) => (dotRefs.current[i] = el)}
                 onClick={() => scrollToSection(i)}
               ></div>
@@ -775,7 +783,7 @@ function About() {
                           <p className="about-section3-achivment-des test-seclection-blue">
                             {eachAch.des}
                           </p>
-                          <div>Read More</div>
+                          {/* <div>Read More</div> */}
                         </div>
                       ))}
                     </div>
@@ -867,9 +875,11 @@ function About() {
           </div>
           <div>
             <p className="about-section6-des test-seclection-blue">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam iure magni fugit beatae possimus quis voluptatem,
-              commodi quibusdam ad sed tempore, animi tenetur veritatis ipsum!
+              Five years ago, we embarked on a journey of innovation and growth.
+              Today, we celebrate the remarkable achievements and milestones
+              we've reached together. Thank you to our dedicated team, loyal
+              customers, and supportive partners for making this possible.
+              Here's to many more years of success
             </p>
           </div>
         </div>
@@ -878,13 +888,13 @@ function About() {
             Why Stacia?
           </div>
           <p className="about-whyus-des test-seclection-blue">
-            The name "Stacia" is rich in meaning—derived from Greek, it
-            signifies "resurrection," while in old Italian, it denotes "smart
-            and intelligent." This perfectly aligns with our philosophy of
-            providing smart, intelligent solutions to rejuvenate and transform
-            business prospects. Our logo reflects this ethos, combining colors
-            that symbolize creative thinking, trust, and reliability—values that
-            are at the core of everything we do.
+            he name "Stacia" is rich in meaning—derived from Greek, it signifies
+            "resurrection," while in old Italian, it denotes "smart and
+            intelligent." This perfectly aligns with our philosophy of providing
+            smart, intelligent solutions to rejuvenate and transform business
+            prospects. Our logo reflects this ethos, combining colors that
+            symbolize creative thinking, trust, and reliability—values that are
+            at the core of everything we do.
           </p>
           <div className="about-whyus-grid">
             {whyus?.map((eachItem, i) => {
@@ -977,7 +987,11 @@ function About() {
               libero quam accusamus cum voluptatem obcaecati labore explicabo.
               Sit voluptatibus quae molestiae modi temporibus!
             </p>
-            <div className="know-more">Read More</div>
+            <div className="know-more"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              navigate(`/partners`);
+            }}>Read More</div>
           </div>
           <div>
             <img

@@ -1,21 +1,23 @@
+
+
 import React, { useRef } from "react";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "../../styles/About.css";
 
 const OurExpertiseData = [
   {
-    title: "Quality Control",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet.",
+    title: " Machine & Equipment Design",
+    desc: "Special Purpose Machines (SPMs): Tailored machines for specific industrial needs.Test Rigs: Advanced systems for testing and validating components. Jigs and Fixtures: Precision tools for enhancing manufacturing processes.Production Planning: Optimizing workflows for maximum efficiency.",
     img: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww",
   },
   {
-    title: "Quality Control",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet.",
+    title: " Software Development",
+    desc: "Mobile app development for iOS and Android platforms.Web applications tailored for functionality and scalability.Comprehensive website building solutions.Custom software development for unique requirements.UI/UX redesign and revamp for modern, intuitive interfaces.Seamless deployment services to launch projects efficiently.",
     img: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww",
   },
   {
-    title: "Quality Control",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet.",
+    title: " Electronics",
+    desc: "IoT Solutions: Smart devices and connectivity for a smarter future.PCB Designing: Efficient, high-quality printed circuit boards.Firmware Development: Embedded software for optimal device functionality.Product Assembly: From concept to final production-ready units.Automation Systems: Advanced electronic systems for operational efficiency",
     img: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww",
   },
 ];
@@ -67,9 +69,10 @@ function AboutCarousel() {
       <div className="about-section8-container-title">Our Expertise</div>
       <div className="about-section8-main-des-container">
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Necessitatibus, eius! Recusandae sit facilis molestias. Eos cupiditate
-          omnis aliquid reprehenderit ut?
+          Our innovative solutions cater to a diverse range of industries,
+          enabling businesses to enhance productivity, streamline operations,
+          adopt sustainable practices, and embrace cutting-edge technological
+          advancements.
         </p>
         <div className="about-section8-btn-container">
           <div>
@@ -107,4 +110,4 @@ function AboutCarousel() {
   );
 }
 
-export default AboutCarousel;
+export default AboutCarousel; 
