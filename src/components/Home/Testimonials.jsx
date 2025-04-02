@@ -8,8 +8,17 @@ export default function Testimonials() {
   return (
     <div className="testimonials">
       <div className="testimonials2">
-        <div>
-          <Marquee speed={50} pauseOnHover  loop ="infinite" >
+        <div className="marquee-content forward">
+          <AllTestimonials />
+          <AllTestimonials/>
+        </div>
+
+        <div className="marquee-content reverse">
+          <AllTestimonials /> 
+          <AllTestimonials/>
+        </div>
+        {/* <div>
+          <Marquee speed={50} pauseOnHover>
             <AllTestimonials />
           </Marquee>
         </div>
@@ -18,7 +27,7 @@ export default function Testimonials() {
           <Marquee speed={50} pauseOnHover direction="right"  loop ="infinite" >
             <AllTestimonials />
           </Marquee>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import t1 from "../../assets/t1.png";
 
 export default function TestimonialCard({ eachTestimonial }) {
   return (
-    <div className="testimonial-card">
+    <div className="testimonial-card" style={{width: "30rem"}}>
       <div className="test-top">
         {/* <div className="test-img" > */}
         <div
