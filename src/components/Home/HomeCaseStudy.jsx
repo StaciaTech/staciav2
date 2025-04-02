@@ -77,7 +77,6 @@
 
 
 
-
 import React from "react";
 import "../../styles/HomeCaseStudy.css";
 import case1 from "../../assets/case1.png";
@@ -85,31 +84,31 @@ import case2 from "../../assets/case2.png";
 import case3 from "../../assets/case3.png";
 import case4 from "../../assets/case4.png";
 import { useNavigate } from "react-router-dom";
-import { FaChevronRight} from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 export default function HomeCaseStudy() {
-const data = [
-  {
-    id: "Case Study-1",
-    title: "Chili Ladling Machine-1",
-    description: "Analysis of electronics case study.",
-    image: { imageUrl: "/assets/caseStudy-1.webp" },
-    category: "Electronics",
-  },
-  {
-    id: "Case Study-2",
-    title: "Chili Ladling Machine-2",
-    description: "Analysis of mechanical case study.",
-    image: { imageUrl: "/assets/caseStudy-2.webp" },
-    category: "Mechanical",
-  },
-  {
-    id: "Case Study-3",
-    title: "Chili Ladling Machine-3",
-    description: "Analysis of mechanical case study.",
-    image: { imageUrl: "/assets/caseStudy-3.webp" },
-    category: "IT",
-  },
-];
+  const data = [
+    {
+      id: "Case Study-1",
+      title: "Chili Ladling Machine-1",
+      description: "Analysis of electronics case study.",
+      image: { imageUrl: "/assets/caseStudy-1.webp" },
+      category: "Electronics",
+    },
+    {
+      id: "Case Study-2",
+      title: "Chili Ladling Machine-2",
+      description: "Analysis of mechanical case study.",
+      image: { imageUrl: "/assets/caseStudy-2.webp" },
+      category: "Mechanical",
+    },
+    {
+      id: "Case Study-3",
+      title: "Chili Ladling Machine-3",
+      description: "Analysis of mechanical case study.",
+      image: { imageUrl: "/assets/caseStudy-3.webp" },
+      category: "IT",
+    },
+  ];
   const navigateTo = useNavigate();
   const navigate = useNavigate();
   return (
@@ -127,6 +126,7 @@ const data = [
             <img
               src={case1}
               alt=""
+              style={{ color: "#0047FF" }}
               onClick={() => {
                 navigate(
                   `/case-study/single-caseStudy/Case-Study-1
@@ -135,6 +135,15 @@ const data = [
                 window.scrollTo(0, 0);
               }}
             />
+            <div className="casestudy-content">
+              <h2>Mechanization and Precision Sowing-1</h2>
+              <p>
+                India is one of the largest producers of sesame, with
+                cultivation spread across various states under diverse climatic
+                conditions such as summer, rainfed, cold weather, and rain
+                fallow regions.
+              </p>
+            </div>
           </div>
           <div className="image-box-right">
             <div className="image-box">
@@ -149,6 +158,10 @@ const data = [
                   window.scrollTo(0, 0);
                 }}
               />
+              <div className="casestudy-content">
+                <h2>Mechanization and Precision Sowing-2</h2>
+                <p>India is one of the largest producers of sesame, with</p>
+              </div>
             </div>
             <div className="image-box">
               <img
@@ -159,6 +172,10 @@ const data = [
                   window.scrollTo(0, 0);
                 }}
               />
+              <div className="casestudy-content">
+                <h2>Mechanization and Precision Sowing-2</h2>
+                <p>India is one of the largest producers of sesame, with</p>
+              </div>
             </div>
             <div className="image-box case-col-span">
               <img
@@ -169,6 +186,10 @@ const data = [
                   window.scrollTo(0, 0);
                 }}
               />
+              <div className="casestudy-content">
+                <h2>Mechanization and Precision Sowing-2</h2>
+                <p>India is one of the largest producers of sesame, with</p>
+              </div>
             </div>
           </div>
         </div>

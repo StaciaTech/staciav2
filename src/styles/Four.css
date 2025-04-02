@@ -34,9 +34,31 @@
 .four-img {
   width: 100%;
   overflow: hidden;
-  border-radius: 24px;
+  /* border-radius: 24px; */
   /* background: red; */
   /* height: 100%; */
+  object-fit: cover;
+  position: relative;
+  
+  
+}
+
+.four-img:hover .founder-content{
+  display: block;
+  color: white;
+  background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  width: 100%;
+  padding: 1.5rem 3rem;
+  bottom: 0;
+  overflow: hidden;
+  
+}
+.founder-content{
+  position: absolute;
+  bottom: 10px;
+  display: none;
+  overflow: hidden;
+
 }
 
 .four-img > img {
@@ -44,12 +66,13 @@
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
+  overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
-.four-img > img:hover {
+/* .four-img > img:hover {
   transform: scale(1.2);
   cursor: pointer;
-}
+} */
 
 .four-pos {
   color: #0d0225;

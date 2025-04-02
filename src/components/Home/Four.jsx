@@ -19,7 +19,7 @@ const fourData = [
     id: 2,
     pos: "Founder Partner, COO",
     img: p2,
-    name: " Mr Lakshman ",
+    name: "Mr Lakshman",
     about:
       "Founder of Stacia Corp and Director at SASTEM Global. Expert in mechanical engineering and business analytics. Leads AI-powered ERP solutions and innovative machinery development for food processing and agriculture sectors.",
     proId: "https://www.linkedin.com/in/lakshman-p-v-50522a168/",

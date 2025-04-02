@@ -9,13 +9,13 @@ export default function Testimonials() {
     <div className="testimonials">
       <div className="testimonials2">
         <div>
-          <Marquee speed={50} pauseOnHover>
+          <Marquee speed={50} pauseOnHover  loop ="infinite" >
             <AllTestimonials />
           </Marquee>
         </div>
 
         <div className="right-marquee">
-          <Marquee speed={50} pauseOnHover direction="right">
+          <Marquee speed={50} pauseOnHover direction="right"  loop ="infinite" >
             <AllTestimonials />
           </Marquee>
         </div>
