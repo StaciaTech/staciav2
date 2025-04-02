@@ -42,13 +42,14 @@
 
 .single-card-text-holder {
   position: absolute;
-  padding: 0 3rem;
-  bottom: 4rem;
+  padding: 1.5rem 3rem;
+  bottom: 0rem;
   color: white;
   width: 70%;
   font-family: "Euclid";
   line-height: 2.2rem;
   display: none;
+  overflow: hidden;
 }
 .single-card-header {
   font-size: 1.8rem;
@@ -63,9 +64,13 @@
 .image1:hover {
   grid-area: 1/1/ 3/ 3;
   background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  overflow: hidden;
 }
 .our-projects-card-grid > *:hover .single-card-text-holder {
   display: block;
+  background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  width: 100%;
+  overflow: hidden;
 }
 
 .image1:hover ~ .image2,
@@ -78,6 +83,7 @@
 .image2:hover {
   grid-area: 1/2/ 3/ 4;
   background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  overflow: hidden;
 }
 
 .image2:hover ~ .image3,
@@ -90,6 +96,9 @@
 .image3:hover {
   grid-area: 1/2/3/4;
   background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  overflow: hidden;
+  
+
 }
 
 .project-image:has(+ .image3:hover),
@@ -102,6 +111,7 @@
 .image4:hover {
   grid-area: 2/1/ 4/ 3;
   background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  overflow: hidden;
 }
 
 .image4:hover ~ .image5,
@@ -114,6 +124,7 @@
 .image6:hover {
   grid-area: 2/2/ 4/ 4;
   background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  overflow: hidden;
 }
 
 .project-image:has(+ .image6:hover),
@@ -126,6 +137,7 @@
 .image7:hover {
   grid-area: 2/1/ 4/ 3;
   background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  overflow: hidden;
 }
 
 .project-image:has(+ * + * + .image7:hover),
@@ -138,6 +150,7 @@
 .image8:hover {
   grid-area: 2/2/ 4/ 4;
   background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  overflow: hidden;
 }
 
 .project-image:has(+ * + * + .image8:hover),
@@ -150,6 +163,7 @@
 .image9:hover {
   grid-area: 2/2/ 4/ 4;
   background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  overflow: hidden;
 }
 
 .project-image:has(+ * + * + * + .image9:hover),
