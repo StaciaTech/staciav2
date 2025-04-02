@@ -425,7 +425,7 @@
           "departmentId": "672eefbf81be8191d93ce4bd",
           "id": "675297bcd6387bac980467bb",
           "name": "Enclosure and Industrial Design",
-          "position": 1,
+          "position": 1,  
           "services": [
             {
               "description": "Enclosure Design Services create protective casings for electronic products, ensuring durability, thermal management, and aesthetic appeal. We design custom enclosures tailored to your product’s requirements, considering factors like material selection, mechanical strength, and manufacturing methods. Our expertise spans industries, including IoT, automotive, and consumer electronics. Prototyping and testing are integral to our process, ensuring the enclosure provides optimal protection and meets industrial standards. From waterproof housings to lightweight designs, we deliver solutions that enhance product performance and user satisfaction.",
@@ -583,7 +583,7 @@
         },
         {
           "description": "Application Support and Maintenance services ensure that your applications remain operational, secure, and up-to-date. Our team provides ongoing support, including troubleshooting, updates, and performance monitoring, to keep your software running smoothly. We address issues proactively, apply patches, and implement enhancements to adapt to changing needs. Whether it’s fixing bugs, optimizing performance, or ensuring compatibility with new systems, we help extend the lifespan of your applications and maintain a high-quality user experience.",
-          "imageUrl": "https://media.licdn.com/dms/image/D4D12AQEfRjF8z1Qlew/article-cover_image-shrink_720_1280/0/1686143528922?e=2147483647&v=beta&t=RvG0M6t0oHCe5wxwEfCZUs8a05b3uFIntnQEkp0mX_E",
+          "imageUrl": "/assets/Rectangle 5855.webp",
           "departmentId": "672eefd2bf4e5705ff670c69",
           "id": "6769383a51dcda17a0f93888",
           "name": "Application Support and Maintenance",
