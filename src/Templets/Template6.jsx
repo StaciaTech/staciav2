@@ -3,6 +3,10 @@
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import NavBar from "../components/NavBar";
+import SideBar from "../components/SideBar";
+import Footer from "../components/Footer";
+import MobileFooter from "../components/MobileFooter";
 import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data/Articles.json";
@@ -42,6 +46,10 @@ function Template6() {
 
   return (
     <div>
+      <div className="nav_style">
+        <NavBar />
+        <SideBar />
+      </div>
       <div className="temp5-project_container">
         <div className="temp4-project_section temp5-p-section">
           <div className="temp5-project_text">
@@ -119,7 +127,8 @@ function Template6() {
           </div>
         </div>
       </div>
-      
+      <Footer />
+      <MobileFooter />
     </div>
   );
 }

@@ -135,6 +135,7 @@
 
 .winner-date {
   font-size: 1rem;
+  font-family: EuclidMedium;
   color: #6B6084;
   margin-top: 10px;
   display: flex;
@@ -237,6 +238,8 @@
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
+    font-size: 20px;
+    font-family: EuclidMedium;
   }
 
   .winner-header {

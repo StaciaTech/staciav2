@@ -27,6 +27,7 @@
 .leader-hero-name > p {
   width: 100%;
   text-align: center;
+  padding-top: 1.5rem;
 }
 .leader-hero-name > div {
   color: #fff;
@@ -120,6 +121,7 @@
   .leader-hero-name > p {
     font-size: 1rem;
     line-height: normal;
+    padding-top: 1rem;
   }
   .leader-hero-img-container > div {
     width: 100%;
