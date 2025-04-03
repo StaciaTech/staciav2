@@ -300,11 +300,12 @@ function MediaKit() {
     try {
       // const res = await axios.get(`${apiUrl}/client/index`);
       setMediaData(JSON.stringify(data));
-    } catch (error) {}
+    } catch (error) { }
   };
 
   useEffect(() => {
     fetchMediaData();
+    window.scrollTo(0, 0);
   }, []);
   // console.log(mediaData);
 
@@ -326,7 +327,7 @@ function MediaKit() {
             <div className="media-section-heading">Logos</div>
             {data?.logos?.map((eachLogo, i) => {
               return <MediaLogoContainer key={i} eachLogo={eachLogo} />;
-             
+
             })}
           </div>
           <div style={{ borderBottom: "1px solid #e5e5e5" }}>

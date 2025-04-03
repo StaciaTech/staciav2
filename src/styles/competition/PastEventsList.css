@@ -37,6 +37,7 @@
 
 .event-content {
     padding: 15px;
+    font-family: EuclidMedium;
 }
 
 .event-tag {
@@ -47,6 +48,7 @@
     font-size: 12px;
     display: inline-block;
     margin-bottom: 10px;
+    font-family: EuclidMedium;
 }
 
 .event-title-past {
@@ -61,6 +63,7 @@
     font-size: 14px;
     color: #555;
     margin-bottom: 10px;
+    font-family: EuclidMedium;
 }
 
 .event-date {
@@ -70,6 +73,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    font-family: EuclidMedium;
 }
 
 .date-icon {

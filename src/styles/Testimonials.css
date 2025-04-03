@@ -12,6 +12,7 @@
   flex-direction: column;
   gap: 40px;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .testimonial-card {
@@ -102,7 +103,7 @@
   animation: scroll-right 30s linear infinite;
   min-width: 200%;
 }
-.testimonials2:hover .marquee-content {
+.marquee-content:hover {
   animation-play-state: paused;
 }
 @keyframes scroll-left {
