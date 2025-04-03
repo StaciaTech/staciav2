@@ -18,9 +18,8 @@
   line-height: normal;
 }
 
-
-.sty{
-  color: #0047FF;
+.sty {
+  color: #0047ff;
   font-weight: 600;
   padding: 0.5rem 0rem;
   width: fit-content;
@@ -39,25 +38,28 @@
   /* height: 100%; */
   object-fit: cover;
   position: relative;
-  
-  
 }
 
-.four-img:hover .founder-content{
+.four-img:hover .founder-content {
   display: block;
   color: white;
-  background: linear-gradient(to bottom, #0d022500, #0d0225cc);
+  background: linear-gradient(to left, #0d022500, #0d0225cc);
   width: 100%;
-  padding: 1.5rem 3rem;
+  padding: 1rem 3rem;
   bottom: 0;
+  margin-bottom: 2px;
+  
+  /* border-bottom-left-radius: 20px; */
   overflow: hidden;
+   transition: transform 0.3s ease-in-out;
+
 }
-.founder-content{
+.founder-content {
   position: absolute;
   bottom: 10px;
   display: none;
   overflow: hidden;
-
+  
 }
 
 .four-img > img {
@@ -67,11 +69,16 @@
   border-radius: inherit;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+ 
 }
-/* .four-img > img:hover {
-  transform: scale(1.2);
+.four-img > img:hover {
+  /* transform: scale(1.2); */
   cursor: pointer;
-} */
+   
+}
+.four-img:hover{
+ 
+}
 
 .four-pos {
   color: #0d0225;
@@ -80,7 +87,6 @@
   font-weight: 400;
   line-height: normal;
   margin-bottom: 1rem;
-
 }
 
 .four-name {
@@ -90,7 +96,6 @@
   font-weight: 600;
   line-height: normal;
   padding: 2rem 0rem 1rem 0rem;
-  
 }
 
 .four-para > p {
@@ -109,6 +114,8 @@
 }
 
 @media (max-width: 1024px) {
+ 
+  
   .four {
     margin-bottom: auto;
   }
@@ -141,5 +148,6 @@
   .four-img > img:hover {
     transform: scale(1);
     cursor: pointer;
+    
   }
 }

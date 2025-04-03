@@ -42,6 +42,7 @@
   letter-spacing: 1px;
   width: fit-content;
   position: relative;
+
 }
 
 .service-overview-title {
@@ -52,6 +53,9 @@
   /* margin-left: 50%; */
   font-family: EuclidMedium;
   user-select: none;
+    /* padding: 10px; */
+    line-height: 1.5;
+    
 }
 
 .service-section1-content-box {
