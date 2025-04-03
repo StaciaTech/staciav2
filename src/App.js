@@ -77,7 +77,7 @@ function App() {
         />
         {/* <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/case-study/:department" element={<CaseStudy />} /> */}
-       
+
         <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/case-study/:department:id" element={<CaseStudy />} />
         <Route path="/services" element={<ServicePage />} />
@@ -117,6 +117,15 @@ function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/media-kit" element={<MediaKit />} />
         <Route path="/about/leader/:name" element={<LeaderPage />} />
+
+
+        <Route path="/about" element={<About/>} />
+        <Route path="/about/:subsection" element={<About />} />
+        <Route path="/about/leader/:leaderName" element={<About />} />
+        {/* <Route path="/partners" element={<PartnersPage />} /> */}
+        {/* <Route path="/media-kit" element={<MediaKitPage />} /> */}
+
+
         <Route path="/news" element={<NewsRoomPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:title" element={<SpecificEvent />} />

@@ -225,7 +225,7 @@ function OurProjects() {
                 style={{ color: "#0047FF" }}
                 onClick={() => {
                   navigate(
-                    `project/Mechanical/Mechanical-blah-Industry/Automobile-&-Automotive-SPM`
+                    `project/Electronics/Electronics-Grid-Industry/Reverse-Kettle`
                   );
                   window.scrollTo(0, 0);
                 }}

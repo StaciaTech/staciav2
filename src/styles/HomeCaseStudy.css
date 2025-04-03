@@ -9,7 +9,6 @@
 .casestudy-content p{
   font-size: 14px;
   font-weight: 300;
-  
 }
 .image-box-full1 {
   display: flex;
@@ -19,7 +18,7 @@
   margin-top: 2rem;
 }
 .image-box-left {
-  width: 40%;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -45,8 +44,9 @@
   width: 100%;
   padding: 1rem 2rem;
   font-size: 10px;
-  bottom: 0.1rem;
-  border-radius: 30px;
+  bottom: 0rem;
+  border-radius: 32px;
+
 }
 .image-box-right {
   width: 40px;
@@ -120,9 +120,10 @@
   
 }
 .image-box > img {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 30px;
 }
 .case-col-span {
   grid-column: span 2;

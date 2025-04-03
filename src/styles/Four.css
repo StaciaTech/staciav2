@@ -1,25 +1,23 @@
 .four {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 100vh;
   margin-top: 60px;
   margin-bottom: 5%;
 }
-
 .four2 {
   width: 90%;
   margin: 0 auto;
 }
-
 .four-text {
-  color: #e7e7e7;
+  color: #E7E7E7;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
-
 .sty {
-  color: #0047ff;
+  color: #0047FF;
   font-weight: 600;
   padding: 0.5rem 0rem;
   width: fit-content;
@@ -29,7 +27,6 @@
   margin-top: 40px;
   cursor: pointer;
 }
-
 .four-img {
   width: 100%;
   overflow: hidden;
@@ -39,7 +36,6 @@
   object-fit: cover;
   position: relative;
 }
-
 .four-img:hover .founder-content {
   display: block;
   color: white;
@@ -48,20 +44,16 @@
   padding: 1rem 3rem;
   bottom: 0;
   margin-bottom: 2px;
-  
   /* border-bottom-left-radius: 20px; */
   overflow: hidden;
    transition: transform 0.3s ease-in-out;
-
 }
 .founder-content {
   position: absolute;
   bottom: 10px;
   display: none;
   overflow: hidden;
-  
 }
-
 .four-img > img {
   width: 100%;
   height: 100%;
@@ -72,76 +64,62 @@
  
 }
 .four-img > img:hover {
-  /* transform: scale(1.2); */
+  transform: scale(1.2);
   cursor: pointer;
-   
 }
-.four-img:hover{
- 
-}
-
 .four-pos {
-  color: #0d0225;
+  color: #0D0225;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin-bottom: 1rem;
 }
-
 .four-name {
-  color: #0d0225;
+  color: #0D0225;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   padding: 2rem 0rem 1rem 0rem;
 }
-
 .four-para > p {
-  color: #6b6084;
+  color: #6B6084;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
+  font-family: EuclidMedium;
 }
-
 .four-grid {
   display: grid;
   /* justify-content: space-between; */
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 @media (max-width: 1024px) {
  
   
   .four {
     margin-bottom: auto;
   }
-
   .four-text {
     font-size: 24px;
   }
-
   .four-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .four-card {
     width: 100%;
   }
-
   .four-pos {
     font-size: 12px;
   }
-
   .four-name {
     font-size: 15px;
   }
-
   .four-para > p {
     font-size: 12px;
   }
