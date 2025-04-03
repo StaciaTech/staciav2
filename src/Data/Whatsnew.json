@@ -3,12 +3,12 @@
       {
         "title": "Tech Conference 2025",
         "des": "Annual technology conference featuring latest innovations",
-        "imageUrl": "/images/image1.png"
+        "imageUrl": "/assets/image1.png"
       },
       {
         "title": "Developer Meetup",
         "des": "Local developer community gathering",
-        "imageUrl": "/images/image2.png"
+        "imageUrl": "/assets/image2.png"
       }
     ],
     "products": [
