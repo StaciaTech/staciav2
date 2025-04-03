@@ -15,7 +15,10 @@ import templatesData from "../Data/Templates.json";
 // import ProjectsData from "../Data/ProjectsData.json"
 
 function SingleProject() {
-  const { department, category, title } = useParams(); // 🟢 Extract from URL
+  const { department, category, title } = useParams();
+  console.log("Department: ", department)
+  console.log("Category: ", category)
+  // console.log("Title: ", title)
   const [projectData, setProjectData] = useState(null);
     // const [relatedProjects, setRelatedProjects] = useState(null);
   
