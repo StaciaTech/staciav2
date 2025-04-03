@@ -201,7 +201,7 @@ export default function HomeCaseStudy() {
           }}
           style={{ cursor: "pointer" }}
         >
-          More Case Studys{""}
+          More Case Studies{""}
           <FaChevronRight style={{ verticalAlign: "middle" }} />
         </div>
         <div

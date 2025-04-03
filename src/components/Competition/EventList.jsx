@@ -163,6 +163,11 @@ const EventList = () => {
         return (
             <div className="event-card1">
                 <div className="event-content1">
+
+
+                    <div className="event-image-container2">
+                        <img src={imageUrl} alt="Event" className="event-image2" />
+                    </div>
                     <h2 className="event-title1">{title}</h2>
                     <p className="event-description1">{description}</p>
                     <p className="event-details1">
