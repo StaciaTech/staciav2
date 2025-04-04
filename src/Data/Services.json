@@ -201,7 +201,24 @@
           "id": "67528c41d6387bac980467ae",
           "name": "PCB Design and Manufacturing",
           "position": 2,
-          "services": []
+          "services": [
+            {
+              "title":"PCB Design Services",
+              "description":"PCB Design Services involve creating schematic diagrams, designing layouts, and optimizing PCBs for performance and manufacturability. We specialize in single-layer, multilayer, and rigid-flex designs, ensuring signal integrity and thermal management. Our designs cater to various applications, including IoT devices, automotive electronics, and industrial machinery. Using advanced tools, we address factors like trace routing, impedance matching, and power distribution to ensure reliability and compliance with industry standards. Our goal is to provide designs that are not only functional but also cost-effective and scalable, ensuring smooth transitions from prototype to mass production."
+            },
+            {
+              "title":"PCB Manufacturing",
+              "description":"PCB Manufacturing transforms your designs into high-quality physical boards, ready for integration into your product. Our services range from prototyping to large-scale production, using advanced techniques to ensure precision and durability. We work with various materials and technologies to meet the specific requirements of your application, whether it’s high-speed communication, power management, or miniaturized electronics. Rigorous quality control processes are implemented to ensure compliance with industrial standards. By combining design and manufacturing expertise, we provide a seamless experience, reducing lead times and ensuring the success of your electronics project"
+            },
+            {
+              "title":"Hardware Design and Review Services",
+              "description":"Hardware Design and Review Services ensure that your electronics hardware meets performance, reliability, and cost goals. This involves evaluating schematics, PCB layouts, and component selections for functionality and manufacturability. Our experts optimize designs for power efficiency, signal integrity, thermal management, and compliance with industry standards. Reviews include design audits, identifying potential bottlenecks, and recommending improvements to enhance overall system performance. Whether it’s a new design or an existing product requiring optimization, our services provide insights and actionable recommendations to reduce risks, cut costs, and improve time-to-market for your electronic products"
+            },
+            {
+              "title":"Electronics Prototyping",
+              "description":"Electronics Prototyping brings your ideas to life by developing functional prototypes for validation and testing. We use advanced tools and techniques to create prototypes of circuit boards, embedded systems, or complete electronic products. Prototyping involves hardware assembly, software integration, and rigorous testing to ensure the design meets all specifications. This iterative process helps identify and resolve design issues early, reducing the risk of costly errors in production. Whether you need a proof-of-concept or a near-production-ready model, our prototyping services accelerate development and provide critical insights for final design adjustments."
+            }
+          ]
         },
         {
           "description": "We specialize in designing cutting-edge electronics products that combine innovation, functionality, and aesthetics. Our Electronics Product Design services cover the full lifecycle, from conceptualizing the initial idea to prototyping and production. Our team works on diverse applications, including consumer electronics, industrial devices, and complex electronic systems. We focus on ensuring the products are not only high-performing but also cost-effective and manufacturable. We consider all aspects such as circuit design, compliance with standards, and user experience, making sure the final product is ready for market success. Let us help you turn your vision into a reality with our comprehensive design solutions.",
