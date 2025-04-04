@@ -1,419 +1,699 @@
 [
-    {
-      "name": "Electronics",
-      "des": "Department focusing on electronic systems, circuits, and hardware design.",
-      "position": 1,
-      "categories": [
-        {
-          "description": "Embedded Systems Development involves creating sophisticated solutions that seamlessly integrate hardware and software for a wide range of applications. From designing reliable hardware components to developing optimized firmware, this service ensures the highest performance and efficiency of embedded devices. It includes IoT-specific hardware, system-level integration, and custom solutions tailored to your needs. Whether it’s for industrial automation, consumer electronics, or smart devices, Embedded Systems Development ensures functionality, scalability, and reliability. Our comprehensive approach focuses on robust design principles, cutting-edge technologies, and tailored solutions to meet your unique challenges in the rapidly evolving electronics landscape.",
-          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpF9ut07hutVP_U33AtWNqVB0NvKwqe3Irja8kQrZl0PkIoNpgzG1wva7Od3e8KB79x3U&usqp=CAU",
-          "departmentId": "672eefbf81be8191d93ce4bd",
-          "id": "67528ab3d6387bac980467a9",
-          "name": "Embedded Systems Development",
-          "position": 1,
-          "services": [
+  {
+    "name": "Electronics",
+    "des": "Department focusing on electronic systems, circuits, and hardware design.",
+    "position": 1,
+    "categories": [
+      {
+        "name": "Embedded Systems Development",
+        "description": "Embedded Systems Development involves creating sophisticated solutions that seamlessly integrate hardware and software for a wide range of applications. From designing reliable hardware components to developing optimized firmware, this service ensures the highest performance and efficiency of embedded devices. It includes IoT-specific hardware, system-level integration, and custom solutions tailored to your needs. Whether it’s for industrial automation, consumer electronics, or smart devices, Embedded Systems Development ensures functionality, scalability, and reliability. Our comprehensive approach focuses on robust design principles, cutting-edge technologies, and tailored solutions to meet your unique challenges in the rapidly evolving electronics landscape.",
+        "imageUrl": "/assets/Embedded-Systems-Development.webp",
+        "departmentId": "672eefbf81be8191d93ce4bd",
+        "id": "67528ab3d6387bac980467a9",
+        "position": 1,
+        "services": [
+          {
+            "title": "Embedded Hardware Design",
+            "description": "Embedded Hardware Design focuses on crafting robust, efficient, and tailored hardware solutions for embedded systems. This includes designing microcontrollers, processors, memory modules, and interfaces to create a functional foundation for any embedded application. Our process involves requirements analysis, schematic creation, component selection, and PCB layout to ensure seamless integration and performance. We cater to diverse industries such as IoT, automotive, medical devices, and consumer electronics. By prioritizing reliability, power efficiency, and manufacturability, our designs are optimized for both prototyping and large-scale production, ensuring your product meets all functional and industrial standards with excellence..",
+            "imageUrl": "/assets/Embedded-hardware-design.webp",
+            "id": "67528b84d6387bac980467aa",
+            "categoryId": "67528ab3d6387bac980467a9",
+            "position": 1,
+            "whatWeDo": [
+              {
+                "title": "Requirement Analysis",
+                "des": "Analyze functional, environmental, and power requirements for robust hardware tailored to client needs and operational constraints.",
+                "id": "67529b81d6387bac980467c1",
+                "serviceId": "67528b84d6387bac980467aa",
+                "position": 1
+              },
+              {
+                "title": "Schematic Design",
+                "des": "Create detailed schematics defining hardware connectivity and functional flow for seamless integration.",
+                "id": "67529bb9d6387bac980467c2",
+                "serviceId": "67528b84d6387bac980467aa",
+                "position": 2
+              },
+              {
+                "title": "Component Selection",
+                "des": "Choose suitable microcontrollers, sensors, and interfaces, balancing performance, cost, and reliability.",
+                "id": "67529bcdd6387bac980467c3",
+                "serviceId": "67528b84d6387bac980467aa",
+                "position": 3
+              },
+              {
+                "title": "PCB Layout Design",
+                "des": "Develop an optimized PCB layout for efficient power distribution and minimal signal interference.",
+                "id": "67529beed6387bac980467c4",
+                "serviceId": "67528b84d6387bac980467aa",
+                "position": 4
+              },
+              {
+                "title": "Validation and Testing",
+                "des": "Conduct thorough tests to ensure hardware reliability under various operational scenarios",
+                "id": "67529c0ad6387bac980467c5",
+                "serviceId": "67528b84d6387bac980467aa",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "title": "Firmware Development Services",
+            "description": "Firmware Development Services specialize in creating optimized software that runs directly on embedded hardware. This includes low-level programming of microcontrollers and processors to ensure smooth communication between hardware components and higher-level systems. Our team develops custom firmware tailored to your product’s requirements, ensuring performance, energy efficiency, and reliability. We cover tasks like real-time operating system (RTOS) integration, communication protocol implementation (e.g., UART, I2C, SPI), and feature enhancement through software updates. Ideal for IoT devices, industrial automation, and consumer electronics, our services guarantee that your embedded system achieves the desired functionality and operates seamlessly under varying conditions",
+            "imageUrl": "/assets/Firmware-Development-Services.webp",
+            "id": "67528bb2d6387bac980467ab",
+            "categoryId": "67528ab3d6387bac980467a9",
+            "position": 2,
+            "whatWeDo": [
+              {
+                "title": "Requirement Gathering",
+                "des": "Collaborate with clients to identify functional and performance needs for firmware development.",
+                "id": "67529c56d6387bac980467c6",
+                "serviceId": "67528bb2d6387bac980467ab",
+                "position": 1
+              },
+              {
+                "title": "Architecture Design",
+                "des": "Design a scalable and efficient firmware architecture, including task scheduling and resource allocation",
+                "id": "67529c88d6387bac980467c7",
+                "serviceId": "67528bb2d6387bac980467ab",
+                "position": 2
+              },
+              {
+                "title": "Firmware Implementation",
+                "des": "Develop and integrate firmware with embedded hardware for seamless device operation.",
+                "id": "67529c9bd6387bac980467c8",
+                "serviceId": "67528bb2d6387bac980467ab",
+                "position": 3
+              },
+              {
+                "title": "Debugging and Optimization",
+                "des": "Optimize code for speed, memory, and compatibility using advanced debugging tools.",
+                "id": "67529cbad6387bac980467c9",
+                "serviceId": "67528bb2d6387bac980467ab",
+                "position": 4
+              },
+              {
+                "title": "Integration Testing",
+                "des": "Perform end-to-end testing to validate firmware performance in real-world conditions",
+                "id": "67529cdbd6387bac980467ca",
+                "serviceId": "67528bb2d6387bac980467ab",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "title": "Embedded System Design",
+            "description": "Embedded System Design provides end-to-end development of embedded solutions, integrating both hardware and software seamlessly. We handle the entire process, from concept design and component selection to firmware development and system testing. Our focus is on creating systems that are efficient, scalable, and tailored to your application, whether it's industrial automation, medical devices, or consumer electronics. Our expertise ensures seamless communication between components, robust system architecture, and compliance with industry standards. By unifying hardware and software design, we deliver solutions that maximize functionality, reliability, and cost-efficiency for complex embedded systems",
+            "imageUrl": "/assets/Embedded-hardware-design.webp",
+            "id": "67528bcfd6387bac980467ac",
+            "categoryId": "67528ab3d6387bac980467a9",
+            "position": 3,
+            "whatWeDo": [
+              {
+                "title": "Concept Development",
+                "des": "Define the embedded system's purpose, features, and user requirements.",
+                "id": "67529d1ad6387bac980467cb",
+                "serviceId": "67528bcfd6387bac980467ac",
+                "position": 1
+              },
+              {
+                "des": "Simultaneously develop hardware and software for seamless integration and compatibility.",
+                "id": "67529d35d6387bac980467cc",
+                "serviceId": "67528bcfd6387bac980467ac",
+                "title": "Hardware-Software Co-Design",
+                "position": 2
+              },
+              {
+                "des": "Create working prototypes to validate design concepts and address issues early.",
+                "id": "67529d4ed6387bac980467cd",
+                "serviceId": "67528bcfd6387bac980467ac",
+                "title": "Prototyping",
+                "position": 3
+              },
+              {
+                "title": "Performance Optimization",
+                "des": "Enhance system efficiency, reliability, and speed for optimal functionality.",
+                "id": "67529d68d6387bac980467ce",
+                "serviceId": "67528bcfd6387bac980467ac",
+                "position": 4
+              },
+              {
+                "title": "Deployment and Support",
+                "des": "Finalize the design for production and provide post-deployment support",
+                "id": "67529d7ed6387bac980467cf",
+                "serviceId": "67528bcfd6387bac980467ac",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "title": "IoT Hardware Development",
+            "description": "IoT Hardware Development focuses on creating specialized hardware for smart, connected devices. This includes designing and integrating sensors, microcontrollers, communication modules (WiFi, Bluetooth, LoRa), and power management systems. Our team ensures that your hardware is optimized for IoT-specific requirements like low power consumption, miniaturization, and seamless connectivity. Ideal for applications in smart homes, industrial IoT, and healthcare, our designs meet global standards for reliability and interoperability. From prototyping to scalable production, we ensure that your IoT hardware is robust, efficient, and ready to handle the demands of modern IoT ecosystems.",
+            "imageUrl": "/assets/Iot-Hardware-Development.webp",
+            "id": "67528bf7d6387bac980467ad",
+            "categoryId": "67528ab3d6387bac980467a9",
+            "position": 4,
+            "whatWeDo": [
+              {
+                "title": "Requirement Analysis",
+                "des": "Understand IoT-specific needs like connectivity, scalability, and power efficiency",
+                "id": "67529df0d6387bac980467d0",
+                "serviceId": "67528bf7d6387bac980467ad",
+                "position": 1
+              },
+              {
+                "title": "Component Selection",
+                "des": "Select suitable sensors, modules, and processors for IoT applications.",
+                "id": "67529e23d6387bac980467d1",
+                "serviceId": "67528bf7d6387bac980467ad",
+                "position": 2
+              },
+              {
+                "title": "Hardware Prototyping",
+                "des": "Build prototypes to test connectivity, performance, and scalability.",
+                "id": "67529e31d6387bac980467d2",
+                "serviceId": "67528bf7d6387bac980467ad",
+                "position": 3
+              },
+              {
+                "des": "Implement Bluetooth, Wi-Fi, or cellular modules for smart device functionality.",
+                "id": "67529e48d6387bac980467d3",
+                "serviceId": "67528bf7d6387bac980467ad",
+                "title": "Connectivity Integration",
+                "position": 4
+              },
+              {
+                "title": "Validation Testing",
+                "des": "Conduct tests for compliance, durability, and performance under real-world conditions.",
+                "id": "67529e5ed6387bac980467d4",
+                "serviceId": "67528bf7d6387bac980467ad",
+                "position": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "PCB Design and Manufacturing",
+        "description": "PCB Design and Manufacturing services cover the entire lifecycle of printed circuit boards, from concept to production. Our design process includes schematic creation, multilayer layout design, and signal integrity optimization, ensuring performance and manufacturability. For manufacturing, we offer prototyping, small batch runs, and large-scale production, adhering to industrial standards. We also provide review services to identify and resolve design flaws, reducing costs and enhancing reliability. Whether it’s for consumer electronics, automotive applications, or industrial equipment, our PCB solutions are tailored to meet specific requirements, ensuring your product’s success in competitive markets",
+        "imageUrl": "/assets/PCB-Design-and-Manufacturing.webp",
+        "departmentId": "672eefbf81be8191d93ce4bd",
+        "id": "67528c41d6387bac980467ae",
+        "position": 2,
+        "services": [
+          {
+            "title":"PCB Design Services",
+            "imageUrl": "/assets/PCB-Design-Service.webp",
+            "description": "PCB Design Services involve creating schematic diagrams, designing layouts, and optimizing PCBs for performance and manufacturability. We specialize in single-layer, multilayer, and rigid-flex designs, ensuring signal integrity and thermal management. Our designs cater to various applications, including IoT devices, automotive electronics, and industrial machinery. Using advanced tools, we address factors like trace routing, impedance matching, and power distribution to ensure reliability and compliance with industry standards. Our goal is to provide designs that are not only functional but also cost-effective and scalable, ensuring smooth transitions from prototype to mass production.",
+            "whatWeDo":[
             {
-              "description": "Embedded Hardware Design focuses on crafting robust, efficient, and tailored hardware solutions for embedded systems. This includes designing microcontrollers, processors, memory modules, and interfaces to create a functional foundation for any embedded application. Our process involves requirements analysis, schematic creation, component selection, and PCB layout to ensure seamless integration and performance. We cater to diverse industries such as IoT, automotive, medical devices, and consumer electronics. By prioritizing reliability, power efficiency, and manufacturability, our designs are optimized for both prototyping and large-scale production, ensuring your product meets all functional and industrial standards with excellence.",
-              "imageUrl": null,
-              "id": "67528b84d6387bac980467aa",
-              "categoryId": "67528ab3d6387bac980467a9",
-              "title": "Embedded Hardware Design",
-              "position": 1,
-              "whatWeDo": [
-                {
-                  "des": "Analyze functional, environmental, and power requirements for robust hardware tailored to client needs and operational constraints.",
-                  "id": "67529b81d6387bac980467c1",
-                  "serviceId": "67528b84d6387bac980467aa",
-                  "title": "Requirement Analysis",
-                  "position": 1
-                },
-                {
-                  "des": "Create detailed schematics defining hardware connectivity and functional flow for seamless integration.",
-                  "id": "67529bb9d6387bac980467c2",
-                  "serviceId": "67528b84d6387bac980467aa",
-                  "title": "Schematic Design",
-                  "position": 2
-                },
-                {
-                  "des": "Choose suitable microcontrollers, sensors, and interfaces, balancing performance, cost, and reliability.",
-                  "id": "67529bcdd6387bac980467c3",
-                  "serviceId": "67528b84d6387bac980467aa",
-                  "title": "Component Selection",
-                  "position": 3
-                },
-                {
-                  "des": "Develop an optimized PCB layout for efficient power distribution and minimal signal interference",
-                  "id": "67529beed6387bac980467c4",
-                  "serviceId": "67528b84d6387bac980467aa",
-                  "title": "PCB Layout Design",
-                  "position": 4
-                },
-                {
-                  "des": "Conduct thorough tests to ensure hardware reliability under various operational scenarios.",
-                  "id": "67529c0ad6387bac980467c5",
-                  "serviceId": "67528b84d6387bac980467aa",
-                  "title": "Validation and Testing",
-                  "position": 5
-                }
-              ]
+              "title":"Requirement Analysis",
+              "des":"Define design specifications, including layer count and application needs."
             },
             {
-              "description": "Firmware Development Services specialize in creating optimized software that runs directly on embedded hardware. This includes low-level programming of microcontrollers and processors to ensure smooth communication between hardware components and higher-level systems. Our team develops custom firmware tailored to your product’s requirements, ensuring performance, energy efficiency, and reliability. We cover tasks like real-time operating system (RTOS) integration, communication protocol implementation (e.g., UART, I2C, SPI), and feature enhancement through software updates. Ideal for IoT devices, industrial automation, and consumer electronics, our services guarantee that your embedded system achieves the desired functionality and operates seamlessly under varying conditions.",
-              "imageUrl": null,
-              "id": "67528bb2d6387bac980467ab",
-              "categoryId": "67528ab3d6387bac980467a9",
-              "title": "Firmware Development Services",
-              "position": 2,
-              "whatWeDo": [
-                {
-                  "des": "Collaborate with clients to identify functional and performance needs for firmware development.",
-                  "id": "67529c56d6387bac980467c6",
-                  "serviceId": "67528bb2d6387bac980467ab",
-                  "title": "Requirement Gathering",
-                  "position": 1
-                },
-                {
-                  "des": "Design a scalable and efficient firmware architecture, including task scheduling and resource allocation.",
-                  "id": "67529c88d6387bac980467c7",
-                  "serviceId": "67528bb2d6387bac980467ab",
-                  "title": "Architecture Design",
-                  "position": 2
-                },
-                {
-                  "des": "Develop and integrate firmware with embedded hardware for seamless device operation.",
-                  "id": "67529c9bd6387bac980467c8",
-                  "serviceId": "67528bb2d6387bac980467ab",
-                  "title": "Firmware Implementation",
-                  "position": 3
-                },
-                {
-                  "des": "Optimize code for speed, memory, and compatibility using advanced debugging tools.",
-                  "id": "67529cbad6387bac980467c9",
-                  "serviceId": "67528bb2d6387bac980467ab",
-                  "title": "Debugging and Optimization",
-                  "position": 4
-                },
-                {
-                  "des": "Perform end-to-end testing to validate firmware performance in real-world conditions.",
-                  "id": "67529cdbd6387bac980467ca",
-                  "serviceId": "67528bb2d6387bac980467ab",
-                  "title": "Integration Testing",
-                  "position": 5
-                }
-              ]
+              "title":"Schematic Development",
+              "des":"Develop circuit schematics for effective power distribution and signal flow."
             },
             {
-              "description": "Embedded System Design provides end-to-end development of embedded solutions, integrating both hardware and software seamlessly. We handle the entire process, from concept design and component selection to firmware development and system testing. Our focus is on creating systems that are efficient, scalable, and tailored to your application, whether it's industrial automation, medical devices, or consumer electronics. Our expertise ensures seamless communication between components, robust system architecture, and compliance with industry standards. By unifying hardware and software design, we deliver solutions that maximize functionality, reliability, and cost-efficiency for complex embedded systems.",
-              "imageUrl": null,
-              "id": "67528bcfd6387bac980467ac",
-              "categoryId": "67528ab3d6387bac980467a9",
-              "title": "Embedded System Design",
-              "position": 3,
-              "whatWeDo": [
-                {
-                  "des": "Define the embedded system's purpose, features, and user requirements.",
-                  "id": "67529d1ad6387bac980467cb",
-                  "serviceId": "67528bcfd6387bac980467ac",
-                  "title": "Concept Development",
-                  "position": 1
-                },
-                {
-                  "des": "Simultaneously develop hardware and software for seamless integration and compatibility.",
-                  "id": "67529d35d6387bac980467cc",
-                  "serviceId": "67528bcfd6387bac980467ac",
-                  "title": "Hardware-Software Co-Design",
-                  "position": 2
-                },
-                {
-                  "des": "Create working prototypes to validate design concepts and address issues early.",
-                  "id": "67529d4ed6387bac980467cd",
-                  "serviceId": "67528bcfd6387bac980467ac",
-                  "title": "Prototyping",
-                  "position": 3
-                },
-                {
-                  "des": "Enhance system efficiency, reliability, and speed for optimal functionality.",
-                  "id": "67529d68d6387bac980467ce",
-                  "serviceId": "67528bcfd6387bac980467ac",
-                  "title": "Performance Optimization",
-                  "position": 4
-                },
-                {
-                  "des": "Finalize the design for production and provide post-deployment support.",
-                  "id": "67529d7ed6387bac980467cf",
-                  "serviceId": "67528bcfd6387bac980467ac",
-                  "title": "Deployment and Support",
-                  "position": 5
-                }
-              ]
+              "title":"PCB Layout Creation",
+              "des":"Create a detailed PCB layout, balancing space constraints and performance."
             },
             {
-              "description": "IoT Hardware Development focuses on creating specialized hardware for smart, connected devices. This includes designing and integrating sensors, microcontrollers, communication modules (WiFi, Bluetooth, LoRa), and power management systems. Our team ensures that your hardware is optimized for IoT-specific requirements like low power consumption, miniaturization, and seamless connectivity. Ideal for applications in smart homes, industrial IoT, and healthcare, our designs meet global standards for reliability and interoperability. From prototyping to scalable production, we ensure that your IoT hardware is robust, efficient, and ready to handle the demands of modern IoT ecosystems.",
-              "imageUrl": null,
-              "id": "67528bf7d6387bac980467ad",
-              "categoryId": "67528ab3d6387bac980467a9",
-              "title": "IoT Hardware Development",
-              "position": 4,
-              "whatWeDo": [
-                {
-                  "des": "Understand IoT-specific needs like connectivity, scalability, and power efficiency.",
-                  "id": "67529df0d6387bac980467d0",
-                  "serviceId": "67528bf7d6387bac980467ad",
-                  "title": "Requirement Analysis",
-                  "position": 1
-                },
-                {
-                  "des": "Select suitable sensors, modules, and processors for IoT applications.",
-                  "id": "67529e23d6387bac980467d1",
-                  "serviceId": "67528bf7d6387bac980467ad",
-                  "title": "Component Selection",
-                  "position": 2
-                },
-                {
-                  "des": "Build prototypes to test connectivity, performance, and scalability.",
-                  "id": "67529e31d6387bac980467d2",
-                  "serviceId": "67528bf7d6387bac980467ad",
-                  "title": "Hardware Prototyping",
-                  "position": 3
-                },
-                {
-                  "des": "Implement Bluetooth, Wi-Fi, or cellular modules for smart device functionality.",
-                  "id": "67529e48d6387bac980467d3",
-                  "serviceId": "67528bf7d6387bac980467ad",
-                  "title": "Connectivity Integration",
-                  "position": 4
-                },
-                {
-                  "des": "Conduct tests for compliance, durability, and performance under real-world conditions.",
-                  "id": "67529e5ed6387bac980467d4",
-                  "serviceId": "67528bf7d6387bac980467ad",
-                  "title": "Validation Testing",
-                  "position": 5
-                }
-              ]
+              "title":"Simulation and Testing",
+              "des":"Simulate and validate PCB designs for signal integrity and power management."
+            },
+            {
+              "title":"Documentation Handoff",
+              "des":"Deliver complete design documentation for smooth manufacturing"
             }
-          ]
-        },
-        {
-          "description": "PCB Design and Manufacturing services cover the entire lifecycle of printed circuit boards, from concept to production. Our design process includes schematic creation, multilayer layout design, and signal integrity optimization, ensuring performance and manufacturability. For manufacturing, we offer prototyping, small batch runs, and large-scale production, adhering to industrial standards. We also provide review services to identify and resolve design flaws, reducing costs and enhancing reliability. Whether it’s for consumer electronics, automotive applications, or industrial equipment, our PCB solutions are tailored to meet specific requirements, ensuring your product’s success in competitive markets.",
-          "imageUrl": "https://customtechnologies.com/wp-content/uploads/DALL%C2%B7E-2024-01-22-17.49.17-Create-a-detailed-vector-image-illustrating-the-final-assembly-and-quality-control-stages-in-PCB-manufacturing.-The-image-should-depict-the-integratio.jpg",
-          "departmentId": "672eefbf81be8191d93ce4bd",
-          "id": "67528c41d6387bac980467ae",
-          "name": "PCB Design and Manufacturing",
-          "position": 2,
-          "services": []
-        },
-        {
-          "description": "We specialize in designing cutting-edge electronics products that combine innovation, functionality, and aesthetics. Our Electronics Product Design services cover the full lifecycle, from conceptualizing the initial idea to prototyping and production. Our team works on diverse applications, including consumer electronics, industrial devices, and complex electronic systems. We focus on ensuring the products are not only high-performing but also cost-effective and manufacturable. We consider all aspects such as circuit design, compliance with standards, and user experience, making sure the final product is ready for market success. Let us help you turn your vision into a reality with our comprehensive design solutions.",
-          "imageUrl": "https://www.shutterstock.com/shutterstock/videos/1104402021/thumb/4.jpg?ip=x480",
-          "departmentId": "672eefbf81be8191d93ce4bd",
-          "id": "675296cfd6387bac980467b6",
-          "name": "Electronics Product Design",
-          "position": 3,
-          "services": [
-            {
-              "description": "Electronics Circuit Design involves creating reliable circuits for analog, digital, and mixed-signal applications. Our process includes schematic design, simulation, and optimization to ensure functionality and performance. We consider factors like signal integrity, power efficiency, and noise reduction to meet your specific needs. Whether for consumer electronics, automotive systems, or industrial equipment, our designs are tailored to meet industry standards. We also provide testing and debugging services to validate circuit performance before production, ensuring a smooth transition to the next development phase.",
-              "imageUrl": null,
-              "id": "675296dbd6387bac980467b7",
-              "categoryId": "675296cfd6387bac980467b6",
-              "title": "Electronics Circuit Design",
-              "position": 1,
-              "whatWeDo": [
-                {
-                  "des": "Define functional and environmental needs for the circuit.",
-                  "id": "6752a42fd6387bac980467f3",
-                  "serviceId": "675296dbd6387bac980467b7",
-                  "title": "Circuit Requirements",
-                  "position": 1
-                },
-                {
-                  "des": "Create detailed schematics for efficient circuit operation.",
-                  "id": "6752a491d6387bac980467f4",
-                  "serviceId": "675296dbd6387bac980467b7",
-                  "title": "Schematic Design",
-                  "position": 2
-                },
-                {
-                  "des": "Test circuits virtually to predict performance and address issues.",
-                  "id": "6752a4a7d6387bac980467f5",
-                  "serviceId": "675296dbd6387bac980467b7",
-                  "title": "Simulation",
-                  "position": 3
-                },
-                {
-                  "des": "Build and test physical circuit prototypes for validation.",
-                  "id": "6752a4c1d6387bac980467f6",
-                  "serviceId": "675296dbd6387bac980467b7",
-                  "title": "Prototype Development",
-                  "position": 4
-                },
-                {
-                  "des": "Optimize circuits for better efficiency and reliability.",
-                  "id": "6752a4e4d6387bac980467f7",
-                  "serviceId": "675296dbd6387bac980467b7",
-                  "title": "Design Refinement",
-                  "position": 5
-                }
-              ]
-            },
-            {
-              "description": "Electronics Design Services encompass end-to-end development, from concept to production. We create designs tailored to meet the specific requirements of your application, ensuring functionality, reliability, and cost-efficiency. Our services include circuit design, PCB layout, component selection, and system integration. We cater to diverse industries like IoT, automotive, and medical devices. Our team prioritizes innovative solutions, compliance with standards, and seamless integration of hardware and software. Whether developing new products or upgrading existing designs, we deliver electronics solutions that meet your goals and exceed your expectations.",
-              "imageUrl": null,
-              "id": "67529738d6387bac980467b8",
-              "categoryId": "675296cfd6387bac980467b6",
-              "title": "Electronics Design Services",
-              "position": 2,
-              "whatWeDo": [
-                {
-                  "des": "Understand the product’s functional goals and constraints.",
-                  "id": "6752a56ed6387bac980467f8",
-                  "serviceId": "67529738d6387bac980467b8",
-                  "title": "Requirement Gathering",
-                  "position": 1
-                },
-                {
-                  "des": "Develop initial designs, including schematics and 3D models.",
-                  "id": "6752a5d4d6387bac980467f9",
-                  "serviceId": "67529738d6387bac980467b8",
-                  "title": "Concept Development",
-                  "position": 2
-                },
-                {
-                  "des": "Create functional prototypes for testing and validation.",
-                  "id": "6752a5e9d6387bac980467fa",
-                  "serviceId": "67529738d6387bac980467b8",
-                  "title": "Prototyping",
-                  "position": 3
-                },
-                {
-                  "des": "Refine designs for performance and manufacturability.",
-                  "id": "6752a60ed6387bac980467fb",
-                  "serviceId": "67529738d6387bac980467b8",
-                  "title": "Optimization",
-                  "position": 4
-                },
-                {
-                  "des": "Deliver a complete design package for production.",
-                  "id": "6752a620d6387bac980467fc",
-                  "serviceId": "67529738d6387bac980467b8",
-                  "title": "Final Documentation",
-                  "position": 5
-                }
-              ]
-            },
-            {
-              "description": "Electronics Product Design transforms ideas into market-ready devices, balancing functionality, aesthetics, and user experience. From initial concept to prototype, we design products optimized for manufacturing and performance. Our process includes hardware design, software integration, enclosure development, and rigorous testing to ensure quality and compliance. Applications range from consumer gadgets to industrial devices. We focus on scalability, energy efficiency, and reliability, ensuring your product meets market demands. With our expertise, you can launch innovative electronics products that stand out in competitive markets.",
-              "imageUrl": null,
-              "id": "67529754d6387bac980467b9",
-              "categoryId": "675296cfd6387bac980467b6",
-              "title": "Electronics Product Design",
-              "position": 3,
-              "whatWeDo": [
-                {
-                  "des": "Collaborate to define product functionality, aesthetics, and safety requirements.",
-                  "id": "6752a6b2d6387bac980467fd",
-                  "serviceId": "67529754d6387bac980467b9",
-                  "title": "Requirement Definition",
-                  "position": 1
-                },
-                {
-                  "des": "Develop initial design concepts for feedback and iteration.",
-                  "id": "6752a6d6d6387bac980467fe",
-                  "serviceId": "67529754d6387bac980467b9",
-                  "title": "Concept Sketching",
-                  "position": 2
-                },
-                {
-                  "des": "Build functional and visual prototypes for review.",
-                  "id": "6752a6e6d6387bac980467ff",
-                  "serviceId": "67529754d6387bac980467b9",
-                  "title": "Prototyping",
-                  "position": 3
-                },
-                {
-                  "des": "Optimize designs for performance and manufacturability.",
-                  "id": "6752a6f7d6387bac98046800",
-                  "serviceId": "67529754d6387bac980467b9",
-                  "title": "Testing and Refinement",
-                  "position": 4
-                },
-                {
-                  "des": "Prepare finalized designs for mass production.",
-                  "id": "6752a710d6387bac98046801",
-                  "serviceId": "67529754d6387bac980467b9",
-                  "title": "Production Handoff",
-                  "position": 5
-                }
-              ]
-            },
-            {
-              "description": "Industrial Design focuses on creating functional and aesthetically pleasing products that enhance user experience. Our services integrate ergonomic design, material selection, and manufacturing considerations to create products that are both practical and visually appealing. We work across industries like consumer electronics, medical devices, and industrial equipment, ensuring that designs align with your brand identity and meet customer expectations.",
-              "imageUrl": null,
-              "id": "67529778d6387bac980467ba",
-              "categoryId": "675296cfd6387bac980467b6",
-              "title": "Industrial Design",
-              "position": 4,
-              "whatWeDo": []
-            }
-          ]
-        },
-        {
-          "description": "",
-          "imageUrl": "https://www.takachi-enclosure.com/assets/attachments/images/cat_skl.jpg",
-          "departmentId": "672eefbf81be8191d93ce4bd",
-          "id": "675297bcd6387bac980467bb",
-          "name": "Enclosure and Industrial Design",
-          "position": 4,
-          "services": [
-            {
-              "description": "Enclosure Design Services create protective casings for electronic products, ensuring durability, thermal management, and aesthetic appeal. We design custom enclosures tailored to your product’s requirements, considering factors like material selection, mechanical strength, and manufacturing methods. Our expertise spans industries, including IoT, automotive, and consumer electronics. Prototyping and testing are integral to our process, ensuring the enclosure provides optimal protection and meets industrial standards. From waterproof housings to lightweight designs, we deliver solutions that enhance product performance and user satisfaction.",
-              "imageUrl": null,
-              "id": "6752982ed6387bac980467bc",
-              "categoryId": "675297bcd6387bac980467bb",
-              "title": "Enclosure Design Services",
-              "position": 1,
-              "whatWeDo": [
-                {
-                  "des": "Identify product-specific enclosure needs, such as size, thermal management, and durability.",
-                  "id": "6752a802d6387bac98046807",
-                  "serviceId": "6752982ed6387bac980467bc",
-                  "title": "Requirement Analysis",
-                  "position": 1
-                },
-                {
-                  "des": "Choose appropriate materials for the enclosure, balancing protection, cost, and aesthetics.",
-                  "id": "6752a819d6387bac98046808",
-                  "serviceId": "6752982ed6387bac980467bc",
-                  "title": "Material Selection",
-                  "position": 2
-                },
-                {
-                  "des": "Develop detailed 3D CAD models to visualize the enclosure's structure and fit.",
-                  "id": "6752a82cd6387bac98046809",
-                  "serviceId": "6752982ed6387bac980467bc",
-                  "title": "3D Modeling",
-                  "position": 3
-                },
-                {
-                  "des": "Create a physical prototype to validate the design and assess functionality.",
-                  "id": "6752a83cd6387bac9804680a",
-                  "serviceId": "6752982ed6387bac980467bc",
-                  "title": "Prototyping",
-                  "position": 4
-                },
-                {
-                  "des": "Refine the design for manufacturability and compliance with industry standards.",
-                  "id": "6752a850d6387bac9804680b",
-                  "serviceId": "6752982ed6387bac980467bc",
-                  "title": "Final Optimization",
-                  "position": 5
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
+            ]
+          },
+          {
+            "title":"PCB Manufacturing",
+            "imageUrl": "/assets/PCB-Manufacturing.webp",
+            "description":"PCB Manufacturing transforms your designs into high-quality physical boards, ready for integration into your product. Our services range from prototyping to large-scale production, using advanced techniques to ensure precision and durability. We work with various materials and technologies to meet the specific requirements of your application, whether it’s high-speed communication, power management, or miniaturized electronics. Rigorous quality control processes are implemented to ensure compliance with industrial standards. By combining design and manufacturing expertise, we provide a seamless experience, reducing lead times and ensuring the success of your electronics project.",
+            "whatWeDo":[
+              {
+                "title":"Material Selection",
+                "des":"Choose suitable materials based on application and durability requirements."
+              },
+              {
+                "title":"Prototype Fabrication",
+                "des":"Manufacture small-scale prototypes for design validation"
+              },
+              {
+                "title":"Design Optimization",
+                "des":"Refine designs based on prototype feedback for production readiness."
+              },
+              {
+                "title":"Mass Production",
+                "des":"Scale up production while maintaining quality standards"
+              },
+              {
+                "title":"Quality Assurance",
+                "des":"Conduct thorough checks to ensure defect-free, reliable PCBs."
+              }
+            ]
+          },
+          {
+            "title":"Hardware Design and Review Services",
+            "imageUrl": "/assets/Hardware-Design-and-Review-Services.webp",
+            "description":"Hardware Design and Review Services ensure that your electronics hardware meets performance, reliability, and cost goals. This involves evaluating schematics, PCB layouts, and component selections for functionality and manufacturability. Our experts optimize designs for power efficiency, signal integrity, thermal management, and compliance with industry standards. Reviews include design audits, identifying potential bottlenecks, and recommending improvements to enhance overall system performance. Whether it’s a new design or an existing product requiring optimization, our services provide insights and actionable recommendations to reduce risks, cut costs, and improve time-to-market for your electronic products.",
+            "whatWeDo":[
+              {
+                "title":"Design Review",
+                "des":"Analyze existing hardware for optimization opportunities"
+              },
+              {
+                "title":"Schematic Validation",
+                "des":"Verify schematic accuracy for intended functionality."
+              },
+              {
+                "title":"Performance Analysis",
+                "des":"Test and evaluate performance under operational conditions."
+              },
+              {
+                "title":"Optimization Recommendations",
+                "des":"Suggest improvements for cost, efficiency, and manufacturability"
+              },
+              {
+                "title":"Final Approval",
+                "des":"Provide a detailed report for client approval before production."
+              }
+            ]
+          },
+          {
+            "title": "Electronics Prototyping",
+            "imageUrl": "/assets/Electronics-Prototyping.webp",
+            "description":"Electronics Prototyping brings your ideas to life by developing functional prototypes for validation and testing. We use advanced tools and techniques to create prototypes of circuit boards, embedded systems, or complete electronic products. Prototyping involves hardware assembly, software integration, and rigorous testing to ensure the design meets all specifications. This iterative process helps identify and resolve design issues early, reducing the risk of costly errors in production. Whether you need a proof-of-concept or a near-production-ready model, our prototyping services accelerate development and provide critical insights for final design adjustments.",
+            "whatWeDo":[
+              {
+                "title":"Conceptual Design",
+                "des":"Develop detailed sketches and CAD models of the desired product."
+              },
+              {
+                "title":"Component Procuremen",
+                "des":"Source components and materials for prototype assembly."
+              },
+              {
+                "title":"Assembly",
+                "des":"Assemble prototypes using precise techniques and tools."
+              },
+              {
+                "title":"Testing and Feedback",
+                "des":"Conduct functional tests and refine the prototype based on results."
+              },
+              {
+                "title":"Validation",
+                "des":"Present a validated prototype ready for mass production."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name":"IoT Solutions",
+        "imageUrl": "/assets/IoT-Solutions2.webp",
+        "description": "Our IoT Solutions provide end-to-end development for connected devices, enabling seamless integration of sensors, connectivity modules, and software. We specialize in creating innovative IoT products that enhance automation, data collection, and real-time monitoring for diverse industries. Whether it's designing IoT-specific hardware or developing custom firmware, our team delivers scalable and secure solutions that improve operational efficiency. From concept development to deployment, we ensure that every IoT device meets the highest standards of functionality and performance. Trust us to bring your IoT ideas to life with smart, connected, and reliable solutions tailored to your business needs.",
+        "services":[
+          {
+            "title":"IoT Product Development",
+            "imageUrl": "/assets/IoT-Product-Development.webp",
+            "description":"IoT Product Development delivers end-to-end solutions for creating smart, connected devices. This includes designing hardware, integrating sensors and communication modules, and developing software for data management and analytics. Our process involves concept design, prototyping, testing, and scaling for production. We ensure IoT systems are optimized for low power consumption, secure connectivity, and real-time performance. Applications range from smart homes and healthcare to industrial automation and agriculture. By leveraging our expertise, we help businesses launch innovative IoT products that enhance efficiency, improve decision-making, and provide seamless user experiences.",
+            "whatWeDo":[
+              {
+                "title":"Needs Assessment",
+                "des":"Identify IoT product goals, target users, and core functionality."
+              },
+              {
+                "title":"System Design",
+                "des":"Create designs for hardware, firmware, and software integration."
+              },
+              {
+                "title":"Prototyping",
+                "des":"Develop prototypes for functionality and connectivity testing."
+              },
+              {
+                "title":"Cloud Integration",
+                "des":"Implement cloud-based data management and analytics systems."
+              },
+              {
+                "title":"Final Validation",
+                "des":"Conduct performance and usability tests before deployment."
+              }
+            ]
+          },
+          {
+            "title": "IoT Sensor Integration",
+            "imageUrl": "/assets/IoT-Sensor-Integration.webp",
+            "description":"IoT Sensor Integration focuses on selecting, configuring, and implementing sensors to capture real-time data for various applications. Our services include analyzing requirements, sourcing sensors, and integrating them with hardware and software systems. We ensure compatibility with IoT platforms, optimizing sensor placement for accuracy and reliability. Whether it’s temperature, pressure, motion, or environmental monitoring, our expertise ensures efficient data acquisition and processing. Applications include smart cities, industrial IoT, and healthcare systems. By seamlessly integrating sensors, we enable robust IoT solutions that deliver actionable insights and drive smarter decision-making",
+            "whatWeDo":[
+              {
+                "title":"Sensor Selection",
+                "des":"Choose sensors suited for the intended application and environment.  "
+              },
+              {
+                "title":"Integration Design",
+                "des":"Plan sensor placement and connectivity within the device architecture."
+              },
+              {
+                "title":"Hardware Integration",
+                "des":"Embed sensors into devices, ensuring proper signal transmission."
+              },
+              {
+                "title":"Firmware Development",
+                "des":"Develop firmware for seamless sensor communication with other components."
+              },
+              {
+                "title":"System Testing",
+                "des":"Validate sensor performance and data accuracy under real-world conditions."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Electronics Product Design",
+        "description": "We specialize in designing cutting-edge electronics products that combine innovation, functionality, and aesthetics. Our Electronics Product Design services cover the full lifecycle, from conceptualizing the initial idea to prototyping and production. Our team works on diverse applications, including consumer electronics, industrial devices, and complex electronic systems. We focus on ensuring the products are not only high-performing but also cost-effective and manufacturable. We consider all aspects such as circuit design, compliance with standards, and user experience, making sure the final product is ready for market success. Let us help you turn your vision into a reality with our comprehensive design solutions.",
+        "imageUrl": "/assets/Electronics-Product-Design.webp",
+        "departmentId": "672eefbf81be8191d93ce4bd",
+        "id": "675296cfd6387bac980467b6",
+        "position": 3,
+        "services": [
+          {
+            "title": "Electronics Circuit Design",
+            "description": "Electronics Circuit Design involves creating reliable circuits for analog, digital, and mixed-signal applications. Our process includes schematic design, simulation, and optimization to ensure functionality and performance. We consider factors like signal integrity, power efficiency, and noise reduction to meet your specific needs. Whether for consumer electronics, automotive systems, or industrial equipment, our designs are tailored to meet industry standards. We also provide testing and debugging services to validate circuit performance before production, ensuring a smooth transition to the next development phase.",
+            "imageUrl": "/assets/Electronics-Circuit-Design.webp",
+            "id": "675296dbd6387bac980467b7",
+            "categoryId": "675296cfd6387bac980467b6",
+            "position": 1,
+            "whatWeDo": [
+              {
+                "title": "Circuit Requirements",
+                "des": "Define functional and environmental needs for the circuit.",
+                "id": "6752a42fd6387bac980467f3",
+                "serviceId": "675296dbd6387bac980467b7",
+                "position": 1
+              },
+              {
+                "title": "Schematic Design",
+                "des": "Create detailed schematics for efficient circuit operation.",
+                "id": "6752a491d6387bac980467f4",
+                "serviceId": "675296dbd6387bac980467b7",
+                "position": 2
+              },
+              {
+                "title": "Simulation",
+                "des": "Test circuits virtually to predict performance and address issues.",
+                "id": "6752a4a7d6387bac980467f5",
+                "serviceId": "675296dbd6387bac980467b7",
+                "position": 3
+              },
+              {
+                "title": "Prototype Development",
+                "des": "Build and test physical circuit prototypes for validation.",
+                "id": "6752a4c1d6387bac980467f6",
+                "serviceId": "675296dbd6387bac980467b7",
+                "position": 4
+              },
+              {
+                "title": "Design Refinement",
+                "des": "Optimize circuits for better efficiency and reliability.",
+                "id": "6752a4e4d6387bac980467f7",
+                "serviceId": "675296dbd6387bac980467b7",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "title": "Electronics Design Services",
+            "description": "Electronics Design Services encompass end-to-end development, from concept to production. We create designs tailored to meet the specific requirements of your application, ensuring functionality, reliability, and cost-efficiency. Our services include circuit design, PCB layout, component selection, and system integration. We cater to diverse industries like IoT, automotive, and medical devices. Our team prioritizes innovative solutions, compliance with standards, and seamless integration of hardware and software. Whether developing new products or upgrading existing designs, we deliver electronics solutions that meet your goals and exceed your expectations.",
+            "imageUrl": "/assets/Electronics-Design-Services.webp",
+            "id": "67529738d6387bac980467b8",
+            "categoryId": "675296cfd6387bac980467b6",
+            "position": 2,
+            "whatWeDo": [
+              {
+                "title": "Requirement Gathering",
+                "des": "Understand the product’s functional goals and constraints.",
+                "id": "6752a56ed6387bac980467f8",
+                "serviceId": "67529738d6387bac980467b8",
+                "position": 1
+              },
+              {
+                "title": "Concept Development",
+                "des": "Develop initial designs, including schematics and 3D models.",
+                "id": "6752a5d4d6387bac980467f9",
+                "serviceId": "67529738d6387bac980467b8",
+                "position": 2
+              },
+              {
+                "title": "Prototyping",
+                "des": "Create functional prototypes for testing and validation.",
+                "id": "6752a5e9d6387bac980467fa",
+                "serviceId": "67529738d6387bac980467b8",
+                "position": 3
+              },
+              {
+                "des": "Refine designs for performance and manufacturability.",
+                "id": "6752a60ed6387bac980467fb",
+                "serviceId": "67529738d6387bac980467b8",
+                "title": "Optimization",
+                "position": 4
+              },
+              {
+                "des": "Deliver a complete design package for production.",
+                "id": "6752a620d6387bac980467fc",
+                "serviceId": "67529738d6387bac980467b8",
+                "title": "Final Documentation",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "title": "Electronics Product Design",
+            "description": "Electronics Product Design transforms ideas into market-ready devices, balancing functionality, aesthetics, and user experience. From initial concept to prototype, we design products optimized for manufacturing and performance. Our process includes hardware design, software integration, enclosure development, and rigorous testing to ensure quality and compliance. Applications range from consumer gadgets to industrial devices. We focus on scalability, energy efficiency, and reliability, ensuring your product meets market demands. With our expertise, you can launch innovative electronics products that stand out in competitive markets.",
+            "imageUrl": "/assets/Electronics-Product-Design.webp",
+            "id": "67529754d6387bac980467b9",
+            "categoryId": "675296cfd6387bac980467b6",
+            "position": 3,
+            "whatWeDo": [
+              {
+                "title": "Requirement Definition",
+                "des": "Collaborate to define product functionality, aesthetics, and safety requirements.",
+                "id": "6752a6b2d6387bac980467fd",
+                "serviceId": "67529754d6387bac980467b9",
+                "position": 1
+              },
+              {
+                "title": "Concept Sketching",
+                "des": "Develop initial design concepts for feedback and iteration.",
+                "id": "6752a6d6d6387bac980467fe",
+                "serviceId": "67529754d6387bac980467b9",
+                "position": 2
+              },
+              {
+                "title": "Prototyping",
+                "des": "Build functional and visual prototypes for review.",
+                "id": "6752a6e6d6387bac980467ff",
+                "serviceId": "67529754d6387bac980467b9",
+                "position": 3
+              },
+              {
+                "title": "Testing and Refinement",
+                "des": "Optimize designs for performance and manufacturability.",
+                "id": "6752a6f7d6387bac98046800",
+                "serviceId": "67529754d6387bac980467b9",
+                "position": 4
+              },
+              {
+                "title": "Production Handoff",
+                "des": "Prepare finalized designs for mass production.",
+                "id": "6752a710d6387bac98046801",
+                "serviceId": "67529754d6387bac980467b9",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "title": "Industrial Design",
+            "description": "Industrial Design focuses on creating functional and aesthetically pleasing designs for electronics products. We specialize in user-centric designs that balance form, functionality, and manufacturability. Our process includes market research, concept development, 3D modeling, and prototyping. Applications include consumer electronics, IoT devices, and medical instruments. We emphasize ergonomics, usability, and visual appeal to create products that enhance user experience. By integrating design and engineering, we deliver innovative solutions that align with your brand identity and meet customer expectations.",
+            "imageUrl": "/assets/Industrial-Design.webp",
+            "id": "67529778d6387bac980467ba",
+            "categoryId": "675296cfd6387bac980467b6",
+            "position": 4,
+            "whatWeDo": [
+              {
+                "title":"Market Research",
+                "des":"Analyze target markets and user needs to guide design"
+              },
+              {
+                "title":"Concept Design",
+                "des":"Develop innovative design concepts to align with branding and functionality"
+              },
+              {
+                "title":"3D Modeling",
+                "des":"Create digital models for detailed visualization."
+              },
+              {
+                "title":"Prototyping",
+                "des":"Build and test physical prototypes to refine design."
+              },
+              {
+                "title":"Production Support",
+                "des":"Assist with design adjustments for large-scale manufacturing"
+              }
+            
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enclosure and Industrial Design",
+        "description": "",
+        "imageUrl": "/assets/Enclosure-and-Industrial-Design.webp",
+        "departmentId": "672eefbf81be8191d93ce4bd",
+        "id": "675297bcd6387bac980467bb",
+        "position": 4,
+        "services": [
+          {
+            "title": "Enclosure Design Services",
+            "description": "Enclosure Design Services create protective casings for electronic products, ensuring durability, thermal management, and aesthetic appeal. We design custom enclosures tailored to your product’s requirements, considering factors like material selection, mechanical strength, and manufacturing methods. Our expertise spans industries, including IoT, automotive, and consumer electronics. Prototyping and testing are integral to our process, ensuring the enclosure provides optimal protection and meets industrial standards. From waterproof housings to lightweight designs, we deliver solutions that enhance product performance and user satisfaction.",
+            "imageUrl": "/assets/Enclosure-Design-Services.webp",
+            "id": "6752982ed6387bac980467bc",
+            "categoryId": "675297bcd6387bac980467bb",
+            "position": 1,
+            "whatWeDo": [
+              {
+                "title": "Requirement Analysis",
+                "des": "Identify product-specific enclosure needs, such as size, thermal management, and durability.",
+                "id": "6752a802d6387bac98046807",
+                "serviceId": "6752982ed6387bac980467bc",
+                "position": 1
+              },
+              {
+                "des": "Choose appropriate materials for the enclosure, balancing protection, cost, and aesthetics.",
+                "id": "6752a819d6387bac98046808",
+                "serviceId": "6752982ed6387bac980467bc",
+                "title": "Material Selection",
+                "position": 2
+              },
+              {
+                "des": "Develop detailed 3D CAD models to visualize the enclosure's structure and fit.",
+                "id": "6752a82cd6387bac98046809",
+                "serviceId": "6752982ed6387bac980467bc",
+                "title": "3D Modeling",
+                "position": 3
+              },
+              {
+                "des": "Create a physical prototype to validate the design and assess functionality.",
+                "id": "6752a83cd6387bac9804680a",
+                "serviceId": "6752982ed6387bac980467bc",
+                "title": "Prototyping",
+                "position": 4
+              },
+              {
+                "des": "Refine the design for manufacturability and compliance with industry standards.",
+                "id": "6752a850d6387bac9804680b",
+                "serviceId": "6752982ed6387bac980467bc",
+                "title": "Final Optimization",
+                "position": 5
+              }
+            ]
+          },
+          {
+            "title":"3D Printing Services",
+            "imageUrl": "/assets/3D-Printing-Services.webp",
+            "description":"3D Printing Services enable rapid prototyping and production of electronic enclosures and components. Using advanced 3D printing technologies, we create high-precision models tailored to your design specifications. This process allows for quick iterations, reducing development time and costs. Applications range from enclosures for IoT devices to custom mechanical components. We work with various materials, including plastics and metals, to meet specific requirements like durability, heat resistance, or aesthetics. By leveraging 3D printing, we help you validate designs, refine prototypes, and accelerate product development cycles.",
+            "whatWeDo":[
+              {
+                "title":"Design Preparation",
+                "des":"Convert CAD models into printable formats, ensuring dimensional accuracy and surface quality."
+              },
+              {
+                "title":"Material Selection",
+                "des":"Select the right 3D printing material based on application needs and mechanical properties."
+              },
+              {
+                "title":"Printing Process",
+                "des":"Use high-precision 3D printers to create prototypes or small batches of components"
+              },
+              {
+                "title":"Post-Processing",
+                "des":"Enhance printed parts through sanding, painting, or finishing processes as required."
+              },
+              {
+                "title":"Validation and Delivery",
+                "des":"Inspect final prints for accuracy and deliver the finished parts to clients"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name":"Electronics Consulting and Review",
+        "imageUrl": "/assets/Electronics-Consulting-and-Review.webp",
+        "description":"Our Electronics Consulting and Review services offer expert guidance to optimize your electronics design process. We work closely with clients to ensure their designs meet both performance expectations and industry standards. From feasibility studies to technical recommendations, our team helps refine and streamline your design concepts. We conduct comprehensive design reviews, examining schematics, layouts, and overall functionality to identify potential issues before production. Whether you're looking to optimize cost, performance, or manufacturability, we provide actionable insights and support throughout the development cycle. Our goal is to ensure that your product is market-ready and exceeds expectations.",
+        "services":[
+          {
+            "title":"Electronics Design Consultation",
+            "imageUrl": "/assets/Electronics-Design-Consultation.webp",
+            "description":"Electronics Design Consultation provides expert guidance to optimize your electronics development process. We assess your project’s requirements, identify challenges, and propose innovative solutions. Our services include feasibility studies, component selection, and design optimization to enhance performance and cost-efficiency. We cater to industries like IoT, automotive, and healthcare. Whether you’re starting a new project or refining an existing design, our consultation ensures you achieve your objectives while adhering to industry standards. With our expertise, you can navigate complex development processes confidently and effectively.",
+            "whatWeDo":[
+              {
+                "title": "Initial Discussion",
+                "des":"Engage with clients to understand their goals, challenges, and expectations."
+              },
+              {
+                "title": "Design Feasibility Study",
+                "des":"Evaluate the feasibility of the proposed design concept based on functionality and budget."
+              },
+              {
+                "title": "Technical Recommendations",
+                "des":"Provide expert suggestions for component selection, layout optimization, and cost reduction"
+              },
+              {
+                "title": "Documentation Support",
+                "des":"Assist in creating detailed design documentation for further development."
+              },
+              {
+                "title": "Ongoing Support",
+                "des":"Offer continued guidance during design implementation and troubleshooting."
+              }
+            ]
+          },
+          {
+            "title":"Design Review Services",
+            "imageUrl": "/assets/Design-Review-Services.webp",
+            "description":"Design Review Services provide a thorough evaluation of your electronics designs to ensure functionality, safety, and manufacturability. Our reviews cover schematics, PCB layouts, thermal management, and compliance with industry standards. We identify potential issues, recommend improvements, and validate performance through simulations and testing. This service reduces risks, enhances reliability, and accelerates time-to-market. Ideal for new designs or redesigns, our reviews help you optimize your product for efficiency and cost-effectiveness. By addressing challenges early, we ensure your electronics project’s success and market readiness.",
+            "whatWeDo":[
+              {
+                "title": "Requirement Validation",
+                "des":"Cross-check designs against client specifications and industry standards"
+              },
+              {
+                "title": "Schematic Analysis",
+                "des":"Examine circuit schematics for accuracy and logical flow."
+              },
+              {
+                "title": "Layout Inspection",
+                "des":"Evaluate PCB layouts for signal integrity, thermal management, and manufacturability."
+              },
+              {
+                "title": "Performance Testing",
+                "des":"Assess prototype or simulated designs for expected functionality and efficiency."
+              },
+              {
+                "title": "Feedback and Recommendations",
+                "des":"Provide a detailed review report with suggestions for improvement"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
     {
       "name": "Mechanical",
       "des": "Department specializing in mechanical design and enclosure solutions.",
@@ -430,7 +710,7 @@
             {
               "title": "Machine drawing",
               "description": "Machine drawings provide essential details for manufacturing and assembling mechanical components. These drawings include dimensions, tolerances, material specifications, and surface finishes, enabling precise fabrication and assembly. Our machine drawing expertise spans across industries like automotive, food processing, and agriculture. We ensure that each drawing adheres to industry standards, making them suitable for production, quality checks, and maintenance. Whether it’s creating detailed part drawings or large-scale assembly layouts, our services are tailored to meet specific client needs, ensuring high accuracy and efficiency. With these drawings, manufacturers can produce components with minimal errors and achieve seamless assembly operations.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Machine Drawing.webp",
               "id": "6752982ed6387bac980467bc",
               "categoryId": "675297bcd6387bac980467bb",
               "position": 1,
@@ -474,6 +754,7 @@
             },
             {
               "title":"Manufacturing Drawing",
+              "imageUrl": "/assets/Manufacturing-Drawing.webp",
               "description": "Manufacturing drawings are critical documents that detail all specifications required for production. These include dimensions, material selection, machining processes, and finishing details like welding, painting, or plating. They provide instructions for fabricators to produce parts accurately while ensuring that the end product meets design intent. Our manufacturing drawing services cater to industries like aerospace, automotive, and consumer goods, ensuring precision and compliance with international standards. From CNC machining instructions to assembly fixtures, we cover all aspects of manufacturing. Our team focuses on clarity and accuracy to reduce production errors, improve efficiency, and lower costs during fabrication",
               "whatWeDo":[
                 {
@@ -500,6 +781,7 @@
             },
             {
               "title":"Mechanical shop drawing",
+              "imageUrl": "/assets/Mechanical Shop Drawing.webp",
               "description":"Mechanical shop drawings are specialized technical documents prepared for workshops and production units. These drawings provide detailed instructions, including material specifications, tolerances, and step-by-step assembly guidance. They often include exploded views and sectional drawings to ensure clarity in complex designs. Our mechanical shop drawing services cater to industries requiring precise and reliable documentation for manufacturing processes. By delivering clear and accurate shop drawings, we help manufacturers avoid miscommunication, reduce material waste, and streamline operations. Our drawings meet industry-specific standards, providing robust support for on-site manufacturing and assembly requirements",
               "whatWeDo":[
                 {
@@ -527,6 +809,7 @@
             },
             {
               "title":"Assembly drawing",
+              "imageUrl": "/assets/assembly drawing.webp",
               "description": "Assembly drawings showcase how individual components fit together to form a complete product or system. These drawings provide a comprehensive view of the assembly process, including part numbers, fastening methods, and the sequence of assembly. We specialize in creating detailed assembly drawings that improve production efficiency and reduce assembly errors. Whether for machines, appliances, or industrial equipment, our drawings ensure seamless integration of parts and proper alignment. By including exploded views, annotations, and reference diagrams, we enable manufacturers to achieve faster and more accurate assemblies, saving both time and labor costs in production processes",
               "whatWeDo":[
                 {
@@ -553,6 +836,7 @@
             },
             {
               "title":"Sheet Metal design Weldment",
+              "imageUrl": "/assets/Sheet Metal design Weldment.webp",
               "description":"Sheet metal design and weldment drafting focus on creating detailed layouts for components to be manufactured using sheet metal processes like bending, cutting, punching, and welding. Our designs include precise fold lines, reliefs, and welding details to ensure manufacturability and reduce material wastage. Whether for enclosures, brackets, or industrial assemblies, our drawings meet industry standards and are optimized for cost-effective production. We ensure that the designs account for material properties, thickness, and finishing processes, enabling seamless fabrication. Our services cater to automotive, electronics, and machinery industries, delivering robust solutions tailored to specific project requirements",
               "whatWeDo":[
                 {
@@ -579,6 +863,7 @@
             },
             {
               "title":"Engineering MEP drawing",
+              "imageUrl": "/assets/Engineering MEP drawing.webp",
               "description":"MEP (Mechanical, Electrical, and Plumbing) drawings are vital for designing building systems. These drawings include layouts for HVAC systems, electrical circuits, and plumbing networks, ensuring proper integration and functionality. Our MEP drafting services deliver highly detailed and accurate plans for architects, contractors, and engineers. By incorporating specifications, codes, and installation guidelines, we ensure efficient project execution and reduced rework. Our expertise spans residential, commercial, and industrial projects, providing end-to-end solutions for complex building systems. With clear and precise drawings, we enhance coordination among teams, ensuring that all systems function harmoniously within the structure.",
               "whatWeDo":[
                 {
@@ -604,6 +889,7 @@
             },
             {
               "title":"Fabrication drawing",
+              "imageUrl": "/assets/Fabrication drawing.webp",
               "description":"Fabrication drawings detail the construction of structures, components, or assemblies, guiding manufacturers through the production process. These drawings include dimensions, material specifications, weld types, and machining details. Our fabrication drawing services cater to industries like construction, heavy machinery, and consumer products. By delivering clear and accurate drawings, we help fabricators minimize errors, reduce material waste, and optimize production time. Whether for structural frameworks, machinery components, or customized products, our designs are tailored to meet client needs and industry standards. Our focus on precision ensures seamless fabrication, enhancing overall product quality and durability",
               "whatWeDo":[
                 {
@@ -632,11 +918,12 @@
         },
         {
           "name":"CAD Conversion",
-          "imageUrl": "assets/CAD-Conversion.webp",
+          "imageUrl": "/assets/CAD-Conversion.webp",
           "description":"CAD conversion is the process of transforming existing drawings, images, or models into editable CAD formats. It enables businesses to digitize and modernize legacy documents, enhancing usability and accuracy. Our CAD conversion services cover various formats, such as paper, PDF, and images, to deliver high-quality CAD files. By using advanced software tools, we ensure precision and compliance with industry standards. Whether it's a simple 2D drawing or a complex 3D model, our solutions cater to a wide range of industries, improving workflow efficiency. CAD conversion is essential for creating accurate and scalable digital versions of physical documents or designs",          
           "services": [
             { 
               "title":"Paper to CAD Conversion",
+              "imageUrl": "/assets/Paper to CAD Conversion.webp",
               "description":"Paper to CAD conversion transforms traditional hand-drawn sketches and technical drawings into digital CAD files. This process ensures the preservation of important legacy data while improving accessibility and scalability. Our services focus on creating precise digital replicas of paper drawings, making them editable for future modifications. We cater to industries such as construction, manufacturing, and engineering, ensuring compliance with international standards. By converting paper-based designs into CAD formats, businesses can streamline their operations, reduce storage costs, and eliminate the risk of physical damage to documents. The resulting files are accurate, reusable, and easy to integrate into modern workflows.",
               "whatWeDo":[
                 {
@@ -663,6 +950,7 @@
             },
             {
               "title":"Image to CAD Conversion",
+              "imageUrl": "/assets/Image to CAD Conversion.webp",
               "description" :"Image to CAD conversion involves transforming raster images, such as scanned blueprints or design sketches, into editable vector-based CAD files. This process is crucial for maintaining accuracy and scalability, especially for technical drawings and schematics. Our services use advanced tools to convert images into precise CAD formats, ensuring that every detail is captured. We cater to diverse industries, including architecture, automotive, and electronics. By converting images into CAD files, we enable businesses to reuse old designs, update existing layouts, and integrate them into modern CAD software. The process ensures that legacy designs remain useful and accessible",
               "whatWeDo":[
                 {
@@ -689,6 +977,7 @@
             },
             {
               "title":"Pdf to CAD Conversion",
+              "imageUrl": "/assets/PDF to CAD Conversion.webp",
               "description":"PDF to CAD conversion is a highly demanded service that transforms static PDF files into dynamic, editable CAD drawings. Often, technical drawings or design documents are shared in PDF format, which is not suitable for editing or scaling. Our conversion services extract every detail, including dimensions, annotations, and layers, to create precise CAD files. We specialize in complex drawings for engineering, architecture, and manufacturing. This process is ideal for businesses looking to modify or reuse existing designs. By delivering accurate and editable CAD files, we help clients improve efficiency and reduce the need for recreating designs from scratch",
               "whatWeDo":[
                 {
@@ -715,6 +1004,7 @@
             },
             {
               "title":"2d to 3d conversion",
+              "imageUrl": "/assets/2d to 3d Conversion.webp",
               "description":"2D to 3D conversion is essential for industries transitioning from traditional drafting to advanced modeling techniques. This process converts flat 2D drawings into detailed 3D models, providing a clearer visualization of the design. Our services focus on creating accurate 3D models that align with the original 2D drawings while incorporating real-world dimensions and tolerances. These models are invaluable for simulation, analysis, and manufacturing. We cater to industries like automotive, aerospace, and consumer products, ensuring a smooth transition from concept to reality. By converting 2D designs into 3D, businesses can improve design accuracy and streamline the manufacturing process",
               "whatWeDo":[
                 {
@@ -741,6 +1031,7 @@
             },
             {
               "title":"AutoCAD conversion",
+              "imageUrl":"/assets/AutoCAD Conversion.webp",
               "description":"AutoCAD conversion involves transforming drawings from other formats into AutoCAD’s native file format for easier editing and management. This service is particularly useful for businesses dealing with legacy designs or incompatible CAD formats. We specialize in converting PDF, image, and paper-based drawings into AutoCAD, ensuring accuracy and compliance with industry standards. Whether it’s a simple floor plan or a complex mechanical drawing, our AutoCAD conversion services cater to diverse industries. By digitizing and standardizing designs, we help clients improve collaboration, reduce errors, and enhance productivity. AutoCAD conversion ensures that legacy drawings remain functional in a modern design environment",
               "whatWeDo":[
                 {
@@ -769,11 +1060,12 @@
         },
         {
           "name":"3D modeling",
-          "imageUrl":"assets/3D Rendering.webp",
+          "imageUrl":"/assets/3D Modelling.webp",
           "description":"3D modeling is the process of creating three-dimensional representations of objects or systems using specialized software. It is crucial for visualizing, analyzing, and manufacturing complex designs. Our 3D modeling services cater to various industries, including automotive, kitchenware, food processing, agriculture, and electronics. From concept development to detailed product designs, we create accurate models tailored to client specifications. These models provide a realistic view of the design, aiding in better decision-making, simulation, and prototyping. With expertise in sheet metal design, test rigs, and enclosures, our 3D modeling services enhance the efficiency and precision of the product development process",
           "services": [
             {
               "title":"Automotive/ automobile machine components",
+              "imageUrl": "/assets/automobile machine components.webp",
               "description":"Our 3D modeling services for automotive machine components focus on creating detailed and accurate models for parts such as engine components, chassis, and transmission systems. We use advanced CAD software to ensure that every detail, from dimensions to tolerances, aligns with industry standards. These models are essential for simulating real-world conditions, testing functionality, and optimizing designs before production. By offering precise and customizable 3D models, we help automotive manufacturers reduce prototyping costs and accelerate time-to-market. Our expertise ensures that all designs meet safety and performance requirements while facilitating seamless integration into larger assemblies.",
               "whatWeDo":[
                 {
@@ -801,6 +1093,7 @@
             },
             {
               "title":"Kitchenware components",
+              "imageUrl":"/assets/Kitchenware components.webp",
               "description":"We specialize in creating 3D models for kitchenware components, including utensils, appliances, and storage solutions. These models are tailored to meet aesthetic and functional requirements, ensuring durability and usability. Our designs focus on material optimization, ergonomic features, and manufacturability. By providing realistic 3D renderings, we help clients visualize their products and make informed decisions during the design phase. Whether it’s a simple spoon or a complex blender assembly, our services cater to both small-scale and large-scale manufacturers. Our expertise ensures that kitchenware designs are efficient, attractive, and ready for production",
               "whatWeDo":[
                 {
@@ -828,6 +1121,7 @@
             },
             {
               "title":"Sheet metal design",
+              "imageUrl":"/assets/Sheet metal design.webp",
               "description":"Sheet metal design requires precision to ensure manufacturability and structural integrity. Our 3D modeling services include detailed designs for enclosures, brackets, and assemblies, focusing on optimal material usage and production feasibility. We account for factors such as bending, cutting, and welding processes, ensuring that designs are practical and cost-effective. Our expertise spans industries like electronics, automotive, and machinery. By creating accurate 3D models, we enable clients to simulate and analyze their designs, reducing errors and improving efficiency. Our sheet metal designs are tailored to meet specific project requirements, ensuring robust and reliable solutions.",
               "whatWeDo":[
                 {
@@ -854,6 +1148,7 @@
             },
             {
               "title":"Food processing Machine components",
+              "imageUrl":"/assets/Food processing Machine components.webp",
               "description":"Our 3D modeling services for food processing machine components focus on creating hygienic and efficient designs. We specialize in components such as mixers, conveyors, and cutting tools, ensuring that they meet food safety standards. These models are optimized for ease of cleaning, durability, and high performance. By providing accurate 3D representations, we enable manufacturers to test and refine their designs before production. Our expertise ensures that all components integrate seamlessly into larger systems, improving overall efficiency and reliability. From concept to production, we deliver solutions that meet the unique demands of the food processing industry",
               "whatWeDo":[
                 {
@@ -881,6 +1176,7 @@
             },
             {
               "title":"Agriculture machine component",
+              "imageUrl":"/assets/Agriculture Machine Components.webp",
               "description":"We provide 3D modeling services for agriculture machine components, including plows, seeders, and harvesting equipment. Our designs focus on durability, efficiency, and ease of use, ensuring that they meet the challenges of agricultural environments. By creating accurate 3D models, we help manufacturers optimize their designs for performance and cost-effectiveness. These models are invaluable for prototyping, simulation, and testing, reducing the need for physical iterations. Our expertise in agricultural machinery ensures that all components are robust and reliable, enabling clients to develop innovative solutions that improve productivity and sustainability in farming operations",
               "whatWeDo":[
                 {
@@ -907,6 +1203,7 @@
             },
             {
               "title":"Test rig",
+              "imageUrl":"/assets/test rig.webp",
               "description":"Test rigs are essential for evaluating the performance and reliability of components or systems under simulated conditions. Our 3D modeling services focus on creating detailed and accurate test rig designs tailored to specific testing requirements. From structural frames to instrumentation layouts, our models ensure functionality and ease of operation. By providing realistic 3D representations, we enable clients to visualize and refine their test rigs before manufacturing. Our expertise spans various industries, including automotive, aerospace, and electronics. These designs help clients validate their products, improve quality, and reduce development costs",
               "whatWeDo":[
                 {
@@ -933,6 +1230,7 @@
             },
             {
               "title":"Electronics Product enclosure design",
+              "imageUrl":"/assets/Electronics Product enclosure design.webp",
               "description":"Our 3D modeling services for electronics product enclosures focus on creating functional and aesthetically pleasing designs. These enclosures are optimized for heat dissipation, durability, and ease of assembly. We cater to products such as power adapters, consumer electronics, and industrial controllers, ensuring that all designs meet industry standards. By providing accurate 3D models, we help clients visualize their enclosures and make necessary modifications during the design phase. Our expertise ensures that enclosures are not only practical but also align with branding and user experience requirements",
               "whatWeDo":[
                 {
@@ -961,11 +1259,12 @@
         },
         {
           "name":"3D rendering",
-          "imageUrl":"assets/3D Rendering.webp",
+          "imageUrl":"/assets/3D Rendering.webp",
           "description":"3D rendering transforms 3D models into photorealistic images or animations, offering a detailed visual representation of products or components. This service is essential for showcasing designs during presentations, marketing, or production planning. We provide high-quality renderings for product visualization, machine assemblies, and more, ensuring accuracy in every detail. By using advanced rendering techniques, including lighting and texture mapping, we create lifelike images that reflect real-world aesthetics. Our services cater to industries like automotive, consumer electronics, and manufacturing. 3D rendering bridges the gap between concept and reality, enabling stakeholders to better understand and evaluate designs before production",
           "services": [
             {
               "title":"3D product rendering",
+              "imageUrl":"/assets/3D product rendering.webp",
               "description":"Our 3D product rendering services focus on creating lifelike visualizations of individual products, showcasing their features, textures, and materials in vivid detail. This is ideal for marketing, prototyping, and design validation. We use advanced rendering software to generate high-resolution images that highlight product aesthetics and functionality. These renderings are tailored for various industries, including consumer goods, electronics, and machinery. By providing photorealistic visuals, we help clients present their designs effectively to stakeholders, customers, or investors. Whether for online catalogs or promotional material, our 3D product renderings elevate the visual appeal and understanding of your products",
               "whatWeDo":[
                 {
@@ -992,6 +1291,7 @@
             },
             {
               "title":"Product parts visualization",
+              "imageUrl":"/assets/Product parts visualization.webp",
               "description":"Product parts visualization focuses on rendering individual components of a product to highlight their design, material, and functionality. Our services create detailed, high-resolution images of each part, enabling engineers and stakeholders to analyze and showcase their designs effectively. This is particularly useful for understanding how components fit together in an assembly. By offering accurate visualizations, we cater to industries such as automotive, aerospace, and manufacturing. Our expertise ensures that every detail, from dimensions to material textures, is depicted realistically. These visuals are invaluable for marketing, troubleshooting, and quality assurance, providing a clear view of each product component",
               "whatWeDo":[
                 {
@@ -1018,6 +1318,7 @@
             },
             {
               "title":"Machine Assembly visualization",
+              "imageUrl":"/assets/Machine Assembly visualization.webp",
               "description":"Machine assembly visualization provides a comprehensive view of how various components come together to form a fully functional machine. Our 3D rendering services create detailed, photorealistic visuals of complex assemblies, showcasing their structure and operational functionality. This is essential for training, marketing, and design validation. We cater to industries like heavy machinery, automotive, and industrial equipment, ensuring precise representation of each part and their interactions. By creating clear and detailed assembly visualizations, we help clients communicate their designs effectively to teams, clients, and end-users, simplifying complex mechanical systems for better understanding and collaboration",
               "whatWeDo":[
                 {
@@ -1046,11 +1347,12 @@
         },
         {
           "name":"Design Consultation",
-          "imageUrl":"assets/3D Rendering.webp",
+          "imageUrl":"/assets/Design Consultation.webp",
           "description":"Design consultation involves guiding clients through the product development process, ensuring that their ideas are feasible, efficient, and innovative. Our services include concept development, material selection, value engineering, and prototyping. We collaborate closely with clients to identify challenges and provide tailored solutions that optimize performance and cost-effectiveness. With expertise across various industries, we help businesses transform ideas into successful products. Whether you’re at the initial idea stage or refining a design for production, our consultation services ensure a smooth and efficient development process. We emphasize innovation and practicality to deliver solutions that align with client objectives.",
           "services": [
             {
               "title":"Feasibility studies",
+              "imageUrl":"/assets/Feasibility studies.webp",
               "description":"Feasibility studies evaluate the practicality and potential success of a product design before development begins. Our services analyze technical, economic, and market factors to determine the viability of your project. By conducting detailed assessments, we identify potential risks, recommend improvements, and ensure alignment with industry standards. This process is essential for minimizing costly errors during production. We cater to industries such as automotive, consumer electronics, and machinery, providing actionable insights to guide decision-making. Feasibility studies help clients understand the strengths and weaknesses of their concepts, ensuring that only practical and profitable ideas move forward to development",
               "whatWeDo":[
                 {
@@ -1077,6 +1379,7 @@
             },
             {
               "title":"Concept development",
+              "imageUrl": "/assets/Concept Development.webp",
               "description":"Concept development focuses on transforming ideas into tangible designs. Our services include brainstorming, sketching, and creating initial models that define a product’s core features and aesthetics. We work closely with clients to ensure that designs align with functional requirements and market trends. By using advanced tools and methodologies, we refine concepts into viable solutions ready for prototyping. This process is crucial for setting the foundation of a successful product. Our expertise spans various industries, enabling us to deliver innovative and market-ready designs. Concept development bridges the gap between imagination and reality, turning ideas into actionable plans",
               "whatWeDo":[
                 {
@@ -1103,6 +1406,7 @@
             },
             {
               "title":"Value engineering",
+              "imageUrl":"/assets/Value engineering.webp",
               "description":"Value engineering involves optimizing a product’s design to improve functionality while reducing costs. Our services analyze every aspect of the design, identifying opportunities to substitute materials, simplify processes, or enhance efficiency without compromising quality. We cater to industries like manufacturing, electronics, and consumer goods, delivering solutions that balance performance with affordability. By conducting in-depth evaluations, we help clients achieve cost savings, better usability, and improved sustainability. Value engineering ensures that products meet or exceed customer expectations while remaining competitive in the market. It’s a systematic approach to delivering maximum value at the lowest possible cost",
               "whatWeDo":[
                 {
@@ -1129,6 +1433,7 @@
             },
             {
               "title":"Material selection",
+              "imageUrl":"/assets/Material selection.webp",
               "description":"Material selection is a critical step in product design, determining factors like durability, cost, and environmental impact. Our services provide expert guidance on choosing the right materials for your application, considering properties like strength, weight, conductivity, and corrosion resistance. We cater to industries ranging from aerospace to consumer goods, ensuring that materials align with functional and regulatory requirements. By conducting comparative analyses, we recommend materials that optimize performance and cost-effectiveness. Material selection is essential for ensuring product reliability and sustainability, making it a key element of successful design and manufacturing processes",
               "whatWeDo":[
                 {
@@ -1155,6 +1460,7 @@
             },
             {
               "title":"Prototyping",
+              "imageUrl":"/assets/Prototype1.webp",
               "description":"Prototyping is the process of creating physical or digital models to test and refine a design before full-scale production. Our prototyping services focus on delivering accurate representations of your product, enabling functional testing, user feedback, and design validation. We utilize advanced techniques, including 3D printing and CNC machining, to create prototypes quickly and cost-effectively. By providing tangible models, we help clients identify potential improvements, ensuring that the final product meets quality and performance expectations. Prototyping bridges the gap between design and production, reducing development risks and accelerating time-to-market",
               "whatWeDo":[
                 {
@@ -1183,11 +1489,12 @@
         },
         {
           "name":"Design Review",
-          "imageUrl":"assets/3D Rendering.webp",
+          "imageUrl":"/assets/design review.webp",
           "description":"Design review is a critical evaluation process that ensures a product's design meets all functional, structural, and safety requirements. This process involves analyzing every aspect of the design, from its conceptual framework to its detailed specifications, identifying areas for improvement. Our services include functional analysis, structural assessment, tolerance checks, safety evaluations, and environmental impact studies. These reviews ensure compliance with industry standards and regulations while optimizing performance and cost. By involving stakeholders at every stage, we provide actionable insights to refine and perfect the design. Design review minimizes risks, enhances reliability, and ensures that products meet customer expectations.",
           "services": [
             {
               "title":"Functional analysis",
+              "imageUrl":"/assets/Functional Analysis.webp",
               "description":"Functional analysis assesses whether a product design fulfills its intended purpose effectively and efficiently. Our services involve a systematic evaluation of the product's features, performance metrics, and operational requirements. This analysis ensures that the design delivers the desired outcomes without unnecessary complexity or cost. We cater to industries such as consumer electronics, automotive, and machinery, offering insights that enhance usability and reliability. By identifying potential bottlenecks or inefficiencies, we provide recommendations to improve functionality. Functional analysis ensures that designs align with user needs and market demands, making it a vital part of the development process",
               "whatWeDo":[
                 {
@@ -1214,6 +1521,7 @@
             },
             {
               "title":"Structural analysis",
+              "imageUrl":"/assets/Structural Analysis.webp",
               "description":"Structural analysis evaluates the physical integrity of a product under various conditions, ensuring it can withstand operational stresses. Our services include finite element analysis (FEA), load testing, and material strength assessment. This process identifies weak points in the design, allowing for enhancements to improve durability and safety. We cater to industries like construction, aerospace, and manufacturing, providing detailed reports and actionable recommendations. Structural analysis ensures that designs meet or exceed performance expectations, reducing the risk of failure during use. By optimizing strength and stability, we help clients deliver reliable and high-quality products.",
               "whatWeDo":[
                 {
@@ -1241,6 +1549,7 @@
             },
             {
               "title":"Tolerance analysis",
+              "imageUrl":"/assets/Tolerance Analysis.webp",
               "description":"Tolerance analysis ensures that all components of a product fit and function together as intended, even under manufacturing variations. Our services involve evaluating dimensional tolerances, geometric tolerances, and assembly clearances to minimize the risk of misalignment or defects. This process is crucial for industries like automotive, electronics, and precision engineering, where accuracy is paramount. By identifying and resolving potential issues early in the design process, we help clients reduce manufacturing errors and assembly challenges. Tolerance analysis enhances product quality, ensuring that designs are practical, efficient, and ready for production.",
               "whatWeDo":[
                 {
@@ -1267,6 +1576,7 @@
             },
             {
               "title":"Safety Analysis",
+              "imageUrl":"/assets/Safety Analysis.webp",
               "description":"Safety analysis evaluates a product's design to ensure it complies with safety standards and poses no risk to users during operation. Our services include hazard identification, risk assessment, and compliance checks with relevant industry regulations. This process is essential for products in industries such as healthcare, machinery, and consumer goods, where user safety is critical. By conducting detailed evaluations, we identify potential risks and recommend design modifications to eliminate or mitigate hazards. Safety analysis ensures that products are not only functional but also safe for end-users, enhancing customer trust and satisfaction.",
               "whatWeDo":[
                 {
@@ -1293,6 +1603,7 @@
             },
             {
               "title":"Environmental impact assessment.",
+              "imageUrl":"/assets/Environmental impact assessment.webp",
               "description":"Environmental impact assessment examines the ecological footprint of a product throughout its lifecycle, from production to disposal. Our services evaluate material selection, energy consumption, waste generation, and recyclability, helping clients create sustainable designs. This process is particularly relevant for industries like packaging, automotive, and consumer goods, where environmental concerns are growing. By providing actionable insights, we help clients minimize their product's environmental impact while maintaining functionality and cost-effectiveness. Environmental impact assessment ensures compliance with environmental regulations and supports corporate sustainability goals, making it a key consideration in modern product design",
               "whatWeDo":[
                 {
@@ -1321,11 +1632,12 @@
         },
         {
           "name":"Design Audit",
-          "imageUrl":"assets/3D Rendering.webp",
+          "imageUrl":"/assets/design audit.webp",
           "description":"Design audit is a systematic review of a product's design, benchmarking it against industry standards and best practices. This service identifies strengths, weaknesses, and opportunities for improvement, ensuring that the design is efficient, cost-effective, and high-performing. Our design audit includes benchmarking, root cause analysis, failure analysis, life cycle assessment, and cost-benefit analysis. By conducting thorough evaluations, we help clients refine their designs to meet market demands and operational requirements. Design audit enhances product reliability, optimizes performance, and supports decision-making, ensuring that designs are competitive and ready for production or market entry.",
           "services": [
             {
               "title":"Benchmarking",
+              "imageUrl":"/assets/BenchMarking.webp",
               "description":"Benchmarking involves comparing a product's design against competitors or industry standards to identify areas of improvement and differentiation. Our services provide detailed insights into market trends, performance metrics, and best practices, helping clients position their products effectively. This process is crucial for industries like automotive, consumer electronics, and industrial machinery, where innovation and efficiency drive success. By conducting thorough analyses, we highlight strengths and recommend enhancements to align with market expectations. Benchmarking ensures that designs are not only competitive but also innovative, delivering maximum value to end-users and stakeholders",
               "whatWeDo":[
                 {
@@ -1352,6 +1664,7 @@
             },
             {
               "title":"Root cause analysis",
+              "imageUrl":"/assets/Root cause Analysis.webp",
               "description":"Root cause analysis identifies the underlying causes of design issues or failures, enabling effective solutions. Our services involve detailed evaluations of product performance, manufacturing processes, and material choices to pinpoint problems. This is essential for industries like aerospace, manufacturing, and electronics, where precision and reliability are critical. By providing actionable recommendations, we help clients eliminate recurring issues and enhance product quality. Root cause analysis minimizes downtime, reduces costs, and ensures that designs meet functional and operational requirements, making it a key tool for continuous improvement",
               "whatWeDo":[
                 {
@@ -1377,6 +1690,7 @@
             },
             {
               "title":"Failure analysis",
+              "imageUrl":"/assets/Failure Analysis.webp",
               "description":"Failure analysis examines product failures to understand their causes and prevent future occurrences. Our services include stress testing, material analysis, and design evaluations to identify weak points and recommend improvements. This process is critical for industries like healthcare, automotive, and industrial machinery, where reliability and safety are paramount. By providing detailed reports and actionable insights, we help clients enhance product durability and performance. Failure analysis ensures that designs meet quality standards and user expectations, reducing the risk of costly recalls or reputational damage",
               "whatWeDo":[
                 {
@@ -1402,7 +1716,8 @@
               ]
             },
             {
-              "title":"Life cycle assessment",
+              "title":"Life Cycle Assessment",
+              "imageUrl":"/assets/Life cycle assessment.webp",
               "description":"Life cycle assessment evaluates a product's environmental and economic impact throughout its lifespan, from raw material extraction to disposal. Our services analyze factors like energy consumption, emissions, and recyclability, providing insights for sustainable design. This process is vital for industries like packaging, automotive, and consumer goods, where sustainability is a growing concern. By identifying opportunities for improvement, we help clients minimize environmental impact and optimize product life cycles. Life cycle assessment supports eco-friendly practices and compliance with environmental regulations, enhancing brand reputation and market appeal.",
               "whatWeDo":[
                 {
@@ -1429,6 +1744,7 @@
             },
             {
               "title":"Cost-benefit analysis",
+              "imageUrl":"/assets/Cost-benefit analysis.webp",
               "description":"Cost-benefit analysis evaluates the economic feasibility of a product design, balancing development costs against potential benefits like performance, marketability, and sustainability. Our services provide detailed financial assessments, helping clients make informed decisions about their designs. This process is crucial for industries like manufacturing, consumer goods, and electronics, where cost efficiency drives competitiveness. By identifying areas for cost reduction without compromising quality, we help clients maximize value and profitability. Cost-benefit analysis ensures that designs are not only practical but also financially viable, supporting successful product development and market entry.",
               "whatWeDo":[
                 {
@@ -1464,7 +1780,7 @@
       "categories": [
         {
           "description": "Our Design Services focus on creating visually appealing, user-centric designs that align with your brand identity and business objectives. From UI/UX design to graphic design and prototyping, we work closely with clients to craft seamless digital experiences that drive engagement and conversions. Whether designing user interfaces, developing intricate graphics, or building prototypes to test design concepts, our team delivers exceptional design solutions for a wide range of digital platforms. We combine creativity with functionality to produce designs that not only look good but also enhance usability, ensuring your audience has an enjoyable interaction with your brand.",
-          "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/iot_devices.jpg",
+          "imageUrl": "/assets/Design-Services.webp",
           "departmentId": "672eefbf81be8191d93ce4bd",
           "id": "67529615d6387bac980467b3",
           "name": "Design Services",
@@ -1472,7 +1788,7 @@
           "services": [
             {
               "description": "UI/UX Design is central to building successful digital products that prioritize user experience and functionality. Our team combines user-centered design principles with innovative strategies to create intuitive, responsive interfaces. By focusing on the user’s needs and goals, we design interfaces that enhance engagement, retention, and conversion. Whether designing a mobile app, website, or complex enterprise platform, we ensure that every element, from layout to navigation, is tailored to provide users with a seamless and enjoyable experience. We work collaboratively with you to ensure that the design not only meets functional requirements but also elevates the user experience.",
-              "imageUrl": null,
+              "imageUrl": "/assets/UI-UX-Design.webp",
               "id": "6752966fd6387bac980467b4",
               "categoryId": "67529615d6387bac980467b3",
               "title": "UI/UX Design",
@@ -1517,7 +1833,7 @@
             },
             {
               "description": "Graphic Design is essential for creating visually compelling and memorable brand experiences across various media. Whether you need logos, marketing collateral, web graphics, or print materials, our designers ensure every piece of visual content reflects your brand’s identity and communicates your message effectively. We use advanced design tools and creative techniques to deliver high-quality designs that stand out. Our graphic design services focus on crafting designs that are not only aesthetically pleasing but also strategically aligned with your business goals, ensuring your brand resonates with your target audience and leaves a lasting impression.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Graphic-Design.webp",
               "id": "67529694d6387bac980467b5",
               "categoryId": "67529615d6387bac980467b3",
               "title": "Graphic Design",
@@ -1562,7 +1878,7 @@
             },
             {
               "description": "Wireframing and Prototyping are essential steps in the design process that allow businesses to visualize and test their ideas before full development. Wireframes serve as the blueprint for a website or app, outlining basic structure and functionality, while prototypes bring these wireframes to life with interactive features. Our team creates wireframes that focus on usability and user flow, ensuring the design meets functional requirements. By developing clickable prototypes, we give stakeholders and users a tangible preview of the final product, enabling quick feedback and iterative improvement, leading to a more efficient design-to-development process.",
-              "imageUrl": null,
+              "imageUrl": "/assets/wireframing-and-prototype.webp",
               "id": "67529694d6387bac980467b5",
               "categoryId": "67529615d6387bac980467b3",
               "title": "Wireframing and Prototyping",
@@ -1609,7 +1925,7 @@
         },
         {
           "description": "Our Development Services offer comprehensive solutions to create dynamic, high-performing applications and websites. We specialize in full-stack web development, mobile app development, custom software development, and API integration. Our team works with businesses to bring their ideas to life by building scalable, secure, and efficient systems that provide outstanding user experiences. From crafting robust backends to developing intuitive frontends and designing mobile applications, we focus on delivering solutions that drive growth and achieve your business goals. We leverage the latest technologies and best practices to ensure that your applications are reliable, functional, and scalable.",
-          "imageUrl": "/assets/Rectangle 5855.webp",
+          "imageUrl": "/assets/Development-Services.webp",
           "departmentId": "672eefd2bf4e5705ff670c69",
           "id": "6769383a51dcda17a0f93888",
           "name": "Development Services",
@@ -1617,7 +1933,7 @@
           "services": [
             {
               "description": "Our Web Development services cover both Frontend and Backend development to create fully functional, responsive websites and web applications. We design user-friendly interfaces (UI) for frontend development and powerful backend systems to ensure seamless performance. Whether it's a dynamic website, e-commerce platform, or web application, we use industry-standard technologies to develop scalable and secure solutions. Our team works collaboratively with clients to ensure the design aligns with business needs, and we integrate all required functionalities to deliver a seamless user experience and optimize performance across devices and platforms.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Web-Development(Frontend&Backend).webp",
               "id": "676e5561e0bbb25e4ee93315",
               "categoryId": "6769383a51dcda17a0f93888",
               "title": "Web Development (Frontend & Backend)",
@@ -1669,7 +1985,7 @@
             },
             {
               "description": "Our Mobile App Development services cover both iOS and Android platforms, creating robust and feature-rich mobile applications that are tailored to meet your specific business needs. We focus on developing native, hybrid, and cross-platform apps that deliver excellent user experiences while ensuring scalability and performance. Our team leverages cutting-edge technologies to build mobile apps that seamlessly integrate with backends and other systems, ensuring smooth interactions across all devices. Whether you're building an enterprise app, e-commerce solution, or consumer-facing product, we deliver high-quality, reliable mobile solutions that drive user engagement.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Mobile-App-Development.webp",
               "id": "676e5597e0bbb25e4ee93316",
               "categoryId": "6769383a51dcda17a0f93888",
               "title": "Mobile App Development (iOS & Android)",
@@ -1714,7 +2030,7 @@
             },
             {
               "description": "Our Custom Software Development services focus on creating tailored software solutions that meet your specific business needs. Whether it's a CRM, ERP, or industry-specific application, we build software that is scalable, secure, and flexible. We collaborate with your team to understand your unique requirements and design solutions that integrate seamlessly with your business processes. Our custom software development ensures that you get a solution that fits perfectly with your objectives, enabling you to optimize operations, increase efficiency, and stay competitive in the market.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Custom-Software-Development.webp",
               "id": "676e55bce0bbb25e4ee93317",
               "categoryId": "6769383a51dcda17a0f93888",
               "title": "Custom Software Development",
@@ -1766,7 +2082,7 @@
             },
             {
               "description": "Our API Development and Integration services help connect disparate systems, allowing seamless communication between applications, databases, and third-party services. We develop secure, scalable APIs that allow your systems to exchange data efficiently. Whether you need to integrate with external systems or create custom APIs for your own platform, we provide full-service solutions to meet your requirements. With expertise in RESTful APIs, SOAP, and GraphQL, our team ensures that your integrations are robust, secure, and provide a smooth user experience.",
-              "imageUrl": null,
+              "imageUrl": "/assets/API-Development.webp",
               "id": "676e55dbe0bbb25e4ee93318",
               "categoryId": "6769383a51dcda17a0f93888",
               "title": "API Development & Integration",
@@ -1811,7 +2127,7 @@
             },
             {
               "description": "Our Cloud Application Development services focus on building scalable, flexible, and secure applications that leverage the power of the cloud. We help businesses build cloud-native applications that are optimized for performance, scalability, and cost-efficiency. Our team ensures that your cloud applications can scale seamlessly as your business grows while providing real-time access to data and resources from anywhere, ensuring a competitive advantage.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Cloud-Application-Development.webp",
               "id": "676e55dbe0bbb25e4ee93318",
               "categoryId": "6769383a51dcda17a0f93888",
               "title": "Cloud Application Development",
@@ -1870,7 +2186,7 @@
             },
             {
               "description": "Our Cross-Platform App Development services focus on building applications that run seamlessly on both iOS and Android platforms. We use modern frameworks to write a single codebase that can be deployed on multiple platforms, saving time and development costs. This approach ensures consistency across devices, while providing a native-like experience. Whether you’re building a consumer-facing mobile app or an enterprise solution, we prioritize usability, performance, and scalability, enabling businesses to reach a wider audience and streamline their mobile app development process.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Cross-Platform-App-Development.webp",
               "id": "676e55dbe0bbb25e4ee93318",
               "categoryId": "6769383a51dcda17a0f93888",
               "title": "Cross-Platform App Development",
@@ -1917,7 +2233,7 @@
         },
         {
           "description": "Our DevOps and Infrastructure Management services streamline the development lifecycle and ensure smooth, reliable operation of your systems. By automating key processes such as deployment, testing, and monitoring, we help organizations deliver high-quality software faster and with greater consistency. We focus on infrastructure as code (IaC), continuous integration and deployment (CI/CD), and robust server management to ensure scalability, security, and efficiency. With our services, businesses can reduce downtime, enhance collaboration between development and operations teams, and maintain the reliability of their applications.",
-          "imageUrl": "https://t4.ftcdn.net/jpg/05/47/39/37/360_F_547393714_5MB4xb2cYaHi2x2h1RrIVNe7Q7xcDc1b.jpg",
+          "imageUrl": "/assets/DevOps-Infrastructure-Management.webp",
           "departmentId": "672eefd2bf4e5705ff670c69",
           "id": "6769386151dcda17a0f93889",
           "name": "DevOps and Infrastructure Management",
@@ -2284,7 +2600,7 @@
         },
         {
           "description": "Our Data and Analytics Services empower businesses to unlock the potential of their data through efficient management, analysis, and visualization. By leveraging cutting-edge tools and technologies, we help organizations make data-driven decisions that lead to better business outcomes. From database management to big data solutions and advanced data visualization, we ensure that businesses can access, interpret, and utilize their data effectively. Our services also include business intelligence (BI) solutions that provide actionable insights, allowing businesses to gain a competitive edge and optimize operations.",
-          "imageUrl": "https://www.shutterstock.com/image-vector/banner-consulting-concept-text-icons-260nw-770977666.jpg",
+          "imageUrl": "/assets/Data-Analytics-Services.webp",
           "departmentId": "672eefd2bf4e5705ff670c69",
           "id": "6769388d51dcda17a0f9388a",
           "name": "Data and Analytics Services",
@@ -2437,7 +2753,7 @@
   
         {
           "description": "Our Maintenance and Support Services ensure that your applications run smoothly and are always up-to-date. Whether it’s fixing bugs, optimizing performance, or ensuring the availability of your systems, our team is committed to keeping your technology working at its best. We provide timely updates, routine monitoring, and proactive issue resolution to minimize downtime and maximize user satisfaction. With our services, you can focus on innovation and growth while we take care of the technical maintenance and support your business needs to stay competitive.",
-          "imageUrl": "https://www.shutterstock.com/image-vector/banner-consulting-concept-text-icons-260nw-770977666.jpg",
+          "imageUrl": "/assets/Maintenance-Support-Services.webp",
           "departmentId": "672eefd2bf4e5705ff670c69",
           "id": "6769388d51dcda17a0f9388a",
           "name": "Maintenance and Support Services",
@@ -2670,7 +2986,7 @@
         },
         {
           "description": "Our Quality Assurance (QA) and Testing Services ensure that your applications are robust, secure, and meet the highest quality standards. We conduct thorough testing, including functional, performance, and security testing, to ensure that your software delivers a seamless user experience. Our team applies best practices and industry standards to identify and fix issues before your application is deployed, helping to reduce the risk of defects and ensuring that your software functions as expected in real-world scenarios",
-          "imageUrl": "https://www.shutterstock.com/image-vector/banner-consulting-concept-text-icons-260nw-770977666.jpg",
+          "imageUrl": "/assets/Quality-Assurance(QA).webp",
           "departmentId": "672eefd2bf4e5705ff670c69",
           "id": "6769388d51dcda17a0f9388a",
           "name": "Quality Assurance (QA) and Testing Services",
@@ -2876,7 +3192,7 @@
         },
          {
            "description": "Our Consulting Services provide expert guidance to help organizations optimize their IT strategies, digital transformation processes, and technology adoption. From aligning IT infrastructure with business objectives to implementing the latest technologies, we offer solutions that drive operational efficiency and innovation. Our consultants leverage their expertise across industries to offer actionable insights and strategies for businesses to thrive in the digital age, ensuring long-term growth and success.",
-           "imageUrl": "https://www.shutterstock.com/image-vector/banner-consulting-concept-text-icons-260nw-770977666.jpg",
+           "imageUrl": "/assets/Consulting-Services.webp",
            "departmentId": "672eefd2bf4e5705ff670c69",
            "id": "6769388d51dcda17a0f9388a",
            "name": " Consulting Services",
@@ -2999,65 +3315,6 @@
                    "position": 5
                  }
   
-               ]
-             },
-             {
-               "description": " Digital Transformation Consulting guides businesses through the process of adopting digital technologies to enhance operations, customer experiences, and business models. Our consultants work closely with organizations to implement cloud computing, automation, AI, and data analytics, helping them stay competitive in a rapidly evolving market. We focus on delivering value through innovation and helping businesses become more agile, efficient, and customer-centric, positioning them for future growth in the digital economy.",
-               "imageUrl": null,
-               "id": "676e607de0bbb25e4ee93350",
-               "categoryId": "6769388d51dcda17a0f9388a",
-               "title": "Digital Transformation Consulting",
-               "position": 2,
-               "whatWeDo": [
-                 {
-                   "des": "We evaluate the latest digital technologies to identify opportunities for adoption.",
-                   "id": "676e625ce0bbb25e4ee93357",
-                   "serviceId": "676e607de0bbb25e4ee93350",
-                   "title": "Technology Evaluation",
-                   "position": 1
-                 },
-                 {
-                   "des": "We manage the change process, helping organizations adopt new technologies smoothly and effectively.",
-                   "id": "676e628fe0bbb25e4ee93358",
-                   "serviceId": "676e607de0bbb25e4ee93350",
-                   "title": "Change Management",
-                   "position": 2
-                 },
-                 {
-                   "des": "We help you identify and implement the best digital tools, platforms, and technologies that can optimize your workflows and business operations.",
-                   "id": "676e62b9e0bbb25e4ee93359",
-                   "serviceId": "676e607de0bbb25e4ee93350",
-                   "title": "Technology Selection",
-                   "position": 3
-                 },
-                 {
-                   "des": "  We analyze and streamline business processes, leveraging automation, AI, and other technologies to boost efficiency and reduce operational costs.",
-                   "id": "676e62d6e0bbb25e4ee9335a",
-                   "serviceId": "676e607de0bbb25e4ee93350",
-                   "title": "Process Optimization",
-                   "position": 4
-                 },
-                 {
-                   "des": " We focus on improving customer experience by leveraging digital channels and technologies.",
-                   "id": "676e62f6e0bbb25e4ee9335b",
-                   "serviceId": "676e607de0bbb25e4ee93350",
-                   "title": "Customer-Centric Solutions",
-                   "position": 5
-                 },
-                 {
-                   "des": "We work with your team to understand your current operations and business objectives, tailoring the transformation plan to your unique needs.",
-                   "id": "676e62f6e0bbb25e4ee9335b",
-                   "serviceId": "676e607de0bbb25e4ee93350",
-                   "title": "Needs and Goals Analysis",
-                   "position": 5
-                 },
-                  {
-                    "des": "We offer continued support to refine and evolve your digital transformation initiatives, helping you stay competitive in a rapidly changing market.",
-                    "id": "676e62f6e0bbb25e4ee9335b",
-                    "serviceId": "676e607de0bbb25e4ee93350",
-                    "title": "Ongoing Support and Evolution",
-                    "position": 5
-                  }
                ]
              }
            ]

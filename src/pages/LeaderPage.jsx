@@ -284,7 +284,7 @@ function LeaderPage() {
             </div>
           </div>
           <div>
-            <p>{singleLeader?.description}</p>
+            <p>{singleLeader?.des}</p>
           </div>
         </div>
         <div className="leader-carousel-container">

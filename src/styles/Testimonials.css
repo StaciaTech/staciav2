@@ -17,8 +17,8 @@
 
 .testimonial-card {
   width: 480px;
-  max-height: 50vh;
-  /* height: 30vh; */
+  /* max-height: 60vh; */
+  height: 50vh;
   /* min-height: 180px; */
   border: 1px solid #da06ff;
   /* padding: 20px; */
@@ -29,6 +29,7 @@
   color: #b8b3c3;
   transform: scale(0.9);
   transition: 0.3s all ease-out;
+  /* overflow: hidden; */
 }
 
 .testimonial-card:hover {
@@ -147,6 +148,6 @@
 }
 @media screen and (min-width: 1650px) {
   .testimonial-card {
-    max-height: 30vh;
+    max-height: 40vh;
   }
 }
