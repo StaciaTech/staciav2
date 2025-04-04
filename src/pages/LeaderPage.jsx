@@ -197,10 +197,11 @@ import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import p1 from "../assets/sarabesh.png";
-import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
+// import LeaderCarousel from "../components/ReUsableComp/LeaderCarousel";
+import LeaderCarousel from "../components/ReUsableComp/LeaderCareousel";
 import { useParams } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
+import { FaEnvelope, FaLinkedinIn } from "react-icons/fa";
+// import { BsTwitterX } from "react-icons/bs";
 import data from "../Data/About.json";
 
 function LeaderPage() {
@@ -247,24 +248,11 @@ function LeaderPage() {
                   <div className="leader-profile-name">{singleLeader?.name}</div>
                   <div className="leader-profile-role">{singleLeader?.designation}</div>
                   <div className="leader-icons">
+                    
                     <div>
-                      <a href={singleLeader?.instagram} target="_blank" rel="noreferrer">
+                      <a href={singleLeader?.email} target="_blank" rel="noreferrer">
                         <div className="leader-icon-container">
-                          <FaInstagram className="footer-insta-icon" />
-                        </div>
-                      </a>
-                    </div>
-                    <div>
-                      <a href={singleLeader?.twitter} target="_blank" rel="noreferrer">
-                        <div className="leader-icon-container">
-                          <BsTwitterX className="footer-twitter-icon" />
-                        </div>
-                      </a>
-                    </div>
-                    <div>
-                      <a href={singleLeader?.facebook} target="_blank" rel="noreferrer">
-                        <div className="leader-icon-container">
-                          <FaFacebookF className="footer-facebook-icon" />
+                          <FaEnvelope className="footer-facebook-icon" />
                         </div>
                       </a>
                     </div>
@@ -284,11 +272,11 @@ function LeaderPage() {
             </div>
           </div>
           <div>
-            <p>{singleLeader?.description}</p>
+            <p>{singleLeader?.des}</p>
           </div>
         </div>
         <div className="leader-carousel-container">
-          <AboutCarousel />
+          <LeaderCarousel data={singleLeader?.name}/>
         </div>
       </div>
       <div>

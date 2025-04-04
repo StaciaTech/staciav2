@@ -14,6 +14,7 @@
   padding: 10px;
   color: #b0aec4;
   margin-bottom: 40px;
+  font-family: EuclidMedium;
 }
 
 .related-cases-grid {
@@ -60,6 +61,7 @@
   font-weight: 500;
   margin-bottom: 5px;
   color: #242424;
+  font-family: EuclidMedium;
 }
 
 .case-study-content p {
@@ -67,6 +69,7 @@
   color: #666;
   line-height: 1.4;
   padding-bottom: 5px;
+  font-family: EuclidMedium;
  
 }
 
