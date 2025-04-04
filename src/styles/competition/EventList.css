@@ -9,45 +9,27 @@
   align-items: center;
 }
 
-.status-filter button,
-.all-btn {
+.status-filter button {
   margin-right: 10px;
   margin-bottom: 10px;
   padding: 8px 16px;
-  background-color: #ffffff; /* White background for inactive buttons */
-  color: #000000; /* Black text for inactive buttons */
-  border: 1px solid #B9BCC7; /* Thin gray border */
-  /* border-radius: 5px; */
+  background-color: #E5E7EB;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover state for inactive buttons */
-.status-filter button:hover:not(.active),
-.all-btn:hover:not(.active) {
-  background-color: #0047FF; /* Blue background on hover */
-  color: #ffffff; /* White text on hover */
-  border: 1px solid #0047FF; /* Border matches background on hover */
+.status-filter button:hover {
+  background-color: #e0e0e0;
+  color: #0047ff;
+  transform: scale(1.05);
 }
 
-/* Active state (clicked button) */
-.status-filter button.active,
-.all-btn.active {
-  background-color: #0047FF; /* Blue background for active button */
-  color: #ffffff; /* White text for active button */
-  border: 1px solid #0047FF; /* Border matches background */
-}
-
-/* Ensure active button maintains style on hover */
-.status-filter button.active:hover,
-.all-btn.active:hover {
-  background-color: #0047FF;
-  color: #ffffff;
-  border: 1px solid #0047FF;
-}
 
 .department-filter {
   width: 100%;
+
+  /* allows the container to grow if needed */
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -63,13 +45,16 @@
 
 .events-container1 {}
 
+/* EventCard styles */
 .event-card1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #B9BCC7;
+
   padding: 40px;
   margin-bottom: 20px;
+
 }
 
 .event-content1 {
@@ -81,6 +66,7 @@
 }
 
 .event-title1 {
+  /* font-size: 18px; */
   margin-bottom: 5px;
   font-size: 25px;
   font-family: EuclidMedium;
@@ -94,12 +80,15 @@
 
 .event-details1 {
   color: #374151;
+  /* font-weight: bold; */
   font-family: EuclidMedium;
+
   display: flex;
   gap: 1rem;
   align-items: center;
   margin-bottom: 1rem;
   margin-top: 1rem;
+
 }
 
 .event-icon1 {
@@ -127,7 +116,7 @@
   display: flex;
 }
 
-.register-btn1 W {
+.register-btn1 {
   padding: 10px 20px;
   background-color: #2563EB;
   color: white;
@@ -169,56 +158,14 @@
   display: none;
 }
 
+
+
 .winner-section1-btn-container {
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
 }
 
-.winner-section1-btn-container div {
-  cursor: pointer;
-  padding: 5px;
-  border: 1px solid #B9BCC7;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.all-btn-evt {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  padding: 1rem 0;
-}
-
-/* Styling for event type buttons */
-.all-btn {
-  flex: 1;
-  min-width: 120px;
-  padding: 0.75rem 1rem;
-  text-align: center;
-  background-color: white;
-  color: black;
-  /* border-right: 1px solid #B9BCC7;
- 
-  border-left: "0px";
-  border-top: "0px";
-  border-bottom: "0px"; */
-  border: 0px;
-  border-right: 1px solid #B9BCC7;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  font-size: 20px;
-  font-family: EuclidMedium;
-}
-
-.all-btn:hover {
-  background-color: #0047ff;
-  color: white;
-  transform: scale(1.05);
-}
 .winner-section1-mob-btn-container {
   display: none;
 }
@@ -242,7 +189,10 @@
   background-color: #717171;
 }
 
+
 @media screen and (max-width: 1024px) {
+
+
   .winner-section1-btn-container {
     display: none;
   }
@@ -251,16 +201,6 @@
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
-  }
-
-  .winner-section1-mob-btn-container div {
-    cursor: pointer;
-    padding: 5px;
-    border: 1px solid #B9BCC7;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .all-btn-evt {
@@ -283,6 +223,7 @@
 
   .event-details1 {
     color: #374151;
+    /* font-weight: bold; */
     font-family: EuclidMedium;
     font-size: 10px;
     display: flex;
