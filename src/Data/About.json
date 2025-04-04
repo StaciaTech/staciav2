@@ -59,20 +59,20 @@
       "path": "about/our-leadership",
       "SectionItems": [
         {
-          "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-          "imageUrl": "https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-young-indian-man-png-image_10149662.png",
+          "description": "Passionate innovator and entrepreneur, I strive to make India a global leader in innovation. As the founder of Stacia Corp, I focus on groundbreaking technologies and patents that bring practical advancements to society, making innovation accessible to everyone.",      "des":"From a young age, I was passionate about physics and innovation, which led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE). During my studies, I published research papers on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Eager to contribute to society through innovation, I pursued a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After working with a renewable energy startup, I founded Stacia Corp, a research and development company focused on cutting-edge technologies.My key innovations include a smart water bottle with self-heating and cooling technology, a hydration tracking system with 10mL accuracy, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program.For my contributions, I was honored with the Best Entrepreneur Award by Nitin Gadkari, and I continue striving to develop impactful solutions for the world.From an early age, I have been passionate about science, innovation, and technological advancement. This drive led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE), where I conducted research on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Believing that innovation should be accessible to all, I further expanded my knowledge by completing a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After gaining experience at a renewable energy startup, I founded Stacia Corp, a research and development company focused on creating groundbreaking innovations and patents that contribute to India’s growth.My key innovations include a self-heating and cooling smart water bottle, a high-accuracy hydration tracking system, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program. My vision is to make India a global hub for innovation, ensuring that advanced technology reaches everyone’s hands. Recently, I was honored with the Best Entrepreneur Award by Nitin Gadkari for my contributions.",
+          "imageUrl": "https://t4.ftcdn.net/jpg/07/98/72/89/360_F_798728945_c7RghNy7K8nSSVYsisEJ7EladuShxT98.jpg",
           "name": "Mr Lakshman",
           "path": "about/Mr-Lakshman"
         },
         {
           "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-          "imageUrl": "https://png.pngtree.com/png-vector/20240205/ourmid/pngtree-young-indian-man-png-image_11622291.png",
+          "imageUrl": "https://t4.ftcdn.net/jpg/07/98/72/89/360_F_798728945_c7RghNy7K8nSSVYsisEJ7EladuShxT98.jpg",
           "name": "Mr Sarabesh",
           "path": "about/leader/Mr Sarabesh"
         },
         {
-          "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-          "imageUrl": "https://png.pngtree.com/png-vector/20240205/ourmid/pngtree-young-indian-man-png-image_11622291.png",
+          "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",      "des":"I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
+          "imageUrl": "https://t4.ftcdn.net/jpg/07/98/72/89/360_F_798728945_c7RghNy7K8nSSVYsisEJ7EladuShxT98.jpg",
           "name": "Mr Revanth",
           "path": "about/leader/Mr Revanth"
         }
@@ -114,9 +114,7 @@
         }
       ]
     }
-
   ],
- 
   "staciaHistory": [
     {
       "description": "With a burning desire to shape our country with unparalleled Research and Development, we established our company to pioneer groundbreaking technological advancements",
@@ -124,7 +122,7 @@
       "imageUrl": "/assets/Resilience in Motion.webp",
       "isAchievement": false,
       "title": "Our Journey Starts",
-      "year":"Sept 2019",
+      "year": "Sept 2019",
       "_id": "67344ec833378f0bfe66253a"
     },
     {
@@ -142,7 +140,7 @@
       "imageUrl": "/assets/Resilience in Motion.webp",
       "isAchievement": false,
       "title": "Operations initiation",
-      "year":  "Jul 2020",
+      "year": "Jul 2020",
       "_id": "6734505a7a970b308b574ea2"
     },
     {
@@ -354,31 +352,84 @@
   ],
   "leaders": [
     {
-      "description": "Laorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-      "quote": "Lorem ipsum dolor sit amet",
+      "description": "Passionate innovator and entrepreneur, I strive to make India a global leader in innovation. As the founder of Stacia Corp, I focus on groundbreaking technologies and patents that bring practical advancements to society, making innovation accessible to everyone.",
+      "des": "From a young age, I was passionate about physics and innovation, which led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE). During my studies, I published research papers on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Eager to contribute to society through innovation, I pursued a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After working with a renewable energy startup, I founded Stacia Corp, a research and development company focused on cutting-edge technologies.My key innovations include a smart water bottle with self-heating and cooling technology, a hydration tracking system with 10mL accuracy, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program.For my contributions, I was honored with the Best Entrepreneur Award by Nitin Gadkari, and I continue striving to develop impactful solutions for the world.From an early age, I have been passionate about science, innovation, and technological advancement. This drive led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE), where I conducted research on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Believing that innovation should be accessible to all, I further expanded my knowledge by completing a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After gaining experience at a renewable energy startup, I founded Stacia Corp, a research and development company focused on creating groundbreaking innovations and patents that contribute to India’s growth.My key innovations include a self-heating and cooling smart water bottle, a high-accuracy hydration tracking system, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program. My vision is to make India a global hub for innovation, ensuring that advanced technology reaches everyone’s hands. Recently, I was honored with the Best Entrepreneur Award by Nitin Gadkari for my contributions.",
+      "quote": "“It always seems impossible until it’s done.”  – Nelson Mandela",
       "designation": "Chief Operational Officer",
-      "imageUrl": "https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-young-indian-man-png-image_10149662.png",
+      "imageUrl": "https://t4.ftcdn.net/jpg/07/98/72/89/360_F_798728945_c7RghNy7K8nSSVYsisEJ7EladuShxT98.jpg",
       "name": "Mr Lakshman",
       "position": 1,
-      "_id": "67359d632e218c7501f9c3c0"
+      "_id": "67359d632e218c7501f9c3c0",
+      "email": "lakshman@staciacorp.com",
+      "linkedin": "https://www.linkedin.com/in/lakshman-p-v-50522a168/",
+      "expertise": [
+        {
+          "title": "Best Entrepreneur Award",
+          "desc": "Honored by Nitin Gadkari for outstanding contributions to innovation and entrepreneurship, particularly in the fields of thermal technology, hydration tracking, and automation.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Top 30 Innovation – RKVY-RAFTAAR Program",
+          "desc": "Recognized for developing a Micro Seed Sowing Machine based on line sowing principles, enhancing agricultural efficiency and precision.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Published Research Paper – IJSIET",
+          "desc": "Published “Optimization of Fuel in Diesel Engines” in the International Journal of Science and Innovative Engineering & Technology (IJSIET), May 2018 (ISBN No. 978-81-923607-3-7).",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Published Research Paper – FSW in Al 6061",
+          "desc": "Conducted research on Friction Stir Welding in Aluminum 6061, contributing to advancements in welding technology.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "2nd Place – FMEA Competition",
+          "desc": "Secured 2nd place in Failure Modes and Effects Analysis (FMEA) for identifying and analyzing potential failures in engine inspection systems.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+}
+      ]
     },
     {
       "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
       "quote": "Lorem ipsum dolor sit amet",
       "designation": "Chief Executive Officer",
-      "imageUrl": "https://png.pngtree.com/png-vector/20240205/ourmid/pngtree-young-indian-man-png-image_11622291.png",
+      "imageUrl": "https://t4.ftcdn.net/jpg/07/98/72/89/360_F_798728945_c7RghNy7K8nSSVYsisEJ7EladuShxT98.jpg",
       "name": "Mr Sarabesh",
       "position": 2,
-      "_id": "67359d7b847c386125859a59"
+      "_id": "67359d7b847c386125859a59",
+      "email": "sarabeshsriram@staciacorp.com",
+      "linkedin": "https://www.linkedin.com/in/sarabeshsriram/",
+      "expertise": [
+        {
+          "title": "Business Strategy",
+          "desc": "Expert in strategic planning and business growth.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Leadership Development",
+          "desc": "Focuses on mentoring and coaching future leaders.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Corporate Governance",
+          "desc": "Ensures ethical and responsible decision-making.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        }
+      ]
     },
     {
-      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-      "quote": "Lorem ipsum dolor sit amet",
+      "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",
+      "des": "I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
+      "quote": "“The people who are crazy enough to think they can change the world are the ones who do.” — Steve Jobs",
       "designation": "Chief Technical Officer",
       "imageUrl": "https://t4.ftcdn.net/jpg/07/98/72/89/360_F_798728945_c7RghNy7K8nSSVYsisEJ7EladuShxT98.jpg",
       "name": "Mr Revanth",
       "position": 3,
-      "_id": "67359db6847c386125859a5a"
+      "_id": "67359db6847c386125859a5a",
+      "email": "revanth@staciacorp.com",
+      "linkedin": "https://www.linkedin.com/in/revanth-s-36b2bb18a/"
+     
     }
   ]
 }

@@ -1,7 +1,7 @@
 .four {
   width: 100%;
   /* min-height: 100vh; */
-  height: 100vh;
+  /* height: 100vh; */
   margin-top: 60px;
   margin-bottom: 5%;
 }
@@ -44,7 +44,7 @@
   padding: 1rem 3rem;
   bottom: 0;
   margin-bottom: 2px;
-  /* border-bottom-left-radius: 20px; */
+  border-bottom-left-radius: 20px;
   overflow: hidden;
    transition: transform 0.3s ease-in-out;
 }
@@ -63,7 +63,7 @@
   transition: transform 0.3s ease-in-out;
 }
 .four-img > img:hover {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
   cursor: pointer;
 }
 .four-pos {
