@@ -149,6 +149,8 @@ import { FaChevronRight} from "react-icons/fa";
 function OurProjects() {
   const navigateTo = useNavigate();
   const navigate = useNavigate();
+
+  
   return (
     <div className="our-projects-container">
       <div className="our-projects-title">Our Projects</div>

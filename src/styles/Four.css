@@ -44,9 +44,10 @@
   padding: 1rem 3rem;
   bottom: 0;
   margin-bottom: 2px;
-  /* border-bottom-left-radius: 20px; */
+  border-bottom-left-radius: 20px;
   overflow: hidden;
    transition: transform 0.3s ease-in-out;
+   
 }
 .founder-content {
   position: absolute;
@@ -64,8 +65,9 @@
  
 }
 .four-img > img:hover {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
   cursor: pointer;
+  border-radius: 20px;
 }
 .four-pos {
   color: #0D0225;
