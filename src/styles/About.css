@@ -448,6 +448,7 @@
   color: #0047ff;
   font-size: 2rem;
   font-family: EuclidSemibold;
+  padding: 1rem 0 1rem 0;
 }
 .about-section10-lead-card-content > .description {
   color: #6b6084;
@@ -841,5 +842,11 @@
     font-size: 1rem;
     padding: 0rem 1.5rem;
     box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .about-section10-lead-card-content > .name {
+    padding-top: 0;
   }
 }

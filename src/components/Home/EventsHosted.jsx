@@ -8,6 +8,12 @@ import { useNavigate } from "react-router-dom";
 function EventsHosted() {
 
   const navigateTo = useNavigate();
+  const googleForm = () => {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSe-I8bmXElAO0rzbJjFutZF-RVsTX-jFV-nPhmBMeKjfK1J2g/viewform?usp=send_form",
+      "_blank"
+    );
+  }
   return (
     <div className="events-hosted-container">
       <div className="events-hosted-title">Events</div>
@@ -21,7 +27,7 @@ function EventsHosted() {
             future of technology!
           </div>
           <div className="events-button-holder">
-            <button className="event-btn register-now-btn">
+            <button className="event-btn register-now-btn" onClick={googleForm}>
               Register Now{" "}
               <FaChevronRight
                 style={{ verticalAlign: "middle", marginLeft: "1rem" }}
