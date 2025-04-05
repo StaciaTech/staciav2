@@ -484,7 +484,7 @@ export default function SingleProduct() {
               >
                 <img
                   src={SelectedProduct?.imageUrl}
-                  style={{ width: "40%", minHeight: "40vh",padding:"25px" }}
+                  // style={{ width: "40%", minHeight: "40vh",padding:"25px" }}
                 />
               </div>
             }
