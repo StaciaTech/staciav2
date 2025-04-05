@@ -96,8 +96,7 @@ function RelatedProjects({ depKey, category, RemainingProjects }) {
                   <div
                     // style={{ width: "100%", height: "20rem" }}
                     className="single-product-card-img-container pointer"
-                    onClick={() => {
-                      
+                    onClick={() => {                      
                       navigateTo(
                         `/project/${depKey}/${catKey}/${projectKey}`
                       );
