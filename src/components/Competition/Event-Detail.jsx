@@ -189,7 +189,7 @@ function EventDetails() {
             href={singleEvent?.link || "#"}
             className="know-more"
           >
-             <span>Register Now</span> <IoIosArrowForward />
+             <span>Register Now</span> <IoIosArrowForward />  
           </a>
 
         </div>

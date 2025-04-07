@@ -8,7 +8,7 @@ const StackScroll = () => {
   const proDetails = [
     {
       id: 1,
-      background: "linear-gradient(259deg,  -8.27%, #81497B 95.27%)",
+      background: "linear-gradient(259deg, #003362 -8.27%, #81497B 95.27%)",
       // background: "linear-gradient(259.24deg, #8501FF -8.27%, #052B8E 95.27%) ",
     },
     {
@@ -24,7 +24,7 @@ const StackScroll = () => {
     {
       id: 4,
       background: "linear-gradient(259deg, #CB2B5E -8.27%, #773987 86.58%)",
-      // background: "linear-gradient(259.24deg, #FF035B -8.27%, #052B8E 95.27%)",
+      // background: "linear-gradient(259.24deg, #FF035B -8.27%, #052B8E 95.27%)", 
     },
     {
       id: 5,
