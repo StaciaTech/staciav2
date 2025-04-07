@@ -475,7 +475,7 @@ export default function SingleProduct() {
               />
             )} */}
             {
-              <div
+              <div className="img-box"
                 style={{
                   display: "flex",
                   justifyContent: "center",
@@ -484,15 +484,22 @@ export default function SingleProduct() {
               >
                 <img
                   src={SelectedProduct?.imageUrl}
-                  style={{ width: "40%", minHeight: "40vh",padding:"25px" }}
+                  // style={{ width: "40%", minHeight: "40vh",padding:"25px" }}
                 />
               </div>
             }
 
+             {/* <div className="product-3d-img">
+                <div className="img-box">
+                    <img src={SelectedProduct.imageUrl} alt=""  />
+                </div>
+                <div style={{ width: '100%', textAlign: 'end', fontSize: '18px', fontWeight: '900', color: 'rgba(13, 2, 37, 0.20)' }}>Rotate the Object for Real Experience</div>
+            </div> */}
+
             <div className="rotate-text">
-              <div className="mobile-rotate-text">
+              {/* <div className="mobile-rotate-text">
                 Rotate the Object for Real Experience
-              </div>
+              </div> */}
             </div>
             {SelectedProduct.productDetails && (
               <div
@@ -687,7 +694,7 @@ export default function SingleProduct() {
                               {eachPro?.title}
                             </div>
                             <p className="single-product-card-des test-seclection-blue">
-                              {eachPro?.des}
+                              {eachPro?.description}
                             </p>
                           </div>
                         </div>

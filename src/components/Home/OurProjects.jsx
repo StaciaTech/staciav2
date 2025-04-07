@@ -154,7 +154,12 @@ function OurProjects() {
       <div className="our-projects-title">Our Projects</div>
       <div className="our-projects-card-grid">
         <div className="project-image image1">
-          <img src={project1} alt="" />
+          <img 
+          onClick={() => {
+            navigate(`project/Mechanical/Mechanical-Industry/One-Drill`);
+            window.scrollTo(0, 0);
+          }}
+          src={project1} alt="" />
           <div className="single-card-text-holder">
             <div className="single-card-header">One-Drill</div>
             <div className="single-card-content">
@@ -173,7 +178,12 @@ function OurProjects() {
           </div>
         </div>
         <div className="project-image image2">
-          <img src={project2} alt="" />
+          <img 
+          onClick={() => {
+            navigate(`project/Mechanical/Mechanical-Industry/ismart`);
+            window.scrollTo(0, 0);
+          }}
+           src={project2} alt="" />
           <div className="single-card-text-holder">
             <div className="single-card-header">ismart</div>
             <div className="single-card-content">
@@ -192,7 +202,14 @@ function OurProjects() {
           </div>
         </div>
         <div className="project-image image3">
-          <img src={project3} alt="" />
+          <img
+           onClick={() => {
+            navigate(
+              `project/Mechanical/Mechanical-blah-Industry/Chilli-Solar-House`
+            );
+            window.scrollTo(0, 0);
+          }}
+           src={project3} alt="" />
           <div className="single-card-text-holder">
             <div className="single-card-header">Chilli Solar House</div>
             <div className="single-card-content">
@@ -213,7 +230,14 @@ function OurProjects() {
           </div>
         </div>
         <div className="project-image image4 ">
-          <img src={project4} alt="" />
+          <img
+           onClick={() => {
+            navigate(
+              `project/Electronics/Electronics-Grid-Industry/Reverse-Kettle`
+            );
+            window.scrollTo(0, 0);
+          }}
+           src={project4} alt="" />
           <div className="single-card-text-holder">
             <div className="single-card-header">
               Automobile-&-Automotive-SPM
@@ -240,7 +264,14 @@ function OurProjects() {
           <div className="image5-count">24</div>
         </div>
         <div className="project-image image6 ">
-          <img src={project6} alt="" />
+          <img 
+           onClick={() => {
+            navigate(
+              `project/Electronics/Electronics-Industry/Smart-Implementation`
+            );
+            window.scrollTo(0, 0);
+          }}
+          src={project6} alt="" />
           <div className="single-card-text-holder">
             <div className="single-card-header">Smart Implementation</div>
             <div className="single-card-content">
@@ -261,7 +292,14 @@ function OurProjects() {
           </div>
         </div>
         <div className="project-image image7">
-          <img src={project7} alt="" />
+          <img
+           onClick={() => {
+            navigate(
+              `project/Electronics/Electronics-Grid-Industry/Reverse-Kettle`
+            );
+            window.scrollTo(0, 0);
+          }}
+           src={project7} alt="" />
           <div className="single-card-text-holder">
             <div className="single-card-header">Reverse Kettle</div>
             <div className="single-card-content">
@@ -282,7 +320,12 @@ function OurProjects() {
           </div>
         </div>
         <div className="project-image image8">
-          <img src={project8} alt="" />
+          <img
+           onClick={() => {
+            navigate(`project/Tech/Tech-Industry/AI-Chatbot`);
+            window.scrollTo(0, 0);
+          }}
+           src={project8} alt="" />
           <div className="single-card-text-holder">
             <div className="single-card-header">AI-Chatbot</div>
             <div className="single-card-content">
@@ -301,7 +344,14 @@ function OurProjects() {
           </div>
         </div>
         <div className="project-image image9">
-          <img src={project9} alt="" />
+          <img
+          onClick={() => {
+            navigate(
+              `project/Tech/Tech--AI--Industry/AI-Chatbot-version`
+            );
+            window.scrollTo(0, 0);
+          }}
+           src={project9} alt="" />
           <div className="single-card-text-holder">
             <div className="single-card-header">AI-Chatbot-version</div>
             <div className="single-card-content">

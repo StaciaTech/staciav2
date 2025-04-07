@@ -23,9 +23,14 @@ function ReUsableArticle({ data, path }) {
           formatUrlString(eachItem.title) || formatUrlString(eachItem.mainTitle);
 
         return (
-          <div key={i} className="reusable-art-card">
+          <div key={i} className="reusable-art-card" style={{cursor:"pointer"}}
+          onClick={() => {
+            const formattedUrl = `${path}/${caseStudyTrackId || articleTrackTitle}`;
+            navigate(formattedUrl);
+            window.scrollTo(0, 0);
+          }}>
             <div className="reusable-art-img-container">
-              <img
+              <img             
                 src={eachItem.mainImageUrl || eachItem.image?.imageUrl}
                 alt="art-img"
                 style={{
@@ -33,6 +38,7 @@ function ReUsableArticle({ data, path }) {
                   height: "100%",
                   objectFit: "cover",
                   borderRadius: "1rem",
+                  cursor: "pointer",
                 }}
               />
             </div>
@@ -43,14 +49,8 @@ function ReUsableArticle({ data, path }) {
               <p className="reusable-art-des test-seclection-blue">
                 {eachItem.mainDesc || eachItem.description}
               </p>
-              <div
-                className="all-know-more"
-                onClick={() => {
-                  const formattedUrl = `${path}/${caseStudyTrackId || articleTrackTitle}`;
-                  navigate(formattedUrl);
-                  window.scrollTo(0, 0);
-                }}
-              >
+              <div className="all-know-more" >    
+              
                 <span>Know More</span>
                 <IoIosArrowForward />
               </div>
