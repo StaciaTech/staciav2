@@ -275,8 +275,8 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-  });
 
+  })
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
   return (
     <div ref={targetRef} style={{ height: "100%", position: "relative" }}>

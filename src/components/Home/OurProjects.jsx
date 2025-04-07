@@ -263,7 +263,7 @@ function OurProjects() {
           </div>
         </div>
         <div className="project-image image7">
-          <img src={project7} alt="" />
+          <img src={project7} alt=""/>
           <div className="single-card-text-holder">
             <div className="single-card-header">Reverse Kettle</div>
             <div className="single-card-content">

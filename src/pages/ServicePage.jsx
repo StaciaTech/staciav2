@@ -173,6 +173,7 @@ function ServicePage() {
                           <div
                             className="know-more"
                             onClick={() =>
+                              
                               navigate(
                                 `/services/${eachItem.name
                                   .split(" ")

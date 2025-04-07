@@ -38,6 +38,7 @@
 }
 .each-service-howWeDo-step {
   min-width: 18rem;
+
 }
 .each-service-section1-content > div,
 .each-service-howWeDo-step-title {
@@ -52,29 +53,38 @@
   color: #0d0225;
   font-family: Euclid;
   margin-bottom: 4rem;
+  
 }
 .each-service-howWeDo-step-des {
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp:5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  
 }
 .each-service-howWeDo-section {
   margin: 10rem 0rem;
   /* position: sticky;
   top: 160px; */
+  
+  
 }
 .each-service-howWeDo-step-container {
   display: flex;
   column-gap: 6rem;
+    scroll-behavior: smooth;
+
 }
 .each-service-howWeDo-step-container > div {
   width: 30%;
   min-width: 18rem;
+  
 }
 .each-service-howWeDo-step-container::-webkit-scrollbar {
   display: none;
+  
+
 }
 .each-service-howWeDo-step-icon {
   background-color: #607d8b;
