@@ -1,8 +1,8 @@
 {
   "singlecasestudy": [
     {
-      "id":"Case-Study-1",
-      "name": "Electronics ",
+      "id": "Case-Study-1",
+      "name": "Mechanical",
       "data": [
         {
           "id": "Case-Study-1",
@@ -39,7 +39,7 @@
     },
     {
       "id": "Case-Study-2",
-      "name": "Mechanical",
+      "name": "Electronics ",
       "data": [
         {
           "id": "Case-Study-2",
