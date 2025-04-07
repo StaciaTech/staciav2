@@ -6,7 +6,8 @@
 
 .events-hosted-title {
     color: #E0E0E0;
-    font-size: 3.125rem; /* 60px at 1920px */
+    font-size: 3.125rem;
+    /* 60px at 1920px */
     font-style: normal;
     font-weight: 600px;
     line-height: normal;
@@ -14,7 +15,8 @@
 
 .events-img-container {
     background-image: linear-gradient(to right, #0D0225, #0D022500), url("../../assets/eventshosted.png");
-    height: 31.77rem; /* 609px at 1920px */
+    height: 31.77rem;
+    /* 609px at 1920px */
     background-repeat: no-repeat;
     background-size: cover;
     margin: 2rem 0 0 0;
@@ -38,7 +40,8 @@
 
 .events-details {
     font-size: 1.2rem;
-    font-weight: 400px; /* corrected from font-size: 400 */
+    font-weight: 400px;
+    /* corrected from font-size: 400 */
     line-height: 35.8px;
     margin: 1.5rem 0 4.5rem 0;
     width: 100%;
@@ -46,12 +49,14 @@
 
 .events-button-holder {
     display: flex;
-    width: 100%; /* changed from 100vw to prevent horizontal overflow */
+    width: 100%;
+    /* changed from 100vw to prevent horizontal overflow */
 }
 
 .event-btn {
     font-size: 1.2rem;
-    font-weight: 400px; /* corrected from 400px */
+    font-weight: 400px;
+    /* corrected from 400px */
     padding: 0.8rem 1rem;
     border-radius: 10px;
     color: white;
@@ -82,7 +87,8 @@
     margin: 20px auto;
     border-radius: 6px;
     display: none;
-  }
+}
+
 /* Media Query for 320px mobile screens */
 @media screen and (max-width: 320px) {
     .events-hosted-container {
@@ -92,18 +98,21 @@
     }
 
     .events-hosted-title {
-        font-size: 1.5rem; /* Adjusted for mobile */
+        font-size: 1.5rem;
+        /* Adjusted for mobile */
         margin-left: 10px;
         margin-top: 30px;
     }
 
     .events-img-container {
-        height: 100%; /* Reduced height for mobile */
+        height: 100%;
+        /* Reduced height for mobile */
         border-radius: 0.8rem;
     }
 
     .events-text-holder {
-        width: 100%; /* Full width on mobile */
+        width: 100%;
+        /* Full width on mobile */
         padding: 1rem;
     }
 
@@ -118,7 +127,8 @@
     }
 
     .events-button-holder {
-        flex-direction: column; /* Stack buttons vertically on mobile */
+        flex-direction: column;
+        /* Stack buttons vertically on mobile */
     }
 
     .event-btn {
@@ -133,20 +143,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
-  
+
     }
 
-/* 
-    @media screen and (max-width: 768px) {
 
-        .events-text-holder{
-            width: 50%;
-        }
-    }
-    @media screen and (max-width: 1024px) {
+   
+
+    /* @media screen and (max-width: 1024px) {
 
         .events-text-holder{
             width: 20%;
         }
     } */
+}
+
+@media screen and (max-width: 768px) {
+
+    /* .events-text-holder{
+        width: 50%;
+    } */
+    .events-text-holder {
+        width: 100%;
+    }
 }
