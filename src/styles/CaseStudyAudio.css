@@ -78,11 +78,13 @@
 
   .topic {
     margin-left: 5px;
-    opacity: 0.8;  
+    opacity: 0.8;
+    color: black;  
   }
   .topic span{
-   color: #0047FF;
+   color: #000000;
   }
+  
   .topic-head{
     color: #0047FF;
 

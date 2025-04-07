@@ -35,18 +35,22 @@ const CaseStudyaudio = () => {
         </div>
 
         <div className="topics">
-          <div >
+          <div>
             <span className="topic-head">Topics:</span>
-            <span className="topic">
-              <span>#</span>Nano
-            </span>
-            <span className="topic">
-              <span>#</span>lorem
-            </span>
-            <span className="topic">
-              <span>#</span>lorem
-            </span>
+
+            <a href="/topics/nano" className="topic">
+              <span className="hashtag">#lorem</span>
+            </a>
+
+            <a href="/topics/lorem" className="topic">
+              <span className="#\hashtag">#lorem</span>
+            </a>
+
+            <a href="/topics/lorem" className="topic">
+              <span className="hashtag">#lorem</span>
+            </a>
           </div>
+
           <div className="details">
             Duration: 12m 16s | 26 Dec, 2023 | Podcast
           </div>
