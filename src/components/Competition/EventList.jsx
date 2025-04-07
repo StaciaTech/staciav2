@@ -367,7 +367,7 @@ const EventList = () => {
             return <div className="event-card1">Error: Invalid event data</div>;
         }
 
-        const { title = "No Title", description = "No Description", date, eventTags = "No Tags", imageUrl = "https://via.placeholder.com/150", id = "unknown" } = event;
+        const { title = "No Title",link = "No Link", description = "No Description", date, eventTags = "No Tags", imageUrl = "https://via.placeholder.com/150", id = "unknown" } = event;
 
         return (
             <div className="event-card1">
@@ -402,7 +402,14 @@ const EventList = () => {
                         <img src={vector} alt="Arrow" className="arrow-icon" />
                     </button>
                     <div className="button-group1">
-                        <button className="register-btn1">Register Now</button>
+                        {/* <button className="register-btn1">Register Now</button> */}
+                        {/* Register Button */}
+                        <a
+                            href={link}
+                            className="register-btn1"
+                        >
+                            Register Now
+                        </a>
                         <button className="download-btn1">
                             <GoArrowDown className="event-icon3" /> Download Details
                         </button>

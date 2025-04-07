@@ -180,9 +180,18 @@ function EventDetails() {
               <img src={singleEvent?.imageUrl} alt="" />
             </div>
           </div>
-          <div onClick={() => setShowEventForm(true)} className="know-more">
+          {/* <div onClick={() => setShowEventForm(true)} className="know-more">
             <span>Register Now</span> <IoIosArrowForward />
-          </div>
+          </div> */}
+
+          {/* Register Button */}
+          <a
+            href={singleEvent?.link || "#"}
+            className="know-more"
+          >
+             <span>Register Now</span> <IoIosArrowForward />
+          </a>
+
         </div>
       </div>
       <div>
