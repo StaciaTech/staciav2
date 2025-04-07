@@ -133,7 +133,7 @@ function ProjectPage() {
           </div>
           {/* <WorkInProgress /> */}
         </div>
-      </div>
+      </div>  
       <div>
         <ReUsableArticle
           data={foundProjectsObj?.projects}

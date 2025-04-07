@@ -15,10 +15,15 @@ import templatesData from "../Data/Templates.json";
 // import ProjectsData from "../Data/ProjectsData.json"
 
 function SingleProject() {
-  const { department, category, title } = useParams();
-  console.log("Department: ", department)
-  console.log("Category: ", category)
-  // console.log("Title: ", title)
+const params = useParams()
+const depKey = params.department.split(" ").join("-");
+console.log(depKey, "departmentKey")
+const categoryKey = params.category.split(" ").join("-");
+console.log(categoryKey, "categoryKey")
+const projectKey = params.title.split(" ").join("-");
+console.log(projectKey, "projectKey")
+
+
   const [projectData, setProjectData] = useState(null);
     // const [relatedProjects, setRelatedProjects] = useState(null);
   
@@ -30,44 +35,63 @@ function SingleProject() {
         template4: <Template4 />,
         template5: <Template5 />,
       };
+
+      const Data = templatesData.Projects;
+      console.log(Data, "Data")
     
-      useEffect(() => {
-        if (!templatesData || !templatesData.Projects) {
-          console.error("templatesData is undefined or not structured properly");
-          return;
-        }
+     useEffect(()=>{
+      setProjectData(Data)
+     },[Data])
+    
+     console.log(projectData,"ProjectData")
+
+
+     const FoundDept = projectData?.find((eachDep)=>eachDep.name.split(" ").join("-") === depKey);
+     console.log(FoundDept, "DepartmetProject")
+     
+     const FoundCat = FoundDept?.categories?.find((eachCat)=>eachCat.name.split(" ").join("-")===categoryKey);
+     console.log(FoundCat, "CategoryProject")
+
+     const proData = FoundCat?.projects
+     console.log(proData, "ProDataProjects");
+
+     const project= proData?.find((eachPro)=>eachPro.title.split(" ").join("-")===projectKey)
+     console.log(project,"project")
+
+     console.log(project?.template, "projectTemplate")
       
-        console.log("Project Data Structure:", templatesData.Projects);
+
+     const [SelectedProject,setSelectedProduct] = useState();
+
+     useEffect(()=>{
+      setSelectedProduct(project)
+     },[Data])
+
+     console.log(SelectedProject, "Selectproject")
+
+     const RemainingProjects= proData?.filter((eachPro)=>eachPro.title.split(" ").join("-") !== projectKey);
+     console.log(RemainingProjects, "RemainingProjects");
+
+      // useEffect(() => {
+      //   if (!templatesData || !templatesData.Projects) {
+      //     console.error("templatesData is undefined or not structured properly");
+      //     return;
+      //   }
       
-        // Normalize projectTitle from URL
-        const normalizedTitle = decodeURIComponent(title)
-          .replace(/-/g, " ") // Replace hyphens with spaces
-          .trim()
-          .toLowerCase();
+      //   console.log("Project Data Structure:", templatesData.Projects);
       
-        console.log("url title: ", normalizedTitle);
+        
       
-        let foundProject = null;
+        // let foundProject = null;
       
-        // Loop through each category to find the matching project
-        templatesData.Projects.forEach((projectCategory) => {
-          projectCategory.categories.forEach((category) => {
-            category.projects.forEach((item) => {
-              if (item.title.trim().toLowerCase() === normalizedTitle) {
-                foundProject = item;
-              }
-            });
-          });
-        });
+       
       
-        console.log("Matching Project:", foundProject);
-      
-        if (foundProject) {
-          setProjectData(foundProject);
-        } else {
-          console.error("Project not found!");
-        }
-      }, [title, templatesData]);
+      //   if (foundProject) {
+      //     setProjectData(foundProject);
+      //   } else {
+      //     console.error("Project not found!");
+      //   }
+      // }, [title, templatesData]);
       
       // useEffect(() => {
       //     if (templatesData?.projects.categories.projects) {
@@ -100,10 +124,10 @@ function SingleProject() {
             <div className="single-project-container">
               <NavBar />
               <SideBar />
-              {projectData ? templates[projectData.template] : <p>No matching template found.</p>}
-              {/* <RelatedProjects department={department} category={category} projectTitle={title} /> */}
+              {projectData ? templates[project?.template] : <p>No matching template found.</p>}
+              <RelatedProjects depKey={depKey} category={FoundCat} projectKey={projectKey} RemainingProjects={RemainingProjects} />
               <Footer />
-              <MobileFooter />
+              <MobileFooter /> 
             </div>
           );
         }
