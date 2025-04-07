@@ -173,18 +173,17 @@ const data = [
     title: "Chili Ladling Machine-1",
     description: "Analysis of electronics case study.",
     image: { imageUrl: "/assets/caseStudy-1.webp" },
-    category: "Electronics",
+    category: "Mechanical",
   },
   {
     id: "Case Study-2",
     title: "Chili Ladling Machine-2",
     description: "Analysis of mechanical case study.",
     image: { imageUrl: "/assets/caseStudy-2.webp" },
-    category: "Mechanical",
+    category: "Electronics",
   },
   {
     id: "Case Study-3",
-    
     title: "Chili Ladling Machine-3",
     description: "Analysis of mechanical case study.",
     image: { imageUrl: "/assets/caseStudy-3.webp" },

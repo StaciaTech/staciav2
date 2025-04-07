@@ -221,12 +221,14 @@ a {
   width: 75%;
   /* min-height: 60vh; */
   height: 100%;
+
   padding: 1.5rem;
   box-sizing: border-box;
   /* display: flex;
   justify-content: center;
   align-items: center; */
   /* background-color: aquamarine; */
+  
 }
 
 .whats-new-box {
@@ -259,7 +261,7 @@ a {
 }
 .whats-new-grid-item {
   width: 100%;
-  height: 100%;
+  height: 70%;
   border-radius: 15px;
   background-size: cover;
   background-repeat: no-repeat;

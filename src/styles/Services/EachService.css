@@ -73,7 +73,7 @@
 .each-service-howWeDo-step-container {
   display: flex;
   column-gap: 6rem;
-    scroll-behavior: smooth;
+    
 
 }
 .each-service-howWeDo-step-container > div {

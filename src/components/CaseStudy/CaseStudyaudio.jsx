@@ -52,7 +52,7 @@ const CaseStudyaudio = () => {
           </div>
 
           <div className="details">
-            Duration: 12m 16s | 26 Dec, 2023 | Podcast
+            Duration: 1.1m 1s | 07 Oct, 2025 | Podcast
           </div>
         </div>
 
