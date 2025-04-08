@@ -182,6 +182,8 @@
 
 
 
+
+
 import React, { useRef } from "react";
 import "../../styles/Services/EachService.css";
 import NavBar from "../NavBar"; // Ensure default export in NavBar.jsx
@@ -275,6 +277,7 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
+  });
 
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-70%"]);
   return (
@@ -308,6 +311,7 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
     </div>
   );
 };
+
 const HorizontalScrollMobile = ({ singleServiceWhatweDo }) => {
   return (
     <div>
@@ -332,4 +336,6 @@ const HorizontalScrollMobile = ({ singleServiceWhatweDo }) => {
   );
 };
 
-export default EachServicePage; // Ensure this is present
+export default EachServicePage; // Ensure this is pr
+
+
