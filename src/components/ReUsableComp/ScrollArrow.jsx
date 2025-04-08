@@ -25,7 +25,6 @@
 
 //   // Check if the user is at the bottom of the page (e.g., 99% or higher)
 //   const atBottom = scrollProgress >= 99;
-  
 
 //   return (
 //     <div onClick={scrollToTop} className="scroll-to-top">
@@ -59,17 +58,12 @@
 // export default ScrollArrow;
 
 
-
-
 import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import "../../styles/ScrollArrow.css";
-
 const ScrollArrow = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
-
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
     const docHeight =
@@ -78,24 +72,19 @@ const ScrollArrow = () => {
     const scrollPercent = (scrollTop / docHeight) * 100;
 
     setScrollProgress(scrollPercent);
-
-    
     if (scrollPercent > 3 && scrollPercent < 99) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
     }
   };
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   return (
     <>
       {isVisible && (
@@ -125,6 +114,4 @@ const ScrollArrow = () => {
     </>
   );
 };
-
 export default ScrollArrow;
-

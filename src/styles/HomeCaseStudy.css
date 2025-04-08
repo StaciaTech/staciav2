@@ -179,4 +179,15 @@
     justify-content: center;
     align-items: center;
   }
+  .casestudy-content p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    font-size: 12px;
+  }
+  .casestudy-content h2{
+    font-size: 14px;
+    width: 100px;
+  }
 }

@@ -29,7 +29,7 @@ export default function ServiceDisplay() {
         setCurrentSlide((prevSlide) =>
           prevSlide === homeServiceData.length - 1 ? 0 : prevSlide + 1
         );
-      }, 2000);
+      }, 5000);
     }
     // Clear interval when hovered or component unmounts
     return () => clearInterval(timerRef.current);

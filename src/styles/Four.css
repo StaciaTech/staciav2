@@ -38,22 +38,29 @@
 }
 .four-img:hover .founder-content {
   display: block;
+  display: flex;
+
   color: white;
+  gap: 1rem;
   background: linear-gradient(to left, #0d022500, #0d0225cc);
   width: 100%;
-  padding: 1rem 3rem;
+  /* padding: 1rem 3rem; */
+  padding-right: 0.5rem;
+  padding-left: 8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   bottom: 0;
   margin-bottom: 2px;
   border-bottom-left-radius: 20px;
   overflow: hidden;
-   transition: transform 0.3s ease-in-out;
-   
+  transition: transform 0.3s ease-in-out;
 }
 .founder-content {
   position: absolute;
   bottom: 10px;
   display: none;
   overflow: hidden;
+  /* display: flex; */
 }
 .four-img > img {
   width: 100%;

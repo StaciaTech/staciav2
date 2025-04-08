@@ -18,7 +18,7 @@
 .single-article-card-image {
   background-image: linear-gradient(to bottom, #0d022500, #0d0225cc),
     url("../../assets/artHomeImg.png");
-  height: 40vh;
+  height: 60vh;
   width: 547px;
   border-radius: 30px;
   background-repeat: no-repeat;
@@ -29,11 +29,12 @@
   justify-content: flex-end;
   color: white;
   font-family: "Euclid";
-  filter: grayscale(100%);
+  filter: grayscale(0);
   margin-left: 1rem;
   margin-right: 1rem;
   align-self: flex-end;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .article-text-container {
@@ -41,7 +42,7 @@
   /* Hide the text container by default */
 }
 
-.single-article-card-image:hover .article-text-container {
+ .article-text-container {
   display: block;
   /* Show the text container when hovering over the image */
 }
@@ -55,10 +56,10 @@
   width: 100%;
 }
 
-.single-article-card-image:hover {
+/* .single-article-card-image:hover {
   filter: grayscale(0);
   height: 60vh;
-}
+} */
 
 .article-text-container {
   padding: 0 3rem 2rem 2rem;

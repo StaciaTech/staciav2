@@ -759,9 +759,9 @@ function NavProductComp({ handleClose }) {
   const [hoveringOnMain, setHoveringOnmain] = useState(false);
   const [MainCatArr, setMaincatArr] = useState();
   const [subCatsArr, setSubccatsArr] = useState();
-  const [deptname, setDeptname] = useState();
-  const [mainCatName, setMainCatName] = useState();
-  const [subCatName, setSubCatName] = useState();
+  const [deptname, setDeptname] = useState("Mechanical");
+  const [mainCatName, setMainCatName] = useState("Agri and Food Processing SPM");
+  const [subCatName, setSubCatName] = useState("Onedril (SSM)");
   const [displayProducts, setDisplayProducts] = useState();
   const [finalProductArr, setFinalProductArr] = useState();
 
