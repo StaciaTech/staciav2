@@ -357,15 +357,49 @@
 
 
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/NavProductComp.css";
 import Star from "../../assets/loadingStar.svg";
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import serviceData from "../../Data/Services.json"; // Import the static JSON data
+import Data from "../../Data/Services.json"; // Import the static JSON data
 
 function ServcieNavComp({ handleClose }) {
   const navigate = useNavigate();
+
+  const [serviceData, setServiceData] = useState();
+
+  useEffect(()=>{
+    setServiceData(Data);
+
+  const defaultDept = Data?.[0];
+  const defaultCategory = defaultDept?.categories?.[0];
+  const defaultService = defaultCategory?.services?.[0];
+
+  console.log(defaultDept,defaultCategory,defaultService,"MosesData")
+
+  if(defaultDept && defaultCategory && defaultService) {
+    setDeptname(defaultDept.name);
+
+    setMaincatArr(defaultDept.categories.map((cat)=>cat.name));
+
+    setMainCatName(defaultCategory.name);
+
+
+    setFinalServiceArr(defaultCategory.services);
+
+    setSubccatsArr(defaultCategory.services.map((ser)=>ser.title));
+
+    setSubCatName(defaultService.title);
+    setDisplayServices(defaultService);
+
+    setShowSubCats(true);
+    setShowServices(true);
+  }
+    
+  },[])
+
+  console.log(serviceData, "ServiceData")
 
   // Static data is directly imported, no need for useState to fetch it
   const [showSubCats, setShowSubCats] = useState(false);
@@ -380,13 +414,36 @@ function ServcieNavComp({ handleClose }) {
   const [displayServices, setDisplayServices] = useState();
   const [finalServiceArr, setFinalServiceArr] = useState();
 
+ 
   const DeptArr = serviceData?.map((item) => item.name);
+  console.log(DeptArr, "DepartmentNames");
 
   const HandleDeptHovever = (DeptName) => {
     setDeptname(DeptName);
     const MainCatArrObj = serviceData?.find((item) => item.name === DeptName);
+    console.log(MainCatArrObj,"MainCatObjjServicePage");
+
     if (MainCatArrObj) {
+      const categories = MainCatArrObj.categories || [];
+      console.log(categories, "ServiceCategories");
+      const firstCategory = categories[0];
+      const firstService = firstCategory?.services[0];      
+      
       setMaincatArr(MainCatArrObj?.categories?.map((item) => item.name));
+
+      if(firstCategory){
+        setMainCatName(firstCategory.name);
+        setFinalServiceArr(firstCategory?.services);
+
+        const subCatTitles = firstCategory?.services.map((ser)=>ser.title);
+        setSubccatsArr(subCatTitles);
+        setShowSubCats(true);
+        if(firstService){
+          setSubCatName(firstService.title);
+          setDisplayServices(firstService);
+          setShowServices(true)
+        }
+      }
     }
   };
 
@@ -398,11 +455,24 @@ function ServcieNavComp({ handleClose }) {
     );
     setFinalServiceArr(subCatObj?.services);
     if (subCatObj) {
-      setShowSubCats([]);
-      setSubccatsArr(
-        subCatObj?.services?.map((eachSubCat) => eachSubCat.title)
-      );
+      // Default
+      const serviceTitles = subCatObj?.services?.map((eachSubCat) => eachSubCat.title)
+      // setShowSubCats([]);
+      // setSubccatsArr(
+      //   subCatObj?.services?.map((eachSubCat) => eachSubCat.title)
+      // );
+    // }
+    setSubccatsArr(serviceTitles);
+
+    // Set default first service
+
+    const firstService = subCatObj?.services?.[0];
+    if(firstService){
+      setSubCatName(firstService.title);
+      setDisplayServices(firstService);
+      setShowServices(true)
     }
+  }
     setShowSubCats(true);
   };
 
