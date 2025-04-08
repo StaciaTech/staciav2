@@ -382,7 +382,7 @@ section {
   width: 100%;
   background-color: #0d0225;
   transition: 0.5s ease-in-out;
-  animation: line 2s linear infinite;
+  animation: line 5s linear infinite;
   transform: scaleX(0);
   transform-origin: left;
 }

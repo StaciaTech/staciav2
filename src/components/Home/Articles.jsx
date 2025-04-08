@@ -6,7 +6,11 @@ import { useNavigate } from "react-router-dom";
 function SingleArticleCard() {
   const navigate = useNavigate();
   return (
-    <div className="article-outline-holder">
+    <div className="article-outline-holder"
+      onClick={() => {
+        navigate("/article");
+        window.scrollTo(0, 0);
+      }}>
       <div className="single-article-card-image">
         <div className="article-text-container">
           <div className="article-author-name test-seclection-white">
@@ -29,7 +33,7 @@ function SingleArticleCard() {
               window.scrollTo(0, 0);
             }}
           >
-            Learn More &gt;{" "}
+            Read More &gt;{" "}
           </div>
         </div>
       </div>

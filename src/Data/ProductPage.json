@@ -1,7 +1,251 @@
 {
   "department": [
     {
-      "id": "electronics-001",
+      "id": "mechanical-001",
+      "name": "Mechanical",
+      "category": [
+        {
+          "id": "category-002",
+          "name": "Agri and Food Processing SPM",
+          "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
+          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "products": [
+            {
+              "id":"product-001",
+              "title": "Onedril (SSM)",
+              "description": "OneDril is a manual, portable seed-sowing machine designed for precise and efficient planting. Capable of handling seeds between 2 to 25mm, it follows the line-sowing principle for uniform crop growth. Ideal for micro and large seeds alike, OneDril’s ergonomic design ensures convenience and accuracy. It empowers farmers with a cost-effective, versatile solution for boosting agricultural productivity.",
+              "imageUrl": "/assets/ProductPage/onedrillssm.webp",
+              "productDetails": [
+                {
+                  "imageUrl": "/assets/ProductPage/seed plunger.webp",
+                  "title": "Seed Plunger",
+                  "description": "The Seed Plunger is a stainless steel mechanism with a cone for opening and closing to plunge seeds into the soil. It can vary the plunging depth from 1 cm to 6 cm. The plunging action is driven by a crank mechanism consisting of a crank, crankshaft, and connecting rod"
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Seed Hopper.webp",
+                  "title": "Seed Hopper",
+                  "description": "The Seed Hopper holds seeds, and inside, a seed disk picks the required number of seeds (2mm to 25mm) and drops them into the plunger. The hopper is adjustable to sow one or more seeds at even intervals, depending on the seed type and spacing needs"
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Handle.webp",
+                  "title": "Handle",
+                  "description": "The handle is used to push the machine forward, driving the wheel to actuate the plunger and seed disk. Designed for operators of various heights, it has a grip for comfortable handling. The handle's mechanism ensures smooth sowing operation and seed distribution"
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/Depth Adjuster.webp",
+                  "title": "Depth Adjustor",
+                  "description": "The Depth Adjustor is an adapter that controls the wire tension for opening and closing the cone, adjusting the plunging depth. By changing the adapter's position, the cone’s slot changes accordingly, ensuring seeds are sown at the desired depth in the soil"
+                }
+              ]
+            },
+            {
+              "id":"product-002",
+              "title": "Chilli Ladling Machine",
+              "description": "This remote-operated Chilli Ladling Machine is engineered for efficient handling and ladling of chilies inside solar sheds. Its versatile design allows it to handle other crops like groundnuts and grains, ensuring optimal operation. With enhanced precision and ease of use, this machine reduces labor efforts and maximizes productivity for solar drying and similar agricultural processes.",
+              "imageUrl": "/assets/ProductPage/chilli-lading-machine.webp",
+              "productDetails": [
+                {
+                  "imageUrl": "/assets/ProductPage/Motor.webp",
+                  "title": "Motor",
+                  "description": "The machine features a variable frequency drive motor that allows the conveyor speed to be adjusted according to the size and type of chili seeds being processed. This adjustable speed control ensures optimal handling and accurate ladling for different seed varieties."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/food grade belt.webp",
+                  "title": "Food Grade Belt",
+                  "description": "The conveyor belt is made of lightweight, food-grade plastic and is equipped with arm-like provisions across its surface for efficiently picking and transferring chilies. The durable belt ensures smooth, hygienic operation, moving the chilies with minimal friction and contamination."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/AFD wheel drive.webp",
+                  "title": "AFD Wheel drive",
+                  "description": "The machine employs an all-wheel drive (AWD) system, where the motor powers all four wheels. This allows the machine to make crab turns with negligible turning radius. The remote-controlled knob enables smooth and precise directional changes with minimal effort."
+                }
+              ]
+            },
+            {
+              "id":"product-003",
+              "title": "Precision Slicing Machine",
+              "description": "The Precision Slicing Machine delivers ultra-thin slices, as fine as 3mm, with exceptional accuracy. Designed for diverse food items, it can slice fruits, vegetables, and even delicate items like bread with high precision. This machine ensures uniformity and efficiency, making it a valuable asset for food processing, catering, and kitchen applications demanding consistent slicing quality.",
+              "imageUrl": "/assets/ProductPage/Precision Slicing Machine.webp",
+              "productDetails": [
+                {
+                  "imageUrl": "/assets/ProductPage/slider involute blade.webp",
+                  "title": "Slider Involute Blade",
+                  "description": "This is a specially designed involute blade with its center of mass strategically placed for precise and sharp slicing. It ensures thin cuts, allowing for slices even less than 2.5 mm. Made of stainless steel, the blade guarantees durability and accuracy in slicing various products."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/loft loading section.webp",
+                  "title": "Loft loading section",
+                  "description": "The loft loading section has five compartments, each holding a loaf ready for slicing. A linear actuator pushes each loaf towards the blade for precise cutting, enabling continuous operation and smooth processing of multiple loaves one at a time."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/receiving conveyor.webp",
+                  "title": "Receiving conveyor",
+                  "description": "After slicing, the slices drop onto the receiving conveyor. The speed of the conveyor determines how the slices are arranged, ensuring that the product is neatly placed. This system maintains an orderly flow of sliced products for easy handling."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/slider blade drive motor.webp",
+                  "title": "Slider blade motor",
+                  "description": "A variable frequency drive motor controls the slider blade, adjusting its speed based on the conveyor’s pace. As the conveyor speed varies, the motor ensures that the placement of bread slices aligns with the loaf production, maintaining consistency in output."
+                }
+              ]
+            },
+            {
+              "id":"product-004",
+              "title": "Tamarind Breaking machine",
+              "description": "This innovative Tamarind Breaking Machine simplifies the process of breaking tamarind pods while preserving seed and pulp quality. Designed for agricultural efficiency, it is robust and user-friendly, suitable for small and large-scale operations. The machine boosts productivity and minimizes manual effort, making it an essential tool for tamarind producers.",
+              "imageUrl":"/assets/ProductPage/Tamarind Breaking machine.webp",
+              "productDetails": [
+                {
+                  "imageUrl": "/assets/ProductPage/tam out conveyor.webp",
+                  "title": "Tamarind OUT conveyor",
+                  "description": "The Tamarind OUT conveyor is responsible for moving the tamarind pods after they have been broken. It ensures a smooth flow of processed tamarind, transporting it efficiently for further handling or packaging."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/actuator arm.webp",
+                  "title": "Actuator arm",
+                  "description": "The actuator arm is positioned above the Tamarind IN conveyor. Once the tamarind pods are arranged, the actuator applies a calculated amount of force to precisely break the pods. This controlled action ensures the tamarind is broken without damaging the pulp"
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/tamarind conveyor.webp",
+                  "title": "Tamarind IN conveyor",
+                  "description": "The Tamarind IN conveyor features a square wedge section where the tamarind pods are carefully arranged. Made of food-grade plastic, this area ensures safe, hygienic handling of the tamarind while positioning it optimally for the breaking process"
+                }
+              ]
+            },
+            {
+              "id":"product-005",
+              "title": "Bailing Machine",
+              "description": "A cost-effective Bailing Machine designed to compress carton boxes to one-fourth of their original volume. Its robust design ensures reliability and efficiency, reducing storage space and simplifying waste management. Suitable for warehouses, recycling centers, and packaging units, this machine offers an economical and practical solution for handling bulk waste materials",
+              "imageUrl":"/assets/ProductPage/Default.webp",
+              "productDetails": [
+                {
+                  "imageUrl": "/assets/ProductPage/motorized screw jack.webp",
+                  "title": "Motorized screw jack",
+                  "description": "The machine uses a Variable Frequency Drive (VFD) motor, allowing the drum speed to be adjusted based on the type of food product being cleaned. This flexibility ensures optimal cleaning efficiency for different produce, making the machine versatile for various applications."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/loading and unloading area.webp",
+                  "title": "Loading and unloading area",
+                  "description": "The Rotatable Handle allows the drum to tilt for easy unloading. It features a locking mechanism with a needle; when removed, the drum rotates freely, and when inserted, the drum locks in place. This ensures secure operation and controlled product handling."
+                },
+                {
+                  "imageUrl": "/assets/ProductPage/container.webp",
+                  "title": "Container",
+                  "description": "A lightweight belt drive mechanism is used to rotate the drum. The belt system is efficient, with minimal transition distance, ensuring smooth operation and reducing the mechanical load on the motor, making it ideal for this cleaning application."
+                }
+              ]
+            },
+            {
+              "id":"product-006",
+              "title":"Spinach Cleaning Machine",
+              "description":"This Spinach Cleaning Machine cleans and semi-dries spinach with ease and precision. Its adaptable design allows it to handle other crops like lettuce, coriander, and fenugreek. Ideal for agricultural and food processing operations, it ensures hygiene and quality while saving time and labor. This machine is a perfect solution for pre-processing leafy vegetables and herbs",
+              "imageUrl":"/assets/ProductPage/spinach cleaning with Frames1.webp"
+            }
+          ]
+        },
+        {
+          "id":"category-002",
+          "name":"Automobile or Automotive SPM",
+          "description":"Drive innovation in the automotive industry with our custom-built SPMs. Designed for precision and reliability, our machines cater to various applications, including assembly, testing, and component manufacturing. Leveraging cutting-edge technology, we ensure streamlined workflows and high-quality output. Partner with us for tailored solutions that meet the rigorous demands of the automotive sector, enhancing both efficiency and profitability.",
+          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "products":[
+            {
+              "id":"product-001",
+              "title":"Brake Shoe Grinding Machine.",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+              
+            },
+            {
+              "id":"product-002",
+              "title":"Fully autotmated paint booth with dryer",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            },
+            {
+              "id":"product-003",
+              "title":"Automated Adhesive applying machines",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            }
+          ] 
+        },         
+        {
+          "id":"category-003",
+          "name":"Test Rig",
+          "description":"Experience precision and reliability with our advanced Test Rigs. Designed to simulate real-world conditions, our rigs provide accurate testing for components and systems across various industries. Whether for endurance, performance, or failure analysis, we deliver customized solutions that meet stringent standards. Trust our expertise to ensure your products are tested thoroughly and perform optimally under all conditions",
+          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "products":[
+            {
+              "id":"product-001",
+              "title":"Air and Vaccum Leak Test Rigs",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            },
+            {
+              "id":"product-002",
+              "title":"Vision based Inspection Test Rigs",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            },
+            {
+              "id":"product-003",
+              "title":"End of Line Test Rigs (EOL)",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            },
+            {
+              "id":"product-004",
+              "title":"Endurance Test Rigs",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            },
+            {
+              "id":"product-005",
+              "title":" Durability Test Rigs.",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            },
+            {
+              "id":"product-006",
+              "title":" Performance Test Rigs",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            }
+          ]
+        },        
+        {
+          "id":"category-004",
+          "name": "Reciprocating Arm",
+          "description": "Achieve mechanical precision with our Reciprocating Arms. These versatile solutions are engineered for applications requiring linear motion, including material handling, assembly, and automation tasks. Built with durable materials and cutting-edge design, our arms ensure smooth operation and consistent performance. Enhance your workflow with our customizable reciprocating arm systems, tailored to meet the specific demands of your industrial processes.",
+          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "products":[
+              {
+              "id":"product-001",
+              "title":"1. GEMA Reciprocator",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+              }
+          ]
+        },
+        {
+          "id":"category-005",
+          "name": "Actuator",
+          "description": "Power your operations with our high-performance Actuators. Designed for precision and efficiency, our actuators deliver smooth and controlled motion across a variety of applications. From industrial automation to heavy machinery, we offer a range of electric, hydraulic, and pneumatic actuators to suit your needs. Experience enhanced productivity and reliability with our innovative actuator solutions",
+          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "products":[
+            {
+              "id":"product-002",
+              "title":"Product2",
+              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
+              "imageUrl":"/assets/ProductPage/Default.webp"
+            }
+          ]
+        }            
+      ]
+    },
+    {
+      "id": "electronics-002",
       "name": "Electronics",
       "category": [
         {
@@ -178,251 +422,7 @@
           ]
         }
       ]
-    },
-    {
-      "id": "mechanical-002",
-      "name": "Mechanical",
-      "category": [
-        {
-          "id": "category-002",
-          "name": "Agri and Food Processing SPM",
-          "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
-          "products": [
-            {
-              "id":"product-001",
-              "title": "Onedril (SSM)",
-              "description": "OneDril is a manual, portable seed-sowing machine designed for precise and efficient planting. Capable of handling seeds between 2 to 25mm, it follows the line-sowing principle for uniform crop growth. Ideal for micro and large seeds alike, OneDril’s ergonomic design ensures convenience and accuracy. It empowers farmers with a cost-effective, versatile solution for boosting agricultural productivity.",
-              "imageUrl": "/assets/ProductPage/onedrillssm.webp",
-              "productDetails": [
-                {
-                  "imageUrl": "/assets/ProductPage/seed plunger.webp",
-                  "title": "Seed Plunger",
-                  "description": "The Seed Plunger is a stainless steel mechanism with a cone for opening and closing to plunge seeds into the soil. It can vary the plunging depth from 1 cm to 6 cm. The plunging action is driven by a crank mechanism consisting of a crank, crankshaft, and connecting rod"
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/Seed Hopper.webp",
-                  "title": "Seed Hopper",
-                  "description": "The Seed Hopper holds seeds, and inside, a seed disk picks the required number of seeds (2mm to 25mm) and drops them into the plunger. The hopper is adjustable to sow one or more seeds at even intervals, depending on the seed type and spacing needs"
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/Handle.webp",
-                  "title": "Handle",
-                  "description": "The handle is used to push the machine forward, driving the wheel to actuate the plunger and seed disk. Designed for operators of various heights, it has a grip for comfortable handling. The handle's mechanism ensures smooth sowing operation and seed distribution"
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/Depth Adjuster.webp",
-                  "title": "Depth Adjustor",
-                  "description": "The Depth Adjustor is an adapter that controls the wire tension for opening and closing the cone, adjusting the plunging depth. By changing the adapter's position, the cone’s slot changes accordingly, ensuring seeds are sown at the desired depth in the soil"
-                }
-              ]
-            },
-            {
-              "id":"product-002",
-              "title": "Chilli Ladling Machine",
-              "description": "This remote-operated Chilli Ladling Machine is engineered for efficient handling and ladling of chilies inside solar sheds. Its versatile design allows it to handle other crops like groundnuts and grains, ensuring optimal operation. With enhanced precision and ease of use, this machine reduces labor efforts and maximizes productivity for solar drying and similar agricultural processes.",
-              "imageUrl": "/assets/ProductPage/chilli-lading-machine.webp",
-              "productDetails": [
-                {
-                  "imageUrl": "/assets/ProductPage/Motor.webp",
-                  "title": "Motor",
-                  "description": "The machine features a variable frequency drive motor that allows the conveyor speed to be adjusted according to the size and type of chili seeds being processed. This adjustable speed control ensures optimal handling and accurate ladling for different seed varieties."
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/food grade belt.webp",
-                  "title": "Food Grade Belt",
-                  "description": "The conveyor belt is made of lightweight, food-grade plastic and is equipped with arm-like provisions across its surface for efficiently picking and transferring chilies. The durable belt ensures smooth, hygienic operation, moving the chilies with minimal friction and contamination."
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/AFD wheel drive.webp",
-                  "title": "AFD Wheel drive",
-                  "description": "The machine employs an all-wheel drive (AWD) system, where the motor powers all four wheels. This allows the machine to make crab turns with negligible turning radius. The remote-controlled knob enables smooth and precise directional changes with minimal effort."
-                }
-              ]
-            },
-            {
-              "id":"product-003",
-              "title": "Precision Slicing Machine",
-              "description": "The Precision Slicing Machine delivers ultra-thin slices, as fine as 3mm, with exceptional accuracy. Designed for diverse food items, it can slice fruits, vegetables, and even delicate items like bread with high precision. This machine ensures uniformity and efficiency, making it a valuable asset for food processing, catering, and kitchen applications demanding consistent slicing quality.",
-              "imageUrl": "/assets/ProductPage/Precision Slicing Machine.webp",
-              "productDetails": [
-                {
-                  "imageUrl": "/assets/ProductPage/slider involute blade.webp",
-                  "title": "Slider Involute Blade",
-                  "description": "This is a specially designed involute blade with its center of mass strategically placed for precise and sharp slicing. It ensures thin cuts, allowing for slices even less than 2.5 mm. Made of stainless steel, the blade guarantees durability and accuracy in slicing various products."
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/loft loading section.webp",
-                  "title": "Loft loading section",
-                  "description": "The loft loading section has five compartments, each holding a loaf ready for slicing. A linear actuator pushes each loaf towards the blade for precise cutting, enabling continuous operation and smooth processing of multiple loaves one at a time."
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/receiving conveyor.webp",
-                  "title": "Receiving conveyor",
-                  "description": "After slicing, the slices drop onto the receiving conveyor. The speed of the conveyor determines how the slices are arranged, ensuring that the product is neatly placed. This system maintains an orderly flow of sliced products for easy handling."
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/slider blade drive motor.webp",
-                  "title": "Slider blade motor",
-                  "description": "A variable frequency drive motor controls the slider blade, adjusting its speed based on the conveyor’s pace. As the conveyor speed varies, the motor ensures that the placement of bread slices aligns with the loaf production, maintaining consistency in output."
-                }
-              ]
-            },
-            {
-              "id":"product-004",
-              "title": "Tamarind Breaking machine",
-              "description": "This innovative Tamarind Breaking Machine simplifies the process of breaking tamarind pods while preserving seed and pulp quality. Designed for agricultural efficiency, it is robust and user-friendly, suitable for small and large-scale operations. The machine boosts productivity and minimizes manual effort, making it an essential tool for tamarind producers.",
-              "imageUrl":"/assets/ProductPage/Tamarind Breaking machine.webp",
-              "productDetails": [
-                {
-                  "imageUrl": "/assets/ProductPage/tam out conveyor.webp",
-                  "title": "Tamarind OUT conveyor",
-                  "description": "The Tamarind OUT conveyor is responsible for moving the tamarind pods after they have been broken. It ensures a smooth flow of processed tamarind, transporting it efficiently for further handling or packaging."
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/actuator arm.webp",
-                  "title": "Actuator arm",
-                  "description": "The actuator arm is positioned above the Tamarind IN conveyor. Once the tamarind pods are arranged, the actuator applies a calculated amount of force to precisely break the pods. This controlled action ensures the tamarind is broken without damaging the pulp"
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/tamarind conveyor.webp",
-                  "title": "Tamarind IN conveyor",
-                  "description": "The Tamarind IN conveyor features a square wedge section where the tamarind pods are carefully arranged. Made of food-grade plastic, this area ensures safe, hygienic handling of the tamarind while positioning it optimally for the breaking process"
-                }
-              ]
-            },
-            {
-              "id":"product-005",
-              "title": "Bailing Machine",
-              "description": "A cost-effective Bailing Machine designed to compress carton boxes to one-fourth of their original volume. Its robust design ensures reliability and efficiency, reducing storage space and simplifying waste management. Suitable for warehouses, recycling centers, and packaging units, this machine offers an economical and practical solution for handling bulk waste materials",
-              "imageUrl":"/assets/ProductPage/Default.webp",
-              "productDetails": [
-                {
-                  "imageUrl": "/assets/ProductPage/motorized screw jack.webp",
-                  "title": "Motorized screw jack",
-                  "description": "The machine uses a Variable Frequency Drive (VFD) motor, allowing the drum speed to be adjusted based on the type of food product being cleaned. This flexibility ensures optimal cleaning efficiency for different produce, making the machine versatile for various applications."
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/loading and unloading area.webp",
-                  "title": "Loading and unloading area",
-                  "description": "The Rotatable Handle allows the drum to tilt for easy unloading. It features a locking mechanism with a needle; when removed, the drum rotates freely, and when inserted, the drum locks in place. This ensures secure operation and controlled product handling."
-                },
-                {
-                  "imageUrl": "/assets/ProductPage/container.webp",
-                  "title": "Container",
-                  "description": "A lightweight belt drive mechanism is used to rotate the drum. The belt system is efficient, with minimal transition distance, ensuring smooth operation and reducing the mechanical load on the motor, making it ideal for this cleaning application."
-                }
-              ]
-            },
-            {
-              "id":"product-006",
-              "title":"Spinach Cleaning Machine",
-              "description":"This Spinach Cleaning Machine cleans and semi-dries spinach with ease and precision. Its adaptable design allows it to handle other crops like lettuce, coriander, and fenugreek. Ideal for agricultural and food processing operations, it ensures hygiene and quality while saving time and labor. This machine is a perfect solution for pre-processing leafy vegetables and herbs",
-              "imageUrl":"/assets/ProductPage/spinach cleaning with Frames.webp"
-            }
-          ]
-        },
-        {
-          "id":"category-002",
-          "name":"Automobile or Automotive SPM",
-          "description":"Drive innovation in the automotive industry with our custom-built SPMs. Designed for precision and reliability, our machines cater to various applications, including assembly, testing, and component manufacturing. Leveraging cutting-edge technology, we ensure streamlined workflows and high-quality output. Partner with us for tailored solutions that meet the rigorous demands of the automotive sector, enhancing both efficiency and profitability.",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
-          "products":[
-            {
-              "id":"product-001",
-              "title":"Brake Shoe Grinding Machine.",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-              
-            },
-            {
-              "id":"product-002",
-              "title":"Fully autotmated paint booth with dryer",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-003",
-              "title":"Automated Adhesive applying machines",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            }
-          ] 
-        },         
-        {
-          "id":"category-003",
-          "name":"Test Rig",
-          "description":"Experience precision and reliability with our advanced Test Rigs. Designed to simulate real-world conditions, our rigs provide accurate testing for components and systems across various industries. Whether for endurance, performance, or failure analysis, we deliver customized solutions that meet stringent standards. Trust our expertise to ensure your products are tested thoroughly and perform optimally under all conditions",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
-          "products":[
-            {
-              "id":"product-001",
-              "title":"Air and Vaccum Leak Test Rigs",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-002",
-              "title":"Vision based Inspection Test Rigs",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-003",
-              "title":"End of Line Test Rigs (EOL)",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-004",
-              "title":"Endurance Test Rigs",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-005",
-              "title":" Durability Test Rigs.",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-006",
-              "title":" Performance Test Rigs",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            }
-          ]
-        },        
-        {
-          "id":"category-004",
-          "name": "Reciprocating Arm",
-          "description": "Achieve mechanical precision with our Reciprocating Arms. These versatile solutions are engineered for applications requiring linear motion, including material handling, assembly, and automation tasks. Built with durable materials and cutting-edge design, our arms ensure smooth operation and consistent performance. Enhance your workflow with our customizable reciprocating arm systems, tailored to meet the specific demands of your industrial processes.",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
-          "products":[
-              {
-              "id":"product-001",
-              "title":"1. GEMA Reciprocator",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-              }
-          ]
-        },
-        {
-          "id":"category-005",
-          "name": "Actuator",
-          "description": "Power your operations with our high-performance Actuators. Designed for precision and efficiency, our actuators deliver smooth and controlled motion across a variety of applications. From industrial automation to heavy machinery, we offer a range of electric, hydraulic, and pneumatic actuators to suit your needs. Experience enhanced productivity and reliability with our innovative actuator solutions",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
-          "products":[
-            {
-              "id":"product-002",
-              "title":"Product2",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            }
-          ]
-        }            
-      ]
-    },
+    },   
     {
       "id":"tech-003",
       "name": "Tech",

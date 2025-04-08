@@ -485,7 +485,7 @@ function ProductCategoryPage() {
                           navigate(`/products/${deptKey}/${catKey}`);
                         }}
                       >
-                        <span>Learn more</span>
+                        <span>Read more</span>
                         <IoIosArrowForward />
                       </div>
                     </div>
