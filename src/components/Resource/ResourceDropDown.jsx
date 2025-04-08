@@ -457,11 +457,32 @@ function ResourceDropDown({ handleClose }) {
 
   const [articlesData, setArticlesData] = useState([]);
   const [caseStudyData, setCaseStudyData] = useState([]);
+  const [defaultLoaded, setDefaultLoaded] = useState(false);
 
   useEffect(() => {
     setCaseStudyData(casedoc?.singlecasestudy || []);
     setArticlesData(article.docs);
   }, []);
+
+  useEffect(()=>{
+    if(!defaultLoaded && articlesData.length >0){
+      const defaultRes = "Article";
+      const firstDept = articlesData[0];
+      const firstArticle = firstDept?.data?.[0];
+
+      setActiveArt(defaultRes);
+      setActiveDept(firstDept?.name);
+      if(firstArticle){
+        setActiveArt(firstArticle?.title);
+        setFoundItem(firstArticle);
+      }
+      setDefaultLoaded(true);
+    }
+  },[articlesData,defaultLoaded])
+
+
+
+  
 
   const ResourceArr = [
     { name: "Article", cats: articlesData },

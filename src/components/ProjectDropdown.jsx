@@ -9,7 +9,7 @@ function ProjectDropdown({ handleClose }) {
   // const apiUrl = process.env.REACT_APP_API_URL;
   const navigate = useNavigate();
   const [projectsData, setProjectsData] = useState();
-
+  const Data = ProjectsData.Departments
   // const FetchProjects = async () => {
   //   try {
   //     const res = await axios.get(`${apiUrl}/projects/list`);
@@ -24,7 +24,18 @@ function ProjectDropdown({ handleClose }) {
   // }, []);
 
   useEffect(() => {
-    setProjectsData(ProjectsData.Projects)
+    setProjectsData(Data);
+
+    // Set default values
+  if (Data && Data.length > 0) {
+    const firstDept = Data?.[0];
+    const firstCategory = firstDept?.categories?.[0];
+    const firstProject = firstCategory?.projects?.[0];
+
+    setActiveDept(firstDept?.name);
+    setActiveCategory(firstCategory?.name);
+    setActiveProject(firstProject?.title);
+  }
   },[])
 
   // console.log(projectsData);
@@ -64,6 +75,7 @@ function ProjectDropdown({ handleClose }) {
     }
   }, [activeProject, projectArr]);
 
+  console.log(activeDept,activeCategory,activeProject,categoryArr,projectArr,foundProject, "Mosesdata")
   return (
     <div className="project-dd-container">
       <div className="project-dept-container">
@@ -74,6 +86,12 @@ function ProjectDropdown({ handleClose }) {
             <div
               onMouseEnter={() => {
                 setActiveDept(eachitem.name);
+                const selectDept =projectsData?.find((dept)=>dept.name === eachitem.name);
+                const firstCategory =  selectDept?.categories?.[0];
+                const fisrtProject = firstCategory?.projects?.[0];
+
+                setActiveCategory(firstCategory?.name);
+                setActiveProject(fisrtProject?.title);
               }}
               onClick={() => {
                 navigate(`/project/${departmentRoutKey}`);
@@ -121,7 +139,12 @@ function ProjectDropdown({ handleClose }) {
               return (
                 <div
                   key={i}
-                  onMouseEnter={() => setActiveCategory(eachitem.name)}
+                  onMouseEnter={() =>{
+                    setActiveCategory(eachitem.name);
+
+                    const firstProject = eachitem?.projects?.[0];
+                    setActiveProject(firstProject?.title);
+                  }}
                   className={`project-main-item ${
                     eachitem.name === activeCategory
                       ? "project-main-item-active"

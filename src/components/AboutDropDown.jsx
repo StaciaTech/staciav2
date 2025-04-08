@@ -205,7 +205,15 @@ function AboutDropDown({ handleClose }) {
         {AboutArr?.map((eachTitle, i) => (
           <div
             key={i}
-            onMouseEnter={() => setActiveTitle(eachTitle.section)}
+            onMouseEnter={() => {setActiveTitle(eachTitle.section);
+              const subsections = eachTitle.section;
+              if(subsections?.length>0){
+                setActiveSubTitle(subsections[0].name);
+                if(eachTitle.section ==="LeaderShip"){
+                  setFoundLeader(subsections[0])
+                }
+              }
+            }}
             className={`about-dd-main-title ${eachTitle.section === activeTitle
                 ? "about-dd-main-title-active"
                 : ""
