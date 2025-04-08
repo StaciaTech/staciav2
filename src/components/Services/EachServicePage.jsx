@@ -308,7 +308,6 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
     </div>
   );
 };
-
 const HorizontalScrollMobile = ({ singleServiceWhatweDo }) => {
   return (
     <div>
