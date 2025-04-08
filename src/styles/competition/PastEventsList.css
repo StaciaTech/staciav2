@@ -6,10 +6,12 @@
 .past-events-title {
     color: #E0E0E0;
     margin: 2rem 0;
+    font-family: EuclidMedium;
 }
 
 .error-message {
     color: red;
+    font-family: EuclidMedium;
 }
 
 .events-grid {
@@ -92,6 +94,7 @@
     border-radius: 5px;
     font-size: 12px;
     margin-bottom: 10px;
+    font-family: EuclidMedium;
 }
 
 .arrow-icon {

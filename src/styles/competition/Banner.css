@@ -144,6 +144,8 @@
 
   .banner-details {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .icon {
@@ -155,6 +157,11 @@
     width: 10px;
     height: 10px;
   }
+
+  
+.banner-content {
+  max-width: 100%;
+}
   
 }
 
