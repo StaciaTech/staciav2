@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
+import Star from "../components/Star";
 import StaciaLogo from "../assets/Stacia Monogram.svg";
 import StaciaLogoText from "../assets/Stacia logo.svg";
 import five from "../assets/5yr logo.svg";
@@ -467,7 +468,9 @@ function NavBar() {
                 }}
                 style={{ position: "relative" }}
               >
-                Competition <BlueStar />
+                Competition 
+                {/* <BlueStar /> */}
+                <Star />
 
               </NavLink>
 
