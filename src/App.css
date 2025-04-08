@@ -255,6 +255,7 @@ p {
   flex-direction: column;
   gap: 10px;
   background: linear-gradient(274deg, #003362 -89.14%, #81497b 128.53%);
+  /* background: yellow; */
 }
 
 .mobile-card-stack-img-box {

@@ -7,9 +7,11 @@
   padding: 0rem 2rem;
   box-sizing: border-box;
   max-height: 460px;
-  min-height: 400px;
+  /* min-height: 400px; */
+  height: 500px;
   display: flex;
   border-bottom: 1px solid #e5e5e5;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .res-main-container,
 .res-dept-container,
