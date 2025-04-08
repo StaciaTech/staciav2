@@ -2241,7 +2241,7 @@
           "services": [
             {
               "description": "Infrastructure as Code (IaC) allows you to manage and provision your infrastructure using code, automating the entire process. By adopting IaC, businesses can maintain version-controlled and consistent infrastructure, making it easier to replicate environments across development, staging, and production. We use tools like Terraform, AWS CloudFormation, and Ansible to define and automate infrastructure setup. This approach reduces human error, accelerates deployments, and ensures that your infrastructure is scalable, secure, and compliant with industry standards, helping businesses achieve agility and maintain control over their environments.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Infrastructure-as-code(IaC).webp",
               "id": "676e5ae7e0bbb25e4ee93333",
               "categoryId": "6769386151dcda17a0f93889",
               "title": "Infrastructure as Code (IaC)",
@@ -2300,7 +2300,7 @@
             },
             {
               "description": "Microservices architecture involves designing applications as a collection of independently deployable, modular services. Each service runs in its own process, communicating via lightweight protocols such as REST or gRPC. This architecture promotes agility, scalability, and resilience, allowing businesses to rapidly deploy updates and optimize resource usage. By decoupling services, development teams can work concurrently, resulting in faster delivery cycles and easier debugging. Microservices also enable the use of diverse technologies for different components, tailored to specific needs. Our expertise in microservices architecture ensures robust applications that adapt seamlessly to evolving business demands.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Microservices-Architecture.webp",
               "id": "676e5b1ee0bbb25e4ee93334",
               "categoryId": "6769386151dcda17a0f93889",
               "title": "Microservices Architecture",
@@ -2345,7 +2345,7 @@
             },
             {
               "description": "Performance Testing focuses on assessing how well an application performs under various loads. Our team conducts stress tests, load tests, and scalability tests to determine how the application behaves under different traffic volumes and system configurations. Performance testing ensures that the application can handle heavy user traffic and continue to deliver a smooth user experience. By identifying performance bottlenecks, we help businesses optimize their applications for speed and responsiveness.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Containerization.webp",
               "id": "676e5b43e0bbb25e4ee93335",
               "categoryId": "6769386151dcda17a0f93889",
               "title": "Containerization",
@@ -2390,7 +2390,7 @@
             },
             {
               "description": "Web servers are crucial for hosting and delivering web applications to users. They handle HTTP requests, manage static and dynamic content delivery, and ensure secure and efficient data exchange between users and applications. Proper web server management ensures high performance, reliability, and security for your applications. Our expertise includes configuring, optimizing, and maintaining web servers tailored to meet the needs of your business. We ensure seamless integration with your applications, enabling fast, secure, and scalable delivery of content to users.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Web-Server-Management.webp",
               "id": "676e5b60e0bbb25e4ee93336",
               "categoryId": "6769386151dcda17a0f93889",
               "title": "Web Server Management",
@@ -2435,7 +2435,7 @@
             },
             {
               "description": "Our Continuous Integration and Deployment (CI/CD) services ensure the efficient and automated flow of code from development to production. We set up robust CI/CD pipelines that automatically test, build, and deploy applications, enabling faster development cycles and reduced manual intervention. We ensure that new code changes are seamlessly integrated and deployed with minimal downtime. This allows teams to focus more on development while maintaining consistent and high-quality releases, enhancing productivity, and delivering software faster to the end user.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Continuous-Integration-and-Deployment(CI-CD).webp",
               "id": "676e5b60e0bbb25e4ee93336",
               "categoryId": "6769386151dcda17a0f93889",
               "title": "Continuous Integration and Deployment (CI/CD)",
@@ -2480,7 +2480,7 @@
             },
             {
               "description": " Server Configuration and Management involves setting up, managing, and optimizing servers to ensure they are secure, reliable, and high-performing. We configure servers based on specific needs and industry best practices to meet scalability and security requirements. From web servers to application servers, we handle tasks such as server provisioning, patching, load balancing, and performance tuning. We use tools like Ansible, Chef, and Puppet to automate server configuration, ensuring that businesses can scale effectively and maintain a secure and optimized infrastructure.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Server-Configuration-and-Management.webp",
               "id": "676e5b60e0bbb25e4ee93336",
               "categoryId": "6769386151dcda17a0f93889",
               "title": "Server Configuration and Management",
@@ -2539,7 +2539,7 @@
             },
             {
               "description": "Cloud Infrastructure Management focuses on designing, deploying, and managing cloud environments to support scalable applications. We help businesses move to the cloud, manage cloud resources, and optimize their infrastructure for cost and performance. Our team ensures that your cloud infrastructure is optimized for high availability, security, and performance. With cloud-native services and automation tools, we enable businesses to scale efficiently and maintain a competitive edge while minimizing costs associated with traditional infrastructure management.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Cloud-Infrastructure-Management.webp",
               "id": "676e5b60e0bbb25e4ee93336",
               "categoryId": "6769386151dcda17a0f93889",
               "title": "Cloud Infrastructure Management",
@@ -2608,7 +2608,7 @@
           "services": [
             {
               "description": "Database Management involves designing, implementing, and maintaining databases that are secure, efficient, and scalable. We work with a variety of database technologies ensuring data integrity, performance, and availability. Our team handles everything from data modeling and schema design to query optimization and backup strategies. By implementing best practices in database administration, we ensure that your databases can support growing amounts of data while maintaining security, compliance, and high performance.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Database-Management.webp",
               "id": "676e5f95e0bbb25e4ee9334f",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Database Management",
@@ -2660,7 +2660,7 @@
             },
             {
               "description": "Data Visualization transforms complex data into clear, visual representations that make it easier to understand and analyze. We use tools like Tableau, Power BI, and D3.js to create interactive dashboards, reports, and visualizations that highlight key insights. By presenting data in a visual format, businesses can quickly identify trends, patterns, and anomalies, leading to more informed decisions. Our team ensures that the visualizations are tailored to the specific needs of the business, enabling stakeholders to explore data and gain actionable insights.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Data-Visualization.webp",
               "id": "676e607de0bbb25e4ee93350",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Data Visualization",
@@ -2705,7 +2705,7 @@
             },
             {
               "description": "Business Intelligence (BI) Tools help businesses gather, process, and analyze data to make better decisions. We integrate powerful BI tools to provide businesses with actionable insights. These tools enable organizations to track KPIs, perform predictive analytics, and visualize business performance in real-time. With our BI solutions, businesses can create custom reports, detect trends, and monitor operational efficiency, ensuring that decision-makers have access to accurate and timely data to optimize performance and drive growth.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Business-Intelligence-Tools.webp",
               "id": "676e607de0bbb25e4ee93350",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Business Intelligence (BI) Tools",
@@ -2761,7 +2761,7 @@
           "services": [
             {
               "description": "Application Support services ensure that your applications function seamlessly and meet user expectations. Our team provides round-the-clock support to troubleshoot issues, resolve bugs, and address performance problems. From application upgrades to bug fixes, we ensure that your applications run smoothly, allowing your users to have an optimal experience. We work proactively to monitor application performance and provide timely updates, helping businesses maintain application reliability and enhance customer satisfaction.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Application-Support.webp",
               "id": "676e5f95e0bbb25e4ee9334f",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Application Support",
@@ -2813,7 +2813,7 @@
             },
             {
               "description": "Bug Fixes and Updates are an essential part of maintaining application functionality. Our team ensures that any bugs or issues are quickly addressed and fixed, minimizing disruptions to the user experience. We also implement updates to improve performance, enhance features, and address security vulnerabilities. Our approach to bug fixing and updates is focused on maintaining system stability and improving overall user satisfaction. By staying proactive with maintenance, we ensure that your applications remain reliable and continue to meet user needs effectively.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Bug-Fixes-and-Updates.webp",
               "id": "676e607de0bbb25e4ee93350",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Bug Fixes and Updates",
@@ -2872,7 +2872,7 @@
             },
             {
               "description": "Performance Optimization focuses on improving the speed, responsiveness, and overall performance of applications. Our team identifies bottlenecks, optimizes code, and implements best practices to ensure that your applications run smoothly under heavy traffic and resource constraints. Whether it’s optimizing databases, improving front-end performance, or tuning back-end servers, we ensure that your users experience minimal delays and maximum efficiency. We also monitor application performance over time and make adjustments as needed to maintain a high standard of performance.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Performance-Optimization.webp",
               "id": "676e607de0bbb25e4ee93350",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Performance Optimization",
@@ -2938,7 +2938,7 @@
             },
             {
               "description": "Server Monitoring and Maintenance ensures the health, security, and performance of your server infrastructure. We provide continuous monitoring of server metrics like CPU usage, memory, and disk space to detect potential issues before they cause system failures. Our team handles routine maintenance tasks such as software updates, patches, and backups to ensure servers remain secure and efficient. With our monitoring services, businesses can reduce downtime, improve system reliability, and ensure that their server infrastructure supports growth without interruptions.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Server-Monitoring-and-Maintenance.webp",
               "id": "676e607de0bbb25e4ee93350",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Server Monitoring and Maintenance",
@@ -2994,7 +2994,7 @@
           "services": [
             {
               "description": "Functional Testing ensures that all features of an application work as intended. Our team tests the functionality of each feature to ensure it performs as expected under different conditions. We identify and address any discrepancies or defects, ensuring that the application meets functional requirements. Functional testing includes verifying that each feature works properly, the user interface functions smoothly, and the system behaves correctly across various devices and platforms.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Functional-Testing.webp",
               "id": "676e5f95e0bbb25e4ee9334f",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Functional Testing",
@@ -3046,7 +3046,7 @@
             },
             {
               "description": "Automation testing focuses on improving the efficiency, accuracy, and consistency of the testing process by using specialized tools and scripts to execute test cases. It reduces human intervention, accelerates testing timelines, and ensures extensive test coverage across different features, platforms, and browsers. Ideal for repetitive and time-intensive tasks, automation testing enhances software quality by detecting defects early in the development cycle. With frameworks like Selenium, Appium, and Cypress, automation ensures seamless integration with CI/CD pipelines. This approach empowers teams to focus on innovation while maintaining software reliability, making it a critical part of modern development and quality assurance processes.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Automation-Testing.webp",
               "id": "676e607de0bbb25e4ee93350",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Automation Testing",
@@ -3092,7 +3092,7 @@
             },
             {
               "description": "Security Testing ensures that applications are secure and resistant to cyber threats. Our team performs vulnerability assessments, penetration testing, and risk analysis to identify potential security flaws and weaknesses. We work proactively to protect your data and systems from cyber threats by implementing robust security measures. Security testing ensures that your application is compliant with industry regulations and protects both your business and your users from security breaches.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Security-Testing.webp",
               "id": "676e607de0bbb25e4ee93350",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Security Testing",
@@ -3145,7 +3145,7 @@
             },
             {
               "description": "Server Monitoring and Maintenance ensures the health, security, and performance of your server infrastructure. We provide continuous monitoring of server metrics like CPU usage, memory, and disk space to detect potential issues before they cause system failures. Our team handles routine maintenance tasks such as software updates, patches, and backups to ensure servers remain secure and efficient. With our monitoring services, businesses can reduce downtime, improve system reliability, and ensure that their server infrastructure supports growth without interruptions.",
-              "imageUrl": null,
+              "imageUrl": "/assets/Consulting-Services.webp",
               "id": "676e607de0bbb25e4ee93350",
               "categoryId": "6769388d51dcda17a0f9388a",
               "title": "Consulting Services",
@@ -3200,7 +3200,7 @@
            "services": [
              {
                "description": "IT Strategy Consulting helps organizations align their IT investments with business goals, ensuring that technology serves as a catalyst for growth. Our consultants assess current IT systems, identify opportunities for improvement, and develop comprehensive IT strategies that focus on performance, scalability, and cost-efficiency. We help businesses optimize their technology infrastructure and develop a roadmap that supports long-term goals, enabling them to leverage technology to gain a competitive edge and drive digital transformation.",
-               "imageUrl": null,
+               "imageUrl": "/assets/IT-Strategy-Consulting.webp",
                "id": "676e5f95e0bbb25e4ee9334f",
                "categoryId": "6769388d51dcda17a0f9388a",
                "title": "IT Strategy Consulting",
@@ -3252,7 +3252,7 @@
              },
              {
                "description": "Digital Transformation Consulting guides businesses through the process of adopting digital technologies to enhance operations, customer experiences, and business models. Our consultants work closely with organizations to implement cloud computing, automation, AI, and data analytics, helping them stay competitive in a rapidly evolving market. We focus on delivering value through innovation and helping businesses become more agile, efficient, and customer-centric, positioning them for future growth in the digital economy.",
-               "imageUrl": null,
+               "imageUrl": "/assets/Digital-Transformation-Consulting.webp",
                "id": "676e607de0bbb25e4ee93350",
                "categoryId": "6769388d51dcda17a0f9388a",
                "title": "Digital Transformation Consulting",
