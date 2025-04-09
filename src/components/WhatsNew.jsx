@@ -252,7 +252,7 @@ export default function WhatsNew({ handleClose }) {
           ))}
         </div>
         <div
-          style={{ color: "#0047ff", paddingTop: "1rem", textAlign: "end" }}
+          style={{ color: "#0047ff", paddingTop: "1rem", textAlign: "end",cursor:"pointer" }}
           onClick={() => {
             window.scrollTo(0, 0);
             handleClose();
