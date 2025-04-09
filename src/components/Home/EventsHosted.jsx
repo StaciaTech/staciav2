@@ -46,7 +46,7 @@ function EventsHosted() {
         </div>
       </div>
 
-      <div className="more-case-mobile"
+      {/* <div className="more-case-mobile"
 
 
         onClick={() => {
@@ -55,10 +55,10 @@ function EventsHosted() {
         }}
         style={{ cursor: "pointer" }}
       >
-        More Case Studys{""}
+        More Events {""}
         < FaChevronRight />
 
-      </div>
+      </div> */}
     </div>
   );
 }

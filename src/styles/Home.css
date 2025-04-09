@@ -464,8 +464,9 @@ section {
   }
   .heroText,
   .changingText {
-    font-size: 26px;
+    font-size: 7vw;
     margin-left: 20px;
+    margin-top: 20px;
   }
 
   .one {
@@ -529,6 +530,7 @@ section {
   }
   .service-img-box > img {
     width: 100%;
+    height: 100%;
   }
   .service-img-box {
     padding: 0rem 1.5rem;

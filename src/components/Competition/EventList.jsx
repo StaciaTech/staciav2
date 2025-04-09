@@ -181,7 +181,7 @@
 //                         }}
 //                         className="learn-more-btn1"
 //                     >
-//                         Learn More <IoIosArrowForward />
+//                         Read More <IoIosArrowForward />
 //                     </button>
 //                     <div className="button-group1">
 //                         <button className="register-btn1">Register Now</button>
@@ -388,7 +388,7 @@ const EventList = () => {
                         }}
                         className="learn-more-btn1"
                     >
-                        Learn More <IoIosArrowForward />
+                        Read More <IoIosArrowForward />
                     </button> */}
 
                     <button
@@ -398,7 +398,7 @@ const EventList = () => {
                         }}
                         className="learn-more-btn1"
                     >
-                        Learn More
+                        Read More
                         <img src={vector} alt="Arrow" className="arrow-icon" />
                     </button>
                     <div className="button-group1">
