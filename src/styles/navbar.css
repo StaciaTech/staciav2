@@ -15,9 +15,9 @@
   z-index: 999;
 }
 
-.navbar.hide {
+/* .navbar.hide {
   transform: translateY(-100%);
-}
+} */
 
 .navbar.show {
   transform: translateY(0);
