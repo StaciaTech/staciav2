@@ -6,6 +6,7 @@
 // import data from "../Data/About.json"; // Importing JSON data
 
 // function AboutDropDown({ handleClose }) {
+
 //   const navigate = useNavigate();
 //   const [Leaders, setLeaders] = useState(data.leaders);
 

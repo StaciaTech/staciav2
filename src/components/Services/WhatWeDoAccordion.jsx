@@ -40,7 +40,7 @@ export default function WhatWeDoAccordion({
               navigate(`/services/${department}/${category}/${ProductKey}`);
             }}
           >
-            Learn More
+             Read More
           </div>
         </div>
       ) : (

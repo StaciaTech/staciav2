@@ -117,14 +117,14 @@ function NewsRoomPage() {
           </div>
         </div>
         <div className="news-container">
-          <div>News For You</div>
+          <div className="news-container-title">News For You</div>
           <div className="news-container-top">
             <div className="news-container-top1">
               <img src={stacia} alt="" />
             </div>
             <div className="news-container-top1">
               <div className="news-container-top2"><h1>Lorem ipsum dolor sit amet, consectetur elit.</h1></div>
-              <div className="news-container-top3">Read more <IoIosArrowForward /></div>
+              <div className="news-container-top3">Read More <IoIosArrowForward /></div>
 
             </div>
           </div>

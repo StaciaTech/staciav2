@@ -5,10 +5,12 @@
   margin-top: 60px;
   margin-bottom: 5%;
 }
+
 .four2 {
   width: 90%;
   margin: 0 auto;
 }
+
 .four-text {
   color: #E7E7E7;
   font-size: 60px;
@@ -16,17 +18,20 @@
   font-weight: 600;
   line-height: normal;
 }
+
 .sty {
   color: #0047FF;
   font-weight: 600;
   padding: 0.5rem 0rem;
   width: fit-content;
 }
+
 .four-card {
   /* width: 23%; */
   margin-top: 40px;
   cursor: pointer;
 }
+
 .four-img {
   width: 100%;
   overflow: hidden;
@@ -36,6 +41,7 @@
   object-fit: cover;
   position: relative;
 }
+
 .four-img:hover .founder-content {
   display: block;
   display: flex;
@@ -46,7 +52,7 @@
   width: 100%;
   /* padding: 1rem 3rem; */
   padding-right: 0.5rem;
-  padding-left: 8rem;
+  padding-left: 18rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   bottom: 0;
@@ -55,6 +61,7 @@
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
+
 .founder-content {
   position: absolute;
   bottom: 10px;
@@ -62,7 +69,8 @@
   overflow: hidden;
   /* display: flex; */
 }
-.four-img > img {
+
+.four-img>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -71,11 +79,13 @@
   transition: transform 0.3s ease-in-out;
  
 }
-.four-img > img:hover {
+
+.four-img>img:hover {
   /* transform: scale(1.2); */
   cursor: pointer;
   border-radius: 20px;
 }
+
 .four-pos {
   color: #0D0225;
   font-size: 18px;
@@ -84,6 +94,7 @@
   line-height: normal;
   margin-bottom: 1rem;
 }
+
 .four-name {
   color: #0D0225;
   font-size: 20px;
@@ -92,7 +103,8 @@
   line-height: normal;
   padding: 2rem 0rem 1rem 0rem;
 }
-.four-para > p {
+
+.four-para>p {
   color: #6B6084;
   font-size: 16px;
   font-style: normal;
@@ -100,41 +112,69 @@
   line-height: 30px;
   font-family: EuclidMedium;
 }
+
 .four-grid {
   display: grid;
   /* justify-content: space-between; */
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
 @media (max-width: 1024px) {
  
   
   .four {
     margin-bottom: auto;
   }
+
   .four-text {
     font-size: 24px;
   }
+
   .four-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .four-card {
     width: 100%;
   }
+
   .four-pos {
     font-size: 12px;
   }
+
   .four-name {
     font-size: 15px;
   }
-  .four-para > p {
+
+  .four-para>p {
     font-size: 12px;
   }
-  .four-img > img:hover {
+
+  .four-img>img:hover {
     transform: scale(1);
     cursor: pointer;
     
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .four-img:hover .founder-content {
+    display: flex;
+    color: white;
+    gap: 1rem;
+    background: linear-gradient(to left, #0d022500, #0d0225cc);
+    width: 100%;
+    padding-right: 0.5rem;
+    padding-left: 11rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    bottom: 0;
+    margin-bottom: 2px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
   }
 }

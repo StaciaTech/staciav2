@@ -678,7 +678,7 @@ function About() {
             About us
           </div>
           <div className="about-section1-container">
-            <div>
+            <div className="pad-about">
               <div className="about-section1-left-title test-seclection-blue">
                 Engineering The Future, Together
               </div>

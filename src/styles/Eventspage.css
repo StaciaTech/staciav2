@@ -161,14 +161,19 @@
   font-family: EuclidSemibold;
   color: #0d0225;
   padding-top: 1rem;
+  font-weight: 600;
 }
 .events-mob-des {
-  color: #0d0225;
+  color: #6b6084;
+  padding-top: 1rem;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 179%;
 }
 .event-mob-btn-container {
   display: flex;
@@ -182,8 +187,9 @@
   display: flex;
   column-gap: 0.5rem;
   padding: 0.75rem 0.5rem;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid #0047ff;
+  font-size: 12px;
 }
 .event-mob-view {
   color: #0d0225;
@@ -191,7 +197,16 @@
   display: flex;
   column-gap: 0.5rem;
   padding: 0.75rem 0.5rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.event-mob-view >span {
+  position: relative;
+  bottom: 0.1em;
+}
+.event-mob-register >span {
+  position: relative;
+  bottom: 0.1em;
 }
 @media screen and (max-width: 1024px) {
   .events-hero {

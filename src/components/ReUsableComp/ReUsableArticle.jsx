@@ -323,7 +323,7 @@ export default ReUsableArticle;
 //                   window.scrollTo(0, 0);
 //                 }}
 //               >
-//                 Know more
+//                 Know More
 //               </div>
 //             )}
 //           </div>
