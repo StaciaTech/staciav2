@@ -41,7 +41,7 @@
   background: linear-gradient(#0d022500, #0d0225cc);
   width: 100%;
   padding: 1.5rem 3rem;
-  bottom: 0;
+  bottom: 4px;
 }
 
 .image-box:hover .casestudy-content {
@@ -113,7 +113,7 @@
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 12px;
+  border-radius: 20px;
 }
 
 .image-box-left>img {

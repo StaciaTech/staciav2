@@ -246,7 +246,15 @@ function NavBar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
+      if(showAboutComp ||
+        showServiceComp||       
+        showProductComp || 
+        showProjectComp ||
+        showResourceComp ||
+        openWhatsNew 
+      ){
+        setShowNavbar(true)
+      }else if (currentScrollY > lastScrollY) {
         // User is scrolling down
         setShowNavbar(false);
       } else {
@@ -262,7 +270,13 @@ function NavBar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY,
+    showProductComp,
+    showServiceComp,
+    showAboutComp,
+    showResourceComp,
+    showProjectComp,
+    openWhatsNew]);
 
   const closeServicehandler = () => {
     setShowServiceComp(false);

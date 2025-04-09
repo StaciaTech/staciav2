@@ -60,6 +60,11 @@
   /* margin: 0px 20px; */
   opacity: 1;
 }
+/* .nav-items:hover,
+.nav-items:focus{
+  display: block!important;
+  visibility: visible!important;
+} */
 
 a {
   text-decoration: none;
@@ -243,11 +248,11 @@ a {
 .whats-new-right-grid-container {
   width: 100%;
   /* height: 100%; */
-  height: 500px;
+  height: 380px ;
   display: grid;
   grid-template-columns: 60% 40%;
   /* height: 60dvh; */
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
   gap: 1rem;
 }
 .whats-new-right-grid-container > div {
