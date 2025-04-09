@@ -247,8 +247,7 @@ function NavBar() {
       const currentScrollY = window.scrollY;
 
       if(showAboutComp ||
-        showServiceComp||
-        showAboutComp ||
+        showServiceComp||       
         showProductComp || 
         showProjectComp ||
         showResourceComp ||
