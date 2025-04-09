@@ -62,7 +62,7 @@ const PastEventCard = ({ _id, imageUrl, title, description, date, eventTags }) =
                     }}
                     className="learn"
                 >
-                    Learn More
+                    Read More
                     <img src={vector} alt="Arrow" className="arrow-icon" />
                 </button>
             </div>

@@ -152,6 +152,49 @@
         ]
     },
     {
+        "title": "Industrial Designer Intern",
+        "experience": "Fresher",
+        "qualification": " B.Des / B.E in Industrial Design / Product Design / Mechanical Engineering or related fields",
+        "jobType": "Internship",
+        "location": "Guindy, Chennai, India",
+        "natureOfJob": "On-Site",
+        "description": "We are seeking a passionate Industrial Designer Intern to join our creative and engineering team. The ideal candidate will have a strong foundation in design thinking, product aesthetics, user-centered design, and 3D modeling. This role involves conceptualizing and developing product designs from idea to prototype, ensuring a balance of form, function, and manufacturability",
+        "responsibilities": [
+            "Create and develop innovative product concepts based on user needs and business goals",
+            "Translate ideas into 3D models and visual presentations",
+            "Work with engineers to ensure feasibility and functionality of designs",
+            "Participate in brainstorming sessions, design reviews, and prototype testing",
+            "Assist in CMF (Color, Material, Finish) selection and documentation",
+            "Collaborate on iterative prototyping and usability improvements",
+            "Prepare design documentation including mood boards, storyboards, and tech packs",
+            "Support manufacturing and production planning with design-for-manufacturing inputs"
+
+        ],
+        "requiredSkills": [
+           "Pursuing or completed a degree in Mechanical engineering, Industrial Design, Product Design, or related field",
+           "Proficiency in 3D modeling and rendering tools (e.g., SolidWorks, KeyShot, Fusion 360)",
+           "Understanding of user-centered design principles",
+           "Basic knowledge of materials, ergonomics, and manufacturing processes",
+           "Interest in prototyping, product styling, and physical model making",
+           "Strong visualization, sketching, and storytelling abilities",
+           "Good communication and collaboration skills"
+        ],
+        "preferredSkills": [
+            "Knowledge of Adobe Creative Suite (Photoshop, Illustrator)",
+            "Basic understanding of mechanical assemblies and design constraints.",
+            "Familiarity with sustainable design principles",
+            "Good presentation and reporting skills (Excel, PowerPoint).",
+            "Experience with physical prototyping tools (3D printing, foam modeling, etc.)"
+        ],
+        "requiredTools": [
+            "Wireframe.cc, Balsamiq, Figjam",
+            "Figma",
+            "Protopie",
+            "Adobe Illustrator",
+            "Affinity Designer 2"
+        ]
+    },
+    {
         "title": "Marketing Intern",
         "experience": "Fresher",
         "qualification": "MBA Marketing or Related Fields",

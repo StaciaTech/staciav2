@@ -236,7 +236,8 @@ a {
 }
 .whats-new-right-grid-container {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: 380px;
   display: grid;
   grid-template-columns: 60% 40%;
   height: 60dvh;

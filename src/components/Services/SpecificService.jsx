@@ -209,7 +209,7 @@ export default function SpecificService() {
                   <WhatWeDoAccordion
                     key={i}
                     title={data?.title}
-                    desc={data?.des}
+                    desc={data?.description}
                     department={params.department}
                     category={params.category}
                     i={i}

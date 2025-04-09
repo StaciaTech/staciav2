@@ -649,7 +649,7 @@ function ResourceDropDown({ handleClose }) {
               handleClose();
             }}
           >
-            Know more
+            Know More
           </div>
         </div>
       )}

@@ -23,7 +23,7 @@ export default function WhatWeDoCard({ title, desc, category, department }) {
           navigate(`/services/${department}/${category}/${ProductKey}`);
         }}
       >
-        Learn More
+        Read More
       </div>
     </div>
   );

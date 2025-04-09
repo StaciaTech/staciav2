@@ -29,7 +29,7 @@ export default function FeatureService({ img, description, title, id }) {
             }}
             className="know-more"
           >
-            Know more
+            Know More
           </div>
         </div>
         <div className="feature-para">

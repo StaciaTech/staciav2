@@ -132,7 +132,7 @@
 //                           navigate(`/products/${deptKey}/${catKey}`);
 //                         }}
 //                       >
-//                         <span>Learn more</span>
+//                         <span>Read More</span>
 //                         <IoIosArrowForward />
 //                       </div>
 //                     </div>
@@ -312,7 +312,7 @@
 //                           navigate(`/products/${deptKey}/${catKey}`);
 //                         }}
 //                       >
-//                         <span>Learn more</span>
+//                         <span>Read More</span>
 //                         <IoIosArrowForward />
 //                       </div>
 //                     </div>
@@ -485,7 +485,7 @@ function ProductCategoryPage() {
                           navigate(`/products/${deptKey}/${catKey}`);
                         }}
                       >
-                        <span>Learn more</span>
+                        <span>Read More</span>
                         <IoIosArrowForward />
                       </div>
                     </div>

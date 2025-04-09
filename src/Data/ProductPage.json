@@ -8,7 +8,7 @@
           "id": "category-001",
           "name": "Research and Development",
           "description": "Explore cutting-edge innovation with our Research and Development team. We specialize in creating tailored solutions for complex challenges, leveraging advanced technologies and industry expertise. From concept design to prototyping and testing, we deliver groundbreaking products that redefine efficiency and functionality. Partner with us to transform ideas into reality, ensuring your business stays ahead of the competition in a rapidly evolving technological landscape",
-          "imageUrl": "/assets/ProductPage/istockphoto.webp",
+          "imageUrl": "/assets/Research and Development1.webp",
           "products": [
             {
               "id": "product-001",
@@ -37,7 +37,7 @@
           "id": "category-002",
           "name": "IoT Smart Products",
           "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/IoT Smart Products.webp",
           "products": [
             {
               "id": "product-001",
@@ -167,7 +167,7 @@
           "id": "category-003",
           "name": "Industrial Automation",
           "description": "Optimize your production processes with our Industrial Automation solutions. We provide customized systems that streamline operations, improve accuracy, and reduce downtime. Utilizing the latest in robotics, control systems, and sensors, our solutions enhance productivity while lowering costs. Whether for assembly lines, material handling, or quality inspection, our automation technology ensures consistent performance and maximized efficiency for your industrial needs.",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/Industrial Automation.webp",
           "products": [
             {
               "id": "product-005",
@@ -187,7 +187,7 @@
           "id": "category-002",
           "name": "Agri and Food Processing SPM",
           "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/Agri-and-Food Processing-SPM.webp",
           "products": [
             {
               "id":"product-001",
@@ -326,7 +326,7 @@
           "id":"category-002",
           "name":"Automobile or Automotive SPM",
           "description":"Drive innovation in the automotive industry with our custom-built SPMs. Designed for precision and reliability, our machines cater to various applications, including assembly, testing, and component manufacturing. Leveraging cutting-edge technology, we ensure streamlined workflows and high-quality output. Partner with us for tailored solutions that meet the rigorous demands of the automotive sector, enhancing both efficiency and profitability.",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/Automobile-or-Automotive-SPM.webp",
           "products":[
             {
               "id":"product-001",
@@ -353,7 +353,7 @@
           "id":"category-003",
           "name":"Test Rig",
           "description":"Experience precision and reliability with our advanced Test Rigs. Designed to simulate real-world conditions, our rigs provide accurate testing for components and systems across various industries. Whether for endurance, performance, or failure analysis, we deliver customized solutions that meet stringent standards. Trust our expertise to ensure your products are tested thoroughly and perform optimally under all conditions",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/Test Rig1.webp",
           "products":[
             {
               "id":"product-001",
@@ -397,7 +397,7 @@
           "id":"category-004",
           "name": "Reciprocating Arm",
           "description": "Achieve mechanical precision with our Reciprocating Arms. These versatile solutions are engineered for applications requiring linear motion, including material handling, assembly, and automation tasks. Built with durable materials and cutting-edge design, our arms ensure smooth operation and consistent performance. Enhance your workflow with our customizable reciprocating arm systems, tailored to meet the specific demands of your industrial processes.",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/Reciprocating Arm.webp",
           "products":[
               {
               "id":"product-001",
@@ -411,7 +411,7 @@
           "id":"category-005",
           "name": "Actuator",
           "description": "Power your operations with our high-performance Actuators. Designed for precision and efficiency, our actuators deliver smooth and controlled motion across a variety of applications. From industrial automation to heavy machinery, we offer a range of electric, hydraulic, and pneumatic actuators to suit your needs. Experience enhanced productivity and reliability with our innovative actuator solutions",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/Actuator.webp",
           "products":[
             {
               "id":"product-002",
@@ -431,7 +431,7 @@
           "id":"category-001",
           "name": "Webapps",
           "description": "Web applications empower businesses with accessible, scalable, and efficient solutions tailored to their specific needs. They are designed to streamline operations, enhance collaboration, and improve decision-making. With advanced features like data analytics, real-time communication, and task management, our web applications ensure seamless workflows across organizations. Whether it's e-commerce, project management, or industry-specific solutions, these applications provide robust functionality and an intuitive user experience, accessible on any browser without the need for installations",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/Webapps.webp",
           "products":[
             {
               "id":"product-001",
@@ -474,7 +474,7 @@
         {
           "name":"Websites",
           "description":"Websites are the cornerstone of a strong online presence, offering businesses a platform to showcase their offerings, engage audiences, and build trust. Our websites are designed with responsive layouts, modern designs, and optimized performance to ensure a seamless user experience across devices. From e-commerce platforms to corporate websites, we create solutions that reflect your brand identity while delivering value to your customers. With features like intuitive navigation, compelling content, and fast load times, our websites help drive conversions and customer satisfaction.",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/New Product Development.webp",
           "products":[
             {
               "id":"product-007",
@@ -493,7 +493,7 @@
         {
           "name":"Mobile Apps",
           "description":"Mobile applications bring convenience and functionality to your fingertips, offering businesses and users the ability to stay connected and productive anywhere. Designed with responsive interfaces and powerful features, our mobile apps cater to diverse requirements, from task-specific solutions to comprehensive management tools. Built for both Android and iOS platforms, these apps provide exceptional performance and scalability while prioritizing user experience. With advanced features like offline access, push notifications, and seamless integration, mobile apps enhance efficiency and engagement.",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/Mobile Apps.webp",
           "products":[
             {
               "id":"product-009",
