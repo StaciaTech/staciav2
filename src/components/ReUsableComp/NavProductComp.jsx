@@ -395,7 +395,36 @@ function NavProductComp({ handleClose }) {
 
   useEffect(() => {
     // FetchProducts();
-    setProductData(data.department)
+    setProductData(data.department);
+
+  const defaultDept = data.department?.[0];
+  const defaultCategory = defaultDept?.category?.[0];
+  const defaultProduct = defaultCategory?.products?.[0];
+
+  if (defaultDept && defaultCategory && defaultProduct) {
+    // Set default department name
+    setDeptname(defaultDept.name);
+
+    // Set all main categories of this department
+    setMaincatArr(defaultDept.category.map((cat) => cat.name));
+
+    // Set selected main category
+    setMainCatName(defaultCategory.name);
+
+    // Set products under selected category
+    setFinalProductArr(defaultCategory.products);
+
+    // Set product titles (for subcategories)
+    setSubccatsArr(defaultCategory.products.map((prod) => prod.title));
+
+    // Set default selected product
+    setSubCatName(defaultProduct.title);
+    setDisplayProducts(defaultProduct);
+
+    // Show subcategories and product section
+    setShowSubCats(true);
+    setShowproducts(true);
+  }
   }, []);
 
 
@@ -414,7 +443,7 @@ function NavProductComp({ handleClose }) {
   const [finalProductArr, setFinalProductArr] = useState();
 
   const DeptArr = productData?.map((item) => item.name);
-  console.log(DeptArr, "DepartmentNames");
+  // console.log(DeptArr, "DepartmentNames");
 
   // console.log(MainCatArrObj?.category);
 
@@ -424,8 +453,29 @@ function NavProductComp({ handleClose }) {
     setDeptname(DeptName);
     const MainCatArrObj = productData?.find((item) => item.name === DeptName);
     console.log(MainCatArrObj,"MainCatArrObj")
+    // Default
     if (MainCatArrObj) {
+      const categories = MainCatArrObj.category || [];
+      console.log(categories, "DefaultCategory")
+      const firstCategory = categories[0];
+      const firstProduct = firstCategory?.products[0];
+      console.log(categories,firstCategory, firstProduct, "Moses*****")
+      // Set main categories for department
       setMaincatArr(MainCatArrObj?.category?.map((item) => item.name));
+
+      if(firstCategory){
+        setMainCatName(firstCategory?.name);
+        setFinalProductArr(firstCategory?.products);
+
+        const subCatTitles = firstCategory?.products?.map((pro)=>pro.title);
+        setSubccatsArr(subCatTitles);
+        setShowSubCats(true);
+        if(firstProduct){
+          setSubCatName(firstProduct.title);
+          setDisplayProducts(firstProduct);
+          setShowproducts(true);
+        }
+      }
     }
   };
 
@@ -440,17 +490,31 @@ function NavProductComp({ handleClose }) {
       (item) => item.name === MainCat
     );
     console.log(subCatObj, "SubCategory");
+
     setFinalProductArr(subCatObj?.products);
     console.log(subCatObj?.products);
 
     if (subCatObj) {
-      setShowSubCats([]);
-      setSubccatsArr(
-        subCatObj?.products?.map((eachSubCat) => eachSubCat.title)
-      );
+      // Default 
+      const productTitles = subCatObj?.products?.map((eachSubCat) => eachSubCat.title);
+      // setShowSubCats([]);
+      // setSubccatsArr(
+      //   subCatObj?.products?.map((eachSubCat) => eachSubCat.title)
+      // );
+    setSubccatsArr(productTitles);
+
+    // Set deafualt first product
+
+    const firstProduct  = subCatObj.products?.[0];
+    if(firstProduct){
+      setSubCatName(firstProduct.title);
+      setDisplayProducts(firstProduct);
+      setShowproducts(true)
+    }
     }
     setShowSubCats(true);
   };
+
   console.log(subCatsArr, "SubCategoryArray");
   const HandleSubCatHover = (SubCat) => {
     setSubCatName(SubCat);

@@ -4,9 +4,11 @@
   padding: 2rem;
   width: 100%;
   box-sizing: border-box;
-  max-height: 460px;
+  /* max-height: 460px; */
+  height: 460px;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.2);
 }
 .about-dd-main-title-container,
 .about-dd-sub-title-container {

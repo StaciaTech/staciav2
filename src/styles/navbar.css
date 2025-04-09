@@ -166,11 +166,13 @@ a {
 .whats-new {
   position: absolute;
   top: 80px;
-  min-height: 60vh;
+  /* min-height: 60vh; */
+  height: 460px;
   width: 100%;
   background-color: #fff;
   display: flex;
   left: 0;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .nav-whats-new-item {
   opacity: 0.5;
@@ -197,14 +199,15 @@ a {
   color: #000;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  /* font-weight: 600; */
   line-height: normal;
   border-bottom: 1px solid #cadbea;
   padding: 25px 0px;
   cursor: pointer;
 }
-.whats-new-link:hover {
+.whats-new-link:hover,.whats-new-link.active {
   color: #0047ff;
+  /* font-weight: bold; */
 }
 .whats-new-link-active-start {
   width: 1rem;
@@ -216,11 +219,14 @@ a {
 .whats-new-link:hover .whats-new-link-active-start {
   transform: scale(1);
 }
+.whats-new-link.active .whats-new-link-active-start{
+  transform: scale(1);
+}
 
 .whats-new-right {
   width: 75%;
   /* min-height: 60vh; */
-  height: 100%;
+  height: 480px;
   padding: 1.5rem;
   box-sizing: border-box;
   /* display: flex;
@@ -237,10 +243,10 @@ a {
 .whats-new-right-grid-container {
   width: 100%;
   /* height: 100%; */
-  height: 380px;
+  height: 500px;
   display: grid;
   grid-template-columns: 60% 40%;
-  height: 60dvh;
+  /* height: 60dvh; */
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
 }
@@ -260,7 +266,7 @@ a {
 }
 .whats-new-grid-item {
   width: 100%;
-  height: 100%;
+  height: 80%;
   border-radius: 15px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -281,6 +287,7 @@ a {
     rgba(13, 2, 37, 1) 100%
   );
   border-radius: inherit;
+
 }
 .whats-new-grid-item-des {
   display: -webkit-box;
