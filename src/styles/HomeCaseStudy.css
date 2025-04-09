@@ -12,7 +12,6 @@
   font-size: 14px;
   font-weight: 300;
   font-family: EuclidMedium;
-
 }
 
 .image-box-full1 {
@@ -53,7 +52,6 @@
   font-size: 10px;
   bottom: 0rem;
   border-radius: 12px;
-
 }
 
 .image-box-right {
@@ -67,7 +65,7 @@
 }
 
 .case-study-title {
-  color: #E0E0E0;
+  color: #e0e0e0;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
@@ -100,7 +98,6 @@
   display: flex;
   gap: 20px;
   margin-top: 40px;
-   
 }
 
 .image-box {
@@ -109,7 +106,7 @@
 }
 
 .image-box-left {
-  width: 50%;
+  width: 48.3%;
   /* background-color: pink; */
   height: 100%;
   background-repeat: no-repeat;
@@ -117,7 +114,7 @@
   border-radius: 20px;
 }
 
-.image-box-left>img {
+.image-box-left > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -136,10 +133,9 @@
   border-radius: 12px;
   /* background-color: pink; */
   /* height: 300px; */
-  
 }
 
-.image-box>img {
+.image-box > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -148,11 +144,10 @@
 
 .case-col-span {
   grid-column: span 2;
-
 }
 
 .more-case {
-  color: #0047FF;
+  color: #0047ff;
   font-size: 20px;
   font-style: EuclidMedium;
   font-weight: 700;
@@ -163,7 +158,7 @@
 
 .more-case-mobile {
   /* background-color: #0047FF; */
-  color: #0047FF;
+  color: #0047ff;
   width: 90%;
   height: 40px;
   margin: 20px auto;
@@ -175,7 +170,7 @@
   display: none;
 }
 
-.more-case-mobile>p {
+.more-case-mobile > p {
   color: #fff;
   font-size: 14px;
   font-style: normal;
