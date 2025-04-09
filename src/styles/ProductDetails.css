@@ -13,6 +13,8 @@
 
 .product-details2 {
   margin: 0 auto;
+  /* margin-left: auto;  */
+  margin-top: 30px;
   width: 90%;
 
   min-height: 100vh;

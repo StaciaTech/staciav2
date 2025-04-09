@@ -1,4 +1,3 @@
-
 // import React, { useEffect, useState } from "react";
 // import "../styles/AboutDropdown.css";
 // import { useNavigate } from "react-router-dom";
@@ -154,8 +153,6 @@
 
 // export default AboutDropDown;
 
-
-
 import React, { useEffect, useState } from "react";
 import "../styles/AboutDropdown.css";
 import { useNavigate } from "react-router-dom";
@@ -189,6 +186,23 @@ function AboutDropDown({ handleClose }) {
     }
   }, [activeTitle]);
 
+  useEffect(() => {
+    if (AboutArr.length > 0) {
+      const firstSection = AboutArr[0];
+      setActiveTitle(firstSection.section);
+      // setActiveSubTitle(firstSection.SectionItems);
+
+      if (firstSection.SectionItems?.length > 0) {
+        const firstItem = firstSection.SectionItems[0];
+        setActiveSubTitle(firstItem.name);
+
+        if (firstSection.section === "LeaderShip") {
+          setFoundLeader(firstItem);
+        }
+      }
+    }
+  },[]);
+
   // Update foundLeader when activeSubTitle changes (for Leadership section)
   useEffect(() => {
     if (activeTitle === "Leadership" && activeSubTitle) {
@@ -205,11 +219,31 @@ function AboutDropDown({ handleClose }) {
         {AboutArr?.map((eachTitle, i) => (
           <div
             key={i}
-            onMouseEnter={() => setActiveTitle(eachTitle.section)}
-            className={`about-dd-main-title ${eachTitle.section === activeTitle
+            onMouseEnter={() => {
+              setActiveTitle(eachTitle.section);
+              // const subsections = eachTitle.section;
+              const subsections = eachTitle.SectionItems;
+
+                if (Array.isArray(subsections) && subsections?.length > 0) {
+                setSubSectionTitles(subsections);
+                const firstItem = subsections[0];
+                setActiveSubTitle(firstItem.name);
+
+                // setActiveSubTitle(subsections[0].name);
+                if (eachTitle.section === "LeaderShip") {
+                  setFoundLeader(firstItem);
+                }
+              }else{
+                setSubSectionTitles([]);
+                setActiveSubTitle(null);
+                setFoundLeader(null)
+              }
+            }}
+            className={`about-dd-main-title ${
+              eachTitle.section === activeTitle
                 ? "about-dd-main-title-active"
                 : ""
-              }`}
+            }`}
             onClick={() => {
               navigate(`/${eachTitle.path}`);
               handleClose();
@@ -217,7 +251,11 @@ function AboutDropDown({ handleClose }) {
           >
             <span>{eachTitle.section}</span>
             {eachTitle.section === activeTitle && (
-              <img src={Star} alt="" style={{ width: "18px", marginLeft: "1rem" }} />
+              <img
+                src={Star}
+                alt=""
+                style={{ width: "18px", marginLeft: "1rem" }}
+              />
             )}
           </div>
         ))}
@@ -230,10 +268,11 @@ function AboutDropDown({ handleClose }) {
             {subSectionTitles?.map((eachItem, i) => (
               <div
                 key={i}
-                className={`about-dd-sub-title-dot ${eachItem.name === activeSubTitle
+                className={`about-dd-sub-title-dot ${
+                  eachItem.name === activeSubTitle
                     ? "about-dd-sub-title-dot-active"
                     : ""
-                  }`}
+                }`}
               ></div>
             ))}
           </div>
@@ -243,10 +282,11 @@ function AboutDropDown({ handleClose }) {
             <div
               key={i}
               onMouseEnter={() => setActiveSubTitle(eachItem.name)}
-              className={`about-dd-main-title ${eachItem.name === activeSubTitle
+              className={`about-dd-main-title ${
+                eachItem.name === activeSubTitle
                   ? "about-dd-main-title-active"
                   : ""
-                }`}
+              }`}
               onClick={() => {
                 window.scrollTo(0, 0);
                 if (activeTitle === "Leadership") {
@@ -259,7 +299,11 @@ function AboutDropDown({ handleClose }) {
             >
               <span>{eachItem.name}</span>
               {eachItem.name === activeSubTitle && (
-                <img src={Star} alt="" style={{ width: "18px", marginLeft: "1rem" }} />
+                <img
+                  src={Star}
+                  alt=""
+                  style={{ width: "18px", marginLeft: "1rem" }}
+                />
               )}
             </div>
           ))}

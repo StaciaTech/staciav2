@@ -147,22 +147,29 @@ export default function WhatsNew({ handleClose }) {
   const [whatsNew] = useState(whatsNewData);
   const [hoveringSection, setHoveringSection] = useState();
   const [hoveringTitle, setHoveringTitle] = useState("events");
+  const [activeItem, SetActiveItem] = useState(null);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (whatsNew) {
+    if (whatsNew && whatsNew[hoveringTitle]) {
       const hoverData = whatsNew[hoveringTitle];
       setHoveringSection(hoverData);
+      if(hoverData.length >0){
+        SetActiveItem(hoverData[0]);
+      }
     }
   }, [hoveringTitle, whatsNew]);
 
+  useEffect(()=>{
+    setHoveringTitle("events")
+  },[])
   return (
     <div className="whats-new">
       <div className="whats-new-left">
         <div className="whats-new-links">
           <div
-            className="whats-new-link"
+            className={`whats-new-link ${hoveringTitle === "events" ?"active":""}`}
             onClick={() => {
               window.scrollTo(0, 0);
               navigate("/events");
