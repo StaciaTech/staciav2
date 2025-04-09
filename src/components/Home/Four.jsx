@@ -40,7 +40,7 @@ const fourData = [
     id: 4,
     pos: "US Regional Director",
     img: p4,
-    name: "Prahlad Saravanapriyan",
+    name: "Mr Prahlad Saravanapriyan",
     about:
       "Mentor and US Regional Director at StaciaCorp. Expert in robotics, semiconductor systems, and sustainable energy. Founder of FUTURE HQ, educating 1,100+ members on technology. DECA award-winner and Carnatic violinist.",
     proId: "https://www.linkedin.com/in/prahlad-s/",

@@ -54,7 +54,7 @@
     "services": [
         {
             "id": "1",
-            "imageUrl": "/assets/Rectangle.webp",
+            "imageUrl": "/assets/Research and development.webp",
             "title": "Research & Development"
         },
         {
@@ -64,22 +64,22 @@
         },
         {
             "id": "3",
-            "imageUrl": "/assets/product-development.webp",
+            "imageUrl": "/assets/New Product Development.webp",
             "title": "New Product Development"
         },
         {
             "id": "4",
-            "imageUrl": "/assets/IOT-solutions.webp",
+            "imageUrl": "/assets/IOT.webp",
             "title": "IoT Solutions"
         },
         {
             "id": "5",
-            "imageUrl": "/assets/Robotic-Process.webp",
+            "imageUrl": "/assets/Robotic Process Automation.webp",
             "title": "Robotic Process Automation"
         },
         {
             "id": "6",
-            "imageUrl": "/assets/Custom-software-solutions.webp",
+            "imageUrl": "/assets/Custom Software solutions.webp",
             "title": "Custom Software Solutions"
         }
     ]

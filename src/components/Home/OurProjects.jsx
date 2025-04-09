@@ -27,7 +27,7 @@
 //             <div className="single-card-content">
 //               This is the classic dummy text, a scrambled passage of Latin that
 //               provides a natural look for text layouts without any meaning...{" "}
-//               <span style={{ color: "#0047FF" }}>Read more</span>{" "}
+//               <span style={{ color: "#0047FF" }}>Read More</span>{" "}
 //             </div>
 //           </div>
 //         </div>
@@ -38,7 +38,7 @@
 //             <div className="single-card-content">
 //               This is the classic dummy text, a scrambled passage of Latin that
 //               provides a natural look for text layouts without any meaning...
-//               <span style={{ color: "#0047FF" }}>Read more</span>
+//               <span style={{ color: "#0047FF" }}>Read More</span>
 //             </div>
 //           </div>
 //         </div>
@@ -49,7 +49,7 @@
 //             <div className="single-card-content">
 //               This is the classic dummy text, a scrambled passage of Latin that
 //               provides a natural look for text layouts without any meaning...
-//               <span style={{ color: "#0047FF" }}>Read more</span>
+//               <span style={{ color: "#0047FF" }}>Read More</span>
 //             </div>
 //           </div>
 //         </div>
@@ -60,7 +60,7 @@
 //             <div className="single-card-content">
 //               This is the classic dummy text, a scrambled passage of Latin that
 //               provides a natural look for text layouts without any meaning...
-//               <span style={{ color: "#0047FF" }}>Read more</span>
+//               <span style={{ color: "#0047FF" }}>Read More</span>
 //             </div>
 //           </div>
 //         </div>
@@ -75,7 +75,7 @@
 //             <div className="single-card-content">
 //               This is the classic dummy text, a scrambled passage of Latin that
 //               provides a natural look for text layouts without any meaning...
-//               <span style={{ color: "#0047FF" }}>Read more</span>
+//               <span style={{ color: "#0047FF" }}>Read More</span>
 //             </div>
 //           </div>
 //         </div>
@@ -86,7 +86,7 @@
 //             <div className="single-card-content">
 //               This is the classic dummy text, a scrambled passage of Latin that
 //               provides a natural look for text layouts without any meaning...
-//               <span style={{ color: "#0047FF" }}>Read more</span>
+//               <span style={{ color: "#0047FF" }}>Read More</span>
 //             </div>
 //           </div>
 //         </div>
@@ -97,7 +97,7 @@
 //             <div className="single-card-content">
 //               This is the classic dummy text, a scrambled passage of Latin that
 //               provides a natural look for text layouts without any meaning...
-//               <span style={{ color: "#0047FF" }}>Read more</span>
+//               <span style={{ color: "#0047FF" }}>Read More</span>
 //             </div>
 //           </div>
 //         </div>
@@ -108,7 +108,7 @@
 //             <div className="single-card-content">
 //               This is the classic dummy text, a scrambled passage of Latin that
 //               provides a natural look for text layouts without any meaning...
-//               <span style={{ color: "#0047FF" }}>Read more</span>
+//               <span style={{ color: "#0047FF" }}>Read More</span>
 //             </div>
 //           </div>
 //         </div>
@@ -172,7 +172,7 @@ function OurProjects() {
                   window.scrollTo(0, 0);
                 }}
               >
-                Read more
+                Read More
               </span>{" "}
             </div>
           </div>
@@ -196,7 +196,7 @@ function OurProjects() {
                   window.scrollTo(0, 0);
                 }}
               >
-                Read more
+                Read More
               </span>
             </div>
           </div>
@@ -224,7 +224,7 @@ function OurProjects() {
                   window.scrollTo(0, 0);
                 }}
               >
-                Read more
+                Read More
               </span>
             </div>
           </div>
@@ -254,7 +254,7 @@ function OurProjects() {
                   window.scrollTo(0, 0);
                 }}
               >
-                Read more
+                Read More
               </span>
             </div>
           </div>
@@ -286,7 +286,7 @@ function OurProjects() {
                   window.scrollTo(0, 0);
                 }}
               >
-                Read more
+                Read More
               </span>
             </div>
           </div>
@@ -314,7 +314,7 @@ function OurProjects() {
                   window.scrollTo(0, 0);
                 }}
               >
-                Read more
+                Read More
               </span>
             </div>
           </div>
@@ -338,7 +338,7 @@ function OurProjects() {
                   window.scrollTo(0, 0);
                 }}
               >
-                Read more
+                Read More
               </span>
             </div>
           </div>
@@ -366,7 +366,7 @@ function OurProjects() {
                   window.scrollTo(0, 0);
                 }}
               >
-                Read more
+                Read More
               </span>
             </div>
           </div>

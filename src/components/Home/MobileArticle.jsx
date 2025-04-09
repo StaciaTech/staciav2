@@ -38,7 +38,7 @@ function MobileArticleCard() {
             window.scrollTo(0, 0);
           }}
         >
-          Learn More &gt;{" "}
+          Read More &gt;{" "}
         </div>
       </div>
     </div>

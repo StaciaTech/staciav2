@@ -48,7 +48,7 @@
 //             to={`/products/${FoundDept.name}/${FoundCat.name}/${productKey}`}
 //             onClick={() => window.scrollTo(0, 0)}
 //           >
-//             Read more
+//             Read More
 //           </Link>
 //         </div>
 //         <div className="pro3-right">
@@ -134,7 +134,7 @@ export default function ProductComponent2({
             to={`/products/${departmentKey}/${categoryKey}/${productKey}`}
             onClick={() => window.scrollTo(0, 0)}
           >
-            Read more
+            Read More
           </Link>
         </div>
         <div className="pro3-right">

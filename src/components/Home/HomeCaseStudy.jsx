@@ -79,10 +79,10 @@
 
 import React from "react";
 import "../../styles/HomeCaseStudy.css";
-import case1 from "../../assets/case1.png";
-import case2 from "../../assets/case2.png";
-import case3 from "../../assets/case3.png";
-import case4 from "../../assets/case4.png";
+import case1 from "../../assets/case1.1.webp";
+import case2 from "../../assets/case2.2.webp";
+import case3 from "../../assets/case3.3.webp";
+import case4 from "../../assets/case4.4.webp";
 import { useNavigate } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
 export default function HomeCaseStudy() {
@@ -212,7 +212,7 @@ export default function HomeCaseStudy() {
           }}
           style={{ cursor: "pointer" }}
         >
-          More Case Studys{""}
+          More Case Studies{""}
           <FaChevronRight />
         </div>
       </div>

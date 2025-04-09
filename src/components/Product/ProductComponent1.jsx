@@ -26,7 +26,7 @@ export default function ProductComponent1({
               target="_blank"
               className="learn-more-btn"
             >
-              Learn more
+              Read More
             </Link>
           </div>
         </div>

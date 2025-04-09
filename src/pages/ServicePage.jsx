@@ -38,12 +38,12 @@ function ServicePage() {
   //   FetchServices();
   // }, []);
 
-  
-  
-    useEffect(() => {
-      // Simulate fetching data from a local JSON file
-      setServiceData(serviceData);
-    }, []);
+
+
+  useEffect(() => {
+    // Simulate fetching data from a local JSON file
+    setServiceData(serviceData);
+  }, []);
 
   // Update activeDepartment from URL params or default to first department
   useEffect(() => {
@@ -172,15 +172,16 @@ function ServicePage() {
                           <div className="feature-para">{data.description}</div>
                           <div
                             className="know-more"
-                            onClick={() =>
+                            onClick={() => {
                               navigate(
                                 `/services/${eachItem.name
                                   .split(" ")
                                   .join("-")}/${data.name.split(" ").join("-")}`
                               )
-                            }
+                              window.scrollTo(0, 0);
+                            }}
                           >
-                            <span>Know more</span>
+                            <span>Know More</span>
                             <IoIosArrowForward />
                           </div>
                         </div>
@@ -192,7 +193,8 @@ function ServicePage() {
             </div>
           </div>
         </>
-      )}
+      )
+      }
       <Footer />
       <MobileFooter />
     </>

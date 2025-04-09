@@ -27,7 +27,7 @@ function DesktopStackCard({ data }) {
           }}
           style={{ cursor: "pointer" }}
         >
-          Learn more
+          Read More
         </div>
       </div>
     </div>
