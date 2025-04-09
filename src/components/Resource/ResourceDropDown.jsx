@@ -457,11 +457,32 @@ function ResourceDropDown({ handleClose }) {
 
   const [articlesData, setArticlesData] = useState([]);
   const [caseStudyData, setCaseStudyData] = useState([]);
+  const [defaultLoaded, setDefaultLoaded] = useState(false);
 
   useEffect(() => {
     setCaseStudyData(casedoc?.singlecasestudy || []);
     setArticlesData(article.docs);
   }, []);
+
+  useEffect(()=>{
+    if(!defaultLoaded && articlesData.length >0){
+      const defaultRes = "Article";
+      const firstDept = articlesData[0];
+      const firstArticle = firstDept?.data?.[0];
+
+      setActiveRes(defaultRes);
+      setActiveDept(firstDept?.name);
+      if(firstArticle){
+        setActiveArt(firstArticle?.title);
+        setFoundItem(firstArticle);
+      }
+      setDefaultLoaded(true);
+    }
+  },[articlesData,defaultLoaded])
+
+
+
+  
 
   const ResourceArr = [
     { name: "Article", cats: articlesData },
@@ -512,7 +533,16 @@ function ResourceDropDown({ handleClose }) {
           return (
             <div
               key={i}
-              onMouseEnter={() => setActiveRes(eachRes.name)}
+              onMouseEnter={() => {
+                setActiveRes(eachRes.name)
+              
+                const firstDept = eachRes?.cats?.[0];
+                const firstItem = firstDept?.data?.[0];
+
+                setActiveDept(firstDept?.name|| null);
+                setActiveArt(firstItem?.title || null);
+                setFoundItem(firstItem)
+              }}
               className={`res-main-item pointer ${eachRes.name === activeRes ? "res-main-item-active" : ""
                 }`}
               onClick={() => {
@@ -546,7 +576,13 @@ function ResourceDropDown({ handleClose }) {
               return (
                 <div
                   key={i}
-                  onMouseEnter={() => setActiveDept(eachDept.name)}
+                  onMouseEnter={() => {
+                    setActiveDept(eachDept.name)
+                  
+                  const firstItem = eachDept?.data?.[0];
+                  setActiveArt(firstItem?.title || null);
+                  setFoundItem(firstItem)
+                  }}
                   className={`res-main-item pointer ${eachDept.name === activeDept ? "res-main-item-active" : ""
                     }`}
                   onClick={() => {
