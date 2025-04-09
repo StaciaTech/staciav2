@@ -1,127 +1,5 @@
 {
-  "docs": [
-    {
-      "name": "Tech",
-      "data": [
-        {
-          "mainImageUrl": "/assets/istockphoto.webp",
-          "title": "Chilli Solar House",
-          "description": "There are many variations of passages of Lorem Ipsum.",
-          "starComponent": "true",
-          "template": "template4",
-          "banner": {
-            "image": "/assets/Green-House4.webp",
-            "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
-          },
-          "section1": {
-            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem ipsum dolorLorem Lorem ipsum dolor Lorem ipsum",
-            "summaryHeading": "Lorem ipsum dolor lorem ipsum dolor lorem",
-            "executiveSummary": [
-              "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
-              "Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-              "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant."
-            ],
-            "image": "/assets/Green-house.webp"
-          },
-          "midContainer": {
-            "chilli": "/assets/Chilli2.webp",
-            "dryChilli": "/assets/dryChilli.webp",
-            "title": "Lorem ipsum dolor Lorem ipsum dolorLoremLorem ipsum dolor Lorem ipsum dolorLoremLorem",
-            "content": "The goal of this project is to streamline and digitize the supplychain for oil production. By offering specialized apps and websites for farmers, surveyors, procurement managers, and logistics teams, this ecosystem aims to make it a better around the world and make the problem solved once and for all."
-          },
-          "section2": {
-            "listItems": [
-              {
-                "number": "01",
-                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
-                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
-              },
-              {
-                "number": "02",
-                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
-                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
-              },
-              {
-                "number": "03",
-                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
-                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
-              },
-              {
-                "number": "04",
-                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
-                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
-              }
-            ]
-          },
-          "section3": {
-            "title": "Lorem ipsum dolor sit amet consectetur.",
-            "image": "/assets/chilli3.webp",
-            "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam."
-          }
-        }
-      ]
-    },
-    {
-      "name": "Electronic",
-      "data": [
-        {
-          "mainImageUrl": "/assets/istockphoto.webp",
-          "title": "Chilli Solar House",
-          "description": "There are many variations of passages of Lorem Ipsum.",
-          "starComponent": "true",
-          "template": "template4",
-          "banner": {
-            "image": "/assets/Green-House4.webp",
-            "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
-          },
-          "section1": {
-            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem ipsum dolorLorem Lorem ipsum dolor Lorem ipsum",
-            "summaryHeading": "Lorem ipsum dolor lorem ipsum dolor lorem",
-            "executiveSummary": [
-              "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
-              "Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-              "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant."
-            ],
-            "image": "/assets/Green-house.webp"
-          },
-          "midContainer": {
-            "chilli": "/assets/Chilli2.webp",
-            "dryChilli": "/assets/dryChilli.webp",
-            "title": "Lorem ipsum dolor Lorem ipsum dolorLoremLorem ipsum dolor Lorem ipsum dolorLoremLorem",
-            "content": "The goal of this project is to streamline and digitize the supplychain for oil production. By offering specialized apps and websites for farmers, surveyors, procurement managers, and logistics teams, this ecosystem aims to make it a better around the world and make the problem solved once and for all."
-          },
-          "section2": {
-            "listItems": [
-              {
-                "number": "01",
-                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
-                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
-              },
-              {
-                "number": "02",
-                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
-                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
-              },
-              {
-                "number": "03",
-                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
-                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
-              },
-              {
-                "number": "04",
-                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
-                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
-              }
-            ]
-          },
-          "section3": {
-            "title": "Lorem ipsum dolor sit amet consectetur.",
-            "image": "/assets/chilli3.webp",
-            "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam."
-          }
-        }
-      ]
-    },
+  "docs": [    
     {
       "name": "Mechanical",
       "data": [
@@ -182,6 +60,129 @@
           }
         }
       ]
+    },    
+    {
+      "name": "Electronics",
+      "data": [
+        {
+          "mainImageUrl": "/assets/istockphoto.webp",
+          "title": "Chilli Solar House",
+          "description": "There are many variations of passages of Lorem Ipsum.",
+          "starComponent": "true",
+          "template": "template4",
+          "banner": {
+            "image": "/assets/Green-House4.webp",
+            "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
+          },
+          "section1": {
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem ipsum dolorLorem Lorem ipsum dolor Lorem ipsum",
+            "summaryHeading": "Lorem ipsum dolor lorem ipsum dolor lorem",
+            "executiveSummary": [
+              "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+              "Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
+              "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant."
+            ],
+            "image": "/assets/Green-house.webp"
+          },
+          "midContainer": {
+            "chilli": "/assets/Chilli2.webp",
+            "dryChilli": "/assets/dryChilli.webp",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLoremLorem ipsum dolor Lorem ipsum dolorLoremLorem",
+            "content": "The goal of this project is to streamline and digitize the supplychain for oil production. By offering specialized apps and websites for farmers, surveyors, procurement managers, and logistics teams, this ecosystem aims to make it a better around the world and make the problem solved once and for all."
+          },
+          "section2": {
+            "listItems": [
+              {
+                "number": "01",
+                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+              },
+              {
+                "number": "02",
+                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+              },
+              {
+                "number": "03",
+                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+              },
+              {
+                "number": "04",
+                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+              }
+            ]
+          },
+          "section3": {
+            "title": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "/assets/chilli3.webp",
+            "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tech",
+      "data": [
+        {
+          "mainImageUrl": "/assets/istockphoto.webp",
+          "title": "Chilli Solar House",
+          "description": "There are many variations of passages of Lorem Ipsum.",
+          "starComponent": "true",
+          "template": "template4",
+          "banner": {
+            "image": "/assets/Green-House4.webp",
+            "text": "Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolor"
+          },
+          "section1": {
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLorem ipsum dolorLorem Lorem ipsum dolor Lorem ipsum",
+            "summaryHeading": "Lorem ipsum dolor lorem ipsum dolor lorem",
+            "executiveSummary": [
+              "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam.",
+              "Lorem ipsum dolor sit amet consectetur. Blandit in Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
+              "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant."
+            ],
+            "image": "/assets/Green-house.webp"
+          },
+          "midContainer": {
+            "chilli": "/assets/Chilli2.webp",
+            "dryChilli": "/assets/dryChilli.webp",
+            "title": "Lorem ipsum dolor Lorem ipsum dolorLoremLorem ipsum dolor Lorem ipsum dolorLoremLorem",
+            "content": "The goal of this project is to streamline and digitize the supplychain for oil production. By offering specialized apps and websites for farmers, surveyors, procurement managers, and logistics teams, this ecosystem aims to make it a better around the world and make the problem solved once and for all."
+          },
+          "section2": {
+            "listItems": [
+              {
+                "number": "01",
+                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+              },
+              {
+                "number": "02",
+                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+              },
+              {
+                "number": "03",
+                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+              },
+              {
+                "number": "04",
+                "title": "Lorem ipsum dolor Lorem ipsum dolorLorem",
+                "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur."
+              }
+            ]
+          },
+          "section3": {
+            "title": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "/assets/chilli3.webp",
+            "content": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. aliquam. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam."
+          }
+        }
+      ]
     }
+    
   ]
 }

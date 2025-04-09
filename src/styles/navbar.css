@@ -205,8 +205,9 @@ a {
   padding: 25px 0px;
   cursor: pointer;
 }
-.whats-new-link:hover {
+.whats-new-link:hover,.whats-new-link.active {
   color: #0047ff;
+  /* font-weight: bold; */
 }
 .whats-new-link-active-start {
   width: 1rem;
@@ -216,6 +217,9 @@ a {
   margin-left: 0.5rem;
 }
 .whats-new-link:hover .whats-new-link-active-start {
+  transform: scale(1);
+}
+.whats-new-link.active .whats-new-link-active-start{
   transform: scale(1);
 }
 
