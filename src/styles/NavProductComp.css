@@ -3,16 +3,18 @@
   top: 100%;
   z-index: 999;
   background-color: #fff;
-  width: 100%;  
-  box-sizing: border-box;
-  height: 460px;
+  width: 90%;  
+  /* box-sizing: border-box; */
+  max-height: 460px;
   border-bottom: 1px solid #e5e5e5;
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.2);  
+  display: flex;
 }
 .navProComp-container {
   width: 100%;
   /* height: 100%; */
   height: 460px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   display: flex;
   box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.1);
 }
@@ -25,6 +27,7 @@
   /* height: 100%; */
   height: 460px;
   border-right: 1px solid #e5e5e5;
+ 
 }
 .navProComp-mainCat-container {
   /* box-shadow: 3px 0px 10px 0px rgba(0, 0, 0, 0.1);

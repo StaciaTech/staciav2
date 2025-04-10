@@ -73,10 +73,10 @@ import { useNavigate } from "react-router-dom";
 function ReUsableArticle({ data, path }) {
   const navigate = useNavigate();
 
-  // Ensure input is always a string
+    
   const formatUrlString = (text) => {
     if (!text || typeof text !== "string") {
-      console.error("Invalid text input:", text); // Debugging log
+      console.error("Invalid text input:", text); 
       return "";
     }
     return text.split(" ").join("-");

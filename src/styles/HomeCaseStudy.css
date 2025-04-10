@@ -42,6 +42,10 @@
   padding: 1.5rem 3rem;
   bottom: 4px;
 }
+.image-box-left:hover{
+   grid-area: 2/2/ 4/ 4;
+   display: grid;
+}
 
 .image-box:hover .casestudy-content {
   display: block;

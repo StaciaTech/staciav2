@@ -294,9 +294,10 @@ const HorizontalScrollContainer = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    threshold: 0.5,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
   return (
     <div ref={targetRef} style={{ height: "300vh", position: "relative" }}>
       <div
@@ -305,6 +306,8 @@ const HorizontalScrollContainer = () => {
           height: "100vh",
           position: "sticky",
           top: "80px",
+          overflow: "hidden",
+          
         }}
       >
         <motion.div style={{ display: "flex", columnGap: "12rem", x }}>

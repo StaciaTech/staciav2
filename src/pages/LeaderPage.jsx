@@ -204,6 +204,7 @@ import { FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 // import { BsTwitterX } from "react-icons/bs";
 import data from "../Data/About.json";
 
+
 function LeaderPage() {
   const [singleLeader, setSingleLeader] = useState();
   const params = useParams();

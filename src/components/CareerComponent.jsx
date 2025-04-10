@@ -6,6 +6,7 @@ import LocIcon from "../assets/locIcon.svg";
 import ModeIcon from "../assets/ModeIcon.svg";
 import ArrowUp from "../assets/arrowUP.svg";
 import ArrowDown from "../assets/arrowDown.svg";
+import { IoIosArrowForward } from "react-icons/io";
 
 function CareerComponent({
   data,
@@ -154,12 +155,12 @@ function CareerComponent({
             })}
           </>
           <div
-            // className="career-apply"
-            // onClick={() => {
-            //   setShowApplication(true);
-            // }}
+            className="career-apply"
+            onClick={() => {
+              setShowApplication(true);
+            }}
           >
-            Apply
+            Apply Now >
           </div>
         </div>
       )}
