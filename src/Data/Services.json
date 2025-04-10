@@ -5,7 +5,7 @@
     "position": 2,
     "categories": [
       {
-        "name": "2D design/drafting",
+        "name": "2D design drafting",
         "description": "2D design and drafting involve creating precise and detailed technical drawings that serve as a foundation for manufacturing and engineering. These drawings represent the exact dimensions, tolerances, and materials needed for fabrication and assembly. They are essential for ensuring clear communication between design and production teams, minimizing errors, and ensuring high-quality outcomes. Our 2D drafting services adhere to international standards, providing tailored solutions for a wide range of industries. We specialize in various drawing types, including machine drawings, manufacturing drawings, assembly drawings, and more. These drawings act as blueprints, streamlining workflows and enhancing the efficiency of the production process",
         "imageUrl": "/assets/2d-drafting.webp",
         "departmentId": "672eefbf81be8191d93ce4bd",
@@ -1630,7 +1630,7 @@
       },
       {
         "name": "Enclosure and Industrial Design",
-        "description": "",
+        "description": "Our Enclosure and Industrial Design services provide end-to-end solutions for developing durable, efficient, and visually appealing protective casings for electronic products. We specialize in custom enclosure designs that address key factors such as material selection, mechanical strength, thermal management, and manufacturability. Serving industries like IoT, automotive, and consumer electronics, our process includes in-depth prototyping and testing to ensure compliance with industrial standards and optimal product protection. To accelerate development, we also offer advanced 3D Printing Services, enabling rapid prototyping of enclosures and components with high precision. By working with a variety of materials—ranging from plastics to metals—we accommodate specific requirements like durability, heat resistance, and aesthetics. ",
         "imageUrl": "/assets/Enclosure-and-Industrial-Design.webp",
         "departmentId": "672eefbf81be8191d93ce4bd",
         "id": "675297bcd6387bac980467bb",

@@ -130,6 +130,9 @@
   /* font-family: EuclidSemibold; */
   font-size: 1.25rem;
   color: #6b6084;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  text-overflow:ellipsis;
 }
 .life-at-stacia {
   margin: 0rem 6rem;

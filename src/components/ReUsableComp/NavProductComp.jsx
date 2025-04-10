@@ -761,7 +761,12 @@ function NavProductComp({ handleClose }) {
             <div className="navProComp-products-holder">
               {/* {finalProductArr?.slice(0, 1).map((eachPro, i) => ( */}
               <div>
-                <div>
+                <div onClick={() => {
+                window.scrollTo(0, 0);
+                singleProductNavigator(displayProducts.title);
+                handleClose();
+              }} 
+              style={{cursor:"pointer"}}>
                   <div className="navProComp-products-img">
                     <img src={displayProducts.imageUrl} alt="" />
                   </div>

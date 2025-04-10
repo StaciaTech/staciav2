@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/ReUsableArticle.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
 import Template6 from "../../Templets/Template6";
+import CustomCursor from "../CustomCursor";
 
 function ReUsableArticlePage({ data, path }) {
   const navigate = useNavigate();
+  const [cursorVisible, setCursorVisible] = useState(false);
+  
   console.log("data", data);
   return (
     <>
       <div className="reusable-art-container">
         {data?.map((eachItem, i) => (
           <div key={i} className="reusable-art-card">
-            <div className="reusable-art-img-container">
+            <div className="reusable-art-img-container"            
+            onMouseEnter={()=>setCursorVisible(true)}
+            onMouseLeave={()=>setCursorVisible(false)}
+            style={{cursor:"none"}}>
+
+              <CustomCursor
+              isVisible={cursorVisible}
+              text={"know more"}/>
               <img
                 src={eachItem.mainImageUrl || eachItem.image.imageUrl}
                 alt="art-img"

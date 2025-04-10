@@ -411,7 +411,7 @@
           "id": "category-003",
           "name": "Industrial Automation",
           "description": "Optimize your production processes with our Industrial Automation solutions. We provide customized systems that streamline operations, improve accuracy, and reduce downtime. Utilizing the latest in robotics, control systems, and sensors, our solutions enhance productivity while lowering costs. Whether for assembly lines, material handling, or quality inspection, our automation technology ensures consistent performance and maximized efficiency for your industrial needs.",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/ProductPage/Industrial automation.webp",
           "products": [
             {
               "id": "product-005",
