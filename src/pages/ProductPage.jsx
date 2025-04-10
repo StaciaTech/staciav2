@@ -307,7 +307,7 @@ function ProductPage() {
                       <ProductComponent2
                         bigText1={wordArr[0]}
                         product={eachPro}
-                        productName={eachPro?.name}
+                        productName={eachPro?.title}
                         productImg={eachPro?.imageUrl}
                         bigText2={wordArr[1] || wordArr[0]}
                         FoundCat={FoundCat}

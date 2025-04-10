@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from "react";
 // import "../../styles/ReUsableArticle.css";
 // import { IoIosArrowForward } from "react-icons/io";
@@ -66,14 +67,24 @@
 
 
 import React from "react";
+=======
+import React, { useState } from "react";
+>>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
 import "../../styles/ReUsableArticle.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import CustomCursor from "../CustomCursor";
 
 function ReUsableArticle({ data, path }) {
   const navigate = useNavigate();
+<<<<<<< HEAD
 
     
+=======
+  const [cursorVisible, setCursorVisible] = useState(false);
+  
+  // Ensure input is always a string
+>>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
   const formatUrlString = (text) => {
     if (!text || typeof text !== "string") {
       console.error("Invalid text input:", text); 
@@ -90,13 +101,20 @@ function ReUsableArticle({ data, path }) {
           formatUrlString(eachItem.title) || formatUrlString(eachItem.mainTitle);
 
         return (
-          <div key={i} className="reusable-art-card" style={{cursor:"pointer"}}
+          <div key={i} className="reusable-art-card" style={{cursor:"none"}}
           onClick={() => {
             const formattedUrl = `${path}/${caseStudyTrackId || articleTrackTitle}`;
             navigate(formattedUrl);
             window.scrollTo(0, 0);
           }}>
-            <div className="reusable-art-img-container">
+            <div className="reusable-art-img-container" 
+            onMouseEnter={()=>setCursorVisible(true)}
+            onMouseLeave={()=>setCursorVisible(false)}
+            >
+              <CustomCursor
+                 isVisible={cursorVisible}
+                 text={"Know more"}
+              />
               <img             
                 src={eachItem.mainImageUrl || eachItem.image?.imageUrl}
                 alt="art-img"
@@ -105,7 +123,7 @@ function ReUsableArticle({ data, path }) {
                   height: "100%",
                   objectFit: "cover",
                   borderRadius: "1rem",
-                  cursor: "pointer",
+                  
                 }}
               />
             </div>

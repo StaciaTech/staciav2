@@ -61,12 +61,15 @@
   height: 100%;
 }
 .service-cat-des {
+  margin-top: 20px;
   font-size: 1.25rem;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;  
+  line-height: 2rem;
+  
 }
 .service-section-left {
   width: 100%;
@@ -78,16 +81,18 @@
   padding: 5rem;
   justify-content: flex-start;
   align-items: start;
+  min-height: 100vh;
 }
 .service-page-main-dots-container {
   width: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1rem;
+  row-gap: 1rem;  
   /* margin-top: 30vh; */
   position: sticky;
   top: 50%;
+  transform: translateY(-50%);
   z-index: 10;
 }
 .service-page-dept-container {
@@ -95,17 +100,19 @@
   column-gap: 0.5rem;
   position: relative;
   margin-right: 3rem;
-  transition: linear 0.25s;
+  /* transition: linear 0.25s; */
+  transition: all 0.25s linear;
 }
 .service-page-dept-name {
   position: absolute;
-  left: 2rem;
+  left: 2.5rem;
   font-family: EuclidSemibold;
   color: #0047ff;
   padding: 1rem;
   border-radius: 2rem;
   background-color: #ebf1ff;
-  transform: translate(0%, -40%);
+  transform: translate(0%, -50%);
+  white-space: nowrap;
 }
 .all-service-dept-title {
   font-family: EuclidSemibold;
@@ -120,9 +127,11 @@
   background-color: #d9d9d9;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .service-page-main-dots.service-page-main-dots-active {
   background-color: #0047ff;
+  /* transform: scale(1.2); */
 }
 .service-section-left > p {
   color: rgba(255, 255, 255, 0.6);
@@ -311,10 +320,10 @@
     display: none;
   }
   .service-page-content-container {
-    display: flex;
+    /* display: flex; */
     padding: 1.5rem;
-    justify-content: flex-start;
-    align-items: start;
+    /* justify-content: flex-start; */
+    /* align-items: start; */
   }
   .mobile-navigation-tabs {
     display: flex;
@@ -325,7 +334,7 @@
     top: 80px;
     z-index: 1;
     background: #fff;
-    transform: translateY(-100%);
+    /* transform: translateY(-100%); */
   }
   .all-service-dept-title {
     display: none;

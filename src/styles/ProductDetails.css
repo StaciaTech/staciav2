@@ -189,6 +189,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  line-height: 2rem;
 }
 .remaining-products-card-container-holder {
   padding: 0rem 5rem;

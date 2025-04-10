@@ -275,26 +275,32 @@ function EachServicePage() {
 
 const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
   const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: targetRef,
+  // });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-70%"]);
+  // const x = useTransform(scrollYProgress, [0, 1], ["1%", "-70%"]);
   return (
-    <div ref={targetRef} style={{ height: "300vh", position: "relative" }}>
+    <div ref={targetRef} 
+    style={{ 
+    // height: "300vh", 
+    position: "relative" }}
+    >
       <div
         style={{
           height: "100vh",
           position: "sticky",
           top: "80px",
-          overflow: "hidden",
+          overflowX: "auto",
         }}
       >
         <div className="each-service-howWeDo-title">How We Do?</div>
         <p className="each-service-howWeDo-des">
           Problem Solved, Step by Step. Your Guide to a Smooth Solution.
         </p>
-        <motion.div style={{ display: "flex", columnGap: "6rem", x }}>
+        {/* <motion.div style={{ display: "flex", columnGap: "6rem", x }}> */}
+        <div style={{ display: "flex", columnGap: "6rem", padding:"0.2rem" }}>
+
           {singleServiceWhatweDo.map((eachItem, i) => (
             <div key={i} className="each-service-howWeDo-step">
               <div className="each-service-howWeDo-step-icon">
@@ -306,7 +312,7 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
               <p className="each-service-howWeDo-step-des">{eachItem.des}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

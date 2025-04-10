@@ -194,6 +194,8 @@ const data = [
 export default function CaseStudy() {
   const [casestudyData, setCasestudyData] = useState([]);
   const [activeDepartment, setActiveDepartment] = useState("All");
+  const [cursorVisible, setCursorVisible] = useState(false);
+  
 
   const details = data.caseStudy;
   console.log(details,"Details");
@@ -251,7 +253,7 @@ export default function CaseStudy() {
       </div>
 
       <div>
-        <ReUsableArticle data={casestudyData} path={"single-caseStudy"} />
+        <ReUsableArticle data={casestudyData} path={"single-caseStudy"}/>
       </div>
 
       <Footer />

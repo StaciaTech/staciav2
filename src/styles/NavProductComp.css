@@ -3,9 +3,15 @@
   top: 100%;
   z-index: 999;
   background-color: #fff;
+<<<<<<< HEAD
   width: 90%;  
   /* box-sizing: border-box; */
   max-height: 460px;
+=======
+  width: calc(100%-17px);  
+  box-sizing: border-box;
+  height: 460px;
+>>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
   border-bottom: 1px solid #e5e5e5;
   box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.2);  
   display: flex;

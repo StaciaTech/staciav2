@@ -46,7 +46,14 @@
             "Knowledge of continuous integration (CI/CD) tools like AWS CodePipeline and version control systems like Git."
         ],
         "requiredTools": [
-            ""
+            "MongoDB",
+            "Express",
+            "React.js",
+            "Node.js",
+            "HTML/CSS/JS",
+            "Mongoose",
+            "Git &gitHub",
+            "RESTful APIs"      
         ]
     },
     {
@@ -95,7 +102,14 @@
             "Identifying and resolving performance issues"
         ],
         "requiredTools": [
-            ""
+            "MongoDB",
+            "Express",
+            "React.js",
+            "Node.js",
+            "Basic HTML/CSS/JS",
+            "Mongoose",
+            "Git &gitHub",
+            "RESTful APIs"
         ]
     },
     {
@@ -262,7 +276,14 @@
             "Knowledge with GitHub and Continuous Integration"           
         ],
         "preferredSkills": [
-        
+            "Bootloaders – Programs that initialize hardware and load the main software during startup.",
+            "Debugging Software – Tools used to identify and fix issues in code or hardware systems.",
+            "Device Drivers – Software that allows the operating system to communicate with hardware devices.",
+            "Embedded Software – Specialized code designed to run on embedded systems and control hardware.",
+            "Firmware – Low-level software programmed into hardware devices to control their functions.",
+            "Microcontrollers – Compact integrated circuits that control embedded systems in various applications.",
+            "RS-232 – A standard protocol for serial communication between devices.",
+            "PCB Design – The process of designing printed circuit boards for electronic devices."        
         ],
         "requiredTools": [
             "Bootloaders",
@@ -304,7 +325,9 @@
             "Knowledge of project management principles."         
         ],
         "requiredTools": [
-            ""          
+            "AutoCAD",
+            "Fusion 360",
+            "Autodesk inventor"      
         ]
     }
 

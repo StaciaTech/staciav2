@@ -110,7 +110,11 @@
 }
 
 .image-box-left {
+<<<<<<< HEAD
   width: 48.3%;
+=======
+  width: 48.5%;
+>>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
   /* background-color: pink; */
   height: 100%;
   background-repeat: no-repeat;

@@ -10,9 +10,8 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { IoIosArrowForward } from "react-icons/io";
-
-
 import serviceData from "../Data/Services.json";
+import CustomCursor from "../components/CustomCursor";
 
 function ServicePage() {
   const navigate = useNavigate();
@@ -20,9 +19,11 @@ function ServicePage() {
 
   const [ServiceData, setServiceData] = useState([]);
   const [activeDepartment, setActiveDepartment] = useState("");
+  const [cursorVisible, setCursorVisible] = useState(false);
+  
   // const apiUrl = process.env.REACT_APP_API_URL;
 
-  const sectionsRef = useRef([]); // To track section DOM nodes
+  const sectionsRef = useRef({}); // To track section DOM nodes
 
   // Fetch Services Data
   // const FetchServices = async () => {
@@ -56,7 +57,7 @@ function ServicePage() {
 
   // Scroll to the active department on mount
   useEffect(() => {
-    if (ServiceData && activeDepartment) {
+    if (ServiceData.length && activeDepartment) {
       const section = document.getElementById(activeDepartment);
       if (section) {
         const yOffset = -80; // Adjust for the navbar height
@@ -73,24 +74,30 @@ function ServicePage() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            console.log("Intersecting:", entry.target.id);
             setActiveDepartment(entry.target.id);
           }
         });
       },
       {
         root: null, // Use the viewport as the root
-        threshold: 0.6, // Trigger when 60% of the section is in view
+        threshold: 0.3 // Trigger when 30% of the section is in view
       }
     );
 
     // Observe each section
-    sectionsRef.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
+    ServiceData.forEach((item)=>{
+      const section = sectionsRef.current[item.name];
+      if(section) observer.observe(section)
+    })
+    // Object.values(sectionsRef.current).forEach((section)=>{
+    //   if (section) observer.observe(section);
+    // });  
+    
 
     // Cleanup observer on component unmount
     return () => observer.disconnect();
-  }, [sectionsRef]);
+  }, [ServiceData]);
 
 
 
@@ -148,7 +155,7 @@ function ServicePage() {
                   className="all-services"
                   key={i}
                   id={eachItem.name}
-                  ref={(el) => (sectionsRef.current[i] = el)}
+                  ref={(el) => (sectionsRef.current[eachItem.name] = el)}
                 >
                   <div className="all-service-dept-title">{eachItem.name}</div>
                   <div className="all-service-box">
@@ -156,6 +163,9 @@ function ServicePage() {
                       <div className="service-card" key={i}>
                         <div
                           className="service-card-img-box"
+                          // className={``}
+                          onMouseEnter={()=> setCursorVisible(true)}
+                          onMouseLeave={()=> setCursorVisible(false)}
                           onClick={() => {
                             window.scrollTo(0, 0);
                             navigate(
@@ -163,9 +173,13 @@ function ServicePage() {
                                 .split(" ")
                                 .join("-")}/${data.name.split(" ").join("-")}`
                             );
-                          }}
+                          }}                          
                         >
-                          <img src={data.imageUrl} alt="" />
+                          <CustomCursor 
+                           isVisible={cursorVisible}
+                           text={"Know more"}
+                          />
+                          <img src={data.imageUrl} alt="" style={{cursor:"none"}} />
                         </div>
                         <div className="service-content-box">
                           <div className="feature-title">{data.name}</div>
@@ -180,6 +194,7 @@ function ServicePage() {
                               )
                               window.scrollTo(0, 0);
                             }}
+                            style={{cursor:"pointer"}}
                           >
                             <span>Know More</span>
                             <IoIosArrowForward />
@@ -208,7 +223,7 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
   return (
     <div className="service-page-dept-container">
       <div
-        className={`service-page-main-dots ${eachItem.name === activeDepartment
+        className={`service-page-main-dots ${eachItem.name === activeDepartment 
           ? "service-page-main-dots-active"
           : ""
           }`}
@@ -220,7 +235,7 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
         }}
         onMouseOver={() => setShowDept(true)}
         onMouseOut={() => setShowDept(false)}
-      ></div>
+      ></div> 
       {showDept && (
         <div className="service-page-dept-name">{eachItem.name}</div>
       )}
