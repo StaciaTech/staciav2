@@ -132,12 +132,13 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 179%;
+  line-height: 145%;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 20px;
 }
 
 .free-quote {

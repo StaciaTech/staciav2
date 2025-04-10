@@ -12,7 +12,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import { useParams } from "react-router-dom";
 import Star from "../components/Star";
-import ProjectsData from "../Data/ProjectsData.json"
+import ProjectsData from "../Data/ProjectsData.json";
 
 function ProjectPage() {
   const params = useParams();
@@ -23,7 +23,7 @@ function ProjectPage() {
   const [projectsData, setProjectsData] = useState();
 
   useEffect(() => {
-    setProjectsData(ProjectsData.Projects)
+    setProjectsData(ProjectsData.Departments)
   },[])
 
   const [activeDepartment, setActiveDepartment] = useState("");
@@ -99,15 +99,15 @@ function ProjectPage() {
               <div className="project-hidden-departments">
                 {projectsData
                   ?.filter((eachItem) => eachItem.name !== activeDepartment)
-                  .map((eachproject, i) => {
+                  .map((eachDept, i) => {
                     return (
                       <div
                         onClick={() => {
-                          setActiveDepartment(eachproject.name);
+                          setActiveDepartment(eachDept.name);
                           setShowHiddenDepts(false);
                         }} key={i}
                       >
-                        {eachproject.name}
+                        {eachDept.name}
                       </div>
                     );
                   })}

@@ -35,7 +35,7 @@ export default function FourCard({ data, path }) {
           </div>
 
           <div>
-            <a href={data.email} target="/blank" >
+            <a href={`mailto:${data.email}`} target="/blank" >
               <div className="leader-icon-container">
                 <FaEnvelope className="footer-facebook-icon" />
 
