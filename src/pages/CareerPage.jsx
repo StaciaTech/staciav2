@@ -292,20 +292,11 @@ export default CareerPage;
 
 const HorizontalScrollContainer = () => {
   const targetRef = useRef(null);
-<<<<<<< HEAD
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    threshold: 0.5,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
-=======
   // const { scrollYProgress } = useScroll({
   //   target: targetRef,
   // });
 
   // const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
   return (
     <div ref={targetRef} style={{
       //  height: "300vh",
@@ -316,13 +307,8 @@ const HorizontalScrollContainer = () => {
           height: "100vh",
           position: "sticky",
           top: "80px",
-<<<<<<< HEAD
-          overflow: "hidden",
-          
-=======
           overflowX:"auto",
           // whiteSpace:"nowrap"
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
         }}
       >
         {/* <motion.div style={{ display: "flex", columnGap: "12rem", x }}> */}

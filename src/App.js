@@ -75,8 +75,8 @@ function App() {
           path="/project/:department/:category"
           element={<ProjectPage />}
         />
-        {/* <Route path="/case-study" element={<CaseStudy />} />
-        <Route path="/case-study/:department" element={<CaseStudy />} /> */}
+        <Route path="/case-study" element={<CaseStudy />} />
+        <Route path="/case-study/:department" element={<CaseStudy />} />
 
         <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/case-study/:department:id" element={<CaseStudy />} />

@@ -19,6 +19,9 @@
   width: fit-content;
   position: relative;
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 .each-service-container {
   padding: 14.25rem 4.5rem;
 }
@@ -68,7 +71,6 @@
   /* position: sticky;
   top: 160px; */
   
-  
 }
 .each-service-howWeDo-step-container {
   display: flex;
@@ -79,10 +81,11 @@
 .each-service-howWeDo-step-container > div {
   width: 30%;
   min-width: 18rem;
+ 
   
 }
 .each-service-howWeDo-step-container::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
   
 
 }
@@ -101,6 +104,7 @@
   color: #0d0225;
   font-family: EuclidSemibold;
   margin-bottom: 2rem;
+  
 }
 .each-service-card-section {
   display: grid;
@@ -114,16 +118,21 @@
 .each-service-card > div > img {
   width: 100%;
   object-fit: cover;
+  overflow: hidden;
   aspect-ratio: 1.5643;
+  
 }
 .each-service-whyus-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2rem;
+  
+  
 }
 .each-service-whyus-grid > div {
   width: 80%;
   margin: 3rem 0rem;
+  
 }
 .each-service-whyus-num {
   color: #0047ff;

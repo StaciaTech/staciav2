@@ -1059,16 +1059,6 @@ function NavProductComp({ handleClose }) {
           <div className="navProComp-products-container">
             <div className="navProComp-products-holder">
               <div>
-<<<<<<< HEAD
-                <div className="navProComp-products-img">
-                  <img src={displayProducts.imageUrl} alt="" />
-                </div>
-                <div className="navProComp-products-title">
-                  {displayProducts.title}
-                </div>
-                <div className="navProComp-products-des">
-                  {displayProducts.description}
-=======
                 <div onClick={() => {
                 window.scrollTo(0, 0);
                 singleProductNavigator(displayProducts.title);
@@ -1084,7 +1074,6 @@ function NavProductComp({ handleClose }) {
                   <div className="navProComp-products-des">
                     {displayProducts.description}
                   </div>
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
                 </div>
               </div>
             </div>

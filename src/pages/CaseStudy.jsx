@@ -187,7 +187,7 @@ const data = [
     title: "Chili Ladling Machine-3",
     description: "Analysis of mechanical case study.",
     image: { imageUrl: "/assets/caseStudy-3.webp" },
-    category: "IT",
+    category: "Tech",
   },
 ];
 

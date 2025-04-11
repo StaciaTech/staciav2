@@ -160,11 +160,7 @@ function CareerComponent({
               setShowApplication(true);
             }}
           >
-<<<<<<< HEAD
-            Apply Now >
-=======
             Apply Now
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
           </div>
         </div>
       )}

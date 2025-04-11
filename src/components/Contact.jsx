@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // import React from "react";
 // import "../styles/Contact.css";
 // import StaciaContactLogo from "../assets/StaciaContactLogo.svg";
@@ -275,7 +273,6 @@
 //other input
 
 
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
 import React, { useState } from "react";
 import "../styles/Contact.css";
 import StaciaContactLogo from "../assets/StaciaContactLogo.svg";
@@ -306,10 +303,6 @@ function Contact({ closeHandle }) {
   const [customOrg, setCustomOrg] = useState("");
   const [messageValue, setMessageValue] = useState("");
   const [showOpt, setShoeOpt] = useState(false);
-<<<<<<< HEAD
-
-=======
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
   const SubmitHandler = () => {
     if (
       !nameValue ||
@@ -331,10 +324,6 @@ function Contact({ closeHandle }) {
   };
 
   const apiUrl = process.env.REACT_APP_API_URL;
-<<<<<<< HEAD
-
-=======
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
   const formPost = async () => {
     const formData = new FormData();
     formData.append("name", nameValue);
@@ -361,11 +350,7 @@ function Contact({ closeHandle }) {
         setMessageValue("");
         setOrganization("");
         setCustomOrg("");
-<<<<<<< HEAD
-        toast.success("🎉 Successfully Message Sent!!", {
-=======
         toast.success(":tada: Successfully Message Sent!!", {
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
           style: {
             backgroundColor: "#008E2F",
             color: "white",
@@ -474,11 +459,7 @@ function Contact({ closeHandle }) {
                   style={{ border: "none" }}
                   readOnly
                 />
-<<<<<<< HEAD
-                <IoIosArrowDown color="#c8c8c9" />
-=======
                 <IoIosArrowDown color="#C8C8C9" />
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
                 {showOpt && (
                   <div className="org-options">
                     {titles.map((eachTitle, i) => (
@@ -487,11 +468,7 @@ function Contact({ closeHandle }) {
                         onClick={() => {
                           setOrganization(eachTitle);
                           setShoeOpt(false);
-<<<<<<< HEAD
-                          if (eachTitle !== "Others") setCustomOrg(""); 
-=======
                           if (eachTitle !== "Others") setCustomOrg("");
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
                         }}
                         className="pointer"
                         style={{ color: "#000000" }}
@@ -502,10 +479,6 @@ function Contact({ closeHandle }) {
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
               {organization === "Others" && (
                 <input
                   type="text"
@@ -513,15 +486,8 @@ function Contact({ closeHandle }) {
                   className="input-field"
                   value={customOrg}
                   onChange={(e) => setCustomOrg(e.target.value)}
-<<<<<<< HEAD
-                  
                 />
               )}
-
-=======
-                />
-              )}
->>>>>>> 5e577a0311accccab01fb465c91b2b2f0c9eaf5e
               <div className="mobile-container">
                 <PhoneInput
                   placeholder="Enter phone number*"

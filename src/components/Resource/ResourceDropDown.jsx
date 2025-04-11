@@ -571,7 +571,7 @@ function ResourceDropDown({ handleClose }) {
             activeResArr.cats.map((eachDept, i) => {
               const resRouteKey =
                 activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
-              const deptRouteKey = eachDept?.name?.replace(/\s+/g, "-") || "";
+              const deptRouteKey = eachDept?.name?.replace(/\s+/g, "") || "";
 
               return (
                 <div
@@ -627,7 +627,7 @@ function ResourceDropDown({ handleClose }) {
               const resRouteKey =
                 activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
               const deptRouteKey = activeDept?.replace(/\s+/g, "-") || "";
-              const artRouteKey = eachItem?.title?.replace(/\s+/g, "-") || "";
+              const artRouteKey = eachItem?.title?.replace(/\s+/g, "") || "";
 
               return (
                 <div
