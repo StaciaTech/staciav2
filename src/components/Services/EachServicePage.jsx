@@ -286,11 +286,12 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
     >
       <div
         style={{
-          height: "100vh",
+          height: "50vh",
           position: "sticky",
           top: "80px",
           overflowX: "auto",
         }}
+        className="no-scrollbar"
       >
         <div className="each-service-howWeDo-title">How We Do?</div>
         <p className="each-service-howWeDo-des">

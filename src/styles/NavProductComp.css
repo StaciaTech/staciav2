@@ -3,7 +3,7 @@
   top: 100%;
   z-index: 999;
   background-color: #fff;
-  width: calc(100%-17px);  
+  width: 100%;  
   box-sizing: border-box;
   height: 460px;
   border-bottom: 1px solid #e5e5e5;
@@ -168,4 +168,11 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+body{
+  overflow-y: auto !important;
+}
+body.dropdown-open{
+  overflow-y: auto !important;
 }
