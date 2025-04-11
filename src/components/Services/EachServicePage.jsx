@@ -192,7 +192,7 @@ import Star from "../Star"; // Ensure default export in Star.jsx
 import { SlLike } from "react-icons/sl";
 import FAQComp from "../FAQComp"; // Ensure default export in FAQComp.jsx
 import { useParams } from "react-router-dom";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, useMotionValue } from "framer-motion";
 
 // Import JSON data
 import servicesData from "../../Data/Services.json"; // Verify this path
@@ -278,6 +278,18 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
   // });
 
   // const x = useTransform(scrollYProgress, [0, 1], ["1%", "-70%"]);
+
+  // const dragX = useMotionValue(0);
+  // const [width, setWidth] = React.useState(0);
+
+  // React.useEffect(()=>{
+  //   if(targetRef.current){
+  //     const scrollWidth = targetRef.current.scrollWidth;
+  //     const offsetWidth = targetRef.current.offsetWidth;
+  //     setWidth(scrollWidth - offsetWidth)
+  //   }
+  // },[singleServiceWhatweDo])
+  // const x = useTransform(dragX,(latest)=>Math.min(0, Math.max(-width,latest)))
   return (
     <div ref={targetRef} 
     style={{ 
@@ -286,11 +298,12 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
     >
       <div
         style={{
-          height: "100vh",
+          height: "80vh",
           position: "sticky",
           top: "80px",
-          overflowX: "auto",
+          overflowX: "auto"
         }}
+        className="no-scrollbar"
       >
         <div className="each-service-howWeDo-title">How We Do?</div>
         <p className="each-service-howWeDo-des">

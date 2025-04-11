@@ -74,6 +74,9 @@
   min-width: 18rem;
 }
 .each-service-howWeDo-step-container::-webkit-scrollbar {
+  /* display: none; */
+}
+.no-scrollbar::-webkit-scrollbar{
   display: none;
 }
 .each-service-howWeDo-step-icon {
