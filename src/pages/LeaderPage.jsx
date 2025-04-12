@@ -251,7 +251,7 @@ function LeaderPage() {
                   <div className="leader-icons">
                     
                     <div>
-                      <a href={singleLeader?.email} target="_blank" rel="noreferrer">
+                      <a href={`mailto:${singleLeader?.email}`} target="/blank" rel="noreferrer">
                         <div className="leader-icon-container">
                           <FaEnvelope className="footer-facebook-icon" />
                         </div>

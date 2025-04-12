@@ -3,8 +3,8 @@
   top: 100%;
   z-index: 999;
   background-color: #fff;
-  width: calc(100%-17px);  
-  /* box-sizing: border-box; */
+  width: 100%;  
+  box-sizing: border-box;
   height: 460px;
   border-bottom: 1px solid #e5e5e5;
   box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.2);  
@@ -173,3 +173,12 @@
   }
 }
 
+<<<<<<< HEAD
+=======
+body{
+  overflow-y: auto !important;
+}
+body.dropdown-open{
+  overflow-y: auto !important;
+}
+>>>>>>> 95bbc2e2ceb0f26b82c6f429a7038c830ad7ac82

@@ -295,7 +295,7 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
           top: "80px",
           overflowX: "auto",
         }}
-        className="no-scrollbar" 
+        className="no-scrollbar"
       >
         <div className="each-service-howWeDo-title">How We Do?</div>
         <p className="each-service-howWeDo-des">

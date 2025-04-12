@@ -60,19 +60,19 @@
       "SectionItems": [
         {
           "description": "Passionate innovator and entrepreneur, I strive to make India a global leader in innovation. As the founder of Stacia Corp, I focus on groundbreaking technologies and patents that bring practical advancements to society, making innovation accessible to everyone.",      "des":"From a young age, I was passionate about physics and innovation, which led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE). During my studies, I published research papers on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Eager to contribute to society through innovation, I pursued a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After working with a renewable energy startup, I founded Stacia Corp, a research and development company focused on cutting-edge technologies.My key innovations include a smart water bottle with self-heating and cooling technology, a hydration tracking system with 10mL accuracy, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program.For my contributions, I was honored with the Best Entrepreneur Award by Nitin Gadkari, and I continue striving to develop impactful solutions for the world.From an early age, I have been passionate about science, innovation, and technological advancement. This drive led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE), where I conducted research on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Believing that innovation should be accessible to all, I further expanded my knowledge by completing a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After gaining experience at a renewable energy startup, I founded Stacia Corp, a research and development company focused on creating groundbreaking innovations and patents that contribute to India’s growth.My key innovations include a self-heating and cooling smart water bottle, a high-accuracy hydration tracking system, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program. My vision is to make India a global hub for innovation, ensuring that advanced technology reaches everyone’s hands. Recently, I was honored with the Best Entrepreneur Award by Nitin Gadkari for my contributions.",
-          "imageUrl": "/assets/ProductPage/Lakshman.jpg",
+          "imageUrl": "/assets/LeaderPage/lakshman.png",
           "name": "Mr Lakshman",
           "path": "about/leader/Mr-Lakshman"
         },
         {
           "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-          "imageUrl": "/assets/ProductPage/Sarabesh.jpg",
+          "imageUrl": "/assets/LeaderPage/sarabesh.png",
           "name": "Mr Sarabesh",
           "path": "about/leader/Mr Sarabesh"
         },
         {
           "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",      "des":"I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
-          "imageUrl": "/assets/ProductPage/Revanth.jpg",
+          "imageUrl": "/assets/LeaderPage/revanth.png",
           "name": "Mr Revanth",
           "path": "about/leader/Mr Revanth"
         }
@@ -356,7 +356,7 @@
       "des": "From a young age, I was passionate about physics and innovation, which led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE). During my studies, I published research papers on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Eager to contribute to society through innovation, I pursued a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After working with a renewable energy startup, I founded Stacia Corp, a research and development company focused on cutting-edge technologies.My key innovations include a smart water bottle with self-heating and cooling technology, a hydration tracking system with 10mL accuracy, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program.For my contributions, I was honored with the Best Entrepreneur Award by Nitin Gadkari, and I continue striving to develop impactful solutions for the world.From an early age, I have been passionate about science, innovation, and technological advancement. This drive led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE), where I conducted research on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Believing that innovation should be accessible to all, I further expanded my knowledge by completing a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After gaining experience at a renewable energy startup, I founded Stacia Corp, a research and development company focused on creating groundbreaking innovations and patents that contribute to India’s growth.My key innovations include a self-heating and cooling smart water bottle, a high-accuracy hydration tracking system, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program. My vision is to make India a global hub for innovation, ensuring that advanced technology reaches everyone’s hands. Recently, I was honored with the Best Entrepreneur Award by Nitin Gadkari for my contributions.",
       "quote": "“It always seems impossible until it’s done.”  – Nelson Mandela",
       "designation": "Chief Operational Officer",
-      "imageUrl": "",
+      "imageUrl": "/assets/LeaderPage/lakshman.png",
       "name": "Mr Lakshman",
       "position": 1,
       "_id": "67359d632e218c7501f9c3c0",
@@ -394,7 +394,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
       "quote": "Lorem ipsum dolor sit amet",
       "designation": "Chief Executive Officer",
-      "imageUrl": "https://t4.ftcdn.net/jpg/07/98/72/89/360_F_798728945_c7RghNy7K8nSSVYsisEJ7EladuShxT98.jpg",
+      "imageUrl": "/assets/LeaderPage/sarabesh.png",
       "name": "Mr Sarabesh",
       "position": 2,
       "_id": "67359d7b847c386125859a59",
@@ -423,7 +423,7 @@
       "des": "I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
       "quote": "“The people who are crazy enough to think they can change the world are the ones who do.” — Steve Jobs",
       "designation": "Chief Technical Officer",
-      "imageUrl": "https://t4.ftcdn.net/jpg/07/98/72/89/360_F_798728945_c7RghNy7K8nSSVYsisEJ7EladuShxT98.jpg",
+      "imageUrl": "/assets/LeaderPage/revanth.png",
       "name": "Mr Revanth",
       "position": 3,
       "_id": "67359db6847c386125859a5a",

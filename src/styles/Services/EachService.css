@@ -89,6 +89,9 @@
   
 
 }
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
 .each-service-howWeDo-step-icon {
   background-color: #607d8b;
   width: 4rem;
