@@ -57,13 +57,25 @@ function App() {
         {/* <Route path="/products/:id" element={<SingleProduct />} /> */}
         {/* <Route path="/article/:department/:title" element={<SingleArticle />} /> */}
         <Route path="/article/:department/:title" element={<Template6 />} />
+        <Route path="/article/:department/single-article/:title" element={<Template6 />} />
+
         <Route
           path="/project/:department/:category/:title"
           element={<SingleProject />}
         />
         <Route
-          // path="/case-study/:department/:title"
-          path="/case-study/:department/:id" //--------------
+          // path="/case-study/:department/:title (Through department from nav bar)"
+          path="/case-study/:department/single-caseStudy/:id" //-------------
+          element={<SingleCaseStudy />}
+        />
+        <Route
+          // path="/case-study/:department/:title (home) "
+          path="/case-study/single-caseStudy/:id" //-------------
+          element={<SingleCaseStudy />}
+        />
+        <Route
+          // path="/case-study/:department/:title (direct navigation from navbar)"
+          path="/case-study/:department/:id" //-------------
           element={<SingleCaseStudy />}
         />
 

@@ -442,11 +442,11 @@ export default function SingleProduct() {
                     <Star />
                     {SelectedProduct?.title}
                   </div>
-                  {/* <div className="product-category">
+                  <div className="product-category">
                     <span className="test-seclection-white">
                       {SelectedProduct?.domainName}
                     </span>
-                  </div> */}
+                  </div>
                 </div>
                 <div className="single-pro-container">
                   <div className="single-pro-container2">

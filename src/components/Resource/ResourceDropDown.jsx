@@ -571,7 +571,9 @@ function ResourceDropDown({ handleClose }) {
             activeResArr.cats.map((eachDept, i) => {
               const resRouteKey =
                 activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
+                console.log(resRouteKey,"ResRouteKey")
               const deptRouteKey = eachDept?.name?.replace(/\s+/g, "") || "";
+              console.log(deptRouteKey, "depRouteKey");
 
               return (
                 <div
@@ -626,8 +628,8 @@ function ResourceDropDown({ handleClose }) {
             {currentcat.data.map((eachItem, i) => {
               const resRouteKey =
                 activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
-              const deptRouteKey = activeDept?.replace(/\s+/g, "-") || "";
-              const artRouteKey = eachItem?.title?.replace(/\s+/g, "") || "";
+              const deptRouteKey = activeDept?.replace(/\s+/g, "") || "";
+              const artRouteKey = eachItem?.title?.replace(/\s+/g, "-") || "";
 
               return (
                 <div
@@ -668,7 +670,7 @@ function ResourceDropDown({ handleClose }) {
             <div className="res-item-card-image">
               <img src={foundItem?.imageURL} alt="" />
             </div>
-            <div className="res-item-card-title">{foundItem?.title}</div>
+            <div className="res-item-card-title" >{foundItem?.title}</div>
             <p className="res-item-card-des">{foundItem?.description}</p>
           </div>
           <div
@@ -676,10 +678,10 @@ function ResourceDropDown({ handleClose }) {
             className="know-more"
             onClick={() => {
               window.scrollTo(0, 0);
-              navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`);// path casestudy
+              navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`); // path casestudy
               handleClose();
               navigate(
-                `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "-") || ""
+                `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "") || ""
                 }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
               );
               handleClose();

@@ -13,6 +13,7 @@
             {
               "id":"product-001",
               "title": "Onedril (SSM)",
+              "domainName":"Agri and Food Processing SPM",
               "description": "OneDril is a manual, portable seed-sowing machine designed for precise and efficient planting. Capable of handling seeds between 2 to 25mm, it follows the line-sowing principle for uniform crop growth. Ideal for micro and large seeds alike, OneDril’s ergonomic design ensures convenience and accuracy. It empowers farmers with a cost-effective, versatile solution for boosting agricultural productivity.",
               "imageUrl": "/assets/ProductPage/onedrillssm.webp",
               "productDetails": [
@@ -41,6 +42,7 @@
             {
               "id":"product-002",
               "title": "Chilli Ladling Machine",
+              "domainName":"Agri and Food Processing SPM",
               "description": "This remote-operated Chilli Ladling Machine is engineered for efficient handling and ladling of chilies inside solar sheds. Its versatile design allows it to handle other crops like groundnuts and grains, ensuring optimal operation. With enhanced precision and ease of use, this machine reduces labor efforts and maximizes productivity for solar drying and similar agricultural processes.",
               "imageUrl": "/assets/ProductPage/chilli-lading-machine.webp",
               "productDetails": [
@@ -64,6 +66,7 @@
             {
               "id":"product-003",
               "title": "Precision Slicing Machine",
+              "domainName":"Agri and Food Processing SPM",
               "description": "The Precision Slicing Machine delivers ultra-thin slices, as fine as 3mm, with exceptional accuracy. Designed for diverse food items, it can slice fruits, vegetables, and even delicate items like bread with high precision. This machine ensures uniformity and efficiency, making it a valuable asset for food processing, catering, and kitchen applications demanding consistent slicing quality.",
               "imageUrl": "/assets/ProductPage/Precision Slicing Machine.webp",
               "productDetails": [
@@ -92,6 +95,7 @@
             {
               "id":"product-004",
               "title": "Tamarind Breaking machine",
+              "domainName":"Agri and Food Processing SPM",
               "description": "This innovative Tamarind Breaking Machine simplifies the process of breaking tamarind pods while preserving seed and pulp quality. Designed for agricultural efficiency, it is robust and user-friendly, suitable for small and large-scale operations. The machine boosts productivity and minimizes manual effort, making it an essential tool for tamarind producers.",
               "imageUrl":"/assets/ProductPage/Tamarind Breaking machine.webp",
               "productDetails": [
@@ -115,6 +119,8 @@
             {
               "id":"product-005",
               "title": "Bailing Machine",
+              "domainName":"Agri and Food Processing SPM",
+
               "description": "A cost-effective Bailing Machine designed to compress carton boxes to one-fourth of their original volume. Its robust design ensures reliability and efficiency, reducing storage space and simplifying waste management. Suitable for warehouses, recycling centers, and packaging units, this machine offers an economical and practical solution for handling bulk waste materials",
               "imageUrl":"/assets/ProductPage/Default.webp",
               "productDetails": [
@@ -138,6 +144,7 @@
             {
               "id":"product-006",
               "title":"Spinach Cleaning Machine",
+              "domainName":"Agri and Food Processing SPM",
               "description":"This Spinach Cleaning Machine cleans and semi-dries spinach with ease and precision. Its adaptable design allows it to handle other crops like lettuce, coriander, and fenugreek. Ideal for agricultural and food processing operations, it ensures hygiene and quality while saving time and labor. This machine is a perfect solution for pre-processing leafy vegetables and herbs",
               "imageUrl":"/assets/ProductPage/spinach cleaning with Frames1.webp"
             }
@@ -152,6 +159,7 @@
             {
               "id":"product-001",
               "title":"Brake Shoe Grinding Machine.",
+              "domainName":"Automobile or Automotive SPM",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
               
@@ -159,12 +167,14 @@
             {
               "id":"product-002",
               "title":"Fully autotmated paint booth with dryer",
+              "domainName":"Automobile or Automotive SPM",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-003",
               "title":"Automated Adhesive applying machines",
+              "domainName":"Automobile or Automotive SPM",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
             }
@@ -178,6 +188,7 @@
           "products":[
             {
               "id":"product-001",
+              "domainName":"Test Rig",
               "title":"Air and Vaccum Leak Test Rigs",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
@@ -185,30 +196,35 @@
             {
               "id":"product-002",
               "title":"Vision based Inspection Test Rigs",
+              "domainName":"Test Rig",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-003",
               "title":"End of Line Test Rigs (EOL)",
+              "domainName":"Test Rig",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-004",
               "title":"Endurance Test Rigs",
+              "domainName":"Test Rig",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-005",
               "title":" Durability Test Rigs.",
+              "domainName":"Test Rig",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-006",
               "title":" Performance Test Rigs",
+              "domainName":"Test Rig",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
             }
@@ -223,6 +239,7 @@
               {
               "id":"product-001",
               "title":"1. GEMA Reciprocator",
+              "domainName":"Reciprocating Arm",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
               }
@@ -235,8 +252,9 @@
           "imageUrl": "/assets/Actuator.webp",
           "products":[
             {
-              "id":"product-002",
-              "title":"Product2",
+              "id":"product-001",
+              "title":"Product1",
+              "domainName":"Actuator",
               "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
               "imageUrl":"/assets/ProductPage/Default.webp"
             }
@@ -257,12 +275,14 @@
             {
               "id": "product-001",
               "title": "Hydration tracking (G-sensor)",
+              "domainName":"Research and Development",
               "description":"An innovative R&D project designed to measure water levels inside a bottle and track the amount consumed with exceptional accuracy of 10mm. It provides hydration reminders at user-specified or AI-recommended intervals, enhancing hydration habits. This technology integrates advanced sensors for real-time monitoring and ensures precision, making it ideal for personalized hydration management and improving overall wellness",
               "imageUrl": "/assets/ProductPage/Default.webp"
               
             },
             {
               "id": "product-002",
+              "domainName":"Research and Development",
               "title": "Portable Heating, cooling device using semiconductor",
               "description": "A groundbreaking R&D innovation featuring a compact semiconductor-based heating and cooling system. This portable device is small enough to integrate seamlessly into a water bottle and versatile for applications like kettles, tiffin boxes, table coffee warmers/coolers, kitchen appliances, and medical devices. It redefines thermal management, offering convenience, efficiency, and adaptability for diverse personal, professional, and industrial use cases",
               "imageUrl": "/assets/ProductPage/Default.webp"
@@ -271,6 +291,7 @@
             {
               "id": "product-003",
               "title": "LoRa mesh system with encryption",
+              "domainName":"Research and Development",
               "description": "This R&D project introduces a highly secure LoRa mesh communication system capable of transmitting signals over a 10km radius. It offers encrypted, long-range connectivity ideal for remote monitoring, smart agriculture, disaster management, industrial automation, and IoT networks. Its robust design enables seamless communication in isolated or large-scale environments, making it an excellent choice for applications demanding extended coverage and reliable data transfer.",
               "imageUrl": "/assets/ProductPage/Default.webp"
               
@@ -286,6 +307,7 @@
             {
               "id": "product-001",
               "title": "Hydrogen (Smart-water-bottle)",
+              "domainName":"IoT Smart Products",
               "description": "Hydrogen is an AI-powered smart water bottle that features rapid heating and cooling, hydration tracking with advanced sensors, and personalized reminders for optimal water intake. Its ergonomic squircle design ensures style and comfort, while its innovative technology offers superior functionality. Perfect for on-the-go hydration, it redefines smart drinking solutions with intelligence, performance, and modern aesthetics",
               "imageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
               "productDetails": [
@@ -324,6 +346,7 @@
             {
               "id": "product-002",
               "title": "RFID Child Tracking Device",
+              "domainName":"IoT Smart Products",
               "description": "A versatile child safety solution available as a card, module, or watch, this RFID tracking device ensures real-time location updates and customizable alerts. It’s adaptable for school, play, and travel, and extends its utility to applications like pet tracking, asset management, and workforce monitoring. This device offers parents peace of mind and provides efficient tracking for a wide range of needs",
               "imageUrl": "/assets/ProductPage/RFID-Child-Tracking-Device.webp",
               "productDetails": [
@@ -347,6 +370,7 @@
             {
               "id": "product-003",
               "title": "Smart Furniture",
+              "domainName":"IoT Smart Products",
               "description": "Experience the future of home and office living with Smart Furniture. Featuring wireless charging, a built-in beverage heating and cooling system, intelligent lighting, and a retractable arm system for holding laptops or books with a nightlight. It also includes pop-up sockets and AI voice assistance for basic electronic controls like lights and AC. Smart Furniture combines functionality, comfort, and technology to redefine your personal and professional spaces",
               "imageUrl": "/assets/ProductPage/Smart Furniture.webp",
               "productDetails": [
@@ -380,6 +404,7 @@
             {
               "id": "product-004",
               "title": "S Connect (Smart Speaker)",
+              "domainName":"IoT Smart Products",
               "description": "S Connect is a next-gen smart speaker combining premium sound quality with intelligent voice control. It connects seamlessly to your smart devices, enabling hands-free operation and integration with IoT systems. Designed for versatility, it fits effortlessly into any setting, offering personalized assistance, dynamic entertainment, and superior connectivity. S Connect transforms your space into a hub of convenience and innovation.",
               "imageUrl": "/assets/ProductPage/S Connect (Smart Speaker).webp",
               "productDetails": [
@@ -416,6 +441,7 @@
             {
               "id": "product-005",
               "title": "Product",
+              "domainName":"Industrial Automation",
               "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dicta, itaque ab voluptates dolore molestias ea hic vel cupiditate, soluta laboriosam. Debitis voluptatum quo aut esse amet eum necessitatibus adipisci.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             }
@@ -436,36 +462,42 @@
             {
               "id":"product-001",
               "title":"EdifAI Surveyor Manager",
+              "domainName":"Webapps",
               "description": "EdifAI Surveyor Manager is a comprehensive web application designed for effective surveyor management. It allows survey managers to create and manage survey forms, chat with other managers and surveyors, allocate farms for surveying, and track reimbursements. The platform provides easy access to historical data, with graphing and reporting capabilities to support in-depth analysis and decision-making. This solution improves communication, data management, and accountability, enhancing the efficiency of survey operations.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-002",
               "title":"EdifAI FPO",
+              "domainName":"Webapps",
               "description": "EdifAI FPO is a dynamic web platform for managing the relationship between organizations and farmers. It enables FPOs (Farmer Producer Organizations) to handle requirements, manage farmer data, and fulfill organizational needs. The platform streamlines the communication between FPOs and farmers while offering intuitive tools for tracking orders, managing inventories, and generating reports. By integrating different modules, EdifAI FPO supports better coordination, accurate reporting, and efficient management of agricultural needs.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-003",
               "title":"EdifAI In-house Procurement",
+              "domainName":"Webapps",
               "description": "EdifAI In-house Procurement is a web application that enhances procurement management within organizations. It features agent management, reimbursement tracking, and the handling of procurement requirements for various organizations. This solution helps streamline the procurement process by allowing managers to track reimbursements, manage procurement agents, and create reports. The system also provides powerful graphs and data visualizations to facilitate decision-making and improve overall procurement operations, enhancing workflow efficiency.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-004",
               "title":"Converse",
+              "domainName":"Webapps",
               "description": "Converse is a feature-rich real-time communication tool designed to streamline interactions across teams, organizations, or with clients. It offers secure messaging, group chats, file sharing, and real-time collaboration tools, enabling better coordination. With features like direct messaging, threaded conversations, and support for multimedia files, Converse is perfect for teams needing a reliable platform for communication. It integrates smoothly into various workflows, enhancing productivity and collaboration within the workplace",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-005",
               "title":"Time & Date",
+              "domainName":"Webapps",
               "description": "Time & Date is an intelligent scheduling calendar solution offering a wide range of features to streamline appointment booking, meeting scheduling, and event management. It provides a customizable interface, allowing users to view and manage appointments with ease. With built-in reminders, real-time updates, and seamless integrations with other platforms, Time & Date ensures efficient time management. Whether for personal or business use, this application makes scheduling simple, organized, and accessible for teams of all sizes.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-006",
               "title":"Stacia Forms",
+              "domainName":"Webapps",
               "description":"Stacia Forms is a versatile web application designed to create and manage forms for a variety of use cases, from e-commerce website creation to hotel booking. It supports drag-and-drop form creation, making it easy to build complex forms with multiple features and integrations. Whether you're building an online store, managing reservations, or collecting user data, Stacia Forms provides an intuitive interface that simplifies form management and enhances customer experiences with seamless integration to other systems",
               "imageUrl": "/assets/ProductPage/Default.webp"
             }
@@ -479,12 +511,14 @@
             {
               "id":"product-007",
               "title":"Parikshan",
+              "domainName":"Websites",
               "description": "Parikshan is a professional website for a food safety organization specializing in training, hygiene monitoring, consulting, and testing. The platform offers detailed insights into their services, certifications, and safety protocols. It allows users to explore training programs, schedule consultations, and access testing results. The website is designed to provide transparent and reliable information to food businesses and stakeholders, ensuring compliance with industry standards and best practices for food safety.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-008",
               "title":"Agribhoomi",
+              "domainName":"Websites",
               "description": "Agribhoomi is a website dedicated to promoting sustainable and healthy agriculture. It serves as an informational hub for farmers and agricultural organizations, offering resources on eco-friendly farming practices, crop management, and agricultural innovations. The platform also features articles, success stories, and tools to improve agricultural productivity and sustainability. With its focus on sustainable farming methods, Agribhoomi empowers farmers to adopt practices that support the environment while improving yields.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             }
@@ -498,36 +532,42 @@
             {
               "id":"product-009",
               "title":"EdifAI Surveyor",
+              "domainName":"Mobile Apps",
               "description": "The EdifAI Surveyor app is designed for surveyors to collect and record farm and field data. It enables surveyors to raise reimbursements, track survey tasks, and communicate with managers and peers. With its user-friendly interface, the app supports real-time data entry, historical record access, and the ability to generate reports for further analysis. By simplifying the surveying process, this app enhances data accuracy and surveyor productivity, contributing to better field management and reporting.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-010",
               "title":"EdifAI In-house Procurement",
+              "domainName":"Mobile Apps",
               "description": "EdifAI In-field Procurement app is tailored for procurement managers working in the field to manage procurement tasks efficiently. It allows users to send items for pricing, raise and manage procurement agents, and track reimbursements. With built-in graphs and reporting tools, the app provides valuable insights into procurement activities and enables real-time updates from the field. It streamlines procurement processes and offers seamless collaboration with agents, helping managers improve procurement decision-making",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-011",
               "title":"EdifAI Procurement Agent",
+              "domainName":"Mobile Apps",
               "description": "The EdifAI Procurement Agent app is designed for procurement agents to manage their tasks on the go. Agents can procure items, send requests for pricing, and raise reimbursements using the app. It allows agents to access real-time data and track their performance. By providing seamless communication and data handling, the app ensures that procurement agents are always in sync with managers and field operations, improving procurement efficiency and accountability.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-012",
               "title":"Farmer App",
+              "domainName":"Mobile Apps",
               "description": "The Farmer app connects farmers with essential tools and resources to improve agricultural practices. It offers features such as access to native seeds, machinery rental and purchase, crop best practices, weather insights, and an Agri-Clinic for crop health monitoring. The app also enables farmers to interact with FPOs, manage requirements, and access critical agricultural services. This app acts as an all-in-one platform, empowering farmers to make informed decisions and improve their crop productivity and sustainability.",
               "imageUrl": "/assets/ProductPage/Default.webp"              
             },
             {
               "id":"product-013",
               "title":"Sharadha Stores",
+              "domainName":"Mobile Apps",
               "description": "Sharadha Stores is an e-commerce app designed for a wide variety of products, enabling users to browse, purchase, and manage their shopping experience with ease. The app offers secure payment options, product categories, and an intuitive interface for seamless browsing. Whether for everyday items or specialty products, Sharadha Stores ensures a smooth shopping experience. Features like order tracking, customer support, and real-time updates make it a comprehensive solution for both buyers and sellers.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-014",
               "title":"Smart Bottle App",
+              "domainName":"Mobile Apps",
               "description": "The Smart Bottle App is integrated with AI technology to help users track hydration and maintain healthy water intake. It syncs with smart bottles, offering reminders, usage data, and personalized hydration goals. The app provides real-time statistics, water consumption insights, and notifications to ensure users stay hydrated throughout the day. Its intuitive interface makes it easy to manage hydration schedules, making it a must-have tool for those looking to stay on top of their health.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             }
