@@ -1,5 +1,5 @@
   .audio-container {
-    max-width: 1110px;
+    max-width: 1000px;
     margin: auto ;
     padding: 10px;
     font-family: Arial, sans-serif;
@@ -133,6 +133,7 @@
     border: none;
     cursor: pointer;
     color: #007bff;
+  
   }
 
   .icon-button:hover {
@@ -169,7 +170,8 @@
   .audio-controls {
     display: flex;
     align-items: center;
-    gap: 10px;
+    
+   
   }
   @media (max-width: 768px) {
     .header-section {

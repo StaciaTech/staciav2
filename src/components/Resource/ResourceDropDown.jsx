@@ -496,6 +496,9 @@ function ResourceDropDown({ handleClose }) {
   const [currentcat, setCurrentCat] = useState(null);
   const [foundItem, setFoundItem] = useState(null);
 
+
+  
+
   useEffect(() => {
     if (activeRes) {
       setActiveResArr(
@@ -534,17 +537,18 @@ function ResourceDropDown({ handleClose }) {
             <div
               key={i}
               onMouseEnter={() => {
-                setActiveRes(eachRes.name)
-              
+                setActiveRes(eachRes.name);
+
                 const firstDept = eachRes?.cats?.[0];
                 const firstItem = firstDept?.data?.[0];
 
-                setActiveDept(firstDept?.name|| null);
+                setActiveDept(firstDept?.name || null);
                 setActiveArt(firstItem?.title || null);
-                setFoundItem(firstItem)
+                setFoundItem(firstItem);
               }}
-              className={`res-main-item pointer ${eachRes.name === activeRes ? "res-main-item-active" : ""
-                }`}
+              className={`res-main-item pointer ${
+                eachRes.name === activeRes ? "res-main-item-active" : ""
+              }`}
               onClick={() => {
                 window.scrollTo(0, 0);
                 navigate(`/${routKey}`);
@@ -571,7 +575,7 @@ function ResourceDropDown({ handleClose }) {
             activeResArr.cats.map((eachDept, i) => {
               const resRouteKey =
                 activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
-                console.log(resRouteKey,"ResRouteKey")
+              console.log(resRouteKey, "ResRouteKey");
               const deptRouteKey = eachDept?.name?.replace(/\s+/g, "") || "";
               console.log(deptRouteKey, "depRouteKey");
 
@@ -579,14 +583,15 @@ function ResourceDropDown({ handleClose }) {
                 <div
                   key={i}
                   onMouseEnter={() => {
-                    setActiveDept(eachDept.name)
-                  
-                  const firstItem = eachDept?.data?.[0];
-                  setActiveArt(firstItem?.title || null);
-                  setFoundItem(firstItem)
+                    setActiveDept(eachDept.name);
+
+                    const firstItem = eachDept?.data?.[0];
+                    setActiveArt(firstItem?.title || null);
+                    setFoundItem(firstItem);
                   }}
-                  className={`res-main-item pointer ${eachDept.name === activeDept ? "res-main-item-active" : ""
-                    }`}
+                  className={`res-main-item pointer ${
+                    eachDept.name === activeDept ? "res-main-item-active" : ""
+                  }`}
                   onClick={() => {
                     window.scrollTo(0, 0);
                     navigate(`/${resRouteKey}/${deptRouteKey}`);
@@ -617,8 +622,9 @@ function ResourceDropDown({ handleClose }) {
               {currentcat.data.map((dot, i) => (
                 <div
                   key={i}
-                  className={`res-title-dot ${dot.title === activeArt ? "res-title-dot-active" : ""
-                    }`}
+                  className={`res-title-dot ${
+                    dot.title === activeArt ? "res-title-dot-active" : ""
+                  }`}
                 />
               ))}
             </div>
@@ -635,15 +641,18 @@ function ResourceDropDown({ handleClose }) {
                 <div
                   key={i}
                   onMouseEnter={() => setActiveArt(eachItem.title)}
-                  className={`res-main-item pointer ${eachItem.title === activeArt ? "res-main-item-active" : ""
-                    }`}
+                  className={`res-main-item pointer ${
+                    eachItem.title === activeArt ? "res-main-item-active" : ""
+                  }`}
                   onClick={() => {
                     window.scrollTo(0, 0);
+                    navigate();
+                    // `/case-study/single-caseStudy/${eachItem?.id || ""}` //----
                     navigate(
-                      // `/case-study/single-caseStudy/${eachItem?.id || ""}` //----
-
+                      `/${resRouteKey}/${deptRouteKey}/${
+                        eachItem?.id || artRouteKey
+                      }`
                     );
-                    navigate(`/${resRouteKey}/${deptRouteKey}/${eachItem?.id ||artRouteKey}`);
                     handleClose();
                   }}
                 >
@@ -667,10 +676,34 @@ function ResourceDropDown({ handleClose }) {
       {foundItem && activeArt && (
         <div className="res-item-contaienr">
           <div>
-            <div className="res-item-card-image">
+            <div
+              className="res-item-card-image"
+              onClick={() => {
+                window.scrollTo(0, 0);
+                if (activeRes === "Case Study") {
+                  // Navigate using ID
+                  navigate(
+                    `/case-study/single-caseStudy/${foundItem?.id || ""}`
+                  );
+                } else {
+                  // Navigate using title
+                  const resSlug =
+                    activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
+                  const deptSlug = activeDept?.replace(/\s+/g, "") || "";
+                  const titleSlug =
+                    foundItem?.title?.replace(/\s+/g, "-") || "";
+
+                  navigate(`/${resSlug}/${deptSlug}/${titleSlug}`);
+                }
+
+                handleClose();
+              }} style={{
+                cursor: "pointer",
+              }}
+            >
               <img src={foundItem?.imageURL} alt="" />
             </div>
-            <div className="res-item-card-title" >{foundItem?.title}</div>
+            <div className="res-item-card-title">{foundItem?.title}</div>
             <p className="res-item-card-des">{foundItem?.description}</p>
           </div>
           <div
@@ -678,12 +711,19 @@ function ResourceDropDown({ handleClose }) {
             className="know-more"
             onClick={() => {
               window.scrollTo(0, 0);
-              navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`); // path casestudy
-              handleClose();
-              navigate(
-                `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "") || ""
-                }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
-              );
+              if (activeRes === "Case Study") {
+                // Navigate using ID
+                navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`);
+              } else {
+                // Navigate using title
+                const resSlug =
+                  activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
+                const deptSlug = activeDept?.replace(/\s+/g, "") || "";
+                const titleSlug = foundItem?.title?.replace(/\s+/g, "-") || "";
+
+                navigate(`/${resSlug}/${deptSlug}/${titleSlug}`);
+              }
+
               handleClose();
             }}
           >
