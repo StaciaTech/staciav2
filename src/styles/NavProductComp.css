@@ -173,12 +173,9 @@
   }
 }
 
-<<<<<<< HEAD
-=======
 body{
   overflow-y: auto !important;
 }
 body.dropdown-open{
   overflow-y: auto !important;
 }
->>>>>>> 95bbc2e2ceb0f26b82c6f429a7038c830ad7ac82

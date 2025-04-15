@@ -28,12 +28,9 @@ import LeaderPage from "./pages/LeaderPage";
 import MediaKit from "./pages/MediaKit";
 import Partners from "./pages/Partners";
 
-
 import Template6 from "./Templets/Template6";
 
-
 import CompetitionPage from "./pages/Competition";
-
 
 import EventDetails from "./components/Competition/Event-Detail";
 
@@ -67,6 +64,12 @@ function App() {
         <Route
           // path="/case-study/:department/:title"
           path="/case-study/:department/:id" //--------------
+          element={<SingleCaseStudy />}
+        />
+
+        <Route
+          // path="/case-study/:department/:title"
+          path="/case-study/:department/single-caseStudy/:id"
           element={<SingleCaseStudy />}
         />
         <Route path="/project" element={<ProjectPage />} />
@@ -105,10 +108,6 @@ function App() {
 
         <Route path="/event/:title" element={<EventDetails />} />
 
-
-
-
-
         <Route path="/whatsnew" element={<WhatsNewPage />} />
         <Route path="/article" element={<ArticlesPage />} />
         <Route path="/article/:department" element={<ArticlesPage />} />
@@ -118,13 +117,11 @@ function App() {
         <Route path="/media-kit" element={<MediaKit />} />
         <Route path="/about/leader/:name" element={<LeaderPage />} />
 
-
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About />} />
         <Route path="/about/:subsection" element={<About />} />
         <Route path="/about/leader/:leaderName" element={<About />} />
         {/* <Route path="/partners" element={<PartnersPage />} /> */}
         {/* <Route path="/media-kit" element={<MediaKitPage />} /> */}
-
 
         <Route path="/news" element={<NewsRoomPage />} />
         <Route path="/events" element={<EventsPage />} />

@@ -550,7 +550,7 @@ function SingleCaseStudy() {
             </div>
           </div>
         </div>
-
+  
         <CaseStudyAudio />
 
         <div className="single-casestudy-content-container">
