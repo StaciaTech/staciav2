@@ -693,7 +693,13 @@ function ServcieNavComp({ handleClose }) {
             <div className="navProComp-products-holder">
               <div>
                 <div>
-                  <div className="navProComp-products-img">
+                  <div className="navProComp-products-img"
+                   onClick={() => {
+                    window.scrollTo(0, 0);
+                    singleProductNavigator(displayServices.title);
+                    handleClose();
+                  }}
+                  style={{cursor:"pointer"}}>
                     <img src={displayServices.imageUrl} alt="" />
                   </div>
                   <div className="navProComp-products-title">
@@ -712,6 +718,7 @@ function ServcieNavComp({ handleClose }) {
                 singleProductNavigator(displayServices.title);
                 handleClose();
               }}
+              style={{cursor:"pointer"}}
             >
               <span>See More</span>
               <IoIosArrowForward />

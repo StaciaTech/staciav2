@@ -688,7 +688,7 @@ function ResourceDropDown({ handleClose }) {
             <p className="res-item-card-des">{foundItem?.description}</p>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "end", width: "100%" }}
+            style={{ display: "flex", justifyContent: "end", width: "100%", cursor:"pointer" }}
             className="know-more"
             onClick={() => {
               window.scrollTo(0, 0);
@@ -702,6 +702,7 @@ function ResourceDropDown({ handleClose }) {
                 );
                 handleClose();
               }}}             
+
           >
             Know More
           </div>
