@@ -464,25 +464,25 @@ function ResourceDropDown({ handleClose }) {
     setArticlesData(article.docs);
   }, []);
 
-  useEffect(()=>{
-    if(!defaultLoaded && articlesData.length >0){
+  useEffect(() => {
+    if (!defaultLoaded && articlesData.length > 0) {
       const defaultRes = "Article";
       const firstDept = articlesData[0];
       const firstArticle = firstDept?.data?.[0];
 
       setActiveRes(defaultRes);
       setActiveDept(firstDept?.name);
-      if(firstArticle){
+      if (firstArticle) {
         setActiveArt(firstArticle?.title);
         setFoundItem(firstArticle);
       }
       setDefaultLoaded(true);
     }
-  },[articlesData,defaultLoaded])
+  }, [articlesData, defaultLoaded])
 
 
 
-  
+
 
   const ResourceArr = [
     { name: "Article", cats: articlesData },
@@ -535,11 +535,11 @@ function ResourceDropDown({ handleClose }) {
               key={i}
               onMouseEnter={() => {
                 setActiveRes(eachRes.name)
-              
+
                 const firstDept = eachRes?.cats?.[0];
                 const firstItem = firstDept?.data?.[0];
 
-                setActiveDept(firstDept?.name|| null);
+                setActiveDept(firstDept?.name || null);
                 setActiveArt(firstItem?.title || null);
                 setFoundItem(firstItem)
               }}
@@ -578,10 +578,10 @@ function ResourceDropDown({ handleClose }) {
                   key={i}
                   onMouseEnter={() => {
                     setActiveDept(eachDept.name)
-                  
-                  const firstItem = eachDept?.data?.[0];
-                  setActiveArt(firstItem?.title || null);
-                  setFoundItem(firstItem)
+
+                    const firstItem = eachDept?.data?.[0];
+                    setActiveArt(firstItem?.title || null);
+                    setFoundItem(firstItem)
                   }}
                   className={`res-main-item pointer ${eachDept.name === activeDept ? "res-main-item-active" : ""
                     }`}
@@ -641,7 +641,7 @@ function ResourceDropDown({ handleClose }) {
                       // `/case-study/single-caseStudy/${eachItem?.id || ""}` //----
 
                     );
-                    navigate(`/${resRouteKey}/${deptRouteKey}/${eachItem?.id ||artRouteKey}`);
+                    navigate(`/${resRouteKey}/${deptRouteKey}/${eachItem?.id || artRouteKey}`);
                     handleClose();
                   }}
                 >
@@ -666,7 +666,7 @@ function ResourceDropDown({ handleClose }) {
         <div className="res-item-contaienr">
           <div>
             <div className="res-item-card-image">
-              <img src={foundItem?.imageURL} alt="" />
+              <img src={foundItem?.imageURL || foundItem?.mainImageUrl} alt="" />
             </div>
             <div className="res-item-card-title">{foundItem?.title}</div>
             <p className="res-item-card-des">{foundItem?.description}</p>
