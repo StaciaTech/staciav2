@@ -464,25 +464,25 @@ function ResourceDropDown({ handleClose }) {
     setArticlesData(article.docs);
   }, []);
 
-  useEffect(()=>{
-    if(!defaultLoaded && articlesData.length >0){
+  useEffect(() => {
+    if (!defaultLoaded && articlesData.length > 0) {
       const defaultRes = "Article";
       const firstDept = articlesData[0];
       const firstArticle = firstDept?.data?.[0];
 
       setActiveRes(defaultRes);
       setActiveDept(firstDept?.name);
-      if(firstArticle){
+      if (firstArticle) {
         setActiveArt(firstArticle?.title);
         setFoundItem(firstArticle);
       }
       setDefaultLoaded(true);
     }
-  },[articlesData,defaultLoaded])
+  }, [articlesData, defaultLoaded])
 
 
 
-  
+
 
   const ResourceArr = [
     { name: "Article", cats: articlesData },
@@ -535,11 +535,11 @@ function ResourceDropDown({ handleClose }) {
               key={i}
               onMouseEnter={() => {
                 setActiveRes(eachRes.name)
-              
+
                 const firstDept = eachRes?.cats?.[0];
                 const firstItem = firstDept?.data?.[0];
 
-                setActiveDept(firstDept?.name|| null);
+                setActiveDept(firstDept?.name || null);
                 setActiveArt(firstItem?.title || null);
                 setFoundItem(firstItem)
               }}
@@ -580,10 +580,10 @@ function ResourceDropDown({ handleClose }) {
                   key={i}
                   onMouseEnter={() => {
                     setActiveDept(eachDept.name)
-                  
-                  const firstItem = eachDept?.data?.[0];
-                  setActiveArt(firstItem?.title || null);
-                  setFoundItem(firstItem)
+
+                    const firstItem = eachDept?.data?.[0];
+                    setActiveArt(firstItem?.title || null);
+                    setFoundItem(firstItem)
                   }}
                   className={`res-main-item pointer ${eachDept.name === activeDept ? "res-main-item-active" : ""
                     }`}
@@ -643,7 +643,7 @@ function ResourceDropDown({ handleClose }) {
                       // `/case-study/single-caseStudy/${eachItem?.id || ""}` //----
 
                     );
-                    navigate(`/${resRouteKey}/${deptRouteKey}/${eachItem?.id ||artRouteKey}`);
+                    navigate(`/${resRouteKey}/${deptRouteKey}/${eachItem?.id || artRouteKey}`);
                     handleClose();
                   }}
                 >
@@ -688,21 +688,24 @@ function ResourceDropDown({ handleClose }) {
             <p className="res-item-card-des">{foundItem?.description}</p>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "end", width: "100%", cursor:"pointer" }}
+            style={{ display: "flex", justifyContent: "end", width: "100%" ,cursor:"pointer"}}
             className="know-more"
             onClick={() => {
               window.scrollTo(0, 0);
-              if(activeRes == "Case Study"){
-                navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`); // path casestudy
-                handleClose();
-              }else{
-                navigate(
-                  `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "") || ""
-                  }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
-                );
-                handleClose();
-              }}}             
-
+              if (activeRes === "Case Study") {
+                // Navigate using ID
+                navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`);
+              } else {
+                // Navigate using title
+                const resSlug =
+                  activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
+                const deptSlug = activeDept?.replace(/\s+/g, "") || "";
+                const titleSlug = foundItem?.title?.replace(/\s+/g, "-") || "";
+                navigate(`/${resSlug}/${deptSlug}/${titleSlug}`);
+              }
+              handleClose();
+            }}
+          
           >
             Know More
           </div>
