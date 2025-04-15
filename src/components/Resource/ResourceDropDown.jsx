@@ -670,15 +670,16 @@ function ResourceDropDown({ handleClose }) {
             <div className="res-item-card-image" 
              onClick={() => {
               window.scrollTo(0, 0);
-              
-              navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`); // path casestudy
-              handleClose();
-              navigate(
-                `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "") || ""
-                }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
-              );
-              handleClose();
-            }}
+              if(activeRes == "Case Study"){
+                navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`); // path casestudy
+                handleClose();
+              }else{
+                navigate(
+                  `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "") || ""
+                  }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
+                );
+                handleClose();
+              }}}   
               style={{cursor:"pointer"}}
             >
               <img src={foundItem?.imageURL} alt="" />
@@ -691,14 +692,16 @@ function ResourceDropDown({ handleClose }) {
             className="know-more"
             onClick={() => {
               window.scrollTo(0, 0);
-              navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`); // path casestudy
-              handleClose();
-              navigate(
-                `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "") || ""
-                }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
-              );
-              handleClose();
-            }}
+              if(activeRes == "Case Study"){
+                navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`); // path casestudy
+                handleClose();
+              }else{
+                navigate(
+                  `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "") || ""
+                  }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
+                );
+                handleClose();
+              }}}             
           >
             Know More
           </div>
