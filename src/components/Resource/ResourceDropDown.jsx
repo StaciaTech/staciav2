@@ -667,7 +667,20 @@ function ResourceDropDown({ handleClose }) {
       {foundItem && activeArt && (
         <div className="res-item-contaienr">
           <div>
-            <div className="res-item-card-image">
+            <div className="res-item-card-image" 
+             onClick={() => {
+              window.scrollTo(0, 0);
+              
+              navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`); // path casestudy
+              handleClose();
+              navigate(
+                `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "") || ""
+                }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
+              );
+              handleClose();
+            }}
+              style={{cursor:"pointer"}}
+            >
               <img src={foundItem?.imageURL} alt="" />
             </div>
             <div className="res-item-card-title" >{foundItem?.title}</div>
