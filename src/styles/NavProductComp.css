@@ -173,7 +173,6 @@
 body{
   overflow-y: auto !important;
 }
-
 body.dropdown-open{
   overflow-y: auto !important;
 }

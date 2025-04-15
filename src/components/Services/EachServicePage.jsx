@@ -298,7 +298,7 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
     >
       <div
         style={{
-          height: "80vh",
+          height: "50vh",
           position: "sticky",
           top: "80px",
           overflowX: "auto"
