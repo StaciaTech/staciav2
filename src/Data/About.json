@@ -42,7 +42,7 @@
         },
         {
           "name": "Partnerships and clients",
-          "path": "about/partnership-clients"
+          "path": "about/partnerships-and-clients"
         },
         {
           "name": "Our Leadership",
@@ -68,31 +68,31 @@
           "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
           "imageUrl": "/assets/LeaderPage/sarabesh.png",
           "name": "Mr Sarabesh",
-          "path": "about/leader/Mr Sarabesh"
+          "path": "about/leader/Mr-Sarabesh"
         },
         {
           "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",      "des":"I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
           "imageUrl": "/assets/LeaderPage/revanth.png",
           "name": "Mr Revanth",
-          "path": "about/leader/Mr Revanth"
+          "path": "about/leader/Mr-Revanth"
         }
       ]
     },
     {
       "section": "Partnerships",
-      "path": "partners",
+      "path": "about/partnerships-and-clients",
       "SectionItems": [
         {
           "name": "Partner1",
-          "path": "/partners"
+          "path": "partners"
         },
         {
           "name": "Partner2",
-          "path": "/partners"
+          "path": "partners"
         },
         {
           "name": "Partner3",
-          "path": "/partners"
+          "path": "partners"
         }
       ]
     },
@@ -323,30 +323,31 @@
     }
   ],
   "images": [
-    "https://example.com/partner1.jpg",
-    "https://example.com/partner2.jpg",
-    "https://example.com/partner3.jpg"
+    "assets/PartnerPage/partner1.webp",
+    "assets/PartnerPage/partner2.webp",
+    "assets/PartnerPage/partner1.webp",
+    "assets/PartnerPage/partner1.webp"
   ],
   "partners": [
     {
       "title": "Partner 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "image": {
-        "imageUrl": "https://example.com/partner1-logo.jpg"
+        "imageUrl": "assets/PartnerPage/partner1.webp"
       }
     },
     {
       "title": "Partner 2",
-      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "image": {
-        "imageUrl": "https://example.com/partner2-logo.jpg"
+        "imageUrl": "assets/PartnerPage/partner2.webp"
       }
     },
     {
       "title": "Partner 3",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "image": {
-        "imageUrl": "https://example.com/partner3-logo.jpg"
+        "imageUrl": "assets/PartnerPage/partner1.webp"
       }
     }
   ],

@@ -34,6 +34,7 @@
   color: #6b6084;
   width: 40%;
   font-size: 1.25rem;
+  margin-top: 1rem;
 }
 .partners-img-container {
   display: flex;
@@ -52,22 +53,23 @@
   display: flex;
   justify-content: space-between;
   margin: 3rem 0rem;
+  padding: 1rem;
   border-bottom: 1px solid #e5e5e5;
 }
 .partner-data-card-content > div {
   font-family: EuclidSemibold;
-  font-size: 2.25rem;
+  font-size: 36px;
 }
 .partner-data-card-content > p {
   width: 50%;
   color: #6b6084;
-  font-size: 1.25rem;
+  font-size: 20px ;
 }
-.partner-data-card-img {
+/* .partner-data-card-img {
   width: 50rem;
-}
+} */
 .partner-data-card-img > img {
-  width: 100%;
+  width: 80%;
   object-fit: cover;
 }
 

@@ -202,7 +202,7 @@
   .winner-section1-items-img>img {
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 16/10;
+    aspect-ratio: 10/10;
   }
 
   .winner-section1-item-card {
@@ -267,7 +267,7 @@
   
   
   .winner-date {
-    font-size: 0.5rem;
+    font-size: 12px;
     color: #6B6084;
     margin-top: 5px;
     display: flex;
@@ -276,7 +276,7 @@
   }
   
   .winner-category {
-    font-size: 0.5rem;
+    font-size: 12px;
     color: #6B6084;
     margin-top: 5px;
     display: flex;

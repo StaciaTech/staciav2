@@ -464,25 +464,25 @@ function ResourceDropDown({ handleClose }) {
     setArticlesData(article.docs);
   }, []);
 
-  useEffect(()=>{
-    if(!defaultLoaded && articlesData.length >0){
+  useEffect(() => {
+    if (!defaultLoaded && articlesData.length > 0) {
       const defaultRes = "Article";
       const firstDept = articlesData[0];
       const firstArticle = firstDept?.data?.[0];
 
       setActiveRes(defaultRes);
       setActiveDept(firstDept?.name);
-      if(firstArticle){
+      if (firstArticle) {
         setActiveArt(firstArticle?.title);
         setFoundItem(firstArticle);
       }
       setDefaultLoaded(true);
     }
-  },[articlesData,defaultLoaded])
+  }, [articlesData, defaultLoaded])
 
 
 
-  
+
 
   const ResourceArr = [
     { name: "Article", cats: articlesData },
@@ -537,7 +537,7 @@ function ResourceDropDown({ handleClose }) {
             <div
               key={i}
               onMouseEnter={() => {
-                setActiveRes(eachRes.name);
+                setActiveRes(eachRes.name)
 
                 const firstDept = eachRes?.cats?.[0];
                 const firstItem = firstDept?.data?.[0];
@@ -583,11 +583,11 @@ function ResourceDropDown({ handleClose }) {
                 <div
                   key={i}
                   onMouseEnter={() => {
-                    setActiveDept(eachDept.name);
+                    setActiveDept(eachDept.name)
 
                     const firstItem = eachDept?.data?.[0];
                     setActiveArt(firstItem?.title || null);
-                    setFoundItem(firstItem);
+                    setFoundItem(firstItem)
                   }}
                   className={`res-main-item pointer ${
                     eachDept.name === activeDept ? "res-main-item-active" : ""
@@ -653,6 +653,7 @@ function ResourceDropDown({ handleClose }) {
                         eachItem?.id || artRouteKey
                       }`
                     );
+                    navigate(`/${resRouteKey}/${deptRouteKey}/${eachItem?.id || artRouteKey}`);
                     handleClose();
                   }}
                 >
@@ -676,38 +677,30 @@ function ResourceDropDown({ handleClose }) {
       {foundItem && activeArt && (
         <div className="res-item-contaienr">
           <div>
-            <div
-              className="res-item-card-image"
-              onClick={() => {
-                window.scrollTo(0, 0);
-                if (activeRes === "Case Study") {
-                  // Navigate using ID
-                  navigate(
-                    `/case-study/single-caseStudy/${foundItem?.id || ""}`
-                  );
-                } else {
-                  // Navigate using title
-                  const resSlug =
-                    activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
-                  const deptSlug = activeDept?.replace(/\s+/g, "") || "";
-                  const titleSlug =
-                    foundItem?.title?.replace(/\s+/g, "-") || "";
-
-                  navigate(`/${resSlug}/${deptSlug}/${titleSlug}`);
-                }
-
-                handleClose();
-              }} style={{
-                cursor: "pointer",
-              }}
-            >
-              <img src={foundItem?.imageURL} alt="" />
+            <div className="res-item-card-image"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              if (activeRes === "Case Study") {
+                // Navigate using ID
+                navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`);
+              } else {
+                // Navigate using title
+                const resSlug =
+                  activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
+                const deptSlug = activeDept?.replace(/\s+/g, "") || "";
+                const titleSlug = foundItem?.title?.replace(/\s+/g, "-") || "";
+                navigate(`/${resSlug}/${deptSlug}/${titleSlug}`);
+              }
+              handleClose();
+            }}
+            style={{cursor:"pointer"}}>
+              <img src={foundItem?.imageURL || foundItem?.mainImageUrl} alt="" />
             </div>
             <div className="res-item-card-title">{foundItem?.title}</div>
             <p className="res-item-card-des">{foundItem?.description}</p>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "end", width: "100%" }}
+            style={{ display: "flex", justifyContent: "end", width: "100%" ,cursor:"pointer"}}
             className="know-more"
             onClick={() => {
               window.scrollTo(0, 0);
@@ -720,12 +713,11 @@ function ResourceDropDown({ handleClose }) {
                   activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
                 const deptSlug = activeDept?.replace(/\s+/g, "") || "";
                 const titleSlug = foundItem?.title?.replace(/\s+/g, "-") || "";
-
                 navigate(`/${resSlug}/${deptSlug}/${titleSlug}`);
               }
-
               handleClose();
             }}
+          
           >
             Know More
           </div>
