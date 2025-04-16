@@ -410,7 +410,7 @@ function Contact({ closeHandle }) {
             <div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div className="contact-main-title">
-                  Love to hear from you :blue_heart:
+                  Love to hear from you 💙
                 </div>
                 <IoClose
                   onClick={closeHandle}

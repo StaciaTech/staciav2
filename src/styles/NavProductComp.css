@@ -39,6 +39,8 @@
   padding: 1rem 1.5rem;
   width: 100%;
   height: inherit;
+  -ms-overflow-style: none; /*IE and Edge */
+  scrollbar-width: none; /*Firefox */
 }
 .navProComp-mainCat-item-container > div,
 .navProComp-subCat-item-container > div {
@@ -65,7 +67,12 @@
 }
 .navProComp-mainCat-item.mainCat-active {
   color: #0047ff;
+  /* color: red; */
 }
+.navProComp-dept-item.mainCat-active{
+  color: #0047ff;
+}
+
 .navproComp-item-holder {
   display: flex;
   position: relative;
@@ -175,4 +182,8 @@ body{
 }
 body.dropdown-open{
   overflow-y: auto !important;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }

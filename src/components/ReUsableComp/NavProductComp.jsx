@@ -425,10 +425,29 @@ function NavProductComp({ handleClose }) {
     setShowSubCats(true);
     setShowproducts(true);
   }
+
+  document.body.classList.add("no-scroll");
+
+  return() =>{
+    document.body.classList.remove("no-scroll")
+  }
   }, []);
 
-
   console.log(productData, "ProductData");
+
+  const handleWheel = (e)=>{
+    const target = e.currentTarget;
+    const isScrollable = target.scrollHeight > target.clientHeight;
+
+    if(isScrollable){
+      const atTop = target.scrollTop === 0;
+      const atBottom = target.scrollTop + target.clientHeight >= target.scrollHeight;
+
+      if((e.deltaY < 0 && atTop) || (e.deltaY >0 && atBottom)) {
+        e.preventDefault();
+      }
+    }
+  }
 
   const [showSubCats, setShowSubCats] = useState(false);
   const [showProducts, setShowproducts] = useState(false);
@@ -648,11 +667,11 @@ function NavProductComp({ handleClose }) {
                   >
                     {eachCat}
                   </div>
-                  {eachCat === deptname && (
+                  {/* {eachCat === deptname && (
                     <div>
                       <img src={Star} alt="" style={{ width: "18px" }} />
                     </div>
-                  )}
+                  )} */}
                 </div>
               ))}
             </div>
@@ -697,11 +716,11 @@ function NavProductComp({ handleClose }) {
                       >
                         {eachCat}
                       </div>
-                      {eachCat === mainCatName && (
+                      {/* {eachCat === mainCatName && (
                         <div>
                           <img src={Star} alt="" style={{ width: "18px" }} />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   ))}
                 </div>
@@ -744,11 +763,11 @@ function NavProductComp({ handleClose }) {
                       >
                         {eachItem}
                       </div>
-                      {eachItem === subCatName && (
+                      {/* {eachItem === subCatName && (
                         <div>
                           <img src={Star} alt="" style={{ width: "18px" }} />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   ))}
                 </div>

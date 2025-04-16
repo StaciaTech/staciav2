@@ -581,11 +581,11 @@ function ServcieNavComp({ handleClose }) {
                   >
                     {eachCat}
                   </div>
-                  {eachCat === deptname && (
+                  {/* {eachCat === deptname && (
                     <div>
                       <img src={Star} alt="" style={{ width: "18px" }} />
                     </div>
-                  )}
+                  )} */}
                 </div>
               ))}
             </div>
@@ -630,11 +630,11 @@ function ServcieNavComp({ handleClose }) {
                       >
                         {eachCat}
                       </div>
-                      {eachCat === mainCatName && (
+                      {/* {eachCat === mainCatName && (
                         <div>
                           <img src={Star} alt="" style={{ width: "18px" }} />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   ))}
                 </div>
@@ -676,11 +676,11 @@ function ServcieNavComp({ handleClose }) {
                       >
                         {eachItem}
                       </div>
-                      {eachItem === subCatName && (
+                      {/* {eachItem === subCatName && (
                         <div>
                           <img src={Star} alt="" style={{ width: "18px" }} />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   ))}
                 </div>
