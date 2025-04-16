@@ -1,159 +1,159 @@
 .four {
   width: 100%;
-  /* min-height: 100vh; */
-  /* height: 100vh; */
   margin-top: 60px;
   margin-bottom: 5%;
 }
+
 .four2 {
   width: 90%;
   margin: 0 auto;
 }
+
 .four-text {
   color: #E7E7E7;
   font-size: 60px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
 }
+
 .sty {
   color: #0047FF;
   font-weight: 600;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 0;
   width: fit-content;
 }
+
 .four-card {
-  /* width: 23%; */
   margin-top: 40px;
   cursor: pointer;
 }
+
 .four-img {
   width: 100%;
-  overflow: hidden;
-  /* border-radius: 24px; */
-  /* background: red; */
-  /* height: 100%; */
-  object-fit: cover;
   position: relative;
+  overflow: hidden;
 }
-.four-img:hover .founder-content {
-  display: block;
-  display: flex;
+
+.four-img>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.founder-content {
+  position: absolute;
+  bottom: 0.9%;
+  display: none;
   color: white;
   gap: 1rem;
   background: linear-gradient(to left, #0d022500, #0d0225cc);
   width: 100%;
   padding: 0.5em 2rem;
   justify-content: flex-end;
-  bottom: 0.5%;
-  margin-bottom: 2px;
   border-bottom-left-radius: 20px;
-  overflow: hidden;
+  border-bottom-right-radius: 20px;
   transition: transform 0.3s ease-in-out;
 }
-.founder-content {
-  position: absolute;
-  bottom: 10px;
-  display: none;
-  overflow: hidden;
-  /* display: flex; */
+
+.four-img:hover .founder-content {
+  display: flex;
 }
-.four-img > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-}
-.four-img > img:hover {
-  /* transform: scale(1.2); */
-  cursor: pointer;
-  border-radius: 20px;
-}
+
 .four-pos {
   color: #0D0225;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   margin-bottom: 1rem;
 }
+
 .four-name {
   color: #0D0225;
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
-  padding: 2rem 0rem 1rem 0rem;
+  padding: 2rem 0 1rem;
 }
-.four-para > p {
+
+.four-para>p {
   color: #6B6084;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 30px;
   font-family: EuclidMedium;
 }
+
+/* === Responsive Grid === */
 .four-grid {
   display: grid;
-  /* justify-content: space-between; */
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
 @media (max-width: 1024px) {
-  .four {
-    margin-bottom: auto;
+  .four-text {
+    font-size: 36px;
+    text-align: center;
   }
+
+  .four-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .four-pos,
+  .four-name,
+  .four-para>p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .four-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .four-text {
+    font-size: 28px;
+  }
+
+  /*  Always show content on mobile */
+  .founder-content {
+    display: flex !important;
+    padding: 1rem;
+    font-size: 14px;
+    justify-content: flex-end;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 20px;
+    bottom: 0.5%;
+  }
+
+  .four-img:hover .founder-content {
+    display: flex;
+  }
+}
+
+@media (max-width: 425px) {
   .four-text {
     font-size: 24px;
   }
-  .four-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .four-name {
+    font-size: 16px;
   }
-  .four-card {
-    width: 100%;
-  }
+
   .four-pos {
     font-size: 12px;
   }
-  .four-name {
-    font-size: 15px;
-  }
-  .four-para > p {
+
+  .four-para>p {
     font-size: 12px;
+    line-height: 22px;
   }
-  .four-img > img:hover {
-    transform: scale(1);
-    cursor: pointer;
-  }
-}
-@media screen and (max-width: 465px) {
-  .four-img:hover .founder-content {
-    display: flex;
-    color: white;
-    gap: 1rem;
-    background: linear-gradient(to left, #0d022500, #0d0225cc);
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
+
   .founder-content {
-    display: flex;
-    color: white;
-    gap: 1rem;
-    background: linear-gradient(to left, #0d022500, #0d0225cc);
-    width: 100%;
-    position: absolute;
+    flex-direction: row;
     justify-content: flex-end;
-    bottom: 1%;
-    padding: 20px;
+    padding: 1rem;
     border-bottom-left-radius: 20px;
-    overflow: hidden;
+    border-bottom-right-radius: 20px;
+    bottom: 1%;
   }
 }
-
-
-
