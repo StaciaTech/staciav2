@@ -682,7 +682,7 @@ function ResourceDropDown({ handleClose }) {
               }}}   
               style={{cursor:"pointer"}}
             >
-              <img src={foundItem?.imageURL} alt="" />
+              <img src={foundItem?.imageURL|| foundItem?.mainImageUrl} alt="" />
             </div>
             <div className="res-item-card-title" >{foundItem?.title}</div>
             <p className="res-item-card-des">{foundItem?.description}</p>
