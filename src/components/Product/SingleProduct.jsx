@@ -519,6 +519,7 @@ export default function SingleProduct() {
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: "center",
+                        margin:'15px'
                       }}
                     >
                       <p className="skip">{""}</p>
@@ -527,7 +528,7 @@ export default function SingleProduct() {
                           display: "flex",
                           alignItems: "center",
                           gap: "20px",
-                          userSelect: "none",
+                          userSelect: "none",                          
                         }}
                       >
                         <div

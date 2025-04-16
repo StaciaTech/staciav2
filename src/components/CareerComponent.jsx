@@ -40,7 +40,7 @@ function CareerComponent({
             <div style={{ display: "flex", alignItems: "center" }}>
               <img src={ExpIcon} alt="" style={{ userSelect: "none" }} />
               <span className="job-details test-seclection-blue">
-                {data.experience} Years
+                {data.experience} 
               </span>
             </div>
             <div className="career-seperator" />

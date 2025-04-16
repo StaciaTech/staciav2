@@ -56,6 +56,8 @@ function App() {
         />
         {/* <Route path="/products/:id" element={<SingleProduct />} /> */}
         {/* <Route path="/article/:department/:title" element={<SingleArticle />} /> */}
+        <Route path="/article" element={<ArticlesPage />} />
+        <Route path="/article/:department" element={<ArticlesPage />} />
         <Route path="/article/:department/:title" element={<Template6 />} />
         <Route path="/article/:department/single-article/:title" element={<Template6 />} />
 
@@ -121,8 +123,7 @@ function App() {
         <Route path="/event/:title" element={<EventDetails />} />
 
         <Route path="/whatsnew" element={<WhatsNewPage />} />
-        <Route path="/article" element={<ArticlesPage />} />
-        <Route path="/article/:department" element={<ArticlesPage />} />
+       
         <Route path="/about/:key" element={<About />} />
         <Route path="/about" element={<About />} />
         <Route path="/partners" element={<Partners />} />

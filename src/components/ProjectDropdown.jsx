@@ -228,13 +228,23 @@ function ProjectDropdown({ handleClose }) {
       )}
       {activeProject && foundProject && (
         <div className="project-item-contaienr">
-          <div className="project-item-card-image">
+          <div className="project-item-card-image"
+          onClick={() => {
+            navigate(
+              `/project/${activeDept.split(" ").join("-")}/${activeCategory
+                .split(" ")
+                .join("-")}/${foundProject.title.split(" ").join("-")}`
+            );
+            window.scrollTo(0, 0);
+            handleClose();
+          }}
+          style={{cursor:"pointer"}}>
             <img src={foundProject.mainImageUrl} alt="" />
           </div>
           <div className="project-item-card-title">{foundProject.title}</div>
           <p className="project-item-card-des">{foundProject.mainDesc}</p>
           <div
-            style={{ display: "flex", justifyContent: "end", width: "100%" }}
+            style={{ display: "flex", justifyContent: "end", width: "100%",cursor:"pointer" }}
             className="know-more"
             onClick={() => {
               navigate(
@@ -245,6 +255,7 @@ function ProjectDropdown({ handleClose }) {
               window.scrollTo(0, 0);
               handleClose();
             }}
+            
           >
             Know More
           </div>

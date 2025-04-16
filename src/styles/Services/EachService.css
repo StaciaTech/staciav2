@@ -159,7 +159,9 @@
 .each-service-howWeDo-section-mob {
   display: none;
 }
-@media screen and (max-width: 768px) {
+
+
+@media screen and  (max-width: 768px) {
   /*change this */
   .each-service-hero-section {
     height: 37rem;
@@ -230,4 +232,9 @@
   .each-service-whyus-title {
     font-size: 20px;
   }
+  .no-scrollbar::-webkit-scrollbar{
+    display: none;
+  }
 }
+
+

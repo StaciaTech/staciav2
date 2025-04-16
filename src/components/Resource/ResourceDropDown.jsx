@@ -677,24 +677,22 @@ function ResourceDropDown({ handleClose }) {
       {foundItem && activeArt && (
         <div className="res-item-contaienr">
           <div>
-            <div className="res-item-card-image"
-            onClick={() => {
+            <div className="res-item-card-image" 
+             onClick={() => {
               window.scrollTo(0, 0);
-              if (activeRes === "Case Study") {
-                // Navigate using ID
-                navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`);
-              } else {
-                // Navigate using title
-                const resSlug =
-                  activeRes?.toLowerCase().replace(/\s+/g, "-") || "";
-                const deptSlug = activeDept?.replace(/\s+/g, "") || "";
-                const titleSlug = foundItem?.title?.replace(/\s+/g, "-") || "";
-                navigate(`/${resSlug}/${deptSlug}/${titleSlug}`);
-              }
-              handleClose();
-            }}
-            style={{cursor:"pointer"}}>
-              <img src={foundItem?.imageURL || foundItem?.mainImageUrl} alt="" />
+              if(activeRes == "Case Study"){
+                navigate(`/case-study/single-caseStudy/${foundItem?.id || ""}`); // path casestudy
+                handleClose();
+              }else{
+                navigate(
+                  `/${activeRes?.toLowerCase().replace(/\s+/g, "-") || ""}/${activeDept?.replace(/\s+/g, "") || ""
+                  }/${foundItem?.title?.replace(/\s+/g, "-") || ""}`
+                );
+                handleClose();
+              }}}   
+              style={{cursor:"pointer"}}
+            >
+              <img src={foundItem?.imageURL} alt="" />
             </div>
             <div className="res-item-card-title">{foundItem?.title}</div>
             <p className="res-item-card-des">{foundItem?.description}</p>
