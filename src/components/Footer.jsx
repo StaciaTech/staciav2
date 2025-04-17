@@ -195,14 +195,14 @@ function Footer() {
               <div className="footer-grey-tabs pointer test-seclection-blue">
                 Ground Floor, C-53, Guindy Industrial Estate,
               </div>
-              <div
+              {/* <div
                 style={{ marginTop: "10px", marginBottom: "10px" }}
                 className="footer-grey-tabs pointer test-seclection-blue"
               >
                 Thiru Vi Ka Industrial Estate, SIDCO Industrial
-              </div>
+              </div> */}
               <div className="footer-grey-tabs-child test-seclection-blue">
-                Estate, Guindy, Chennai - 32, Tamil Nadu
+                 Guindy, Chennai - 32, Tamil Nadu
               </div>
             </a>
           </div>

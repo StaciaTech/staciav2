@@ -5,7 +5,8 @@
 }
 
 .events-hosted-title {
-    color: #E0E0E0;
+    /* color: #E0E0E0; */
+    color: #6b6084;
     font-size: 3.125rem;
     /* 60px at 1920px */
     font-style: normal;
