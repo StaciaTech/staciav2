@@ -3,25 +3,31 @@
   margin-top: 60px;
   margin-bottom: 5%;
 }
+
 .four2 {
   width: 90%;
   margin: 0 auto;
 }
+
 .four-text {
-  color: #E7E7E7;
+  /* color: #E7E7E7; */
+  color: #6b6084;
   font-size: 60px;
   font-weight: 600;
 }
+
 .sty {
   color: #0047FF;
   font-weight: 600;
   padding: 0.5rem 0;
   width: fit-content;
 }
+
 .four-card {
   margin-top: 40px;
   cursor: pointer;
 }
+
 .four-img {
   width: 100%;
   position: relative;
@@ -51,12 +57,14 @@
 .four-img:hover .founder-content {
   display: flex;
 }
+
 .four-pos {
   color: #0D0225;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 1rem;
 }
+
 .four-name {
   color: #0D0225;
   font-size: 20px;
@@ -75,6 +83,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
 @media (max-width: 1024px) {
   .four-text {
     font-size: 36px;
@@ -117,6 +126,7 @@
   .four-name {
     font-size: 16px;
   }
+
   .four-pos {
     font-size: 12px;
   }
@@ -125,21 +135,11 @@
     line-height: 22px;
   }
   .founder-content {
-    bottom: 0px;
     flex-direction: row;
     justify-content: flex-end;
     padding: 1rem;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    bottom: 1%;
   }
 }
-
-
-
-
-
-
-
-
-
-

@@ -69,7 +69,8 @@
 }
 
 .case-study-title {
-  color: #e0e0e0;
+  /* color: #E0E0E0; */
+  color: #6b6084;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;

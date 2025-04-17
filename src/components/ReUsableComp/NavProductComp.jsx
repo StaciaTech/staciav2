@@ -781,7 +781,29 @@ function NavProductComp({ handleClose }) {
     setShowSubCats(true);
     setShowproducts(true);
   }
+
+  document.body.classList.add("no-scroll");
+
+  return() =>{
+    document.body.classList.remove("no-scroll")
+  }
   }, []);
+
+  console.log(productData, "ProductData");
+
+  const handleWheel = (e)=>{
+    const target = e.currentTarget;
+    const isScrollable = target.scrollHeight > target.clientHeight;
+
+    if(isScrollable){
+      const atTop = target.scrollTop === 0;
+      const atBottom = target.scrollTop + target.clientHeight >= target.scrollHeight;
+
+      if((e.deltaY < 0 && atTop) || (e.deltaY >0 && atBottom)) {
+        e.preventDefault();
+      }
+    }
+  }
 
   const [showSubCats, setShowSubCats] = useState(false);
   const [showProducts, setShowproducts] = useState(false);
@@ -921,12 +943,16 @@ function NavProductComp({ handleClose }) {
     }
   };
 
+  
+  
+  // const result = findProductPath(productData, productTitle);
+
   return (
     <div className="NavProductComp-container">
       <div className="navProComp-container">
         {/* Department */}
         <div className="navProComp-dept-container">
-          <div className="navprocomp-items-heading">Department</div>
+          <div className="navprocomp-items-heading">Departments</div>
           <div className="navproComp-item-holder">
             <div className="navProComp-mainCat-item-container">
               {DeptArr?.map((eachCat, i) => (
@@ -964,48 +990,92 @@ function NavProductComp({ handleClose }) {
                   >
                     {eachCat}
                   </div>
-                  {eachCat === deptname && (
+                  {/* {eachCat === deptname && (
                     <div>
                       <img src={Star} alt="" style={{ width: "18px" }} />
                     </div>
-                  )}
+                  )} */}
                 </div>
               ))}
             </div>
           </div>
         </div>
-
-        {/* Industry/Main Category */}
-        {MainCatArr?.length > 0 && (
-          <div className="navProComp-mainCat-container">
-            <div className="navprocomp-items-heading">Industry</div>
-            <div className="navproComp-item-holder">
-              <div className="navProComp-mainCat-item-container">
-                {MainCatArr?.map((eachCat, i) => (
-                  <div
-                    key={i}
-                    onClick={() => {
-                      HandleMainCatHover(eachCat);
-                      setMainCatName(eachCat);
-                      const mainCatObj = productData
-                        .find((d) => d.name === deptname)
-                        ?.category.find((c) => c.name === eachCat);
-                      if (mainCatObj?.products?.length) {
-                        HandleSubCatHover(mainCatObj.products[0].title);
-                        setSubCatName(mainCatObj.products[0].title);
-                      }
-
-                      productCategoryNavigator(eachCat);
-                      handleClose();
-                    }}
-                    className="pointer"
-                  >
+        {MainCatArr?.length && (
+          <>
+            <div className="navProComp-mainCat-container">
+              <div className="navprocomp-items-heading">Categories</div>
+              <div className="navproComp-item-holder">
+                <div className="navProComp-dot-container">
+                  {hoveringOnMain &&
+                    MainCatArr?.map((dot, i) => (
+                      <div
+                        key={i}
+                        className={`navProComp-dot ${
+                          dot === mainCatName ? "navProComp-dot-active" : ""
+                        }`}
+                      ></div>
+                    ))}
+                </div>
+                <div
+                  className="navProComp-mainCat-item-container"
+                  onMouseEnter={() => setHoveringOnmain(true)}
+                  onMouseLeave={() => setHoveringOnmain(false)}
+                >
+                  {MainCatArr?.map((eachCat, i) => (
                     <div
-                      className={`navProComp-mainCat-item ${
-                        eachCat === mainCatName ? "mainCat-active" : ""
+                      key={i}
+                      onMouseEnter={() => HandleMainCatHover(eachCat)}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        productCategoryNavigator(eachCat);
+                        handleClose();
+                      }}
+                      className="pointer"
+                    >
+                      <div
+                        className={`navProComp-mainCat-item ${
+                          eachCat === mainCatName ? "mainCat-active" : ""
+                        }`}
+                      >
+                        {eachCat}
+                      </div>
+                      {/* {eachCat === mainCatName && (
+                        <div>
+                          <img src={Star} alt="" style={{ width: "18px" }} />
+                        </div>
+                      )} */}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+        {showSubCats && subCatsArr?.length && (
+          <>
+            <div className="navProComp-subCat-container">
+              <div className="navprocomp-items-heading">Products</div>
+              <div className="navproComp-item-holder">
+                <div className="navProComp-dot-container">
+                  {subCatsArr?.map((dot, i) => (
+                    <div
+                      key={i}
+                      className={`navProComp-dot ${
+                        dot === subCatName ? "navProComp-dot-active" : ""
                       }`}
                     >
-                      {eachCat}
+                      <div
+                        className={`navProComp-mainCat-item ${
+                          eachItem === subCatName ? "mainCat-active" : ""
+                        }`}
+                      >
+                        {eachItem}
+                      </div>
+                      {/* {eachItem === subCatName && (
+                        <div>
+                          <img src={Star} alt="" style={{ width: "18px" }} />
+                        </div>
+                      )} */}
                     </div>
                     {eachCat === mainCatName && (
                       <div>

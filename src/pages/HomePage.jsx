@@ -1,32 +1,34 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import "../styles/Home.css";
-import Marquee from "react-fast-marquee";
-import client1 from "../assets/client1.png";
-import client2 from "../assets/client2.png";
-import client3 from "../assets/client3.png";
-import client4 from "../assets/client4.png";
-import client5 from "../assets/client5.png";
-import client6 from "../assets/client6.png";
-import client7 from "../assets/client7.png";
-import client8 from "../assets/client8.png";
-import client9 from "../assets/client9.png";
-import client10 from "../assets/client10.png";
-import client11 from "../assets/client11.png";
-import client12 from "../assets/client12.png";
-import client13 from "../assets/client13.png";
-import client14 from "../assets/client14.png";
-import client15 from "../assets/client15.png";
-import client16 from "../assets/client16.png";
-import client17 from "../assets/client17.png";
-import client18 from "../assets/client18.png";
-import client19 from "../assets/client19.png";
-import client20 from "../assets/client20.png";
-import client21 from "../assets/IndianOilLogo.svg";
-import client22 from "../assets/brakesIndialogo.svg";
-import client23 from "../assets/dynacastlogo.svg";
-import client24 from "../assets/trumpflogo.svg";
+import "../styles/Home.css";  
+// import Marquee from "react-fast-marquee";
+// import client1 from "../assets/client1.png";
+// import client2 from "../assets/client2.png";
+// import client3 from "../assets/client3.png";
+// import client4 from "../assets/client4.png";
+// import client5 from "../assets/client5.png";
+// import client6 from "../assets/client6.png";
+// import client7 from "../assets/client7.png";
+// import client8 from "../assets/client8.png";
+// import client9 from "../assets/client9.png";
+// import client10 from "../assets/client10.png";
+// import client11 from "../assets/client11.png";
+// import client12 from "../assets/client12.png";
+// import client13 from "../assets/client13.png";
+// import client14 from "../assets/client14.png";
+// import client15 from "../assets/client15.png";
+// import client16 from "../assets/client16.png";
+// import client17 from "../assets/client17.png";
+// import client18 from "../assets/client18.png";
+// import client19 from "../assets/client19.png";
+// import client20 from "../assets/client20.png";
+// import client21 from "../assets/IndianOilLogo.svg";
+// import client22 from "../assets/brakesIndialogo.svg";
+// import client23 from "../assets/dynacastlogo.svg";
+// import client24 from "../assets/trumpflogo.svg";
+
+import ClientComponent from "./Client";
 import reverse from "../assets/reverse.png";
 import HomeCaseStudy from "../components/Home/HomeCaseStudy";
 // import Four from "../components/Home/Four";
@@ -62,32 +64,32 @@ const MobileArticle = React.lazy(() =>
   import("../components/Home/MobileArticle")
 );
 
-const clients = [
-  client1,
-  client2,
-  client3,
-  client4,
-  client5,
-  client6,
-  client7,
-  client8,
-  client9,
-  client10,
-  client11,
-  client12,
-  client13,
-  client14,
-  client15,
-  client16,
-  client17,
-  client18,
-  client19,
-  client20,
-  client21,
-  client22,
-  client23,
-  client24,
-];
+// const clients = [
+//   client1,
+//   client2,
+//   client3,
+//   client4,
+//   client5,
+//   client6,
+//   client7,
+//   client8,
+//   client9,
+//   client10,
+//   client11,
+//   client12,
+//   client13,
+//   client14,
+//   client15,
+//   client16,
+//   client17,
+//   client18,
+//   client19,
+//   client20,
+//   client21,
+//   client22,
+//   client23,
+//   client24,
+// ];
 const words = [
   "Innovation",
   "Growth",
@@ -160,7 +162,7 @@ function HomePage() {
         <MobileStackScroll />
       </React.Suspense>
       {/* client */}
-      <div className="clientWrapper">
+      {/* <div className="clientWrapper">
         <div className="clients">
           <div className="clientText test-seclection-blue">Our Clients</div>
 
@@ -214,7 +216,8 @@ function HomePage() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
+      <ClientComponent />
       {/* our services */}
       <div>
         <React.Suspense fallback={<LoadingStar />}>

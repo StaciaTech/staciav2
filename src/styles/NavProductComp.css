@@ -1,7 +1,7 @@
 .NavProductComp-container {
   position: absolute;
   top: 100%;
-  z-index: 999;
+  /* z-index: 999; */
   background-color: #fff;
   width: 100%;  
   box-sizing: border-box;
@@ -10,6 +10,7 @@
   box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.2);  
   display: flex;
 }
+
 .navProComp-container {
   width: 100%;
   /* height: 100%; */
@@ -37,11 +38,13 @@
 }
 .navProComp-mainCat-item-container,
 .navProComp-subCat-item-container {
-  overflow-y: scroll;
+  overflow-y: auto;
   /* height: 40vh; */
   padding: 1rem 1.5rem;
   width: 100%;
-  height: inherit;
+  max-height: 420px;
+  -ms-overflow-style: none; /*IE and Edge */
+  scrollbar-width: none; /*Firefox */
 }
 .navProComp-mainCat-item-container > div,
 .navProComp-subCat-item-container > div {
@@ -68,7 +71,12 @@
 }
 .navProComp-mainCat-item.mainCat-active {
   color: #0047ff;
+  /* color: red; */
 }
+.navProComp-dept-item.mainCat-active{
+  color: #0047ff;
+}
+
 .navproComp-item-holder {
   display: flex;
   position: relative;
@@ -178,4 +186,10 @@ body{
 }
 body.dropdown-open{
   overflow-y: auto !important;
+}
+
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+  position: relative;
 }

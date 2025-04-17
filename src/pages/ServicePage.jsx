@@ -220,6 +220,19 @@ export default ServicePage;
 
 const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
   const [showDept, setShowDept] = useState(false);
+
+  useEffect(() => {
+    if (eachItem.name === activeDepartment) {
+      setShowDept(true);
+      const timeoutId = setTimeout(() => {
+        setShowDept(false);
+      }, 3000); // Hide after 3 seconds
+      return () => clearTimeout(timeoutId); // Cleanup timeout on unmount or change
+    } else {
+      setShowDept(false); // Ensure dept name is hidden for non-active dots
+    }
+  }, [activeDepartment, eachItem.name]);
+  
   return (
     <div className="service-page-dept-container">
       <div
@@ -237,9 +250,13 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
         onMouseOut={() => setShowDept(false)}
       ></div> 
       {showDept && (
-        <div className="service-page-dept-name">{eachItem.name}</div>
+        <div className="service-page-dept-name">
+          {eachItem.name}
+        </div>
       )}
+      
     </div>
+   
   );
 };
 

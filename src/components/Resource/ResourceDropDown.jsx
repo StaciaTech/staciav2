@@ -478,6 +478,12 @@ function ResourceDropDown({ handleClose }) {
       }
       setDefaultLoaded(true);
     }
+
+    document.body.classList.add("no-scroll");
+
+    return()=>{
+      document.body.classList.remove("no-scroll")
+    }
   }, [articlesData, defaultLoaded])
 
 
@@ -556,13 +562,13 @@ function ResourceDropDown({ handleClose }) {
               }}
             >
               <span>{eachRes.name}</span>
-              {eachRes.name === activeRes && (
+              {/* {eachRes.name === activeRes && (
                 <img
                   src={Star}
                   alt=""
                   style={{ width: "18px", marginLeft: "1rem" }}
                 />
-              )}
+              )} */}
             </div>
           );
         })}
@@ -599,13 +605,13 @@ function ResourceDropDown({ handleClose }) {
                   }}
                 >
                   <span>{eachDept.name}</span>
-                  {eachDept.name === activeDept && (
+                  {/* {eachDept.name === activeDept && (
                     <img
                       src={Star}
                       alt=""
                       style={{ width: "18px", marginLeft: "1rem" }}
                     />
-                  )}
+                  )} */}
                 </div>
               );
             })
@@ -658,13 +664,13 @@ function ResourceDropDown({ handleClose }) {
                   }}
                 >
                   <span>{eachItem.title}</span>
-                  {eachItem.title === activeArt && (
+                  {/* {eachItem.title === activeArt && (
                     <img
                       src={Star}
                       alt=""
                       style={{ width: "18px", marginLeft: "1rem" }}
                     />
-                  )}
+                  )} */}
                 </div>
               );
             })}
@@ -692,7 +698,7 @@ function ResourceDropDown({ handleClose }) {
               }}}   
               style={{cursor:"pointer"}}
             >
-              <img src={foundItem?.imageURL || foundItem.mainImageUrl } alt="" />
+              <img src={foundItem?.imageURL|| foundItem?.mainImageUrl} alt="" />
             </div>
             <div className="res-item-card-title">{foundItem?.title}</div>
             <p className="res-item-card-des">{foundItem?.description}</p>

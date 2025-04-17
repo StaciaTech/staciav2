@@ -290,30 +290,65 @@ function CareerPage() {
 
 export default CareerPage;
 
+// const HorizontalScrollContainer = () => {
+//   const targetRef = useRef(null);
+//   // const { scrollYProgress } = useScroll({
+//   //   target: targetRef,
+//   // });
+
+//   // const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+//   return (
+//     <div ref={targetRef} style={{
+//       //  height: "300vh",
+//      position: "relative" }}>
+//       <div
+//         className="career-hiring-data-container"
+//         style={{
+//           height: "100vh",
+//           position: "sticky",
+//           top: "80px",
+//           overflowX:"auto",
+//           // whiteSpace:"nowrap"
+//         }}
+//       >
+//         {/* <motion.div style={{ display: "flex", columnGap: "12rem", x }}> */}
+//         <div style={{ display: "flex", columnGap: "12rem", padding:"0.2rem" }}>
+
+//           {HiringData.map((eachStep, i) => (
+//             <div key={i} className="panel">
+//               <div className="career-hiring-item-num">{`0${i + 1}`}</div>
+//               <div className="career-hiring-illustrate">
+//                 <img src={eachStep.image} alt="" />
+//               </div>
+//               <div className="career-hiring-item-title">{eachStep.title}</div>
+//               <p className="career-hiring-item-des">{eachStep.des}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+
 const HorizontalScrollContainer = () => {
   const targetRef = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: targetRef,
-  // });
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
 
-  // const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
   return (
-    <div ref={targetRef} style={{
-      //  height: "300vh",
-     position: "relative" }}>
+    <div ref={targetRef} style={{ height: "300vh", position: "relative" }}>
       <div
         className="career-hiring-data-container"
         style={{
           height: "100vh",
           position: "sticky",
           top: "80px",
-          overflowX:"auto",
-          // whiteSpace:"nowrap"
         }}
       >
-        {/* <motion.div style={{ display: "flex", columnGap: "12rem", x }}> */}
-        <div style={{ display: "flex", columnGap: "12rem", padding:"0.2rem" }}>
-
+        <motion.div style={{ display: "flex", columnGap: "12rem", x }}>
           {HiringData.map((eachStep, i) => (
             <div key={i} className="panel">
               <div className="career-hiring-item-num">{`0${i + 1}`}</div>
@@ -324,7 +359,7 @@ const HorizontalScrollContainer = () => {
               <p className="career-hiring-item-des">{eachStep.des}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
