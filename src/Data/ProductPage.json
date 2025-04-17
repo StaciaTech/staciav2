@@ -455,124 +455,57 @@
       "category":[
         {
           "id":"category-001",
-          "name": "Webapps",
-          "description": "Web applications empower businesses with accessible, scalable, and efficient solutions tailored to their specific needs. They are designed to streamline operations, enhance collaboration, and improve decision-making. With advanced features like data analytics, real-time communication, and task management, our web applications ensure seamless workflows across organizations. Whether it's e-commerce, project management, or industry-specific solutions, these applications provide robust functionality and an intuitive user experience, accessible on any browser without the need for installations",
-          "imageUrl": "/assets/Webapps.webp",
+          "name": "S tellar",
+          "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
+          "imageUrl":"assets/Webapps.webp",
           "products":[
             {
               "id":"product-001",
-              "title":"EdifAI Surveyor Manager",
-              "domainName":"Webapps",
-              "description": "EdifAI Surveyor Manager is a comprehensive web application designed for effective surveyor management. It allows survey managers to create and manage survey forms, chat with other managers and surveyors, allocate farms for surveying, and track reimbursements. The platform provides easy access to historical data, with graphing and reporting capabilities to support in-depth analysis and decision-making. This solution improves communication, data management, and accountability, enhancing the efficiency of survey operations.",
+              "title":"Stello",
+              "domainName":"S tellar",
+              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-002",
-              "title":"EdifAI FPO",
-              "domainName":"Webapps",
-              "description": "EdifAI FPO is a dynamic web platform for managing the relationship between organizations and farmers. It enables FPOs (Farmer Producer Organizations) to handle requirements, manage farmer data, and fulfill organizational needs. The platform streamlines the communication between FPOs and farmers while offering intuitive tools for tracking orders, managing inventories, and generating reports. By integrating different modules, EdifAI FPO supports better coordination, accurate reporting, and efficient management of agricultural needs.",
+              "title":"Agency",
+              "domainName":"S tellar",
+              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
               "imageUrl": "/assets/ProductPage/Default.webp"
-            },
+            }
+          ]
+        },
+        {
+          "id":"category-002",
+          "name":"Edifai (Simplify your business)",
+          "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
+          "imageUrl":"/assets/New Product Development.webp",
+          "products":[
             {
               "id":"product-003",
-              "title":"EdifAI In-house Procurement",
-              "domainName":"Webapps",
-              "description": "EdifAI In-house Procurement is a web application that enhances procurement management within organizations. It features agent management, reimbursement tracking, and the handling of procurement requirements for various organizations. This solution helps streamline the procurement process by allowing managers to track reimbursements, manage procurement agents, and create reports. The system also provides powerful graphs and data visualizations to facilitate decision-making and improve overall procurement operations, enhancing workflow efficiency.",
+              "title":"Calender",
+              "domainName":"Edifai (Simplify your business)",
+              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-004",
-              "title":"Converse",
-              "domainName":"Webapps",
-              "description": "Converse is a feature-rich real-time communication tool designed to streamline interactions across teams, organizations, or with clients. It offers secure messaging, group chats, file sharing, and real-time collaboration tools, enabling better coordination. With features like direct messaging, threaded conversations, and support for multimedia files, Converse is perfect for teams needing a reliable platform for communication. It integrates smoothly into various workflows, enhancing productivity and collaboration within the workplace",
+              "title":"Forms",
+              "domainName":"Edifai (Simplify your business)",
+              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
               "imageUrl": "/assets/ProductPage/Default.webp"
-            },
+            }
+            ,
             {
               "id":"product-005",
-              "title":"Time & Date",
-              "domainName":"Webapps",
-              "description": "Time & Date is an intelligent scheduling calendar solution offering a wide range of features to streamline appointment booking, meeting scheduling, and event management. It provides a customizable interface, allowing users to view and manage appointments with ease. With built-in reminders, real-time updates, and seamless integrations with other platforms, Time & Date ensures efficient time management. Whether for personal or business use, this application makes scheduling simple, organized, and accessible for teams of all sizes.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-006",
-              "title":"Stacia Forms",
-              "domainName":"Webapps",
-              "description":"Stacia Forms is a versatile web application designed to create and manage forms for a variety of use cases, from e-commerce website creation to hotel booking. It supports drag-and-drop form creation, making it easy to build complex forms with multiple features and integrations. Whether you're building an online store, managing reservations, or collecting user data, Stacia Forms provides an intuitive interface that simplifies form management and enhances customer experiences with seamless integration to other systems",
-              "imageUrl": "/assets/ProductPage/Default.webp"
-            }
-          ]
-        },
-        {
-          "name":"Websites",
-          "description":"Websites are the cornerstone of a strong online presence, offering businesses a platform to showcase their offerings, engage audiences, and build trust. Our websites are designed with responsive layouts, modern designs, and optimized performance to ensure a seamless user experience across devices. From e-commerce platforms to corporate websites, we create solutions that reflect your brand identity while delivering value to your customers. With features like intuitive navigation, compelling content, and fast load times, our websites help drive conversions and customer satisfaction.",
-          "imageUrl": "/assets/New Product Development.webp",
-          "products":[
-            {
-              "id":"product-007",
-              "title":"Parikshan",
-              "domainName":"Websites",
-              "description": "Parikshan is a professional website for a food safety organization specializing in training, hygiene monitoring, consulting, and testing. The platform offers detailed insights into their services, certifications, and safety protocols. It allows users to explore training programs, schedule consultations, and access testing results. The website is designed to provide transparent and reliable information to food businesses and stakeholders, ensuring compliance with industry standards and best practices for food safety.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-008",
-              "title":"Agribhoomi",
-              "domainName":"Websites",
-              "description": "Agribhoomi is a website dedicated to promoting sustainable and healthy agriculture. It serves as an informational hub for farmers and agricultural organizations, offering resources on eco-friendly farming practices, crop management, and agricultural innovations. The platform also features articles, success stories, and tools to improve agricultural productivity and sustainability. With its focus on sustainable farming methods, Agribhoomi empowers farmers to adopt practices that support the environment while improving yields.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
-            }
-          ]
-        },
-        {
-          "name":"Mobile Apps",
-          "description":"Mobile applications bring convenience and functionality to your fingertips, offering businesses and users the ability to stay connected and productive anywhere. Designed with responsive interfaces and powerful features, our mobile apps cater to diverse requirements, from task-specific solutions to comprehensive management tools. Built for both Android and iOS platforms, these apps provide exceptional performance and scalability while prioritizing user experience. With advanced features like offline access, push notifications, and seamless integration, mobile apps enhance efficiency and engagement.",
-          "imageUrl": "/assets/Mobile Apps.webp",
-          "products":[
-            {
-              "id":"product-009",
-              "title":"EdifAI Surveyor",
-              "domainName":"Mobile Apps",
-              "description": "The EdifAI Surveyor app is designed for surveyors to collect and record farm and field data. It enables surveyors to raise reimbursements, track survey tasks, and communicate with managers and peers. With its user-friendly interface, the app supports real-time data entry, historical record access, and the ability to generate reports for further analysis. By simplifying the surveying process, this app enhances data accuracy and surveyor productivity, contributing to better field management and reporting.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-010",
-              "title":"EdifAI In-house Procurement",
-              "domainName":"Mobile Apps",
-              "description": "EdifAI In-field Procurement app is tailored for procurement managers working in the field to manage procurement tasks efficiently. It allows users to send items for pricing, raise and manage procurement agents, and track reimbursements. With built-in graphs and reporting tools, the app provides valuable insights into procurement activities and enables real-time updates from the field. It streamlines procurement processes and offers seamless collaboration with agents, helping managers improve procurement decision-making",
-              "imageUrl": "/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-011",
-              "title":"EdifAI Procurement Agent",
-              "domainName":"Mobile Apps",
-              "description": "The EdifAI Procurement Agent app is designed for procurement agents to manage their tasks on the go. Agents can procure items, send requests for pricing, and raise reimbursements using the app. It allows agents to access real-time data and track their performance. By providing seamless communication and data handling, the app ensures that procurement agents are always in sync with managers and field operations, improving procurement efficiency and accountability.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-012",
-              "title":"Farmer App",
-              "domainName":"Mobile Apps",
-              "description": "The Farmer app connects farmers with essential tools and resources to improve agricultural practices. It offers features such as access to native seeds, machinery rental and purchase, crop best practices, weather insights, and an Agri-Clinic for crop health monitoring. The app also enables farmers to interact with FPOs, manage requirements, and access critical agricultural services. This app acts as an all-in-one platform, empowering farmers to make informed decisions and improve their crop productivity and sustainability.",
-              "imageUrl": "/assets/ProductPage/Default.webp"              
-            },
-            {
-              "id":"product-013",
-              "title":"Sharadha Stores",
-              "domainName":"Mobile Apps",
-              "description": "Sharadha Stores is an e-commerce app designed for a wide variety of products, enabling users to browse, purchase, and manage their shopping experience with ease. The app offers secure payment options, product categories, and an intuitive interface for seamless browsing. Whether for everyday items or specialty products, Sharadha Stores ensures a smooth shopping experience. Features like order tracking, customer support, and real-time updates make it a comprehensive solution for both buyers and sellers.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-014",
-              "title":"Smart Bottle App",
-              "domainName":"Mobile Apps",
-              "description": "The Smart Bottle App is integrated with AI technology to help users track hydration and maintain healthy water intake. It syncs with smart bottles, offering reminders, usage data, and personalized hydration goals. The app provides real-time statistics, water consumption insights, and notifications to ensure users stay hydrated throughout the day. Its intuitive interface makes it easy to manage hydration schedules, making it a must-have tool for those looking to stay on top of their health.",
+              "title":"Reimbursement",
+              "domainName":"Edifai (Simplify your business)",
+              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             }
           ]
         }
+        
       ]
     }
   ]

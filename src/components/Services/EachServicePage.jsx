@@ -271,63 +271,110 @@ function EachServicePage() {
   );
 }
 
+// const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
+//   const targetRef = useRef(null);
+//   // const { scrollYProgress } = useScroll({
+//   //   target: targetRef,
+//   // });
+
+//   // const x = useTransform(scrollYProgress, [0, 1], ["1%", "-70%"]);
+
+//   // const dragX = useMotionValue(0);
+//   // const [width, setWidth] = React.useState(0);
+
+//   // React.useEffect(()=>{
+//   //   if(targetRef.current){
+//   //     const scrollWidth = targetRef.current.scrollWidth;
+//   //     const offsetWidth = targetRef.current.offsetWidth;
+//   //     setWidth(scrollWidth - offsetWidth)
+//   //   }
+//   // },[singleServiceWhatweDo])
+//   // const x = useTransform(dragX,(latest)=>Math.min(0, Math.max(-width,latest)))
+//   return (
+//     <div ref={targetRef} 
+//     style={{ 
+//     // height: "300vh", 
+//     position: "relative" }}
+//     >
+//       <div
+//         style={{
+//           height: "50vh",
+//           position: "sticky",
+//           top: "80px",
+//           overflowX: "auto"
+//         }}
+//         className="no-scrollbar"
+//       >
+//         <div className="each-service-howWeDo-title">How We Do?</div>
+//         <p className="each-service-howWeDo-des">
+//           Problem Solved, Step by Step. Your Guide to a Smooth Solution.
+//         </p>
+//         {/* <motion.div style={{ display: "flex", columnGap: "6rem", x }}> */}
+//         <div style={{ display: "flex", columnGap: "6rem", padding:"0.2rem" }}>
+
+//           {singleServiceWhatweDo.map((eachItem, i) => (
+//             <div key={i} className="each-service-howWeDo-step">
+//               <div className="each-service-howWeDo-step-icon">
+//                 <SlLike color="#fff" fontSize={28} />
+//               </div>
+//               <div className="each-service-howWeDo-step-title">
+//                 {eachItem.title}
+//               </div>
+//               <p className="each-service-howWeDo-step-des">{eachItem.des}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+
 const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
   const targetRef = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: targetRef,
-  // });
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
 
-  // const x = useTransform(scrollYProgress, [0, 1], ["1%", "-70%"]);
-
-  // const dragX = useMotionValue(0);
-  // const [width, setWidth] = React.useState(0);
-
-  // React.useEffect(()=>{
-  //   if(targetRef.current){
-  //     const scrollWidth = targetRef.current.scrollWidth;
-  //     const offsetWidth = targetRef.current.offsetWidth;
-  //     setWidth(scrollWidth - offsetWidth)
-  //   }
-  // },[singleServiceWhatweDo])
-  // const x = useTransform(dragX,(latest)=>Math.min(0, Math.max(-width,latest)))
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
   return (
-    <div ref={targetRef} 
-    style={{ 
-    // height: "300vh", 
-    position: "relative" }}
-    >
-      <div
-        style={{
-          height: "50vh",
-          position: "sticky",
-          top: "80px",
-          overflowX: "auto"
-        }}
-        className="no-scrollbar"
-      >
-        <div className="each-service-howWeDo-title">How We Do?</div>
-        <p className="each-service-howWeDo-des">
-          Problem Solved, Step by Step. Your Guide to a Smooth Solution.
-        </p>
-        {/* <motion.div style={{ display: "flex", columnGap: "6rem", x }}> */}
-        <div style={{ display: "flex", columnGap: "6rem", padding:"0.2rem" }}>
-
-          {singleServiceWhatweDo.map((eachItem, i) => (
-            <div key={i} className="each-service-howWeDo-step">
-              <div className="each-service-howWeDo-step-icon">
-                <SlLike color="#fff" fontSize={28} />
+    <>
+      <div ref={targetRef} style={{ height: "50vh", position: "relative" }}>
+        <div
+          // className="career-hiring-data-container"
+          style={{
+            height: "50vh",
+            position: "sticky",
+            top: "80px",
+            // display: "flex",
+            overflow: "auto",
+          }}
+        >
+          <div className="each-service-howWeDo-title">How We Do?</div>
+          <p className="each-service-howWeDo-des">
+            Problem Solved, Step by Step. Your Guide to a Smooth Solution.
+          </p>
+          <motion.div style={{ display: "flex", columnGap: "6rem", x }}>
+            {singleServiceWhatweDo?.map((eachItem, i) => (
+              <div key={i} className="each-service-howWeDo-step">
+                <div className="each-service-howWeDo-step-icon">
+                  <SlLike color="#fff" fontSize={28} />
+                </div>
+                <div className="each-service-howWeDo-step-title">
+                  {eachItem?.title}
+                </div>
+                <p className="each-service-howWeDo-step-des">
+                  {eachItem?.desc}
+                </p>
               </div>
-              <div className="each-service-howWeDo-step-title">
-                {eachItem.title}
-              </div>
-              <p className="each-service-howWeDo-step-des">{eachItem.des}</p>
-            </div>
-          ))}
+            ))}
+          </motion.div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
+
 
 const HorizontalScrollMobile = ({ singleServiceWhatweDo }) => {
   return (
