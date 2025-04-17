@@ -396,6 +396,11 @@ function ServcieNavComp({ handleClose }) {
     setShowSubCats(true);
     setShowServices(true);
   }
+  document.body.classList.add("no-scroll");
+
+  return()=>{
+    document.body.classList.remove("no-scroll")
+  }
     
   },[])
 
@@ -546,7 +551,7 @@ function ServcieNavComp({ handleClose }) {
     <div className="NavProductComp-container">
       <div className="navProComp-container">
         <div className="navProComp-dept-container">
-          <div className="navprocomp-items-heading">Department</div>
+          <div className="navprocomp-items-heading">Departments</div>
           <div className="navproComp-item-holder">
             <div className="navProComp-dot-container">
               {/* {hoveringOnDept &&
@@ -581,11 +586,11 @@ function ServcieNavComp({ handleClose }) {
                   >
                     {eachCat}
                   </div>
-                  {eachCat === deptname && (
+                  {/* {eachCat === deptname && (
                     <div>
                       <img src={Star} alt="" style={{ width: "18px" }} />
                     </div>
-                  )}
+                  )} */}
                 </div>
               ))}
             </div>
@@ -594,7 +599,7 @@ function ServcieNavComp({ handleClose }) {
         {MainCatArr?.length && (
           <>
             <div className="navProComp-mainCat-container">
-              <div className="navprocomp-items-heading">Industry</div>
+              <div className="navprocomp-items-heading">Categories</div>
               <div className="navproComp-item-holder">
                 <div className="navProComp-dot-container">
                   {hoveringOnMain &&
@@ -630,11 +635,11 @@ function ServcieNavComp({ handleClose }) {
                       >
                         {eachCat}
                       </div>
-                      {eachCat === mainCatName && (
+                      {/* {eachCat === mainCatName && (
                         <div>
                           <img src={Star} alt="" style={{ width: "18px" }} />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   ))}
                 </div>
@@ -676,11 +681,11 @@ function ServcieNavComp({ handleClose }) {
                       >
                         {eachItem}
                       </div>
-                      {eachItem === subCatName && (
+                      {/* {eachItem === subCatName && (
                         <div>
                           <img src={Star} alt="" style={{ width: "18px" }} />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   ))}
                 </div>

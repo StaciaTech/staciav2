@@ -101,3 +101,9 @@
 .res-title-dot.res-title-dot-active {
   background: #0047ff;
 }
+
+body.no-scroll{
+  overflow: hidden !important;
+  height: 100vh;
+  position: relative;
+}

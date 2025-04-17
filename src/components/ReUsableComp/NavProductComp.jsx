@@ -425,10 +425,29 @@ function NavProductComp({ handleClose }) {
     setShowSubCats(true);
     setShowproducts(true);
   }
+
+  document.body.classList.add("no-scroll");
+
+  return() =>{
+    document.body.classList.remove("no-scroll")
+  }
   }, []);
 
-
   console.log(productData, "ProductData");
+
+  const handleWheel = (e)=>{
+    const target = e.currentTarget;
+    const isScrollable = target.scrollHeight > target.clientHeight;
+
+    if(isScrollable){
+      const atTop = target.scrollTop === 0;
+      const atBottom = target.scrollTop + target.clientHeight >= target.scrollHeight;
+
+      if((e.deltaY < 0 && atTop) || (e.deltaY >0 && atBottom)) {
+        e.preventDefault();
+      }
+    }
+  }
 
   const [showSubCats, setShowSubCats] = useState(false);
   const [showProducts, setShowproducts] = useState(false);
@@ -606,6 +625,8 @@ function NavProductComp({ handleClose }) {
       console.log("Product not found");
     }
   };
+
+  
   
   // const result = findProductPath(productData, productTitle);
 
@@ -613,7 +634,7 @@ function NavProductComp({ handleClose }) {
     <div className="NavProductComp-container">
       <div className="navProComp-container">
         <div className="navProComp-dept-container">
-          <div className="navprocomp-items-heading">Department</div>
+          <div className="navprocomp-items-heading">Departments</div>
           <div className="navproComp-item-holder">
             <div className="navProComp-dot-container">
               {/* {hoveringOnDept &&
@@ -648,11 +669,11 @@ function NavProductComp({ handleClose }) {
                   >
                     {eachCat}
                   </div>
-                  {eachCat === deptname && (
+                  {/* {eachCat === deptname && (
                     <div>
                       <img src={Star} alt="" style={{ width: "18px" }} />
                     </div>
-                  )}
+                  )} */}
                 </div>
               ))}
             </div>
@@ -661,7 +682,7 @@ function NavProductComp({ handleClose }) {
         {MainCatArr?.length && (
           <>
             <div className="navProComp-mainCat-container">
-              <div className="navprocomp-items-heading">Industry</div>
+              <div className="navprocomp-items-heading">Categories</div>
               <div className="navproComp-item-holder">
                 <div className="navProComp-dot-container">
                   {hoveringOnMain &&
@@ -697,11 +718,11 @@ function NavProductComp({ handleClose }) {
                       >
                         {eachCat}
                       </div>
-                      {eachCat === mainCatName && (
+                      {/* {eachCat === mainCatName && (
                         <div>
                           <img src={Star} alt="" style={{ width: "18px" }} />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   ))}
                 </div>
@@ -744,11 +765,11 @@ function NavProductComp({ handleClose }) {
                       >
                         {eachItem}
                       </div>
-                      {eachItem === subCatName && (
+                      {/* {eachItem === subCatName && (
                         <div>
                           <img src={Star} alt="" style={{ width: "18px" }} />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   ))}
                 </div>

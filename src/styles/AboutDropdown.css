@@ -112,3 +112,9 @@
   width: 100%;
   object-fit: cover;
 }
+
+body.no-scroll{
+  overflow: hidden !important;
+  height: 100vh;
+  position: relative;
+}

@@ -202,6 +202,11 @@ function AboutDropDown({ handleClose }) {
         }
       }
     }
+    document.body.classList.add("no-scroll");
+
+    return ()=>{
+      document.body.classList.remove("no-scroll");
+    }
   }, []);
 
   // Update foundLeader when activeSubTitle changes (for Leadership section)
@@ -250,13 +255,13 @@ function AboutDropDown({ handleClose }) {
             }}
           >
             <span>{eachTitle.section}</span>
-            {eachTitle.section === activeTitle && (
+            {/* {eachTitle.section === activeTitle && (
               <img
                 src={Star}
                 alt=""
                 style={{ width: "18px", marginLeft: "1rem" }}
               />
-            )}
+            )} */}
           </div>
         ))}
       </div>
@@ -296,13 +301,13 @@ function AboutDropDown({ handleClose }) {
               }}
             >
               <span>{eachItem.name}</span>
-              {eachItem.name === activeSubTitle && (
+              {/* {eachItem.name === activeSubTitle && (
                 <img
                   src={Star}
                   alt=""
                   style={{ width: "18px", marginLeft: "1rem" }}
                 />
-              )}
+              )} */}
             </div>
           ))}
         </div>

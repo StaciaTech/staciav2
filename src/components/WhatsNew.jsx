@@ -142,6 +142,7 @@ import React, { useState, useEffect } from "react";
 import Star from "../assets/loadingStar.svg";
 import { useNavigate } from "react-router-dom";
 import whatsNewData from "../Data/Whatsnew.json"; // Adjust path as needed
+import "../styles/whatsNew.css"
 
 export default function WhatsNew({ handleClose }) {
   const [whatsNew] = useState(whatsNewData);
@@ -163,6 +164,10 @@ export default function WhatsNew({ handleClose }) {
 
   useEffect(()=>{
     setHoveringTitle("events")
+    document.body.classList.add("no-scroll")
+    return()=>{
+      document.body.classList.remove("no-scroll")
+    }
   },[])
   return (
     <div className="whats-new">
@@ -178,7 +183,7 @@ export default function WhatsNew({ handleClose }) {
             onMouseEnter={() => setHoveringTitle("events")}
           >
             Events
-            <img src={Star} alt="" className="whats-new-link-active-start" />
+            {/* <img src={Star} alt="" className="whats-new-link-active-start" /> */}
           </div>
           <div
             className="whats-new-link"
@@ -190,7 +195,7 @@ export default function WhatsNew({ handleClose }) {
             onMouseEnter={() => setHoveringTitle("products")}
           >
             Product's Updates
-            <img src={Star} alt="" className="whats-new-link-active-start" />
+            {/* <img src={Star} alt="" className="whats-new-link-active-start" /> */}
           </div>
           <div
             className="whats-new-link"
@@ -202,7 +207,7 @@ export default function WhatsNew({ handleClose }) {
             onMouseEnter={() => setHoveringTitle("caseStudy")}
           >
             Case Study
-            <img src={Star} alt="" className="whats-new-link-active-start" />
+            {/* <img src={Star} alt="" className="whats-new-link-active-start" /> */}
           </div>
           <div
             className="whats-new-link"
@@ -214,7 +219,7 @@ export default function WhatsNew({ handleClose }) {
             onMouseEnter={() => setHoveringTitle("articles")}
           >
             Articles
-            <img src={Star} alt="" className="whats-new-link-active-start" />
+            {/* <img src={Star} alt="" className="whats-new-link-active-start" /> */}
           </div>
           <div
             className="whats-new-link"
@@ -226,7 +231,7 @@ export default function WhatsNew({ handleClose }) {
             onMouseEnter={() => setHoveringTitle("newsroom")}
           >
             Newsroom
-            <img src={Star} alt="" className="whats-new-link-active-start" />
+            {/* <img src={Star} alt="" className="whats-new-link-active-start" /> */}
           </div>
         </div>
       </div>
