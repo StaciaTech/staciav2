@@ -568,6 +568,8 @@ import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
 import { useNavigate, useParams } from "react-router-dom";
 import data from "../Data/About.json"; // Import the JSON file
 
+
+import ClientComponent from "./Client";
 const Industries = [
   "Food Processing",
   "Agriculture",
@@ -993,13 +995,16 @@ function About() {
               navigate(`/partners`);
             }}>Read More</div>
           </div>
+          
           <div>
             <img
               src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
               alt=""
             />
           </div>
+          
         </div>
+        <ClientComponent />
         <div className="about-section10-container" id="our-leadership">
           <div className="about-section-title test-seclection-blue">
             Our Leadership

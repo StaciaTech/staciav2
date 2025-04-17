@@ -148,7 +148,7 @@ function LeaderCarousel({ data }) {
 
   // Prevent crash if singleLeader is null
   if (!singleLeader || !singleLeader.expertise) {
-    return <p>Loading...</p>;
+    return <p></p>;
   }
 
   // const scrollLeft = () => {
