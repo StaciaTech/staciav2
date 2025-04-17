@@ -259,7 +259,11 @@ function OurProjects() {
             </div>
           </div>
         </div>
-        <div className="project-image image5">
+        <div className="project-image image5" 
+        onClick={
+          ()=>{navigate(`project`);
+            window.scrollTo(0,0);
+          }}>
           <div className="image5-title">Overall Projects</div>
           <div className="image5-count">24</div>
         </div>

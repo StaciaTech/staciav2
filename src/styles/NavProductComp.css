@@ -1,13 +1,14 @@
 .NavProductComp-container {
   position: absolute;
   top: 100%;
-  z-index: 999;
+  /* z-index: 999; */
   background-color: #fff;
   width: 100%;  
   box-sizing: border-box;
   height: 460px;
   border-bottom: 1px solid #e5e5e5;
 }
+
 .navProComp-container {
   width: 100%;
   /* height: 100%; */
@@ -34,11 +35,11 @@
 }
 .navProComp-mainCat-item-container,
 .navProComp-subCat-item-container {
-  overflow-y: scroll;
+  overflow-y: auto;
   /* height: 40vh; */
   padding: 1rem 1.5rem;
   width: 100%;
-  height: inherit;
+  max-height: 420px;
   -ms-overflow-style: none; /*IE and Edge */
   scrollbar-width: none; /*Firefox */
 }
@@ -185,5 +186,7 @@ body.dropdown-open{
 }
 
 body.no-scroll {
-  overflow: hidden;
+  overflow: hidden !important;
+  height: 100vh;
+  position: relative;
 }

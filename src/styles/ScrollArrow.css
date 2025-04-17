@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  filter: drop-shadow(0px 4px 11px #0d0255);
+  filter: drop-shadow(0px 4px 5px #0d0255);
 }
 
 .progress-border {

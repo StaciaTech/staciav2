@@ -625,6 +625,8 @@ function NavProductComp({ handleClose }) {
       console.log("Product not found");
     }
   };
+
+  
   
   // const result = findProductPath(productData, productTitle);
 
@@ -632,7 +634,7 @@ function NavProductComp({ handleClose }) {
     <div className="NavProductComp-container">
       <div className="navProComp-container">
         <div className="navProComp-dept-container">
-          <div className="navprocomp-items-heading">Department</div>
+          <div className="navprocomp-items-heading">Departments</div>
           <div className="navproComp-item-holder">
             <div className="navProComp-dot-container">
               {/* {hoveringOnDept &&
@@ -680,7 +682,7 @@ function NavProductComp({ handleClose }) {
         {MainCatArr?.length && (
           <>
             <div className="navProComp-mainCat-container">
-              <div className="navprocomp-items-heading">Industry</div>
+              <div className="navprocomp-items-heading">Categories</div>
               <div className="navproComp-item-holder">
                 <div className="navProComp-dot-container">
                   {hoveringOnMain &&

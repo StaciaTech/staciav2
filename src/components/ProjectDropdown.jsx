@@ -36,6 +36,11 @@ function ProjectDropdown({ handleClose }) {
     setActiveCategory(firstCategory?.name);
     setActiveProject(firstProject?.title);
   }
+  document.body.classList.add("no-scroll");
+
+  return()=>{
+    document.body.classList.remove("no-scroll")
+  }
   },[])
 
   // console.log(projectsData);
@@ -75,7 +80,8 @@ function ProjectDropdown({ handleClose }) {
     }
   }, [activeProject, projectArr]);
 
-  console.log(activeDept,activeCategory,activeProject,categoryArr,projectArr,foundProject, "Mosesdata")
+
+
   return (
     <div className="project-dd-container">
       <div className="project-dept-container">
@@ -103,13 +109,13 @@ function ProjectDropdown({ handleClose }) {
               }`} key={i}
             >
               <span>{eachitem.name}</span>
-              {eachitem.name === activeDept && (
+              {/* {eachitem.name === activeDept && (
                 <img
                   src={Star}
                   alt=""
                   style={{ width: "18px", marginLeft: "1rem" }}
                 />
-              )}
+              )} */}
             </div>
           );
         })}
@@ -159,13 +165,13 @@ function ProjectDropdown({ handleClose }) {
                   }}
                 >
                   <span>{eachitem.name}</span>
-                  {eachitem.name === activeCategory && (
+                  {/* {eachitem.name === activeCategory && (
                     <img
                       src={Star}
                       alt=""
                       style={{ width: "18px", marginLeft: "1rem" }}
                     />
-                  )}
+                  )} */}
                 </div>
               );
             })}
@@ -213,13 +219,13 @@ function ProjectDropdown({ handleClose }) {
                   }}
                 >
                   <span>{eachProject.title}</span>
-                  {eachProject.title === activeProject && (
+                  {/* {eachProject.title === activeProject && (
                     <img
                       src={Star}
                       alt=""
                       style={{ width: "18px", marginLeft: "1rem" }}
                     />
-                  )}
+                  )} */}
                 </div>
               );
             })}
