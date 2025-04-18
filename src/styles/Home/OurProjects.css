@@ -12,6 +12,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 1.50%;
+  padding-bottom: 2rem;
 }
 .our-projects-card-grid {
   display: grid;
