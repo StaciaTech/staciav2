@@ -326,8 +326,8 @@ function NavBar() {
       <div className="nav-container">
         <div className="nav-items-container">
           <div className="nav-left">
-            <div className="mobile-nav">
-              <img src={MobileNav} alt="" />
+            <div className="mobile-nav"> 
+              <img src={MobileNav} alt="" /> 
             </div>
             <Link
               to={"/"}
@@ -363,10 +363,10 @@ function NavBar() {
                 }}
               >
                 <img
-                  src={StaciaLogoText}
+                  src={StaciaLogoText} //5
                   alt="Home"
                   className="nav-logo"
-                  style={{ width: "90%", height: "100%", objectFit: "contain" }}
+                  style={{ width: "90%", height: "100%", objectFit: "contain" }}  // Stacia Corp logo
                 />
                 <div className="nav-logo-text" ref={textRef}>
                   {text.split("").map((letter, i) => (

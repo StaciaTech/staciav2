@@ -73,7 +73,7 @@ const Banner = () => {
   }, [futureEvents]);
 
   if (loading) return <p className="loading">Loading...</p>;
-  if (error) return <p className="error-message">{error}</p>;
+  if (error) return <p className="error-message1">{error}</p>;
   if (!futureEvents.length) return <p className="no-data">No upcoming events found.</p>;
 
   return (
