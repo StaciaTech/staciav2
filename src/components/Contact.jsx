@@ -269,7 +269,9 @@
 
 // export default Contact;
 
+
 //other input
+
 
 // import React, { useEffect, useState } from "react";
 // import "../styles/Contact.css";
@@ -308,6 +310,7 @@
 //     customOrg:"",
 //   })
 
+
 //   useEffect(()=>{
 //     document.body.classList.add("no-scroll");
 
@@ -320,7 +323,7 @@
 
 // const validateField = (name,value)=>{
 //   switch(name){
-//     case"name":
+//     case"name": 
 //     return value.trim() ? "": "Name is required";
 //     case "mail":
 //       if(!value.trim()) return "Email is required";
@@ -508,7 +511,7 @@
 //               <div className="contact-second-title">Keep in Touch!</div>
 //             </div>
 //             <div className="input-container">
-
+              
 //               <div className="input-wrapper">
 //                 <input
 //                   type="text"
@@ -563,7 +566,7 @@
 //                         {eachTitle}
 //                       </p>
 //                     ))}
-//                   </div>
+//                   </div>                  
 //                 )}
 //               </div>
 //               {organization === "Others" && (
@@ -613,6 +616,7 @@
 // }
 // export default Contact;
 
+
 import React, { useEffect, useState } from "react";
 import "../styles/Contact.css";
 import StaciaContactLogo from "../assets/StaciaContactLogo.svg";
@@ -623,14 +627,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Insta from "../assets/c-inst.svg";
-import fb from "../assets/c-fb.svg";
-import twt from "../assets/c-twitter.svg";
-import lin from "../assets/c-link.svg";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
 
 const titles = [
   "Information Technology",
@@ -647,7 +645,7 @@ function Contact({ closeHandle }) {
   const [organization, setOrganization] = useState("");
   const [customOrg, setCustomOrg] = useState("");
   const [messageValue, setMessageValue] = useState("");
-  const [showOpt, setShoeOpt] = useState(false);
+  const [showOpt, setShowOpt] = useState(false);
   const [errors, setErrors] = useState({
     name: "",
     mail: "",
@@ -661,7 +659,7 @@ function Contact({ closeHandle }) {
     return () => {
       document.body.classList.remove("no-scroll");
     };
-  });
+  }, []);
 
   // Email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -733,8 +731,6 @@ function Contact({ closeHandle }) {
     };
 
     setErrors(newErrors);
-
-    // Return true if no errors
     return !Object.values(newErrors).some((error) => error);
   };
 
@@ -812,7 +808,7 @@ function Contact({ closeHandle }) {
         <div className="contact-form-container">
           <div className="contact-form-image-container">
             <div>
-              <img src={StaciaContactLogo} alt="" />
+              <img src={StaciaContactLogo} alt="Stacia Logo" />
             </div>
             <div className="contact-socials">
               <div>
@@ -886,9 +882,7 @@ function Contact({ closeHandle }) {
                   onBlur={(e) => handleBlur("name", e.target.value)}
                   value={nameValue}
                 />
-                {errors.name && (
-                  <span className="error-message">{errors.name}</span>
-                )}
+                {errors.name && <span className="error-message">{errors.name}</span>}
               </div>
               <div className="input-wrapper">
                 <input
@@ -899,18 +893,14 @@ function Contact({ closeHandle }) {
                   onBlur={(e) => handleBlur("mail", e.target.value)}
                   value={mailValue}
                 />
-                {errors.mail && (
-                  <span className="error-message">{errors.mail}</span>
-                )}
+                {errors.mail && <span className="error-message">{errors.mail}</span>}
               </div>
             </div>
             <div className="input-container">
               <div className="input-wrapper">
                 <div
-                  className={`organization-container ${
-                    errors.organization ? "invalid" : ""
-                  }`}
-                  onClick={() => setShoeOpt(!showOpt)}
+                  className={`organization-container ${errors.organization ? "invalid" : ""}`}
+                  onClick={() => setShowOpt(!showOpt)}
                 >
                   <input
                     type="text"
@@ -928,7 +918,7 @@ function Contact({ closeHandle }) {
                           key={i}
                           onClick={() => {
                             handleInputChange("organization", eachTitle);
-                            setShoeOpt(false);
+                            setShowOpt(false);
                             if (eachTitle !== "Others") setCustomOrg("");
                           }}
                           className="pointer"
@@ -944,47 +934,37 @@ function Contact({ closeHandle }) {
                   <span className="error-message">{errors.organization}</span>
                 )}
               </div>
-              {organization === "Others" && (
+              <div className="input-wrapper">
+                <div className={`mobile-container ${errors.phone ? "invalid" : ""}`}>
+                  <PhoneInput
+                    placeholder="Enter phone number*"
+                    value={phoneValue}
+                    defaultCountry="IN"
+                    onChange={(value) => handleInputChange("phone", value || "")}
+                    onBlur={() => handleBlur("phone", phoneValue)}
+                    className="PhoneInput"
+                  />
+                </div>
+                {errors.phone && <span className="error-message">{errors.phone}</span>}
+              </div>
+            </div>
+            {organization === "Others" && (
+              <div className="input-container">
                 <div className="input-wrapper">
                   <input
                     type="text"
                     placeholder="Enter your organization name*"
-                    className={`input-field ${
-                      errors.customOrg ? "invalid" : ""
-                    }`}
+                    className={`input-field ${errors.customOrg ? "invalid" : ""}`}
                     value={customOrg}
-                    onChange={(e) =>
-                      handleInputChange("customOrg", e.target.value)
-                    }
+                    onChange={(e) => handleInputChange("customOrg", e.target.value)}
                     onBlur={(e) => handleBlur("customOrg", e.target.value)}
                   />
                   {errors.customOrg && (
                     <span className="error-message">{errors.customOrg}</span>
                   )}
                 </div>
-              )}
-              <div className="input-wrapper">
-                <div
-                  className={`mobile-container ${
-                    errors.phone ? "invalid" : ""
-                  }`}
-                >
-                  <PhoneInput
-                    placeholder="Enter phone number*"
-                    value={phoneValue}
-                    defaultCountry="IN"
-                    onChange={(value) =>
-                      handleInputChange("phone", value || "")
-                    }
-                    onBlur={() => handleBlur("phone", phoneValue)}
-                    className="PhoneInput"
-                  />
-                </div>
-                {errors.phone && (
-                  <span className="error-message">{errors.phone}</span>
-                )}
               </div>
-            </div>
+            )}
             <div className="input-wrapper">
               <textarea
                 className="message-area"
@@ -1012,4 +992,4 @@ function Contact({ closeHandle }) {
   );
 }
 
-export default Contact;
+export default Contact; 
