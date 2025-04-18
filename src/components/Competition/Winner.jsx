@@ -1,19 +1,16 @@
-
 import React, { useRef, useState, useEffect } from "react";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "../../styles/competition/Winner.css";
 import winnersData from "../../Data/Winner.json";
 import dateimg from "../../assets/calendar.png";
 import eventtag from "../../assets/event-tag.png";
-
-
-
 function Winners() {
     const [winners, setWinners] = useState([]);
     const [eventInfo, setEventInfo] = useState({});
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [showForm, setShowForm] = useState(false);
+    const [selectedCertificate, setSelectedCertificate] = useState(null);
     const scrollContainerRef = useRef(null);
-
     useEffect(() => {
         try {
             const data = winnersData.docs[0];
@@ -21,53 +18,46 @@ function Winners() {
                 event: data.event,
                 date: data.date,
                 category: data.category,
-                description: data.description
+                description: data.description,
             });
             setWinners(data.data);
         } catch (error) {
             console.error("Error loading winners data:", error);
         }
     }, []);
-
-    // Unified scroll function
     const scrollToIndex = (index) => {
         const newIndex = Math.max(0, Math.min(index, winners.length - 1));
         setCurrentIndex(newIndex);
-
         if (scrollContainerRef.current) {
-            const cardWidth = window.innerWidth <= 768 ?
-                window.innerWidth * 0.9 : // Mobile width
-                window.innerWidth * 0.3; // Desktop width
+            const cardWidth =
+                window.innerWidth <= 768
+                    ? window.innerWidth * 0.9
+                    : window.innerWidth * 0.3;
             const scrollAmount = cardWidth * newIndex;
-
             scrollContainerRef.current.scrollTo({
                 left: scrollAmount,
                 behavior: "smooth",
             });
         }
     };
-
-    const scrollLeft = () => {
-        scrollToIndex(currentIndex - 1);
+    const scrollLeft = () => scrollToIndex(currentIndex - 1);
+    const scrollRight = () => scrollToIndex(currentIndex + 1);
+    const mobscrollLeft = () => scrollToIndex(currentIndex - 1);
+    const mobscrollRight = () => scrollToIndex(currentIndex + 1);
+    const handleDownloadClick = (certificate) => {
+        setSelectedCertificate(certificate);
+        setShowForm(true);
     };
-
-    const scrollRight = () => {
-        scrollToIndex(currentIndex + 1);
-    };
-
-    // Mobile-specific scroll functions
-    const mobscrollLeft = () => {
-        scrollToIndex(currentIndex - 1);
-    };
-
-    const mobscrollRight = () => {
-        scrollToIndex(currentIndex + 1);
-    };
-
     if (winners.length === 0) {
         return <div>Loading...</div>;
     }
 
+    // useEffect(() => {
+        
+    //     document.body.classList.add("no-scroll");
+    //     return () => document.body.classList.remove("no-scroll")
+
+    // }, [])
     return (
         <div className="winner-container">
             <div className="winner-section1-container-title">Our Latest Winners</div>
@@ -77,38 +67,36 @@ function Winners() {
                     <div className="Winner-date-category">
                         <span className="winner-date">
                             <img src={dateimg} alt="Date" className="date-icon" />
-                            {eventInfo.date}</span>
+                            {eventInfo.date}
+                        </span>
                         <span className="winner-category">
-                            <img src={eventtag} alt="Date" className="date-icon" />
-                            {eventInfo.category}</span>
+                            <img src={eventtag} alt="Category" className="date-icon" />
+                            {eventInfo.category}
+                        </span>
                     </div>
                     <div>
                         <p>{eventInfo.description}</p>
                     </div>
                 </div>
-
-                {/* Desktop navigation */}
                 <div className="winner-section1-btn-container">
-
-
                     <div>
-                        <GoArrowLeft size={24} onClick={scrollLeft}
+                        <GoArrowLeft
+                            size={24}
+                            onClick={scrollLeft}
                             disabled={currentIndex === 0}
-                            className={currentIndex === 0 ? "disabled" : ""} />
+                            className={currentIndex === 0 ? "disabled" : ""}
+                        />
                     </div>
-
-
                     <div>
-                        <GoArrowRight size={24} onClick={scrollRight}
+                        <GoArrowRight
+                            size={24}
+                            onClick={scrollRight}
                             disabled={currentIndex === winners.length - 1}
-                            className={currentIndex === winners.length - 1 ? "disabled" : ""} />
-
+                            className={currentIndex === winners.length - 1 ? "disabled" : ""}
+                        />
                     </div>
                 </div>
-
-
             </div>
-
             <div className="winner-section1-items-container" ref={scrollContainerRef}>
                 {winners.map((eachItem, i) => (
                     <div key={i} className="winner-section1-item-card">
@@ -118,13 +106,13 @@ function Winners() {
                         <div className="winner-section1-item-content">
                             <div>{eachItem.title}</div>
                             <p>{eachItem.details}</p>
+                            <button className="register-btn1" onClick={() => handleDownloadClick(eachItem)}>
+                                Certificate Download
+                            </button>
                         </div>
                     </div>
                 ))}
             </div>
-
-
-            {/* Carousel dots */}
             <div className="carousel-dots">
                 {winners.map((_, index) => (
                     <span
@@ -134,26 +122,52 @@ function Winners() {
                     ></span>
                 ))}
             </div>
-
-            {/* Mobile navigation */}
             <div className="winner-section1-mob-btn-container">
-
-
                 <div>
-                    <GoArrowLeft size={24} onClick={mobscrollLeft}
+                    <GoArrowLeft
+                        size={24}
+                        onClick={mobscrollLeft}
                         disabled={currentIndex === 0}
-                        className={currentIndex === 0 ? "disabled" : ""} />
-
+                        className={currentIndex === 0 ? "disabled" : ""}
+                    />
                 </div>
                 <div>
-                    <GoArrowRight size={24} onClick={mobscrollRight}
+                    <GoArrowRight
+                        size={24}
+                        onClick={mobscrollRight}
                         disabled={currentIndex === winners.length - 1}
-                        className={currentIndex === winners.length - 1 ? "disabled" : ""} />
+                        className={currentIndex === winners.length - 1 ? "disabled" : ""}
+                    />
                 </div>
-
             </div>
+            {/* Certificate popup */}
+            {showForm && selectedCertificate && (
+                <div className="popup-form-overlay">
+                    <div className="popup-form-container">
+                        <h3>Certificate Preview</h3>
+                        <img
+                            src={selectedCertificate.certificateUrl}
+                            alt="Certificate"
+                            className="certificate-preview-img"
+                        />
+                        <a
+                            href={selectedCertificate.certificateUrl}
+                            download
+                            className="download-btn"
+                        >
+                            Download
+                        </a>
+                        <button
+                            type="button"
+                            className="close-btn"
+                            onClick={() => setShowForm(false)}
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
-
 export default Winners;

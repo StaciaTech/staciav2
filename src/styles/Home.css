@@ -250,6 +250,10 @@ section {
 .client-marquee {
   width: 100%;
   height: 100%;
+  filter: grayscale(100%);
+}
+.client-marquee:hover{
+filter: grayscale(0%);
 }
 /*  */
 
@@ -317,6 +321,7 @@ section {
   line-height: normal;
   margin: 0px 5%;
   margin-bottom: 20px;
+  font-family: EuclidSemibold;
 }
 
 .service-left {

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function MobileArticle() {
   return (
+    <div style={{ marginBottom: "1rem" }}>
     <div className="mobile-article">
       <h3 className="mobile-article-title">Articles</h3>
       <div className="mobile-article-card-container">
@@ -11,6 +12,7 @@ export default function MobileArticle() {
         <MobileArticleCard />
         <MobileArticleCard />
       </div>
+    </div>
     </div>
   );
 }
