@@ -49,3 +49,14 @@
     display: block;
   }
 }
+
+@media screen and  (max-width: 475px) {
+  .nav-logo1 {
+    width: 140px;
+    height: 30px;
+  }
+  .nav-logo-text1{
+    font-size:10px;
+  }
+  
+}

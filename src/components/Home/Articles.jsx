@@ -42,7 +42,7 @@ function SingleArticleCard() {
 }
 function Articles() {
   return (
-    <div>
+    <div style={{ marginBottom: "1rem" }}>
       <div className="articles-title">Articles</div>
       <div className="article-slider">
         {/* <Marquee

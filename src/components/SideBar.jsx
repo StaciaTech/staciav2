@@ -321,7 +321,7 @@
 // };
 
 
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useRef } from "react";
 import "../styles/sideBar.css";
 import { useNavigate } from "react-router-dom";
 import DarkLogo from "../assets/sideBarStaciaLogoLite.svg";
@@ -332,6 +332,14 @@ import Cancle from "../assets/close-delete-remove-3_svgrepo.com.svg";
 import Contact from "./Contact";
 import Modal from "react-modal";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import StaciaLogo from "../assets/Stacia Monogram.svg";
+import { useAnimation, motion } from "framer-motion";
+import { NavLink, Link } from "react-router-dom";
+import StaciaLogoText from "../assets/Stacia logo.svg";
+import five from "../assets/5yr logo.svg";
+import gsap from "gsap";
+
+
 
 function SideBar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -339,9 +347,101 @@ function SideBar() {
   const [showContact, setShowContact] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
+  const [logo, setLogo] = useState(StaciaLogo);
+  const [text, setText] = useState("Innovating for you");
+  const controls = useAnimation();
+  const animationStarted = useRef(false);
+
+
+
+
+  const textRef = useRef(null);
+
 
   const navigateTo = useNavigate();
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLogo((prevLogo) => (prevLogo === StaciaLogo ? five : StaciaLogo));
+      setText((prevText) =>
+        prevText === "Innovating for you"
+          ? `Celebrating 5th Anniversary`
+          : "Innovating for you"
+      );
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (scrollY > 0) {
+      if (!animationStarted.current) {
+        animationStarted.current = true;
+        // Animate text to disappear from right to left
+        controls.start("hidden");
+      }
+    } else {
+      if (animationStarted.current) {
+        animationStarted.current = false;
+        // Animate text to appear from left to right
+        controls.start("visible");
+      }
+    }
+  }, [scrollY, controls]);
+
+
+
+  useEffect(() => {
+    const letters = textRef.current?.querySelectorAll("span");
+    if (letters) {
+      gsap.fromTo(
+        letters,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.5,
+        }
+      );
+      const timeout = setTimeout(() => {
+        gsap.fromTo(
+          letters,
+          { opacity: 1 },
+          {
+            opacity: 1,
+            stagger: -0.1,
+            duration: 0.2,
+          }
+        )
+      }, 4200)
+      return () => clearTimeout(timeout);
+    }
+  }, [text])
+
+  const flipVariants = {
+    hidden: {
+      rotateY: 90,
+      opacity: 0,
+      transition: { duration: 0.5 },
+    },
+    visible: {
+      rotateY: 0,
+      opacity: 1,
+      transition: { duration: 0.5 },
+    },
+  };
   const NavItems = [
     {
       title: "Services",
@@ -488,7 +588,53 @@ function SideBar() {
               {showDropdown ? (
                 <img src={DarkLogo} alt="logo" />
               ) : (
-                <img src={whiteLogo} alt="logo" />
+                // <img src={whiteLogo} alt="logo" /> // Mobile log0
+                <Link
+                  to={"/"}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                  style={{
+                    marginRight: "2.5rem",
+                    position: "relative",
+                    display: "flex",
+                    alignItems: "center",
+                    columnGap: "0.75rem",
+                  }}
+                >
+                  <motion.img
+                    key={logo} // Key changes to trigger animation
+                    src={logo}
+                    alt="Stacia Logo"
+                    className="logo-rotate"
+                    style={{
+                      height: "2.5rem",
+                      width: "2.5rem",
+                      objectFit: "contain",
+                    }}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    variants={flipVariants}
+                  />
+                  <div
+                    style={{
+                      marginBottom: "0.3rem",
+                    }}
+                  >
+                    <img
+                      src={StaciaLogoText} //5
+                      alt="Stacia Corp"
+                      className="nav-logo1"
+                      style={{ width: "90%", height: "100%", objectFit: "contain" }}  // Stacia Corp logo
+                    />
+                    <div className="nav-logo-text1" ref={textRef}>
+                      {text.split("").map((letter, i) => (
+                        <span key={i}>{letter}</span> // Each letter wrapped in a span
+                      ))}
+                    </div>
+                  </div>
+                </Link>
               )}
             </div>
           </div>
