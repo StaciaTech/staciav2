@@ -147,7 +147,7 @@
   text-align: center;
   cursor: pointer;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   .our-projects-container{
     display: none;
   }

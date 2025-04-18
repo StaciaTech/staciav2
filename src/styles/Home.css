@@ -321,6 +321,7 @@ filter: grayscale(0%);
   line-height: normal;
   margin: 0px 5%;
   margin-bottom: 20px;
+  font-family: EuclidSemibold;
 }
 
 .service-left {
