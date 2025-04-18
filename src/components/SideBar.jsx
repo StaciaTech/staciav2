@@ -337,6 +337,7 @@ import { useAnimation, motion } from "framer-motion";
 import { NavLink, Link } from "react-router-dom";
 import StaciaLogoText from "../assets/Stacia logo.svg";
 import five from "../assets/5yr logo.svg";
+import gsap from "gsap";
 
 
 
@@ -352,24 +353,17 @@ function SideBar() {
   const [text, setText] = useState("Innovating for you");
   const controls = useAnimation();
   const animationStarted = useRef(false);
-  
-  
-  
-
-    const textRef = useRef(null);
-  
-
+  const textRef = useRef(null);
   const navigateTo = useNavigate();
+
   useEffect(() => {
       const handleScroll = () => {
         setScrollY(window.scrollY);
       };
   
-      window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
+      window.addEventListener("scroll", handleScroll);  
+      return () => window.removeEventListener("scroll", handleScroll);
+      
     }, []);
 
    useEffect(() => {
@@ -380,10 +374,10 @@ function SideBar() {
             ? `Celebrating 5th Anniversary`
             : "Innovating for you"
         );
-      }, 7000);
-  
+      }, 7000);  
       return () => clearInterval(interval);
     }, []);
+
 
       useEffect(() => {
         if (scrollY > 0) {
@@ -400,6 +394,36 @@ function SideBar() {
           }
         }
       }, [scrollY, controls]);
+
+
+      useEffect(()=>{
+        const letters = textRef.current?.querySelectorAll("span");
+
+        if(letters){
+          gsap.fromTo(
+            letters,
+            {opacity:0},
+            {
+              opacity:1,
+              stagger:0.1,
+              duration:0.5,
+            }
+          );
+
+          const timeout =setTimeout(()=>{
+            gsap.fromTo(
+              letters,
+              {opacity:1},
+              {
+                opacity:1,
+                stagger:-0.1,
+                duration:0.2,
+              }
+            )
+          },4200)
+          return()=> clearTimeout(timeout);
+        }
+      },[text])
 
   const flipVariants = {
     hidden: {
@@ -576,7 +600,7 @@ function SideBar() {
                               <motion.img
                                 key={logo} // Key changes to trigger animation
                                 src={logo}
-                                alt=""
+                                alt="Stacia Logo"
                                 className="logo-rotate"
                                 style={{
                                   height: "2.5rem",
@@ -589,13 +613,11 @@ function SideBar() {
                                 variants={flipVariants}
                               />
                               <div
-                                style={{
-                                  marginBottom: "0.3rem",
-                                }}
+                                style={{ marginBottom: "0.3rem"}}
                               >
                                 <img
                                   src={StaciaLogoText} //5
-                                  alt="Home"
+                                  alt="Stacia Corp"
                                   className="nav-logo1"
                                   style={{ width: "90%", height: "100%", objectFit: "contain" }}  // Stacia Corp logo
                                 />

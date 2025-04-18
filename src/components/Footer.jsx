@@ -7,7 +7,6 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import Modal from "react-modal";
-
 function Footer() {
   const navigate = useNavigate();
   const [showContactForm, setShowContactForm] = useState(false);
@@ -82,7 +81,7 @@ function Footer() {
       </div>
       <div className="footer-tabs">
         <div>
-          <div style={{ color: "#6b6084", userSelect: "none" }}>
+          <div style={{ color: "#6B6084", userSelect: "none" }}>
             Start a Conversation
           </div>
           <div
@@ -103,12 +102,15 @@ function Footer() {
         {/* <div className="footer-nav-tabs"> */}
         <div>
           <div>Company</div>
-          <div className="footer-grey-tabs"
-           onClick={() => {
-            navigate("/about");
-            window.scrollTo(0, 0);
-          }}
-          >About</div>
+          <div
+            className="footer-grey-tabs"
+            onClick={() => {
+              navigate("/about");
+              window.scrollTo(0, 0);
+            }}
+          >
+            About
+          </div>
           <div
             className="footer-grey-tabs"
             onClick={() => {
@@ -175,15 +177,16 @@ function Footer() {
           >
             Articles
           </div>
-          <div className="footer-grey-tabs"
-           onClick={() => {
-            navigate("/whatsnew");
-            window.scrollTo(0, 0);
-          }}
+          <div
+            className="footer-grey-tabs"
+            onClick={() => {
+              navigate("/whatsnew");
+              window.scrollTo(0, 0);
+            }}
           >
-            What's New</div>
+            What's New
+          </div>
         </div>
-
         <div>
           <div>Reach Us</div>
           <div className="footer-grey-tabs pointer">
@@ -202,7 +205,7 @@ function Footer() {
                 Thiru Vi Ka Industrial Estate, SIDCO Industrial
               </div> */}
               <div className="footer-grey-tabs-child test-seclection-blue">
-                 Guindy, Chennai - 32, Tamil Nadu
+                Guindy, Chennai - 32, Tamil Nadu
               </div>
             </a>
           </div>
@@ -221,7 +224,20 @@ function Footer() {
             width: "35%",
           }}
         >
-          <div>Terms of service</div>
+          <a
+            href="https://staciacorp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              style={{
+                cursor: "pointer",
+                color: "black",
+              }}
+            >
+              Terms of Service
+            </div>
+          </a>
           <div
             style={{
               width: "10px",
@@ -232,7 +248,13 @@ function Footer() {
               marginRight: "35px",
             }}
           />
-          <div>Privacy Policy</div>
+          <a
+            href="https://your-link.com/terms.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div style={{ cursor: "pointer",color:"black" }}>Privacy policy</div>
+          </a>
         </div>
         <div className="footer-icons">
           <div>
@@ -289,5 +311,4 @@ function Footer() {
     </div>
   );
 }
-
 export default Footer;

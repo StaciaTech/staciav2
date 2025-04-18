@@ -6,14 +6,11 @@
   width: 100%;
   padding: 0rem 2rem;
   box-sizing: border-box;
-  max-height: 400px;
-  /* min-height: 400px; */
-  height: 500px;
+  max-height: 500px;
+  height: 460px;
   display: flex;
   border-bottom: 1px solid #e5e5e5;
-  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.2);  
-  /* overflow-x: hidden;
-  overflow-y: auto; */
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.2); 
 }
 .project-top-titles {
   color: #d9d9d9;
@@ -36,10 +33,12 @@
 .project-category-container,
 .project-title-container {
   display: flex;
+  animation: slideIn 0.5s ease-out forwards;
+
 }
 .project-title-dot-container {
-  display: none;
-  width: 3rem;
+  display: flex;
+  width: 2rem;
   height: 100%;
   position: relative;
 }
