@@ -172,7 +172,6 @@ function Winners() {
 
 
 
-
                         <a
                             href={`/certificates/${encodeURIComponent(selectedCertificate.id)}`}
                             target="_blank"
