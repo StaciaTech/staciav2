@@ -360,6 +360,7 @@ function SideBar() {
 
 
   const navigateTo = useNavigate();
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -429,6 +430,36 @@ function SideBar() {
       return () => clearTimeout(timeout);
     }
   }, [text])
+
+
+      useEffect(()=>{
+        const letters = textRef.current?.querySelectorAll("span");
+
+        if(letters){
+          gsap.fromTo(
+            letters,
+            {opacity:0},
+            {
+              opacity:1,
+              stagger:0.1,
+              duration:0.5,
+            }
+          );
+
+          const timeout =setTimeout(()=>{
+            gsap.fromTo(
+              letters,
+              {opacity:1},
+              {
+                opacity:1,
+                stagger:-0.1,
+                duration:0.2,
+              }
+            )
+          },4200)
+          return()=> clearTimeout(timeout);
+        }
+      },[text])
 
   const flipVariants = {
     hidden: {
