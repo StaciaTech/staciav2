@@ -10,6 +10,24 @@
   justify-content: center;
   align-items: center;
 }
+.phone-input{
+  width: 100%;
+  height: 47px;
+  border-radius: 10px;
+  border: 1px solid #C8C8C9;
+}
+.error-span {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  display: block;
+  margin-left: 10px;
+}
+/*  selecgt job input */
+.job-role-input{
+  width: 100%;
+  height: 45px;
+}
 .job-form-inner {
   background-color: #fff;
   padding: 2rem;
@@ -44,16 +62,15 @@
   padding: 0rem 1rem;
   font-family: EuclidMedium;
 }
-
 .job-input-holder > input::placeholder,
 .role-input-holder > input::placeholder,
 .job-role-input::placeholder {
   font-family: EuclidMedium;
-  color: #c8c8c9;
+  color: #C8C8C9;
 }
 .job-input-holder-phone {
   width: 100%;
-  border: 1px solid #cadbea;
+  border: 1px solid #CADBEA;
   border-radius: 10px;
   padding: 0rem 0.5rem;
   height: 3rem;
@@ -90,14 +107,14 @@
   width: 100%;
 }
 .role-option:hover {
-  border-left: 3px solid #0047ff;
+  border-left: 3px solid #0047FF;
   padding-left: 0.5rem;
   transition: 0.2s ease-in;
 }
 .resume-container {
   width: 100%;
   /* height: 10rem; */
-  border: 1px dashed #cadbea;
+  border: 1px dashed #CADBEA;
   display: block;
   border-radius: 15px;
   margin: 0.5rem 0rem;
@@ -115,11 +132,11 @@
 .resume-box > button {
   text-align: center;
   width: fit-content;
-  background-color: #c5d6ff;
+  background-color: #C5D6FF;
   padding: 0.5rem 1rem;
-  border: 2px solid #0047ff;
+  border: 2px solid #0047FF;
   border-radius: 5px;
-  color: #0047ff;
+  color: #0047FF;
   font-family: EuclidMedium;
 }
 .job-btn-container {
@@ -133,17 +150,16 @@
 }
 .job-cancel {
   background-color: #fff;
-  color: #6b6084;
-  border: 2px solid #6b6084;
+  color: #6B6084;
+  border: 2px solid #6B6084;
   font-family: EuclidMedium;
 }
 .job-submit {
-  border: 2px solid #0047ff;
-  background-color: #0047ff;
+  border: 2px solid #0047FF;
+  background-color: #0047FF;
   color: #fff;
   font-family: EuclidMedium;
 }
-
 @media screen and (max-width: 1024px) {
   .job-form-inner {
     width: 85%;
@@ -154,3 +170,12 @@
     font-size: 1.5rem;
   }
 }
+
+
+
+
+
+
+
+
+

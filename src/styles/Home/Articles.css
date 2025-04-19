@@ -15,6 +15,7 @@
   align-items: flex-end;
   display: flex;
   padding: 2rem;
+  padding-left: 3rem;
 }
 
 .single-article-card-image {
@@ -32,7 +33,7 @@
   color: white;
   font-family: "Euclid";
   filter: grayscale(0);
-  margin-left: 1rem;
+  margin-left: 3rem;
   margin-right: 1rem;
   align-self: flex-end;
   transition: all 0.3s ease;
@@ -102,8 +103,9 @@
 }
 
 .mobile-article-title {
-  color: #e0e0e0;
-  font-size: 1.5rem;
+  /* color: #e0e0e0; */
+  color: #6b6084;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
