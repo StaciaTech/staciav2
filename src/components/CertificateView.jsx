@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const certificateData = {
-  "Mr-Elanchezhian-131857041282955840930-2025-03": "/assets/winner03-03-2025.png",
+  "Mr-Elanchezhian-131857041282955840930-2025-03": "/assets/Winn1.png",
   "arun-456": "/assets/caseStudy-2.webp",
   // Add more...
 };
