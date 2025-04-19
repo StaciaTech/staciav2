@@ -602,7 +602,7 @@ function ServcieNavComp({ handleClose }) {
               <div className="navprocomp-items-heading">Categories</div>
               <div className="navproComp-item-holder">
                 <div className="navProComp-dot-container">
-                  {hoveringOnMain &&
+                  {
                     MainCatArr?.map((dot, i) => (
                       <div
                         key={i}
