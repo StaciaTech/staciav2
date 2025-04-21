@@ -1,160 +1,5 @@
-// import React, { useEffect, useState } from "react";
-// import "../styles/AboutDropdown.css";
-// import { useNavigate } from "react-router-dom";
-// import PlcImg from "../assets/abt-dd-logo.png";
-// import Star from "../assets/loadingStar.svg";
-// import data from "../Data/About.json"; // Importing JSON data
-
-// function AboutDropDown({ handleClose }) {
-
-//   const navigate = useNavigate();
-//   const [Leaders, setLeaders] = useState(data.leaders);
-
-//   const AboutArr = data.aboutSections;
-
-//   const [sectionTitles, setSectionTitles] = useState([]);
-//   const [subSectionTitles, setSubSectionTitles] = useState([]);
-//   const [foundLeader, setFoundLeader] = useState();
-//   const [activeTitle, setActiveTitle] = useState();
-//   const [activeSubTitle, setActiveSubTitle] = useState();
-
-//   useEffect(() => {
-//     setSectionTitles(AboutArr?.map((item) => item.section));
-//   }, []);
-
-//   useEffect(() => {
-//     if (activeTitle) {
-//       const subSectionArr = AboutArr?.find(
-//         (item) => item.section === activeTitle
-//       );
-//       setSubSectionTitles(subSectionArr?.SectionItems);
-//     }
-//   }, [activeTitle]);
-
-//   useEffect(() => {
-//     if (activeTitle === "Leadership") {
-//       setFoundLeader(
-//         subSectionTitles.find((eachSec) => eachSec.name === activeSubTitle)
-//       );
-//     }
-//   }, [activeSubTitle]);
-
-//   return (
-//     <div className="about-drop-down-container">
-//       <div className="about-dd-main-title-container">
-//         {AboutArr?.map((eachTitle, i) => (
-//           <div
-//             key={i}
-//             onMouseEnter={() => setActiveTitle(eachTitle.section)}
-//             className={`about-dd-main-title ${
-//               eachTitle.section === activeTitle
-//                 ? "about-dd-main-title-active"
-//                 : ""
-//             }`}
-//             onClick={() => {
-//               navigate(`/${eachTitle.path}`);
-//               handleClose();
-//             }}
-//           >
-//             <span>{eachTitle.section}</span>
-//             {eachTitle.section === activeTitle && (
-//               <img src={Star} alt="" style={{ width: "18px", marginLeft: "1rem" }} />
-//             )}
-//           </div>
-//         ))}
-//       </div>
-//       <div className="about-dd-sub-title-container">
-//         <div className="about-dd-su-title-dot-container">
-//           <div>
-//             {subSectionTitles?.map((eachItem, i) => (
-//               <div
-//                 key={i}
-//                 className={`about-dd-sub-title-dot ${
-//                   eachItem.name === activeSubTitle
-//                     ? "about-dd-sub-title-dot-active"
-//                     : ""
-//                 }`}
-//               ></div>
-//             ))}
-//           </div>
-//         </div>
-//         <div className="about-dd-sub-title-holder">
-//           {subSectionTitles?.map((eachItem, i) => {
-//             const subtitleKey = eachItem.name.split(" ").join("-");
-//             return (
-//               <div
-//                 key={i}
-//                 onMouseEnter={() => setActiveSubTitle(eachItem.name)}
-//                 className={`about-dd-main-title ${
-//                   eachItem.name === activeSubTitle
-//                     ? "about-dd-main-title-active"
-//                     : ""
-//                 }`}
-//                 onClick={() => {
-//                   window.scrollTo(0, 0);
-//                   if (activeTitle === "Leadership") {
-//                     // navigate(`/about/leader/${subtitleKey}`);
-//                     //  navigate(`/about/leader/${foundLeader?.name.split(" ").join("-")}`);
-//                   } else {
-//                     navigate(`/about/${subtitleKey}`);
-//                   }
-//                   handleClose();
-//                 }}
-//               >
-//                 <span>{eachItem.name}</span>
-//                 {eachItem.name === activeSubTitle && (
-//                   <img src={Star} alt="" style={{ width: "18px", marginLeft: "1rem" }} />
-//                 )}
-//               </div>
-//             );
-//           })}
-//         </div>
-//       </div>
-//       {activeSubTitle && (
-//         <div className="about-dd-info-section">
-//           {activeTitle === "Leadership" ? (
-//             <div>
-//               <div className="about-dd-founder-info-container">
-//                 <div>
-//                   <img src={foundLeader?.imageUrl} alt="" />
-//                 </div>
-//                 <p style={{ width: "50%" }}>
-//                   <p className="about-dd-founder-info-des">
-//                     {foundLeader?.description}
-//                   </p>
-//                 </p>
-//               </div>
-//               <div
-//                 style={{
-//                   display: "flex",
-//                   justifyContent: "end",
-//                   color: "#0047ff",
-//                   fontFamily: "EuclidMedium",
-//                   padding: "1rem 0rem",
-//                 }}
-//                 onClick={() => {
-//                   window.scrollTo(0, 0);
-//                   navigate(`/about/leader/${foundLeader?.name.split(" ").join("-")}`);
-//                   handleClose();
-//                 }}
-//               >
-//                 Read More
-//               </div>
-//             </div>
-//           ) : (
-//             <div className="about-dd-info-cotain">
-//               <img src={PlcImg} alt="" />
-//             </div>
-//           )}
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default AboutDropDown;
-
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import "../styles/AboutDropdown.css";
 import { useNavigate } from "react-router-dom";
 import PlcImg from "../assets/abt-dd-logo.png";
@@ -166,11 +11,17 @@ function AboutDropDown({ handleClose }) {
   const [Leaders, setLeaders] = useState(data.leaders);
   const AboutArr = data.aboutSections;
 
+  const [productData, setProductData] = useState();
+  const categoryContainerRef = useRef(null); // Ref for the main category container
+  const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
+
   const [sectionTitles, setSectionTitles] = useState([]);
   const [subSectionTitles, setSubSectionTitles] = useState([]);
   const [foundLeader, setFoundLeader] = useState();
   const [activeTitle, setActiveTitle] = useState();
   const [activeSubTitle, setActiveSubTitle] = useState();
+  const [showUpArrow, setShowUpArrow] = useState(false);
+  const [showDownArrow, setShowDownArrow] = useState(false);
 
   // Set main section titles
   useEffect(() => {
@@ -204,9 +55,9 @@ function AboutDropDown({ handleClose }) {
     }
     document.body.classList.add("no-scroll");
 
-    return ()=>{
+    return () => {
       document.body.classList.remove("no-scroll");
-    }
+    };
   }, []);
 
   // Update foundLeader when activeSubTitle changes (for Leadership section)
@@ -218,6 +69,33 @@ function AboutDropDown({ handleClose }) {
     }
   }, [activeSubTitle, subSectionTitles]);
 
+
+  const scrollUp = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop -= itemHeight;
+    }
+  };
+
+  const scrollDown = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop += itemHeight;
+    }
+  };
+
+  const handleScroll = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const lastItem = container.lastChild;
+      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
+      setShowUpArrow(scrollTop > 0);
+      setShowDownArrow(scrollTop + clientHeight < lastItemOffset);
+    }
+  };
   return (
     <div className="about-drop-down-container">
       {/* Main Section Titles */}
@@ -242,13 +120,14 @@ function AboutDropDown({ handleClose }) {
               } else {
                 setSubSectionTitles([]);
                 setActiveSubTitle(null);
-                setFoundLeader(null)
+                setFoundLeader(null);
               }
             }}
-            className={`about-dd-main-title ${eachTitle.section === activeTitle
+            className={`about-dd-main-title ${
+              eachTitle.section === activeTitle
                 ? "about-dd-main-title-active"
                 : ""
-              }`}
+            }`}
             onClick={() => {
               navigate(`/${eachTitle.path}`);
               handleClose();
@@ -273,23 +152,47 @@ function AboutDropDown({ handleClose }) {
             {subSectionTitles?.map((eachItem, i) => (
               <div
                 key={i}
-                className={`about-dd-sub-title-dot ${eachItem.name === activeSubTitle
+                className={`about-dd-sub-title-dot ${
+                  eachItem.name === activeSubTitle
                     ? "about-dd-sub-title-dot-active"
                     : ""
-                  }`}
+                }`}
               ></div>
             ))}
           </div>
+           <div className="arrow-wrapper">
+                          {showUpArrow && (
+                            <span
+                              onClick={scrollUp}
+                              className="arrow-up"
+                              aria-label="Scroll up"
+                            >
+                              <IoIosArrowUp />
+                            </span>
+                          )}
+                          {showDownArrow && (
+                            <span
+                              onClick={scrollDown}
+                              className="arrow-down"
+                              aria-label="Scroll down"
+                            >
+                              <IoIosArrowDown />
+                            </span>
+                          )}
+                        </div>
         </div>
-        <div className="about-dd-sub-title-holder">
+        <div className="about-dd-sub-title-holder"
+        ref={categoryContainerRef}
+        onScroll={handleScroll}>
           {subSectionTitles?.map((eachItem, i) => (
             <div
               key={i}
               onMouseEnter={() => setActiveSubTitle(eachItem.name)}
-              className={`about-dd-main-title ${eachItem.name === activeSubTitle
+              className={`about-dd-main-title ${
+                eachItem.name === activeSubTitle
                   ? "about-dd-main-title-active"
                   : ""
-                }`}
+              }`}
               onClick={() => {
                 window.scrollTo(0, 0);
                 if (activeTitle === "Leadership") {
@@ -320,11 +223,15 @@ function AboutDropDown({ handleClose }) {
             <div>
               <div className="about-dd-founder-info-container">
                 <div>
-                  <img src={foundLeader?.imageUrl} alt="" onClick={() => {
-                    window.scrollTo(0, 0);
-                    navigate(`/${foundLeader?.path}`);
-                    handleClose();
-                  }} />
+                  <img
+                    src={foundLeader?.imageUrl}
+                    alt=""
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      navigate(`/${foundLeader?.path}`);
+                      handleClose();
+                    }}
+                  />
                 </div>
                 <p style={{ width: "50%" }}>
                   <p className="about-dd-founder-info-des">
@@ -339,7 +246,7 @@ function AboutDropDown({ handleClose }) {
                   color: "#0047ff",
                   fontFamily: "EuclidMedium",
                   padding: "1rem 0rem",
-                  cursor: "pointer"
+                  cursor: "pointer",
                 }}
                 onClick={() => {
                   window.scrollTo(0, 0);

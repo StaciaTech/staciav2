@@ -14,6 +14,11 @@
 .about-dd-sub-title-container {
   width: 25%;
   border-right: 1px solid #e5e5e5;
+  position: relative;
+}
+.about-dd-sub-title-container{
+  animation: slideIn 0.5s ease-out forwards;
+
 }
 .about-dd-sub-title-holder {
   overflow-y: auto;
@@ -112,9 +117,39 @@
   width: 100%;
   object-fit: cover;
 }
+.arrow-wrapper .arrow-up {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #0047ff;
+  z-index: 10;
+}
+.arrow-wrapper .arrow-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #0047ff;
+  z-index: 10;
+}
 
 body.no-scroll{
   overflow: hidden !important;
   height: 100vh;
   position: relative;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

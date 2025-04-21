@@ -357,10 +357,10 @@
 
 
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../../styles/NavProductComp.css";
 import Star from "../../assets/loadingStar.svg";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import Data from "../../Data/Services.json"; // Import the static JSON data
 
@@ -368,6 +368,8 @@ function ServcieNavComp({ handleClose }) {
   const navigate = useNavigate();
 
   const [serviceData, setServiceData] = useState();
+  const categoryContainerRef = useRef(null); // Ref for the main category container
+  const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
 
   useEffect(()=>{
     setServiceData(Data);
@@ -380,19 +382,12 @@ function ServcieNavComp({ handleClose }) {
 
   if(defaultDept && defaultCategory && defaultService) {
     setDeptname(defaultDept.name);
-
     setMaincatArr(defaultDept.categories.map((cat)=>cat.name));
-
     setMainCatName(defaultCategory.name);
-
-
     setFinalServiceArr(defaultCategory.services);
-
     setSubccatsArr(defaultCategory.services.map((ser)=>ser.title));
-
     setSubCatName(defaultService.title);
     setDisplayServices(defaultService);
-
     setShowSubCats(true);
     setShowServices(true);
   }
@@ -418,6 +413,10 @@ function ServcieNavComp({ handleClose }) {
   const [subCatName, setSubCatName] = useState();
   const [displayServices, setDisplayServices] = useState();
   const [finalServiceArr, setFinalServiceArr] = useState();
+  const [showUpArrow, setShowUpArrow] = useState(false);
+  const [showDownArrow, setShowDownArrow] = useState(false);
+  const [showSubUpArrow, setShowSubUpArrow] = useState(false);
+  const [showSubDownArrow, setShowSubDownArrow] = useState(false);
 
  
   const DeptArr = serviceData?.map((item) => item.name);
@@ -488,6 +487,59 @@ function ServcieNavComp({ handleClose }) {
     );
     setDisplayServices(ProductsFound);
     setShowServices(true);
+  };
+
+  const scrollUp = () =>{
+    if(categoryContainerRef.current){
+      const container = categoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40;// Default to 40px if no items
+      container.scrollTop -= itemHeight;
+    }
+  }
+
+  const scrollDown = () =>{
+    if(categoryContainerRef.current){
+      const container = categoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items;
+      container.scrollTop += itemHeight
+    }
+  }
+
+  const scrollSubUp = ()=>{
+    if(subCategoryContainerRef.current){
+      const container = subCategoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop -= itemHeight;
+    }
+  }
+
+  const scrollSubDown = () =>{
+    if(subCategoryContainerRef.current){
+      const container = subCategoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+    }
+  }
+
+  const handleScroll = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const lastItem = container.lastChild;
+      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
+      setShowUpArrow(scrollTop > 0);
+      setShowDownArrow(scrollTop + clientHeight < lastItemOffset);
+    }
+  };
+
+  const handleSubScroll = () => {
+    if (subCategoryContainerRef.current) {
+      const container = subCategoryContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const lastItem = container.lastChild;
+      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
+      setShowSubUpArrow(scrollTop > 0);
+      setShowSubDownArrow(scrollTop + clientHeight < lastItemOffset);
+    }
   };
 
   function findServicePath(serviceData, productTitle) {
@@ -602,7 +654,7 @@ function ServcieNavComp({ handleClose }) {
               <div className="navprocomp-items-heading">Categories</div>
               <div className="navproComp-item-holder">
                 <div className="navProComp-dot-container">
-                  {hoveringOnMain &&
+                  {
                     MainCatArr?.map((dot, i) => (
                       <div
                         key={i}
@@ -612,10 +664,32 @@ function ServcieNavComp({ handleClose }) {
                       ></div>
                     ))}
                 </div>
+                <div className="arrow-wrapper">
+                                {showUpArrow && (
+                                  <span
+                                    onClick={scrollUp}
+                                    className="arrow-up"
+                                    aria-label="Scroll up"
+                                  >
+                                    <IoIosArrowUp />
+                                  </span>
+                                )}
+                                {showDownArrow && (
+                                  <span
+                                    onClick={scrollDown}
+                                    className="arrow-down"
+                                    aria-label="Scroll down"
+                                  >
+                                    <IoIosArrowDown />
+                                  </span>
+                                )}
+                              </div>
                 <div
                   className="navProComp-mainCat-item-container"
                   onMouseEnter={() => setHoveringOnmain(true)}
                   onMouseLeave={() => setHoveringOnmain(false)}
+                  ref={categoryContainerRef}
+                  onScroll={handleScroll}
                 >
                   {MainCatArr?.map((eachCat, i) => (
                     <div
@@ -660,9 +734,31 @@ function ServcieNavComp({ handleClose }) {
                         dot === subCatName ? "navProComp-dot-active" : ""
                       }`}
                     ></div>
-                  ))}
+                  ))}                 
                 </div>
-                <div className="navProComp-subCat-item-container">
+                <div className="arrow-wrapper">
+                                {showSubUpArrow && (
+                                  <span
+                                    onClick={scrollSubUp}                    
+                                    aria-label="Scroll sub up"
+                                    className="arrow-up"
+                                  >
+                                    <IoIosArrowUp />
+                                  </span>
+                                )}
+                                {showSubDownArrow && (
+                                  <span
+                                    onClick={scrollSubDown}                    
+                                    aria-label="Scroll sub down"
+                                    className="arrow-down"
+                                  >
+                                    <IoIosArrowDown />
+                                  </span>
+                                )}
+                              </div>
+                <div className="navProComp-subCat-item-container"
+                ref={subCategoryContainerRef}
+                onScroll={handleSubScroll}>
                   {subCatsArr?.map((eachItem, i) => (
                     <div
                       key={i}

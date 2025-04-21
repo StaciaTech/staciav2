@@ -24,47 +24,6 @@ import eventData from "../../Data/Compition.json";
 
 
 
-// function EventDetails() {
-//   const params = useParams();
-//   const paramsTitle = params.title.split("-").join(" ");
-//   console.log(paramsTitle);
-
-//   const apiUrl = process.env.REACT_APP_API_URL;
-//   // const [events, setEvents] = useState();
-//   const [singleEvent, setSingleEvent] = useState();
-
-//   // const FetchEvents = async () => {
-//   //   try {
-//   //     const res = await axios.get(`${apiUrl}/event/index`);
-//   //     setEvents(res.data.docs);
-//   //   } catch (error) {
-//   //     console.log(error);
-//   //   }
-//   // };
-
-//   // useEffect(() => {
-//   //   FetchEvents();
-//   // }, []);
-
-//   const [events, setEvents] = useState([]);
-
-//     useEffect(() => {
-//       setEvents(eventsData.events);
-//     }, []);
-//   useEffect(() => {
-//     setSingleEvent(
-//       events?.find((eachEvent) => eachEvent.title === paramsTitle)
-//     );
-//   }, [paramsTitle, events]);
-//   console.log(singleEvent);
-
-//   const [showEventForm, setShowEventForm] = useState(false);
-
-//   const FormCloseHandler = () => {
-//     setShowEventForm(false);
-//   };
-
-
 function EventDetails() {
   const params = useParams();
   const paramsTitle = params.title.split("-").join(" ");

@@ -31,6 +31,7 @@ import Partners from "./pages/Partners";
 import Template6 from "./Templets/Template6";
 
 import CompetitionPage from "./pages/Competition";
+import CertificateView from "./components/CertificateView";
 
 import EventDetails from "./components/Competition/Event-Detail";
 
@@ -110,6 +111,9 @@ function App() {
 
         {/* competition */}
         <Route path="/competition" element={<CompetitionPage />} />
+
+        <Route path="/certificates/:id" element={<CertificateView />} />
+
         {/* <Route path="/competition/:department" element={<CompetitionPage />} /> */}
 
         {/* < Route path="all-event" component={<AllEvents  />} >

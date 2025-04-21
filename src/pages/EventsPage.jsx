@@ -7,11 +7,8 @@ import Star from "../components/Star";
 import "../styles/Eventspage.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-
+// import axios from "axios";
 import eventsData from "../Data/Event.json";
-
-
 
 
 function EventsPage() {

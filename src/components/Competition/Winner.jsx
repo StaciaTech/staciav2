@@ -53,7 +53,7 @@ function Winners() {
     }
 
     // useEffect(() => {
-        
+
     //     document.body.classList.add("no-scroll");
     //     return () => document.body.classList.remove("no-scroll")
 
@@ -145,18 +145,51 @@ function Winners() {
                 <div className="popup-form-overlay">
                     <div className="popup-form-container">
                         <h3>Certificate Preview</h3>
-                        <img
-                            src={selectedCertificate.certificateUrl}
-                            alt="Certificate"
-                            className="certificate-preview-img"
-                        />
+                        {/* <a
+                            href={selectedCertificate.certificateUrl} target="/blank"
+                            rel="noopener noreferrer"   // Security improvement
+                        // href={`/${selectedCertificate.certificateUrl}/${selectedCertificate.id}`}
+                        // target="_blank"
+                        // rel="noopener noreferrer"   // Security improvement
+                        // id={selectedCertificate.id}
+
+                        > */}
+                        {/* 
                         <a
-                            href={selectedCertificate.certificateUrl}
-                            download
-                            className="download-btn"
+                            href={`/${selectedCertificate.certificateUrl}/${ selectedCertificate.id }`}  // Encode the id
+                            target="_blank"
+                            rel="noopener noreferrer"   // Security improvement
+                            id={selectedCertificate.id}
+                        > */}
+                        {/* <a href={`/certificates/${selectedCertificate.id}`} target="_blank" rel="noopener noreferrer">
+                            <img src={selectedCertificate.certificateUrl} alt="Preview" />
+                        </a> */}
+                        {/* <img
+                                src={selectedCertificate.certificateUrl}
+                                alt="Certificate"
+                                className="certificate-preview-img"
+                            /></a> */}
+
+
+
+                        <a
+                            href={`/certificates/${encodeURIComponent(selectedCertificate.id)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            Download
+                            <img src={selectedCertificate.certificateUrl} alt="Preview" className="certificate-preview-img" />
                         </a>
+
+                        <div>
+
+                            <a
+                                href={selectedCertificate.dowloadCertificate}
+                                download
+                                className="download-btn"
+                            >
+                                Download
+                            </a>
+                        </div>
                         <button
                             type="button"
                             className="close-btn"
