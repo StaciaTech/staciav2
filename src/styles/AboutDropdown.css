@@ -15,6 +15,10 @@
   width: 25%;
   border-right: 1px solid #e5e5e5;
 }
+.about-dd-sub-title-container{
+  animation: slideIn 0.5s ease-out forwards;
+
+}
 .about-dd-sub-title-holder {
   overflow-y: auto;
   width: 90%;
@@ -117,4 +121,14 @@ body.no-scroll{
   overflow: hidden !important;
   height: 100vh;
   position: relative;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
