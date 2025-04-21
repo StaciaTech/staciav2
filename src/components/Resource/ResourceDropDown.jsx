@@ -1,12 +1,20 @@
-import React, { useEffect, useState } from "react";
+
+import React, { useEffect, useState, useRef } from "react";
 import "../../styles/NavProductComp.css";
-import { IoIosArrowForward } from "react-icons/io";
+import {
+  IoIosArrowForward,
+  IoIosArrowUp,
+  IoIosArrowDown,
+} from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import casedoc from "../../Data/SingleCaseStudy.json";
 import article from "../../Data/Articles.json";
 
 function ResourceDropDown({ handleClose }) {
   const navigate = useNavigate();
+
+  const categoryContainerRef = useRef(null); // Ref for the main category container
+  const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
 
   const [articlesData, setArticlesData] = useState([]);
   const [caseStudyData, setCaseStudyData] = useState([]);
@@ -19,6 +27,10 @@ function ResourceDropDown({ handleClose }) {
   const [subCatName, setSubCatName] = useState();
   const [displayProducts, setDisplayProducts] = useState();
   const [finalProductArr, setFinalProductArr] = useState();
+  const [showUpArrow, setShowUpArrow] = useState(false);
+  const [showDownArrow, setShowDownArrow] = useState(false);
+  const [showSubUpArrow, setShowSubUpArrow] = useState(false);
+  const [showSubDownArrow, setShowSubDownArrow] = useState(false);
 
   const ResourceArr = [
     { name: "Article", cats: articlesData },
@@ -80,11 +92,15 @@ function ResourceDropDown({ handleClose }) {
   const HandleMainCatHover = (MainCat) => {
     const MainCatArrObj = ResourceArr?.find((item) => item.name === deptname);
     setMainCatName(MainCat);
-    const subCatObj = MainCatArrObj?.cats?.find((item) => item.name === MainCat);
+    const subCatObj = MainCatArrObj?.cats?.find(
+      (item) => item.name === MainCat
+    );
 
     setFinalProductArr(subCatObj?.data);
     if (subCatObj) {
-      const productTitles = subCatObj.data.map((eachSubCat) => eachSubCat.title);
+      const productTitles = subCatObj.data.map(
+        (eachSubCat) => eachSubCat.title
+      );
       setSubccatsArr(productTitles);
       const firstProduct = subCatObj.data?.[0];
       if (firstProduct) {
@@ -98,9 +114,69 @@ function ResourceDropDown({ handleClose }) {
 
   const HandleSubCatHover = (SubCat) => {
     setSubCatName(SubCat);
-    const ProductsFound = finalProductArr?.find((item) => item.title === SubCat);
+    const ProductsFound = finalProductArr?.find(
+      (item) => item.title === SubCat
+    );
     setDisplayProducts(ProductsFound);
     setShowproducts(true);
+  };
+
+  const scrollUp = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop -= itemHeight;
+    }
+  };
+
+  const scrollDown = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop += itemHeight;
+    }
+  };
+
+  const scrollSubUp = () => {
+    if (subCategoryContainerRef.current) {
+      const container = subCategoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop -= itemHeight;
+    }
+  };
+
+  const scrollSubDown = () => {
+    if (subCategoryContainerRef.current) {
+      const container = subCategoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop += itemHeight;
+    }
+  };
+
+  const handleScroll = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const lastItem = container.lastChild;
+      const lastItemOffset = lastItem
+        ? lastItem.offsetTop + lastItem.offsetHeight
+        : scrollHeight;
+      setShowUpArrow(scrollTop > 0);
+      setShowDownArrow(scrollTop + clientHeight < lastItemOffset);
+    }
+  };
+
+  const handleSubScroll = () => {
+    if (subCategoryContainerRef.current) {
+      const container = subCategoryContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const lastItem = container.lastChild;
+      const lastItemOffset = lastItem
+        ? lastItem.offsetTop + lastItem.offsetHeight
+        : scrollHeight;
+      setShowSubUpArrow(scrollTop > 0);
+      setShowSubDownArrow(scrollTop + clientHeight < lastItemOffset);
+    }
   };
 
   function findProductPath(resourceData, productTitle) {
@@ -178,7 +254,9 @@ function ResourceDropDown({ handleClose }) {
                   className="pointer"
                 >
                   <div
-                    className={`navProComp-dept-item ${eachCat === deptname ? "mainCat-active" : ""}`}
+                    className={`navProComp-dept-item ${
+                      eachCat === deptname ? "mainCat-active" : ""
+                    }`}
                   >
                     {eachCat}
                   </div>
@@ -195,11 +273,35 @@ function ResourceDropDown({ handleClose }) {
                 {MainCatArr?.map((dot, i) => (
                   <div
                     key={i}
-                    className={`navProComp-dot ${dot === mainCatName ? "navProComp-dot-active" : ""}`}
+                    className={`navProComp-dot ${
+                      dot === mainCatName ? "navProComp-dot-active" : ""
+                    }`}
                   ></div>
                 ))}
               </div>
-              <div className="navProComp-mainCat-item-container">
+              <div className="arrow-wrapper">
+                              {showUpArrow && (
+                                <span
+                                  onClick={scrollUp}
+                                  className="arrow-up"
+                                  aria-label="Scroll up"
+                                >
+                                  <IoIosArrowUp />
+                                </span>
+                              )}
+                              {showDownArrow && (
+                                <span
+                                  onClick={scrollDown}
+                                  className="arrow-down"
+                                  aria-label="Scroll down"
+                                >
+                                  <IoIosArrowDown />
+                                </span>
+                              )}
+                            </div>
+              <div className="navProComp-mainCat-item-container" 
+              ref={categoryContainerRef}
+              onScroll={handleScroll}>
                 {MainCatArr?.map((eachCat, i) => (
                   <div
                     key={i}
@@ -211,7 +313,9 @@ function ResourceDropDown({ handleClose }) {
                     className="pointer"
                   >
                     <div
-                      className={`navProComp-mainCat-item ${eachCat === mainCatName ? "mainCat-active" : ""}`}
+                      className={`navProComp-mainCat-item ${
+                        eachCat === mainCatName ? "mainCat-active" : ""
+                      }`}
                     >
                       {eachCat}
                     </div>
@@ -229,11 +333,35 @@ function ResourceDropDown({ handleClose }) {
                 {subCatsArr?.map((dot, i) => (
                   <div
                     key={i}
-                    className={`navProComp-dot ${dot === subCatName ? "navProComp-dot-active" : ""}`}
+                    className={`navProComp-dot ${
+                      dot === subCatName ? "navProComp-dot-active" : ""
+                    }`}
                   ></div>
                 ))}
-              </div>
-              <div className="navProComp-subCat-item-container">
+              </div>         
+               <div className="arrow-wrapper">
+                              {showSubUpArrow && (
+                                <span
+                                  onClick={scrollSubUp}                    
+                                  aria-label="Scroll sub up"
+                                  className="arrow-up"
+                                >
+                                  <IoIosArrowUp />
+                                </span>
+                              )}
+                              {showSubDownArrow && (
+                                <span
+                                  onClick={scrollSubDown}                    
+                                  aria-label="Scroll sub down"
+                                  className="arrow-down"
+                                >
+                                  <IoIosArrowDown />
+                                </span>
+                              )}
+                            </div>     
+              <div className="navProComp-subCat-item-container"
+              ref={subCategoryContainerRef}
+              onScroll={handleSubScroll}>
                 {subCatsArr?.map((eachItem, i) => (
                   <div
                     key={i}
@@ -245,7 +373,9 @@ function ResourceDropDown({ handleClose }) {
                     className="pointer"
                   >
                     <div
-                      className={`navProComp-mainCat-item ${eachItem === subCatName ? "mainCat-active" : ""}`}
+                      className={`navProComp-mainCat-item ${
+                        eachItem === subCatName ? "mainCat-active" : ""
+                      }`}
                     >
                       {eachItem}
                     </div>
@@ -268,7 +398,9 @@ function ResourceDropDown({ handleClose }) {
                 >
                   <div className="navProComp-products-img">
                     <img
-                      src={displayProducts.imageURL || displayProducts.mainImageUrl}
+                      src={
+                        displayProducts.imageURL || displayProducts.mainImageUrl
+                      }
                       alt={displayProducts.title}
                     />
                   </div>
