@@ -10,7 +10,6 @@
 //   const [projectsData, setProjectsData] = useState();
 //   const Data = ProjectsData.Departments
 
-
 //   useEffect(() => {
 //     setProjectsData(Data);
 
@@ -67,8 +66,6 @@
 //       );
 //     }
 //   }, [activeProject, projectArr]);
-
-
 
 //   return (
 //     <div className="project-dd-container">
@@ -249,7 +246,7 @@
 //               window.scrollTo(0, 0);
 //               handleClose();
 //             }}
-            
+
 //           >
 //             Know More
 //           </div>
@@ -260,10 +257,6 @@
 // }
 
 // export default ProjectDropdown;
-
-
-
-
 
 // import React, { useEffect, useState } from "react";
 // import "../styles/ProjectDropdown.css";
@@ -496,11 +489,14 @@
 
 // export default ProjectDropdown;
 
-
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../styles/NavProductComp.css";
 import Star from "../assets/loadingStar.svg";
-import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import {
+  IoIosArrowDown,
+  IoIosArrowUp,
+  IoIosArrowForward,
+} from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import ProjectsData from "../Data/ProjectsData.json";
 
@@ -508,11 +504,14 @@ function ProjectDropdown({ handleClose }) {
   const navigate = useNavigate();
   const projectData = ProjectsData.Departments;
 
+  const categoryContainerRef = useRef(null); // Ref for the main category container
+  const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
+
   const [showSubCats, setShowSubCats] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [isProjectsVisible, SetIsProjectVisible] = useState(true);
   const [hoveringOnDept, setHoveringOnDept] = useState(false);
-  const [hoveringOnMain, setHoveringOnmain] = useState(false)
+  const [hoveringOnMain, setHoveringOnmain] = useState(false);
   const [MainCatArr, setMainCatArr] = useState();
   const [subCatsArr, setSubCatsArr] = useState();
   const [deptName, setDeptName] = useState();
@@ -520,6 +519,10 @@ function ProjectDropdown({ handleClose }) {
   const [subCatName, setSubCatName] = useState();
   const [displayProject, setDisplayProject] = useState();
   const [finalProjectArr, setFinalProjectArr] = useState();
+  const [showUpArrow, setShowUpArrow] = useState(false);
+  const [showDownArrow, setShowDownArrow] = useState(false);
+  const [showSubUpArrow, setShowSubUpArrow] = useState(false);
+  const [showSubDownArrow, setShowSubDownArrow] = useState(false);
 
   const DeptArr = projectData?.map((item) => item.name);
 
@@ -539,7 +542,7 @@ function ProjectDropdown({ handleClose }) {
       setDisplayProject(defaultProject);
       setShowSubCats(true);
       setShowProjects(true);
-      SetIsProjectVisible(true)
+      SetIsProjectVisible(true);
     }
 
     document.body.classList.add("no-scroll");
@@ -582,7 +585,9 @@ function ProjectDropdown({ handleClose }) {
 
     setFinalProjectArr(subCatObj?.projects);
     if (subCatObj) {
-      const projectTitles = subCatObj.projects.map((eachSubCat) => eachSubCat.title);
+      const projectTitles = subCatObj.projects.map(
+        (eachSubCat) => eachSubCat.title
+      );
       setSubCatsArr(projectTitles);
       const firstProject = subCatObj.projects?.[0];
       if (firstProject) {
@@ -599,11 +604,65 @@ function ProjectDropdown({ handleClose }) {
     const projectFound = finalProjectArr?.find((item) => item.title === SubCat);
     setDisplayProject(projectFound);
     setShowProjects(true);
+  };const scrollUp = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop -= itemHeight;
+    }
   };
 
-  const toggleProjectsVisibility = () =>{
-    SetIsProjectVisible(!isProjectsVisible)
-  }
+  const scrollDown = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop += itemHeight;
+    }
+  };
+
+  const scrollSubUp = () => {
+    if (subCategoryContainerRef.current) {
+      const container = subCategoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop -= itemHeight;
+    }
+  };
+
+  const scrollSubDown = () => {
+    if (subCategoryContainerRef.current) {
+      const container = subCategoryContainerRef.current;
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      container.scrollTop += itemHeight;
+    }
+  };
+
+  const handleScroll = () => {
+    if (categoryContainerRef.current) {
+      const container = categoryContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const lastItem = container.lastChild;
+      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
+      setShowUpArrow(scrollTop > 0);
+      setShowDownArrow(scrollTop + clientHeight < lastItemOffset);
+    }
+  };
+
+  const handleSubScroll = () => {
+    if (subCategoryContainerRef.current) {
+      const container = subCategoryContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const lastItem = container.lastChild;
+      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
+      setShowSubUpArrow(scrollTop > 0);
+      setShowSubDownArrow(scrollTop + clientHeight < lastItemOffset);
+    }
+  };
+
+
+
+  const toggleProjectsVisibility = () => {
+    SetIsProjectVisible(!isProjectsVisible);
+  };
 
   function findProjectPath(projectData, projectTitle) {
     for (let department of projectData) {
@@ -712,6 +771,26 @@ function ProjectDropdown({ handleClose }) {
                   ></div>
                 ))}
               </div>
+               <div className="arrow-wrapper">
+                              {showUpArrow && (
+                                <span
+                                  onClick={scrollUp}
+                                  className="arrow-up"
+                                  aria-label="Scroll up"
+                                >
+                                  <IoIosArrowUp />
+                                </span>
+                              )}
+                              {showDownArrow && (
+                                <span
+                                  onClick={scrollDown}
+                                  className="arrow-down"
+                                  aria-label="Scroll down"
+                                >
+                                  <IoIosArrowDown />
+                                </span>
+                              )}
+                            </div>
               <div className="navProComp-mainCat-item-container">
                 {MainCatArr?.map((eachCat, i) => (
                   <div
@@ -730,7 +809,6 @@ function ProjectDropdown({ handleClose }) {
                     >
                       {eachCat}
                     </div>
-                    
                   </div>
                 ))}
               </div>
@@ -751,6 +829,26 @@ function ProjectDropdown({ handleClose }) {
                   ></div>
                 ))}
               </div>
+               <div className="arrow-wrapper">
+                              {showSubUpArrow && (
+                                <span
+                                  onClick={scrollSubUp}                    
+                                  aria-label="Scroll sub up"
+                                  className="arrow-up"
+                                >
+                                  <IoIosArrowUp />
+                                </span>
+                              )}
+                              {showSubDownArrow && (
+                                <span
+                                  onClick={scrollSubDown}                    
+                                  aria-label="Scroll sub down"
+                                  className="arrow-down"
+                                >
+                                  <IoIosArrowDown />
+                                </span>
+                              )}
+                            </div>
               <div className="navProComp-subCat-item-container">
                 {subCatsArr?.map((eachItem, i) => (
                   <div
@@ -787,7 +885,10 @@ function ProjectDropdown({ handleClose }) {
                   style={{ cursor: "pointer" }}
                 >
                   <div className="navProComp-products-img">
-                    <img src={displayProject.mainImageUrl} alt={displayProject.title} />
+                    <img
+                      src={displayProject.mainImageUrl}
+                      alt={displayProject.title}
+                    />
                   </div>
                   <div className="navProComp-products-title">
                     {displayProject.title}
