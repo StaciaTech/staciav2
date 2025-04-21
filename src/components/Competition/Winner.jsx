@@ -183,7 +183,7 @@ function Winners() {
                         <div>
 
                             <a
-                                href={selectedCertificate.certificateUrl}
+                                href={selectedCertificate.dowloadCertificate}
                                 download
                                 className="download-btn"
                             >
