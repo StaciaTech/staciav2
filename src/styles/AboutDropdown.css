@@ -14,6 +14,7 @@
 .about-dd-sub-title-container {
   width: 25%;
   border-right: 1px solid #e5e5e5;
+  position: relative;
 }
 .about-dd-sub-title-container{
   animation: slideIn 0.5s ease-out forwards;
@@ -115,6 +116,26 @@
 .about-dd-founder-info-container > div > img {
   width: 100%;
   object-fit: cover;
+}
+.arrow-wrapper .arrow-up {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #0047ff;
+  z-index: 10;
+}
+.arrow-wrapper .arrow-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #0047ff;
+  z-index: 10;
 }
 
 body.no-scroll{
