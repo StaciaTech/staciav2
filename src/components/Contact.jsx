@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import "../styles/Contact.css";
 import StaciaContactLogo from "../assets/StaciaContactLogo.svg";
@@ -100,7 +101,7 @@ function Contact({ closeHandle }) {
     }
 
     const formData = new FormData();
-    formData.append("access_key", "b86a7981-0219-41f3-b777-cf7fb7b5292a");
+    formData.append("access_key", "e94ad995-f110-472a-81f9-66ff8ca65e98");
     formData.append("name", form.name);
     formData.append("email", form.mail);
     formData.append("phone", form.phone);
@@ -117,7 +118,7 @@ function Contact({ closeHandle }) {
       });
       const data = await res.json();
       if (data.success) {
-        toast.success(":tada: Successfully Message Sent!", {
+        toast.success("🎉 Successfully Message Sent!", {
           style: {
             backgroundColor: "#008E2F",
             color: "white",
@@ -214,7 +215,7 @@ function Contact({ closeHandle }) {
             <div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div className="contact-main-title">
-                  Love to hear from you :blue_heart:
+                  Love to hear from you 💙
                 </div>
                 <IoClose
                   onClick={closeHandle}
