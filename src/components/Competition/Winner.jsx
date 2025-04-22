@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { GoArrowLeft, GoArrowRight ,GoEyeClosed } from "react-icons/go";
+import { IoMdClose } from "react-icons/io";
 import "../../styles/competition/Winner.css";
 import winnersData from "../../Data/Winner.json";
 import dateimg from "../../assets/calendar.png";
@@ -11,6 +12,8 @@ function Winners() {
     const [showForm, setShowForm] = useState(false);
     const [selectedCertificate, setSelectedCertificate] = useState(null);
     const scrollContainerRef = useRef(null);
+    const popupRef = useRef(null)
+
     useEffect(() => {
         try {
             const data = winnersData.docs[0];
@@ -25,6 +28,25 @@ function Winners() {
             console.error("Error loading winners data:", error);
         }
     }, []);
+
+    useEffect(() => {
+        if (showForm) {
+            document.body.style.overflow ="hidden";
+            document.body.style.position= "fixed";
+            document.body.style.width = "100%";
+        }else{
+            document.body.style.overflow = "auto";
+            document.body.style.position= "";
+            document.body.style.width = "";
+        }
+        return()=>{
+            document.body.style.overflow = "auto";
+            document.body.style.position= "";
+            document.body.style.width = "";
+        }
+    },[showForm])
+
+    
     const scrollToIndex = (index) => {
         const newIndex = Math.max(0, Math.min(index, winners.length - 1));
         setCurrentIndex(newIndex);
@@ -44,10 +66,18 @@ function Winners() {
     const scrollRight = () => scrollToIndex(currentIndex + 1);
     const mobscrollLeft = () => scrollToIndex(currentIndex - 1);
     const mobscrollRight = () => scrollToIndex(currentIndex + 1);
+
     const handleDownloadClick = (certificate) => {
         setSelectedCertificate(certificate);
         setShowForm(true);
     };
+    const handleWheel = (e)=>{
+        const container = e.currentTarget
+        if(container.scrollHeight > container.clientHeight){
+            e.preventDefault();
+            e.preventPropagation();
+        }
+    }
     if (winners.length === 0) {
         return <div>Loading...</div>;
     }
@@ -107,7 +137,7 @@ function Winners() {
                             <div>{eachItem.title}</div>
                             <p>{eachItem.details}</p>
                             <button className="register-btn1" onClick={() => handleDownloadClick(eachItem)}>
-                                Certificate Download
+                                View Certificate 
                             </button>
                         </div>
                     </div>
@@ -143,8 +173,17 @@ function Winners() {
             {/* Certificate popup */}
             {showForm && selectedCertificate && (
                 <div className="popup-form-overlay">
-                    <div className="popup-form-container">
-                        <h3>Certificate Preview</h3>
+                    <div className="popup-form-container" onWheel={handleWheel} ref={popupRef}>
+                        <h3>Certificate Preview</h3> 
+                        <div>
+                        <button
+                            type="button"
+                            className="close-btn"
+                            onClick={() => setShowForm(false)}
+                        >
+                            <IoMdClose />
+                        </button>
+                        </div>
                         {/* <a
                             href={selectedCertificate.certificateUrl} target="/blank"
                             rel="noopener noreferrer"   // Security improvement
@@ -190,13 +229,13 @@ function Winners() {
                                 Download
                             </a>
                         </div>
-                        <button
+                        {/* <button
                             type="button"
                             className="close-btn"
                             onClick={() => setShowForm(false)}
                         >
-                            Close
-                        </button>
+                            <IoMdClose />
+                        </button> */}
                     </div>
                 </div>
             )}

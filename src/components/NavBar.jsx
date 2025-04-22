@@ -246,15 +246,15 @@ function NavBar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if(showAboutComp ||
-        showServiceComp||       
-        showProductComp || 
+      if (showAboutComp ||
+        showServiceComp ||
+        showProductComp ||
         showProjectComp ||
         showResourceComp ||
-        openWhatsNew 
-      ){
+        openWhatsNew
+      ) {
         setShowNavbar(true)
-      }else if (currentScrollY > lastScrollY) {
+      } else if (currentScrollY > lastScrollY) {
         // User is scrolling down
         setShowNavbar(false);
       } else {
@@ -326,8 +326,8 @@ function NavBar() {
       <div className="nav-container">
         <div className="nav-items-container">
           <div className="nav-left">
-            <div className="mobile-nav"> 
-              <img src={MobileNav} alt="" /> 
+            <div className="mobile-nav">
+              <img src={MobileNav} alt="" />
             </div>
             <Link
               to={"/"}
@@ -443,24 +443,24 @@ function NavBar() {
               >
                 Projects
               </NavLink>
-              <div className="dropdown" ref={dropdownRef}>
-                <div
-                  className="dropdown-name"
-                  onClick={toggleDropdown}
-                  onMouseEnter={() => {
-                    setShowResourceComp(true);
-                  }}
-                  onMouseLeave={() => {
-                    setTimeout(() => {
-                      // Check if still hovering over NavProductComp before hiding
-                      if (!document.querySelector(".nav-resource-comp:hover")) {
-                        setShowResourceComp(false);
-                      }
-                    }, 100);
-                  }}
-                >
-                  Resource
-                </div>
+              <div className="dropdown-name  nav-items" ref={dropdownRef}
+
+                // className="dropdown-name"
+                onClick={toggleDropdown}
+                onMouseEnter={() => {
+                  setShowResourceComp(true);
+                }}
+                onMouseLeave={() => {
+                  setTimeout(() => {
+                    // Check if still hovering over NavProductComp before hiding
+                    if (!document.querySelector(".nav-resource-comp:hover")) {
+                      setShowResourceComp(false);
+                    }
+                  }, 100);
+                }}
+              >
+                Resource
+
               </div>
               <NavLink
                 to={"/career"}
@@ -482,7 +482,7 @@ function NavBar() {
                 }}
                 style={{ position: "relative" }}
               >
-                Competition 
+                Competition
                 {/* <BlueStar /> */}
                 <Star />
 
@@ -528,7 +528,7 @@ function NavBar() {
               >
                 What's New
                 <FaChevronDown
-                  style={{ verticalAlign: "middle"}}
+                  style={{ verticalAlign: "middle", paddingLeft: "5%" }}
                 />
                 {/* <img src={down} /> */}
               </div>

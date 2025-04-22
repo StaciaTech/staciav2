@@ -41,17 +41,17 @@
   ],
   "founders": [
     {
-      "imageUrl":"./assets/mr-Lashman.webp",
+      "imageUrl":"/assets/LeaderPage/lakshman.png",
       "name": "Mr Lakshman",
       "designation": "Chief Operational Officer"
     },
      {
-      "imageUrl":"./assets/Mr-revanth.webp",
+      "imageUrl":"/assets/LeaderPage/sarabesh.png",
       "name": "Mr Sarabesh",
       "designation": "Chief Executive Officer"
     },
      {
-      "imageUrl":"./assets/Mr-sarabaesh.webp",
+      "imageUrl":"/assets/LeaderPage/revanth.png",
       "name": "Mr Revanth",
       "designation": "Chief Technical Officer"
     }
@@ -65,7 +65,7 @@
       },
       "name": "One Dril Brochure",
       "file": {
-        "fileUrl": "./assets/One-Dril-Brochure.pdf"
+        "fileUrl": "/assets/One-Dril-Brochure.pdf"
       }
     },
 
@@ -75,7 +75,7 @@
       },
       "name": "Stacia Corp Magazine",
       "file": {
-        "fileUrl": "./assets/Stacia-Corp-Magazine.pdf"
+        "fileUrl": "/assets/Stacia-Corp-Magazine.pdf"
       }
     },
 
@@ -85,7 +85,7 @@
       },
       "name": "5th year celebration Poster",
       "file": {
-        "fileUrl": "./assets/5th-year-celebration-Poster.pdf"
+        "fileUrl": "/assets/5th-year-celebration-Poster.pdf"
       }
     }
   ]

@@ -17,7 +17,7 @@ import client13 from "../assets/mac.webp";
 import client14 from "../assets/mamalla.webp";
 import client15 from "../assets/peace on plate.webp";
 import client16 from "../assets/prego.webp";
-import client17 from "../assets/pumpkin tales.webp";
+import client17 from "../assets/pumpkin tales color.webp";
 import client18 from "../assets/santhi.webp";
 import client19 from "../assets/shasun.webp";
 import client20 from "../assets/SRM SWEET.webp";
@@ -27,6 +27,7 @@ import client23 from "../assets/vijaya ganapathy.webp";
 import client24 from "../assets/sagoserve.webp";
 import client25 from "../assets/idhayam-tes.png";
 import client26 from "../assets/parikshan-tes.png";
+import client27 from "../assets/tn apex.webp";
 
 
 
@@ -189,6 +190,11 @@ const clients = [
         id: 26,
         link: "https://parikshan.com/",
         img: client26,
+    },
+    {
+        id: 27,
+        link: "https://www.tnapex.tn.gov.in/ords/r/wstnapex/tnapex173136/home",
+        img: client27,
     }
    
     // client1,
