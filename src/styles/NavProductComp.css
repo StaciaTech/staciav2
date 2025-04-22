@@ -20,7 +20,7 @@
   width: 25%;
   box-sizing: border-box;
   padding: 1.5rem;
-  height: 450px;
+  height: 428px;
   border-right: 1px solid #e5e5e5;
 }
 .navProComp-mainCat-container {
@@ -32,10 +32,12 @@
   overflow-y: auto;
   padding: 1rem 1.5rem;
   width: 100%;
-  max-height: 420px;
+  height: 350px;
   -ms-overflow-style: none; /*IE and Edge */
   scrollbar-width: none; /*Firefox */
   position: relative;
+  margin-top: 1rem;
+
 }
 .navProComp-mainCat-item-container > div,
 .navProComp-subCat-item-container > div {
@@ -108,9 +110,11 @@
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
-  font-size: 1.2rem;
-  color: #0047ff;
+  font-size: 2rem;
+  color: black;
   z-index: 10;
+  box-shadow: 5px black;
+  /* border: 2px solid black; */
 }
 .arrow-wrapper .arrow-down {
   position: absolute;
@@ -119,8 +123,9 @@
   transform: translateX(-50%);
   cursor: pointer;
   font-size: 1.2rem;
-  color: #0047ff;
+  color: black; 
   z-index: 10;
+  
 }
 .navProComp-products-holder {
   display: flex;
@@ -208,7 +213,7 @@ body.no-scroll {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 399px;
   pointer-events: none; /* Prevent interference with scrolling */
 }
 
