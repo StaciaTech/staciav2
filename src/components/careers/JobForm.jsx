@@ -291,7 +291,6 @@
 
 // email
 
-
 import React, { useState } from "react";
 import "../../styles/JobForm.css";
 import "react-phone-number-input/style.css";
@@ -322,12 +321,30 @@ function JobForm({ closeForm }) {
     "Brand Manager Marketing",
   ];
 
-  const pk = (e) => {
+  const handleemailstore = (e) => {
     const { name, value } = e.target;
+
     setStore((prevState) => ({
       ...prevState,
       [name]: value,
     }));
+
+   
+    setErrors((prevErrors) => {
+      const newErrors = { ...prevErrors };
+      if (name === "firstName" && value.trim()) delete newErrors.firstName;
+      if (name === "lastName" && value.trim()) delete newErrors.lastName;
+      if (name === "email") {
+        if (!value.trim()) {
+          newErrors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(value)) {
+          newErrors.email = "Email is invalid";
+        } else {
+          delete newErrors.email;
+        }
+      }
+      return newErrors;
+    });
   };
 
   const handleFileChange = (event) => {
@@ -410,7 +427,7 @@ function JobForm({ closeForm }) {
           text: "Form Submitted Successfully!",
         });
         event.target.reset();
-        closeForm(); // Optional: remove if you want the form to stay open
+        closeForm(); // Remove this if you want to keep the form open
       } else {
         setFormMessage({
           type: "error",
@@ -438,7 +455,7 @@ function JobForm({ closeForm }) {
                   type="text"
                   name="firstName"
                   value={store.firstName}
-                  onChange={pk}
+                  onChange={handleemailstore}
                   placeholder="Enter your first name"
                 />
                 {errors.firstName && (
@@ -451,7 +468,7 @@ function JobForm({ closeForm }) {
                   type="text"
                   name="lastName"
                   value={store.lastName}
-                  onChange={pk}
+                  onChange={handleemailstore}
                   placeholder="Enter your last name"
                 />
                 {errors.lastName && (
@@ -467,9 +484,14 @@ function JobForm({ closeForm }) {
                   placeholder="Enter phone number"
                   value={store.phoneValue}
                   name="phoneValue"
-                  onChange={(value) =>
-                    setStore((prev) => ({ ...prev, phoneValue: value }))
-                  }
+                  onChange={(value) => {
+                    setStore((prev) => ({ ...prev, phoneValue: value }));
+                    setErrors((prev) => {
+                      const updated = { ...prev };
+                      if (value) delete updated.phoneValue;
+                      return updated;
+                    });
+                  }}
                   className="phone-input"
                   defaultCountry="IN"
                 />
@@ -483,7 +505,7 @@ function JobForm({ closeForm }) {
                   type="email"
                   name="email"
                   value={store.email}
-                  onChange={pk}
+                  onChange={handleemailstore}
                   placeholder="Enter your email"
                 />
                 {errors.email && (
@@ -508,7 +530,7 @@ function JobForm({ closeForm }) {
                     type="text"
                     name="jobRole"
                     value={store.jobRole}
-                    onChange={pk}
+                    onChange={handleemailstore}
                     placeholder="Select applying role"
                     className="job-role-input"
                     style={{ border: "none" }}
@@ -581,7 +603,6 @@ function JobForm({ closeForm }) {
               {errors.file && <span className="error-span">{errors.file}</span>}
             </div>
 
-            {/* Inline success or error message */}
             {formMessage.text && (
               <div
                 style={{
@@ -615,8 +636,3 @@ function JobForm({ closeForm }) {
 }
 
 export default JobForm;
-
-
-
-
-
