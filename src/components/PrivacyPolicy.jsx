@@ -1,85 +1,15 @@
 import React from 'react';
+import "../styles/PrivacyPolicy.css"
+import NavBar from './NavBar';
+import SideBar from './SideBar';
 
 const PrivacyPolicy = () => {
   return (
-    <>
-      <style>
-        {`
-          .privacy-container {
-           margin:5px 90px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-           
-            font-family: Arial, sans-serif;
-          }
-          .privacy-content {
-            width: 100%;
-            background-color: #ffffff;
-            padding: 30px;           
-            margin:0 20%;
-          }
-          .privacy-title {
-            font-size: 28px;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
-          }
-          .last-updated {
-            font-size: 14px;
-            color: #666;
-            text-align: center;
-            margin-bottom: 20px;
-          }
-          .section {
-            margin-bottom: 30px;
-          }
-          .section h2 {
-            font-size: 22px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 15px;
-          }
-          .section p {
-            font-size: 16px;
-            color: #444;
-            line-height: 1.6;
-            margin-bottom: 15px;
-          }
-          .section ul {
-            list-style-type: disc;
-            padding-left: 30px;
-            margin-top: 10px;
-          }
-          .section ul li {
-            font-size: 16px;
-            color: #444;
-            line-height: 1.6;
-            margin-bottom: 8px;
-          }
-          .bold {
-            font-weight: bold;
-          }
-          @media (max-width: 600px) {
-            .privacy-container {
-              padding: 20px 10px;
-            }
-            .privacy-content {
-              padding: 20px;
-            }
-            .privacy-title {
-              font-size: 24px;
-            }
-            .section h2 {
-              font-size: 20px;
-            }
-            .section p, .section ul li {
-              font-size: 14px;
-            }
-          }
-        `}
-      </style>
+    <>     
+     <div className="nav_style">
+            <NavBar />
+            <SideBar />
+      </div>
       <div className="privacy-container">
         <div className="privacy-content">
           <h1 className="privacy-title">Sharada Stores Privacy Policy</h1>

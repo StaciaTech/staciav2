@@ -6,7 +6,7 @@
     "categories": [
       {
         "name": "2D design drafting",
-        "description": "2D design and drafting involve creating precise and detailed technical drawings that serve as a foundation for manufacturing and engineering. These drawings represent the exact dimensions, tolerances, and materials needed for fabrication and assembly. They are essential for ensuring clear communication between design and production teams, minimizing errors, and ensuring high-quality outcomes. Our 2D drafting services adhere to international standards, providing tailored solutions for a wide range of industries. We specialize in various drawing types, including machine drawings, manufacturing drawings, assembly drawings, and more. These drawings act as blueprints, streamlining workflows and enhancing the efficiency of the production process",
+        "description": "2D design and drafting involve creating precise and detailed technical drawings that serve as a foundation for manufacturing and engineering. These drawings represent the exact dimensions, tolerances, and materials needed for fabrication and assembly. They are essential for ensuring clear communication between design and production teams, minimizing errors, and ensuring high-quality outcomes. Our 2D drafting services adhere to international standards, providing tailored solutions for a wide range of industries. We specialize in various drawing types, including machine drawings, manufacturing drawings, assembly drawings, and more. These drawings act as blueprints, streamlining workflows and enhancing the efficiency of the production process.",
         "imageUrl": "/assets/2d-drafting.webp",
         "departmentId": "672eefbf81be8191d93ce4bd",
         "id": "675297bcd6387bac980467bb",          
@@ -224,7 +224,7 @@
       {
         "name":"CAD Conversion",
         "imageUrl": "/assets/CAD-Conversion.webp",
-        "description":"CAD conversion is the process of transforming existing drawings, images, or models into editable CAD formats. It enables businesses to digitize and modernize legacy documents, enhancing usability and accuracy. Our CAD conversion services cover various formats, such as paper, PDF, and images, to deliver high-quality CAD files. By using advanced software tools, we ensure precision and compliance with industry standards. Whether it's a simple 2D drawing or a complex 3D model, our solutions cater to a wide range of industries, improving workflow efficiency. CAD conversion is essential for creating accurate and scalable digital versions of physical documents or designs",          
+        "description":"CAD conversion is the process of transforming existing drawings, images, or models into editable CAD formats. It enables businesses to digitize and modernize legacy documents, enhancing usability and accuracy. Our CAD conversion services cover various formats, such as paper, PDF, and images, to deliver high-quality CAD files. By using advanced software tools, we ensure precision and compliance with industry standards. Whether it's a simple 2D drawing or a complex 3D model, our solutions cater to a wide range of industries, improving workflow efficiency. CAD conversion is essential for creating accurate and scalable digital versions of physical documents or designs.",          
         "services": [
           { 
             "title":"Paper to CAD Conversion",
@@ -366,10 +366,10 @@
       {
         "name":"3D modeling",
         "imageUrl":"/assets/3D Modelling.webp",
-        "description":"3D modeling is the process of creating three-dimensional representations of objects or systems using specialized software. It is crucial for visualizing, analyzing, and manufacturing complex designs. Our 3D modeling services cater to various industries, including automotive, kitchenware, food processing, agriculture, and electronics. From concept development to detailed product designs, we create accurate models tailored to client specifications. These models provide a realistic view of the design, aiding in better decision-making, simulation, and prototyping. With expertise in sheet metal design, test rigs, and enclosures, our 3D modeling services enhance the efficiency and precision of the product development process",
+        "description":"3D modeling is the process of creating three-dimensional representations of objects or systems using specialized software. It is crucial for visualizing, analyzing, and manufacturing complex designs. Our 3D modeling services cater to various industries, including automotive, kitchenware, food processing, agriculture, and electronics. From concept development to detailed product designs, we create accurate models tailored to client specifications. These models provide a realistic view of the design, aiding in better decision-making, simulation, and prototyping. With expertise in sheet metal design, test rigs, and enclosures, our 3D modeling services enhance the efficiency and precision of the product development process.",
         "services": [
           {
-            "title":"Automotive/ automobile machine components",
+            "title":"Automotive or automobile machine components",
             "imageUrl": "/assets/automobile machine components.webp",
             "description":"Our 3D modeling services for automotive machine components focus on creating detailed and accurate models for parts such as engine components, chassis, and transmission systems. We use advanced CAD software to ensure that every detail, from dimensions to tolerances, aligns with industry standards. These models are essential for simulating real-world conditions, testing functionality, and optimizing designs before production. By offering precise and customizable 3D models, we help automotive manufacturers reduce prototyping costs and accelerate time-to-market. Our expertise ensures that all designs meet safety and performance requirements while facilitating seamless integration into larger assemblies.",
             "whatWeDo":[
@@ -565,7 +565,7 @@
       {
         "name":"3D rendering",
         "imageUrl":"/assets/3D Rendering.webp",
-        "description":"3D rendering transforms 3D models into photorealistic images or animations, offering a detailed visual representation of products or components. This service is essential for showcasing designs during presentations, marketing, or production planning. We provide high-quality renderings for product visualization, machine assemblies, and more, ensuring accuracy in every detail. By using advanced rendering techniques, including lighting and texture mapping, we create lifelike images that reflect real-world aesthetics. Our services cater to industries like automotive, consumer electronics, and manufacturing. 3D rendering bridges the gap between concept and reality, enabling stakeholders to better understand and evaluate designs before production",
+        "description":"3D rendering transforms 3D models into photorealistic images or animations, offering a detailed visual representation of products or components. This service is essential for showcasing designs during presentations, marketing, or production planning. We provide high-quality renderings for product visualization, machine assemblies, and more, ensuring accuracy in every detail. By using advanced rendering techniques, including lighting and texture mapping, we create lifelike images that reflect real-world aesthetics. Our services cater to industries like automotive, consumer electronics, and manufacturing. 3D rendering bridges the gap between concept and reality, enabling stakeholders to better understand and evaluate designs before production.",
         "services": [
           {
             "title":"3D product rendering",
@@ -1048,7 +1048,7 @@
             ]
           },
           {
-            "title":"Cost-benefit analysis",
+            "title":"Cost benefit analysis",
             "imageUrl":"/assets/Cost-benefit analysis.webp",
             "description":"Cost-benefit analysis evaluates the economic feasibility of a product design, balancing development costs against potential benefits like performance, marketability, and sustainability. Our services provide detailed financial assessments, helping clients make informed decisions about their designs. This process is crucial for industries like manufacturing, consumer goods, and electronics, where cost efficiency drives competitiveness. By identifying areas for cost reduction without compromising quality, we help clients maximize value and profitability. Cost-benefit analysis ensures that designs are not only practical but also financially viable, supporting successful product development and market entry.",
             "whatWeDo":[
@@ -1791,7 +1791,7 @@
               "imageUrl": "/assets/UI-UX-Design.webp",
               "id": "6752966fd6387bac980467b4",
               "categoryId": "67529615d6387bac980467b3",
-              "title": "UI/UX Design",
+              "title": "UI UX Design",
               "position": 1,
               "whatWeDo": [
                 {
