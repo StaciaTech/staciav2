@@ -527,9 +527,9 @@ function NavBar() {
                 }}
               >
                 What's New
-                <FaChevronDown
+                {/* <FaChevronDown
                   style={{ verticalAlign: "middle", paddingLeft: "5%" }}
-                />
+                /> */}
                 {/* <img src={down} /> */}
               </div>
             </div>

@@ -43,17 +43,30 @@
     {
       "imageUrl":"/assets/LeaderPage/lakshman.png",
       "name": "Mr Lakshman",
-      "designation": "Chief Operational Officer"
+      "designation": "Chief Operational Officer",
+      "file": {
+         "fileUrl": ""
+      }
+     
+
     },
      {
       "imageUrl":"/assets/LeaderPage/sarabesh.png",
       "name": "Mr Sarabesh",
-      "designation": "Chief Executive Officer"
+      "designation": "Chief Executive Officer",
+      "file": {
+        "fileUrl": "/assets/Sarabesh Sriram.pdf"
+      }
+      
     },
      {
       "imageUrl":"/assets/LeaderPage/revanth.png",
       "name": "Mr Revanth",
-      "designation": "Chief Technical Officer"
+      "designation": "Chief Technical Officer",
+      "file": {
+        "fileUrl": ""
+      }
+      
     }
 
 

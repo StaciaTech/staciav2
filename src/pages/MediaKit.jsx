@@ -143,27 +143,47 @@ const MediaLogoContainer = ({ eachLogo }) => {
 };
 
 const MediaLeadersContainer = ({ eachfounder }) => {
+  // async function downloadFile(s3Url, name) {
+  //   try {
+  //     // Determine the MIME type based on format
+  //     const mimeType = "image/png";
+
+  //     const response = await axios.get(s3Url, { responseType: "blob" });
+  //     const blob = new Blob([response.data], { type: mimeType });
+  //     const url = URL.createObjectURL(blob);
+
+  //     const link = document.createElement("a");
+  //     link.href = url;
+  //     link.download = `${name}.png`;
+  //     document.body.appendChild(link);
+  //     link.click();
+  //     document.body.removeChild(link); // Remove link after download
+
+  //     URL.revokeObjectURL(url);
+  //   } catch (error) {
+  //     console.error(`Error downloading ${"png".toUpperCase()}:`, error);
+  //   }
+  // }
   async function downloadFile(s3Url, name) {
     try {
-      // Determine the MIME type based on format
-      const mimeType = "image/png";
-
+      const mimeType = "image/png"; // <- Not relevant for PDFs
       const response = await axios.get(s3Url, { responseType: "blob" });
-      const blob = new Blob([response.data], { type: mimeType });
+      const blob = new Blob([response.data], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement("a");
       link.href = url;
-      link.download = `${name}.png`;
+      link.download = `${name}.pdf`;
       document.body.appendChild(link);
       link.click();
-      document.body.removeChild(link); // Remove link after download
+      document.body.removeChild(link);
 
       URL.revokeObjectURL(url);
     } catch (error) {
-      console.error(`Error downloading ${"png".toUpperCase()}:`, error);
+      console.error(`Error downloading PDF:`, error);
     }
   }
+
 
   return (
     <div className="media-leader-card">
@@ -180,7 +200,8 @@ const MediaLeadersContainer = ({ eachfounder }) => {
         <div
           className="media-leader-download-bg"
           onClick={() => {
-            downloadFile(eachfounder, eachfounder.name);
+            // downloadFile(eachfounder, eachfounder.name);
+            downloadFile(eachfounder.file.fileUrl, eachfounder.name);
           }}
         >
           <FiDownload color="#0047ff" fontSize={24} />

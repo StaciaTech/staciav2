@@ -93,7 +93,13 @@
 .event-description1 {
   color: #6B6084;
   margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 16px;
   font-family: EuclidMedium;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .event-details1 {
