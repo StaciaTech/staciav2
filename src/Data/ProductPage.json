@@ -7,7 +7,7 @@
         {
           "id": "category-002",
           "name": "Agri and Food Processing SPM",
-          "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
+          "description": "Empower your agri-business with our specialized machinery for food processing and agriculture. We design and build SPMs (Special Purpose Machines) tailored to optimize post-harvest processing, packaging, and quality assurance. From seed sorting to product packaging, our innovative solutions enhance productivity, reduce waste, and ensure compliance with food safety standards. Trust our expertise to deliver efficiency and value to your agricultural operations.",
           "imageUrl": "/assets/Agri-and-Food Processing-SPM.webp",
           "products": [
             {
@@ -16,6 +16,7 @@
               "domainName":"Agri and Food Processing SPM",
               "description": "OneDril is a manual, portable seed-sowing machine designed for precise and efficient planting. Capable of handling seeds between 2 to 25mm, it follows the line-sowing principle for uniform crop growth. Ideal for micro and large seeds alike, OneDril’s ergonomic design ensures convenience and accuracy. It empowers farmers with a cost-effective, versatile solution for boosting agricultural productivity.",
               "imageUrl": "/assets/ProductPage/onedrillssm.webp",
+              "briefDetails":"Onedril is a manually operated, portable seed sowing machine designed specifically for micro seeds but capable of handling seeds ranging from 2mm to 25mm. Built on the principle of line sowing, it ensures precise seed placement, optimal spacing, and improved germination. Its compact and ergonomic design makes it easy to carry and operate across various terrains, especially suitable for small to mid-sized farms. Onedril enhances sowing efficiency, reduces manual labor, and supports sustainable farming practices. It’s ideal for crops like millet, mustard, sunflower, and beans, making it a versatile tool for modern-day farmers seeking affordable, effective sowing solutions.",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/seed plunger.webp",
@@ -45,6 +46,7 @@
               "domainName":"Agri and Food Processing SPM",
               "description": "This remote-operated Chilli Ladling Machine is engineered for efficient handling and ladling of chilies inside solar sheds. Its versatile design allows it to handle other crops like groundnuts and grains, ensuring optimal operation. With enhanced precision and ease of use, this machine reduces labor efforts and maximizes productivity for solar drying and similar agricultural processes.",
               "imageUrl": "/assets/ProductPage/chilli-lading-machine.webp",
+              "briefDetails":"The Chilli Ladling Machine is a specially designed, remote-operated system used to evenly ladle and spread chillies inside solar drying sheds. Engineered for precision and efficiency, it reduces manual labor while ensuring uniform drying—crucial for preserving quality and flavor. Though primarily built for chillies, it is versatile enough to handle other crops such as turmeric, tamarind, or herbs. Its adjustable control mechanism allows smooth, consistent operation, making it ideal for small processing units and agro-industries. This machine not only enhances productivity but also supports hygienic, large-scale drying with minimal human contact and improved operational safety.",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/Motor.webp",
@@ -69,6 +71,7 @@
               "domainName":"Agri and Food Processing SPM",
               "description": "The Precision Slicing Machine delivers ultra-thin slices, as fine as 3mm, with exceptional accuracy. Designed for diverse food items, it can slice fruits, vegetables, and even delicate items like bread with high precision. This machine ensures uniformity and efficiency, making it a valuable asset for food processing, catering, and kitchen applications demanding consistent slicing quality.",
               "imageUrl": "/assets/ProductPage/Precision Slicing Machine.webp",
+              "briefDetails":"The Precision Slicing Machine is a high-performance slicing solution engineered to deliver ultra-thin and uniform slices up to 3mm thickness. Designed for versatility, it can process a wide range of food items including potatoes, carrots, radish, onions, and even fruits like, Bread crisps,  apples or beetroot. Its robust blades ensure consistent results with minimal waste, making it ideal for commercial kitchens, food processing units, and snack industries. The compact design, easy-to-clean components, and safety-focused operation enhance user convenience. Whether for chips, salads, or garnishes, this machine guarantees precision, speed, and superior quality in every cut, boosting efficiency in food preparation.",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/slider involute blade.webp",
@@ -98,6 +101,7 @@
               "domainName":"Agri and Food Processing SPM",
               "description": "This innovative Tamarind Breaking Machine simplifies the process of breaking tamarind pods while preserving seed and pulp quality. Designed for agricultural efficiency, it is robust and user-friendly, suitable for small and large-scale operations. The machine boosts productivity and minimizes manual effort, making it an essential tool for tamarind producers.",
               "imageUrl":"/assets/ProductPage/Tamarind Breaking machine.webp",
+              "briefDetails":"The Tamarind Breaking Machine is a robust and efficient solution designed to break and separate tamarind pods with minimal manual effort. Engineered for agro-processing industries and small-scale farmers, it gently cracks open the shells without damaging the pulp, ensuring higher yield and better product quality. Its stainless steel components offer durability and hygiene, while the machine’s user-friendly design supports easy operation and maintenance. It significantly reduces labor costs and increases processing speed, making it ideal for seasonal and bulk tamarind handling. Adaptable for similar shell-based crops like groundnuts or dry peas, this machine enhances productivity and post-harvest efficiency.",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/tam out conveyor.webp",
@@ -120,9 +124,9 @@
               "id":"product-005",
               "title": "Bailing Machine",
               "domainName":"Agri and Food Processing SPM",
-
               "description": "A cost-effective Bailing Machine designed to compress carton boxes to one-fourth of their original volume. Its robust design ensures reliability and efficiency, reducing storage space and simplifying waste management. Suitable for warehouses, recycling centers, and packaging units, this machine offers an economical and practical solution for handling bulk waste materials",
               "imageUrl":"/assets/ProductPage/Default.webp",
+              "briefDetails":"The Bailing Machine is a compact, low-cost solution designed to compress and bundle carton boxes and similar recyclable materials into one-fourth of their original volume. Ideal for small warehouses, retail stores, and recycling centers, it helps reduce storage space and transportation costs. The machine features a durable frame, easy-lever operation, and safety mechanisms to ensure reliable, user-friendly performance. Its energy-efficient design makes it suitable for both urban and rural setups. Beyond carton boxes, it can also handle materials like paper waste and plastic wrappers. This machine promotes sustainable waste management and streamlines disposal processes for eco-conscious operations",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/motorized screw jack.webp",
@@ -146,38 +150,18 @@
               "title":"Spinach Cleaning Machine",
               "domainName":"Agri and Food Processing SPM",
               "description":"This Spinach Cleaning Machine cleans and semi-dries spinach with ease and precision. Its adaptable design allows it to handle other crops like lettuce, coriander, and fenugreek. Ideal for agricultural and food processing operations, it ensures hygiene and quality while saving time and labor. This machine is a perfect solution for pre-processing leafy vegetables and herbs",
-              "imageUrl":"/assets/ProductPage/spinach cleaning with Frames1.webp"
+              "imageUrl":"/assets/ProductPage/spinach cleaning with Frames1.webp",
+              "briefDetails":"The Spinach Cleaning Machine is a compact, efficient solution designed to wash and semi-dry leafy vegetables like spinach, fenugreek, coriander, and amaranthus. Equipped with a multi-stage cleaning system, it gently removes soil, dust, and other impurities while maintaining the natural texture and freshness of the leaves. The semi-drying feature reduces moisture without damaging the produce, making it ideal for packaging and further processing. Its stainless-steel construction ensures hygiene, durability, and ease of cleaning. Perfect for small-scale farmers, vegetable vendors, and food processing units, this machine streamlines post-harvest handling, reduces labor, and enhances produce quality and shelf life."
             }
           ]
         },
         {
           "id":"category-002",
-          "name":"Automobile or Automotive SPM",
-          "description":"Drive innovation in the automotive industry with our custom-built SPMs. Designed for precision and reliability, our machines cater to various applications, including assembly, testing, and component manufacturing. Leveraging cutting-edge technology, we ensure streamlined workflows and high-quality output. Partner with us for tailored solutions that meet the rigorous demands of the automotive sector, enhancing both efficiency and profitability.",
+          "name":"Industrial Automation (SPM)",
+          "description":"Optimize your production processes with our Industrial Automation solutions. We provide customized systems that streamline operations, improve accuracy, and reduce downtime. Utilizing the latest in robotics, control systems, and sensors, our solutions enhance productivity while lowering costs. Whether for assembly lines, material handling, or quality inspection, our automation technology ensures consistent performance and maximized efficiency for your industrial needs",
           "imageUrl": "/assets/Automobile-or-Automotive-SPM.webp",
           "products":[
-            {
-              "id":"product-001",
-              "title":"Brake Shoe Grinding Machine.",
-              "domainName":"Automobile or Automotive SPM",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-              
-            },
-            {
-              "id":"product-002",
-              "title":"Fully autotmated paint booth with dryer",
-              "domainName":"Automobile or Automotive SPM",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            },
-            {
-              "id":"product-003",
-              "title":"Automated Adhesive applying machines",
-              "domainName":"Automobile or Automotive SPM",
-              "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sunt a, neque reprehenderit, omnis doloremque obcaecati facilis delectus illum at quos magnam quibusdam nesciunt? Qui quidem totam rerum provident perspiciatis.",
-              "imageUrl":"/assets/ProductPage/Default.webp"
-            }
+            
           ] 
         },         
         {
@@ -277,7 +261,8 @@
               "title": "Hydration tracking (G-sensor)",
               "domainName":"Research and Development",
               "description":"An innovative R&D project designed to measure water levels inside a bottle and track the amount consumed with exceptional accuracy of 10mm. It provides hydration reminders at user-specified or AI-recommended intervals, enhancing hydration habits. This technology integrates advanced sensors for real-time monitoring and ensures precision, making it ideal for personalized hydration management and improving overall wellness",
-              "imageUrl": "/assets/ProductPage/Default.webp"
+              "imageUrl": "/assets/ProductPage/Default.webp",
+              "briefDetails":"This advanced hydration tracking system is an R&D innovation that utilizes a G-sensor and intelligent algorithms to accurately measure the amount of water consumed directly from a bottle. With an impressive accuracy of up to 10mm water level detection, the system monitors the intake each time the user drinks and updates hydration status in real time. It supports both user-defined reminder intervals and AI/ML-based smart recommendations that learn from daily habits, body metrics, and environmental factors. Ideal for fitness enthusiasts, patients, professionals, and general users aiming for better health, this system promotes personalized hydration habits, reduces dehydration risk, and ensures timely reminders—all within a sleek, integrated design for use in smart bottles or other containers"
               
             },
             {
@@ -293,7 +278,8 @@
               "title": "LoRa mesh system with encryption",
               "domainName":"Research and Development",
               "description": "This R&D project introduces a highly secure LoRa mesh communication system capable of transmitting signals over a 10km radius. It offers encrypted, long-range connectivity ideal for remote monitoring, smart agriculture, disaster management, industrial automation, and IoT networks. Its robust design enables seamless communication in isolated or large-scale environments, making it an excellent choice for applications demanding extended coverage and reliable data transfer.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
+              "imageUrl": "/assets/ProductPage/Default.webp",
+              "briefDetails":"The LoRa Mesh System with Encryption is a robust R&D-based long-range wireless communication solution designed for secure, decentralized data transmission across a 10km radius. Unlike traditional point-to-point systems, this mesh network enables multiple nodes to relay data, ensuring strong signal integrity even in remote or obstructed environments. With built-in encryption, it offers high-level data security, making it suitable for sensitive and mission-critical applications. The system is ideal for smart agriculture, disaster management, military communication, industrial automation, campus-wide IoT setups, and rural connectivity solutions. Its low power consumption and wide coverage make it a scalable, cost-effective alternative to traditional cellular networks for smart cities and infrastructure."
               
             }
           ]
@@ -310,6 +296,7 @@
               "domainName":"IoT Smart Products",
               "description": "Hydrogen is an AI-powered smart water bottle that features rapid heating and cooling, hydration tracking with advanced sensors, and personalized reminders for optimal water intake. Its ergonomic squircle design ensures style and comfort, while its innovative technology offers superior functionality. Perfect for on-the-go hydration, it redefines smart drinking solutions with intelligence, performance, and modern aesthetics",
               "imageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
+              "briefDetails":"HydroGen is a next-generation smart water bottle designed to revolutionize personal hydration. It features an AI/ML-based hydration tracking system with a built-in G-sensor that monitors water intake with up to 10mm accuracy. The bottle integrates a compact semiconductor-based heating and cooling unit, allowing users to enjoy water at their preferred temperature on the go. Its ergonomic squircle (square + circle) design ensures a comfortable grip, while customizable LED indicators provide hydration reminders at user-defined or AI-recommended intervals. HydroGen combines health insights, advanced technology, and sleek design, making it ideal for daily use at work, school, gym, or travel",
               "productDetails": [
                 {
                   "id": "detail-001",
@@ -349,6 +336,7 @@
               "domainName":"IoT Smart Products",
               "description": "A versatile child safety solution available as a card, module, or watch, this RFID tracking device ensures real-time location updates and customizable alerts. It’s adaptable for school, play, and travel, and extends its utility to applications like pet tracking, asset management, and workforce monitoring. This device offers parents peace of mind and provides efficient tracking for a wide range of needs",
               "imageUrl": "/assets/ProductPage/RFID-Child-Tracking-Device.webp",
+              "briefDetails":"The RFID Child Tracking Device is a reliable and innovative safety solution designed to monitor and ensure the real-time location of children in schools, parks, or public spaces. With a tracking range of up to 200 meters, the system uses RFID tags available in card, wristband, or module forms—customizable to suit different use cases. It alerts guardians or school staff if a child moves beyond the designated safe zone, enhancing security without compromising freedom. The system supports integration with attendance management and access control systems. Built for ease of use and minimal maintenance, it’s ideal for schools, daycare centers, theme parks, and public events.",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/Watch-Model.webp",
@@ -373,6 +361,7 @@
               "domainName":"IoT Smart Products",
               "description": "Experience the future of home and office living with Smart Furniture. Featuring wireless charging, a built-in beverage heating and cooling system, intelligent lighting, and a retractable arm system for holding laptops or books with a nightlight. It also includes pop-up sockets and AI voice assistance for basic electronic controls like lights and AC. Smart Furniture combines functionality, comfort, and technology to redefine your personal and professional spaces",
               "imageUrl": "/assets/ProductPage/Smart Furniture.webp",
+              "briefDetails":"The Smart Furniture – Carbon Series is a multifunctional innovation combining comfort, technology, and productivity. Designed for homes, offices, and tech-enabled spaces, it features built-in wireless charging, a beverage heating and cooling system, an intelligent light setup, and a retractable arm to hold books or laptops—ideal for night reading or work. It also includes a pop-up socket hub and AI voice assistance for controlling devices like lights, fans, or AC. Crafted with ergonomic and modular design principles, Carbon enhances both functionality and aesthetics. Perfect for modern lifestyles, it supports efficiency, reduces clutter, and creates a seamless smart workspace or relaxation zone",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/Beverage-Warmer-And-Cooler.webp",
@@ -407,6 +396,7 @@
               "domainName":"IoT Smart Products",
               "description": "S Connect is a next-gen smart speaker combining premium sound quality with intelligent voice control. It connects seamlessly to your smart devices, enabling hands-free operation and integration with IoT systems. Designed for versatility, it fits effortlessly into any setting, offering personalized assistance, dynamic entertainment, and superior connectivity. S Connect transforms your space into a hub of convenience and innovation.",
               "imageUrl": "/assets/ProductPage/S Connect (Smart Speaker).webp",
+              "briefDetails":"S Connect is an AI-powered smart speaker crafted for seamless voice interaction and intelligent control. Designed to integrate effortlessly into smart homes, offices, and learning environments, it supports voice commands for managing connected devices like lights, fans, AC, and more. The speaker offers clear audio output for music, calls, and announcements while also enabling personalized reminders, daily updates, and voice notes. Equipped with Wi-Fi and Bluetooth connectivity, S Connect serves as a smart hub that bridges IoT devices and enhances automation. Its sleek, minimalistic design complements any space, making it a versatile addition for productivity, comfort, and entertainment.",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/Surround-Speaker.webp",
@@ -462,14 +452,14 @@
             {
               "id":"product-001",
               "title":"Stello",
-              "domainName":"S tellar",
+              "domainName":"Stellar",
               "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             },
             {
               "id":"product-002",
               "title":"Agency",
-              "domainName":"S tellar",
+              "domainName":"Stellar",
               "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
               "imageUrl": "/assets/ProductPage/Default.webp"
             }
@@ -478,30 +468,34 @@
         {
           "id":"category-002",
           "name":"Edifai (Simplify your business)",
-          "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
+          "description":"Edifai is a powerful suite of business applications designed to streamline operations and boost productivity. It includes Stacia Reimbursement for efficient expense management, Stacia Calendar for seamless scheduling and coordination, and Stacia Forms for digitizing and automating workflows and much more. Edifai helps businesses reduce manual tasks, enhance collaboration, and improve decision-making through integrated, user-friendly tools. Whether managing finances,organizing meetings, or collecting data, Edifai provides a smart, centralized solution to keep your business running smoothly and efficiently",
           "imageUrl":"/assets/New Product Development.webp",
           "products":[
             {
               "id":"product-003",
               "title":"Calender",
               "domainName":"Edifai (Simplify your business)",
-              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
+              "description": "Stacia Calendar streamlines scheduling and team coordination by centralizing meetings, deadlines, and events. It integrates seamlessly with other tools, allowing users to manage availability, send invites, and track shared calendars effortlessly. Designed to enhance productivity, it minimizes scheduling conflicts and keeps teams aligned with automated reminders, smart booking features, and real-time updates across departments or project groups",
+              "imageUrl": "/assets/ProductPage/Default.webp",
+              "briefDetails":"Stacia Calendar is a smart scheduling tool that brings organization and visibility to business planning. esigned for teams, it supports shared calendars, meeting invites, and automatic reminders to ensure everyone stays in sync. It integrates with ommunication and productivity platforms, allowing seamless updates and coordination. Users can check availability, avoid double-bookings, and plan recurring events with ease. With color-coded categorization, customizable views, and real-time updates, Stacia Calendar enhances time anagement and team productivity, whether coordinating projects, meetings, or company-wide events."
             },
             {
               "id":"product-004",
               "title":"Forms",
               "domainName":"Edifai (Simplify your business)",
-              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
+              "description": "Stacia Forms digitizes data collection and workflow automation across business processes. From employee onboarding to client feedback,it enables the creation, distribution, and analysis of custom forms without coding. With robust templates, approval routing, and real-time collaboration, teams can eliminate paperwork, reduce errors, and accelerate decision-making. It’s a flexible, secure solution to streamline data-driven tasks and enhance operational efficiency across departments",
+              "imageUrl": "/assets/ProductPage/Default.webp",
+              "briefDetails":"Stacia Forms empowers businesses to create, share, and manage digital forms for any workflow—from internal requests to customer surveys. With a drag-and-drop builder, users can design custom forms without coding. Built-in logic, workflow routing, and e-signatures streamline approvals and reduce delays.Responses are automatically captured and organized, with export and analytics options available for insights. Stacia Forms integrates with other Edifai tools to support end-to-end processes, ensuring smooth collaboration and eliminating the need for paper-based systems. It’s secure, user-friendly, and calable to fit any business need."
+
             }
             ,
             {
               "id":"product-005",
               "title":"Reimbursement",
               "domainName":"Edifai (Simplify your business)",
-              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
+              "description": "Stacia Reimbursement simplifies expense management by allowing employees to submit claims quickly and managers to approve them with ease. It ensures faster processing, transparency, and accurate tracking of business expenses. With intuitive workflows, built-in compliance checks, and real-time status updates, this tool reduces paperwork and reimbursement delays, making financial operations smoother and more efficient for both staff and administrators",
+              "imageUrl": "/assets/ProductPage/Default.webp",
+              "briefDetails":"Stacia Reimbursement is built to take the hassle out of managing employee expenses. It allows users to submit reimbursement requests with receipts, categorize expenses, and track approvals in real time. Finance teams gain greater visibility into pending,while automated workflows reduce approval time and errors. Integrated policy checks ensure compliance, and detailed reporting helps with budgeting and audits. Stacia Reimbursement supports mobile access, making it easy for employees to manage claims on the go, and helps businesses maintain financial transparency and control without the dministrative burden"
             }
           ]
         }
