@@ -12,8 +12,7 @@ const PrivacyPolicy = () => {
       </div>
       <div className="privacy-container">
         <div className="privacy-content">
-          <h1 className="privacy-title">Sharada Stores Privacy Policy</h1>
-          <p className="last-updated">Last Updated: March 28, 2025</p>
+          <h1 className="privacy-title">Privacy Policy</h1>
 
           {/* Introduction */}
           <section className="section">
