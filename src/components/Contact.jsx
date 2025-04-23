@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState } from "react";
 import "../styles/Contact.css";
 import StaciaContactLogo from "../assets/StaciaContactLogo.svg";
@@ -10,7 +12,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-
 
 const titles = [
   "Information Technology",
@@ -31,7 +32,7 @@ function Contact({ closeHandle }) {
   });
   const [errors, setErrors] = useState({});
   const [showOpt, setShowOpt] = useState(false);
-  const [result, setResult] = useState("");
+  const [submitted, setSubmitted] = useState(false); // Track if form was submitted
 
   useEffect(() => {
     document.body.classList.add("no-scroll");
@@ -53,7 +54,7 @@ function Contact({ closeHandle }) {
           ? "Invalid email format"
           : "";
       case "phone":
-        return value.trim() ? "" : "Phone number is required";
+        return value && value.length > 5 ? "" : "Phone number is required";
       case "organization":
         return value ? "" : "Organization is required";
       case "customOrg":
@@ -77,17 +78,18 @@ function Contact({ closeHandle }) {
 
   const handleChange = (name, value) => {
     setForm((prev) => ({ ...prev, [name]: value }));
-    const error = validateField(name, value);
-    setErrors((prev) => ({ ...prev, [name]: error }));
-  };
-
-  const handleBlur = (name) => {
-    const error = validateField(name, form[name]);
-    setErrors((prev) => ({ ...prev, [name]: error }));
+    if (submitted) { // Only validate and clear errors after submission
+      const error = validateField(name, value);
+      setErrors((prev) => ({
+        ...prev,
+        [name]: error,
+      }));
+    }
   };
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setSubmitted(true); // Mark as submitted
     if (!validateForm()) {
       toast.error("Please fill all required fields correctly", {
         style: {
@@ -100,7 +102,7 @@ function Contact({ closeHandle }) {
     }
 
     const formData = new FormData();
-    formData.append("access_key", "b86a7981-0219-41f3-b777-cf7fb7b5292a");
+    formData.append("access_key", "e94ad995-f110-472a-81f9-66ff8ca65e98");
     formData.append("name", form.name);
     formData.append("email", form.mail);
     formData.append("phone", form.phone);
@@ -109,6 +111,8 @@ function Contact({ closeHandle }) {
       form.organization === "Others" ? form.customOrg : form.organization
     );
     formData.append("message", form.message);
+    formData.append("subject", "New Inquiry via Contact Form – Stacia Corp");
+    formData.append("from_name", "Stacia Corp Website");
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -117,7 +121,7 @@ function Contact({ closeHandle }) {
       });
       const data = await res.json();
       if (data.success) {
-        toast.success(":tada: Successfully Message Sent!", {
+        toast.success(":tada: Message Sent Successfully!", {
           style: {
             backgroundColor: "#008E2F",
             color: "white",
@@ -133,11 +137,12 @@ function Contact({ closeHandle }) {
           message: "",
         });
         setErrors({});
+        setSubmitted(false); // Reset submission state
         setTimeout(() => {
           closeHandle();
         }, 1500);
       } else {
-        toast.error("Failed to send. Try again.", {
+        toast.error("Failed to send. Please try again.", {
           style: {
             backgroundColor: "red",
             color: "white",
@@ -145,7 +150,7 @@ function Contact({ closeHandle }) {
         });
       }
     } catch (err) {
-      toast.error("Something went wrong!", {
+      toast.error("An error occurred. Please try again later.", {
         style: {
           backgroundColor: "red",
           color: "white",
@@ -214,7 +219,7 @@ function Contact({ closeHandle }) {
             <div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div className="contact-main-title">
-                  Love to hear from you :blue_heart:
+                  Love to hear from you 💙
                 </div>
                 <IoClose
                   onClick={closeHandle}
@@ -234,7 +239,6 @@ function Contact({ closeHandle }) {
                     placeholder="Name*"
                     value={form.name}
                     onChange={(e) => handleChange("name", e.target.value)}
-                    onBlur={() => handleBlur("name")}
                     className={`input-field ${errors.name ? "invalid" : ""}`}
                   />
                   {errors.name && (
@@ -247,7 +251,6 @@ function Contact({ closeHandle }) {
                     placeholder="Enter Your Mail*"
                     value={form.mail}
                     onChange={(e) => handleChange("mail", e.target.value)}
-                    onBlur={() => handleBlur("mail")}
                     className={`input-field ${errors.mail ? "invalid" : ""}`}
                   />
                   {errors.mail && (
@@ -294,16 +297,13 @@ function Contact({ closeHandle }) {
                 </div>
                 <div className="input-wrapper">
                   <div
-                    className={`mobile-container ${
-                      errors.phone ? "invalid" : ""
-                    }`}
+                    className={`mobile-container ${errors.phone ? "invalid" : ""}`}
                   >
                     <PhoneInput
                       placeholder="Enter phone number*"
                       value={form.phone}
                       defaultCountry="IN"
                       onChange={(value) => handleChange("phone", value || "")}
-                      onBlur={() => handleBlur("phone")}
                       className={`PhoneInput ${errors.phone ? "invalid" : ""}`}
                     />
                   </div>
@@ -319,13 +319,8 @@ function Contact({ closeHandle }) {
                       type="text"
                       placeholder="Enter your organization name*"
                       value={form.customOrg}
-                      onChange={(e) =>
-                        handleChange("customOrg", e.target.value)
-                      }
-                      onBlur={() => handleBlur("customOrg")}
-                      className={`input-field ${
-                        errors.customOrg ? "invalid" : ""
-                      }`}
+                      onChange={(e) => handleChange("customOrg", e.target.value)}
+                      className={`input-field ${errors.customOrg ? "invalid" : ""}`}
                     />
                     {errors.customOrg && (
                       <span className="error-message">{errors.customOrg}</span>

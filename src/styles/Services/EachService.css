@@ -61,7 +61,7 @@
   text-overflow: ellipsis;
 }
 .each-service-howWeDo-section {
-  margin: 10rem 0rem;
+  margin: 4rem 0rem;
   /* position: sticky;
   top: 160px; */
 }
@@ -140,6 +140,22 @@
   display: none;
 }
 
+/* scroll card container */
+
+.howWeDo-container{    
+  height: "47vh";
+  position: sticky;
+  top: 80px;
+  margin-bottom:100px ;
+  overflow: auto;               /* Enables scrolling */
+  scrollbar-width: none;        /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none;     /* Hides scrollbar in IE and Edge */
+}
+.howWeDo-container::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 @media screen and  (max-width: 768px) {
   /*change this */
@@ -216,5 +232,4 @@
     display: none;
   }
 }
-
 

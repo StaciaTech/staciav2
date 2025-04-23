@@ -35,7 +35,7 @@
 }
 
 .service-title {
-  font-size: 7vw;
+  font-size: 6vw;
   font-weight: 600;
   width: 100%;
   -webkit-text-stroke: 2px;
@@ -63,7 +63,7 @@
   margin-top: 20px;
   font-size: 1.25rem;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  /* -webkit-line-clamp: 5; */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;  

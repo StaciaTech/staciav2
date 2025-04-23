@@ -37,6 +37,7 @@ import CertificateView from "./components/CertificateView";
 
 
 import EventDetails from "./components/Competition/Event-Detail";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
       {/* <Box1 /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Privacy-Policy" element={<PrivacyPolicy/>}/>
         <Route path="/career" element={<CareerPage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route

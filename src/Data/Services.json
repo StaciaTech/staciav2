@@ -6,7 +6,7 @@
     "categories": [
       {
         "name": "2D design drafting",
-        "description": "2D design and drafting involve creating precise and detailed technical drawings that serve as a foundation for manufacturing and engineering. These drawings represent the exact dimensions, tolerances, and materials needed for fabrication and assembly. They are essential for ensuring clear communication between design and production teams, minimizing errors, and ensuring high-quality outcomes. Our 2D drafting services adhere to international standards, providing tailored solutions for a wide range of industries. We specialize in various drawing types, including machine drawings, manufacturing drawings, assembly drawings, and more. These drawings act as blueprints, streamlining workflows and enhancing the efficiency of the production process",
+        "description": "2D design and drafting involve creating precise and detailed technical drawings that serve as a foundation for manufacturing and engineering. These drawings represent the exact dimensions, tolerances, and materials needed for fabrication and assembly. They are essential for ensuring clear communication between design and production teams, minimizing errors, and ensuring high-quality outcomes. Our 2D drafting services adhere to international standards, providing tailored solutions for a wide range of industries. We specialize in various drawing types, including machine drawings, manufacturing drawings, assembly drawings, and more. These drawings act as blueprints, streamlining workflows and enhancing the efficiency of the production process.",
         "imageUrl": "/assets/2d-drafting.webp",
         "departmentId": "672eefbf81be8191d93ce4bd",
         "id": "675297bcd6387bac980467bb",          
@@ -224,7 +224,7 @@
       {
         "name":"CAD Conversion",
         "imageUrl": "/assets/CAD-Conversion.webp",
-        "description":"CAD conversion is the process of transforming existing drawings, images, or models into editable CAD formats. It enables businesses to digitize and modernize legacy documents, enhancing usability and accuracy. Our CAD conversion services cover various formats, such as paper, PDF, and images, to deliver high-quality CAD files. By using advanced software tools, we ensure precision and compliance with industry standards. Whether it's a simple 2D drawing or a complex 3D model, our solutions cater to a wide range of industries, improving workflow efficiency. CAD conversion is essential for creating accurate and scalable digital versions of physical documents or designs",          
+        "description":"CAD conversion is the process of transforming existing drawings, images, or models into editable CAD formats. It enables businesses to digitize and modernize legacy documents, enhancing usability and accuracy. Our CAD conversion services cover various formats, such as paper, PDF, and images, to deliver high-quality CAD files. By using advanced software tools, we ensure precision and compliance with industry standards. Whether it's a simple 2D drawing or a complex 3D model, our solutions cater to a wide range of industries, improving workflow efficiency. CAD conversion is essential for creating accurate and scalable digital versions of physical documents or designs.",          
         "services": [
           { 
             "title":"Paper to CAD Conversion",
@@ -366,10 +366,10 @@
       {
         "name":"3D modeling",
         "imageUrl":"/assets/3D Modelling.webp",
-        "description":"3D modeling is the process of creating three-dimensional representations of objects or systems using specialized software. It is crucial for visualizing, analyzing, and manufacturing complex designs. Our 3D modeling services cater to various industries, including automotive, kitchenware, food processing, agriculture, and electronics. From concept development to detailed product designs, we create accurate models tailored to client specifications. These models provide a realistic view of the design, aiding in better decision-making, simulation, and prototyping. With expertise in sheet metal design, test rigs, and enclosures, our 3D modeling services enhance the efficiency and precision of the product development process",
+        "description":"3D modeling is the process of creating three-dimensional representations of objects or systems using specialized software. It is crucial for visualizing, analyzing, and manufacturing complex designs. Our 3D modeling services cater to various industries, including automotive, kitchenware, food processing, agriculture, and electronics. From concept development to detailed product designs, we create accurate models tailored to client specifications. These models provide a realistic view of the design, aiding in better decision-making, simulation, and prototyping. With expertise in sheet metal design, test rigs, and enclosures, our 3D modeling services enhance the efficiency and precision of the product development process.",
         "services": [
           {
-            "title":"Automotive/ automobile machine components",
+            "title":"Automotive or automobile machine components",
             "imageUrl": "/assets/automobile machine components.webp",
             "description":"Our 3D modeling services for automotive machine components focus on creating detailed and accurate models for parts such as engine components, chassis, and transmission systems. We use advanced CAD software to ensure that every detail, from dimensions to tolerances, aligns with industry standards. These models are essential for simulating real-world conditions, testing functionality, and optimizing designs before production. By offering precise and customizable 3D models, we help automotive manufacturers reduce prototyping costs and accelerate time-to-market. Our expertise ensures that all designs meet safety and performance requirements while facilitating seamless integration into larger assemblies.",
             "whatWeDo":[
@@ -565,7 +565,7 @@
       {
         "name":"3D rendering",
         "imageUrl":"/assets/3D Rendering.webp",
-        "description":"3D rendering transforms 3D models into photorealistic images or animations, offering a detailed visual representation of products or components. This service is essential for showcasing designs during presentations, marketing, or production planning. We provide high-quality renderings for product visualization, machine assemblies, and more, ensuring accuracy in every detail. By using advanced rendering techniques, including lighting and texture mapping, we create lifelike images that reflect real-world aesthetics. Our services cater to industries like automotive, consumer electronics, and manufacturing. 3D rendering bridges the gap between concept and reality, enabling stakeholders to better understand and evaluate designs before production",
+        "description":"3D rendering transforms 3D models into photorealistic images or animations, offering a detailed visual representation of products or components. This service is essential for showcasing designs during presentations, marketing, or production planning. We provide high-quality renderings for product visualization, machine assemblies, and more, ensuring accuracy in every detail. By using advanced rendering techniques, including lighting and texture mapping, we create lifelike images that reflect real-world aesthetics. Our services cater to industries like automotive, consumer electronics, and manufacturing. 3D rendering bridges the gap between concept and reality, enabling stakeholders to better understand and evaluate designs before production.",
         "services": [
           {
             "title":"3D product rendering",
@@ -1048,7 +1048,7 @@
             ]
           },
           {
-            "title":"Cost-benefit analysis",
+            "title":"Cost benefit analysis",
             "imageUrl":"/assets/Cost-benefit analysis.webp",
             "description":"Cost-benefit analysis evaluates the economic feasibility of a product design, balancing development costs against potential benefits like performance, marketability, and sustainability. Our services provide detailed financial assessments, helping clients make informed decisions about their designs. This process is crucial for industries like manufacturing, consumer goods, and electronics, where cost efficiency drives competitiveness. By identifying areas for cost reduction without compromising quality, we help clients maximize value and profitability. Cost-benefit analysis ensures that designs are not only practical but also financially viable, supporting successful product development and market entry.",
             "whatWeDo":[
@@ -1791,7 +1791,7 @@
               "imageUrl": "/assets/UI-UX-Design.webp",
               "id": "6752966fd6387bac980467b4",
               "categoryId": "67529615d6387bac980467b3",
-              "title": "UI/UX Design",
+              "title": "UI and UX Design",
               "position": 1,
               "whatWeDo": [
                 {
@@ -2189,7 +2189,7 @@
               "imageUrl": "/assets/Cross-Platform-App-Development.webp",
               "id": "676e55dbe0bbb25e4ee93318",
               "categoryId": "6769383a51dcda17a0f93888",
-              "title": "Cross-Platform App Development",
+              "title": "Cross Platform App Development",
               "position": 4,
               "whatWeDo": [
                 {
@@ -2344,7 +2344,7 @@
               ]
             },
             {
-              "description": "Performance Testing focuses on assessing how well an application performs under various loads. Our team conducts stress tests, load tests, and scalability tests to determine how the application behaves under different traffic volumes and system configurations. Performance testing ensures that the application can handle heavy user traffic and continue to deliver a smooth user experience. By identifying performance bottlenecks, we help businesses optimize their applications for speed and responsiveness.",
+              "description": "Containerization involves packaging applications and their dependencies into lightweight, portable containers. This technology ensures consistency across development, testing, and production environments, streamlining the deployment process. Containers enable faster scaling, efficient resource utilization, and reduced deployment errors. With tools like Docker, developers can encapsulate application code, runtime, and libraries, making it easier to manage updates and rollbacks. Our containerization expertise enhances productivity, improves portability, and enables rapid deployment for modern, cloud-native applications.",
               "imageUrl": "/assets/Containerization.webp",
               "id": "676e5b43e0bbb25e4ee93335",
               "categoryId": "6769386151dcda17a0f93889",
@@ -2438,7 +2438,7 @@
               "imageUrl": "/assets/Continuous-Integration-and-Deployment(CI-CD).webp",
               "id": "676e5b60e0bbb25e4ee93336",
               "categoryId": "6769386151dcda17a0f93889",
-              "title": "Continuous Integration and Deployment (CI/CD)",
+              "title": "Continuous Integration and Deployment (CI or CD)",
               "position": 4,
               "whatWeDo": [
                 {
@@ -2487,6 +2487,13 @@
               "position": 4,
               "whatWeDo": [
                 {
+                  "des": "We configure servers according to best practices for security, performance, and scalability, ensuring optimal resource allocation",
+                  "id": "676e5e44e0bbb25e4ee9334a",
+                  "serviceId": "676e5b60e0bbb25e4ee93336",
+                  "title": "Initial Setup and Configuration",
+                  "position": 0
+                },
+                {
                   "des": "We implement industry-standard security measures, including firewalls, encryption, and access controls, to protect your servers from potential threats.",
                   "id": "676e5e44e0bbb25e4ee9334a",
                   "serviceId": "676e5b60e0bbb25e4ee93336",
@@ -2498,15 +2505,8 @@
                   "id": "676e5e9ee0bbb25e4ee9334b",
                   "serviceId": "676e5b60e0bbb25e4ee93336",
                   "title": "Configuration Management",
-                  "position": 2
-                },
-                {
-                  "des": " We use automation tools to manage server configurations and ensure uniformity.",
-                  "id": "676e5eafe0bbb25e4ee9334c",
-                  "serviceId": "676e5b60e0bbb25e4ee93336",
-                  "title": "Version Control Integration",
                   "position": 3
-                },
+                },               
                 {
                   "des": " We regularly update and patch servers to protect them from vulnerabilities and maintain system security.",
                   "id": "676e5ed1e0bbb25e4ee9334d",
@@ -2733,17 +2733,17 @@
                   "position": 3
                 },
                 {
+                  "des": " We ensure that data used in BI tools is accurate, consistent, and compliant with relevant regulations",
+                  "id": "676e62d6e0bbb25e4ee9335a",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Data Governance",
+                  "position": 4
+                },
+                {
                   "des": " We provide actionable insights based on data analysis, helping businesses make data-driven decisions.",
                   "id": "676e62d6e0bbb25e4ee9335a",
                   "serviceId": "676e607de0bbb25e4ee93350",
                   "title": "Actionable Insights",
-                  "position": 4
-                },
-                {
-                  "des": "We integrate data from multiple sources into a single visualization, providing a holistic view of your business performance.",
-                  "id": "676e62f6e0bbb25e4ee9335b",
-                  "serviceId": "676e607de0bbb25e4ee93350",
-                  "title": "Data Integration",
                   "position": 5
                 }
               ]
@@ -2966,10 +2966,10 @@
                   "position": 3
                 },
                 {
-                  "des": "We fine-tune server configurations, updating software and managing resources to enhance performance and prevent bottlenecks.",
+                  "des": "We fine-tune server configurations, updating software and managing resources to enhance performance and prevent bottlenecks",
                   "id": "676e62d6e0bbb25e4ee9335a",
                   "serviceId": "676e607de0bbb25e4ee93350",
-                  "title": "BServer Optimization",
+                  "title": "Server Optimization",
                   "position": 4
                 },
                 {
@@ -3036,11 +3036,18 @@
                   "position": 5
                 },
                 {
+                  "des": " We perform both manual and automated testing to ensure comprehensive test coverage and efficiency.",
+                  "id": "676e61b3e0bbb25e4ee93356",
+                  "serviceId": "676e5f95e0bbb25e4ee9334f",
+                  "title": "Manual and Automated Testing",
+                  "position": 6
+                },
+                {
                   "des": " We simulate real-world usage scenarios to ensure the application meets user expectations under various conditions.",
                   "id": "676e61b3e0bbb25e4ee93356",
                   "serviceId": "676e5f95e0bbb25e4ee9334f",
                   "title": "User Scenario Testing",
-                  "position": 6
+                  "position": 7
                 }
               ]
             },
@@ -3053,6 +3060,52 @@
               "position": 2,
               "whatWeDo": [
                 {
+                  "des": " We select the best automation testing tools based on your project requirements, including Selenium, Appium, and others",
+                  "id": "676e625ce0bbb25e4ee93357",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Tool Selection",
+                  "position": 1
+                },
+                {
+                  "des": "We write efficient, reusable test scripts to automate various test cases, ensuring high test coverage.",
+                  "id": "676e628fe0bbb25e4ee93358",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Test Script Development",
+                  "position": 2
+                },
+                {
+                  "des": " We integrate automated testing into your CI/CD pipeline to ensure ongoing quality throughout the development process",
+                  "id": "676e62b9e0bbb25e4ee93359",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Continuous Testing",
+                  "position": 3
+                },
+                {
+                  "des": "We ensure that your application functions correctly across different browsers and platforms through automated tests ",
+                  "id": "676e62d6e0bbb25e4ee9335a",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Cross-Browser and Cross-Platform Testing",
+                  "position": 4
+                },
+                {
+                  "des": "We continuously update and maintain test scripts to accommodate changes in the codebase, keeping automation effective",
+                  "id": "676e62f6e0bbb25e4ee9335b",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Maintenance of Test Scripts",
+                  "position": 5
+                }
+        
+              ]
+            },
+            {
+              "description": "Performance Testing focuses on assessing how well an application performs under various loads. Our team conducts stress tests, load tests, and scalability tests to determine how the application behaves under different traffic volumes and system configurations. Performance testing ensures that the application can handle heavy user traffic and continue to deliver a smooth user experience. By identifying performance bottlenecks, we help businesses optimize their applications for speed and responsiveness.",
+              "imageUrl": "/assets/Security-Testing.webp",
+              "id": "676e607de0bbb25e4ee93350",
+              "categoryId": "6769388d51dcda17a0f9388a",
+              "title": "Performance Testing",
+              "position": 2,
+              "whatWeDo": [
+                {
                   "des": "We simulate high traffic scenarios to understand how your application performs under peak loads.",
                   "id": "676e625ce0bbb25e4ee93357",
                   "serviceId": "676e607de0bbb25e4ee93350",
@@ -3060,34 +3113,48 @@
                   "position": 1
                 },
                 {
-                  "des": "We test the application beyond normal operational limits to identify breaking points and areas that need improvement.",
+                  "des": " We test the application beyond normal operational limits to identify breaking points and areas that need improvement",
                   "id": "676e628fe0bbb25e4ee93358",
                   "serviceId": "676e607de0bbb25e4ee93350",
                   "title": "Stress Testing",
                   "position": 2
                 },
                 {
-                  "des": " We identify performance bottlenecks and recommend solutions to optimize the application.",
+                  "des": "We assess the ability of the application to scale under increasing user load and optimize performance accordingly",
                   "id": "676e62b9e0bbb25e4ee93359",
                   "serviceId": "676e607de0bbb25e4ee93350",
-                  "title": "Bottleneck Analysis",
+                  "title": "Scalability Testing",
                   "position": 3
                 },
                 {
-                  "des": "We implement improvements to enhance speed, reduce latency, and optimize resource usage.",
+                  "des": "We identify performance bottlenecks and recommend solutions to optimize the application",
                   "id": "676e62d6e0bbb25e4ee9335a",
                   "serviceId": "676e607de0bbb25e4ee93350",
-                  "title": "Optimization",
+                  "title": "Bottleneck Analysis",
                   "position": 4
+                },
+                {
+                  "des": "We implement improvements to enhance speed, reduce latency, and optimize resource usage.",
+                  "id": "676e62f6e0bbb25e4ee9335b",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Optimization",
+                  "position": 5
                 },
                 {
                   "des": "We monitor application performance throughout the testing phase, ensuring resource consumption is balanced and performance is consistent.",
                   "id": "676e62f6e0bbb25e4ee9335b",
                   "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Performance Monitoring",
+                  "position": 6
+                },
+                {
+                  "des": "Based on testing results, we provide actionable recommendations to enhance performance and improve user experience.",
+                  "id": "676e62f6e0bbb25e4ee9335b",
+                  "serviceId": "676e607de0bbb25e4ee93350",
                   "title": "Optimization Recommendations",
-                  "position": 5
+                  "position": 7
                 }
-        
+               
               ]
             },
             {
@@ -3142,52 +3209,8 @@
                 }
                
               ]
-            },
-            {
-              "description": "Server Monitoring and Maintenance ensures the health, security, and performance of your server infrastructure. We provide continuous monitoring of server metrics like CPU usage, memory, and disk space to detect potential issues before they cause system failures. Our team handles routine maintenance tasks such as software updates, patches, and backups to ensure servers remain secure and efficient. With our monitoring services, businesses can reduce downtime, improve system reliability, and ensure that their server infrastructure supports growth without interruptions.",
-              "imageUrl": "/assets/Consulting-Services.webp",
-              "id": "676e607de0bbb25e4ee93350",
-              "categoryId": "6769388d51dcda17a0f9388a",
-              "title": "Consulting Services",
-              "position": 2,
-              "whatWeDo": [
-                {
-                  "des": "We analyze server performance to identify potential bottlenecks and optimize resource allocation.",
-                  "id": "676e625ce0bbb25e4ee93357",
-                  "serviceId": "676e607de0bbb25e4ee93350",
-                  "title": "Performance Analytics",
-                  "position": 1
-                },
-                {
-                  "des": "We apply regular software updates and security patches to maintain system stability and security.",
-                  "id": "676e628fe0bbb25e4ee93358",
-                  "serviceId": "676e607de0bbb25e4ee93350",
-                  "title": "Routine Patches & Updates",
-                  "position": 2
-                },
-                {
-                  "des": " We set up automated alerts to notify your team of any server performance issues, allowing for immediate action.",
-                  "id": "676e62b9e0bbb25e4ee93359",
-                  "serviceId": "676e607de0bbb25e4ee93350",
-                  "title": "Automated Alerts",
-                  "position": 3
-                },
-                {
-                  "des": "We fine-tune server configurations, updating software and managing resources to enhance performance and prevent bottlenecks.",
-                  "id": "676e62d6e0bbb25e4ee9335a",
-                  "serviceId": "676e607de0bbb25e4ee93350",
-                  "title": "BServer Optimization",
-                  "position": 4
-                },
-                {
-                  "des": "We implement and test backup solutions regularly to ensure that your server data is secure and can be restored in the event of a disaster.",
-                  "id": "676e62f6e0bbb25e4ee9335b",
-                  "serviceId": "676e607de0bbb25e4ee93350",
-                  "title": "Backup and Recovery",
-                  "position": 5
-                }
-              ]
             }
+            
           ]
         },
          {
@@ -3287,32 +3310,32 @@
                    "position": 4
                  },
                  {
-                   "des": "  We implement solutions that enable organizations to become more agile, adaptive, and innovative.",
-                   "id": "676e62f6e0bbb25e4ee9335b",
-                   "serviceId": "676e607de0bbb25e4ee93350",
-                   "title": "Agility & Innovation",
-                   "position": 5
-                 },
-                   {
-                   "des": "  We implement solutions that enable organizations to become more agile, adaptive, and innovative.",
-                   "id": "676e62f6e0bbb25e4ee9335b",
-                   "serviceId": "676e607de0bbb25e4ee93350",
-                   "title": "Agility & Innovation",
-                   "position": 5
-                 },
+                  "des": "We focus on improving customer experience by leveraging digital channels and technologies.",
+                  "id": "676e62d6e0bbb25e4ee9335a",
+                  "serviceId": "676e607de0bbb25e4ee93350",
+                  "title": "Customer-Centric Solutions",
+                  "position": 5
+                },
                  {
                    "des": "  We implement solutions that enable organizations to become more agile, adaptive, and innovative.",
                    "id": "676e62f6e0bbb25e4ee9335b",
                    "serviceId": "676e607de0bbb25e4ee93350",
                    "title": "Agility & Innovation",
-                   "position": 5
+                   "position": 6
                  },
-                  {
-                   "des": "  We implement solutions that enable organizations to become more agile, adaptive, and innovative.",
+                   {
+                   "des": "  We work with your team to understand your current operations and business objectives, tailoring the transformation plan to your unique needs.",
                    "id": "676e62f6e0bbb25e4ee9335b",
                    "serviceId": "676e607de0bbb25e4ee93350",
-                   "title": "Agility & Innovation",
-                   "position": 5
+                   "title": "Needs and Goals Analysis",
+                   "position": 7
+                 },
+                 {
+                   "des": "  We offer continued support to refine and evolve your digital transformation initiatives, helping you stay competitive in a rapidly changing market",
+                   "id": "676e62f6e0bbb25e4ee9335b",
+                   "serviceId": "676e607de0bbb25e4ee93350",
+                   "title": "Ongoing Support and Evolution",
+                   "position": 8
                  }
   
                ]
