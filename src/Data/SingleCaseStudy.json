@@ -7,21 +7,24 @@
         {
           "id": "Case-Study-1",
           "department": "Electronics Sector",
-          "title": "Mechanization and Precision Sowing-1",
+          "title": "Chili Ladling Machine",
           "backgroundImage": "/assets/singlepage-1.webp",
           "imageURL": "/assets/caseStudy-1.webp",
           "overview": {
-            "overviewtitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
-            "description": "India is one of the largest producers of sesame, with cultivation spread across various states under diverse climatic conditions such as summer, rainfed, cold weather, and rain fallow regions. Approximately 1.8 million hectares of land are used for sesame cultivation each year. However, the average yield remains less than 500 kg per acre due to outdated farming practices such as broadcasting. Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs "
+            "overviewtitle": "Introduction ",
+            "description": "The Chili Ladling Machine project was initiated in 2020 and completed within two months with the primary objective of automating the labor-intensive process of ladling chili. This project marked the first major endeavour for Stacia and was developed exclusively for the Aachi Group, a leading spice manufacturer. The machine was designed to handle large quantities of chili efficiently and minimize human intervention. This   machine   is   capable   of   handling   large   quantities   of   chili   with   minimal human intervention. The chili ladling machine utilizes a food-grade plastic cleated belt conveyor to transport chili from the ground to a designated area. The conveyor system is designed to gently move and mix the chili while preventing excessive breakage. The machine operates on a continuous loop, with the chili being picked up from one location and returned to the same spot after processing. This innovative approach eliminates the need for manual handling and ensures efficient and uniform processing. "
           },
           "imageContent": {
+            "imagetitle":"background",
             "imageSrc": "/assets/singlepage-2.webp",
             "content": [
-              "Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. ",
-              "In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanization."
+              "The purpose of a chili ladling machine is to effectively ladle (mix) the chilies. The chilis are picked up from the ground using a food-grade plastic cleated belt conveyor, and they then return to drop the chili from the same location from which they were originally picked up. The conveyor is directly driven, greatly increasing the machine's efficiency. Because the vehicle is remote-controlled, it will be driven by someone outside. This will work well in other industries were picking the product up off the ground and packing it requirements, along with uniform drying"
+
+
+
             ]
           },
-          "gallerytittle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+          "gallerytittle": "Chili Ladling Machine:",
           "gallery": [
             "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
             "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
@@ -30,8 +33,8 @@
           ],
           "challenges": [
             {
-              "challengestitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
-              "description": "Sowing, thinning, and harvesting require significant manual labor, consuming over 50% of the total cultivation cost.In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanizationIn some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. "
+              "challengestitle": "Conclusion:",
+              "description": "The   custom   chili   ladling   machine   developed   for   the  Aachi   Group   represents   a significant advancement in chili processing technology. By automating key processes, reducing manual labour, and ensuring consistent quality, the machine has significantly enhanced the efficiency and productivity of Aachi Masala's operations. This innovative solution   demonstrates   the   potential   of   technology   to   address   industry-specific challenges and drive improvements in manufacturing processes. The success of this project highlights the importance of investing in research and development to develop innovative solutions that meet the evolving needs of the food industry."
             }
           ]
         }

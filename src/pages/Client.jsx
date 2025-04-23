@@ -1,32 +1,35 @@
 import React from 'react';
 import "../styles/Home.css";
 import Marquee from "react-fast-marquee";
-import client1 from "../assets/aachi.webp";
-import client2 from "../assets/agro.webp";
-import client3 from "../assets/anil.webp";
-import client4 from "../assets/avinash industries.webp";
-import client5 from "../assets/brakes india.webp";
+import client1 from "../assets/Aachi.webp";
+import client2 from "../assets/Vishvaksenah agro.webp";
+import client3 from "../assets/Anil.webp";
+import client4 from "../assets/Avinash Industries.webp";
+import client5 from "../assets/Brakes India.webp";
 import client6 from "../assets/Butterfly.webp";
-import client7 from "../assets/Chennai_Corporation_Emblem.webp";
-import client8 from "../assets/dna.webp";
-import client9 from "../assets/express holidays.webp";
-import client10 from "../assets/express.webp";
-import client11 from "../assets/indian oil.webp";
-import client12 from "../assets/logo.webp";
-import client13 from "../assets/mac.webp";
-import client14 from "../assets/mamalla.webp";
-import client15 from "../assets/peace on plate.webp";
-import client16 from "../assets/prego.webp";
-import client17 from "../assets/pumpkin tales.webp";
-import client18 from "../assets/santhi.webp";
-import client19 from "../assets/shasun.webp";
-import client20 from "../assets/SRM SWEET.webp";
-import client21 from "../assets/steam trops.webp";
+import client7 from "../assets/GCC.webp";
+import client8 from "../assets/DNA.webp";
+import client9 from "../assets/Express-Holiday.webp";
+import client10 from "../assets/Express Caters.webp";
+import client11 from "../assets/Indian oil.webp";
+import client12 from "../assets/NallaKeerai.webp";
+import client13 from "../assets/MAC.webp";
+import client14 from "../assets/Mamalla Beach resort.webp";
+import client15 from "../assets/Peach on Plate.webp";
+import client16 from "../assets/Prego.webp";
+import client17 from "../assets/Pumpkin Tales.webp";
+import client18 from "../assets/Santhi.webp";
+import client19 from "../assets/Shasun.webp";
+import client20 from "../assets/SRM sweets.webp";
+import client21 from "../assets/Steam troops.webp";
 import client22 from "../assets/trumpf.webp";
-import client23 from "../assets/vijaya ganapathy.webp";
-import client24 from "../assets/sagoserve.webp";
-import client25 from "../assets/idhayam-tes.png";
-import client26 from "../assets/parikshan-tes.png";
+import client23 from "../assets/VijayGanapathy.webp";
+import client24 from "../assets/Sagoserve.webp";
+import client25 from "../assets/Idhayam.webp";
+import client26 from "../assets/Parikshan.webp";
+import client27 from "../assets/TN-APEX.webp";
+import client28 from "../assets/Sharadha Stores.webp";
+import client29 from "../assets/Sri Venkeshwara college.webp";
 
 
 
@@ -117,12 +120,12 @@ const clients = [
     },
     {
         id: 12,
-        link: "https://www.nabard.org/Hindi/Default.aspx",
+        link: "https://nallakeeraii.appspot.com",
         img: client12,
     },
     {
         id: 13,
-        link: "https://www.nabard.org/Hindi/Default.aspx",
+        link: "https://asafoetida.in/",
         img: client13,
     },
     {
@@ -147,7 +150,7 @@ const clients = [
     },
     {
         id: 18,
-        link: "https://www.nabard.org/Hindi/Default.aspx",
+        link: "https://santhisweets.com/",
         img: client18,
     },
     {
@@ -189,6 +192,23 @@ const clients = [
         id: 26,
         link: "https://parikshan.com/",
         img: client26,
+    },
+    {
+        id: 27,
+        link: "https://www.tnapex.tn.gov.in/ords/r/wstnapex/tnapex173136/home",
+        img: client27,
+    },
+   
+    {
+        id: 28,
+        link: "https://play.google.com/store/apps/details?id=com.saradhastores&pcampaignid=web_share",
+        img: client28,
+    },
+   
+    {
+        id: 29,
+        link: "https://www.svce.ac.in/",
+        img: client29,
     }
    
     // client1,

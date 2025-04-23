@@ -31,12 +31,15 @@
 }
 
 /* Rest of your existing styles remain unchanged */
-.event-image {
+/* .event-image {
     background-size: cover;
     background-position: center;
     height: 200px;
-}
-
+} */
+ .event-img{
+    object-fit: cover;
+    width: 100%;
+ }
 .event-content {
     padding: 15px;
     font-family: EuclidMedium;
@@ -58,14 +61,20 @@
     font-family: EuclidSemibold;
     color: black;
     margin-bottom: 10px;
+   
 
 }
 
 .event-description {
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
     margin-bottom: 10px;
+    margin-top: 10px;
     font-family: EuclidMedium;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .event-date {

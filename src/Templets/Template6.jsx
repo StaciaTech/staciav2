@@ -10,6 +10,8 @@ import MobileFooter from "../components/MobileFooter";
 import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data/Articles.json";
+import CaseStudy from "../pages/CaseStudy";
+import CaseStudyaudio from "../components/CaseStudy/CaseStudyaudio";
 
 
 
@@ -63,12 +65,18 @@ function Template6() {
         className="temp5-banner-img"
         style={{ backgroundImage: `url(${project.banner?.image})` }}
       >
+
+
         <div className="temp5-img-text test-selection-white">
           <div>{project.banner?.text}</div>
         </div>
       </div>
 
+      <div>
+        <CaseStudyaudio />
+      </div>
       <div className="temp5-content-container">
+
         <div>
           <div className="temp5-sec1-title">{project.section1?.title}</div>
           <div className="temp5-sec1-container">

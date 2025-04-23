@@ -411,6 +411,7 @@ function About() {
                 <div key={i} className="about-section9-item">
                   <div className="about-section9-icon-contaienr">
                     <PiPottedPlant className="about-section9-icon" />
+
                   </div>
                   <div className="about-section9-item-name test-seclection-blue">
                     {eachItem}

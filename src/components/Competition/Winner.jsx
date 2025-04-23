@@ -208,7 +208,8 @@
 // export default Winners;
 
 import React, { useRef, useState, useEffect } from "react";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { GoArrowLeft, GoArrowRight ,GoEyeClosed } from "react-icons/go";
+import { IoMdClose } from "react-icons/io";
 import "../../styles/competition/Winner.css";
 import winnersData from "../../Data/Winner.json";
 import dateimg from "../../assets/calendar.png";
@@ -221,7 +222,7 @@ function Winners() {
     const [showForm, setShowForm] = useState(false);
     const [selectedCertificate, setSelectedCertificate] = useState(null);
     const scrollContainerRef = useRef(null);
-    const popupRef = useRef(null);
+    const popupRef = useRef(null)
 
     useEffect(() => {
         try {
@@ -240,21 +241,22 @@ function Winners() {
 
     useEffect(() => {
         if (showForm) {
-            document.body.style.overflow = 'hidden';
-            document.body.style.position = 'fixed'; // Prevent background shift
-            document.body.style.width = '100%'; // Maintain width
-        } else {
-            document.body.style.overflow = 'auto';
-            document.body.style.position = '';
-            document.body.style.width = '';
+            document.body.style.overflow ="hidden";
+            document.body.style.position= "fixed";
+            document.body.style.width = "100%";
+        }else{
+            document.body.style.overflow = "auto";
+            document.body.style.position= "";
+            document.body.style.width = "";
         }
-        return () => {
-            document.body.style.overflow = 'auto';
-            document.body.style.position = '';
-            document.body.style.width = '';
-        };
-    }, [showForm]);
+        return()=>{
+            document.body.style.overflow = "auto";
+            document.body.style.position= "";
+            document.body.style.width = "";
+        }
+    },[showForm])
 
+    
     const scrollToIndex = (index) => {
         const newIndex = Math.max(0, Math.min(index, winners.length - 1));
         setCurrentIndex(newIndex);
@@ -280,15 +282,13 @@ function Winners() {
         setSelectedCertificate(certificate);
         setShowForm(true);
     };
-
-    const handleWheel = (e) => {
-        const container = e.currentTarget;
-        if (container.scrollHeight > container.clientHeight) {
-            e.preventDefault(); // Prevent default scroll behavior
-            e.stopPropagation(); // Stop event from reaching body
+    const handleWheel = (e)=>{
+        const container = e.currentTarget
+        if(container.scrollHeight > container.clientHeight){
+            e.preventDefault();
+            e.preventPropagation();
         }
-    };
-
+    }
     if (winners.length === 0) {
         return <div>Loading...</div>;
     }
@@ -342,7 +342,7 @@ function Winners() {
                             <div>{eachItem.title}</div>
                             <p>{eachItem.details}</p>
                             <button className="register-btn1" onClick={() => handleDownloadClick(eachItem)}>
-                                Certificate Download
+                                View Certificate 
                             </button>
                         </div>
                     </div>
@@ -378,7 +378,43 @@ function Winners() {
             {showForm && selectedCertificate && (
                 <div className="popup-form-overlay">
                     <div className="popup-form-container" onWheel={handleWheel} ref={popupRef}>
-                        <h3>Certificate Preview</h3>
+                        <h3>Certificate Preview</h3> 
+                        <div>
+                        <button
+                            type="button"
+                            className="close-btn"
+                            onClick={() => setShowForm(false)}
+                        >
+                            <IoMdClose />
+                        </button>
+                        </div>
+                        {/* <a
+                            href={selectedCertificate.certificateUrl} target="/blank"
+                            rel="noopener noreferrer"   // Security improvement
+                        // href={`/${selectedCertificate.certificateUrl}/${selectedCertificate.id}`}
+                        // target="_blank"
+                        // rel="noopener noreferrer"   // Security improvement
+                        // id={selectedCertificate.id}
+
+                        > */}
+                        {/* 
+                        <a
+                            href={`/${selectedCertificate.certificateUrl}/${ selectedCertificate.id }`}  // Encode the id
+                            target="_blank"
+                            rel="noopener noreferrer"   // Security improvement
+                            id={selectedCertificate.id}
+                        > */}
+                        {/* <a href={`/certificates/${selectedCertificate.id}`} target="_blank" rel="noopener noreferrer">
+                            <img src={selectedCertificate.certificateUrl} alt="Preview" />
+                        </a> */}
+                        {/* <img
+                                src={selectedCertificate.certificateUrl}
+                                alt="Certificate"
+                                className="certificate-preview-img"
+                            /></a> */}
+
+
+
                         <a
                             href={`/certificates/${encodeURIComponent(selectedCertificate.id)}`}
                             target="_blank"
@@ -395,13 +431,13 @@ function Winners() {
                                 Download
                             </a>
                         </div>
-                        <button
+                        {/* <button
                             type="button"
                             className="close-btn"
                             onClick={() => setShowForm(false)}
                         >
-                            Close
-                        </button>
+                            <IoMdClose />
+                        </button> */}
                     </div>
                 </div>
             )}
