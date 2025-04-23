@@ -237,7 +237,7 @@ function About() {
                     </div>
                   ) : (
                     <div className="about-sect-3-img">
-                      <img src={eachSec.imageUrl} alt="" />
+                      <img src={eachSec.imageUrl} alt="" /> 
                     </div>
                   )}
                 </div>

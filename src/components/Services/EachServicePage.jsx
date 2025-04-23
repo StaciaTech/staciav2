@@ -339,17 +339,10 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
   return (
     <>
-      <div ref={targetRef} style={{ height: "50vh", position: "relative", }}>
+      <div ref={targetRef} style={{ height: "50vh", position: "relative", }} >
         <div
           // className="career-hiring-data-container"
-          style={{
-            height: "70vh",
-            position: "sticky",
-            top: "80px",
-            // display: "flex",
-            overflow: "auto",
-            marginBottom:"100px"
-          }}
+          className="howWeDo-container"
         >
           <div className="each-service-howWeDo-title">How We Do?</div>
           <p className="each-service-howWeDo-des">
