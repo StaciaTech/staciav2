@@ -311,7 +311,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   padding: 1.5rem;
   box-sizing: border-box;
   position: relative;

@@ -123,7 +123,7 @@
   .leader-hero-img-container>div {
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
   .leader-hero-img-container>div>img {
     width: 70vh;
@@ -165,7 +165,7 @@
     .leader-hero-img-container>div {
       width: 100%;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
     }
 
     .leader-hero-img-container>div>img {
