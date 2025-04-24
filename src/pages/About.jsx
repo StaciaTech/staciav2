@@ -1130,14 +1130,61 @@ import { useNavigate, useParams } from "react-router-dom";
 import data from "../Data/About.json";
 import ClientComponent from "./Client";
 
+// import food from "../assets/Food-Processing.webp";
+// import agriculture from "../assets/agriculture.webp"
+// import Enrgy from "../assets/Enrgy.webp";
+// import Manufacturing from "../assets/Manufacturing.webp";
+// import ConsumerElectronic from "../assets/ConsumerElectronic.webp";
+// import Automotive from "../assets/Automotive.webp";
+
+import { MdOutlineFoodBank } from "react-icons/md";
+import { GiPlantRoots } from "react-icons/gi";
+import { FaCarSide } from "react-icons/fa";
+import { MdOutlinePrecisionManufacturing } from "react-icons/md";
+import { SlEnergy } from "react-icons/sl";
+
+
+
+// const Industries = [
+//   "Food Processing",
+//   "Agriculture",
+//   "Energy",
+//   "Manufacturing",
+//   "Consumer Electronics",
+//   "Healthcare",
+//   "Automotive",
+// ];
 const Industries = [
-  "Food Processing",
-  "Agriculture",
-  "Energy",
-  "Manufacturing",
-  "Consumer Electronics",
-  "Healthcare",
-  "Automotive",
+  {
+    id: 1,
+    title: "Food-Processing",
+    img:<MdOutlineFoodBank />,
+  },
+  {
+    id: 2,
+    title: "agriculture",
+    img: <GiPlantRoots />,
+  },
+  {
+    id: 3,
+    title: "Enrgy",
+    img: <SlEnergy />,
+  },
+  {
+    id: 4,
+    title: "Manufacturing",
+    img: <MdOutlinePrecisionManufacturing />,
+  },
+  {
+    id: 5,
+    title: "Consumer Electronic",
+    img: <FaCarSide />,
+  },
+  {
+    id: 6,
+    title: "Automotive",
+    img: <FaCarSide />,
+  },
 ];
 
 function About() {
@@ -1600,10 +1647,14 @@ function About() {
               return (
                 <div key={i} className="about-section9-item">
                   <div className="about-section9-icon-contaienr">
-                    <PiPottedPlant className="about-section9-icon" />
+                    {/* <PiPottedPlant className="about-section9-icon" /> */}
+                    <div className="about-section9-icon">
+                      {eachItem.img}
+                    </div>
+
                   </div>
                   <div className="about-section9-item-name test-seclection-blue">
-                    {eachItem}
+                    {eachItem.title}
                   </div>
                 </div>
               );

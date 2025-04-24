@@ -169,7 +169,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   column-gap: 0.25rem;
   padding: 0rem 1.5rem;
   padding-bottom: 1rem;

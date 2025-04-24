@@ -7,7 +7,7 @@
 .eventform-btn-container {
   padding: 2rem 3rem;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   column-gap: 0.5rem;
 }
 .event-form-progress-container {
