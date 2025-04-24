@@ -51,6 +51,7 @@
   letter-spacing: 1px;
   /* margin: 0px 20px; */
   opacity: 0.5;
+  padding: 10px;
 }
 .nav-items:hover,
 .nav-item-active {

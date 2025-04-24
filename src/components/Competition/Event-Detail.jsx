@@ -172,3 +172,98 @@ function EventDetails() {
 }
 
 export default EventDetails;
+
+
+
+
+// import React, { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+// import axios from "axios";
+// import NavBar from "../NavBar";
+// import Footer from "../Footer";
+// import Star from "../Star";
+
+// // import placeholderImage from "../../assets/default-event.png"; // Fallback image
+
+// export default function EventDetails() {
+//     const { eventId } = useParams();
+//     const [pastEvents, setPastEvents] = useState([]);
+//     const [loading, setLoading] = useState(true);
+//     const [error, setError] = useState(null);
+//     const apiUrl = process.env.REACT_APP_API_URL;
+
+//     // const apiUrl = isPastEvent ? `${apiUrl}/competition/pastEvents/${eventId}` : `${apiUrl}/competition/events/${eventId}`;
+
+
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             try {
+//                 const res = await axios.get(`${apiUrl}/competition/pastEvents`);
+//                 if (res.data && Array.isArray(res.data.docs)) {
+//                     setPastEvents(res.data.docs);
+//                 } else {
+//                     throw new Error("Invalid API response format.");
+//                 }
+//             } catch (err) {
+//                 console.error("Error fetching past events:", err.message);
+//                 setError("Failed to load past events.");
+//             } finally {
+//                 setLoading(false);
+//             }
+//         };
+//         fetchData();
+//     }, [apiUrl]);
+
+//     useEffect(() => {
+//         window.scrollTo(0, 0);
+//     }, []);
+
+//     if (loading) return <p>Loading...</p>;
+//     if (error) return <p style={{ color: "red" }}>{error}</p>;
+//     if (!pastEvents.length) return <p>No events found.</p>;
+
+//     // Find event by _id, fallback to first event if not found
+//     const event = pastEvents.find((e) => e._id === eventId) || pastEvents[0];
+
+//     return (
+//         <div>
+//             <NavBar />
+//             <div className="about-hero">
+//                 <div className="about-hero-text">
+//                     <span>Hackathon</span>
+//                     <Star />
+//                 </div>
+//             </div>
+
+//             <div style={{ maxWidth: "1200px", margin: "50px auto", padding: "20px" }}>
+//                 <h2 style={{ fontSize: "28px", fontWeight: "bold", color: "#333" }}>
+//                     {event.title || "Untitled Event"}
+//                 </h2>
+//                 <div style={{ display: "flex", alignItems: "center", gap: "15px", marginTop: "15px", color: "#444" }}>
+//                     <span>{event.eventTags || "No tag"}</span>
+//                     <span>{event.date || "No date available"}</span>
+//                     <span>{event.startTime || "No time specified"}
+//                     -{event.endTime || "No time specified"}</span>
+//                     <span>{event.location || "Location unknown"}</span>
+//                 </div>
+//                 <div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
+//                     <div style={{ flex: "2", color: "#555" }}>
+//                         <p>{event.detail || "No details available for this event."}</p>
+//                         <a href={event.registerLink || "#"}
+//                             target="_blank"
+//                             rel="noopener noreferrer"
+//                             style={{ color: "#0047FF", fontWeight: "bold", marginTop: "20px", display: "inline-block", textDecoration: "none" }}>
+//                             Register Now →
+//                         </a>
+//                     </div>
+//                     <div style={{ flex: "1" , objectFit: "fill", width:"530px" , height: "320px" }}>
+//                         <img src={event.imageUrl || "Image"}
+//                             alt={event.title || "Event Image"}
+//                             style={{ width: "100%", borderRadius: "10px" }} />
+//                     </div>
+//                 </div>
+//             </div>
+//             <Footer />
+//         </div>
+//     );
+// }

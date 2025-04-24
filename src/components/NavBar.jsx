@@ -379,7 +379,7 @@ function NavBar() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                columnGap: "20px",
+                // columnGap: "20px",
               }}
             >
               <NavLink
