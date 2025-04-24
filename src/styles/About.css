@@ -484,7 +484,7 @@
 }
 
 .about-section9-icon {
-  font-size: 2rem;
+  font-size: 1rem;
   color: #fff;
   background: #000088;
   transition: all 0.3s;
@@ -836,7 +836,7 @@
 
   .about-section6-img-container {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .about-whyus-grid {
