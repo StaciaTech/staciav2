@@ -484,7 +484,7 @@
 }
 
 .about-section9-icon {
-  font-size: 2rem;
+  font-size: 1rem;
   color: #fff;
   background: #000088;
   transition: all 0.3s;
@@ -745,7 +745,8 @@
   .about-whyus-des,
   .about-whyus-des,
   .about-section9-des {
-    font-size: 1rem;
+    font-size: 14px;
+    padding: 20px 0px;
   }
 
   .about-section4-des,
@@ -835,7 +836,7 @@
 
   .about-section6-img-container {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .about-whyus-grid {
@@ -972,7 +973,7 @@
   .about-section10-lead-img>img {
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/3;
   }
 
   .about-section4-heading.partner-section {

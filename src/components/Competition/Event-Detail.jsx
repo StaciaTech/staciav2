@@ -1,172 +1,172 @@
+ 
+
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import NavBar from "../NavBar";
 import Footer from "../Footer";
 import SideBar from "../SideBar";
 import MobileFooter from "../MobileFooter";
-import { useParams } from "react-router-dom";
 import Star from "../Star";
 import "../../styles/Eventspage.css";
 import { FaCalendarAlt } from "react-icons/fa";
 import { GoClockFill } from "react-icons/go";
 import { FaLocationDot } from "react-icons/fa6";
-import axios from "axios";
-import Modal from "react-modal";
-import JobForm from "../careers/JobForm";
-import EventForm from "../EventForm";
 import { IoIosArrowForward } from "react-icons/io";
-
 import eventData from "../../Data/Compition.json";
 
-// // import placeholderImage from "../../assets/default-event.png"; // Fallback image
-
-// import eventData from "../Data/Event.json";
-
-
-
-
 function EventDetails() {
-  const params = useParams();
-  const paramsTitle = params.title.split("-").join(" ");
-  console.log(paramsTitle);
-
+  const { title } = useParams();
+  // Decode and normalize the title from the URL
+  const paramsTitle = decodeURIComponent(title).trim();
   const [singleEvent, setSingleEvent] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const foundEvent = eventData.find((eachEvent) => eachEvent.title === paramsTitle);
-    setSingleEvent(foundEvent);
+    // Log the paramsTitle for debugging
+    console.log("URL Title (paramsTitle):", paramsTitle);
+    console.log("Available Event Titles in JSON:", eventData.map(e => e.title));
+
+    try {
+      // Normalize titles for comparison (lowercase, remove extra spaces)
+      const foundEvent = eventData.find((eachEvent) => {
+        const eventTitle = eachEvent.title.trim().toLowerCase();
+        const searchTitle = paramsTitle.toLowerCase();
+        // Exact match or partial match (if URL is truncated)
+        return eventTitle === searchTitle || eventTitle.startsWith(searchTitle);
+      });
+
+      if (!foundEvent) {
+        setError("Event not found. Please check the event title or browse our events list.");
+        return;
+      }
+      setSingleEvent(foundEvent);
+    } catch (err) {
+      setError("Failed to load event data");
+      console.error("Error in finding event:", err);
+    }
   }, [paramsTitle]);
-
-  console.log(singleEvent);
-
-  const [showEventForm, setShowEventForm] = useState(false);
-
-  const FormCloseHandler = () => {
-    setShowEventForm(false);
-  };
-
-  //model style
-
-  const ModelStyles = {
-    overlay: {
-      position: "fixed",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: "rgb(13, 2, 37,0.6)",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    content: {
-      width: "40%",
-      minHeight: "50%",
-      inset: 0,
-      margin: "auto",
-      position: "relative",
-      borderRadius: "1rem",
-      padding: "0",
-      boxSizing: "border-box",
-    },
-  };
-
 
   // Function to format date as "2nd February 2025"
   const formatDate = (dateString) => {
-    const [day, month, year] = dateString.split("/").map(Number);
-    const dateObj = new Date(year, month - 1, day); // month - 1 because months are 0-based
-    const dayNum = dateObj.getDate();
-    const monthName = dateObj.toLocaleString("default", { month: "long" });
-    const yearNum = dateObj.getFullYear();
-
-    // Add ordinal suffix (st, nd, rd, th) to day
-    const getOrdinalSuffix = (day) => {
-      if (day > 3 && day < 21) return "th"; // 11th to 20th are always "th"
-      switch (day % 10) {
-        case 1:
-          return "st";
-        case 2:
-          return "nd";
-        case 3:
-          return "rd";
-        default:
-          return "th";
+    if (!dateString || !/^\d{2}\/\d{2}\/\d{4}$/.test(dateString)) {
+      return "No date available";
+    }
+    try {
+      const [day, month, year] = dateString.split("/").map(Number);
+      const dateObj = new Date(year, month - 1, day);
+      if (isNaN(dateObj.getTime())) {
+        return "Invalid date";
       }
-    };
+      const dayNum = dateObj.getDate();
+      const monthName = dateObj.toLocaleString("default", { month: "long" });
+      const yearNum = dateObj.getFullYear();
 
-    return `${dayNum}${getOrdinalSuffix(dayNum)} ${monthName} ${yearNum}`;
+      const getOrdinalSuffix = (day) => {
+        if (day > 3 && day < 21) return "th";
+        switch (day % 10) {
+          case 1:
+            return "st";
+          case 2:
+            return "nd";
+          case 3:
+            return "rd";
+          default:
+            return "th";
+        }
+      };
+
+      return `${dayNum}${getOrdinalSuffix(dayNum)} ${monthName} ${yearNum}`;
+    } catch {
+      return "Invalid date";
+    }
   };
 
+  if (error) {
+    return (
+      <div className="nav_style">
+        <NavBar />
+        <SideBar />
+        <div style={{ padding: "5rem", textAlign: "center", color: "red" }}>
+          {error}
+        </div>
+        <Footer />
+        <MobileFooter />
+      </div>
+    );
+  }
 
-  const date = singleEvent?.date;
+  if (!singleEvent) {
+    return (
+      <div className="nav_style">
+        <NavBar />
+        <SideBar />
+        <div style={{ padding: "5rem", textAlign: "center" }}>
+          Loading event details...
+        </div>
+        <Footer />
+        <MobileFooter />
+      </div>
+    );
+  }
 
   return (
-    <div style={showEventForm ? { position: "fixed" } : { position: "static" }}>
+    <div>
       <div className="nav_style">
         <NavBar />
         <SideBar />
       </div>
-      <div>
-        <div className="events-hero">
+      <div className="events-hero">
+        <div>
+          <span>{singleEvent.title}</span>
+          <Star />
+        </div>
+      </div>
+      <div className="single-event-container">
+        <h1 className="single-event-title">{singleEvent.title}</h1>
+        <div className="single-event-details-container">
           <div>
-            <span>{paramsTitle}</span>
-            <Star />
+            <FaCalendarAlt aria-hidden="true" />
+            <span>{formatDate(singleEvent.date)}</span>
+          </div>
+          <div style={{ height: "2rem", borderLeft: "2px solid #e5e5e5" }} />
+          <div>
+            <GoClockFill aria-hidden="true" />
+            <span>
+              {singleEvent.startTime && singleEvent.endTime
+                ? `${singleEvent.startTime} - ${singleEvent.endTime}`
+                : "Time not specified"}
+            </span>
+          </div>
+          <div style={{ height: "2rem", borderLeft: "2px solid #e5e5e5" }} />
+          <div>
+            <FaLocationDot aria-hidden="true" />
+            <span>{singleEvent.location || "Location not specified"}</span>
           </div>
         </div>
-        <div className="single-event-container">
-          <div className="single-event-title">{paramsTitle}</div>
-          <div className="single-event-details-container">
-            <div>
-              <FaCalendarAlt />
-              <div>{date ? formatDate(date) : "No date available"}</div>
-            </div>
-            <div style={{ height: "2rem", borderLeft: "2px solid #e5e5e5" }} />
-            <div>
-              <GoClockFill />
-              <div>{singleEvent?.startTime}-{singleEvent?.endTime}</div>
-            </div>
-            <div style={{ height: "2rem", borderLeft: "2px solid #e5e5e5" }} />
-            <div>
-              <FaLocationDot />
-              <div>{singleEvent?.location}</div>
-            </div>
+        <div className="single-event-content-container">
+          <div className="single-event-text">
+            <p>{singleEvent.detail || "No details available for this event."}</p>
           </div>
-          <div className="single-event-content-container">
-            <div className="single-event-text">
-              <p>{singleEvent?.detail}</p>
-            </div>
-            <div className="single-event-img">
-              <img src={singleEvent?.imageUrl} alt="" />
-            </div>
+          <div className="single-event-img">
+            <img
+              src={singleEvent.imageUrl || "/assets/default-event.png"}
+              alt={`${singleEvent.title} event illustration`}
+            />
           </div>
-          {/* <div onClick={() => setShowEventForm(true)} className="know-more">
-            <span>Register Now</span> <IoIosArrowForward />
-          </div> */}
-
-          {/* Register Button */}
-          <a
-            href={singleEvent?.link || "#"}
-            className="know-more"
-          >
-             <span>Register Now</span> <IoIosArrowForward />  
-          </a>
-
         </div>
+        <a
+          href={singleEvent.link || "#"}
+          className="know-more"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Register for ${singleEvent.title}`}
+        >
+          <span>Register Now</span>
+          <IoIosArrowForward aria-hidden="true" />
+        </a>
       </div>
-      <div>
-        <Footer />
-        <MobileFooter />
-      </div>
-      <Modal
-        isOpen={showEventForm}
-        onRequestClose={FormCloseHandler}
-        style={ModelStyles}
-      >
-        <EventForm
-          eventTitle={singleEvent?.title}
-          closeForm={FormCloseHandler}
-        />
-      </Modal>
+      <Footer />
+      <MobileFooter />
     </div>
   );
 }

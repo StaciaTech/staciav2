@@ -38,11 +38,14 @@ const PastEventCard = ({ _id, imageUrl, title, description, date, eventTags }) =
     return (
         <div className="past-event-card">
             <div
-                className="event-image"
-                style={{
-                    backgroundImage: `url(${imageUrl || "default-image.jpg"})`,
-                }}
-            ></div>
+                // className="event-image"
+                // style={{
+                //     backgroundImage: `url(${imageUrl || "default-image.jpg"})`,
+                // }}
+                
+            >
+                <img src={imageUrl}  className="event-img" />
+            </div>
 
             <div className="event-content">
                 <span className="event-tag">{eventTags || "No Tags"}</span>

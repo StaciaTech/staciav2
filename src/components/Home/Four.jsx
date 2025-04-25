@@ -1,10 +1,10 @@
 import React from "react";
 import "../../styles/Four.css";
 import FourCard from "./FourCard";
-import p1 from "../../assets/founder-sarabesh.png";
-import p2 from "../../assets/founder-lakshman.png";
-import p3 from "../../assets/revanth.png";
-import p4 from "../../assets/prahalad.png";
+import p1 from "../../assets/Mr Sarabesh.webp";
+import p2 from "../../assets/Mr Lakshman.webp";
+import p3 from "../../assets/Mr Revanth.webp";
+import p4 from "../../assets/Mr Prahlad Saravanapriyan.webp";
 
 const fourData = [
   {

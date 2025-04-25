@@ -34,8 +34,10 @@ import CompetitionPage from "./pages/Competition";
 import CertificateView from "./components/CertificateView";
 
 import EventDetails from "./components/Competition/Event-Detail";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
+  
   return (
     <div className="App">
       {/* Lwdnkjgkufefkl */}
@@ -43,6 +45,7 @@ function App() {
       {/* <Box1 /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Privacy-Policy" element={<PrivacyPolicy/>}/>
         <Route path="/career" element={<CareerPage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route
@@ -152,28 +155,3 @@ function App() {
 
 export default App;
 
-// import React from 'react';
-// import ImageSlider from './components/Home/ImageSlider';
-// import p1 from "../src/assets/baling.png"
-// import p2 from "../src/assets/speaker.png"
-// import p3 from "../src/assets/spinach.png"
-
-// function App() {
-//   const images = [ p1,p2, p3 ];
-//   const textItems = [
-//     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eaque exercitationem quae animi saepe, libero, laudantium tenetur odio corrupti eos distinctio excepturi nesciunt recusandae reiciendis qui autem a reprehenderit commodi?',
-//     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eaque exercitationem quae animi saepe, libero, laudantium tenetur odio corrupti eos distinctio excepturi nesciunt recusandae reiciendis qui autem a reprehenderit commodi?',
-//     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eaque exercitationem quae animi saepe, libero, laudantium tenetur odio corrupti eos distinctio excepturi nesciunt recusandae reiciendis qui autem a reprehenderit commodi?',
-
-//   ];
-//   const slideInterval = 3000;
-
-//   return (
-//     <div className="App">
-//       <h1>Image Slider with Text</h1>
-//       <ImageSlider images={images} textItems={textItems} slideInterval={slideInterval} />
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -1,6 +1,6 @@
 import { FiDownload, FiVolumeX, FiVolume2 } from "react-icons/fi";
 import React, { useRef, useState } from "react";
-import CaseStudyAudio from "../../styles/CaseStudyAudio.css";
+import "../../styles/CaseStudyAudio.css";
 
 const CaseStudyaudio = () => {
   const audioRef = useRef(null);

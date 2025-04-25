@@ -37,6 +37,13 @@ function Footer() {
       boxSizing: "border-box",
     },
   };
+
+
+  const HandleClick = () =>{
+    navigate("/Privacy-Policy")
+  }
+
+
   return (
     <div className="footer-contaier">
       {/* <div style={{ display: "flex", alignItems: "center" }}>
@@ -249,13 +256,10 @@ function Footer() {
               marginRight: "35px",
             }}
           />
-          <a
-            href="https://your-link.com/terms.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div style={{ cursor: "pointer",color:"black" }}>Privacy policy</div>
-          </a>
+                    
+           
+            <div onClick={()=>navigate("/Privacy-Policy")} style={{ cursor: "pointer",color:"black" }}>Privacy policy</div>
+          
         </div>
         <div className="footer-icons">
           <div>

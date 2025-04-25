@@ -307,12 +307,10 @@ function JobForm({ closeForm }) {
     jobRole: "",
     file: null,
   });
-
   const [dragActive, setDragActive] = useState(false);
   const [showRoles, setShowRoles] = useState(false);
   const [errors, setErrors] = useState({});
   const [formMessage, setFormMessage] = useState({ type: "", text: "" });
-
   const JobRoles = [
     "FrontEnd Developer",
     "Backend Developer",
@@ -320,16 +318,12 @@ function JobForm({ closeForm }) {
     "HR",
     "Brand Manager Marketing",
   ];
-
   const handleemailstore = (e) => {
     const { name, value } = e.target;
-
     setStore((prevState) => ({
       ...prevState,
       [name]: value,
     }));
-
-   
     setErrors((prevErrors) => {
       const newErrors = { ...prevErrors };
       if (name === "firstName" && value.trim()) delete newErrors.firstName;
@@ -346,7 +340,6 @@ function JobForm({ closeForm }) {
       return newErrors;
     });
   };
-
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
     if (
@@ -382,11 +375,9 @@ function JobForm({ closeForm }) {
   };
 
   const openFileInput = () => document.getElementById("resume-box").click();
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const newErrors = {};
-
     if (!store.firstName.trim()) newErrors.firstName = "First name is required";
     if (!store.lastName.trim()) newErrors.lastName = "Last name is required";
     if (!store.phoneValue) newErrors.phoneValue = "Phone number is required";
@@ -396,7 +387,6 @@ function JobForm({ closeForm }) {
       newErrors.email = "Email is invalid";
     }
     if (!store.jobRole.trim()) newErrors.jobRole = "Please select a job role";
-
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       setFormMessage({
@@ -405,22 +395,17 @@ function JobForm({ closeForm }) {
       });
       return;
     }
-
     const formData = new FormData(event.target);
     formData.append("access_key", "f05920d0-3b2a-427b-bd0e-de098dfadd58");
     formData.append("subject", "New Job Application via Stacia Corp Careers");
     formData.append("from_name", "Stacia Corp Website");
-
     try {
       setFormMessage({ type: "info", text: "Submitting your application..." });
-
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
       });
-
       const data = await response.json();
-
       if (data.success) {
         setFormMessage({
           type: "success",
@@ -476,7 +461,6 @@ function JobForm({ closeForm }) {
                 )}
               </div>
             </div>
-
             <div className="job-input-container">
               <div className="job-input-holder">
                 <div>Phone*</div>
@@ -513,7 +497,6 @@ function JobForm({ closeForm }) {
                 )}
               </div>
             </div>
-
             <div className="job-domain">
               <div className="role-input-holder">
                 <div>Select Job Role*</div>
@@ -522,7 +505,7 @@ function JobForm({ closeForm }) {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    border: "1px solid #cadbea",
+                    border: "1px solid #CADBEA",
                     borderRadius: "0.5rem",
                   }}
                 >
@@ -562,7 +545,6 @@ function JobForm({ closeForm }) {
                 </div>
               )}
             </div>
-
             <div>
               <div>Resume (optional)</div>
               <div
@@ -602,7 +584,6 @@ function JobForm({ closeForm }) {
               />
               {errors.file && <span className="error-span">{errors.file}</span>}
             </div>
-
             {formMessage.text && (
               <div
                 style={{
@@ -619,7 +600,6 @@ function JobForm({ closeForm }) {
                 {formMessage.text}
               </div>
             )}
-
             <div className="job-btn-container">
               <button className="job-cancel" type="button" onClick={closeForm}>
                 Cancel
@@ -636,3 +616,9 @@ function JobForm({ closeForm }) {
 }
 
 export default JobForm;
+
+
+
+
+
+

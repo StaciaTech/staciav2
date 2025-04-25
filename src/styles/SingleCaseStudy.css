@@ -68,13 +68,20 @@
 }
 .single-casestudy-layout1-des {
   color: #5E5E5E;
-  font-size: 18px;
+  font-size: 1.5rem;
+  padding: 10px 0px;
+
+}
+.test-seclection-blue-challenge{
+  font-size: 2.5rem;
+
 }
 
 .test-seclection-blue-img-cont{
   color: #5E5E5E;
     line-height: 1.5;
-     font-size: 18px;
+     font-size: 1.5rem;
+     margin-bottom: 150px;
 }
 .single-casestudy-layout1-img-content-container {
   display: flex;
@@ -100,6 +107,14 @@
   font-family: EuclidSemiBold;
     font-size: 2rem;
   margin: 3rem 0rem;
+}
+.background{
+  font-family: EuclidSemiBold;
+    font-size: 2rem;
+    padding: 30px 0px;
+
+
+
 }
 .single-casestudy-layout3 {
   align-items: center;
@@ -135,6 +150,101 @@
   color: #DCD9E3;
   margin-bottom: 2rem;
 }
+
+.salient-features{
+  font-size: 1rem;
+  line-height: 2.0;
+padding: 20px 0px;
+
+}
+.salient-features h2{
+  font-size: 2rem;
+   font-family: EuclidSemiBold;
+
+}
+.salient-features ul{
+ font-size: 1.5rem;
+  padding-left: 20px;
+  color: #5E5E5E;
+margin-left: 20px;
+
+}
+.problem-statement-para1{
+  font-size: 1.50rem;
+  color: #5E5E5E;
+
+}
+.problem-statement-para2{
+  font-size: 1.50rem;
+  line-height: 2.5;
+  margin-left: 40px;
+padding: 20px 0px;
+}
+.problem-statement-para2 {
+   color: #5E5E5E;
+
+}
+.highlight{
+  font-size: 1.50rem;
+    font-family: EuclidSemiBold;
+    color: black;
+}
+
+.development-process h2{
+  font-family: EuclidSemiBold;
+  font-size: 2rem;
+}
+.development-process h3{
+  font-size: 1.5rem;
+  font-family: EuclidSemiBold;
+ padding: 20px 0px;
+}
+.development-process p{
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #5E5E5E;
+  padding: 10px;
+
+}
+.Challenges-Faced{
+  line-height: 1.5;
+
+}
+.Challenges-Faced h2{
+  font-size: 2rem;
+   font-family: EuclidSemiBold;
+   padding: 20px 0px;
+
+}
+.Challenges-Faced p{
+
+  font-size: 1.5rem;
+  color: #5E5E5E;
+  padding: 10px;
+}
+.Challenges-Faced li{
+  font-size: 1.5rem;
+  margin-left: 40px;
+  color: #5E5E5E;
+  padding: 10px 0px;
+}
+
+.impact-benefits{
+  padding: 10px;
+}
+.impact-benefits h2{
+  font-size: 2rem;
+  padding: 5px;
+   font-family: EuclidSemiBold;
+}
+.impact-benefits li{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #5E5E5E;
+  padding: 15px;
+  margin-left: 20px;
+}
+
 @media screen and (max-width: 1024px) {
   .single-casestudy-title,
   .single-casestudy-heading {
@@ -226,10 +336,101 @@
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
   }
+  .single-casestudy-layout1-des{
+    font-size: 1rem;
+  }
+  .test-seclection-blue-img-cont{
+    font-size: 1rem;
+
+  }
   .single-casestudy-layout4-grid-container {
     gap: 1rem;
   }
   .single-casestudy-heading-card-container {
     min-height: 50vh;
+  }
+  .salient-features {
+    line-height: 2.0;
+    padding: 20px 0px;
+
+  }
+  .salient-features h2 {
+      font-size: 1.25rem;
+    font-family: EuclidSemiBold;
+  }
+  .salient-features ul {
+    font-size: 1rem;
+    padding-left: 20px;
+    color: #5E5E5E;
+    margin-left: 20px;
+  }
+  .problem-statement-para1 {
+      font-size: 1rem;
+    color: #5E5E5E;
+  }
+  .problem-statement-para2 {
+font-size: 1rem;
+    line-height: 2.5;
+    margin-left: 40px;
+    padding: 20px 0px;
+    color: #5E5E5E;
+  }
+  .highlight {
+   font-size: 1rem;
+    font-family: EuclidSemiBold;
+    color: black;
+  }
+  .test-seclection-blue-challenge{
+    font-size: 1rem;
+
+  }
+  .development-process h2 {
+    font-family: EuclidSemiBold;
+     font-size: 1.25rem;
+  }
+  .development-process h3 {
+    font-size: 1.25rem;
+    font-family: EuclidSemiBold;
+    padding: 20px 0px;
+  }
+  .development-process p {
+   font-size: 1rem;
+    line-height: 1.2;
+    color: #5E5E5E;
+    padding: 10px;
+  }
+  .Challenges-Faced {
+    line-height: 1.5;
+  }
+  .Challenges-Faced h2 {
+     font-size: 1.25rem;
+    font-family: EuclidSemiBold;
+    padding: 20px 0px;
+  }
+  .Challenges-Faced p {
+    font-size: 1rem;
+    color: #5E5E5E;
+    padding: 10px;
+  }
+  .Challenges-Faced li {
+   font-size: 1rem;
+    margin-left: 40px;
+    color: #5E5E5E;
+    padding: 10px 0px;
+  }
+  .impact-benefits {
+    padding: 10px;
+  }
+  .impact-benefits h2 {
+     font-size: 1.25rem;
+    padding: 5px;
+    font-family: EuclidSemiBold;
+  }
+  .impact-benefits li {
+   font-size: 1rem;
+    line-height: 1.5;
+    color: #5E5E5E;
+    padding: 15px;
+    margin-left: 20px;
   }
 }

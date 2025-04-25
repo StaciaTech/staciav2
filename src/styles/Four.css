@@ -47,7 +47,9 @@
   display: none;
   color: white;
   gap: 1rem;
-  background: linear-gradient(to left, #0d022500, #0d0225cc);
+  /* background: linear-gradient(to left, #0d022500, #0d0225cc); */
+  background: linear-gradient(110.72deg, rgba(255, 255, 255, 0.36) 1.21%, rgba(196, 196, 196, 0.06) 100%);
+
   width: 100%;
   padding: 0.5em 2rem;
   justify-content: flex-end;
