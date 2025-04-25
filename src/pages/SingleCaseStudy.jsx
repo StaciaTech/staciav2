@@ -413,7 +413,7 @@ function SingleCaseStudy() {
                   width: "30px",
                 }}
               />
-              How Stacia Can help |       ᐱ
+              How Stacia Can help 
             </button>
           )}
 
