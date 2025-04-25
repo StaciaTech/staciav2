@@ -1216,123 +1216,126 @@ function About() {
   }, [params.key, staciaHistory]);
 
   // IntersectionObserver for scrolling
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Check if current section is still intersecting
-        const currentSection = sectionsRef.current[activeIndex];
-        const currentEntry = entries.find(
-          (entry) => entry.target === currentSection
-        );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       // Check if current section is still intersecting
+  //       const currentSection = sectionsRef.current[activeIndex];
+  //       const currentEntry = entries.find (
+  //         (entry) => entry.target === currentSection
+  //       );
 
-        // If current section is intersecting, keep it active unless a better section is found
-        if (currentEntry && currentEntry.isIntersecting) {
-          let bestIndex = activeIndex;
-          let minTopDiff = Math.abs(currentEntry.target.getBoundingClientRect().top);
+  //       // If current section is intersecting, keep it active unless a better section is found
+  //       if (currentEntry && currentEntry.isIntersecting) {
+  //         let bestIndex = activeIndex;
+  //         let minTopDiff = Math.abs(currentEntry.target.getBoundingClientRect().top);
 
-          // Prioritize first section if intersecting and near viewport top
-          const firstSection = sectionsRef.current[0];
-          const firstEntry = entries.find(
-            (entry) => entry.target === firstSection
-          );
-          if (
-            firstEntry &&
-            firstEntry.isIntersecting &&
-            firstEntry.target.getBoundingClientRect().top <= 150
-          ) {
-            bestIndex = 0;
-          } else {
-            // Look for the section closest to viewport top
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
-                const top = entry.target.getBoundingClientRect().top;
-                const topDiff = Math.abs(top); // Distance from viewport top
-                const index = sectionsRef.current.indexOf(entry.target);
-                if (topDiff < minTopDiff) {
-                  minTopDiff = topDiff;
-                  bestIndex = index;
-                }
-              }
-            });
-          }
+  //         // Prioritize first section if intersecting and near viewport top
+  //         const firstSection = sectionsRef.current[0];
+  //         const firstEntry = entries.find(
+  //           (entry) => entry.target === firstSection
+  //         );
+  //         if (
+  //           firstEntry &&
+  //           firstEntry.isIntersecting &&
+  //           firstEntry.target.getBoundingClientRect().top <= 150
+  //         ) {
+  //           bestIndex = 0;
+  //         } else {
+  //           // Look for the section closest to viewport top
+  //           entries.forEach((entry) => {
+  //             if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
+  //               const top = entry.target.getBoundingClientRect().top;
+  //               const topDiff = Math.abs(top); // Distance from viewport top
+  //               const index = sectionsRef.current.indexOf(entry.target);
+  //               if (topDiff < minTopDiff) {
+  //                 minTopDiff = topDiff;
+  //                 bestIndex = index;
+  //               }
+  //             }
+  //           });
+  //         }
 
-          if (bestIndex !== activeIndex) {
-            console.log(`Updating activeIndex from ${activeIndex} to ${bestIndex}`);
-            setActiveIndex(bestIndex);
-          }
-        } else {
-          // Current section is not intersecting, find the closest intersecting section
-          let bestIndex = activeIndex;
-          let minTopDiff = Infinity;
+  //         if (bestIndex !== activeIndex) {
+  //           console.log(`Updating activeIndex from ${activeIndex} to ${bestIndex}`);
+  //           setActiveIndex(bestIndex);
+  //         }
+  //       } else {
+  //         // Current section is not intersecting, find the closest intersecting section
+  //         let bestIndex = activeIndex;
+  //         let minTopDiff = Infinity;
 
-          // Prioritize first section if intersecting
-          const firstSection = sectionsRef.current[0];
-          const firstEntry = entries.find(
-            (entry) => entry.target === firstSection
-          );
-          if (
-            firstEntry &&
-            firstEntry.isIntersecting &&
-            firstEntry.target.getBoundingClientRect().top <= 150
-          ) {
-            bestIndex = 0;
-          } else {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
-                const top = entry.target.getBoundingClientRect().top;
-                const topDiff = Math.abs(top); // Distance from viewport top
-                const index = sectionsRef.current.indexOf(entry.target);
-                if (topDiff < minTopDiff) {
-                  minTopDiff = topDiff;
-                  bestIndex = index;
-                }
-              }
-            });
-          }
+  //         // Prioritize first section if intersecting
+  //         const firstSection = sectionsRef.current[0];
+  //         const firstEntry = entries.find(
+  //           (entry) => entry.target === firstSection
+  //         );
+  //         if (
+  //           firstEntry &&
+  //           firstEntry.isIntersecting &&
+  //           firstEntry.target.getBoundingClientRect().top <= 150
+  //         ) {
+  //           bestIndex = 0;
+  //         } else {
+  //           entries.forEach((entry) => {
+  //             if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
+  //               const top = entry.target.getBoundingClientRect().top;
+  //               const topDiff = Math.abs(top); // Distance from viewport top
+  //               const index = sectionsRef.current.indexOf(entry.target);
+  //               if (topDiff < minTopDiff) {
+  //                 minTopDiff = topDiff;
+  //                 bestIndex = index;
+  //               }
+  //             }
+  //           });
+  //         }
 
-          if (minTopDiff !== Infinity) {
-            console.log(`Updating activeIndex from ${activeIndex} to ${bestIndex} (no current intersection)`);
-            setActiveIndex(bestIndex);
-          } else {
-            console.log("No intersecting sections found");
-          }
-        }
+  //         if (minTopDiff !== Infinity) {
+  //           console.log(`Updating activeIndex from ${activeIndex} to ${bestIndex} (no current intersection)`);
+  //           setActiveIndex(bestIndex);
+  //         } else {
+  //           console.log("No intersecting sections found");
+  //         }
+  //       }
 
-        // Debug: Log all entries
-        entries.forEach((entry) => {
-          const index = sectionsRef.current.indexOf(entry.target);
-          console.log(
-            `Section ${index}: isIntersecting=${entry.isIntersecting}, ratio=${entry.intersectionRatio}, top=${entry.target.getBoundingClientRect().top}`
-          );
-        });
-      },
-      {
-        root: null,
-        threshold: [0.1, 0.3, 0.5], // Trigger at 10%, 30%, 50% visibility
-      }
-    );
+  //       // Debug: Log all entries
+  //       entries.forEach((entry) => {
+  //         const index = sectionsRef.current.indexOf(entry.target);
+  //         console.log(
+  //           `Section ${index}: isIntersecting=${entry.isIntersecting}, ratio=${entry.intersectionRatio}, top=${entry.target.getBoundingClientRect().top}`
+  //         );
+  //       });
+  //     },
+  //     {
+  //       root: null,
+  //       threshold: [0.1, 0.3, 0.5], // Trigger at 10%, 30%, 50% visibility
+  //     }
+  //   );
 
-    // Verify sections are observed
-    sectionsRef.current.forEach((section, index) => {
-      if (section) {
-        observer.observe(section);
-        console.log(`Observing section ${index}`);
-      } else {
-        console.warn(`Section ${index} is null`);
-      }
-    });
+  //   // Verify sections are observed
+  //   sectionsRef.current.forEach((section, index) => {
+  //     if (section) {
+  //       observer.observe(section);
+  //       console.log(`Observing section ${index}`);
+  //     } else {
+  //       console.warn(`Section ${index} is null`);
+  //     }
+  //   });
 
-    return () => {
-      sectionsRef.current.forEach((section, index) => {
-        if (section) {
-          observer.unobserve(section);
-          console.log(`Unobserving section ${index}`);
-        }
-      });
-      observer.disconnect();
-    };
-  }, [staciaHistory]);
+  //   return () => {
+  //     sectionsRef.current.forEach((section, index) => {
+  //       if (section) {
+  //         observer.unobserve(section);
+  //         console.log(`Unobserving section ${index}`);
+  //       }
+  //     });
+  //     observer.disconnect();
+  //   };
+  // }, [staciaHistory]);
 
+
+
+  
   // Scroll by params
   useEffect(() => {
     if (params.key) {
