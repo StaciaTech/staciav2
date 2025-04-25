@@ -182,7 +182,7 @@
 
 // export default SingleCaseStudy;
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/SingleCaseStudy.css";
 import NavBar from "../components/NavBar";
@@ -192,16 +192,73 @@ import MobileFooter from "../components/MobileFooter";
 import data from "../Data/SingleCaseStudy.json";
 import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
 import RelatedCaseStudy from "../components/CaseStudy/RelatedCaseStudy";
+import loading from "../assets/loading.png";
 
 
 function SingleCaseStudy() {
   const [caseStudy, setCaseStudy] = useState(null);
   const { id } = useParams();
   const formattedId = id.replace(/-+/g, "-");
+  const [showButton, setShowButton] = useState(false);
+  const [showHelpPage, setShowHelpPage] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const popupRef = useRef(null)
 
   const [relatedCases, setRelatedCases] = useState([]);
   console.log("Extracted ID from URL----:", id);
 
+   useEffect(() => {
+     const handleScroll = () => {
+       const scrollY = window.scrollY || document.documentElement.scrollTop;
+       const windowHeight = window.innerHeight;
+       const documentHeight = document.documentElement.scrollHeight;
+       const bottomOffset = 1000; // Adjust this value as needed
+
+       if (scrollY > 1500) {
+         if (scrollY + windowHeight >= documentHeight - bottomOffset) {
+           setShowButton(false); // Hide when near bottom
+         } else {
+           setShowButton(true); // Show otherwise
+         }
+       } else {
+         setShowButton(false); // Hide before 1500px
+       }
+     };
+
+     window.addEventListener("scroll", handleScroll);
+     return () => window.removeEventListener("scroll", handleScroll);
+   }, []);
+
+     const handleClick = () => {
+       setShowHelpPage(true);
+       setShowForm(true);
+     };
+
+     useEffect(()=>{
+      if(showForm){
+        document.body.style.overflow="hidden";
+        document.body.style.position = "fixed";
+        document.body.style.width = "100%";        
+      }else{
+        document.body.style.overflow = "auto";
+        document.body.style.position = "";
+        document.body.style.width = "";
+      }
+
+      return()=>{
+        document.body.style.overflow = "auto";
+        document.body.style.position = "";
+        document.body.style.width = "";
+      }
+     },[showForm])
+
+     const handleWheel = (e) =>{
+      const container = e.currentTarget;
+      if(container.scrollHeight > container.clientHeigth){
+        e.preventDefault();
+        e.preventPropagation();
+      }
+     }
   useEffect(() => {
     console.log("Received ID:", id);
     console.log("JSON Data:", data);
@@ -262,7 +319,7 @@ function SingleCaseStudy() {
             </div>
           </div>
         </div>
-  
+
         <CaseStudyAudio />
 
         <div className="single-casestudy-content-container">
@@ -291,7 +348,7 @@ function SingleCaseStudy() {
                 </div>
               )}
               <div>
-               <h4 className="background">Background</h4>
+                <h4 className="background">Background</h4>
                 {caseStudy?.imageContent?.content?.map((text, index) => (
                   <p key={index} className="test-seclection-blue-img-cont">
                     {text}
@@ -345,13 +402,92 @@ function SingleCaseStudy() {
               </li>
             </ul>
           </div>
+
+          {/* Help Button------------------------- */}
+          {showButton && !showHelpPage && (
+            <button onClick={handleClick} className="help-button">
+              <img
+                src={loading}
+                alt=""
+                style={{
+                  width: "30px",
+                }}
+              />
+              How Stacia Can help |       ᐱ
+            </button>
+          )}
+
+          {/* Help Page Section */}
+          {showForm && showHelpPage && (
+            <div className="help-section">
+              <div
+                className="help-container"
+                onWheel={handleWheel}
+                ref={popupRef}
+              >
+                <div className="help-sidebar">
+                  <img
+                    src={loading}
+                    alt=""
+                    style={{
+                      width: "30px",
+                    }}
+                  />
+                  <h2>How stacia can help</h2>
+
+                  <div className="help-tabs">
+                    <button className="active">Services</button>
+                    <button>Products</button>
+                    <button>Projects</button>
+                  </div>
+                  <ul className="help-links">
+                    <li>Mechanical</li>
+                    <li className="active">Electronics</li>
+                    <li>Tech</li>
+                    <li>column 1</li>
+                    <li>column 2</li>
+                    <li>column 3</li>
+                  </ul>
+                </div>
+
+                <div className="help-card-section">
+                  <div className="help-card">
+                    <img
+                      src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+                      alt="Car"
+                    />
+                    <h3>Placeholder text</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Ullamcorper eu
+                      egestas tempor nunc nec habitant. Dolor vulputate tempor
+                      sagittis et maecenas praesent congue ac. Blandit in
+                      sagittis sem quis lectus aliquam. Lorem ipsum dolor sit
+                      amet consectetur. Blandit in sagittis sem quis lectus
+                      aliquam.
+                    </p>
+                    <a href="#">Know more →</a>
+                  </div>
+                </div>
+
+                <button
+                  className="help-close-btn"
+                  onClick={() => {
+                    setShowHelpPage(false);
+                    setShowForm(false);
+                  }}
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* Development Process */}
           <div className="development-process">
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               Development Process
             </h2>
             <div>
-
               <h3 className="">Ideation:</h3>
               <p className="test-selection-blue">
                 The ideation process for the chili ladling machine at Aachi
