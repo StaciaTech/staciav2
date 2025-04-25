@@ -40,6 +40,7 @@ import EventDetails from "./components/Competition/Event-Detail";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
+  
   return (
     <div className="App">
       {/* Lwdnkjgkufefkl */}
