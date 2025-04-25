@@ -208,7 +208,7 @@
 // export default Winners;
 
 import React, { useRef, useState, useEffect } from "react";
-import { GoArrowLeft, GoArrowRight ,GoEyeClosed } from "react-icons/go";
+import { GoArrowLeft, GoArrowRight  } from "react-icons/go";
 import { IoMdClose } from "react-icons/io";
 import "../../styles/competition/Winner.css";
 import winnersData from "../../Data/Winner.json";

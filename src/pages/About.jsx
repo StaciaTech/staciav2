@@ -8,7 +8,7 @@ import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
 import Stacialogo from "../assets/aboutstacialogo.svg";
 import fiveLogo from "../assets/5yrs.png";
-import { PiPottedPlant } from "react-icons/pi";
+// import { PiPottedPlant } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
 import { useNavigate, useParams } from "react-router-dom";
@@ -29,6 +29,7 @@ import { GiPlantRoots } from "react-icons/gi";
 import { FaCarSide } from "react-icons/fa";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { SlEnergy } from "react-icons/sl";
+import { VscChip } from "react-icons/vsc";
 
 
 
@@ -45,7 +46,7 @@ const Industries = [
   {
     id: 1,
     title: "Food-Processing",
-    img:<MdOutlineFoodBank />,
+    img: <MdOutlineFoodBank />,
   },
   {
     id: 2,
@@ -65,7 +66,7 @@ const Industries = [
   {
     id: 5,
     title: "Consumer Electronic",
-    img: <FaCarSide />,
+    img: <VscChip />,
   },
   {
     id: 6,
@@ -79,10 +80,10 @@ function About() {
   const params = useParams();
 
   // Use static data from the JSON file
-  const [Leaders, setLeaders] = useState(data.leaders);
-  const [staciaHistory, setStaciaHistory] = useState(data.staciaHistory);
-  const [teamData, setTeamData] = useState(data.teamData);
-  const [whyus, setWhyus] = useState(data.whyus);
+  const [Leaders] = useState(data.leaders);
+  const [staciaHistory] = useState(data.staciaHistory);
+  const [teamData] = useState(data.teamData);
+  const [whyus] = useState(data.whyus);
 
   //years section animation
 
@@ -91,35 +92,68 @@ function About() {
   const dotRefs = useRef([]);
   const isManualScroll = useRef(false);
 
+  // useEffect(() => {
+  //   // Intersection Observer to detect which section is in view
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       if (!isManualScroll.current) {
+  //         entries.forEach((entry) => {
+  //           const index = sectionsRef.current.indexOf(entry.target);
+  //           if (entry.isIntersecting) {
+  //             setActiveIndex(index);
+  //           }
+  //         });
+  //       }
+  //     },
+  //     { threshold: 0.5 } // Trigger when 50% of the section is in view
+  //   );
+
+  //   // Observe each section
+  //   sectionsRef.current.forEach((section) => {
+  //     if (section) observer.observe(section);
+  //   });
+
+  //   return () => {
+  //     // Cleanup: Unobserve each section and disconnect the observer
+  //     sectionsRef.current.forEach((section) => {
+  //       if (section) observer.unobserve(section);
+  //     });
+  //     observer.disconnect();
+  //   };
+  // }, [staciaHistory]);
+
   useEffect(() => {
-    // Intersection Observer to detect which section is in view
+    //  Save a snapshot of the ref to use in both setup and cleanup
+    const sections = sectionsRef.current;
+  
     const observer = new IntersectionObserver(
       (entries) => {
         if (!isManualScroll.current) {
           entries.forEach((entry) => {
-            const index = sectionsRef.current.indexOf(entry.target);
+            const index = sections.indexOf(entry.target);
             if (entry.isIntersecting) {
               setActiveIndex(index);
             }
           });
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is in view
+      { threshold: 0.5 }
     );
-
-    // Observe each section
-    sectionsRef.current.forEach((section) => {
+  
+    //  Use the snapshot
+    sections.forEach((section) => {
       if (section) observer.observe(section);
     });
-
+  
     return () => {
-      // Cleanup: Unobserve each section and disconnect the observer
-      sectionsRef.current.forEach((section) => {
+      //  Still use the same snapshot here (NOT sectionsRef.current)
+      sections.forEach((section) => {
         if (section) observer.unobserve(section);
       });
       observer.disconnect();
     };
   }, [staciaHistory]);
+  
 
   const scrollToSection = (index) => {
     if (sectionsRef.current[index]) {
@@ -253,9 +287,8 @@ function About() {
             {staciaHistory?.map((a, i) => (
               <div
                 key={i}
-                className={`about-section3-dots pointer ${
-                  i === activeIndex ? "about-active-dot" : ""
-                }`}
+                className={`about-section3-dots pointer ${i === activeIndex ? "about-active-dot" : ""
+                  }`}
                 ref={(el) => (dotRefs.current[i] = el)}
                 onClick={() => scrollToSection(i)}
               ></div>
@@ -285,7 +318,7 @@ function About() {
                     </div>
                   ) : (
                     <div className="about-sect-3-img">
-                      <img src={eachSec.imageUrl} alt="" /> 
+                      <img src={eachSec.imageUrl} alt="" />
                     </div>
                   )}
                 </div>
@@ -488,19 +521,19 @@ function About() {
               Sit voluptatibus quae molestiae modi temporibus!
             </p>
             <div className="know-more"
-            onClick={() => {
-              window.scrollTo(0, 0);
-              navigate(`/partners`);
-            }}>Read More</div>
+              onClick={() => {
+                window.scrollTo(0, 0);
+                navigate(`/partners`);
+              }}>Read More</div>
           </div>
-          
+
           <div>
             <img
               src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
               alt=""
             />
           </div>
-          
+
         </div>
         <ClientComponent />
         <div className="about-section10-container" id="our-leadership">

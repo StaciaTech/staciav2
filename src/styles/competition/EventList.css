@@ -164,7 +164,7 @@
 
 .event-image1 {
   width: 100%;
-  max-width: 400px;
+  max-width: 75%;
   border-radius: 10px;
 }
 
@@ -239,7 +239,7 @@
   .event-image2 {
     display: block;
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     border-radius: 10px;
     margin-top: 1rem;
   }
@@ -252,7 +252,7 @@
 
   .event-icon1,
   .event-icon3 {
-    width: 8%;
+    width: 5%;
   }
 
   .button-group1 {
