@@ -173,7 +173,7 @@
   display: none;
 }
 .single-product-card {
-  min-width: 300px;
+  width: 30%;
   flex: 0 0 auto;
 }
 .single-product-card-img-container {
