@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import "../styles/About.css";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
@@ -9,18 +9,10 @@ import Stacialogo from "../assets/aboutstacialogo.svg";
 import fiveLogo from "../assets/5yrs.png";
 import { PiPottedPlant } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
-import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
+// import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
 import { useNavigate, useParams } from "react-router-dom";
 import data from "../Data/About.json";
-import ClientComponent from "./Client";
-
-// import food from "../assets/Food-Processing.webp";
-// import agriculture from "../assets/agriculture.webp"
-// import Enrgy from "../assets/Enrgy.webp";
-// import Manufacturing from "../assets/Manufacturing.webp";
-// import ConsumerElectronic from "../assets/ConsumerElectronic.webp";
-// import Automotive from "../assets/Automotive.webp";
-
+// import ClientComponent from "./Client";
 import { MdOutlineFoodBank } from "react-icons/md";
 import { GiPlantRoots } from "react-icons/gi";
 import { FaCarSide } from "react-icons/fa";
@@ -28,16 +20,10 @@ import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { SlEnergy } from "react-icons/sl";
 
 
+const AboutCarousel = React.lazy(()=>import("../components/ReUsableComp/AboutCarousel"));
+const ClientComponent = React.lazy(()=> import("./Client"));
 
-// const Industries = [
-//   "Food Processing",
-//   "Agriculture",
-//   "Energy",
-//   "Manufacturing",
-//   "Consumer Electronics",
-//   "Healthcare",
-//   "Automotive",
-// ];
+
 const Industries = [
   {
     id: 1,
@@ -86,11 +72,7 @@ function About() {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionsRef = useRef([]);
 
-  // New state to tract the scroll direction
-  const [scrollDirection, setScrollDirection] = useState('none');
-  const lastScrollY = useRef(window.scrollY) // scroll last position
-
-  // Ensure first dot is active on initial load or URL param scroll to milestone
+    // Ensure first dot is active on initial load or URL param scroll to milestone
   useEffect(() => {
     if (params.key === "milestone" || !params.key) {
       const firstSection = sectionsRef.current[0];
@@ -154,6 +136,8 @@ function About() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [params.key]);
+
+  
 
   return (
     <div>
@@ -436,7 +420,9 @@ function About() {
           </div>
         </div>
         <div className="about-section8-container" id="our-expertise">
+          <Suspense fallback={<div>Loading carousel....</div>}>
           <AboutCarousel />
+          </Suspense> 
         </div>
         <div className="about-section9-container" id="industries-covered">
           <div className="about-section9-title test-seclection-blue">
@@ -499,7 +485,9 @@ function About() {
             />
           </div>
         </div>
+        <Suspense fallback={<div>Loading....</div>}>
         <ClientComponent />
+        </Suspense>
         <div className="about-section10-container" id="our-leadership">
           <div className="about-section-title test-seclection-blue">
             Our Leadership
