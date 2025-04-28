@@ -1,4 +1,3 @@
-
 // import React, { useEffect, useState } from "react";
 // import { useParams } from "react-router-dom";
 // import "../styles/SingleCaseStudy.css";
@@ -192,7 +191,6 @@
 // import data from "../Data/SingleCaseStudy.json";
 // import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
 // import RelatedCaseStudy from "../components/CaseStudy/RelatedCaseStudy";
-
 
 // function SingleCaseStudy() {
 //   const [caseStudy, setCaseStudy] = useState(null);
@@ -532,7 +530,6 @@
 
 // export default SingleCaseStudy;
 
-
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/SingleCaseStudy.css";
@@ -552,60 +549,8 @@ function SingleCaseStudy() {
   const [showButton, setShowButton] = useState(false);
   const [showHelpPage, setShowHelpPage] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const popupRef = useRef(null)
+  const popupRef = useRef(null);
 
-   useEffect(() => {
-     const handleScroll = () => {
-       const scrollY = window.scrollY || document.documentElement.scrollTop;
-       const windowHeight = window.innerHeight;
-       const documentHeight = document.documentElement.scrollHeight;
-       const bottomOffset = 1000; // Adjust this value as needed
-
-       if (scrollY > 1500) {
-         if (scrollY + windowHeight >= documentHeight - bottomOffset) {
-           setShowButton(false); // Hide when near bottom
-         } else {
-           setShowButton(true); // Show otherwise
-         }
-       } else {
-         setShowButton(false); // Hide before 1500px
-       }
-     };
-
-     window.addEventListener("scroll", handleScroll);
-     return () => window.removeEventListener("scroll", handleScroll);
-   }, []);
-
-     const handleClick = () => {
-       setShowHelpPage(true);
-       setShowForm(true);
-     };
-
-     useEffect(()=>{
-      if(showForm){
-        document.body.style.overflow="hidden";
-        document.body.style.position = "fixed";
-        document.body.style.width = "100%";        
-      }else{
-        document.body.style.overflow = "auto";
-        document.body.style.position = "";
-        document.body.style.width = "";
-      }
-
-      return()=>{
-        document.body.style.overflow = "auto";
-        document.body.style.position = "";
-        document.body.style.width = "";
-      }
-     },[showForm])
-
-     const handleWheel = (e) =>{
-      const container = e.currentTarget;
-      if(container.scrollHeight > container.clientHeigth){
-        e.preventDefault();
-        e.preventPropagation();
-      }
-     }
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
@@ -644,23 +589,15 @@ function SingleCaseStudy() {
       document.body.style.overflow = "auto";
       document.body.style.position = "";
       document.body.style.width = "";
-    }
-  }, [showForm])
+    };
+  }, [showForm]);
   const handleWheel = (e) => {
     const container = e.currentTarget;
     if (container.scrollHeight > container.clientHeigth) {
       e.preventDefault();
       e.preventPropagation();
     }
-  }
-
-
-
-
-
-
-
-
+  };
 
   useEffect(() => {
     let selectedCaseStudy = null;
@@ -742,7 +679,9 @@ function SingleCaseStudy() {
                 </div>
               )}
               <div>
-                <h4 className="background">{caseStudy.imageContent.imagetitle}</h4>
+                <h4 className="background">
+                  {caseStudy.imageContent.imagetitle}
+                </h4>
                 {caseStudy.imageContent.content.map((text, index) => (
                   <p key={index} className="test-seclection-blue-img-cont">
                     {text}
@@ -775,7 +714,8 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.problemStatement.issues.map((issue, index) => (
                 <li key={index}>
-                  <span className="highlight">{issue.highlight}:</span> {issue.text}
+                  <span className="highlight">{issue.highlight}:</span>{" "}
+                  {issue.text}
                 </li>
               ))}
             </ul>
@@ -874,7 +814,10 @@ function SingleCaseStudy() {
                   {/* Tabs */}
                   <div className="help-tabs">
                     {["Services", "Products", "Projects"].map((tab, index) => (
-                      <button key={index} className={tab === "Services" ? "active" : ""}>
+                      <button
+                        key={index}
+                        className={tab === "Services" ? "active" : ""}
+                      >
                         {tab}
                       </button>
                     ))}
@@ -882,8 +825,18 @@ function SingleCaseStudy() {
 
                   {/* Links */}
                   <ul className="help-links">
-                    {["Mechanical", "Electronics", "Tech", "column 1", "column 2", "column 3"].map((link, index) => (
-                      <li key={index} className={link === "Electronics" ? "active" : ""}>
+                    {[
+                      "Mechanical",
+                      "Electronics",
+                      "Tech",
+                      "column 1",
+                      "column 2",
+                      "column 3",
+                    ].map((link, index) => (
+                      <li
+                        key={index}
+                        className={link === "Electronics" ? "active" : ""}
+                      >
                         {link}
                       </li>
                     ))}
@@ -931,9 +884,14 @@ function SingleCaseStudy() {
             </h2>
             {caseStudy.developmentProcess.sections.map((section, index) => (
               <div key={index}>
-                <h3 className={section.subtitleClass || ""}>{section.subtitle}</h3>
+                <h3 className={section.subtitleClass || ""}>
+                  {section.subtitle}
+                </h3>
                 {section.paragraphs.map((para, paraIndex) => (
-                  <p key={paraIndex} className={para.className || "test-selection-blue"}>
+                  <p
+                    key={paraIndex}
+                    className={para.className || "test-selection-blue"}
+                  >
                     {para.text}
                   </p>
                 ))}
@@ -950,7 +908,8 @@ function SingleCaseStudy() {
                 <li key={index}>
                   {issue.highlight ? (
                     <>
-                      <span className="highlight">{issue.highlight}:</span> {issue.text}
+                      <span className="highlight">{issue.highlight}:</span>{" "}
+                      {issue.text}
                     </>
                   ) : (
                     issue.text
@@ -968,7 +927,8 @@ function SingleCaseStudy() {
             <ul>
               {caseStudy.impactBenefits.benefits.map((benefit, index) => (
                 <li key={index}>
-                  <span className="highlight">{benefit.highlight}:</span> {benefit.text}
+                  <span className="highlight">{benefit.highlight}:</span>{" "}
+                  {benefit.text}
                 </li>
               ))}
             </ul>
@@ -996,10 +956,10 @@ function SingleCaseStudy() {
           )}
 
           <div className="challenges">
-            <div className="single-casestudy-layout3" >
+            <div className="single-casestudy-layout3">
               <div className="conclusion">
                 {caseStudy.challenges.map((challenge, index) => (
-                  <div key={index} >
+                  <div key={index}>
                     <div className="single-casestudy-layout3-title test-seclection-blue">
                       {challenge.challengestitle}
                     </div>
