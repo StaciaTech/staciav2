@@ -53,7 +53,7 @@
   letter-spacing: 1px;
   /* margin: 0px 20px; */
   opacity: 0.5;
-  padding: 25px 10px;
+  padding: 30px 10px;
   overflow: hidden;
 }
 
@@ -199,13 +199,14 @@ a {
 
 .nav-whats-new-item {
   opacity: 0.5;
+  padding: 25px 10px;
 }
 
 .nav-whats-new-item:hover {
   opacity: 1;
   font-weight: 600;
   color: #0047ff;
-  padding: 25px 10px;
+  /* padding: 25px 10px; */
   overflow: hidden;
 }
 
@@ -286,9 +287,9 @@ a {
   gap: 1rem;
 }
 
-.whats-new-right-grid-container>div {
+/* .whats-new-right-grid-container>div { */
   /* background-color: red; */
-}
+/* } */
 
 .whats-new-right-grid-container>div:nth-child(1) {
   grid-row: 1 / span 2;

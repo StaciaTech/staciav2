@@ -8,23 +8,127 @@
           "id": "Case-Study-1",
           "department": "Electronics Sector",
           "title": "Chili Ladling Machine",
-          "backgroundImage": "/assets/singlepage-1.webp",
+          "backgroundImage": "/assets/ChilliBackground.png",
           "imageURL": "/assets/caseStudy-1.webp",
           "overview": {
-            "overviewtitle": "Introduction ",
-            "description": "The Chili Ladling Machine project was initiated in 2020 and completed within two months with the primary objective of automating the labor-intensive process of ladling chili. This project marked the first major endeavour for Stacia and was developed exclusively for the Aachi Group, a leading spice manufacturer. The machine was designed to handle large quantities of chili efficiently and minimize human intervention. This   machine   is   capable   of   handling   large   quantities   of   chili   with   minimal human intervention. The chili ladling machine utilizes a food-grade plastic cleated belt conveyor to transport chili from the ground to a designated area. The conveyor system is designed to gently move and mix the chili while preventing excessive breakage. The machine operates on a continuous loop, with the chili being picked up from one location and returned to the same spot after processing. This innovative approach eliminates the need for manual handling and ensures efficient and uniform processing. "
+            "overviewtitle": "Introduction",
+            "description": "The Chili Ladling Machine project was initiated in 2020 and completed within two months with the primary objective of automating the labor-intensive process of ladling chili. This project marked the first major endeavour for Stacia and was developed exclusively for the Aachi Group, a leading spice manufacturer. The machine was designed to handle large quantities of chili efficiently and minimize human intervention. This machine is capable of handling large quantities of chili with minimal human intervention. The chili ladling machine utilizes a food-grade plastic cleated belt conveyor to transport chili from the ground to a designated area. The conveyor system is designed to gently move and mix the chili while preventing excessive breakage. The machine operates on a continuous loop, with the chili being picked up from one location and returned to the same spot after processing. This innovative approach eliminates the need for manual handling and ensures efficient and uniform processing."
           },
           "imageContent": {
-            "imagetitle":"background",
+            "imagetitle": "Background",
             "imageSrc": "/assets/singlepage-2.webp",
             "content": [
-              "The purpose of a chili ladling machine is to effectively ladle (mix) the chilies. The chilis are picked up from the ground using a food-grade plastic cleated belt conveyor, and they then return to drop the chili from the same location from which they were originally picked up. The conveyor is directly driven, greatly increasing the machine's efficiency. Because the vehicle is remote-controlled, it will be driven by someone outside. This will work well in other industries were picking the product up off the ground and packing it requirements, along with uniform drying"
-
-
-
+              "The purpose of a chili ladling machine is to effectively ladle (mix) the chilies. The chilis are picked up from the ground using a food-grade plastic cleated belt conveyor, and they then return to drop the chili from the same location from which they were originally picked up. The conveyor is directly driven, greatly increasing the machine's efficiency. Because the vehicle is remote-controlled, it will be driven by someone outside. This will work well in other industries where picking the product up off the ground and packing it is required, along with uniform drying."
             ]
           },
-          "gallerytittle": "Chili Ladling Machine:",
+          "salientFeatures": {
+            "title": "Salient Features",
+            "features": [
+              "Highly efficient",
+              "Portability due to its battery operation",
+              "Lightweight due to optimized selection of material",
+              "Occupies less space",
+              "High temperature operability"
+            ]
+          },
+          "problemStatement": {
+            "title": "Problem Statement",
+            "description": "Traditional chili handling methods often involve several challenges that can negatively impact product quality. Additionally, manual handling of chili is labor-intensive, time-consuming, and can lead to repetitive strain injuries.",
+            "issues": [
+              {
+                "highlight": "Inconsistent Drying",
+                "text": "The drying process was time-consuming and often resulted in uneven moisture content."
+              },
+              {
+                "highlight": "Manual Labor",
+                "text": "The manual handling of chili was labour-intensive."
+              },
+              {
+                "highlight": "Chili Breakage",
+                "text": "Manual usage of ladle caused breakage in chili which affects the quality."
+              },
+              {
+                "highlight": "Ambitious Temperature",
+                "text": "The chili is generally dried at 50°C – 60°C. Hence working under these conditions can pose several hazards to human health."
+              }
+            ]
+          },
+          "developmentProcess": {
+            "title": "Development Process",
+            "sections": [
+              {
+                "subtitle": "Ideation",
+                "paragraphs": [
+                  {
+                    "text": "The ideation process for the chili ladling machine at Aachi Masala was driven by the observation and analysis of existing challenges within their chili handling operations. Through field visits and interactions with plant personnel, it became evident that the current methods of chili ladling were inefficient, time-consuming, and prone to product damage.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "To address these challenges, a creative and innovative solution was sought. Understanding the unique properties of chili, and leveraging technological advancements, the concept of a specialized chili ladling machine emerged.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "This machine would automate the process, improve efficiency, and ensure consistent quality, ultimately enhancing the overall productivity and profitability of Aachi Masala's chili production."
+                  }
+                ]
+              },
+              {
+                "subtitle": "Design & Prototype",
+                "subtitleClass": "single-casestudy-layout1-subtitle test-selection-blue",
+                "paragraphs": [
+                  {
+                    "text": "The development of the chili ladling machine involved a series of iterations to refine its design and functionality. Initial concepts focused on fixed incline mechanisms, which proved ineffective in efficiency.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "In the initial two prototypes, the chili encountered difficulties in traversing. The twisting and intertwining of the chili resulted in blockages and uneven movement, hindering efficient processing."
+                  },
+                  {
+                    "text": "Through iterative testing and experimentation, the team eventually integrated a conveyor belt system into the design. This proved to be the most effective solution for handling large quantities of chili while minimizing breakage and ensuring consistent processing."
+                  }
+                ]
+              }
+            ]
+          },
+          "challengesFaced": {
+            "title": "Challenges Faced",
+            "description": "One of the primary challenges encountered during the development of the chili ladling machine was determining the optimal conveyor angle and RPM speed.",
+            "issues": [
+              {
+                "highlight": "Conveyor Angle",
+                "text": "Finding the ideal angle for the conveyor belt was crucial to ensure proper movement and distribution of the chili. An angle that was too steep could cause the chili to slide off the belt, while an angle that was too shallow might not provide sufficient movement."
+              },
+              {
+                "highlight": "RPM Speed",
+                "text": "The RPM speed of the conveyor belt also needed to be carefully calibrated. Too high a speed could lead to excessive breakage of the chili, while too low a speed might result in inefficient processing."
+              },
+              {
+                "text": "Through extensive testing and experimentation, the optimal conveyor angle and RPM speed were determined, providing the necessary balance between efficient chili movement and minimal breakage."
+              }
+            ]
+          },
+          "impactBenefits": {
+            "title": "Impact and Benefits",
+            "benefits": [
+              {
+                "highlight": "Improved Hygiene",
+                "text": "The automated handling process reduced the risk of contamination, ensuring the safety and quality of the final product."
+              },
+              {
+                "highlight": "Increased Efficiency",
+                "text": "The machine streamlined the chili handling process, reducing labor costs and increasing overall productivity."
+              },
+              {
+                "highlight": "Consistent Drying",
+                "text": "The controlled drying chamber ensured even drying of chili, resulting in a more uniform product."
+              },
+              {
+                "highlight": "Reduced Breakage",
+                "text": "The gentle handling mechanism minimized chili breakage, improving product yield and reducing waste."
+              }
+            ]
+          },
+          "gallerytittle": "Chili Ladling Machine",
           "gallery": [
             "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
             "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
@@ -33,8 +137,8 @@
           ],
           "challenges": [
             {
-              "challengestitle": "Conclusion:",
-              "description": "The   custom   chili   ladling   machine   developed   for   the  Aachi   Group   represents   a significant advancement in chili processing technology. By automating key processes, reducing manual labour, and ensuring consistent quality, the machine has significantly enhanced the efficiency and productivity of Aachi Masala's operations. This innovative solution   demonstrates   the   potential   of   technology   to   address   industry-specific challenges and drive improvements in manufacturing processes. The success of this project highlights the importance of investing in research and development to develop innovative solutions that meet the evolving needs of the food industry."
+              "challengestitle": "Conclusion",
+              "description": "The custom chili ladling machine developed for the Aachi Group represents a significant advancement in chili processing technology. By automating key processes, reducing manual labour, and ensuring consistent quality, the machine has significantly enhanced the efficiency and productivity of Aachi Masala's operations. This innovative solution demonstrates the potential of technology to address industry-specific challenges and drive improvements in manufacturing processes."
             }
           ]
         }
@@ -47,21 +151,123 @@
         {
           "id": "Case-Study-2",
           "department": "Electronics Sector",
-          "title": "Mechanization and Precision Sowing-2",
+          "title": "Mechanization and Precision Sowing",
           "backgroundImage": "/assets/singlepage-1.webp",
           "imageURL": "/assets/caseStudy-2.webp",
           "overview": {
-            "overviewtitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
-            "description": "India is one of the largest producers of sesame, with cultivation spread across various states under diverse climatic conditions such as summer, rainfed, cold weather, and rain fallow regions. Approximately 1.8 million hectares of land are used for sesame cultivation each year. However, the average yield remains less than 500 kg per acre due to outdated farming practices such as broadcasting. Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs "
+            "overviewtitle": "Mechanization and Precision Sowing in Sesame Cultivation in India",
+            "description": "India is one of the largest producers of sesame, with cultivation spread across various states under diverse climatic conditions such as summer, rainfed, cold weather, and rain fallow regions. Approximately 1.8 million hectares of land are used for sesame cultivation each year. However, the average yield remains less than 500 kg per acre due to outdated farming practices such as broadcasting. Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs."
           },
           "imageContent": {
+            "imagetitle": "Background",
             "imageSrc": "/assets/singlepage-2.webp",
             "content": [
-              "Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. ",
+              "Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.",
               "In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanization."
             ]
           },
-          "gallerytittle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+          "salientFeatures": {
+            "title": "Salient Features",
+            "features": [
+              "Precision seed placement",
+              "Reduced seed wastage",
+              "Battery-operated for portability",
+              "Adjustable sowing depth",
+              "Low maintenance design"
+            ]
+          },
+          "problemStatement": {
+            "title": "Problem Statement",
+            "description": "Sesame cultivation in India faces challenges due to reliance on traditional broadcasting methods, which result in suboptimal yields and high labor costs.",
+            "issues": [
+              {
+                "highlight": "Uneven Seed Distribution",
+                "text": "Broadcasting leads to uneven seed placement, reducing germination rates."
+              },
+              {
+                "highlight": "High Labor Costs",
+                "text": "Manual sowing and thinning consume significant labor resources."
+              },
+              {
+                "highlight": "Low Yields",
+                "text": "Outdated practices result in yields below 500 kg per acre."
+              },
+              {
+                "highlight": "Lack of Mechanization",
+                "text": "Manual methods limit scalability and efficiency."
+              }
+            ]
+          },
+          "developmentProcess": {
+            "title": "Development Process",
+            "sections": [
+              {
+                "subtitle": "Ideation",
+                "paragraphs": [
+                  {
+                    "text": "The project began with field studies in sesame-growing regions to understand the limitations of broadcasting. Farmers' feedback highlighted the need for a mechanized solution to improve seed placement and reduce labor.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "The concept of a precision sowing machine was developed, focusing on uniform seed distribution and adaptability to varied soil conditions.",
+                    "className": "test-selection-blue"
+                  }
+                ]
+              },
+              {
+                "subtitle": "Design & Prototype",
+                "subtitleClass": "single-casestudy-layout1-subtitle test-selection-blue",
+                "paragraphs": [
+                  {
+                    "text": "Initial prototypes used manual seed dispensers, which were inconsistent in seed spacing. Subsequent designs incorporated electronic controls for precise seed release.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "The final design featured a battery-operated system with adjustable sowing depth, tested successfully in Tamil Nadu fields."
+                  }
+                ]
+              }
+            ]
+          },
+          "challengesFaced": {
+            "title": "Challenges Faced",
+            "description": "Developing a precision sowing machine required overcoming several technical and environmental challenges.",
+            "issues": [
+              {
+                "highlight": "Seed Size Variability",
+                "text": "Sesame seeds vary in size, requiring a flexible dispensing mechanism."
+              },
+              {
+                "highlight": "Soil Conditions",
+                "text": "The machine needed to operate effectively in both dry and moist soils."
+              },
+              {
+                "text": "Iterative testing ensured the machine could handle diverse conditions while maintaining precision."
+              }
+            ]
+          },
+          "impactBenefits": {
+            "title": "Impact and Benefits",
+            "benefits": [
+              {
+                "highlight": "Increased Yields",
+                "text": "Precision sowing improved germination rates, boosting yields by up to 30%."
+              },
+              {
+                "highlight": "Reduced Labor",
+                "text": "Mechanization cut labor costs by over 50%."
+              },
+              {
+                "highlight": "Seed Efficiency",
+                "text": "Optimized seed usage reduced wastage by 25%."
+              },
+              {
+                "highlight": "Scalability",
+                "text": "The machine enabled farmers to scale operations efficiently."
+              }
+            ]
+          },
+          "gallerytittle": "Mechanization and Precision Sowing in Sesame Cultivation in India",
           "gallery": [
             "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
             "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
@@ -70,8 +276,8 @@
           ],
           "challenges": [
             {
-              "challengestitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
-              "description": "Sowing, thinning, and harvesting require significant manual labor, consuming over 50% of the total cultivation cost.In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanizationIn some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. "
+              "challengestitle": "Conclusion",
+              "description": "The precision sowing machine has transformed sesame cultivation by addressing key inefficiencies in traditional methods. By improving seed placement and reducing labor costs, it has increased yields and profitability for farmers, demonstrating the value of mechanization in agriculture."
             }
           ]
         }
@@ -84,21 +290,123 @@
         {
           "id": "Case-Study-3",
           "department": "Electronics Sector",
-          "title": "Mechanization and Precision Sowing-3",
+          "title": "Advanced Precision Sowing System",
           "backgroundImage": "/assets/singlepage-1.webp",
           "imageURL": "/assets/caseStudy-3.webp",
           "overview": {
-            "overviewtitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
-            "description": "India is one of the largest producers of sesame, with cultivation spread across various states under diverse climatic conditions such as summer, rainfed, cold weather, and rain fallow regions. Approximately 1.8 million hectares of land are used for sesame cultivation each year. However, the average yield remains less than 500 kg per acre due to outdated farming practices such as broadcasting. Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs "
+            "overviewtitle": "Advanced Precision Sowing in Sesame Cultivation",
+            "description": "Building on previous efforts, this project aimed to develop an advanced precision sowing system for sesame cultivation, incorporating IoT and automation for real-time monitoring and control. Targeting India's 1.8 million hectares of sesame fields, the system addresses the inefficiencies of traditional broadcasting methods, which yield less than 500 kg per acre due to uneven seed distribution and high labor costs."
           },
           "imageContent": {
+            "imagetitle": "Background",
             "imageSrc": "/assets/singlepage-2.webp",
             "content": [
-              "Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs.Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. ",
-              "In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanization."
+              "Traditional broadcasting scatters 2 kg of sesame seeds per acre, leading to poor germination and high labor costs.",
+              "In regions like Cuddalore and Salem, manual line sowing has improved yields to over 700 kg per acre, but lacks scalability due to labor dependency."
             ]
           },
-          "gallerytittle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
+          "salientFeatures": {
+            "title": "Salient Features",
+            "features": [
+              "IoT-enabled monitoring",
+              "Automated seed dispensing",
+              "Real-time soil analysis",
+              "Solar-powered operation",
+              "High durability in harsh conditions"
+            ]
+          },
+          "problemStatement": {
+            "title": "Problem Statement",
+            "description": "Traditional sesame sowing methods are inefficient, labor-intensive, and result in low yields, hindering India's agricultural productivity.",
+            "issues": [
+              {
+                "highlight": "Poor Germination",
+                "text": "Broadcasting causes uneven seed distribution, reducing germination rates."
+              },
+              {
+                "highlight": "Labor Dependency",
+                "text": "Manual sowing and thinning account for over 50% of cultivation costs."
+              },
+              {
+                "highlight": "Scalability Issues",
+                "text": "Lack of mechanization limits large-scale farming."
+              },
+              {
+                "highlight": "Environmental Variability",
+                "text": "Diverse soil and climate conditions require adaptive sowing solutions."
+              }
+            ]
+          },
+          "developmentProcess": {
+            "title": "Development Process",
+            "sections": [
+              {
+                "subtitle": "Ideation",
+                "paragraphs": [
+                  {
+                    "text": "The project was inspired by the need for a smart sowing system that could adapt to varying field conditions. IoT integration was proposed to monitor soil and seed placement in real time.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Collaboration with farmers ensured the system met practical needs, focusing on automation and sustainability.",
+                    "className": "test-selection-blue"
+                  }
+                ]
+              },
+              {
+                "subtitle": "Design & Prototype",
+                "subtitleClass": "single-casestudy-layout1-subtitle test-selection-blue",
+                "paragraphs": [
+                  {
+                    "text": "Early prototypes faced challenges with IoT connectivity in remote areas. Subsequent designs incorporated offline modes and solar power.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "The final system used sensors for soil analysis and automated seed dispensing, tested in diverse regions."
+                  }
+                ]
+              }
+            ]
+          },
+          "challengesFaced": {
+            "title": "Challenges Faced",
+            "description": "The development of an IoT-enabled sowing system presented unique technical and logistical challenges.",
+            "issues": [
+              {
+                "highlight": "Connectivity",
+                "text": "Ensuring reliable IoT connectivity in rural areas was difficult."
+              },
+              {
+                "highlight": "Cost",
+                "text": "Balancing advanced features with affordability for small-scale farmers."
+              },
+              {
+                "text": "Extensive field testing resolved connectivity issues and optimized costs."
+              }
+            ]
+          },
+          "impactBenefits": {
+            "title": "Impact and Benefits",
+            "benefits": [
+              {
+                "highlight": "Higher Yields",
+                "text": "Precision sowing increased yields by up to 40%."
+              },
+              {
+                "highlight": "Cost Savings",
+                "text": "Automation reduced labor costs by 60%."
+              },
+              {
+                "highlight": "Sustainability",
+                "text": "Solar power and seed efficiency promoted eco-friendly farming."
+              },
+              {
+                "highlight": "Data-Driven Farming",
+                "text": "IoT provided insights for better crop management."
+              }
+            ]
+          },
+          "gallerytittle": "Advanced Precision Sowing in Sesame Cultivation",
           "gallery": [
             "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
             "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
@@ -107,8 +415,8 @@
           ],
           "challenges": [
             {
-              "challengestitle": "Mechanization and Precision Sowing in Sesame Cultivation in India ",
-              "description": "Sowing, thinning, and harvesting require significant manual labor, consuming over 50% of the total cultivation cost.In some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. Despite the improvement, this method relies entirely on manual labor and lacks mechanizationIn some areas like Cuddalore and Salem in Tamil Nadu, line sowing has been adopted, and farmers experience yields of over 700 kg per acre. "
+              "challengestitle": "Conclusion",
+              "description": "The advanced precision sowing system has revolutionized sesame cultivation by integrating IoT and automation. It offers a scalable, sustainable solution that enhances yields and reduces costs, paving the way for modernized agriculture in India."
             }
           ]
         }

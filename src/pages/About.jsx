@@ -1123,7 +1123,7 @@ import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
 import Stacialogo from "../assets/aboutstacialogo.svg";
 import fiveLogo from "../assets/5yrs.png";
-import { PiPottedPlant } from "react-icons/pi";
+// import { PiPottedPlant } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
 import { useNavigate, useParams } from "react-router-dom";
@@ -1142,6 +1142,7 @@ import { GiPlantRoots } from "react-icons/gi";
 import { FaCarSide } from "react-icons/fa";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { SlEnergy } from "react-icons/sl";
+import { VscChip } from "react-icons/vsc";
 
 
 
@@ -1158,7 +1159,7 @@ const Industries = [
   {
     id: 1,
     title: "Food-Processing",
-    img:<MdOutlineFoodBank />,
+    img: <MdOutlineFoodBank />,
   },
   {
     id: 2,
@@ -1178,7 +1179,7 @@ const Industries = [
   {
     id: 5,
     title: "Consumer Electronic",
-    img: <FaCarSide />,
+    img: <VscChip />,
   },
   {
     id: 6,
@@ -1192,10 +1193,10 @@ function About() {
   const params = useParams();
 
   // Use static data from the JSON file
-  const [Leaders, setLeaders] = useState(data.leaders);
-  const [staciaHistory, setStaciaHistory] = useState(data.staciaHistory);
-  const [teamData, setTeamData] = useState(data.teamData);
-  const [whyus, setWhyus] = useState(data.whyus);
+  const [Leaders] = useState(data.leaders);
+  const [staciaHistory] = useState(data.staciaHistory);
+  const [teamData] = useState(data.teamData);
+  const [whyus] = useState(data.whyus);
 
   // Years section animation
   const [activeIndex, setActiveIndex] = useState(0);
@@ -1321,7 +1322,7 @@ function About() {
         console.warn(`Section ${index} is null`);
       }
     });
-
+  
     return () => {
       sectionsRef.current.forEach((section, index) => {
         if (section) {
@@ -1332,6 +1333,7 @@ function About() {
       observer.disconnect();
     };
   }, [staciaHistory]);
+  
 
   // Scroll by params
   useEffect(() => {
