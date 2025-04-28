@@ -1,15 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../../styles/NavProductComp.css";
 import Star from "../../assets/loadingStar.svg";
-import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp } from "react-icons/io";
+import {
+  IoIosArrowDown,
+  IoIosArrowForward,
+  IoIosArrowUp,
+} from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import data from '../../Data/ProductPage.json'
+import data from "../../Data/ProductPage.json";
+import { FaLariSign } from "react-icons/fa6";
 
 function NavProductComp({ handleClose }) {
   const navigate = useNavigate();
   const Details = data.department;
 
-  const [productData, setProductData] = useState();  
+  const [productData, setProductData] = useState();
   const categoryContainerRef = useRef(null); // Ref for the main category container
   const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
 
@@ -38,8 +43,6 @@ function NavProductComp({ handleClose }) {
     };
   }, []);
 
-  
-
   const [showSubCats, setShowSubCats] = useState(false);
   const [showProducts, setShowproducts] = useState(false);
   const [MainCatArr, setMaincatArr] = useState();
@@ -65,13 +68,13 @@ function NavProductComp({ handleClose }) {
       const firstProduct = firstCategory?.products[0];
       setMaincatArr(MainCatArrObj?.category?.map((item) => item.name));
 
-      if(firstCategory){
+      if (firstCategory) {
         setMainCatName(firstCategory?.name);
         setFinalProductArr(firstCategory?.products);
-        const subCatTitles = firstCategory?.products?.map((pro)=>pro.title);
+        const subCatTitles = firstCategory?.products?.map((pro) => pro.title);
         setSubccatsArr(subCatTitles);
         setShowSubCats(true);
-        if(firstProduct){
+        if (firstProduct) {
           setSubCatName(firstProduct.title);
           setDisplayProducts(firstProduct);
           setShowproducts(true);
@@ -82,23 +85,36 @@ function NavProductComp({ handleClose }) {
 
   const HandleMainCatHover = (MainCat) => {
     const MainCatArrObj = productData?.find((item) => item.name === deptname);
-    setMainCatName(MainCat);
     const subCatObj = MainCatArrObj?.category?.find(
       (item) => item.name === MainCat
     );
 
-    setFinalProductArr(subCatObj?.products);
-    if (subCatObj) {
-      const productTitles = subCatObj?.products?.map((eachSubCat) => eachSubCat.title);
-      setSubccatsArr(productTitles);
-      const firstProduct = subCatObj.products?.[0];
-      if(firstProduct){
-        setSubCatName(firstProduct.title);
-        setDisplayProducts(firstProduct);
-        setShowproducts(true);
+    // Check if the category has products
+    if (subCatObj?.products?.length > 0) {
+      setMainCatName(MainCat);
+      setFinalProductArr(subCatObj?.products);
+      if (subCatObj) {
+        const productTitles = subCatObj?.products?.map(
+          (eachSubCat) => eachSubCat.title
+        );
+        setSubccatsArr(productTitles);
+        const firstProduct = subCatObj.products?.[0];
+        if (firstProduct) {
+          setSubCatName(firstProduct.title);
+          setDisplayProducts(firstProduct);
+          setShowproducts(true);
+        }
       }
+      setShowSubCats(true);
+    }else{
+      // Reset states if no products
+      setShowSubCats(false)
+      setShowproducts(false)
+      setSubccatsArr([])
+      setFinalProductArr([])
+      setSubCatName(null)
+      setDisplayProducts(null)
     }
-    setShowSubCats(true);
   };
 
   const HandleSubCatHover = (SubCat) => {
@@ -147,7 +163,9 @@ function NavProductComp({ handleClose }) {
       const container = categoryContainerRef.current;
       const { scrollTop, scrollHeight, clientHeight } = container;
       const lastItem = container.lastChild;
-      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
+      const lastItemOffset = lastItem
+        ? lastItem.offsetTop + lastItem.offsetHeight
+        : scrollHeight;
       setShowUpArrow(scrollTop > 0);
       setShowDownArrow(scrollTop + clientHeight < lastItemOffset);
     }
@@ -158,7 +176,9 @@ function NavProductComp({ handleClose }) {
       const container = subCategoryContainerRef.current;
       const { scrollTop, scrollHeight, clientHeight } = container;
       const lastItem = container.lastChild;
-      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
+      const lastItemOffset = lastItem
+        ? lastItem.offsetTop + lastItem.offsetHeight
+        : scrollHeight;
       setShowSubUpArrow(scrollTop > 0);
       setShowSubDownArrow(scrollTop + clientHeight < lastItemOffset);
     }
@@ -247,7 +267,9 @@ function NavProductComp({ handleClose }) {
                   className="pointer"
                 >
                   <div
-                    className={`navProComp-dept-item ${eachCat === deptname ? "mainCat-active" : ""}`}
+                    className={`navProComp-dept-item ${
+                      eachCat === deptname ? "mainCat-active" : ""
+                    }`}
                   >
                     {eachCat}
                   </div>
@@ -259,12 +281,17 @@ function NavProductComp({ handleClose }) {
         {MainCatArr?.length && (
           <div className="navProComp-mainCat-container">
             <div className="navprocomp-items-heading">Categories</div>
-            <div className="navproComp-item-holder" style={{ position: "relative", height: "100%" }}>
+            <div
+              className="navproComp-item-holder"
+              style={{ position: "relative", height: "100%" }}
+            >
               <div className="navProComp-dot-container">
                 {MainCatArr?.map((dot, i) => (
                   <div
                     key={i}
-                    className={`navProComp-dot ${dot === mainCatName ? "navProComp-dot-active" : ""}`}
+                    className={`navProComp-dot ${
+                      dot === mainCatName ? "navProComp-dot-active" : ""
+                    }`}
                   ></div>
                 ))}
               </div>
@@ -305,7 +332,9 @@ function NavProductComp({ handleClose }) {
                     className="pointer"
                   >
                     <div
-                      className={`navProComp-mainCat-item ${eachCat === mainCatName ? "mainCat-active" : ""}`}
+                      className={`navProComp-mainCat-item ${
+                        eachCat === mainCatName ? "mainCat-active" : ""
+                      }`}
                     >
                       {eachCat}
                     </div>
@@ -318,19 +347,24 @@ function NavProductComp({ handleClose }) {
         {showSubCats && subCatsArr?.length && (
           <div className="navProComp-subCat-container">
             <div className="navprocomp-items-heading">Products</div>
-            <div className="navproComp-item-holder" style={{ position: "relative", height: "100%" }}>
+            <div
+              className="navproComp-item-holder"
+              style={{ position: "relative", height: "100%" }}
+            >
               <div className="navProComp-dot-container">
                 {subCatsArr?.map((dot, i) => (
                   <div
                     key={i}
-                    className={`navProComp-dot ${dot === subCatName ? "navProComp-dot-active" : ""}`}
+                    className={`navProComp-dot ${
+                      dot === subCatName ? "navProComp-dot-active" : ""
+                    }`}
                   ></div>
                 ))}
               </div>
               <div className="arrow-wrapper">
                 {showSubUpArrow && (
                   <span
-                    onClick={scrollSubUp}                    
+                    onClick={scrollSubUp}
                     aria-label="Scroll sub up"
                     className="arrow-up"
                   >
@@ -339,7 +373,7 @@ function NavProductComp({ handleClose }) {
                 )}
                 {showSubDownArrow && (
                   <span
-                    onClick={scrollSubDown}                    
+                    onClick={scrollSubDown}
                     aria-label="Scroll sub down"
                     className="arrow-down"
                   >
@@ -364,7 +398,9 @@ function NavProductComp({ handleClose }) {
                     }}
                   >
                     <div
-                      className={`navProComp-mainCat-item ${eachItem === subCatName ? "mainCat-active" : ""}`}
+                      className={`navProComp-mainCat-item ${
+                        eachItem === subCatName ? "mainCat-active" : ""
+                      }`}
                     >
                       {eachItem}
                     </div>
