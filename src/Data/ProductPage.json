@@ -5,7 +5,7 @@
       "name": "Mechanical",
       "category": [
         {
-          "id": "category-002",
+          "id": "category-001",
           "name": "Agri and Food Processing SPM",
           "description": "Empower your agri-business with our specialized machinery for food processing and agriculture. We design and build SPMs (Special Purpose Machines) tailored to optimize post-harvest processing, packaging, and quality assurance. From seed sorting to product packaging, our innovative solutions enhance productivity, reduce waste, and ensure compliance with food safety standards. Trust our expertise to deliver efficiency and value to your agricultural operations.",
           "imageUrl": "/assets/Agri-and-Food Processing-SPM.webp",
@@ -159,8 +159,7 @@
           "id": "category-002",
           "name": "Industrial Automation (SPM)",
           "description": "Drive innovation in the automotive industry with our custom-built SPMs. Designed for precision and reliability, our machines cater to various applications, including assembly, testing, and component manufacturing. Leveraging cutting-edge technology, we ensure streamlined workflows and high-quality output. Partner with us for tailored solutions that meet the rigorous demands of the automotive sector, enhancing both efficiency and profitability",
-          "imageUrl": "/assets/Automobile-or-Automotive-SPM.webp",
-          "products": [{}]
+          "imageUrl": "/assets/ProductPage/Industrial automation.webp"
         },
         {
           "id": "category-003",
@@ -462,22 +461,7 @@
               ]
             }
           ]
-        },
-        {
-          "id": "category-003",
-          "name": "Industrial Automation",
-          "description": "Optimize your production processes with our Industrial Automation solutions. We provide customized systems that streamline operations, improve accuracy, and reduce downtime. Utilizing the latest in robotics, control systems, and sensors, our solutions enhance productivity while lowering costs. Whether for assembly lines, material handling, or quality inspection, our automation technology ensures consistent performance and maximized efficiency for your industrial needs.",
-          "imageUrl": "/assets/ProductPage/Industrial automation.webp",
-          "products": [
-            {
-              "id": "product-005",
-              "title": "Product",
-              "domainName": "Industrial Automation",
-              "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dicta, itaque ab voluptates dolore molestias ea hic vel cupiditate, soluta laboriosam. Debitis voluptatum quo aut esse amet eum necessitatibus adipisci.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
-            }
-          ]
-        }
+        }         
       ]
     },
     {
