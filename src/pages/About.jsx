@@ -7,7 +7,7 @@ import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
 import Stacialogo from "../assets/aboutstacialogo.svg";
 import fiveLogo from "../assets/5yrs.png";
-import { PiPottedPlant } from "react-icons/pi";
+// import { PiPottedPlant } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 // import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
 import { useNavigate, useParams } from "react-router-dom";
@@ -18,6 +18,7 @@ import { GiPlantRoots } from "react-icons/gi";
 import { FaCarSide } from "react-icons/fa";
 import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { SlEnergy } from "react-icons/sl";
+import { VscChip } from "react-icons/vsc";
 
 
 const AboutCarousel = React.lazy(()=>import("../components/ReUsableComp/AboutCarousel"));
@@ -28,7 +29,7 @@ const Industries = [
   {
     id: 1,
     title: "Food-Processing",
-    img:<MdOutlineFoodBank />,
+    img: <MdOutlineFoodBank />,
   },
   {
     id: 2,
@@ -48,7 +49,7 @@ const Industries = [
   {
     id: 5,
     title: "Consumer Electronic",
-    img: <FaCarSide />,
+    img: <VscChip />,
   },
   {
     id: 6,

@@ -1,7 +1,7 @@
   .audio-container {
-    max-width: 90%;
+    width: 100%;
     margin: auto ;
-    padding: 10px;
+    /* padding: 1rem 10rem; */
     font-family: Arial, sans-serif;
 
   }
@@ -160,8 +160,7 @@
   }
 
   .audio::-webkit-media-controls-panel {
-  background: transparent !important;
-  box-shadow: none !important;
+  background:white;
 }
 
   .audio-controls {
@@ -215,6 +214,7 @@
 
 
   @media (max-width: 480px) {
+    
     .publisher-section {
       flex-direction: row;
       align-items: center;

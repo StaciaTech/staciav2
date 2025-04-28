@@ -7,7 +7,7 @@ import "../../styles/ProductDetails.css";
 import { useParams } from "react-router-dom";
 import prev from "../../assets/prev.png";
 import next from "../../assets/next.png";
-import Model from "./Model";
+// import Model from "./Model";
 import MobileFooter from "../MobileFooter";
 import SideBar from "../SideBar";
 import LoadingStar from "../LoadingStar";
@@ -175,7 +175,7 @@ export default function SingleProduct() {
                 }}
               >
                 <img
-                  src={SelectedProduct?.imageUrl}
+                  src={SelectedProduct?.imageUrl} alt={SelectedProduct?.title}
                   // style={{ width: "40%", minHeight: "40vh",padding:"25px" }}
                 />
               </div>
@@ -340,7 +340,7 @@ export default function SingleProduct() {
                 {SelectedProduct?.title}
               </div>
               <div className="prodesc test-seclection-blue">
-                {SelectedProduct?.description}
+                {SelectedProduct?.briefDetails}
               </div>
             </div>
           </div>
