@@ -160,8 +160,7 @@
   }
 
   .audio::-webkit-media-controls-panel {
-  background: transparent !important;
-  box-shadow: none !important;
+  background:white;
 }
 
   .audio-controls {

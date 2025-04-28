@@ -79,11 +79,12 @@
   padding: 10px 0px;
   color: #6B6084;
   font-family: EuclidMedium;
-
+  line-height: 35px;
 }
 
 .test-seclection-blue-challenge {
   font-size: 2.5rem;
+  
 
 }
 
@@ -91,7 +92,7 @@
   /* color: #5E5E5E; */
   color: #6B6084;
   font-family: EuclidMedium;
-  line-height: 1.5;
+  line-height: 35px;
   font-size: 18px;
 
   margin-bottom: 15px;
@@ -144,15 +145,18 @@
 }
 
 .test-seclection-blue-challenge {
-  line-height: 1.7;
+  /* line-height: 1.7; */
   color: #6B6084;
   font-family: EuclidMedium;
   font-size: 18px;
   margin-top: 1rem;
+  line-height: 35px;
+  /* width: 100%; */
+
 }
 
 .single-casestudy-layout3>*:nth-child(1) {
-  width: 70%;
+  width: 100%;
 }
 
 .single-casestudy-layout3>*:nth-child(2) {
@@ -249,10 +253,10 @@
 
 .development-process p {
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 35px;
   color: #6B6084;
   font-family: EuclidMedium;
-  padding: 10px;
+  padding: 16px;
 
 }
 
@@ -274,6 +278,7 @@
   color: #6B6084;
   font-family: EuclidMedium;
   padding: 10px;
+  
 }
 
 .Challenges-Faced li {
@@ -281,8 +286,8 @@
   margin-left: 40px;
   color: #6B6084;
   font-family: EuclidMedium;
-  ;
-  padding: 10px 0px;
+  line-height: 35px;
+  padding: 16px 0px;
 }
 
 .impact-benefits {
@@ -302,6 +307,184 @@
   font-family: EuclidMedium;
   padding: 15px;
   margin-left: 20px;
+}
+
+/* help button */
+.help-button {
+  position: fixed;
+  bottom: 100px;
+  padding: 12px 18px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  font-size: 17px;
+  font-family: EuclidSemiBold;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.help-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.help-container {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 50px;
+  display: flex;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.help-sidebar {
+  flex: 1;
+  padding-right: 2rem;
+  border-right: 1px solid #ddd;
+}
+
+.help-sidebar img {
+  position: relative;
+  top: 18px;
+}
+
+.help-sidebar h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  left: 40px;
+  bottom: 16px;
+  display: grid;
+  position: relative;
+}
+
+.help-tabs button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #DCDCDC;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.help-tabs button:hover {
+  background: #0D6EFD;
+  color: white;
+  border-color: #0D6EFD;
+}
+
+.help-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 16px;
+  width: 100%;
+}
+
+.help-links li {
+  margin: 8px 0;
+  cursor: pointer;
+  /* font-family: EuclidSemiBold; */
+  padding: 20px 0px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.help-links li:hover {
+  color: #0D6EFD;
+}
+
+.help-links li span {
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.help-card-section {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.help-card {
+  max-width: 500px;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: #F9F9F9;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.4s ease-in-out;
+}
+
+.help-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.help-card h3 {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+  color: #0D0D0D;
+}
+
+.help-card p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.help-card a {
+  font-weight: bold;
+  font-size: 14px;
+  color: #0D6EFD;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.help-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.help-close-btn:hover {
+  color: red;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -370,6 +553,65 @@
   .single-casestudy-layout1-title {
     font-size: 2rem;
   }
+
+  /* help button */
+
+
+  .help-container {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 100px;
+    border-radius: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .help-sidebar {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .help-sidebar h2 {
+    font-size: 20px;
+    left: 0;
+    bottom: 2;
+    text-align: center;
+  }
+
+  .help-tabs button {
+    font-size: 12px;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+  }
+
+  .help-links {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .help-links li {
+    padding: 12px 0;
+  }
+
+  .help-card {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .help-card h3 {
+    font-size: 16px;
+  }
+
+  .help-card p,
+  .help-card a {
+    font-size: 12px;
+  }
+
+  .help-close-btn {
+    font-size: 24px;
+    top: 10px;
+    right: 15px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -422,10 +664,12 @@
 
   .single-casestudy-layout1-des {
     font-size: 1rem;
+    line-height: 30px;
   }
 
   .test-seclection-blue-img-cont {
     font-size: 1rem;
+    line-height: 30px;
 
   }
 
@@ -459,12 +703,14 @@
   .problem-statement-para1 {
     font-size: 1rem;
     color: #6B6084;
+    line-height: 30px;
+
 
   }
 
   .problem-statement-para2 {
     font-size: 1rem;
-    line-height: 2.5;
+    line-height: 30px;
     margin-left: 40px;
     padding: 20px 0px;
     color: #6B6084;
@@ -496,7 +742,8 @@
 
   .development-process p {
     font-size: 1rem;
-    line-height: 1.2;
+    /* line-height: 1.2; */
+    line-height: 30px;
     color: #6B6084;
 
     padding: 10px;
@@ -515,6 +762,7 @@
   .Challenges-Faced p {
     font-size: 1rem;
     color: #6B6084;
+    line-height: 30px;
 
     padding: 10px;
   }
@@ -539,10 +787,75 @@
 
   .impact-benefits li {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 30px;
     color: #6B6084;
 
     padding: 15px;
     margin-left: 20px;
+  }
+
+
+  /* help button */
+
+  .help-button {
+    font-size: 14px;
+    padding: 10px 14px;
+    gap: 6px;
+    bottom: 80px;
+  }
+
+  .help-container {
+    flex-direction: column;
+    margin-top: 100px;
+    border-radius: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .help-sidebar {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .help-sidebar h2 {
+    font-size: 20px;
+    left: 0;
+    bottom: 2;
+    text-align: center;
+  }
+
+  .help-tabs button {
+    font-size: 12px;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+  }
+
+  .help-links {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .help-links li {
+    padding: 12px 0;
+  }
+
+  .help-card {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .help-card h3 {
+    font-size: 16px;
+  }
+
+  .help-card p,
+  .help-card a {
+    font-size: 12px;
+  }
+
+  .help-close-btn {
+    font-size: 24px;
+    top: 10px;
+    right: 15px;
   }
 }

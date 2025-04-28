@@ -62,7 +62,7 @@ const CaseStudyaudio = () => {
           controls
           className="audio"
         >
-          <source src="/assets/audio.mp3" type="audio/mpeg" />
+          <source src="/assets/audio.mp3" type="audio/mp3" />
           Your browser does not support the audio element.
         </audio>
         <div className="audio-controls">

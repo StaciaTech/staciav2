@@ -533,7 +533,7 @@
 // export default SingleCaseStudy;
 
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/SingleCaseStudy.css";
 import NavBar from "../components/NavBar";
@@ -543,9 +543,72 @@ import MobileFooter from "../components/MobileFooter";
 import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
 import data from "../Data/SingleCaseStudy.json";
 
+import loading from "../assets/loading.png";
+
 function SingleCaseStudy() {
   const [caseStudy, setCaseStudy] = useState(null);
   const { id } = useParams();
+
+  const [showButton, setShowButton] = useState(false);
+  const [showHelpPage, setShowHelpPage] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const popupRef = useRef(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const bottomOffset = 1000; // Adjust this value as needed
+      if (scrollY > 1500) {
+        if (scrollY + windowHeight >= documentHeight - bottomOffset) {
+          setShowButton(false); // Hide when near bottom
+        } else {
+          setShowButton(true); // Show otherwise
+        }
+      } else {
+        setShowButton(false); // Hide before 1500px
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const handleClick = () => {
+    setShowHelpPage(true);
+    setShowForm(true);
+  };
+
+  useEffect(() => {
+    if (showForm) {
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    }
+  }, [showForm])
+  const handleWheel = (e) => {
+    const container = e.currentTarget;
+    if (container.scrollHeight > container.clientHeigth) {
+      e.preventDefault();
+      e.preventPropagation();
+    }
+  }
+
+
+
+
+
+
+
+
 
   useEffect(() => {
     let selectedCaseStudy = null;
@@ -600,7 +663,7 @@ function SingleCaseStudy() {
 
         <div className="single-casestudy-content-container">
           <div>
-          <CaseStudyAudio />
+            <CaseStudyAudio />
           </div>
           <div>
             <div className="single-casestudy-layout1-title test-seclection-blue">
@@ -665,6 +728,150 @@ function SingleCaseStudy() {
               ))}
             </ul>
           </div>
+          {showButton && !showHelpPage && (
+            <button onClick={handleClick} className="help-button">
+              <img
+                src={loading}
+                alt=""
+                style={{
+                  width: "30px",
+                }}
+              />
+              How Stacia Can help
+            </button>
+          )}
+          {/* Help Page Section */}
+          {/* {showForm && showHelpPage && (
+            <div className="help-section">
+              <div
+                className="help-container"
+                onWheel={handleWheel}
+                ref={popupRef}
+              >
+                <div className="help-sidebar">
+                  <img
+                    src=""
+                    alt=""
+                    style={{
+                      width: "30px",
+                    }}
+                  />
+                  <h2>How stacia can help</h2>
+                  <div className="help-tabs">
+                    <button className="active">Services</button>
+                    <button>Products</button>
+                    <button>Projects</button>
+                  </div>
+                  <ul className="help-links">
+                    <li>Mechanical</li>
+                    <li className="active">Electronics</li>
+                    <li>Tech</li>
+                    <li>column 1</li>
+                    <li>column 2</li>
+                    <li>column 3</li>
+                  </ul>
+                </div>
+                <div className="help-card-section">
+                  <div className="help-card">
+                    <img
+                      src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+                      alt="Car"
+                    />
+                    <h3>Placeholder text</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Ullamcorper eu
+                      egestas tempor nunc nec habitant. Dolor vulputate tempor
+                      sagittis et maecenas praesent congue ac. Blandit in
+                      sagittis sem quis lectus aliquam. Lorem ipsum dolor sit
+                      amet consectetur. Blandit in sagittis sem quis lectus
+                      aliquam.
+                    </p>
+                    <a href="#">Know more →</a>
+                  </div>
+                </div>
+                <button
+                  className="help-close-btn"
+                  onClick={() => {
+                    setShowHelpPage(false);
+                    setShowForm(false);
+                  }}
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+          )} */}
+
+          {showForm && showHelpPage && (
+            <div className="help-section">
+              <div
+                className="help-container"
+                onWheel={handleWheel}
+                ref={popupRef}
+              >
+                <div className="help-sidebar">
+                  <img
+                    src={loading}
+                    alt=""
+                    style={{
+                      width: "30px",
+                    }}
+                  />
+                  <h2>How Stacia Can Help</h2>
+
+                  {/* Tabs */}
+                  <div className="help-tabs">
+                    {["Services", "Products", "Projects"].map((tab, index) => (
+                      <button key={index} className={tab === "Services" ? "active" : ""}>
+                        {tab}
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <ul className="help-links">
+                    {["Mechanical", "Electronics", "Tech", "column 1", "column 2", "column 3"].map((link, index) => (
+                      <li key={index} className={link === "Electronics" ? "active" : ""}>
+                        {link}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Help Card Section */}
+                <div className="help-card-section">
+                  {[
+                    {
+                      img: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                      title: "Placeholder text",
+                      description:
+                        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in sagittis sem quis lectus aliquam.",
+                      link: "#",
+                    },
+                  ].map((card, index) => (
+                    <div className="help-card" key={index}>
+                      <img src={card.img} alt={card.title} />
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                      <a href={card.link}>Know more →</a>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Close Button */}
+                <button
+                  className="help-close-btn"
+                  onClick={() => {
+                    setShowHelpPage(false);
+                    setShowForm(false);
+                  }}
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+          )}
+
 
           {/* Development Process */}
           <div className="development-process">
@@ -738,10 +945,10 @@ function SingleCaseStudy() {
           )}
 
           <div className="challenges">
-            <div className="single-casestudy-layout3" style={{ display: "flex" }}>
+            <div className="single-casestudy-layout3" >
               <div className="conclusion">
                 {caseStudy.challenges.map((challenge, index) => (
-                  <div key={index}>
+                  <div key={index} >
                     <div className="single-casestudy-layout3-title test-seclection-blue">
                       {challenge.challengestitle}
                     </div>
