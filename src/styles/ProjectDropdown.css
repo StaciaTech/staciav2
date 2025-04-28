@@ -1,0 +1,121 @@
+.project-dd-container {
+  position: absolute;
+  top: 100%;
+  z-index: 999;
+  background-color: #fff;
+  width: 100%;
+  padding: 0rem 2rem;
+  box-sizing: border-box;
+  max-height: 500px;
+  height: 460px;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.2); 
+}
+.project-top-titles {
+  color: #d9d9d9;
+  padding: 1rem 1rem;
+  font-family: EuclidMedium;
+  font-size: 18px;
+}
+.project-dept-container,
+.project-category-container,
+.project-title-container,
+.project-item-contaienr {
+  width: 25%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+.project-dept-container,
+.project-category-container {
+  border-right: 1px solid #e5e5e5;
+}
+.project-category-container,
+.project-title-container {
+  display: flex;
+  animation: slideIn 0.5s ease-out forwards;
+
+}
+.project-title-dot-container {
+  display: flex;
+  width: 2rem;
+  height: 100%;
+  position: relative;
+}
+.project-title-holder {
+  overflow-y: auto;
+}
+.project-title-holder::-webkit-scrollbar {
+  display: none;
+}
+.project-category-container:hover .project-title-dot-container,
+.project-title-container:hover .project-title-dot-container {
+  display: block;
+}
+.project-title-dot-container > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.project-title-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #d9d9d9;
+}
+.project-title-dot.project-title-dot-active {
+  background: #0047ff;
+}
+
+.project-main-item {
+  color: #151f43;
+  font-size: 1.25rem;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: EuclidMedium;
+}
+.project-main-item:hover .project-dd-titel-active-star {
+  transform: scale(1);
+}
+.project-dd-titel-active-star {
+  width: 18px;
+  object-fit: contain;
+  transform: scale(0);
+  margin-left: 1rem;
+  transition: all 0.3s;
+}
+.project-main-item.project-main-item-active {
+  color: #0047ff;
+}
+.project-item-card-title {
+  color: #0d0225;
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  font-family: EuclidSemibold;
+}
+.project-item-card-des {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #6b6084;
+}
+.project-item-card-image {
+  width: 100%;
+}
+.project-item-card-image > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/10;
+}
+
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+  position: relative;
+}

@@ -1,0 +1,436 @@
+{
+  "aboutSections": [
+    {
+      "section": "Who are We",
+      "path": "about",
+      "SectionItems": [
+        {
+          "name": "About us",
+          "path": "about/about-us"
+        },
+        {
+          "name": "Our Story",
+          "path": "about/our-story"
+        },
+        {
+          "name": "Milestone",
+          "path": "about/milestone"
+        },
+        {
+          "name": "Our Mission",
+          "path": "about/our-mission"
+        },
+        {
+          "name": "Our Vision",
+          "path": "about/our-vision"
+        },
+        {
+          "name": "Why us",
+          "path": "about/why-us"
+        },
+        {
+          "name": "Our Purpose",
+          "path": "about/our-purpose"
+        },
+        {
+          "name": "Our Expertise",
+          "path": "about/our-expertise"
+        },
+        {
+          "name": "Industries Covered",
+          "path": "about/industries-covered"
+        },
+        {
+          "name": "Partnerships and clients",
+          "path": "about/partnerships-and-clients"
+        },
+        {
+          "name": "Our Leadership",
+          "path": "about/leadership"
+        },
+        {
+          "name": "Meet our team",
+          "path": "about/team"
+        }
+      ]
+    },
+    {
+      "section": "Leadership",
+      "path": "about/our-leadership",
+      "SectionItems": [
+        {
+          "description": "Passionate innovator and entrepreneur, I strive to make India a global leader in innovation. As the founder of Stacia Corp, I focus on groundbreaking technologies and patents that bring practical advancements to society, making innovation accessible to everyone.",      "des":"From a young age, I was passionate about physics and innovation, which led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE). During my studies, I published research papers on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Eager to contribute to society through innovation, I pursued a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After working with a renewable energy startup, I founded Stacia Corp, a research and development company focused on cutting-edge technologies.My key innovations include a smart water bottle with self-heating and cooling technology, a hydration tracking system with 10mL accuracy, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program.For my contributions, I was honored with the Best Entrepreneur Award by Nitin Gadkari, and I continue striving to develop impactful solutions for the world.From an early age, I have been passionate about science, innovation, and technological advancement. This drive led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE), where I conducted research on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Believing that innovation should be accessible to all, I further expanded my knowledge by completing a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After gaining experience at a renewable energy startup, I founded Stacia Corp, a research and development company focused on creating groundbreaking innovations and patents that contribute to India’s growth.My key innovations include a self-heating and cooling smart water bottle, a high-accuracy hydration tracking system, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program. My vision is to make India a global hub for innovation, ensuring that advanced technology reaches everyone’s hands. Recently, I was honored with the Best Entrepreneur Award by Nitin Gadkari for my contributions.",
+          "imageUrl": "/assets/LeaderPage/lakshman.png",
+          "name": "Mr Lakshman",
+          "path": "about/leader/Mr-Lakshman"
+        },
+        {
+          "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
+          "imageUrl": "/assets/LeaderPage/sarabesh.png",
+          "name": "Mr Sarabesh",
+          "path": "about/leader/Mr-Sarabesh"
+        },
+        {
+          "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",      "des":"I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
+          "imageUrl": "/assets/LeaderPage/revanth.png",
+          "name": "Mr Revanth",
+          "path": "about/leader/Mr-Revanth"
+        }
+      ]
+    },
+    {
+      "section": "Partnerships",
+      "path": "about/partnerships-and-clients",
+      "SectionItems": [
+        {
+          "name": "Partner1",
+          "path": "partners"
+        },
+        {
+          "name": "Partner2",
+          "path": "partners"
+        },
+        {
+          "name": "Partner3",
+          "path": "partners"
+        }
+      ]
+    },
+    {
+      "section": "MediaKit",
+      "path": "media-kit",
+      "SectionItems": [
+        {
+          "name": "Logos ",
+          "path": "/media-kit"
+        },
+        {
+          "name": "Leaders",
+          "path": "/media-kit"
+        },
+        {
+          "name": "Brochers",
+          "path": "/media-kit"
+        }
+      ]
+    }
+  ],
+  "staciaHistory": [
+    {
+      "description": "With a burning desire to shape our country with unparalleled Research and Development, we established our company to pioneer groundbreaking technological advancements",
+      "id": "67344ec833378f0bfe66253a",
+      "imageUrl": "/assets/Resilience in Motion.webp",
+      "isAchievement": false,
+      "title": "Our Journey Starts",
+      "year": "Sept 2019",
+      "_id": "67344ec833378f0bfe66253a"
+    },
+    {
+      "description": "Our first major milestone was achieved with MSME certification. This opens up new opportunities for growth and development.",
+      "id": "673450557a970b308b574ea1",
+      "imageUrl": "/assets/Resilience in Motion.webp",
+      "isAchievement": false,
+      "title": "MSME Recognition ",
+      "year": "May 2020",
+      "_id": "673450557a970b308b574ea1"
+    },
+    {
+      "description": "We successfully commenced our operations in July 2020. This marked a significant achievement for our company.",
+      "id": "6734505a7a970b308b574ea2",
+      "imageUrl": "/assets/Resilience in Motion.webp",
+      "isAchievement": false,
+      "title": "Operations initiation",
+      "year": "Jul 2020",
+      "_id": "6734505a7a970b308b574ea2"
+    },
+    {
+      "description": "Startup india certification recognized by DPIIT in July 2020",
+      "id": "673450607a970b308b574ea3",
+      "imageUrl": "/assets/Resilience in Motion.webp",
+      "isAchievement": true,
+      "title": "Startup India Certification",
+      "year": "Jul 2020",
+      "_id": "673450607a970b308b574ea3"
+    },
+    {
+      "description": "Our Notable innovation Onedril kicked off in August 2020, which was a significant achievement by our team.",
+      "id": "673450667a970b308b574ea4",
+      "imageUrl": "/assets/Resilience in Motion.webp",
+      "isAchievement": false,
+      "title": "Commencement of OneDril",
+      "year": "Aug 2020",
+      "_id": "673450667a970b308b574ea4"
+    }
+  ],
+  "teamData": [
+    {
+      "designation": "Full Stack Engineer",
+      "firstName": "Vignesh",
+      "fullName": "Vignesh Kalithas",
+      "gender": "Male",
+      "id": "6734588324f4c4c8a775d013",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "Kalithas",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "6734588324f4c4c8a775d013"
+    },
+    {
+      "designation": "Backend Engineer",
+      "firstName": "Raja",
+      "fullName": "Raja Vignesh M",
+      "gender": "Male",
+      "id": "673459e47a970b308b574ea7",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "Vignesh M",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "673459e47a970b308b574ea7"
+    },
+    {
+      "designation": "Visual Design Engineer",
+      "firstName": "Manoj",
+      "fullName": "Manoj Kumar S",
+      "gender": "Male",
+      "id": "67345a397a970b308b574ea8",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "Kumar S",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345a397a970b308b574ea8"
+    },
+    {
+      "designation": "Front-End Developer",
+      "firstName": "Ponbaskar",
+      "fullName": "Ponbaskar U",
+      "gender": "Male",
+      "id": "67345a5d7a970b308b574ea9",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "U",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345a5d7a970b308b574ea9"
+    },
+    {
+      "designation": "Full Stack Associate",
+      "firstName": "Shimiyon",
+      "fullName": "Shimiyon S",
+      "gender": "Male",
+      "id": "67345a887a970b308b574eaa",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "S",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345a887a970b308b574eaa"
+    },
+    {
+      "designation": "Visual Design Engineer",
+      "firstName": "Dilip",
+      "fullName": "Dilip Kumar J",
+      "gender": "Male",
+      "id": "67345ab77a970b308b574eab",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "Kumar J",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345ab77a970b308b574eab"
+    },
+    {
+      "designation": "Design and experience",
+      "firstName": "Manju",
+      "fullName": "Manju Parkavi S",
+      "gender": "Female",
+      "id": "67345af17a970b308b574eac",
+      "imageUrl": "https://img.freepik.com/premium-photo/3d-cartoon-cute-girl_995235-7.jpg",
+      "lastName": "Parkavi S",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345af17a970b308b574eac"
+    },
+    {
+      "designation": "Front-End Associate",
+      "firstName": "Vikram",
+      "fullName": "Vikram Varma V",
+      "gender": "Male",
+      "id": "67345b237a970b308b574ead",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "Varma V",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345b237a970b308b574ead"
+    },
+    {
+      "designation": "Embedded Design Associate",
+      "firstName": "Abu",
+      "fullName": "Abu ",
+      "gender": "Male",
+      "id": "67345b5d7a970b308b574eae",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345b5d7a970b308b574eae"
+    },
+    {
+      "designation": "Embedded Design Associate",
+      "firstName": "SASIKANTH",
+      "fullName": "SASIKANTH R",
+      "gender": "Male",
+      "id": "67345b887a970b308b574eaf",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "R",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345b887a970b308b574eaf"
+    },
+    {
+      "designation": "Embedded Design Associate",
+      "firstName": "ABDUL",
+      "fullName": "ABDUL RAHEEM M",
+      "gender": "Male",
+      "id": "67345cd77a970b308b574eb0",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "RAHEEM M",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345cd77a970b308b574eb0"
+    },
+    {
+      "designation": "Employee Experience Associate",
+      "firstName": "Divya",
+      "fullName": "Divya U",
+      "gender": "Female",
+      "id": "67345efd7a970b308b574eb1",
+      "imageUrl": "https://img.freepik.com/premium-photo/3d-cartoon-cute-girl_995235-7.jpg",
+      "lastName": "U",
+      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "_id": "67345efd7a970b308b574eb1"
+    }
+  ],
+  "whyus": [
+    {
+      "description": "At Stacia Corp, innovation is at the heart of everything we do. Our solutions are born out of creative thinking, designed to address unique challenges and deliver groundbreaking results tailored to your needs.",
+      "id": "673ebdf7199194fb080501f3",
+      "title": "Innovation and Creativity",
+      "_id": "673ebdf7199194fb080501f3"
+    },
+    {
+      "description": "Our team comprises highly trained professionals with diverse expertise in engineering, technology, and design. Their technical proficiency ensures precision, reliability, and excellence in every project we undertake.",
+      "id": "673ebdfb199194fb080501f4",
+      "title": "Trained and Skilled Resources",
+      "_id": "673ebdfb199194fb080501f4"
+    },
+    {
+      "description": "Recognized as leaders in developing cutting-edge solutions such as Special Purpose Machines (SPMs), test rigs, and Industry 4.0 technologies, we set benchmarks for innovation in the industry.",
+      "id": "673ebdff199194fb080501f5",
+      "title": "Pioneers in Innovative Solutions",
+      "_id": "673ebdff199194fb080501f5"
+    },
+    {
+      "description": "With over 200 completed projects across various industries, we have earned a reputation for delivering top-notch, customized solutions that drive results and create value for our clients.",
+      "id": "673ebe68199194fb080501f6",
+      "title": "Proven Track Record of Excellence",
+      "_id": "673ebe68199194fb080501f6"
+    }
+  ],
+  "images": [
+    "assets/PartnerPage/partner1.webp",
+    "assets/PartnerPage/partner2.webp",
+    "assets/PartnerPage/partner1.webp",
+    "assets/PartnerPage/partner1.webp"
+  ],
+  "partners": [
+    {
+      "title": "Partner 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": {
+        "imageUrl": "assets/PartnerPage/partner1.webp"
+      }
+    },
+    {
+      "title": "Partner 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": {
+        "imageUrl": "assets/PartnerPage/partner2.webp"
+      }
+    },
+    {
+      "title": "Partner 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": {
+        "imageUrl": "assets/PartnerPage/partner1.webp"
+      }
+    }
+  ],
+  "leaders": [
+    {
+      "description": "Passionate innovator and entrepreneur, I strive to make India a global leader in innovation. As the founder of Stacia Corp, I focus on groundbreaking technologies and patents that bring practical advancements to society, making innovation accessible to everyone.",
+      "des": "From a young age, I was passionate about physics and innovation, which led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE). During my studies, I published research papers on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Eager to contribute to society through innovation, I pursued a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After working with a renewable energy startup, I founded Stacia Corp, a research and development company focused on cutting-edge technologies.My key innovations include a smart water bottle with self-heating and cooling technology, a hydration tracking system with 10mL accuracy, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program.For my contributions, I was honored with the Best Entrepreneur Award by Nitin Gadkari, and I continue striving to develop impactful solutions for the world.From an early age, I have been passionate about science, innovation, and technological advancement. This drive led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE), where I conducted research on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Believing that innovation should be accessible to all, I further expanded my knowledge by completing a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After gaining experience at a renewable energy startup, I founded Stacia Corp, a research and development company focused on creating groundbreaking innovations and patents that contribute to India’s growth.My key innovations include a self-heating and cooling smart water bottle, a high-accuracy hydration tracking system, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program. My vision is to make India a global hub for innovation, ensuring that advanced technology reaches everyone’s hands. Recently, I was honored with the Best Entrepreneur Award by Nitin Gadkari for my contributions.",
+      "quote": "“It always seems impossible until it’s done.”  – Nelson Mandela",
+      "designation": "Chief Operational Officer",
+      "imageUrl": "/assets/LeaderPage/lakshman.png",
+      "name": "Mr Lakshman",
+      "position": 1,
+      "_id": "67359d632e218c7501f9c3c0",
+      "email": "lakshman@staciacorp.com",
+      "linkedin": "https://www.linkedin.com/in/lakshman-p-v-50522a168/",
+      "expertise": [
+        {
+          "title": "Best Entrepreneur Award",
+          "desc": "Honored by Nitin Gadkari for outstanding contributions to innovation and entrepreneurship, particularly in the fields of thermal technology, hydration tracking, and automation.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Top 30 Innovation – RKVY-RAFTAAR Program",
+          "desc": "Recognized for developing a Micro Seed Sowing Machine based on line sowing principles, enhancing agricultural efficiency and precision.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Published Research Paper – IJSIET",
+          "desc": "Published “Optimization of Fuel in Diesel Engines” in the International Journal of Science and Innovative Engineering & Technology (IJSIET), May 2018 (ISBN No. 978-81-923607-3-7).",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Published Research Paper – FSW in Al 6061",
+          "desc": "Conducted research on Friction Stir Welding in Aluminum 6061, contributing to advancements in welding technology.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "2nd Place – FMEA Competition",
+          "desc": "Secured 2nd place in Failure Modes and Effects Analysis (FMEA) for identifying and analyzing potential failures in engine inspection systems.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+}
+      ]
+    },
+    {
+      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
+      "quote": "Lorem ipsum dolor sit amet",
+      "designation": "Chief Executive Officer",
+      "imageUrl": "/assets/LeaderPage/sarabesh.png",
+      "name": "Mr Sarabesh",
+      "position": 2,
+      "_id": "67359d7b847c386125859a59",
+      "email": "sarabeshsriram@staciacorp.com",
+      "linkedin": "https://www.linkedin.com/in/sarabeshsriram/",
+      "expertise": [
+        {
+          "title": "Business Strategy",
+          "desc": "Expert in strategic planning and business growth.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Leadership Development",
+          "desc": "Focuses on mentoring and coaching future leaders.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Corporate Governance",
+          "desc": "Ensures ethical and responsible decision-making.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        }
+      ]
+    },
+    {
+      "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",
+      "des": "I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
+      "quote": "“The people who are crazy enough to think they can change the world are the ones who do.” — Steve Jobs",
+      "designation": "Chief Technical Officer",
+      "imageUrl": "/assets/LeaderPage/revanth.png",
+      "name": "Mr Revanth",
+      "position": 3,
+      "_id": "67359db6847c386125859a5a",
+      "email": "revanth@staciacorp.com",
+      "linkedin": "https://www.linkedin.com/in/revanth-s-36b2bb18a/"
+     
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+.articles-title {
+  /* color: #e0e0e0; */
+  color: #6b6084;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 90%;
+  margin: 0rem auto;
+  margin-top: 1rem;
+}
+
+.article-outline-holder {
+  max-height: 40vh;
+  align-items: flex-end;
+  display: flex;
+  padding: 2rem;
+  padding-left: 3rem;
+}
+
+.single-article-card-image {
+  background-image: linear-gradient(to bottom, #0d022500, #0d0225cc),
+    url("../../assets/artHomeImg.png");
+  height: 60vh;
+  width: 547px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  font-family: "Euclid";
+  filter: grayscale(0);
+  margin-left: 3rem;
+  margin-right: 1rem;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.article-text-container {
+  display: none;
+  /* Hide the text container by default */
+}
+
+.article-text-container {
+  display: block;
+  /* Show the text container when hovering over the image */
+}
+
+.article-slider {
+  display: flex;
+  align-items: flex-end;
+  /* height: 579px; */
+  height: 70vh;
+  /* background-color: pink; */
+  width: 100%;
+}
+
+/* .single-article-card-image:hover {
+  filter: grayscale(0);
+  height: 60vh;
+} */
+
+.article-text-container {
+  padding: 0 3rem 2rem 2rem;
+}
+
+.article-author-name {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.card-article-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.card-article-body {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  line-height: 2.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article-learn-more-link {
+  color: #0047ff;
+  user-select: none;
+}
+
+/* Mobile Article styles*/
+.mobile-article {
+  padding: 1.5rem;
+}
+
+.mobile-article-title {
+  /* color: #e0e0e0; */
+  color: #6b6084;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 2rem auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-article-des {
+  font-size: 0.5srem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+  line-height: 2.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-article-card-container {
+  display: flex;
+  overflow-x: auto;
+  column-gap: 1.5rem;
+}
+
+.mobile-article-card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-article-card {
+  min-width: 100%;
+  background-image: linear-gradient(to bottom, #0d022500, #0d0225cc),
+    url("../../assets/artHomeImg.png");
+  border-radius: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 1.5rem;
+}
+
+.mobile-article-card-content {
+  margin-top: 30%;
+  color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .article-outline-holder,
+  .article-slider,
+  .articles-title {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-article {
+    display: none;
+  }
+}

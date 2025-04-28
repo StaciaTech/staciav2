@@ -1,0 +1,761 @@
+[
+    {
+      "name": "Electronics",
+      "des": "Department focusing on electronic systems, circuits, and hardware design.",
+      "position": 1,
+      "categories": [
+        {
+          "description": "Embedded Systems Development involves creating sophisticated solutions that seamlessly integrate hardware and software for a wide range of applications. From designing reliable hardware components to developing optimized firmware, this service ensures the highest performance and efficiency of embedded devices. It includes IoT-specific hardware, system-level integration, and custom solutions tailored to your needs. Whether it’s for industrial automation, consumer electronics, or smart devices, Embedded Systems Development ensures functionality, scalability, and reliability. Our comprehensive approach focuses on robust design principles, cutting-edge technologies, and tailored solutions to meet your unique challenges in the rapidly evolving electronics landscape.",
+          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpF9ut07hutVP_U33AtWNqVB0NvKwqe3Irja8kQrZl0PkIoNpgzG1wva7Od3e8KB79x3U&usqp=CAU",
+          "departmentId": "672eefbf81be8191d93ce4bd",
+          "id": "67528ab3d6387bac980467a9",
+          "name": "Embedded Systems Development",
+          "position": 1,
+          "services": [
+            {
+              "description": "Embedded Hardware Design focuses on crafting robust, efficient, and tailored hardware solutions for embedded systems. This includes designing microcontrollers, processors, memory modules, and interfaces to create a functional foundation for any embedded application. Our process involves requirements analysis, schematic creation, component selection, and PCB layout to ensure seamless integration and performance. We cater to diverse industries such as IoT, automotive, medical devices, and consumer electronics. By prioritizing reliability, power efficiency, and manufacturability, our designs are optimized for both prototyping and large-scale production, ensuring your product meets all functional and industrial standards with excellence.",
+              "imageUrl": null,
+              "id": "67528b84d6387bac980467aa",
+              "categoryId": "67528ab3d6387bac980467a9",
+              "title": "Embedded Hardware Design",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "Analyze functional, environmental, and power requirements for robust hardware tailored to client needs and operational constraints.",
+                  "id": "67529b81d6387bac980467c1",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "Requirement Analysis",
+                  "position": 1
+                },
+                {
+                  "des": "Create detailed schematics defining hardware connectivity and functional flow for seamless integration.",
+                  "id": "67529bb9d6387bac980467c2",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "Schematic Design",
+                  "position": 2
+                },
+                {
+                  "des": "Choose suitable microcontrollers, sensors, and interfaces, balancing performance, cost, and reliability.",
+                  "id": "67529bcdd6387bac980467c3",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "Component Selection",
+                  "position": 3
+                },
+                {
+                  "des": "Develop an optimized PCB layout for efficient power distribution and minimal signal interference",
+                  "id": "67529beed6387bac980467c4",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "PCB Layout Design",
+                  "position": 4
+                },
+                {
+                  "des": "Conduct thorough tests to ensure hardware reliability under various operational scenarios.",
+                  "id": "67529c0ad6387bac980467c5",
+                  "serviceId": "67528b84d6387bac980467aa",
+                  "title": "Validation and Testing",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "Firmware Development Services specialize in creating optimized software that runs directly on embedded hardware. This includes low-level programming of microcontrollers and processors to ensure smooth communication between hardware components and higher-level systems. Our team develops custom firmware tailored to your product’s requirements, ensuring performance, energy efficiency, and reliability. We cover tasks like real-time operating system (RTOS) integration, communication protocol implementation (e.g., UART, I2C, SPI), and feature enhancement through software updates. Ideal for IoT devices, industrial automation, and consumer electronics, our services guarantee that your embedded system achieves the desired functionality and operates seamlessly under varying conditions.",
+              "imageUrl": null,
+              "id": "67528bb2d6387bac980467ab",
+              "categoryId": "67528ab3d6387bac980467a9",
+              "title": "Firmware Development Services",
+              "position": 2,
+              "whatWeDo": [
+                {
+                  "des": "Collaborate with clients to identify functional and performance needs for firmware development.",
+                  "id": "67529c56d6387bac980467c6",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Requirement Gathering",
+                  "position": 1
+                },
+                {
+                  "des": "Design a scalable and efficient firmware architecture, including task scheduling and resource allocation.",
+                  "id": "67529c88d6387bac980467c7",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Architecture Design",
+                  "position": 2
+                },
+                {
+                  "des": "Develop and integrate firmware with embedded hardware for seamless device operation.",
+                  "id": "67529c9bd6387bac980467c8",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Firmware Implementation",
+                  "position": 3
+                },
+                {
+                  "des": "Optimize code for speed, memory, and compatibility using advanced debugging tools.",
+                  "id": "67529cbad6387bac980467c9",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Debugging and Optimization",
+                  "position": 4
+                },
+                {
+                  "des": "Perform end-to-end testing to validate firmware performance in real-world conditions.",
+                  "id": "67529cdbd6387bac980467ca",
+                  "serviceId": "67528bb2d6387bac980467ab",
+                  "title": "Integration Testing",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "Embedded System Design provides end-to-end development of embedded solutions, integrating both hardware and software seamlessly. We handle the entire process, from concept design and component selection to firmware development and system testing. Our focus is on creating systems that are efficient, scalable, and tailored to your application, whether it's industrial automation, medical devices, or consumer electronics. Our expertise ensures seamless communication between components, robust system architecture, and compliance with industry standards. By unifying hardware and software design, we deliver solutions that maximize functionality, reliability, and cost-efficiency for complex embedded systems.",
+              "imageUrl": null,
+              "id": "67528bcfd6387bac980467ac",
+              "categoryId": "67528ab3d6387bac980467a9",
+              "title": "Embedded System Design",
+              "position": 3,
+              "whatWeDo": [
+                {
+                  "des": "Define the embedded system's purpose, features, and user requirements.",
+                  "id": "67529d1ad6387bac980467cb",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Concept Development",
+                  "position": 1
+                },
+                {
+                  "des": "Simultaneously develop hardware and software for seamless integration and compatibility.",
+                  "id": "67529d35d6387bac980467cc",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Hardware-Software Co-Design",
+                  "position": 2
+                },
+                {
+                  "des": "Create working prototypes to validate design concepts and address issues early.",
+                  "id": "67529d4ed6387bac980467cd",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Prototyping",
+                  "position": 3
+                },
+                {
+                  "des": "Enhance system efficiency, reliability, and speed for optimal functionality.",
+                  "id": "67529d68d6387bac980467ce",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Performance Optimization",
+                  "position": 4
+                },
+                {
+                  "des": "Finalize the design for production and provide post-deployment support.",
+                  "id": "67529d7ed6387bac980467cf",
+                  "serviceId": "67528bcfd6387bac980467ac",
+                  "title": "Deployment and Support",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "IoT Hardware Development focuses on creating specialized hardware for smart, connected devices. This includes designing and integrating sensors, microcontrollers, communication modules (WiFi, Bluetooth, LoRa), and power management systems. Our team ensures that your hardware is optimized for IoT-specific requirements like low power consumption, miniaturization, and seamless connectivity. Ideal for applications in smart homes, industrial IoT, and healthcare, our designs meet global standards for reliability and interoperability. From prototyping to scalable production, we ensure that your IoT hardware is robust, efficient, and ready to handle the demands of modern IoT ecosystems.",
+              "imageUrl": null,
+              "id": "67528bf7d6387bac980467ad",
+              "categoryId": "67528ab3d6387bac980467a9",
+              "title": "IoT Hardware Development",
+              "position": 4,
+              "whatWeDo": [
+                {
+                  "des": "Understand IoT-specific needs like connectivity, scalability, and power efficiency.",
+                  "id": "67529df0d6387bac980467d0",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Requirement Analysis",
+                  "position": 1
+                },
+                {
+                  "des": "Select suitable sensors, modules, and processors for IoT applications.",
+                  "id": "67529e23d6387bac980467d1",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Component Selection",
+                  "position": 2
+                },
+                {
+                  "des": "Build prototypes to test connectivity, performance, and scalability.",
+                  "id": "67529e31d6387bac980467d2",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Hardware Prototyping",
+                  "position": 3
+                },
+                {
+                  "des": "Implement Bluetooth, Wi-Fi, or cellular modules for smart device functionality.",
+                  "id": "67529e48d6387bac980467d3",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Connectivity Integration",
+                  "position": 4
+                },
+                {
+                  "des": "Conduct tests for compliance, durability, and performance under real-world conditions.",
+                  "id": "67529e5ed6387bac980467d4",
+                  "serviceId": "67528bf7d6387bac980467ad",
+                  "title": "Validation Testing",
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mechanical",
+      "des": "Department specializing in mechanical design and enclosure solutions.",
+      "position": 2,
+      "categories": [
+        {
+          "description": "",
+          "imageUrl": "https://www.takachi-enclosure.com/assets/attachments/images/cat_skl.jpg",
+          "departmentId": "672eefbf81be8191d93ce4bd",
+          "id": "675297bcd6387bac980467bb",
+          "name": "Enclosure and Industrial Design",
+          "position": 1,
+          "services": [
+            {
+              "description": "Enclosure Design Services create protective casings for electronic products, ensuring durability, thermal management, and aesthetic appeal. We design custom enclosures tailored to your product’s requirements, considering factors like material selection, mechanical strength, and manufacturing methods. Our expertise spans industries, including IoT, automotive, and consumer electronics. Prototyping and testing are integral to our process, ensuring the enclosure provides optimal protection and meets industrial standards. From waterproof housings to lightweight designs, we deliver solutions that enhance product performance and user satisfaction.",
+              "imageUrl": null,
+              "id": "6752982ed6387bac980467bc",
+              "categoryId": "675297bcd6387bac980467bb",
+              "title": "Enclosure Design Services",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "Identify product-specific enclosure needs, such as size, thermal management, and durability.",
+                  "id": "6752a802d6387bac98046807",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Requirement Analysis",
+                  "position": 1
+                },
+                {
+                  "des": "Choose appropriate materials for the enclosure, balancing protection, cost, and aesthetics.",
+                  "id": "6752a819d6387bac98046808",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Material Selection",
+                  "position": 2
+                },
+                {
+                  "des": "Develop detailed 3D CAD models to visualize the enclosure's structure and fit.",
+                  "id": "6752a82cd6387bac98046809",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "3D Modeling",
+                  "position": 3
+                },
+                {
+                  "des": "Create a physical prototype to validate the design and assess functionality.",
+                  "id": "6752a83cd6387bac9804680a",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Prototyping",
+                  "position": 4
+                },
+                {
+                  "des": "Refine the design for manufacturability and compliance with industry standards.",
+                  "id": "6752a850d6387bac9804680b",
+                  "serviceId": "6752982ed6387bac980467bc",
+                  "title": "Final Optimization",
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tech",
+      "des": "Department focused on software, IoT, and IT consulting solutions.",
+      "position": 3,
+      "categories": [
+        {
+          "description": "Our IoT Solutions provide end-to-end development for connected devices, enabling seamless integration of sensors, connectivity modules, and software. We specialize in creating innovative IoT products that enhance automation, data collection, and real-time monitoring for diverse industries. Whether it's designing IoT-specific hardware or developing custom firmware, our team delivers scalable and secure solutions that improve operational efficiency. From concept development to deployment, we ensure that every IoT device meets the highest standards of functionality and performance. Trust us to bring your IoT ideas to life with smart, connected, and reliable solutions tailored to your business needs.",
+          "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/iot_devices.jpg",
+          "departmentId": "672eefbf81be8191d93ce4bd",
+          "id": "67529615d6387bac980467b3",
+          "name": "IoT Solutions",
+          "position": 1,
+          "services": [
+            {
+              "description": "IoT Product Development delivers end-to-end solutions for creating smart, connected devices. This includes designing hardware, integrating sensors and communication modules, and developing software for data management and analytics. Our process involves concept design, prototyping, testing, and scaling for production. We ensure IoT systems are optimized for low power consumption, secure connectivity, and real-time performance. Applications range from smart homes and healthcare to industrial automation and agriculture. By leveraging our expertise, we help businesses launch innovative IoT products that enhance efficiency, improve decision-making, and provide seamless user experiences.",
+              "imageUrl": null,
+              "id": "6752966fd6387bac980467b4",
+              "categoryId": "67529615d6387bac980467b3",
+              "title": "IoT Product Development",
+              "position": 1,
+              "whatWeDo": [
+                {
+                  "des": "Identify IoT product goals, target users, and core functionality.",
+                  "id": "6752a160d6387bac980467e9",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "Needs Assessment",
+                  "position": 1
+                },
+                {
+                  "des": "Create designs for hardware, firmware, and software integration.",
+                  "id": "6752a17dd6387bac980467ea",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "System Design",
+                  "position": 2
+                },
+                {
+                  "des": "Develop prototypes for functionality and connectivity testing.",
+                  "id": "6752a190d6387bac980467eb",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "Prototyping",
+                  "position": 3
+                },
+                {
+                  "des": "Implement cloud-based data management and analytics systems.",
+                  "id": "6752a1a6d6387bac980467ec",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "Cloud Integration",
+                  "position": 4
+                },
+                {
+                  "des": "Conduct performance and usability tests before deployment.",
+                  "id": "6752a1b9d6387bac980467ed",
+                  "serviceId": "6752966fd6387bac980467b4",
+                  "title": "Final Validation",
+                  "position": 5
+                }
+              ]
+            },
+            {
+              "description": "IoT Sensor Integration focuses on selecting, configuring, and implementing sensors to capture real-time data for various applications. Our services include analyzing requirements, sourcing sensors, and integrating them with hardware and software systems. We ensure compatibility with IoT platforms, optimizing sensor placement for accuracy and reliability. Whether it’s temperature, pressure, motion, or environmental monitoring, our expertise ensures efficient data acquisition and processing. Applications include smart cities, industrial IoT, and healthcare systems. By seamlessly integrating sensors, we enable robust IoT solutions that deliver actionable insights and drive smarter decision-making.",
+              "imageUrl": null,
+              "id": "67529694d6387bac980467b5",
+              "categoryId": "67529615d6387bac980467b3",
+              "title": "IoT Sensor Integration",
+              "position": 2,
+              "whatWeDo": [
+                {
+                  "des": "Choose sensors suited for the intended application and environment.",
+                  "id": "6752a225d6387bac980467ee",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "Sensor Selection",
+                  "position": 1
+                },
+                {
+                  "des": "Plan sensor placement and connectivity within the device architecture.",
+                  "id": "6752a278d6387bac980467ef",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "Integration Design",
+                  "position": 2
+                },
+                {
+                  "des": "Embed sensors into devices, ensuring proper signal transmission.",
+                  "id": "6752a29ad6387bac980467f0",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "Hardware Integration",
+                  "position": 3
+                },
+                {
+                  "des": "Develop firmware for seamless sensor communication with other components.",
+                  "id": "6752a315d6387bac980467f1",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "Firmware Development",
+                  "position": 4
+                },
+                {
+                  "des": "Validate sensor performance and data accuracy under real-world conditions.",
+                  "id": "6752a32fd6387bac980467f2",
+                  "serviceId": "67529694d6387bac980467b5",
+                  "title": "System Testing",
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
+    ,
+      {
+        "title": "Hack Masters",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "13/02/2025",
+        "eventTags": "Tech",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67bdad6812ee643727ad0d13"
+      },
+      {
+        "title": "Mech Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "08/03/2025",
+        "eventTags": "Mechanical",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67bdafcca5dc987655ad39ad"
+      },
+      {
+        "title": "Mech blasters",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "02/02/2025",
+        "eventTags": "Mechanical",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67bdaffca5dc987655ad39b1"
+      },
+      {
+        "title": "Electron Monsters",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "05/06/2025",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67bdb3386eafaaf2df06a625"
+      },
+      {
+        "title": "Electron Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "02/04/2025",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67be933f2e6a922ef3b2e3e8"
+      },
+      {
+        "title": "Electron Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "24/06/2024",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c14aa6ff5b210caaff2a59"
+      },
+      {
+        "title": "Electron Monsters",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "02/01/2025",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c1970c0e4835950d97804e"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "02/01/2020",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c1a4af1c88ddd7855c5adb"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "28/02/2025",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c1ac7dcdcdf9da2e673236"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "03/03/2025",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c52c9524f7fbfe11f81607"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "22/12/2021",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c550ae4dba8f663f99467f"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "22/12/2022",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c550b44dba8f663f994681"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "22/11/2022",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c550b94dba8f663f994683"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "22/10/2022",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c550bf4dba8f663f994685"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "22/09/2022",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet. Nunc commodo velit quis nunc volutpat, at suscipit quam finibus. Sed interdum euismod nisl, nec finibus orci finibus vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo id mauris ultrices, vel placerat libero tincidunt. Phasellus pretium velit ac odio pulvinar, ac mollis tortor laoreet. Duis vel mauris nec libero molestie laoreet. Nunc commodo velit quis nunc volutpat, at suscipit quam finibus. Sed interdum euismod nisl, nec finibus orci finibus vel.",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://images.pexels.com/photos/3793238/pexels-photo-3793238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c550c64dba8f663f994687"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "22/08/2022",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c5512d4dba8f663f994694"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "25-08-2025",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c6776f7fc833f57b1ff1de"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "04-03-2025",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c67fd37fc833f57b1ff218"
+      },
+      {
+        "title": "Tech Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "04-03-2025",
+        "eventTags": "Tech",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c6f22c17a56ac61a613b0a"
+      },
+      {
+        "title": "Tech Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "05-03-2025",
+        "eventTags": "Tech",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c7dd4d3cda7581f7fc3da4"
+      },
+      {
+        "title": "Tech Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "10-03-2025",
+        "eventTags": "Tech",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c7dd573cda7581f7fc3da6"
+      },
+      {
+        "title": "Electron Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "10-03-2025",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c7dd703cda7581f7fc3da8"
+      },
+      {
+        "title": "Electron Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "05-03-2025",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c7dd773cda7581f7fc3daa"
+      },
+      {
+        "title": "Mech Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "05-03-2025",
+        "eventTags": "Mechanical",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c7dd893cda7581f7fc3dac"
+      },
+      {
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "22/08/2022",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c5512d4dba8f663f994694"
+      },{
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "22/08/2022",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c5512d4dba8f663f994694"
+      },{
+        "title": "Electron Dragons",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "22/08/2022",
+        "eventTags": "Electronics",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c5512d4dba8f663f994694"
+      },
+      {
+        "title": "Mech Rockers",
+        "description": "New hackathon by stacia corp to encourage students",
+        "date": "10-03-2025",
+        "eventTags": "Mechanical",
+        "location": "Guindy-Chennai",
+        "detail": "We empower businesses to reach new heights and achieve sustainable growth through tailored technology and strategic insights",
+        "endTime": "06:00 PM",
+        "startTime": "10:00 AM",
+        "imageUrl": "https://img77.uenicdn.com/image/upload/v1595341517/business/adfc1894-1603-4794-8e0f-6da0701f5a5f.png",
+        "bannerUrl": "https://c7.alamy.com/comp/2K6CG5F/angle-degree-measurement-trigonometry-stationery-measuring-and-sizing-horizontal-isolated-poster-of-school-girl-student-banner-header-portrait-of-2K6CG5F.jpg",
+        "bannerTitle": "A event to enrich the futures of India",
+        "id": "67c7dd8f3cda7581f7fc3dae"
+      }
+    
+  ]

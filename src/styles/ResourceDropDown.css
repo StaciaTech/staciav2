@@ -1,0 +1,109 @@
+.nav-resource-dd {
+  position: absolute;
+  top: 100%;
+  z-index: 999;
+  background-color: #fff;
+  width: 100%;
+  padding: 0rem 2rem;
+  box-sizing: border-box;
+  max-height: 460px;
+  /* min-height: 400px; */
+  height: 500px;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.res-main-container,
+.res-dept-container,
+.res-title-container,
+.res-item-contaienr {
+  width: 25%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+.res-main-container,
+.res-dept-container {
+  border-right: 1px solid #e5e5e5;
+}
+.res-top-tilte {
+  color: #d9d9d9;
+  padding: 1rem 1rem;
+  font-family: EuclidMedium;
+  font-size: 18px;
+}
+.res-main-item {
+  color: #151f43;
+  font-size: 1.25rem;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: EuclidMedium;
+}
+.res-main-item.res-main-item-active {
+  color: #0047ff;
+}
+.res-title-container {
+  display: flex;
+}
+.res-item-contaienr {
+}
+.res-item-card-title {
+  color: #0d0225;
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  font-family: EuclidSemibold;
+}
+.res-item-card-des {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #6b6084;
+}
+.res-item-card-image {
+  width: 100%;
+}
+.res-item-card-image > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/10;
+}
+.res-title-dot-container {
+  display: none;
+  width: 3rem;
+  height: 100%;
+  position: relative;
+}
+.res-title-holder {
+  overflow-y: auto;
+}
+.res-title-holder::-webkit-scrollbar {
+  display: none;
+}
+.res-title-container:hover .res-title-dot-container {
+  display: block;
+}
+.res-title-dot-container > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.res-title-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #d9d9d9;
+}
+.res-title-dot.res-title-dot-active {
+  background: #0047ff;
+}
+
+body.no-scroll{
+  overflow: hidden !important;
+  height: 100vh;
+  position: relative;
+}

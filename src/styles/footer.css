@@ -1,0 +1,247 @@
+.footer-contaier {
+  margin: 0rem 5rem;
+  margin-bottom: 40px;
+}
+.footer-tabs {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 100px;
+  width: 100%;
+}
+.footer-nav-tabs {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-grey-tabs {
+  color: #6B6084;
+  margin-top: 30px;
+  font-weight: 400;
+  cursor: pointer;
+   transition: color 0.3s ease;
+}
+.footer-grey-tabs:hover{
+  color: #0047FF;
+}
+.footer-grey-tabs-child {
+  color: #6B6084;
+  font-weight: 400;
+  cursor: pointer;
+
+}
+.footer-grey-tabs-child:hover{
+  color: #0047FF;
+  
+}
+.footer-gradient-text {
+  background: linear-gradient(
+    to right,
+    #C4D7E6 0,
+    #8501FF 0%,
+    #FF6D03,
+    49%,
+    #DA06FF 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 1.25rem;
+}
+.footer-others {
+  /* margin: 0px 32px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 120px;
+  color: #6B6084;
+  font-size: 18px;
+  font-weight: 500;
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+}
+.footer-icon-container {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #6B6084;
+  padding: 0px;
+  overflow: hidden;
+}
+.footer-insta-icon {
+  color: #6B6084;
+  font-size: 22px;
+  transition: all 0.3s;
+}
+.footer-twitter-icon,
+.footer-linkedin-icon,
+.footer-facebook-icon {
+  color: #6B6084;
+  font-size: 18px;
+  transition: all 0.3s;
+  
+}
+.footer-insta-icon:hover {
+  color: #fff;
+  background: #833AB4;
+  background: linear-gradient(to right, #833AB4, #FD1D1D, #FCB045);
+  border-radius: 3px;
+  height: 2rem;
+  width: 2rem;
+  padding: 5px;
+   border-radius: 0.3rem;
+  /* color: transparent;
+  background-clip: text; */
+}
+.footer-twitter-icon:hover {
+  color: #FFFFFF;
+  background-color:black;
+  color: white;
+  padding: 5px;
+height: 2rem;
+  width: 2rem;
+   border-radius: 0.3rem;
+}
+.footer-facebook-icon:hover {
+  background-color: #316FF6;
+  padding: 5px;
+  color: white;
+  height: 2rem;
+  width: 2rem;
+   border-radius: 0.3rem;
+}
+.footer-linkedin-icon:hover {
+  background-color: #316FF6;
+  padding: 5px;
+  color: white;
+  height: 1.9rem;
+  overflow: hidden;
+  width: 2rem;
+   border-radius: 0.3rem;
+}
+/* mobile footer styles */
+.mobile-footer {
+  display: none;
+  row-gap: 30px;
+  margin-bottom: 5%;
+  margin-top: 40px;
+}
+.keep-text {
+  color: #0D0225;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.contact-us-btn {
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  background: #0047FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+}
+.start-conversation {
+  /* background: linear-gradient(to right, #833AB4, #FD1D1D, #FCB045); */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.contact-mails {
+  background: linear-gradient(
+    to bottom,
+    #C4D7E6 0,
+    #8501FF 0%,
+    #FF6D03,
+    49%,
+    #DA06FF 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 16px;
+  font-weight: 600;
+}
+.footer-accordion {
+  padding: 10px;
+}
+.foo-line {
+  width: 100%;
+  height: 1px;
+  background-color: #E0E0E0;
+}
+.footer-accordion-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-accordion-top > p {
+  color: #0D0225;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.socialLinks {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.terms {
+  color: #6B6084;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+}
+.copy-rights {
+  color: #6B6084;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 20px;
+}
+.mbfooter-links {
+  color: #6B6084;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1024px) {
+  .footer-contaier {
+    display: none;
+  }
+  .mobile-footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+

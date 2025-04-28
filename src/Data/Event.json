@@ -1,0 +1,37 @@
+{
+    "events": [
+      {
+        "description": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.",
+        "title": "Hackathon 1",
+        "imageUrl": "/assets/alphagamma.webp",
+        "eventDate": "26-12-2024",
+        "displayTime": "10:00 AM - 6:00 PM",
+        "location": "Guindy"
+      },
+      {
+        "description": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.",
+        "title": "Hackathon 2",
+        "imageUrl": "/assets/Best-Tech-Conferences.webp",
+        "eventDate": "06-12-2024",
+        "displayTime": "10:00 AM - 2:00 PM",
+        "location": "Guindy"
+      },
+      {
+        "description": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.",
+        "title": "Hackathon 3",
+        "imageUrl": "/assets/tech-events-london-1.webp",
+        "eventDate": "28-11-2024",
+        "displayTime": "1:00 PM - 6:00 PM",
+        "location": "Guindy"
+      },
+      {
+        "description": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.",
+        "title": "Hackathon 4",
+        "imageUrl": "/assets/Screenshot.webp",
+        "eventDate": "28-11-2024",
+        "displayTime": "10:00 AM - 1:00 PM",
+        "location": "Guindy"
+      }
+    ]
+  }
+  

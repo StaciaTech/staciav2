@@ -1,0 +1,78 @@
+{
+  "news": [
+    {
+      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2025-01-02",
+      "category": "articles",
+      "image": {
+        "imageUrl": "/assets/article.webp"
+      }
+    },
+    {
+      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2025-01-05",
+      "category": "articles",
+      "image": {
+        "imageUrl": "/assets/article.webp"
+      }
+    },
+    {
+      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2025-01-10",
+      "category": "news",
+      "image": {
+        "imageUrl": "/assets/breakingnews.webp"
+      }
+    },
+    {
+      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2025-01-12",
+      "category": "news",
+      "image": {
+        "imageUrl": "/assets/breakingnews.webp"
+      }
+    },
+    {
+      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2025-01-15",
+      "category": "awards",
+      "image": {
+        "imageUrl": "/assets/award.webp"
+      }
+    },
+    {
+      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2025-01-15",
+      "category": "achievements",
+      "image": {
+        "imageUrl": "/assets/award.webp"
+      }
+    },
+    {
+      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2025-01-15",
+      "category": "featuring",
+      "detail" :"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "video": "/assets/award.webp",
+      "image": {
+        "imageUrl": "/assets/award.webp"
+      }
+    },
+    {
+      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2025-01-20",
+      "category": "awards",
+      "image": {
+        "imageUrl": "/assets/award.webp"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "images": [
+    "assets/image1.png",
+    "assets/image1.png",
+    "assets/image1.png"
+  ],
+  "data": [
+    {
+      "title": "Partner 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": {
+        "imageUrl": "assets/image1.png"
+      }
+    },
+    {
+      "title": "Partner 2",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": {
+        "imageUrl": "assets/image1.png"
+      }
+    },
+    {
+      "title": "Partner 3",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": {
+        "imageUrl": "assets/image1.png"
+      }
+    }
+  ]
+}

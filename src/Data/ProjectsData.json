@@ -1,0 +1,91 @@
+{
+  "Departments": [
+    {
+      "name": "Mechanical",
+      "categories": [
+        {
+          "name": "Mechanical-Industry",
+          "projects": [
+            {
+              "title": "One Drill",
+              "mainDesc": "A project focused on modern bridge infrastructure.",
+              "mainImageUrl": "/assets/colorful-nature.webp"
+            },
+            {
+              "title": "ismart",
+              "mainDesc": "Expanding the national highway for better connectivity.",
+              "mainImageUrl": "/assets/colorful-nature.webp"
+            }
+          ]
+        },
+        {
+          "name": "Mechanical-blah-Industry",
+          "projects": [
+            {
+              "id": 3,
+              "title": "Chilli Solar House",
+              "mainDesc": "A project focused on modern bridge infrastructure.",
+              "mainImageUrl": "/assets/colorful-nature.webp"
+            },
+            {
+              "id": 4,
+              "title": "Hydrogen Bottle",
+              "mainDesc": "Expanding the national highway for better connectivity.",
+              "mainImageUrl": "/assets/colorful-nature.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Electronics",
+      "categories": [
+        {
+          "name": "Electronics-Industry",
+          "projects": [
+            {
+              "title": "Smart Implementation",
+              "mainDesc": "Developing a smarter electrical grid for efficiency.",
+              "mainImageUrl": "/assets/colorful-nature.webp"
+            }
+          ]
+        },
+        {
+          "name": "Electronics-Grid-Industry",
+          "projects": [
+            {
+              "title": "Reverse Kettle",
+              "mainDesc": "Developing a smarter electrical grid for efficiency.",
+              "mainImageUrl": "/assets/colorful-nature.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tech",
+      "categories": [
+        {
+          "name": "Tech-Industry",
+          "projects": [
+            {
+              "title": "AI Chatbot",
+              "mainDesc": "Creating an AI-powered customer support chatbot.",
+              "mainImageUrl": "/assets/colorful-nature.webp"
+            }
+          ]
+        },
+        {
+          "name": "Tech -AI- Industry",
+          "projects": [
+            {
+              "title": "AI Chatbot version",
+              "mainDesc": "Creating an AI-powered customer support chatbot.",
+              "mainImageUrl": "/assets/colorful-nature.webp"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

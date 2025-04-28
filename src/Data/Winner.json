@@ -1,0 +1,36 @@
+{
+  "docs": [
+    {
+      "description": "This individual participation hackathon is a platform for designers, engineers, students, and innovators to bring their creative 3D-printable product ideas to life. Participants will have the opportunity to design, develop, and showcase functional and industry-relevant 3D models while pushing the boundaries of innovation, usability, and design feasibility",
+      "event": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design",
+      "date": " 3rd March 2025",
+      "category": "Mechanical",
+      "data": [
+        {
+          "imageUrl": "/assets/winner1.webp",
+          "title": "Mr E.Elanchezhian",
+          "details": "I am Elanchezhian.E, a passionate mechanical engineering student studying at Loyola ICAM College of Engineering and Technology. I am very much interested in design and simulation field having designed for many competitions and products which includes Model rockets to Mobile phone screen projectors. I thank Stacia Corp for organizing this competition which enabled me to upgrade my Designing skills",
+          "certificateUrl": "/assets/Hackathon Certificate 1.png",
+          "dowloadCertificate": "/assets/Hackathon Certificate.pdf",
+          "id": "Mr-Elanchezhian-131857041282955840930-2025-03"
+        }
+      ]
+    },
+    {
+      "description": "This individual participation hackathon is a platform for designers, engineers, students, and innovators to bring their creative 3D-printable product ideas to life. Participants will have the opportunity to design, develop, and showcase functional and industry-relevant 3D models while pushing the boundaries of innovation, usability, and design feasibility",
+      "event": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design",
+      "date": " 3rd March 2026",
+      "category": "",
+      "data": [
+        {
+          "imageUrl": "/assets/winner1.webp",
+          "title": "Mr E.Elanchezhian",
+          "details": "I am Elanchezhian.E, a passionate mechanical engineering student studying at Loyola ICAM College of Engineering and Technology. I am very much interested in design and simulation field having designed for many competitions and products which includes Model rockets to Mobile phone screen projectors. I thank Stacia Corp for organizing this competition which enabled me to upgrade my Designing skills",
+          "certificateUrl": "/assets/Hackathon Certificate 1.png",
+          "dowloadCertificate": "/assets/Hackathon Certificate.png",
+          "id": "Mr-Elanchezhian-131857041282955840930-2025-03"
+        }
+      ]
+    }
+  ]
+}

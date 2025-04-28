@@ -1,0 +1,105 @@
+{
+  "logos": [
+    {
+      "name": "Stacia Corp",
+      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis",
+       
+      "svgFile": {
+        "imageUrl": "./assets/Stacia-corp.webp"
+      },
+       "pngFile": {
+        "imageUrl": "./assets/Stacia-corp-png.png"
+      }
+    
+    },
+
+      {
+      "name": "Stacia Tech",
+      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis",
+     
+      "svgFile": {
+        "imageUrl": "/assets/Stacia-tech.webp"
+      },
+        "pngFile": {
+        "imageUrl": "./assets/Stacia-Tech-png.png"
+      }
+    },
+
+     {
+      "name": "Stacia Global  ",
+      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis",
+      
+      "svgFile": {
+        "imageUrl": "/assets/Stacia-global.webp"
+      },
+        "pngFile": {
+        "imageUrl": "./assets/Stacia-Global-png.png"
+      }
+    }
+
+
+  ],
+  "founders": [
+    {
+      "imageUrl":"/assets/LeaderPage/lakshman.png",
+      "name": "Mr Lakshman",
+      "designation": "Chief Operational Officer",
+      "file": {
+         "fileUrl": ""
+      }
+     
+
+    },
+     {
+      "imageUrl":"/assets/LeaderPage/sarabesh.png",
+      "name": "Mr Sarabesh",
+      "designation": "Chief Executive Officer",
+      "file": {
+        "fileUrl": "/assets/Sarabesh Sriram.pdf"
+      }
+      
+    },
+     {
+      "imageUrl":"/assets/LeaderPage/revanth.png",
+      "name": "Mr Revanth",
+      "designation": "Chief Technical Officer",
+      "file": {
+        "fileUrl": ""
+      }
+      
+    }
+
+
+  ],
+  "brouchers": [
+    {
+      "display": {
+        "displayUrl": "./assets/One-Dril-Brochure.webp"
+      },
+      "name": "One Dril Brochure",
+      "file": {
+        "fileUrl": "/assets/One-Dril-Brochure.pdf"
+      }
+    },
+
+     {
+      "display": {
+        "displayUrl": "./assets/Stacia-Corp-Magazine.webp"
+      },
+      "name": "Stacia Corp Magazine",
+      "file": {
+        "fileUrl": "/assets/Stacia-Corp-Magazine.pdf"
+      }
+    },
+
+     {
+      "display": {
+        "displayUrl": "./assets/5th-year-celebration-Poster.webp"
+      },
+      "name": "5th year celebration Poster",
+      "file": {
+        "fileUrl": "/assets/5th-year-celebration-Poster.pdf"
+      }
+    }
+  ]
+}

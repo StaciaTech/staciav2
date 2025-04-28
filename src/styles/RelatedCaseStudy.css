@@ -1,0 +1,136 @@
+.related-case-study-container {
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding:10px 50px; 
+  border-radius: 12px; 
+  margin-right: 100px;
+  margin-left: -60px; 
+  margin-right: auto;
+   
+}
+
+.related-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  color: #b0aec4;
+  margin-bottom: 40px;
+  font-family: EuclidMedium;
+}
+
+.related-cases-grid {
+  display: flex; 
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.case-study-card {
+  width: 280px; 
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+}
+
+.case-study-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.case-study-image {
+  width: 100%;
+  height: 180px; 
+  object-fit: cover;
+}
+.case-study-content {
+  padding: 1px;
+  margin: 10px;  
+ 
+}
+
+.case-study-content h4 {
+  font-size: 16px; 
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #242424;
+  font-family: EuclidMedium;
+}
+
+.case-study-content p {
+  font-size: 13px; 
+  color: #666;
+  line-height: 1.4;
+  padding-bottom: 5px;
+  font-family: EuclidMedium;
+ 
+}
+
+@media (max-width: 600px) {
+  .related-case-study-container {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 20px;
+  }
+
+  .related-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .related-cases-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case-study-card {
+    width: 100%;
+  }
+}
+
+
+/* @media (min-width: 600px) and (max-width: 1024px) {
+  .related-case-study-container {
+    max-width: 80%;
+    padding: 15px 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .related-cases-grid {
+    gap: 15px;
+  }
+
+  .case-study-card {
+    width: 45%;
+  }
+} */
+
+/* 
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .related-case-study-container {
+    max-width: 70%;
+    padding: 20px 40px;
+  }
+
+  .case-study-card {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .related-case-study-container {
+    max-width: 60%;
+  
+  }
+
+  .case-study-card {
+    width: 280px;
+  }
+}
+ */

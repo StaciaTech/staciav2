@@ -1,0 +1,36 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: rotate(180deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: rotate(360deg);
+    animation-timing-function: ease-in;
+  }
+}
+
+.plus-icon.spin {
+  animation: spin 2s linear infinite;
+}
+.illustrate-style {
+  width: 48rem;
+  height: 23rem;
+}
+.illustrate-text {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+@media screen and (max-width: 1024px) {
+  .illustrate-style {
+    width: 100%;
+  }
+  .illustrate-text {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
