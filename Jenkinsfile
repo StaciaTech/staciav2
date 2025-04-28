@@ -38,7 +38,7 @@ pipeline {
                             flatten: false,
                             makeEmptyDirs: false,
                             noDefaultExcludes: false,
-                            remoteDirectory: '/public_html/test/',
+                            remoteDirectory: '/public_html/',
                             remoteDirectorySDF: false,
                             removePrefix: 'build/',
                             sourceFiles: 'build/**/*'
