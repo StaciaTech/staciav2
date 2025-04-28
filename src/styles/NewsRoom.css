@@ -78,7 +78,7 @@
   background-color: transparent;
   user-select: none;
   display: flex;
-  align-items: end;
+  align-items:flex-end;
 }
 
 .news-container-top3:hover {

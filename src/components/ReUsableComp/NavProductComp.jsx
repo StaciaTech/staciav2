@@ -198,7 +198,7 @@ function NavProductComp({ handleClose }) {
       navigate(
         `/products/${result.department.name
           .split(" ")
-          .join("-")}/${result.category.name.split(" ").join("-")}`
+          .join("-")}/${result.category?.name.split(" ").join("-")}`
       );
     } else {
       console.log("Product not found");
