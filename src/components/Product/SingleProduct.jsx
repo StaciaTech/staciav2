@@ -349,7 +349,7 @@ export default function SingleProduct() {
               <div className="single-other-service-title">Other Products</div>
               <div className="remaining-products-card-container">
                 {RemainingProducts?.map((eachPro, i) => {
-                  const ProductKey = eachPro?.title?.split(" ").join("-");
+                  const ProductKey =eachPro ? eachPro?.title?.split(" ").join("-") : "";
                   return (
                     <>
                       {i < 6 && (
