@@ -81,6 +81,6 @@ pipeline {
     }
     triggers {
         githubPush()
-        pullRequest()
+        githubPullRequests()
     }
 }

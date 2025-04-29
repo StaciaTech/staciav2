@@ -226,9 +226,10 @@ a {
 
 .whats-new-link {
   color: #000;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   /* font-weight: 600; */
+  font-family: EuclidMedium;
   line-height: normal;
   border-bottom: 1px solid #cadbea;
   padding: 25px 0px;

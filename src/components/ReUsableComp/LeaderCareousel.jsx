@@ -78,13 +78,13 @@ function LeaderCarousel({ data }) {
 
     return (
       <div>
-        <div className="about-section8-container-title">Our Expertise</div>
+        <div className="about-section8-container-title">Awards</div>
         <div className="about-section8-main-des-container">
           <p>
-            Our innovative solutions cater to a diverse range of industries,
+            {/* Our innovative solutions cater to a diverse range of industries,
             enabling businesses to enhance productivity, streamline operations,
             adopt sustainable practices, and embrace cutting-edge technological
-            advancements.
+            advancements. */}
           </p>
           <div className="about-section8-btn-container">
             <div>

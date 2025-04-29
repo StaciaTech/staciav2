@@ -123,11 +123,10 @@ function AboutDropDown({ handleClose }) {
                 setFoundLeader(null);
               }
             }}
-            className={`about-dd-main-title ${
-              eachTitle.section === activeTitle
-                ? "about-dd-main-title-active"
-                : ""
-            }`}
+            className={`about-dd-main-title ${eachTitle.section === activeTitle
+              ? "about-dd-main-title-active"
+              : ""
+              }`}
             onClick={() => {
               navigate(`/${eachTitle.path}`);
               handleClose();
@@ -152,47 +151,46 @@ function AboutDropDown({ handleClose }) {
             {subSectionTitles?.map((eachItem, i) => (
               <div
                 key={i}
-                className={`about-dd-sub-title-dot ${
-                  eachItem.name === activeSubTitle
-                    ? "about-dd-sub-title-dot-active"
-                    : ""
-                }`}
+                className={`about-dd-sub-title-dot ${eachItem.name === activeSubTitle
+                  ? "about-dd-sub-title-dot-active"
+                  : ""
+                  }`}
               ></div>
             ))}
           </div>
-           <div className="arrow-wrapper">
-                          {showUpArrow && (
-                            <span
-                              onClick={scrollUp}
-                              className="arrow-up"
-                              aria-label="Scroll up"
-                            >
-                              <IoIosArrowUp />
-                            </span>
-                          )}
-                          {showDownArrow && (
-                            <span
-                              onClick={scrollDown}
-                              className="arrow-down"
-                              aria-label="Scroll down"
-                            >
-                              <IoIosArrowDown />
-                            </span>
-                          )}
-                        </div>
+          <div className="arrow-wrapper">
+            {showUpArrow && (
+              <span
+                onClick={scrollUp}
+                className="arrow-up"
+                aria-label="Scroll up"
+              >
+                <IoIosArrowUp />
+              </span>
+            )}
+            {showDownArrow && (
+              <span
+                onClick={scrollDown}
+                className="arrow-down"
+                aria-label="Scroll down"
+              >
+                <IoIosArrowDown />
+              </span>
+            )}
+          </div>
         </div>
+{/* 
         <div className="about-dd-sub-title-holder"
-        ref={categoryContainerRef}
-        onScroll={handleScroll}>
+          ref={categoryContainerRef}
+          onScroll={handleScroll}>
           {subSectionTitles?.map((eachItem, i) => (
             <div
               key={i}
               onMouseEnter={() => setActiveSubTitle(eachItem.name)}
-              className={`about-dd-main-title ${
-                eachItem.name === activeSubTitle
-                  ? "about-dd-main-title-active"
-                  : ""
-              }`}
+              className={`about-dd-main-title ${eachItem.name === activeSubTitle
+                ? "about-dd-main-title-active"
+                : ""
+                }`}
               onClick={() => {
                 window.scrollTo(0, 0);
                 if (activeTitle === "Leadership") {
@@ -211,10 +209,45 @@ function AboutDropDown({ handleClose }) {
                   style={{ width: "18px", marginLeft: "1rem" }}
                 />
               )} */}
+           {/* </div>
+          ))}
+        </div> */}
+
+        <div
+          className="about-dd-sub-title-holder"
+          ref={categoryContainerRef}
+          onScroll={handleScroll}
+        >
+          {subSectionTitles?.map((eachItem, i) => (
+            <div
+              key={i}
+              onMouseEnter={() => setActiveSubTitle(eachItem.name)}
+              className={`about-dd-main-title ${eachItem.name === activeSubTitle
+                  ? "about-dd-main-title-active"
+                  : ""
+                }`}
+              onClick={() => {
+                window.scrollTo(0, 0);
+                if (activeTitle === "Leadership") {
+                  navigate(`/${foundLeader?.path}`);
+                } else if (activeTitle === "Partnerships") {
+                  // Open Partnerships links in a new tab
+                  window.open(eachItem.path, "_blank");
+                } else {
+                  // Navigate internally for other sections
+                  navigate(`/${eachItem.path}`);
+                }
+                handleClose();
+              }}
+            >
+              <span>{eachItem.name}</span>
             </div>
           ))}
         </div>
+
       </div>
+
+
 
       {/* Info Section */}
       {activeSubTitle && (
