@@ -258,7 +258,7 @@ function About() {
                             {eachAch.title}
                           </div>
                           <p className="about-section3-achivment-des test-seclection-blue">
-                            {eachAch.des}
+                            {eachAch.des} 
                           </p>
                         </div>
                       ))}

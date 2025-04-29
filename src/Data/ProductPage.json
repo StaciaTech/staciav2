@@ -470,23 +470,44 @@
       "category": [
         {
           "id": "category-001",
-          "name": "Stellar",
-          "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
+          "name": "Stellar labs",
+          "description": "Stellar Labs is a unified platform that merges workflow optimization with rapid digital solution delivery. By integrating the auditing capabilities of Agentcy with the streamlined website development process of Stello, it offers end-to-end support—from analyzing and refining business operations to building tailored web solutions. Stellar Labs empowers organizations to identify inefficiencies, gather structured requirements, and implement solutions efficiently. This cohesive approach enhances operational clarity, accelerates digital transformation, and delivers measurable value with precision and responsiveness",
           "imageUrl": "assets/Webapps.webp",
           "products": [
             {
               "id": "product-001",
-              "title": "Stello",
+              "title": "Stello ",
               "domainName": "Stellar",
-              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
+              "description": "Stello is an efficient application designed to streamline the collection of client requirements through a structured Business Requirement Document (BRD). Once the BRD is finalized, the platform enables the rapid development of customized websites, delivered within 48 hours. Engineered for operational efficiency and precision, Stello enhances communication between clients and agents, ensuring a smooth and effective transition from planning to execution. It serves as a reliable bridge between requirement gathering and timely website deployment",
+              "imageUrl": "/assets/ProductPage/Default.webp",
+              "briefDetails":"Stello simplifies the process of creating websites by obtaining client needs through a formal Business Requirement Document (BRD). Capturing detailed inputs from clients, agents use these inputs as a basis for creating bespoke, high-quality websites efficiently and accurately. The platform ensures open communication, eliminates confusion, and supports alignment of client expectations with end-results. By integrating requirement gathering with action seamlessly, Stello provides an enhanced, customer-focused process that is built around reliability, responsiveness, and professional standards",
+              "productDetails":[
+                {
+                  "imageUrl": "",
+                  "title": "Homepage",
+                  "description": "The Stello homepage serves as a gateway to a streamlined website creation experience, guiding users through requirement collection and project initiation. With a clean, intuitive interface, it allows agents to quickly capture client needs using the BRD framework. Core features and progress indicators are easily accessible, ensuring users remain informed and engaged throughout the process. The homepage reflects Stello’s commitment to clarity, speed, and professionalism, providing a seamless entry point for efficient, goal-driven website development."                  
+                },
+                {
+                  "imageUrl": "",
+                  "title": "BRD (Business Requirement Document)",
+                  "description": "The BRD (Business Requirement Document) page is the core of Stello’s requirement-gathering process. It offers a structured, user-friendly interface where agents can input detailed client specifications across key categories such as objectives, features, design preferences, and functionality. The page ensures that all essential information is captured accurately, minimizing ambiguity and aligning expectations. With guided prompts and validation checks, the BRD page enables efficient, comprehensive data collection that forms the foundation for successful and timely website development."                  
+                }
+              ]
             },
             {
               "id": "product-002",
-              "title": "Agency",
+              "title": "The Aigentcy",
               "domainName": "Stellar",
-              "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio error labore iste quisquam unde, cum hic aliquam dolorum deleniti vero omnis adipisci repellendus tenetur fugit quod, nesciunt libero perferendis ipsum.",
-              "imageUrl": "/assets/ProductPage/Default.webp"
+              "description": "Agentcy is a web-based platform offering audit and consulting solutions to improve business workflows. It begins by analyzing a company’s current processes and identifying inefficiencies through detailed audit reports.Based on the findings, Agentcy provides customized,actionable solutions to streamline operations, reducewaste, and enhance productivity. From optimizing coordination to automating tasks, Agentcy empowers businesses to implement practical improvements. It provides a data-driven foundation for informed decision-making and continuous improvement across all levels of the organization",
+              "imageUrl": "/assets/ProductPage/Default.webp",
+              "briefDetails":"Agentcy provides end-to-end workflow improvement through audit-led insights and customized consulting. Having performed an exhaustive analysis of a business, it presents elaborate reports identifying areas of inefficiency and scope for improvement. The platform then furnishes actionable, data-led recommendations—process automation to team redesign—that align with business objectives. Agentcy not just suggests improvements but assists in implementing them, thus enabling businesses to attain measurable levels of efficiency, decision-making, and sustainable growth",
+              "productDetails":[
+                {
+                  "imageUrl": "",
+                  "title": "Homepage",
+                  "description": "The Agentcy introduces a modern platform dedicated to transforming business processes through AI-driven solutions. It highlights the integration of advanced technologies aimed at enhancing operational efficiency and decision-making. The platform emphasizes reengineering existing workflows to make them more agile and responsive to market dynamics. With a user-centric design, Agentcy ensures intuitive navigation, allowing users to leverage its features without a steep learning curve.Scalability is a key aspect, accommodating businesses of various sizes and evolving needs. Clear calls to action guide visitors to explore the platform's capabilities further or initiate contact for personalized solutions."                  
+                }
+              ]
             }
           ]
         },
@@ -498,7 +519,7 @@
           "products": [
             {
               "id": "product-003",
-              "title": "Calender",
+              "title": "Stacia Calendar",
               "domainName": "Edifai (Simplify your business)",
               "description": "Stacia Calendar streamlines scheduling and team coordination by centralizing meetings, deadlines, and events. It integrates seamlessly with other tools, allowing users to manage availability, send invites, and track shared calendars effortlessly. Designed to enhance productivity, it minimizes scheduling conflicts and keeps teams aligned with automated reminders, smart booking features, and real-time updates across departments or project groups",
               "imageUrl": "/assets/ProductPage/Default.webp",
@@ -506,7 +527,7 @@
             },
             {
               "id": "product-004",
-              "title": "Forms",
+              "title": "Stacia Forms",
               "domainName": "Edifai (Simplify your business)",
               "description": "Stacia Forms digitizes data collection and workflow automation across business processes. From employee onboarding to client feedback,it enables the creation, distribution, and analysis of custom forms without coding. With robust templates, approval routing, and real-time collaboration, teams can eliminate paperwork, reduce errors, and accelerate decision-making. It’s a flexible, secure solution to streamline data-driven tasks and enhance operational efficiency across departments",
               "imageUrl": "/assets/ProductPage/Default.webp",
@@ -514,7 +535,7 @@
             },
             {
               "id": "product-005",
-              "title": "Reimbursement",
+              "title": "Stacia Reimbursement",
               "domainName": "Edifai (Simplify your business)",
               "description": "Stacia Reimbursement simplifies expense management by allowing employees to submit claims quickly and managers to approve them with ease. It ensures faster processing, transparency, and accurate tracking of business expenses. With intuitive workflows, built-in compliance checks, and real-time status updates, this tool reduces paperwork and reimbursement delays, making financial operations smoother and more efficient for both staff and administrators",
               "imageUrl": "/assets/ProductPage/Default.webp",
