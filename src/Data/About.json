@@ -61,20 +61,20 @@
         {
           "description": "Passionate innovator and entrepreneur, I strive to make India a global leader in innovation. As the founder of Stacia Corp, I focus on groundbreaking technologies and patents that bring practical advancements to society, making innovation accessible to everyone.",
           "des": "From a young age, I was passionate about physics and innovation, which led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE). During my studies, I published research papers on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Eager to contribute to society through innovation, I pursued a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After working with a renewable energy startup, I founded Stacia Corp, a research and development company focused on cutting-edge technologies.My key innovations include a smart water bottle with self-heating and cooling technology, a hydration tracking system with 10mL accuracy, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program.For my contributions, I was honored with the Best Entrepreneur Award by Nitin Gadkari, and I continue striving to develop impactful solutions for the world.From an early age, I have been passionate about science, innovation, and technological advancement. This drive led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE), where I conducted research on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Believing that innovation should be accessible to all, I further expanded my knowledge by completing a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After gaining experience at a renewable energy startup, I founded Stacia Corp, a research and development company focused on creating groundbreaking innovations and patents that contribute to India’s growth.My key innovations include a self-heating and cooling smart water bottle, a high-accuracy hydration tracking system, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program. My vision is to make India a global hub for innovation, ensuring that advanced technology reaches everyone’s hands. Recently, I was honored with the Best Entrepreneur Award by Nitin Gadkari for my contributions.",
-          "imageUrl": "/assets/LeaderPage/lakshman.png",
+          "imageUrl": "/assets/LeaderPage/Mr-Lakshman.webp",
           "name": "Mr Lakshman",
           "path": "about/leader/Mr-Lakshman"
         },
         {
           "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-          "imageUrl": "/assets/LeaderPage/sarabesh.png",
+          "imageUrl": "/assets/LeaderPage/Mr-Sarabesh.webp",
           "name": "Mr Sarabesh",
           "path": "about/leader/Mr-Sarabesh"
         },
         {
           "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",
           "des": "I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
-          "imageUrl": "/assets/LeaderPage/revanth.png",
+          "imageUrl": "/assets/LeaderPage/Mr-Revanth.webp",
           "name": "Mr Revanth",
           "path": "about/leader/Mr-Revanth"
         }
@@ -85,16 +85,19 @@
       "path": "about/partnerships-and-clients",
       "SectionItems": [
         {
-          "name": "Partner1",
-          "path": "partners"
+          "name": "Parikshan",
+          "path": "https://parikshan.com/",
+          "target": "_blank"
         },
         {
-          "name": "Partner2",
-          "path": "partners"
+          "name": "Digiguroo",
+          "path": "https://digiguroo.in/",
+          "target": "_blank"
         },
         {
-          "name": "Partner3",
-          "path": "partners"
+          "name": "Ello one",
+          "path": "https://www.ello.one/",
+          "target": "_blank"
         }
       ]
     },
@@ -104,15 +107,15 @@
       "SectionItems": [
         {
           "name": "Logos ",
-          "path": "/media-kit"
+          "path": "media-kit"
         },
         {
           "name": "Leaders",
-          "path": "/media-kit"
+          "path": "media-kit"
         },
         {
-          "name": "Brochers",
-          "path": "/media-kit"
+          "name": "Brouchers",
+          "path": "media-kit"
         }
       ]
     }
@@ -359,7 +362,7 @@
       "des": "From a young age, I was passionate about physics and innovation, which led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE). During my studies, I published research papers on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Eager to contribute to society through innovation, I pursued a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After working with a renewable energy startup, I founded Stacia Corp, a research and development company focused on cutting-edge technologies.My key innovations include a smart water bottle with self-heating and cooling technology, a hydration tracking system with 10mL accuracy, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program.For my contributions, I was honored with the Best Entrepreneur Award by Nitin Gadkari, and I continue striving to develop impactful solutions for the world.From an early age, I have been passionate about science, innovation, and technological advancement. This drive led me to pursue Mechanical Engineering at Sri Venkateswara College of Engineering (SVCE), where I conducted research on fuel optimization in diesel engines and friction stir welding in aluminum alloys. I also secured 2nd place in FMEA, analyzing failures in engine inspection systems.Believing that innovation should be accessible to all, I further expanded my knowledge by completing a PGDSBA in Data Science & Business Analytics from The University of Texas at Austin & Great Lakes. After gaining experience at a renewable energy startup, I founded Stacia Corp, a research and development company focused on creating groundbreaking innovations and patents that contribute to India’s growth.My key innovations include a self-heating and cooling smart water bottle, a high-accuracy hydration tracking system, and a micro seed sowing machine, recognized among the Top 30 innovations in the RKVY-RAFTAAR program. My vision is to make India a global hub for innovation, ensuring that advanced technology reaches everyone’s hands. Recently, I was honored with the Best Entrepreneur Award by Nitin Gadkari for my contributions.",
       "quote": "“It always seems impossible until it’s done.”  – Nelson Mandela",
       "designation": "Chief Operational Officer",
-      "imageUrl": "/assets/LeaderPage/Mr Lakshman.webp",
+      "imageUrl": "/assets/LeaderPage/Mr-Lakshman.webp",
       "name": "Mr Lakshman",
       "position": 1,
       "_id": "67359d632e218c7501f9c3c0",
@@ -397,10 +400,11 @@
       ]
     },
     {
-      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur.",
-      "quote": "Lorem ipsum dolor sit amet",
+      "description": "As the visionary Founder of Stacia Corp and leader of Sastem Global, I am dedicated to driving purposeful innovation across agriculture, energy, and smart technologies. Stacia Corp was established to translate deep-tech expertise into impactful solutions that address critical global challenges and shape a more sustainable future.",
+      "des":"Sarabesh Sriram is the visionary founder and strategic mind behind Stacia Corp , an innovation-led R&D powerhouse transforming the future of agriculture, energy, food systems, and smart  Consumer technologies. As a Founding Partner, he bridges deep-tech engineering with purposeful innovation, ensuring every project at Stacia not only solves present-day problems but anticipates the needs of tomorrow. His leadership fuels a culture of invention, impact, and continuous evolution.Also, at the helm of Sastem Global, a consumer electronics brand Crafting seamless connected experiences, Sarabesh balances entrepreneurial agility with a future-forward mindset. He leads with a rare blend of curiosity, compassion, and technical excellence, building pathways where others see only roadblocks. With a passion for innovation and a deep-rooted belief in the power of technology to reshape industries, Sarabesh has built companies that Don't just keep pace with the future—they create it. His work spans from precision agriculture and IoT systems to smart consumer products and AI-driven software platforms, always rooted in purpose and designed for impact. Sarabesh holds a Mechanical Engineering degree from the Sri  Venkateshwara College of Engineering (SVCE). He further specialized with a Post Graduate Diploma in Data Science from the Great Lakes Institute of Management and a certification in Business Analytics from the University of Texas, Austin. His interdisciplinary expertise enables him to bridge the gap between hardware and software, strategy and execution, vision and results. With a unique ability to convert abstract ideas into tangible innovation, Sarabesh continues to shape a future where technology meets humanity with intent.",
+      "quote": "The future belongs to those who innovate with empathy, think with clarity, and build with purpose — crafting solutions that are as elegant as they are essential.",
       "designation": "Chief Executive Officer",
-      "imageUrl": "/assets/LeaderPage/Mr Sarabesh.webp",
+      "imageUrl": "/assets/LeaderPage/Mr-Sarabesh.webp",
       "name": "Mr Sarabesh",
       "position": 2,
       "_id": "67359d7b847c386125859a59",
@@ -411,18 +415,43 @@
       },
       "expertise": [
         {
-          "title": "Business Strategy",
-          "desc": "Expert in strategic planning and business growth.",
+          "title": "6+ Patents – Across product engineering, automation, and digital systems",
+          "desc": "This accomplishment signifies a strong commitment to research and development, resulting in tangible intellectual property. These patents span diverse technological domains, indicating a broad spectrum of innovation and a capacity to generate novel solutions across various engineering and digital landscapes, securing a competitive edge.",
           "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
         },
         {
-          "title": "Leadership Development",
-          "desc": "Focuses on mentoring and coaching future leaders.",
+          "title": "Entrepreneur of the Year 2024 – Recognized for innovation-led impact",
+          "desc": "This prestigious award, received at the Millionaire Farmer of India (MFOI) event organized by Krishi Jagran and ICAR, celebrates outstanding entrepreneurial vision and execution. The recognition highlights a leader who has demonstrated exceptional innovation, driving significant positive impact. Presented by the honorable Shri Nitin Gadkari, this award underscores the power of entrepreneurial spirit in creating meaningful change and setting new industry benchmarks",
           "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
         },
         {
-          "title": "Corporate Governance",
-          "desc": "Ensures ethical and responsible decision-making.",
+          "title": "Best Paper Award – IASTEM Brisbane 2019 – Advanced IoT research, published in World Research Library",
+          "desc": "This accolade acknowledges exceptional scholarly work in the field of advanced Internet of Things. The award recognizes the paper's significant contribution to IoT research, its rigor, and its potential impact on the field, further validated by its publication in the esteemed World Research Library.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Promising Young Alumni Award 2025 – SVCE",
+          "desc": "Conferred by the alma mater, this award celebrates the early career achievements and potential of a young graduate. It recognizes individuals who have demonstrated remarkable success and made notable contributions in their respective fields shortly after graduation, serving as an inspiration to current students and the wider alumni network.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Global 3rd Place Winner– IEEE AUV Challenge 2018 – National University of Singapore (NUS)",
+          "desc": "This international recognition highlights exceptional technical skills and innovation in autonomous underwater vehicle technology. Achieving a top global ranking in a prestigious IEEE competition demonstrates a high level of engineering prowess, problem-solving abilities, and the capacity to excel in a demanding and competitive field.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Top 10 Innovations in India (2021) – For OneDril , a precision seed-sowing innovation Validated by NABARD, TNAU, and Idhayam – For pioneering scalable agri-tech solutions",
+          "desc": "For pioneering scalable agri-tech solutions: This award recognizes a groundbreaking agricultural technology with national significance. OneDril's precision seed-sowing innovation has been acknowledged as one of the top innovations in India, further validated by reputable agricultural and financial institutions for its potential in providing scalable solutions to the agri-tech sector.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "RKVY-RAFTAAR Grantee – Ministry of Agriculture, Government of India",
+          "desc": "Being a recipient of this grant from the Ministry of Agriculture signifies government recognition and support for ventures in agriculture and allied sectors. The RKVY-RAFTAAR program aims to promote innovation and entrepreneurship in agriculture, providing financial assistance and mentorship to scale impactful solutions.",
+          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "200+ Projects Delivered – Across agriculture, energy, electronics,software, and manufacturing",
+          "desc": "This substantial track record demonstrates extensive experience and a proven ability to execute projects across a wide range of industries. Successful delivery across diverse sectors highlights adaptability, technical expertise, and a capacity to provide effective solutions to varied and complex challenges.",
           "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
         }
       ]
@@ -432,7 +461,7 @@
       "des": "I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
       "quote": "“The people who are crazy enough to think they can change the world are the ones who do.” — Steve Jobs",
       "designation": "Chief Technical Officer",
-      "imageUrl": "/assets/LeaderPage/Mr Revanth.webp",
+      "imageUrl": "/assets/LeaderPage/Mr-Revanth.webp",
       "name": "Mr Revanth",
       "position": 3,
       "_id": "67359db6847c386125859a5a",
