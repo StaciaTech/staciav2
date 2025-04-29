@@ -82,7 +82,12 @@ pipeline {
 triggers {
     githubPush()
     githubPullRequests(
-        branchRestriction: 'release|main',
+        branchRestriction: [
+            includes: [
+                'release',
+                'main'
+            ]
+        ],
         events: ['opened', 'synchronize', 'reopened', 'closed']
     )
 }
