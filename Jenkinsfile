@@ -1,3 +1,10 @@
+import org.jenkinsci.plugins.github.pullrequest.events.GitHubPREvent
+import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRNewCommitEvent
+import org.jenkinsci.plugins.github.pullrequest.events.GitHubPROpenedEvent
+import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRSynchronizeEvent
+import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRReopenedEvent
+import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRClosedEvent
+
 pipeline {
     agent any
 
@@ -80,7 +87,7 @@ pipeline {
         }
     }
 triggers {
-    githubPush()
+    githubPush() // Trigger on any push
     githubPullRequests(
         branchRestriction: [
             includes: [
@@ -88,7 +95,12 @@ triggers {
                 'main'
             ]
         ],
-        events: ['opened', 'synchronize', 'reopened', 'closed']
+        events: [
+            new GitHubPROpenedEvent(),
+            new GitHubPRSynchronizeEvent(),
+            new GitHubPRReopenedEvent(),
+            new GitHubPRClosedEvent()
+        ]
     )
 }
 }
