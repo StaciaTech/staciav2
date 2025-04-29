@@ -79,11 +79,11 @@ pipeline {
             }
         }
     }
-   triggers {
-    githubPush(branchFilter: 'release|main')
+triggers {
+    githubPush()
     githubPullRequests(
-        branchFilter: 'release|main',
-        eventTypes: ['opened', 'synchronize', 'reopened', 'closed']
+        branchRestriction: 'release|main',
+        events: ['opened', 'synchronize', 'reopened', 'closed']
     )
 }
 }
