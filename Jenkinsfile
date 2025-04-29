@@ -1,55 +1,86 @@
 pipeline {
     agent any
+
     environment {
-        CI = 'false'
+        CPANEL_REMOTE_DIR = '/public_html/'
     }
-    tools {
-        nodejs 'Node-20.11.1'
-    }
+
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'github_pat',
-                    url: 'https://github.com/StaciaTech/staciav2.git',
-                    branch: 'main'
+                checkout scm
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm install'
                 sh 'npm run build'
             }
         }
-        stage('Archive Artifacts') {
+        stage('Determine Build Output') {
             steps {
-                archiveArtifacts 'build/**/*'
+                script {
+                    if (fileExists('build')) {
+                        env.BUILD_OUTPUT_DIR = 'build'
+                        echo "Build output directory found: build"
+                    } else if (fileExists('dist')) {
+                        env.BUILD_OUTPUT_DIR = 'dist'
+                        echo "Build output directory found: dist"
+                    } else {
+                        error "Neither 'build' nor 'dist' directory found after build!"
+                    }
+                }
             }
         }
-       stage('Deploy to cPanel') {
-    steps {
-        sshPublisher(
-            publishers: [
-                [
-                    configName: 'staciacorp',
-                    transfers: [
+        stage('Deploy to S3') {
+            when {
+                branch 'release'
+            }
+            steps {
+                script {
+                    def awsRegion = 'ap-south-1'
+                    def s3BucketName = 'staciatech.com'
+
+                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --region ${awsRegion}"
+                    echo "Successfully deployed to S3://${s3BucketName}"
+                }
+            }
+        }
+        stage('Deploy to cPanel') {
+            when {
+                branch 'main'
+            }
+            steps {
+                sshPublisher(
+                    publishers: [
                         [
-                            cleanRemote: false,
-                            excludes: '',
-                            flatten: false,
-                            makeEmptyDirs: false,
-                            noDefaultExcludes: false,
-                            remoteDirectory: '/public_html/',
-                            remoteDirectorySDF: false,
-                            removePrefix: 'build/',
-                            sourceFiles: 'build/**/*'
+                            configName: 'cpanel-scp', // The name you'll configure in Jenkins Global Tool Configuration
+                            transfers: [
+                                [
+                                    cleanRemote: false,
+                                    excludes: '',
+                                    flatten: false,
+                                    makeEmptyDirs: false,
+                                    noDefaultExcludes: false,
+                                    remoteDirectory: CPANEL_REMOTE_DIR,
+                                    removePrefix: "${env.BUILD_OUTPUT_DIR}/", // Remove the build or dist prefix
+                                    sourceFiles: "${env.BUILD_OUTPUT_DIR}/**/*"
+                                ]
+                            ],
+                            useWorkspaceInPromotion: false,
+                            verbose: true
                         ]
-                    ],
-                    useWorkspaceInPromotion: false,
-                    verbose: true
-               	  ]
-               ]
-      	    )
-   	 }
-      }
-   }
+                    ]
+                )
+            }
+        }
+    }
+    triggers {
+        githubPush()
+        githubPullRequests()
+    }
 }
