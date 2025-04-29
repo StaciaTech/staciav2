@@ -66,7 +66,7 @@ function MediaKit() {
             </div>
           </div>
           <div>
-            <div className="media-section-heading">Brochers</div>
+            <div className="media-section-heading">Brouchers</div>
             <div className="media-leader-card-container">
               {data?.brouchers?.map((eachBroucher, i) => {
                 return (

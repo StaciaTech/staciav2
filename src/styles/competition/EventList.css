@@ -23,11 +23,13 @@
   transition: all 0.3s ease-in-out;
   font-size: 20px;
   font-family: EuclidMedium;
+  
 }
 
 .all-btn.active {
   background-color: #0047ff;
   color: white;
+  border-radius:6px;
 }
 
 .status-filter button {
