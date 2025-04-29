@@ -1,59 +1,86 @@
 pipeline {
     agent any
 
+    environment {
+        CPANEL_REMOTE_DIR = '/public_html/'
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                checkout(credentialsId: 'github-pat',
-                         scm: git(url: 'https://github.com/StaciaTech/staciav2.git',
-                                 branch: env.BRANCH_NAME))
+                checkout scm
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'echo "Building..."'
-                npm install
-                npm run build
+                sh 'npm run build'
             }
         }
-        stage('Deploy') {
+        stage('Determine Build Output') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == 'release') {
-                        sh 'echo "Deploying to S3..."'
-                        sh 'aws s3 sync ./build s3://YOUR_S3_BUCKET_NAME'
-                        echo "Successfully deployed to S3"
-                    } else if (env.BRANCH_NAME == 'main') {
-                        sh 'echo "Deploying to cPanel..."'
-                        sshPublisher(publishers: [
-                            sshPublisherDesc(configName: 'cpanel-scp',
-                                             transfers: [
-                                                 [
-                                                     cleanRemote: false,
-                                                     excludes: '',
-                                                     flatten: false,
-                                                     makeEmptyDirs: false,
-                                                     noMoreEntries: false,
-                                                     pattern: 'build/**',
-                                                     remoteDirectory: '$CPANEL_REMOTE_DIR',
-                                                     remoteDirectorySDF: false,
-                                                     removePrefix: 'build/',
-                                                     sourceFiles: 'build/**/*'
-                                                 ]
-                                             ],
-                                             usePromotion: false,
-                                             useWorkspaceInPromotion: false,
-                                             verbose: true)
-                        ])
-                        echo "Successfully deployed to cPanel"
+                    if (fileExists('build')) {
+                        env.BUILD_OUTPUT_DIR = 'build'
+                        echo "Build output directory found: build"
+                    } else if (fileExists('dist')) {
+                        env.BUILD_OUTPUT_DIR = 'dist'
+                        echo "Build output directory found: dist"
                     } else {
-                        echo "No deployment configured for branch: ${env.BRANCH_NAME}"
+                        error "Neither 'build' nor 'dist' directory found after build!"
                     }
                 }
             }
         }
+        stage('Deploy to S3') {
+            when {
+                branch 'release'
+            }
+            steps {
+                script {
+                    def awsRegion = 'ap-south-1'
+                    def s3BucketName = 'staciatech.com'
+
+                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --region ${awsRegion}"
+                    echo "Successfully deployed to S3://${s3BucketName}"
+                }
+            }
+        }
+        stage('Deploy to cPanel') {
+            when {
+                branch 'main'
+            }
+            steps {
+                sshPublisher(
+                    publishers: [
+                        [
+                            configName: 'cpanel-scp', // The name you'll configure in Jenkins Global Tool Configuration
+                            transfers: [
+                                [
+                                    cleanRemote: false,
+                                    excludes: '',
+                                    flatten: false,
+                                    makeEmptyDirs: false,
+                                    noDefaultExcludes: false,
+                                    remoteDirectory: CPANEL_REMOTE_DIR,
+                                    removePrefix: "${env.BUILD_OUTPUT_DIR}/", // Remove the build or dist prefix
+                                    sourceFiles: "${env.BUILD_OUTPUT_DIR}/**/*"
+                                ]
+                            ],
+                            useWorkspaceInPromotion: false,
+                            verbose: true
+                        ]
+                    ]
+                )
+            }
+        }
     }
     triggers {
-        github()
+        githubPush()
+        pullRequest()
     }
 }
