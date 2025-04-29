@@ -2,17 +2,14 @@ pipeline {
     agent any
     environment {
         CI = 'false'
-        // AWS Credentials for S3 Deployment
-        AWS_ACCESS_KEY_ID = credentials('aws-creds')
-        AWS_SECRET_ACCESS_KEY = credentials('awscreds')
-        S3_BUCKET = 'staciatech.com'
-        AWS_REGION = 'ap-south-1'
-
-        // cPanel Connection Details for main branch Deployment
-        CPANEL_HOST = 'staciacorp.com'
-        CPANEL_USERNAME = 'staciacorp'
-        CPANEL_PASSWORD = credentials('cpanel-scp')
-        CPANEL_REMOTE_DIR = '/public_html/'
+        AWS_ACCESS_KEY_ID = credentials('aws-access-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
+        S3_BUCKET = 'your-s3-bucket-name'
+        AWS_REGION = 'your-aws-region'
+        CPANEL_HOST = 'your-cpanel-host'
+        CPANEL_USERNAME = 'your-cpanel-username'
+        CPANEL_PASSWORD = credentials('cpanel-password')
+        CPANEL_REMOTE_DIR = '/public_html/your-remote-directory/'
     }
     tools {
         nodejs 'Node-20.11.1'
@@ -37,48 +34,50 @@ pipeline {
             }
         }
         stage('Deploy') {
-            branch([
-                [name: 'release',
-                 steps: [
-                     script {
-                         sh """
-                            aws s3 sync build/ s3://$S3_BUCKET/ --region $AWS_REGION
-                         """
-                     }
-                 ]],
-                [name: 'main',
-                 steps: [
-                    sshPublisher(
-                        publishers: [
-                            [
-                                configName: 'staciacorp',
-                                transfers: [
-                                    [
-                                        cleanRemote: false,
-                                        excludes: '',
-                                        flatten: false,
-                                        makeEmptyDirs: false,
-                                        noDefaultExcludes: false,
-                                        remoteDirectory: CPANEL_REMOTE_DIR,
-                                        remoteDirectorySDF: false,
-                                        removePrefix: 'build/',
-                                        sourceFiles: 'build/**/*'
-                                    ]
-                                ],
-                                useWorkspaceInPromotion: false,
-                                verbose: true
+            steps {
+                branch([
+                    [name: 'release',
+                     steps: [
+                         script {
+                             sh """
+                                aws s3 sync build/ s3://$S3_BUCKET/ --delete --region $AWS_REGION --acl public-read
+                             """
+                         }
+                     ]],
+                    [name: 'main',
+                     steps: [
+                        sshPublisher(
+                            publishers: [
+                                [
+                                    configName: 'cpanel-server',
+                                    transfers: [
+                                        [
+                                            cleanRemote: false,
+                                            excludes: '',
+                                            flatten: false,
+                                            makeEmptyDirs: false,
+                                            noDefaultExcludes: false,
+                                            remoteDirectory: CPANEL_REMOTE_DIR,
+                                            remoteDirectorySDF: false,
+                                            removePrefix: 'build/',
+                                            sourceFiles: 'build/**/*'
+                                        ]
+                                    ],
+                                    useWorkspaceInPromotion: false,
+                                    verbose: true
+                                ]
                             ]
-                        ]
-                    )
-                 ]],
-                [name: 'feature/*',
-                 steps: [
-                     script: {
-                         echo "Feature branches are not deployed."
-                     }
-                 ]
-                 ]
-            ])
+                        )
+                     ]],
+                    [name: 'feature/*',
+                     steps: [
+                         script: {
+                             echo "Feature branches are not deployed."
+                         }
+                     ]
+                     ]
+                ])
+            }
         }
     }
     post {
