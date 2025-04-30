@@ -1,24 +1,12 @@
-import org.jenkinsci.plugins.github.pullrequest.events.GitHubPROpenEvent
-import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRSynchronizedEvent
-
 pipeline {
     agent any
-    
+     
     triggers {
-    githubPush() // Trigger on any push
-    githubPullRequests(
-        branchRestriction: [
-            includes: [
-                'release',
-                'main'
-            ]
-        ],
-        events: ['opened', 'synchronize', 'reopened', 'closed'] // Lowercase (again, but careful)
-    )
-}
-
+        githubPush()
+        GithubPullRequest()
+    }
     environment {
-        CPANEL_REMOTE_DIR = '/public_html/'
+        CPANEL_REMOTE_DIR = '/path/to/your/cpanel/webroot/' // Define your cPanel remote directory here
     }
 
     stages {
@@ -29,12 +17,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                sh 'npm install' // Or 'yarn install' if you use Yarn
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                sh 'npm run build' // Or 'yarn build' - adjust your build script
             }
         }
         stage('Determine Build Output') {
@@ -58,10 +46,10 @@ pipeline {
             }
             steps {
                 script {
-                    def awsRegion = 'ap-south-1'
-                    def s3BucketName = 'staciatech.com'
+                    def awsRegion = 'your-aws-region' // e.g., 'ap-south-1'
+                    def s3BucketName = 'your-s3-bucket-name'
 
-                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --region ${awsRegion}"
+                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --delete --region ${awsRegion}"
                     echo "Successfully deployed to S3://${s3BucketName}"
                 }
             }
@@ -74,7 +62,7 @@ pipeline {
                 sshPublisher(
                     publishers: [
                         [
-                            configName: 'cpanel-scp',
+                            configName: 'cpanel-server', // The name you'll configure in Jenkins Global Tool Configuration
                             transfers: [
                                 [
                                     cleanRemote: false,
@@ -83,7 +71,7 @@ pipeline {
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     remoteDirectory: CPANEL_REMOTE_DIR,
-                                    removePrefix: "${env.BUILD_OUTPUT_DIR}/",
+                                    removePrefix: "${env.BUILD_OUTPUT_DIR}/", // Remove the build or dist prefix
                                     sourceFiles: "${env.BUILD_OUTPUT_DIR}/**/*"
                                 ]
                             ],
