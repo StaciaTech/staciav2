@@ -72,6 +72,8 @@ function About() {
   // Years section animation
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionsRef = useRef([]);
+  const containerRef = useRef(null);
+
 
     // Ensure first dot is active on initial load or URL param scroll to milestone
   useEffect(() => {
@@ -92,35 +94,86 @@ function About() {
 
   // IntersectionObserver for scrolling 
 
-  useEffect(()=>{ 
+  // useEffect(()=>{ 
+  //   const observer = new IntersectionObserver(
+
+  //     (entries)=>{
+  //       entries.forEach((entry)=>{
+  //         if(entry.isIntersecting){
+  //           const index = sectionsRef.current.indexOf(entry.target);
+  //           setActiveSection(index);
+  //         }
+  //       })
+  //     },{threshold:0.8}  // Trigger when 80% of section is visible
+  //   );
+  //   sectionsRef.current.forEach((section)=>{
+  //     if(section){
+  //       observer.observe(section)
+  //     }
+  //   })
+  //   return () =>{
+  //     sectionsRef.current.forEach((section)=>{
+  //       if(section){
+  //         observer.unobserve(section)
+  //       }
+  //     })
+  //   }
+  // },[staciaHistory])
+
+  // const scrollToSection = (index)=>{
+  //   sectionsRef.current[index].scrollIntoView({behavior:"smooth"});
+  // }
+
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
+      (entries) => {
+        let maxIntersection = -1;
+        let mostVisibleIndex = activeSection;
 
-      (entries)=>{
-        entries.forEach((entry)=>{
-          if(entry.isIntersecting){
-            const index = sectionsRef.current.indexOf(entry.target);
-            setActiveSection(index);
+        entries.forEach((entry) => {
+          const index = sectionsRef.current.indexOf(entry.target);
+          if (index !== -1) {
+            const intersectionRatio = entry.intersectionRatio;
+            if (intersectionRatio > maxIntersection) {
+              maxIntersection = intersectionRatio;
+              mostVisibleIndex = index;
+            }
           }
-        })
-      },{threshold:0.8}  // Trigger when 80% of section is visible
-    );
-    sectionsRef.current.forEach((section)=>{
-      if(section){
-        observer.observe(section)
-      }
-    })
-    return () =>{
-      sectionsRef.current.forEach((section)=>{
-        if(section){
-          observer.unobserve(section)
-        }
-      })
-    }
-  },[staciaHistory])
+        });
 
-  const scrollToSection = (index)=>{
-    sectionsRef.current[index].scrollIntoView({behavior:"smooth"});
-  }
+        if (maxIntersection > 0) {
+          setActiveSection(mostVisibleIndex);
+        }
+      },
+      {
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+        root: containerRef.current,
+        rootMargin: '0px 0px -20% 0px',
+      }
+    );
+
+    sectionsRef.current.forEach((section) => {
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      sectionsRef.current.forEach((section) => {
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, [staciaHistory]);
+
+  const scrollToSection = (index) => {
+    if (sectionsRef.current[index]) {
+      sectionsRef.current[index].scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(index);
+    }
+  };
 
   
   // Scroll by params
