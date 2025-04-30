@@ -15,10 +15,156 @@
   font-size: 7vw;
   font-weight: 600;
 }
+
 .project-page-hero-section > div {
   position: relative;
   width: fit-content;
 }
+
+.sub-category-tab {
+  padding-left: 2rem;
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+   margin-left: 60px; 
+}
+
+.dept-head{
+    color: #0047ff;
+    font-family: EuclidSemibold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+   margin-left: 98px;
+   padding: 10px;
+
+}
+
+
+.department-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+ 
+}
+
+.arrow-icon {
+  font-size: 0.9rem;
+  margin-left: 4px;
+  color: #0056d2;
+}
+
+.project-item-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+.product-dep-name{
+  font-family: EuclidSemibold;
+    font-size: 2rem;
+    color: #c5c3c9;
+    /* border-bottom: 1px solid #e5e5e5; */
+    padding-bottom: 1rem 2rem;
+    padding: 15px 100px;
+}
+.article-item-tab {
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.article-item-tab:hover {
+  background-color: #ddd;
+}
+
+.article-item-tab-active {
+  background-color: #e6f0ff;
+  color: #0056d2;
+  font-weight: bold;
+}
+
+.subcategory-separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 1rem 1rem;
+}
+
+
+
+.sub-category-tab {
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.sub-category-tab:hover {
+  background-color: #e0e0e0;
+}
+.department-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.arrow-icon {
+  font-size: 0.9rem;
+  margin-left: 4px;
+  color: #0056d2;
+}
+
+.project-item-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.article-item-tab {
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.article-item-tab:hover {
+  background-color: #ddd;
+}
+
+.article-item-tab-active {
+  background-color: #e6f0ff;
+  color: #0056d2;
+  font-weight: bold;
+}
+
+.subcategory-separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 1rem 1rem;
+}
+
+.subcategory-container {
+  display: flex;
+  flex-wrap: wrap;
+  
+  padding: 15px 2rem 1rem;
+}
+
+.sub-category-tab {
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.sub-category-tab:hover {
+  background-color: #e0e0e0;
+}
+
+
 .project-section {
   width: 100%;
   min-height: 100vh;

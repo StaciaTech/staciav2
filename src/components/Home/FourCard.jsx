@@ -25,18 +25,21 @@ export default function FourCard({ data, path }) {
             <a href={data.proId} target="_blank" rel="noopener noreferrer">
               <div className="leader-icon-container">
                 <FaLinkedinIn className="footer-linkedin-icon" />
+               
               </div>
             </a>
           </div>
+          <div className="icon-name">LinkedinIn</div>
 
           {/* Email Icon */}
           <div>
-            <a href={`mailto:${data.email}`} target="/blank" >
+            <a href={`mailto:${data.email}`} target="/blank">
               <div className="leader-icon-container">
                 <FaEnvelope className="footer-facebook-icon" />
               </div>
             </a>
           </div>
+          <div className="icon-name">Email</div>
         </div>
       </div>
 

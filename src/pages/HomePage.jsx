@@ -3,14 +3,14 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/Home.css";  
 
-import ClientComponent from "./Client";
+
 import reverse from "../assets/reverse.png";
-import HomeCaseStudy from "../components/Home/HomeCaseStudy";
+
 // import Four from "../components/Home/Four";
 // import Testimonials from "../components/Home/Testimonials";
 // import ServiceDisplay from "../components/Home/ServiceDisplay";
 // import { graphcms, QUERY_SLUG_CATEGORIES } from "../Graphql/Queries";
-// import StackScroll from "./StackScroll";
+import StackScroll from "./StackScroll";
 // import MobileStackScroll from "../components/Home/MobileStackScroll";
 // import MobileFooter from "../components/MobileFooter";
 import EventsHosted from "../components/Home/EventsHosted";
@@ -28,7 +28,7 @@ const Testimonials = React.lazy(() =>
 const ServiceDisplay = React.lazy(() =>
   import("../components/Home/ServiceDisplay")
 );
-const StackScroll = React.lazy(() => import("./StackScroll"));
+
 const MobileStackScroll = React.lazy(() =>
   import("../components/Home/MobileStackScroll")
 );
@@ -38,6 +38,14 @@ const SideBar = React.lazy(() => import("../components/SideBar"));
 const MobileArticle = React.lazy(() =>
   import("../components/Home/MobileArticle")
 );
+
+const HomeCaseStudy = React.lazy(() =>
+  import("../components/Home/HomeCaseStudy")
+);
+
+const ClientComponent = React.lazy(() => import("./Client"));
+
+
 
 
 const words = [
@@ -67,6 +75,12 @@ function HomePage() {
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
+
+
+  console.log("Four component loaded -------------");
+
+  console.log("casestudy=-=--=-=-=-=-=---")
+
 
   return (
     <div>
@@ -103,37 +117,36 @@ function HomePage() {
       </div>
       {/* product */}
       <div className="stack-scroll-container">
-        <React.Suspense fallback={<LoadingStar />}>
+    
           <StackScroll />
-        </React.Suspense>
+       
       </div>
       {/* <DestopStacking /> */}
       <React.Suspense fallback={<LoadingStar />}>
         <MobileStackScroll />
       </React.Suspense>
       {/* client */}
-      
-      <ClientComponent />
+
+      <React.Suspense fallback={<LoadingStar />}>
+        <ClientComponent />
+      </React.Suspense>
       {/* our services */}
       <div>
         <React.Suspense fallback={<LoadingStar />}>
           <ServiceDisplay />
         </React.Suspense>
       </div>
-     
-
 
       {/* Events */}
       <EventsHosted />
 
-
       {/* case study */}
-      <HomeCaseStudy />
-
+      <React.Suspense fallback={<LoadingStar />}>
+        <HomeCaseStudy />
+      </React.Suspense>
 
       {/* Home Projects */}
-      <OurProjects /> 
-
+      <OurProjects />
 
       {/* Home Articles  */}
 
