@@ -3,7 +3,7 @@ pipeline {
      
     triggers {
         githubPush()
-        GithubPullRequest()
+        githubPullRequest()
     }
     environment {
         CPANEL_REMOTE_DIR = '/path/to/your/cpanel/webroot/' // Define your cPanel remote directory here
