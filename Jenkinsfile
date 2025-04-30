@@ -1,7 +1,20 @@
-import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRCauseAction
+import org.jenkinsci.plugins.github.pullrequest.events.GitHubPROpenEvent
+import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRSynchronizedEvent
 
 pipeline {
     agent any
+    
+    triggers {
+    githubPullRequest {
+        events([
+            new org.jenkinsci.plugins.github.pullrequest.events.GitHubPROpenEvent(),
+            new org.jenkinsci.plugins.github.pullrequest.events.GitHubPRSynchronizedEvent()
+        ])
+        branchRestriction {
+            includes(["release", "main"])
+        }
+    }
+}
 
     environment {
         CPANEL_REMOTE_DIR = '/public_html/'
@@ -60,7 +73,7 @@ pipeline {
                 sshPublisher(
                     publishers: [
                         [
-                            configName: 'cpanel-scp', // The name you'll configure in Jenkins Global Tool Configuration
+                            configName: 'cpanel-scp',
                             transfers: [
                                 [
                                     cleanRemote: false,
@@ -69,7 +82,7 @@ pipeline {
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     remoteDirectory: CPANEL_REMOTE_DIR,
-                                    removePrefix: "${env.BUILD_OUTPUT_DIR}/", // Remove the build or dist prefix
+                                    removePrefix: "${env.BUILD_OUTPUT_DIR}/",
                                     sourceFiles: "${env.BUILD_OUTPUT_DIR}/**/*"
                                 ]
                             ],
@@ -81,17 +94,4 @@ pipeline {
             }
         }
     }
-
-triggers {
-    githubPullRequest {
-        events([
-            new org.jenkinsci.plugins.github.pullrequest.events.GitHubPROpenEvent(),
-            new org.jenkinsci.plugins.github.pullrequest.events.GitHubPRSynchronizedEvent()
-        ])
-        branchRestriction {
-            includes(["release", "main"])
-        }
-    }
-}
-
 }
