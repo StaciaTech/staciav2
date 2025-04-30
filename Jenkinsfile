@@ -1,3 +1,5 @@
+import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRCauseAction
+
 pipeline {
     agent any
 
@@ -79,16 +81,17 @@ pipeline {
             }
         }
     }
+
 triggers {
-    githubPush()
-    githubPullRequests(
-        branchRestriction: [
-            includes: [
-                'release',
-                'main'
-            ]
-        ],
-        events: ['OPENED', 'SYNCHRONIZE', 'REOPENED', 'CLOSED']
-    )
+    githubPullRequest {
+        events([
+            new org.jenkinsci.plugins.github.pullrequest.events.GitHubPROpenEvent(),
+            new org.jenkinsci.plugins.github.pullrequest.events.GitHubPRSynchronizedEvent()
+        ])
+        branchRestriction {
+            includes(["release", "main"])
+        }
+    }
 }
+
 }
