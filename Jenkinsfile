@@ -7,6 +7,9 @@ pipeline {
     environment {
         CPANEL_REMOTE_DIR = '/path/to/your/cpanel/webroot/' // Define your cPanel remote directory here
     }
+    tools {
+        nodejs 'Node-20.11.1' // Replace 'nodejs18' with the name you configured in Jenkins
+    }
 
     stages {
         stage('Checkout') {
