@@ -5,15 +5,16 @@ pipeline {
     agent any
     
     triggers {
-    githubPullRequest {
-        events([
-            new org.jenkinsci.plugins.github.pullrequest.events.GitHubPROpenEvent(),
-            new org.jenkinsci.plugins.github.pullrequest.events.GitHubPRSynchronizedEvent()
-        ])
-        branchRestriction {
-            includes(["release", "main"])
-        }
-    }
+    githubPush() // Trigger on any push
+    githubPullRequests(
+        branchRestriction: [
+            includes: [
+                'release',
+                'main'
+            ]
+        ],
+        events: ['opened', 'synchronize', 'reopened', 'closed'] // Lowercase (again, but careful)
+    )
 }
 
     environment {
