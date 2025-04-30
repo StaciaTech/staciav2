@@ -235,7 +235,7 @@ function EachServicePage() {
           </div>
           <div className="each-service-section1-content">
             <div>Overview</div>
-            <p>{singleService?.description || "No description available."}</p>
+            <p>{singleService?.oneLine || "No description available."}</p>
           </div>
         </div>
         <div className="each-service-howWeDo-section">
