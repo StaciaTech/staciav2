@@ -5,10 +5,11 @@ pipeline {
         githubPush()
     }
     environment {
-        CPANEL_REMOTE_DIR = '/path/to/your/cpanel/webroot/' // Define your cPanel remote directory here
+        CPANEL_REMOTE_DIR = '/public_html/'
+        CI = 'false'
     }
     tools {
-        nodejs 'Node-20.11.1' // Replace 'nodejs18' with the name you configured in Jenkins
+        nodejs 'Node-20.11.1'
     }
 
     stages {
@@ -19,12 +20,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install' // Or 'yarn install' if you use Yarn
+                sh 'npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run build' // Or 'yarn build' - adjust your build script
+                sh 'npm run build'
             }
         }
         stage('Determine Build Output') {
@@ -48,8 +49,8 @@ pipeline {
             }
             steps {
                 script {
-                    def awsRegion = 'your-aws-region' // e.g., 'ap-south-1'
-                    def s3BucketName = 'your-s3-bucket-name'
+                    def awsRegion = 'ap-south-1' // e.g., 'ap-south-1'
+                    def s3BucketName = 'staciatech.com'
 
                     sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --delete --region ${awsRegion}"
                     echo "Successfully deployed to S3://${s3BucketName}"
@@ -64,7 +65,7 @@ pipeline {
                 sshPublisher(
                     publishers: [
                         [
-                            configName: 'cpanel-server', // The name you'll configure in Jenkins Global Tool Configuration
+                            configName: 'cpanel-scp', // The name you'll configure in Jenkins Global Tool Configuration
                             transfers: [
                                 [
                                     cleanRemote: false,
