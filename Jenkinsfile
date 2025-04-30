@@ -1,6 +1,6 @@
 pipeline {
     agent any
-     
+
     triggers {
         githubPush()
     }
@@ -16,6 +16,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
+            }
+        }
+        stage('Get Current Branch') {
+            steps {
+                script {
+                    BRANCH_NAME = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
+                    echo "Current branch is: ${BRANCH_NAME}"
+                }
             }
         }
         stage('Install Dependencies') {
@@ -45,21 +53,21 @@ pipeline {
         }
         stage('Deploy to S3') {
             when {
-                branch 'release'
+                expression { BRANCH_NAME == 'release' }
             }
             steps {
                 script {
                     def awsRegion = 'ap-south-1' // e.g., 'ap-south-1'
                     def s3BucketName = 'staciatech.com'
 
-                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --delete --region ${awsRegion}"
+                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --region ${awsRegion}"
                     echo "Successfully deployed to S3://${s3BucketName}"
                 }
             }
         }
         stage('Deploy to cPanel') {
             when {
-                branch 'main'
+                expression { BRANCH_NAME == 'main' }
             }
             steps {
                 sshPublisher(
