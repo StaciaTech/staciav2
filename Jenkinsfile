@@ -3,7 +3,10 @@ pipeline {
      
     triggers {
         githubPush()
-        githubPullRequests()
+        githubPullRequests(
+        branchRestriction: 'release|main',
+        events: ['opened', 'synchronize', 'reopened', 'closed']
+    )
     }
     environment {
         CPANEL_REMOTE_DIR = '/path/to/your/cpanel/webroot/' // Define your cPanel remote directory here
