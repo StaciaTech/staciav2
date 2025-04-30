@@ -700,10 +700,10 @@ function ServicePage() {
                 <div
                   className="all-services"
                   key={i}
-                  id={eachItem.name}
-                  ref={(el) => (sectionsRef.current[eachItem.name] = el)}
+                  id={eachItem?.name}
+                  ref={(el) => (sectionsRef.current[eachItem?.name] = el)}
                 >
-                  <div className="all-service-dept-title">{eachItem.name}</div>
+                  <div className="all-service-dept-title">{eachItem?.name}</div>
                   <div className="all-service-box">
                     {eachItem?.categories?.map((data, i) => (
                       <div className="service-card" key={i}>
@@ -714,9 +714,9 @@ function ServicePage() {
                           onClick={() => {
                             window.scrollTo(0, 0);
                             navigate(
-                              `/services/${eachItem.name
+                              `/services/${eachItem?.name
                                 .split(" ")
-                                .join("-")}/${data.name.split(" ").join("-")}`
+                                .join("-")}/${data?.name.split(" ").join("-")}`
                             );
                           }}
                         >

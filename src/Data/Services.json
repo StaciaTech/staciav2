@@ -10,7 +10,7 @@
         "imageUrl": "/assets/2d-drafting.webp",
         "position": 1,
         "services": [
-          {
+          { 
             "title": "SPM",
             "description": "",
             "imageUrl": "/assets/Machine Drawing.webp",
@@ -79,7 +79,7 @@
           {
             "title": "Test Rigs",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/test rig.webp",
             "position": 2,
             "oneLine": "A Leak Test Rig is a specialized system used to detect leaks in components or assemblies to ensure product integrity, safety, and performance.",
             "whatWeDo": [
@@ -245,7 +245,7 @@
           {
             "title": "Vision System",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/Machine Assembly visualization.webp",
             "position": 4,
             "oneLine": "A Vision System automates inspection, measurement, and quality control tasks by using cameras and advanced image processing algorithms",
             "whatWeDo": [
@@ -328,7 +328,7 @@
           {
             "title": "End of Line Automation",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/Automobile-or-Automotive-SPM.webp",
             "position": 5,
             "oneLine": "End of Line Automation optimizes the final stages of production by automating tasks like packaging, labeling, inspection, and palletizing to enhance productivity and quality",
             "whatWeDo": [
@@ -413,13 +413,13 @@
       {
         "name": "CAD Engineering",
         "description": "CAD Engineering encompasses a range of services designed to enhance product development and design precision. Our expertise includes CAD Conversion, transforming legacy drawings into detailed digital formats for easy editing and integration. Product/Industrial Design focuses on creating functional, aesthetically appealing, and manufacturable products tailored to client specifications. Reverse Engineering enables us to reconstruct and improve existing products, extracting valuable design data from physical objects. Our 3D Renderings bring concepts to life, offering highly detailed visual representations for prototyping, presentations, and client approvals. This comprehensive approach streamlines product development, ensuring accuracy, efficiency, and innovation",
-        "imageUrl": "/assets/2d-drafting.webp",
+        "imageUrl": "/assets/CAD-Conversion.webp",
         "position": 2,
         "services": [
           {
             "title": "CAD conversion",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/CAD-Conversion.webp",
             "position": 1,
             "oneLine": "CAD Conversion is the process of transforming legacy documents like paper drawings, images, and PDFs into accurate, editable CAD files for modern engineering and manufacturing",
             "whatWeDo": [
@@ -485,7 +485,7 @@
           {
             "title": "Product or Industrial Design",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/product design.webp",
             "position": 2,
             "oneLine": "Product and industrial design transforms ideas into functional, ergonomic, and manufacturable products with strong aesthetics and usability at the core.",
             "whatWeDo": [
@@ -655,7 +655,7 @@
           {
             "title": "3D rendering",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/3D Rendering.webp",
             "position": 4,
             "oneLine": "3D rendering is the process of creating photo realistic or stylized visual representations of products, parts, or assemblies from 3D models.",
             "whatWeDo": [
@@ -740,13 +740,13 @@
       {
         "name": "Consultancy and Audit",
         "description": "Design consultancy and audit services offer expert guidance and evaluation throughout the product design process. We help businesses optimize product designs for functionality, manufacturability, and user experience. Our consultants provide insights into design best practices, materials, and technology, ensuring innovation and efficiency. We also conduct comprehensive design audits to assess design quality, adherence to industry standards, and compliance with safety regulations. This service aims to identify potential improvements, reduce costs, and enhance product performance. Whether developing new products or refining existing ones, our consultancy ensures that designs meet both aesthetic and functional requirements while improving overall valu",
-        "imageUrl": "/assets/2d-drafting.webp",
+        "imageUrl": "/assets/design audit.webp",
         "position": 3,
         "services": [
           {
             "title": "Design Consultancy and Audit",
             "description": "Machine drawings  provide essential details for manufacturing and assembling mechanical components. These drawings include dimensions, tolerances, material specifications, and surface finishes, enabling precise fabrication and assembly. Our machine drawing expertise spans across industries like automotive, food processing, and agriculture. We ensure that each drawing adheres to industry standards, making them suitable for production, quality checks, and maintenance. Whether it’s creating detailed part drawings or large-scale assembly layouts, our services are tailored to meet specific client needs, ensuring high accuracy and efficiency. With these drawings, manufacturers can produce components with minimal errors and achieve seamless assembly operations.",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/Design Consultation.webp",
             "position": 1,
             "oneLine": "Design consultancy and audit focuses on optimizing product designs to enhance efficiency, cost-effectiveness, and manufacturability, ensuring compliance with industry standards and regulations.",
             "whatWeDo": [
@@ -829,7 +829,7 @@
           {
             "title": "Industry Consultancy and Audit",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/Design Consultation.webp",
             "position": 1,
             "oneLine": "A comprehensive approach to optimize industrial operations, ensure compliance, and enhance productivity across workflows and systems",
             "whatWeDo": [
@@ -921,13 +921,13 @@
       {
         "name": "Embedded Hardware & Firmware",
         "description": "Design consultancy and audit services offer expert guidance and evaluation throughout the product design process. We help businesses optimize product designs for functionality, manufacturability, and user experience. Our consultants provide insights into design best practices, materials, and technology, ensuring innovation and efficiency. We also conduct comprehensive design audits to assess design quality, adherence to industry standards, and compliance with safety regulations. This service aims to identify potential improvements, reduce costs, and enhance product performance. Whether developing new products or refining existing ones, our consultancy ensures that designs meet both aesthetic and functional requirements while improving overall valu",
-        "imageUrl": "/assets/2d-drafting.webp",
+        "imageUrl": "/assets/Embedded-Systems-Development.webp",
         "position": 1,
         "services": [
           {
             "title": "Embedded Hardware & Firmware",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/Embedded-hardware-design.webp",
             "position": 1,
             "oneLine": "Custom microcontroller-based hardware and firmware solutions designed for performance, scalability, and real-time reliability",
             "whatWeDo": [
@@ -1010,7 +1010,7 @@
           {
             "title": "IoT Devices",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/IoT-Hardware-Development.webp",
             "position": 2,
             "oneLine": "Smart IoT solutions for connected products, remote monitoring, and automated control using cloud and wireless technology",
             "whatWeDo": [
@@ -1095,13 +1095,13 @@
       {
         "name": "PCB ",
         "description": " PCB Design & Development involves the creation and optimization of printed circuit boards for various applications. Our experts provide tailored solutions, from schematic capture to layout design, ensuring the highest standards of performance and manufacturability. We focus on reducing complexity, enhancing signal integrity, and optimizing component placement for cost-effective production. Additionally, we conduct thorough testing and validation to guarantee functionality, durability, and compliance with industry standards. Our comprehensive services include multi-layer design, high-speed PCB design, and prototyping for rapid market entry.",
-        "imageUrl": "/assets/2d-drafting.webp",
+        "imageUrl": "/assets/PCB-Design-and-Manufacturing.webp",
         "position": 2,
         "services": [
           {
             "title": "PCB Design",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/PCB-Design-Service.webp",
             "position": 1,
             "oneLine": "PCB Design transforms your ideas into precise, reliable, and manufacturable circuit boards for electronics applications.",
             "whatWeDo": [
@@ -1188,7 +1188,7 @@
           {
             "title": "PCB Development",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/PCB-Manufacturing.webp",
             "position": 2,
             "oneLine": "PCB Development turns your design files into fully functional, tested circuit boards ready for integration and production.",
             "whatWeDo": [
@@ -1273,13 +1273,13 @@
       {
         "name": "Electronics Product Engineering ",
         "description": " Electronics Product Engineering encompasses the entire lifecycle of electronic products, from concept and design to prototyping and production. We specialize in developing smart devices, embedded systems, and consumer electronics. Our team ensures that products are not only functional but also reliable, cost-effective, and scalable for mass production. We integrate hardware and software design, conduct rigorous testing, and provide innovative solutions that meet market demands. Our end-to-end services include circuit design, firmware development, prototyping, and product development, ensuring high-performance and compliance with regulatory standards",
-        "imageUrl": "/assets/2d-drafting.webp",
+        "imageUrl": "/assets/product design.webp",
         "position": 3,
         "services": [
           {
             "title": "Prototype development",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/Electronics-Prototyping.webp",
             "position": 1,
             "oneLine": "Prototype Development bridges the gap between concept and reality, bringing your product idea to functional life.",
             "whatWeDo": [
@@ -1362,7 +1362,7 @@
           {
             "title": "Product development",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/Electronics-Product-Design.webp",
             "position": 2,
             "oneLine": "Product Development transforms a validated prototype into a commercially viable, manufacturable, and scalable product.",
             "whatWeDo": [
@@ -1447,13 +1447,13 @@
       {
         "name": "Consultancy & Audit",
         "description": "Consultancy & Audit services focus on optimizing product designs, ensuring regulatory compliance, and improving manufacturing processes. Our team assists in product design reviews, compliance gap analysis, and obtaining necessary certifications such as CE, FCC, and UL. We offer pre-compliance testing to address potential issues early, helping clients avoid costly delays. Additionally, we conduct process audits to improve operational efficiency, reduce waste, and enhance product reliability. Our goal is to provide actionable insights and recommendations, ensuring a smooth path from design to production while meeting industry standards and maximizing product performance",
-        "imageUrl": "/assets/2d-drafting.webp",
+        "imageUrl": "/assets/Electronics-Consulting-and-Review.webp",
         "position": 4,
         "services": [
           {
             "title": "Design & Product Review Consultancy",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/Electronics-Design-Consultation.webp",
             "position": 1,
             "oneLine": "Design & Product Review Consultancy ensures your product is optimized for performance, manufacturability, and compliance",
             "whatWeDo": [
@@ -1557,7 +1557,7 @@
           {
             "title": "Manufacturing, Reliability & Process Audit",
             "description": "",
-            "imageUrl": "/assets/Machine Drawing.webp",
+            "imageUrl": "/assets/Design-Review-Services.webp",
             "position": 3,
             "oneLine": "Manufacturing, Reliability & Process Audit ensures your manufacturing processes are optimized, reliable, and cost-efficient",
             "whatWeDo": [

@@ -157,7 +157,7 @@ export default function SpecificService() {
 
   console.log("ServiceCategory:", ServiceCategory);
   console.log("SingleService:", singleService);
-
+  console.log(singleService?.oneLine, "Description")
   const [accordion, setAccordion] = useState(null);
 
   return (
@@ -197,7 +197,7 @@ export default function SpecificService() {
                   <WhatWeDoCard
                     key={i}
                     title={data?.title}
-                    desc={data?.description}
+                    desc={data?.oneLine}
                     department={params.department}
                     category={params.category}
                   />
@@ -209,7 +209,7 @@ export default function SpecificService() {
                   <WhatWeDoAccordion
                     key={i}
                     title={data?.title}
-                    desc={data?.description}
+                    desc={data?.oneLine}
                     department={params.department}
                     category={params.category}
                     i={i}
