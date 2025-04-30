@@ -21,11 +21,11 @@ pipeline {
         stage('Get Current Branch') {
             steps {
                 script {
-                    BRANCH_NAME = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
-                    echo "Current branch is: ${BRANCH_NAME}"
-                }
-            }
+            def BRANCH_NAME = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
+            echo "Current branch is: ${BRANCH_NAME}"
         }
+    }
+}
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
