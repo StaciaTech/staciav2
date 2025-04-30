@@ -6,6 +6,7 @@ pipeline {
     }
     environment {
         CPANEL_REMOTE_DIR = '/public_html/'
+        CI = 'false'
     }
     tools {
         nodejs 'Node-20.11.1'
