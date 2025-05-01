@@ -1,0 +1,370 @@
+{
+  "Departments": [
+    {
+      "name": "Mechanical",
+      "categories": [
+        {
+          "name": "Food Processing",
+          "projects": [
+            {
+              "title": "Chili Ladling Machine",
+              "mainDesc": "A battery-powered, portable chili ladling machine with a cleated belt conveyor, IP69K-rated components, and PLC/SCADA controls for automated chili handling.",
+              "mainImageUrl": "/assets/ProductPage/onedrillssm.webp",
+              "Executive-Summary": "The Stacia Corp Custom Chili Ladling Machine—delivered for Aachi Group—automates chili handling end-to-end, reducing manual labor by 70% and boosting throughput by 50% while ensuring uniform product quality and stringent hygiene compliance. Its battery-powered portability, lightweight modular frame, and IP69K-rated components enable flexible deployment and rapid, high-temperature washdowns, cutting sanitation time by 60%. Integrated PLC/SCADA controls with remote HMI support real-time monitoring and data logging, yielding a six-month payback through combined labor and energy savings.",
+              "Client-Overview": "Aachi Group, headquartered in Chennai, India, is a leading name in the food processing industry, renowned for its wide range of high-quality products that have become household staples across India and in numerous international markets.",
+              "Project Objective": "To design and develop a specialized chili ladling machine capable of efficiently handling large quantities of chili with minimal human intervention, thereby enhancing operational efficiency and ensuring consistent product quality",
+              "Challenges": [
+                {
+                  "title": "Manual Handling Limitations",
+                  "des": "Traditional manual processes were labor-intensive and posed challenges in maintaining uniformity and hygiene"
+                },
+                {
+                  "title": "Operational Efficiency",
+                  "des": "The need for a solution that could operate efficiently in high-temperature environments typical of food processing units"
+                },
+                {
+                  "title": "Space Constraints",
+                  "des": "Limited floor space necessitated a compact design without compromising functionality"
+                }
+              ],
+              "Solutions": [
+                {
+                  "title": "High Efficiency",
+                  "des": "Utilization of a directly driven food-grade plastic cleated belt conveyor system for effective chili handling"
+                },
+                {
+                  "title": "Portability",
+                  "des": "Battery-operated design allowing for easy relocation within the facility"
+                },
+                {
+                  "title": "Lightweight Construction",
+                  "des": "Optimized material selection to ensure ease of movement and installation"
+                },
+                {
+                  "title": "Space Optimization",
+                  "des": "Compact design tailored to fit within existing spatial constraints."
+                },
+                {
+                  "title": "High-Temperature Operability",
+                  "des": "Components selected to withstand the high temperatures prevalent in processing environments"
+                },
+                {
+                  "title": "Remote Operation",
+                  "des": "Integration of remote-control capabilities to allow operation from a distance, enhancing safety and convenience"
+                }
+              ],
+              "Development-Process": "Stacia Corp employed a hybrid Stage-Gate ⁽¹⁾⁻ (²) and Agile-Stage-Gate ⁽³⁾ approach to guide the project from concept through pilot deployment, ensuring rigorous decision points and rapid iteration",
+              "Stage": [
+                {
+                  "id": 1,
+                  "name": "Discovery & Ideation",
+                  "Line1": "Conducted cross-functional workshops with Aachi Group to capture chili-handling pain points, throughput targets, hygiene requirements, and spatial constraints",
+                  "Line2": "Generated multiple concepts for conveyor types, remote-control architectures, and washdown strategiesz"
+                },
+                {
+                  "id": 2,
+                  "name": "Scoping & Business Case",
+                  "Line1": "Performed market benchmarking and cost–benefit analysis to quantify labor-savings, ROI, and total cost of ownership ⁽⁴⁾.",
+                  "Line2": "Defined high-level system requirements: 0.1–1.5 m/s belt speed, 60–80 °C operability, battery runtime ≥ 4 hrs"
+                },
+                {
+                  "id": 3,
+                  "name": "Detailed Design & Simulation",
+                  "Line1": "Developed full CAD models, selecting 304 SS and FDA-approved polymers for structural and food-contact part",
+                  "Line2": "Used discrete-event simulation to validate conveyor flow, ladle timing, and thermal loads under washdown scenarios ⁽⁵⁾."
+                },
+                {
+                  "id": 4,
+                  "name": "Prototyping & Testing",
+                  "Line1": "Performance Tests: Measured throughput, ladle consistency, and remote-control responsiveness",
+                  "Line2": "Hygiene Validation: Ran 3,000 psi, 80 °C washdown cycles to verify IP69K sealing ⁽⁶⁾.",
+                  "Line3": "Reliability Trials: Simulated 8-hour continuous operation to assess motor heating and belt wear"
+                },
+                {
+                  "id": 5,
+                  "name": "Pilot Deployment & Launch",
+                  "Line1": "Deployed at Aachi Group’s Chennai facility for a 30-day onsite pilot, log-booked performance metrics, and trained operators on HMI/remote controls",
+                  "Line2": "Final acceptance achieved once throughput, consistency, and sanitation targets were met; full production rollout commenced",
+                  "Line3": "Between each gate, two-week Agile sprints were used to incorporate real-world insights rapidly, aligning with Agile-Stage-Gate best practices for manufacturing innovations ⁽⁸⁾."
+                }
+              ],
+
+              "Gate": [
+                {
+                  "id": 1,
+                  "name": "Decision",
+                  "Line1": "Evaluated initial concepts against “must-meet” criteria: strategic fit, technical feasibility, and hygiene compliance; selected cleated-belt conveyor with IP69K-rated drive motors ⁽²⁾."
+                },
+                {
+                  "id": 2,
+                  "name": "Decision",
+                  "Line1": "Presented scoped business case—including payback projection and risk assessment—to senior leadership; project approved to proceed"
+                },
+                {
+                  "id": 3,
+                  "name": "Decision",
+                  "Line1": "Reviewed design against detailed acceptance criteria (slice accuracy, jam resistance, clean-in-place efficacy) and green-lighted prototyping"
+                },
+                {
+                  "id": 4,
+                  "name": "Decision",
+                  "Line1": "Collected test data and operator feedback; iterated blade-cup geometry and control logic in two-week sprints to resolve minor jams and optimize washdown drains ⁽⁷⁾."
+                }
+              ],
+              "Impact":[
+                {
+                    "title":"Enhanced Productivity",
+                    "des":"Significant reduction in manual labor requirements and processing time."
+                },
+                {
+                    "title":"Improved Consistency",
+                    "des":"Automated ladling ensured uniform mixing and quality of chili products"
+                },
+                {
+                    "title":"Operational Flexibility",
+                    "des":"Portability and compactness allowed for versatile deployment across different processing lines"
+                },
+                {
+                    "title":"Safety and Hygiene",
+                    "des":"Remote operation minimized direct human contact, adhering to stringent hygiene standards"
+                }
+              ],
+              "Conclusion":"The collaboration between Stacia Corp and Aachi Group resulted in a technologically advanced solution that addressed specific operational challenges, leading to improved efficiency, product consistency, and workplace safety. This project exemplifies Stacia Corp's commitment to delivering customized engineering solutions that align with client needs and industry standards",
+              "References":[
+                "New Product Best Practices for Food & Beverage Industry (Stage-Gate Model)",
+                "Stages and gates in Food Processing (Stage-Gate Funnel)",
+                "Cooper, R. G. – Evolution of Agile–Stage-Gate in Manufacturing",
+                "Benefits of phase-gate for project management and development ",
+                "Automate phase-gate processes in manufacturing with digital workflows ",
+                "Hygienic design and IP69K washdown compliance overview ",
+                "Optimizing the Stage-Gate Process: Best Practices",
+                "How to take your Stage-Gate® process to the next level (flexible, “fuzzy” gates)"
+              ],
+              "Client-Overview2":"Aachi Group, founded in 1995 by Mr. A.D. Padmasingh Isaac, is headquartered in Chennai and recognized as India’s leading spice and condiment manufacturer, offering over 200 products and 550 SKUs across more than 10 lakh retail outlets in 231 countries citeturn0search0turn0search1. The company operates a state-of-the-art facility in Keel Ayyanabakkam, processing up to 120 metric tonnes of spice powders and mixes daily and employing over 2,000 staff, underscoring its scale in the FMCG sector citeturn0search8. In March 2025, Aachi Group was honoured with the Outstanding FMCG Brand Award at the Economic Times Achievers Awards, reflecting its commitment to quality and innovation .",
+              "Project-Objective":"The primary objective was to mechanize the chili ladling and mixing operations to eliminate labour-intensive manual processes, ensure uniform product quality, and integrate with existing production lines without expanding the facility footprint. Secondary goals included designing for high-temperature environments (60–80 °C), complying with stringent hygiene standards (IP69K), and enabling remote-controlled operation for enhanced safety and flexibility citeturn2search0",
+              "Challenges2":[
+                {
+                    "title":"Manual Labor Dependence",
+                    "des":"Traditional chili handling required significant human effort, leading to inconsistent mixing and high labour costs"
+                },
+                {
+                    "title":"Hygiene & Washdown",
+                    "des":"Equipment had to endure frequent, high-pressure washdowns at temperatures up to 80 °C without microbial harbourage"
+                },
+                {
+                    "title":"Space Constraints",
+                    "des":"The processing floor’s limited area demanded a compact, mobile solution that could be repositioned as needed"
+                },
+                {
+                    "title":"Digital Integration",
+                    "des":"Seamless data logging, real-time monitoring, and remote diagnostics had to be supported via PLC/SCADA systems citeturn4search0turn4search6"
+                }
+              ],
+              "Solution":[
+                {
+                    "name":"Salient Features",
+                    "data":[
+                        {
+                            "title":"High Efficiency & Throughput",
+                            "des":"A directly driven, food-grade plastic cleated belt conveyor powered by an IP69K-rated drum motor minimizes slippage and maximizes chili handling speed citeturn3search2."
+                        },
+                        {
+                            "title":"Portability & Lightweight Design",
+                            "des":"Optimized stainless-steel and FDA-approved polymer framing yields a battery-operated, remote-controlled module weighing under 150 kg for easy redeployment citeturn3search9"
+                        },
+                        {
+                            "title":"Compact Footprint",
+                            "des":"The machine’s 1 × 0.8 m footprint fits between existing lines without requiring additional floor space"
+                        },
+                        {
+                            "title":"High-Temperature Operability",
+                            "des":"Heat-resistant motors and seals operate reliably in ambient process temperatures up to 80 °C "
+                        },
+                        {
+                            "title":"IP69K Hygiene Compliance",
+                            "des":"All wetted parts and enclosures meet IP69K ingress protection, enabling 3,000 psi washdowns and preventing microbial harbourage "
+                        },
+                        {
+                            "title":"Remote PLC/SCADA Controlt",
+                            "des":"A Mitsubishi MELSEC Q-series PLC with GOT2000 HMI touchscreen manages belt speed, ladling cycles, and logs process data for SCADA integration."
+                        },
+                        {
+                            "title":"Modularity & Scalability",
+                            "des":"Plug-and-play conveyor and ladling modules allow rapid reconfiguration or capacity expansion with minimal downtime"
+                        },
+                        {
+                            "title":"Ease of Maintenance",
+                            "des":": Quick-release belts and a clean-in-place design reduce maintenance and sanitation time by over 60%."
+                        },
+                        {
+                            "title":"Energy Efficiency",
+                            "des":"Encapsulated drum motors and high-efficiency gearboxes cut power loss to under 10%, supporting six-month payback via utility and labour savings"
+                        },
+                        {
+                            "title":"Safety & Compliance",
+                            "des":"Emergency-stop interlocks, guarded moving parts, and adherence to FSSAI and ISO 22000 standards ensure operator safety and regulatory compliance."
+                        }
+                    ]                 
+                }
+              ],
+              "Technical-Implementation":[
+                {
+                    "title":"Conveyor Drive",
+                    "des":"Van der Graaf stainless-steel SSV Series drum motor with IP69K sealing drives a ThermoDrive ZeroSplice belt at adjustable speeds (0.1–1.5 m/s) for gentle chili handling"
+                },
+                {
+                    "title":"Frame & Materials",
+                    "des":"304 stainless steel structural frame and FDA-approved polymer belt cups resist corrosion and enable washdowns without disassembly"
+                },
+                {
+                    "title":"Controls Architecture",
+                    "des":"MELSEC Q-series PLC interfaced with VFDs controls belt motors and ladle actuators; GOT2000 HMI provides operator interface; OPC UA links to plant SCADA for remote monitoring"
+                },
+                {
+                    "title":"Remote Interface",
+                    "des":"A tablet-based wireless app modelled on robotic pick-and-place controls offers intuitive operation from a safe distance"
+                }
+              ],
+              "Impact & Benefits":[
+                {
+                    "title":"Labor Reduction",
+                    "des":"Automated ladling cut manual labor by 70%, freeing staff for higher-value tasks and reducing labor costs by 50%."
+                },
+                {
+                    "title":"Throughput Increase",
+                    "des":"Processing capacity increased by 50%, enabling 1.5× more chili to be handled per shift without additional operators"
+                },
+                {
+                    "title":"Consistency & Quality",
+                    "des":"Uniform belt-driven mixing eliminated batch-to-batch variability, improving product mouthfeel and color uniformity"
+                },
+                {
+                    "title":"Sanitation Efficiency",
+                    "des":"IP69K-rated design and clean-in-place reduced sanitation cycles by 60%, slashing downtime and ensuring compliance with FSSAI guidelines."
+                },
+                {
+                    "title":"Flexibility & Scalability",
+                    "des":"Portable, modular design allowed redeployment across multiple lines with under 2 hours of setup time, maximizing asset utilization"
+                },
+                {
+                    "title":"Energy Savings",
+                    "des":"Optimized drum motors and VFD control yielded a 15% reduction in power draw, achieving ROI within six months through combined energy and labor savings"
+                },
+                {
+                    "title":"Data-Driven Operations",
+                    "des":"Real-time data logging and remote diagnostics enabled proactive maintenance, reducing unplanned downtime by 40%"
+                }
+              ],
+              "Conclusion2":"By integrating advanced hygienic conveyor technologies from Intralox and Van der Graaf, high-performance PLC/SCADA control from Mitsubishi Electric, and modular design principles, Stacia Corp delivered a turnkey chili ladling solution that transforms Aachi Group’s operations with enhanced efficiency, safety, and scalability. This project exemplifies how strategic engineering partnerships can drive sustainable automation in the food industry, setting a new benchmark for portable, high-temperature, and fully connected processing equipment"
+            },
+            {
+              "title": "Precision Slicing Machine",
+              "mainDesc": ": A compact, IP69K-rated machine for slicing up to five artisan bread loaves simultaneously with ultra-fine thickness control (3 mm upward).",
+              "mainImageUrl": "/assets/ProjectPage/ismart.webp"
+            }
+          ]
+        },
+
+        {
+          "name": "Agri-Processing",
+          "projects": [
+            {
+              "id": 3,
+              "title": "Spinach Cleaning Machine for Nalla Keerai",
+              "mainDesc": "A portable, battery-powered machine for washing and drying 25 kg of spinach per cycle, with a recirculating water bath and IP69K-rated components",
+              "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp"
+            },
+            {
+              "id": 4,
+              "title": "Tamarind Pod Breaking Machine",
+              "mainDesc": "An automated machine with a silent pod breaker, husk-separating fan, and conveyor belt for efficient tamarind pulp processing.",
+              "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp"
+            }
+          ]
+        },
+        {
+          "name": "Waste Management",
+          "projects": [
+            {
+              "id": 3,
+              "title": "Baling Machine for Greater Chennai Corporation (GCC)",
+              "mainDesc": "A hydraulic, battery-powered vertical baler for compressing mixed waste (plastic, paper, cardboard) into cubes, achieving 75% volume reduction",
+              "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp"
+            }
+          ]
+        },
+        {
+          "name": "Kitchen Appliances",
+          "projects": [
+            {
+              "id": 3,
+              "title": "Butterfly 3-Burner Stove",
+              "mainDesc": "A 3-burner stove with toughened glass tops, high-efficiency brass burners, ergonomic knobs, and safety features like anti-skid feet, designed for modern kitchens",
+              "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Electronics",
+      "categories": [
+        {
+          "name": "Consumer Electronics",
+          "projects": [
+            {
+              "title": "Stacia Connect S Speaker",
+              "mainDesc": "A retro-inspired smart speaker with Alexa and Google Assistant, Bluetooth/Aux streaming, FM radio, and custom DSP tuning for high-fidelity sound in a compact design",
+              "mainImageUrl": "/assets/ProjectPage/Smart implementation.webp"
+            }
+          ]
+        },
+        {
+          "name": "IoT",
+          "projects": [
+            {
+              "title": "Stacia Smart Furniture",
+              "mainDesc": "Multifunctional furniture with embedded AI assistant (Alexa/Google SDKs), ceramic heater, Qi wireless charging, and motorized pop-up sockets, designed for modern living spaces",
+              "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp"
+            },
+            {
+              "title": "Stacia Child Tracking System",
+              "mainDesc": "A wearable GPS/eSIM tracking device with geofencing, SOS alerts, finder lights, remote selfie capture, and multi-tag support for children, pets, or assets",
+              "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp"
+            },
+            {
+              "title": "HydroGen Smart Bottle",
+              "mainDesc": "A smart bottle with dual temperature control (heating/cooling), Bluetooth-enabled hydration tracking, LED indicators, a 5000 mAh battery, and eco-friendly zero-CFC technology.",
+              "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tech",
+      "categories": [
+        {
+          "name": "Pest Contol",
+          "projects": [
+            {
+              "title": "Envu",
+              "mainDesc": "A platform connecting manufacturing, fabricating, and machining vendors with OEMs, facilitating seamless vendor selection, order tracking, and project management through a user-centric interface",
+              "mainImageUrl": "/assets/ProjectPage/AI chatbot.webp"
+            }
+          ]
+        },
+        {
+          "name": "Agri-Tech",
+          "projects": [
+            {
+              "title": "EDIFAI",
+              "mainDesc": "Creating an AI-powered customer support chatbot.A procurement ERP tool for IDHAYAM, linked to Indian agricultural markets, streamlining supply chain processes with data-driven insights and automation",
+              "mainImageUrl": "/assets/ProjectPage/AI chatbot version.webp"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

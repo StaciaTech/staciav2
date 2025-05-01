@@ -9,7 +9,7 @@
           "department": "Electronics Sector",
           "title": "Chili Ladling Machine",
           "backgroundImage": "/assets/ChilliBackground.png",
-          "imageURL": "/assets/caseStudy-1.webp",
+          "imageURL": "/assets/ProductPage/chilli-lading-machine.webp",
           "overview": {
             "overviewtitle": "Introduction",
             "description": "The Chili Ladling Machine project was initiated in 2020 and completed within two months with the primary objective of automating the labor-intensive process of ladling chili. This project marked the first major endeavour for Stacia and was developed exclusively for the Aachi Group, a leading spice manufacturer. The machine was designed to handle large quantities of chili efficiently and minimize human intervention. This machine is capable of handling large quantities of chili with minimal human intervention. The chili ladling machine utilizes a food-grade plastic cleated belt conveyor to transport chili from the ground to a designated area. The conveyor system is designed to gently move and mix the chili while preventing excessive breakage. The machine operates on a continuous loop, with the chili being picked up from one location and returned to the same spot after processing. This innovative approach eliminates the need for manual handling and ensures efficient and uniform processing."
@@ -153,7 +153,7 @@
           "department": "Electronics Sector",
           "title": "Mechanization and Precision Sowing",
           "backgroundImage": "/assets/singlepage-1.webp",
-          "imageURL": "/assets/caseStudy-2.webp",
+          "imageURL": "/assets/ProjectPage/Mechanization and Precision Sowing.webp",
           "overview": {
             "overviewtitle": "Mechanization and Precision Sowing in Sesame Cultivation in India",
             "description": "India is one of the largest producers of sesame, with cultivation spread across various states under diverse climatic conditions such as summer, rainfed, cold weather, and rain fallow regions. Approximately 1.8 million hectares of land are used for sesame cultivation each year. However, the average yield remains less than 500 kg per acre due to outdated farming practices such as broadcasting. Most farmers use the traditional broadcasting method for sowing, where 2 kg of sesame seeds are scattered per acre. This leads to uneven distribution, lower germination rates, and higher labor costs."
@@ -292,7 +292,7 @@
           "department": "Electronics Sector",
           "title": "Advanced Precision Sowing System",
           "backgroundImage": "/assets/singlepage-1.webp",
-          "imageURL": "/assets/caseStudy-3.webp",
+          "imageURL": "/assets/ProjectPage/Mechanization and Precision Sowing.webp",
           "overview": {
             "overviewtitle": "Advanced Precision Sowing in Sesame Cultivation",
             "description": "Building on previous efforts, this project aimed to develop an advanced precision sowing system for sesame cultivation, incorporating IoT and automation for real-time monitoring and control. Targeting India's 1.8 million hectares of sesame fields, the system addresses the inefficiencies of traditional broadcasting methods, which yield less than 500 kg per acre due to uneven seed distribution and high labor costs."
