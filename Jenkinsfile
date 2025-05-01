@@ -1,21 +1,29 @@
-import org.jenkinsci.plugins.github.pullrequest.events.GitHubPREvent
-import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRNewCommitEvent
-import org.jenkinsci.plugins.github.pullrequest.events.GitHubPROpenedEvent
-import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRSynchronizeEvent
-import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRReopenedEvent
-import org.jenkinsci.plugins.github.pullrequest.events.GitHubPRClosedEvent
-
 pipeline {
     agent any
 
+    triggers {
+        githubPush()
+    }
     environment {
         CPANEL_REMOTE_DIR = '/public_html/'
+        CI = 'false'
+    }
+    tools {
+        nodejs 'Node-20.11.1'
     }
 
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
+            }
+        }
+        stage('Get Current Branch') {
+            steps {
+                script {
+                    env.BRANCH_NAME = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
+                    echo "Current branch is: ${env.BRANCH_NAME}"
+                }
             }
         }
         stage('Install Dependencies') {
@@ -45,21 +53,21 @@ pipeline {
         }
         stage('Deploy to S3') {
             when {
-                branch 'release'
+                environment name: 'BRANCH_NAME', value: 'release'
             }
             steps {
                 script {
-                    def awsRegion = 'ap-south-1'
+                    def awsRegion = 'ap-south-1' // e.g., 'ap-south-1'
                     def s3BucketName = 'staciatech.com'
 
-                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --region ${awsRegion}"
+                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --delete --region ${awsRegion}"
                     echo "Successfully deployed to S3://${s3BucketName}"
                 }
             }
         }
         stage('Deploy to cPanel') {
             when {
-                branch 'main'
+                environment name: 'BRANCH_NAME', value: 'main'
             }
             steps {
                 sshPublisher(
@@ -86,21 +94,4 @@ pipeline {
             }
         }
     }
-triggers {
-    githubPush() // Trigger on any push
-    githubPullRequests(
-        branchRestriction: [
-            includes: [
-                'release',
-                'main'
-            ]
-        ],
-        events: [
-            new GitHubPROpenedEvent(),
-            new GitHubPRSynchronizeEvent(),
-            new GitHubPRReopenedEvent(),
-            new GitHubPRClosedEvent()
-        ]
-    )
-}
 }
