@@ -41,7 +41,7 @@
   ],
   "founders": [
     {
-      "imageUrl":"/assets/LeaderPage/lakshman.png",
+      "imageUrl":"/assets/LeaderPage/Mr-Lakshman.webp",
       "name": "Mr Lakshman",
       "designation": "Chief Operational Officer",
       "file": {
@@ -51,7 +51,7 @@
 
     },
      {
-      "imageUrl":"/assets/LeaderPage/sarabesh.png",
+      "imageUrl":"/assets/LeaderPage/Mr-Sarabesh.webp",
       "name": "Mr Sarabesh",
       "designation": "Chief Executive Officer",
       "file": {
@@ -60,7 +60,7 @@
       
     },
      {
-      "imageUrl":"/assets/LeaderPage/revanth.png",
+      "imageUrl":"/assets/LeaderPage/Mr-Revanth.webp",
       "name": "Mr Revanth",
       "designation": "Chief Technical Officer",
       "file": {
