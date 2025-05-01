@@ -112,15 +112,14 @@
   transition: background 0.3s;
   font-weight: 500;
 }
-<<<<<<< HEAD
-
 .article-item-tab:hover {
   background-color: #ddd;
 }
-
 .article-item-tab-active {
+  background-color: #E6F0FF;
+  color: #0056D2;
+  font-weight: bold;
 }
->>>>>>> 526aff1a1e80f76b8c9baa52f21d7c3793ef1360
 .subcategory-separator {
   border: none;
   border-top: 1px solid #ccc;
