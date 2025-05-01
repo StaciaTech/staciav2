@@ -20,40 +20,32 @@
   position: relative;
   width: fit-content;
 }
-
 .sub-category-tab {
   padding-left: 2rem;
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   font-size: 0.9rem;
-   margin-left: 60px; 
+   margin-left: 60px;
 }
-
 .dept-head{
-    color: #0047ff;
+    color: #0047FF;
     font-family: EuclidSemibold;
     font-size: 1.5rem;
     cursor: pointer;
     display: flex;
    margin-left: 98px;
    padding: 10px;
-
 }
-
-
 .department-tab {
   position: relative;
   display: flex;
   align-items: center;
   gap: 0.3rem;
- 
 }
-
 .arrow-icon {
   font-size: 0.9rem;
   margin-left: 4px;
-  color: #0056d2;
+  color: #0056D2;
 }
-
 .project-item-tabs-container {
   display: flex;
   flex-wrap: wrap;
@@ -63,45 +55,38 @@
 .product-dep-name{
   font-family: EuclidSemibold;
     font-size: 2rem;
-    color: #c5c3c9;
-    /* border-bottom: 1px solid #e5e5e5; */
+    color: #C5C3C9;
+    /* border-bottom: 1px solid #E5E5E5; */
     padding-bottom: 1rem 2rem;
     padding: 15px 100px;
 }
 .article-item-tab {
   padding: 0.5rem 1rem;
-  background-color: #f0f0f0;
+  background-color: #F0F0F0;
   border-radius: 6px;
   transition: background 0.3s;
   font-weight: 500;
 }
-
 .article-item-tab:hover {
   background-color: #ddd;
 }
-
 .article-item-tab-active {
-  background-color: #e6f0ff;
-  color: #0056d2;
+  background-color: #E6F0FF;
+  color: #0056D2;
   font-weight: bold;
 }
-
 .subcategory-separator {
   border: none;
   border-top: 1px solid #ccc;
   margin: 1.5rem 1rem 1rem;
 }
-
-
-
 .sub-category-tab {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   font-size: 0.9rem;
   border-radius: 4px;
 }
-
 .sub-category-tab:hover {
-  background-color: #e0e0e0;
+  background-color: #E0E0E0;
 }
 .department-tab {
   position: relative;
@@ -109,72 +94,61 @@
   align-items: center;
   gap: 0.3rem;
 }
-
 .arrow-icon {
   font-size: 0.9rem;
   margin-left: 4px;
-  color: #0056d2;
+  color: #0056D2;
 }
-
 .project-item-tabs-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
 }
-
 .article-item-tab {
   padding: 0.5rem 1rem;
-  background-color: #f0f0f0;
+  background-color: #F0F0F0;
   border-radius: 6px;
   transition: background 0.3s;
   font-weight: 500;
 }
+<<<<<<< HEAD
 
 .article-item-tab:hover {
   background-color: #ddd;
 }
 
 .article-item-tab-active {
-  background-color: #e6f0ff;
-  color: #0056d2;
-  font-weight: bold;
 }
-
+>>>>>>> 526aff1a1e80f76b8c9baa52f21d7c3793ef1360
 .subcategory-separator {
   border: none;
   border-top: 1px solid #ccc;
   margin: 1.5rem 1rem 1rem;
 }
-
 .subcategory-container {
   display: flex;
   flex-wrap: wrap;
-  
   padding: 15px 2rem 1rem;
 }
-
 .sub-category-tab {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   font-size: 0.9rem;
   border-radius: 4px;
 }
-
 .sub-category-tab:hover {
-  background-color: #e0e0e0;
+  background-color: #E0E0E0;
 }
-
-
 .project-section {
   width: 100%;
   min-height: 100vh;
-  /* background-color: #0d0225; */
+  /* background-color: #0D0225; */
 }
 .project-department-container {
   margin: 0rem 5rem;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #E5E5E5;
   position: relative;
 }
 .project-hidden-departments {
@@ -185,7 +159,7 @@
   border-radius: 0.5rem;
   background: #fff;
   width: 12rem;
-  filter: drop-shadow(4px 4px 4px #cbcbcb);
+  filter: drop-shadow(4px 4px 4px #CBCBCB);
 }
 .project-item-tabs-container {
   display: flex;
@@ -207,11 +181,11 @@
   cursor: pointer;
   /* overflow: hidden; */
   padding-left: 1rem;
-  background-color: #eaeffc;
-  border-left: 5px solid #0047ff;
+  background-color: #EAEFFC;
+  border-left: 5px solid #0047FF;
 }
 .project-active-dept {
-  color: #0047ff;
+  color: #0047FF;
   font-family: EuclidSemibold;
   font-size: 2rem;
   cursor: pointer;
@@ -228,7 +202,6 @@
   justify-content: center;
 } */
 }
-
 .projecct-title {
   color: #fff;
   font-size: 120px;
@@ -237,7 +210,6 @@
   line-height: normal;
   position: relative;
 }
-
 @media screen and (max-width: 1024px) {
   .project-page-hero-section {
     width: 100%;
@@ -247,7 +219,7 @@
     margin: 0rem 1.5rem;
     padding-top: 3rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #E5E5E5;
     position: relative;
   }
   .project-active-dept {

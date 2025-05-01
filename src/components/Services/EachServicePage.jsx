@@ -231,13 +231,13 @@ function EachServicePage() {
         <div className="each-service-section1">
           <div className="each-service-section1-img">
             <img
-              src="https://media.istockphoto.com/id/1977348709/photo/laughing-young-businesswoman-talking-with-colleagues-in-an-office-hallway.webp?a=1&b=1&s=612x612&w=0&k=20&c=1QrGBVFBZyfg0zm_EETpeG49dbAjIPDEOxKRtf7L16Q="
+              src={singleService?.imageUrl || "No image available."}
               alt=""
             />
           </div>
           <div className="each-service-section1-content">
             <div>Overview</div>
-            <p>{singleService?.description || "No description available."}</p>
+            <p>{singleService?.oneLine || "No description available."}</p>
           </div>
         </div>
         <div className="each-service-howWeDo-section">
@@ -250,7 +250,7 @@ function EachServicePage() {
         <div className="each-service-howWeDo-section-mob">
           <HorizontalScrollMobile singleServiceWhatweDo={singleService?.whatWeDo || []} />
         </div>
-        <div className="each-service-card-section">
+        {/* <div className="each-service-card-section">
           {cardsData.map((eachItem, i) => (
             <div key={i} className="each-service-card">
               <div>
@@ -262,7 +262,7 @@ function EachServicePage() {
               <p>{eachItem.des}</p>
             </div>
           ))}
-        </div>
+        </div> */}
         <FAQComp />
       </div>
       <div>

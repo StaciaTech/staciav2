@@ -76,9 +76,10 @@ function App() {
         />
         <Route
           // path="/case-study/:department/:title (home) "
-          path="/case-study/single-caseStudy/:id" //-------------
+          path="/case-study/single-caseStudy/:id" //------------- 
           element={<SingleCaseStudy />}
         />
+        
         <Route
           // path="/case-study/:department/:title (direct navigation from navbar)"
           path="/case-study/:department/:id" //-------------
@@ -98,9 +99,8 @@ function App() {
         />
         <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/case-study/:department" element={<CaseStudy />} />
-
-        <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/case-study/:department:id" element={<CaseStudy />} />
+
         <Route path="/services" element={<ServicePage />} />
         <Route path="/services/:department" element={<ServicePage />} />
         <Route

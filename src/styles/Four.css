@@ -3,32 +3,27 @@
   margin-top: 60px;
   margin-bottom: 5%;
 }
-
 .four2 {
   width: 90%;
   margin: 0 auto;
 }
-
 .four-text {
   /* color: #E7E7E7; */
-  color: #6b6084;
+  color: #6B6084;
   font-size: 60px;
   font-weight: 600;
   font-family: EuclidSemibold;
 }
-
 .sty {
   color: #0047FF;
   font-weight: 600;
   padding: 0.5rem 0;
   width: fit-content;
 }
-
 .four-card {
   margin-top: 40px;
   cursor: pointer;
 }
-
 .four-img {
   width: 100%;
   position: relative;
@@ -55,7 +50,6 @@
   background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(200, 200, 200, 0.1));
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(20px);
-
   width: 100%;
   padding: 0.5em 2rem;
   justify-content: flex-start;
@@ -70,16 +64,12 @@ border-radius: 20px;
   padding:10px 0px;
   /* margin-right: 20px; */
 }
-
-
 .four-pos {
   color: #0D0225;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 1rem;
 }
-
-
 .four-name {
   color: #0D0225;
   font-size: 20px;
@@ -98,7 +88,6 @@ border-radius: 20px;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 @media (max-width: 1024px) {
   .four-text {
     font-size: 36px;
@@ -141,7 +130,6 @@ border-radius: 20px;
   .four-name {
     font-size: 16px;
   }
-
   .four-pos {
     font-size: 12px;
   }

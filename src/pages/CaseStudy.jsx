@@ -19,20 +19,7 @@ const data = [
     image: { imageUrl: "/assets/caseStudy-1.webp" },
     category: "Mechanical",
   },
-  {
-    id: "Case Study-2",
-    title: "Chili Ladling Machine-2",
-    description: "Analysis of mechanical case study.",
-    image: { imageUrl: "/assets/caseStudy-2.webp" },
-    category: "Electronics",
-  },
-  {
-    id: "Case Study-3",
-    title: "Chili Ladling Machine-3",
-    description: "Analysis of mechanical case study.",
-    image: { imageUrl: "/assets/caseStudy-3.webp" },
-    category: "Tech",
-  },
+  
 ];
 
 export default function CaseStudy() {

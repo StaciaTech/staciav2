@@ -2,14 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaEnvelope, FaLinkedinIn } from "react-icons/fa";
-
 export default function FourCard({ data, path }) {
   const navigate = useNavigate();
 
   return (
     <div className="four-card">
       <div className="four-pos test-seclection-blue">{data.pos}</div>
-
       <div className="four-img">
         <img
           src={data.img}
@@ -25,12 +23,10 @@ export default function FourCard({ data, path }) {
             <a href={data.proId} target="_blank" rel="noopener noreferrer">
               <div className="leader-icon-container">
                 <FaLinkedinIn className="footer-linkedin-icon" />
-               
               </div>
             </a>
           </div>
           <div className="icon-name">LinkedinIn</div>
-
           {/* Email Icon */}
           <div>
             <a href={`mailto:${data.email}`} target="/blank">
@@ -42,7 +38,6 @@ export default function FourCard({ data, path }) {
           <div className="icon-name">Email</div>
         </div>
       </div>
-
       <div className="four-para">
         <div className="four-name test-seclection-blue">{data.name}</div>
         <p className="test-seclection-blue">{data.about}</p>
@@ -50,3 +45,15 @@ export default function FourCard({ data, path }) {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
