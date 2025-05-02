@@ -1,6 +1,6 @@
 pipeline {
     agent any
-     
+
     triggers {
         githubPush()
     }
@@ -12,10 +12,31 @@ pipeline {
         nodejs 'Node-20.11.1'
     }
 
-    stages {
+   stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                script {
+                    checkout([
+                        $class: 'GitSCM',
+                        branches: [[name: env.GIT_BRANCH]], // Try using the GIT_BRANCH environment variable
+                        doGenerateSubmodules: false,
+                        extensions: [],
+                        gitTool: 'git',
+                        submoduleCfg: [],
+                        userRemoteConfigs: [[
+                            credentialsId: 'github-pat', // Replace with your GitHub credentials ID
+                            url: 'https://github.com/StaciaTech/staciav2.git'
+                        ]]
+                    ])
+                }
+            }
+        }
+        stage('Get Current Branch') {
+            steps {
+                script {
+                    env.BRANCH_NAME = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
+                    echo "Current branch is: ${env.BRANCH_NAME}"
+                }
             }
         }
         stage('Install Dependencies') {
@@ -45,11 +66,11 @@ pipeline {
         }
         stage('Deploy to S3') {
             when {
-                branch 'release'
+                environment name: 'BRANCH_NAME', value: 'release'
             }
             steps {
                 script {
-                    def awsRegion = 'ap-south-1' // e.g., 'ap-south-1'
+                    def awsRegion = 'ap-south-1'
                     def s3BucketName = 'staciatech.com'
 
                     sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --delete --region ${awsRegion}"
@@ -59,7 +80,7 @@ pipeline {
         }
         stage('Deploy to cPanel') {
             when {
-                branch 'main'
+                environment name: 'BRANCH_NAME', value: 'main'
             }
             steps {
                 sshPublisher(
