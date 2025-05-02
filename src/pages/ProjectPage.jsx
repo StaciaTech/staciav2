@@ -347,107 +347,293 @@
 // export default ProjectPage;
 
 
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+// import { useNavigate, useParams } from "react-router-dom";
+// import NavBar from "../components/NavBar";
+// import Footer from "../components/Footer";
+// import "../styles/projects.css";
+// import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
+// import SideBar from "../components/SideBar";
+// import MobileFooter from "../components/MobileFooter";
+// import { IoIosArrowDown } from "react-icons/io";
+// import Star from "../components/Star";
+// import ProjectsData from "../Data/ProjectsData.json";
+// import ReUsableArticle2 from "../components/ReUsableComp/ReUsableArticle2";
+
+// function ProjectPage() {
+//   const params = useParams();
+//   const navigate = useNavigate();
+//   const [projectsData, setProjectsData] = useState([]);
+//   const [activeDepartment, setActiveDepartment] = useState("All");
+//   const [activeCategory, setActiveCategory] = useState("");
+//   const [departmentObj, setDepartmentObj] = useState(null);
+//   const [foundProjectsObj, setFoundProjectsObj] = useState([]);
+
+//   // Load projects data
+//   useEffect(() => {
+//     const departments = ProjectsData.Departments || [];
+//     setProjectsData(departments);
+//     console.log("Loaded projectsData:", departments);
+//   }, []);
+
+//   // Set active department from params or click
+//   useEffect(() => {
+//     console.log("Params detected:", params);
+//     if (params.department) {
+//       setActiveDepartment(params.department);
+//       console.log("Set activeDepartment from params:", params.department);
+//     }
+//   }, [params]);
+
+//   // Set department object and default category
+//   useEffect(() => {
+//     console.log("Active department changed to:", activeDepartment);
+//     if (activeDepartment !== "All") {
+//       const dept = projectsData.find((d) => d.name === activeDepartment);
+//       setDepartmentObj(dept);
+//       if (dept?.categories?.length && !params.category) {
+//         setActiveCategory(dept?.categories[0].name);
+//         console.log("Set default category:", dept.categories[0].name);
+//       }
+//     } else {
+//       setDepartmentObj(null);
+//       setActiveCategory("");
+//     }
+//   }, [activeDepartment, projectsData, params]);
+
+//   // Set found projects based on active department and category
+//   useEffect(() => {
+//     console.log("Updating foundProjectsObj for activeDepartment:", activeDepartment, "and activeCategory:", activeCategory);
+//     if (activeDepartment === "All") {
+//       // Group projects by department, preserving category context
+//       const allProjectsByDept = projectsData.map((dept) => {
+//         const projectsWithCategory = dept.categories.flatMap((cat) =>
+//           cat.projects.map((project) => ({
+//             ...project,
+//             originalDepartment: dept.name,
+//             originalCategory: cat.name,
+//           }))
+//         );
+//         return {
+//           name: dept.name,
+//           projects: projectsWithCategory,
+//         };
+//       });
+//       setFoundProjectsObj(allProjectsByDept);
+//       console.log("All projects grouped by department:", allProjectsByDept);
+//     } else if (activeCategory && departmentObj) {
+//       const cat = departmentObj.categories.find(
+//         (item) => item.name === activeCategory
+//       );
+//       const deptProjects = [
+//         {
+//           name: activeDepartment,
+//           projects: cat?.projects.map((project) => ({
+//             ...project,
+//             originalDepartment: activeDepartment,
+//             originalCategory: activeCategory,
+//           })) || [],
+//         },
+//       ];
+//       setFoundProjectsObj(deptProjects);
+//       console.log("Department projects set:", deptProjects);
+//     } else {
+//       setFoundProjectsObj([]);
+//       console.log("No projects set, foundProjectsObj is empty");
+//     }
+//   }, [activeCategory, departmentObj, projectsData, activeDepartment]);
+
+//   // Handle project click to navigate with department and category
+//   const handleProjectClick = (project) => {
+//     const department = project.originalDepartment || activeDepartment;
+//     const category = project.originalCategory || activeCategory;
+//     navigate(`/project/${department}/${category}/${project.id || project.title}`);
+//   };
+
+//   return (
+//     <>
+//       <div className="nav_style">
+//         <NavBar />
+//         <SideBar />
+//       </div>
+//       <div className="project-page-hero-section">
+//         <div>
+//           <span>Projects</span>
+//           <Star />
+//         </div>
+//       </div>
+//       {/* Department Tabs */}
+//       <div className="project-item-tabs-container">
+//         {["All", ...projectsData.map((d) => d.name)].map((deptName, idx) => (
+//           <div
+//             key={idx}
+//             className={`article-item-tab pointer department-tab ${
+//               activeDepartment === deptName ? "article-item-tab-active" : ""
+//             }`}
+//             onClick={() => {
+//               console.log("Clicked department:", deptName);
+//               setActiveDepartment(deptName);
+//               setActiveCategory("");
+//               navigate(`/project/${deptName}`);
+//             }}
+//           >
+//             {deptName}
+//             {/* {activeDepartment === deptName && deptName !== "All" && 
+//             (<IoIosArrowDown className="arrow-icon" />)
+//               } */}
+//           </div>
+//         ))}
+//       </div>
+//       {/* Projects List */}
+//       <div>
+//         {foundProjectsObj.length > 0 ? (
+//           foundProjectsObj.map((dept, index) => (
+//             <div key={index} className="department-section">
+//               <h2 className="product-dep-name">{dept.name}</h2>
+//               <hr
+//                 className="department-separator"
+//                 style={{
+//                   width: "90%",
+//                   marginLeft: "100px",
+//                   backgroundColor: "#E5E5E5",
+//                   opacity: 0.3,
+//                 }}
+//               />
+//               {/* Subcategory Tabs - Show only for the selected department */}
+//               {activeDepartment !== "All" &&
+//                 dept.name === activeDepartment &&
+//                 departmentObj?.categories?.length > 0 && (
+//                   <div className="subcategory-container">
+//                     {departmentObj.categories.map((cat, i) => (
+//                       <div
+//                         key={i}
+//                         className={`article-item-tab pointer sub-category-tab ${
+//                           cat.name === activeCategory
+//                             ? "article-item-tab-active"
+//                             : ""
+//                         }`}
+//                         onClick={() => {
+//                           setActiveCategory(cat.name);
+//                           navigate(`/project/${activeDepartment}/${cat.name}`);
+//                         }}
+//                       >
+//                         {cat.name}
+//                       </div>
+//                     ))}
+//                   </div>
+//                 )}
+//               {dept.projects.length > 0 ? (
+//                 <ReUsableArticle2
+//                   data={dept.projects}
+//                   path={`/project/${dept.name}/${activeCategory}`}
+//                   onProjectClick={handleProjectClick}
+//                 />
+//               ) : (
+//                 <p>No projects available for {dept.name}.</p>
+//               )}
+//             </div>
+//           ))
+//         ) : (
+//           <p>No projects found.</p>
+//         )}
+//       </div>
+//       <Footer />
+//       <MobileFooter />
+//     </>
+//   );
+// }
+
+// export default ProjectPage;
+
+
+import React, { useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/projects.css";
-import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
+import ReUsableArticle2 from "../components/ReUsableComp/ReUsableArticle2";
 import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
 import { IoIosArrowDown } from "react-icons/io";
 import Star from "../components/Star";
 import ProjectsData from "../Data/ProjectsData.json";
-import ReUsableArticle2 from "../components/ReUsableComp/ReUsableArticle2";
 
 function ProjectPage() {
   const params = useParams();
   const navigate = useNavigate();
-  const [projectsData, setProjectsData] = useState([]);
-  const [activeDepartment, setActiveDepartment] = useState("All");
-  const [activeCategory, setActiveCategory] = useState("");
-  const [departmentObj, setDepartmentObj] = useState(null);
-  const [foundProjectsObj, setFoundProjectsObj] = useState([]);
+  const [activeDepartment, setActiveDepartment] = useState(
+    params.department || "All"
+  );
+  const [activeCategory, setActiveCategory] = useState(params.category || "");
 
-  // Load projects data
-  useEffect(() => {
-    const departments = ProjectsData.Departments || [];
-    setProjectsData(departments);
-    console.log("Loaded projectsData:", departments);
-  }, []);
+  // Memoize projects data and derived department object
+  const projectsData = useMemo(() => ProjectsData.Departments || [], []);
+  const departmentObj = useMemo(() => {
+    if (activeDepartment === "All") return null;
+    const dept = projectsData.find((d) => d.name === activeDepartment);
+    return dept || null;
+  }, [activeDepartment, projectsData]);
 
-  // Set active department from params or click
-  useEffect(() => {
-    console.log("Params detected:", params);
-    if (params.department) {
-      setActiveDepartment(params.department);
-      console.log("Set activeDepartment from params:", params.department);
-    }
-  }, [params]);
+  // Set default category when department changes and no category is provided
+  const currentCategory = useMemo(() => {
+    if (activeDepartment === "All") return "";
+    if (activeCategory) return activeCategory;
+    return departmentObj?.categories?.[0]?.name || "";
+  }, [activeCategory, departmentObj, activeDepartment]);
 
-  // Set department object and default category
-  useEffect(() => {
-    console.log("Active department changed to:", activeDepartment);
-    if (activeDepartment !== "All") {
-      const dept = projectsData.find((d) => d.name === activeDepartment);
-      setDepartmentObj(dept);
-      if (dept?.categories?.length && !params.category) {
-        setActiveCategory(dept?.categories[0].name);
-        console.log("Set default category:", dept.categories[0].name);
-      }
-    } else {
-      setDepartmentObj(null);
-      setActiveCategory("");
-    }
-  }, [activeDepartment, projectsData, params]);
-
-  // Set found projects based on active department and category
-  useEffect(() => {
-    console.log("Updating foundProjectsObj for activeDepartment:", activeDepartment, "and activeCategory:", activeCategory);
+  // Memoize found projects based on active department and category
+  const foundProjectsObj = useMemo(() => {
     if (activeDepartment === "All") {
-      // Group projects by department, preserving category context
-      const allProjectsByDept = projectsData.map((dept) => {
-        const projectsWithCategory = dept.categories.flatMap((cat) =>
+      return projectsData.map((dept) => ({
+        name: dept.name,
+        projects: dept.categories.flatMap((cat) =>
           cat.projects.map((project) => ({
             ...project,
             originalDepartment: dept.name,
             originalCategory: cat.name,
           }))
-        );
-        return {
-          name: dept.name,
-          projects: projectsWithCategory,
-        };
-      });
-      setFoundProjectsObj(allProjectsByDept);
-      console.log("All projects grouped by department:", allProjectsByDept);
-    } else if (activeCategory && departmentObj) {
+        ),
+      }));
+    }
+    if (departmentObj && currentCategory) {
       const cat = departmentObj.categories.find(
-        (item) => item.name === activeCategory
+        (item) => item.name === currentCategory
       );
-      const deptProjects = [
+      return [
         {
           name: activeDepartment,
-          projects: cat?.projects.map((project) => ({
-            ...project,
-            originalDepartment: activeDepartment,
-            originalCategory: activeCategory,
-          })) || [],
+          projects:
+            cat?.projects.map((project) => ({
+              ...project,
+              originalDepartment: activeDepartment,
+              originalCategory: currentCategory,
+            })) || [],
         },
       ];
-      setFoundProjectsObj(deptProjects);
-      console.log("Department projects set:", deptProjects);
-    } else {
-      setFoundProjectsObj([]);
-      console.log("No projects set, foundProjectsObj is empty");
     }
-  }, [activeCategory, departmentObj, projectsData, activeDepartment]);
+    return [];
+  }, [activeDepartment, currentCategory, departmentObj, projectsData]);
 
   // Handle project click to navigate with department and category
   const handleProjectClick = (project) => {
     const department = project.originalDepartment || activeDepartment;
-    const category = project.originalCategory || activeCategory;
-    navigate(`/project/${department}/${category}/${project.id || project.title}`);
+    const category = project.originalCategory || currentCategory;
+    navigate(
+      `/project/${department}/${category}/${project.id || project.title}`
+    );
+  };
+
+  // Handle department change
+  const handleDepartmentChange = (deptName) => {
+    setActiveDepartment(deptName);
+    setActiveCategory("");
+    navigate(`/project/${deptName}`);
+  };
+
+  // Handle category change
+  const handleCategoryChange = (catName) => {
+    setActiveCategory(catName);
+    navigate(`/project/${activeDepartment}/${catName}`);
   };
 
   return (
@@ -470,12 +656,7 @@ function ProjectPage() {
             className={`article-item-tab pointer department-tab ${
               activeDepartment === deptName ? "article-item-tab-active" : ""
             }`}
-            onClick={() => {
-              console.log("Clicked department:", deptName);
-              setActiveDepartment(deptName);
-              setActiveCategory("");
-              navigate(`/project/${deptName}`);
-            }}
+            onClick={() => handleDepartmentChange(deptName)}
           >
             {deptName}
             {activeDepartment === deptName && deptName !== "All" && (
@@ -508,14 +689,11 @@ function ProjectPage() {
                       <div
                         key={i}
                         className={`article-item-tab pointer sub-category-tab ${
-                          cat.name === activeCategory
+                          cat.name === currentCategory
                             ? "article-item-tab-active"
                             : ""
                         }`}
-                        onClick={() => {
-                          setActiveCategory(cat.name);
-                          navigate(`/project/${activeDepartment}/${cat.name}`);
-                        }}
+                        onClick={() => handleCategoryChange(cat.name)}
                       >
                         {cat.name}
                       </div>
@@ -525,7 +703,7 @@ function ProjectPage() {
               {dept.projects.length > 0 ? (
                 <ReUsableArticle2
                   data={dept.projects}
-                  path={`/project/${dept.name}/${activeCategory}`}
+                  path={`/project/${dept.name}/${currentCategory}`}
                   onProjectClick={handleProjectClick}
                 />
               ) : (
