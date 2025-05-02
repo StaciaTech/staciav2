@@ -40,7 +40,7 @@ function ReUsableArticle({ data, path }) {
                  text={"Know more"}
               />
               <img             
-                src={eachItem.mainImageUrl || eachItem.image?.imageUrl}
+                src={eachItem.mainImageUrl || eachItem.imageURL}
                 alt="art-img"
                 style={{
                   width: "100%",

@@ -10,34 +10,23 @@
 // import Star from "../components/Star";
 // import { useParams } from "react-router-dom";
 
+
 // const data = [
 //   {
 //     id: "Case Study-1",
-//     title: "Chili Ladling Machine-1",
+//     title: "Chili Ladling Machine",
 //     description: "Analysis of electronics case study.",
 //     image: { imageUrl: "/assets/caseStudy-1.webp" },
 //     category: "Mechanical",
 //   },
-//   {
-//     id: "Case Study-2",
-//     title: "Chili Ladling Machine-2",
-//     description: "Analysis of mechanical case study.",
-//     image: { imageUrl: "/assets/caseStudy-2.webp" },
-//     category: "Electronics",
-//   },
-//   {
-//     id: "Case Study-3",
-//     title: "Chili Ladling Machine-3",
-//     description: "Analysis of mechanical case study.",
-//     image: { imageUrl: "/assets/caseStudy-3.webp" },
-//     category: "Tech",
-//   },
+
 // ];
 
 // export default function CaseStudy() {
 //   const [casestudyData, setCasestudyData] = useState([]);
 //   const [activeDepartment, setActiveDepartment] = useState("All");
 //   const [cursorVisible, setCursorVisible] = useState(false);
+
 
 //   const details = data.caseStudy;
 //   console.log(details,"Details");
@@ -104,10 +93,11 @@
 //   );
 // }
 
-// all filter dep split
-//Static
 
-import React, { useEffect, useState, useMemo } from "react";
+
+
+// src/pages/CaseStudy.js
+import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/CaseStudy.css";
@@ -115,49 +105,33 @@ import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
 import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
-
-const data = [
-  {
-    id: "Case Study-1",
-    title: "Chili Ladling Machine-1",
-    description: "Analysis of electronics case study.",
-    image: { imageUrl: "/assets/caseStudy-1.webp" },
-    category: "Mechanical",
-  },
-  {
-    id: "Case Study-2",
-    title: "Chili Ladling Machine-2",
-    description: "Analysis of mechanical case study.",
-    image: { imageUrl: "/assets/caseStudy-2.webp" },
-    category: "Electronics",
-  },
-  {
-    id: "Case Study-3",
-    title: "Chili Ladling Machine-3",
-    description: "Analysis of mechanical case study.",
-    image: { imageUrl: "/assets/caseStudy-3.webp" },
-    category: "Tech",
-  },
-];
+import caseStudiesData from "../Data/SingleCaseStudy.json"; // Import JSON data
 
 export default function CaseStudy() {
   const [activeDepartment, setActiveDepartment] = useState("All");
 
-  // Memoize grouped data to avoid recalculating on every render
-  const groupedData = useMemo(() => {
-    return data.reduce((acc, item) => {
-      if (!acc[item.category]) {
-        acc[item.category] = [];
-      }
-      acc[item.category].push(item);
-      return acc;
-    }, {});
-  }, []); // Empty dependency array since `data` is static
+  useEffect(() => {
+    const data = caseStudiesData.singlecasestudy;
 
-  // Derive the data to display based on activeDepartment
-  const displayData = useMemo(() => {
     if (activeDepartment === "All") {
-      return groupedData;
+      // Select one case study per category for "All" filter
+      const uniqueCategoryStudies = [];
+      const addedCategories = new Set();
+
+      data.forEach((category) => {
+        if (!addedCategories.has(category.name) && category.data.length > 0) {
+          uniqueCategoryStudies.push(category.data[0]); // Take first case study from each category
+          addedCategories.add(category.name);
+        }
+      });
+
+      setCasestudyData(uniqueCategoryStudies);
+    } else {
+      // Filter case studies by selected category
+      const filteredData = data
+        .filter((category) => category.name === activeDepartment)
+        .flatMap((category) => category.data);
+      setCasestudyData(filteredData);
     }
     return {
       [activeDepartment]: data.filter(
@@ -166,10 +140,10 @@ export default function CaseStudy() {
     };
   }, [activeDepartment, groupedData]);
 
-  // Unique categories for tabs
+  // Extract unique categories from JSON data
   const uniqueCategories = [
     "All",
-    ...new Set(data.map((item) => item.category)),
+    ...new Set(caseStudiesData.singlecasestudy.map((item) => item.name)),
   ];
 
   return (
@@ -189,9 +163,8 @@ export default function CaseStudy() {
         {uniqueCategories.map((category, i) => (
           <div
             key={i}
-            className={`article-item-tab ${
-              category === activeDepartment ? "article-item-tab-active" : ""
-            }`}
+            className={`article-item-tab ${category === activeDepartment ? "article-item-tab-active" : ""
+              }`}
             onClick={() => setActiveDepartment(category)}
           >
             {category}
@@ -200,23 +173,7 @@ export default function CaseStudy() {
       </div>
 
       <div>
-        {Object.keys(displayData).map((category) => (
-          <div key={category}>
-            <h1 className="product-dep-name">{category}</h1>
-            <hr
-              style={{
-                width: "90%",
-                marginLeft: "100px",
-                backgroundColor: "#E5E5E5",
-                opacity: 0.3,
-              }}
-            />
-            <ReUsableArticle
-              data={displayData[category]}
-              path={"single-caseStudy"}
-            />
-          </div>
-        ))}
+        <ReUsableArticle data={casestudyData} path={"single-caseStudy"} />
       </div>
 
       <Footer />
