@@ -12,23 +12,10 @@ pipeline {
         nodejs 'Node-20.11.1'
     }
 
-   stages {
+    stages {
         stage('Checkout') {
             steps {
-                script {
-                    checkout([
-                        $class: 'GitSCM',
-                        branches: [[name: env.GIT_BRANCH]], // Try using the GIT_BRANCH environment variable
-                        doGenerateSubmodules: false,
-                        extensions: [],
-                        gitTool: 'git',
-                        submoduleCfg: [],
-                        userRemoteConfigs: [[
-                            credentialsId: 'github-pat', // Replace with your GitHub credentials ID
-                            url: 'https://github.com/StaciaTech/staciav2.git'
-                        ]]
-                    ])
-                }
+                checkout scm
             }
         }
         stage('Get Current Branch') {
@@ -70,10 +57,10 @@ pipeline {
             }
             steps {
                 script {
-                    def awsRegion = 'ap-south-1'
+                    def awsRegion = 'ap-south-1' // e.g., 'ap-south-1'
                     def s3BucketName = 'staciatech.com'
 
-                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --delete --region ${awsRegion}"
+                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --region ${awsRegion}"
                     echo "Successfully deployed to S3://${s3BucketName}"
                 }
             }
