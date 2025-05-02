@@ -7,9 +7,9 @@
         {
           "id": "Case-Study-1",
           "department": "Electronics Sector",
-          "title": "Chili Ladling Machine",
+          "title": "Spicing Up Efficiency: The Impact of Mechanization on the Chilli Industry",
           "backgroundImage": "/assets/ChilliBackground.png",
-          "imageURL": "/assets/caseStudy-1.webp",
+          "imageURL": "/assets/ChilliBackground.png",
           "overview": {
             "overviewtitle": "Introduction",
             "description": "The global demand for chilli and chilli-derived products is experiencing substantial growth, propelled by evolving culinary preferences and increasing applications within the food processing, pharmaceutical, and cosmetic sectors. This heightened demand necessitates a fundamental shift in traditional chilli processing methodologies. Mechanization, characterized by the integration of advanced technologies and automated systems, is of paramount importance to optimize efficiency, enhance product quality, and effectively address escalating market demands. This case study provides a comprehensive analysis of the mechanization landscape within the chilli processing industry, examining its current state, future trends, and transformative impact."
@@ -268,7 +268,6 @@
                 "area": "EquipmentOperationAndMaintenance",
                 "description": "The automation of tasks previously performed by manual laborers can lead to job displacement, particularly for those involved in harvesting, sorting, and packaging."
               },
-           
               {
                 "area": "EquipmentOperationAndMaintenance",
                 "description": "Skilled technicians are needed to operate and maintain complex machinery."
@@ -391,7 +390,7 @@
             ]
           },
           "FarmerPerspectives": {
-            "title": "FarmerPerspectives",
+            "title": "ImpactOnEmployment",
             "Description": "Chilli farmers are key stakeholders in the mechanization of the chilli processing industry, with varied perspectives based on their circumstances:",
             "BenefitsForFarmers": [
               {
@@ -534,6 +533,2010 @@
             {
               "challengestitle": "Conclusion",
               "description": "The custom chili ladling machine developed for the Aachi Group represents a significant advancement in chili processing technology. By automating key processes, reducing manual labour, and ensuring consistent quality, the machine has significantly enhanced the efficiency and productivity of Aachi Masala's operations. This innovative solution demonstrates the potential of technology to address industry-specific challenges and drive improvements in manufacturing processes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Case-Study-2",
+      "name": "Tech",
+      "data": [
+        {
+          "id": "Case-Study-2",
+          "department": "Agricultural Technology",
+          "title": "Transforming Indian Agriculture: The Impact of Technology on the Mandi Procurement System",
+          "backgroundImage": "/assets/MandiBackground.png",
+          "imageURL": "/assets/caseStudy-2.webp",
+          "overview": {
+            "overviewtitle": "Introduction",
+            "description": "The agricultural sector is the backbone of the Indian economy, with the Mandi system playing a crucial role in facilitating trade of agricultural produce. However, traditional Mandi operations face inefficiencies, lack of transparency, and infrastructural limitations. This case study analyzes the impact of technology on modernizing the Mandi procurement system, focusing on initiatives like e-NAM and the proposed EDIFAI platform to enhance transparency, efficiency, and farmer welfare."
+          },
+          "imageContent": {
+            "imagetitle": "Background",
+            "imageSrc": "/assets/singlepage-mandi.webp",
+            "content": [
+              "The Mandi system, regulated by state Agricultural Produce Market Committees (APMCs), serves as a trading platform for farmers to sell produce to intermediaries, traders, and government agencies. Despite its importance, the system suffers from complex intermediary networks, lack of transparency, inadequate infrastructure, labor-intensive processes, and limited market access, hindering agricultural growth and farmer welfare."
+            ]
+          },
+          "Backgrounddes": {
+            "overviewtitle": "Introduction",
+            "description1": "Traditional Mandi operations involve multiple intermediaries, leading to reduced price realization for farmers and higher costs for consumers. Opaque trading practices and information asymmetry result in price manipulation, while inadequate infrastructure causes post-harvest losses. Manual processes are time-consuming and error-prone, and small farmers face challenges accessing distant Mandis, often resorting to distress sales.",
+            "description2": "Technology offers solutions by enhancing transparency, streamlining operations, improving market access, and reducing post-harvest losses through platforms like e-NAM and EDIFAI."
+          },
+          "salientFeatures": {
+            "title": "Salient Features",
+            "features": [
+              "Real-time price discovery",
+              "Electronic auctioning",
+              "Integration with logistics and payment systems",
+              "Multi-lingual support",
+              "Data analytics for informed decisions"
+            ]
+          },
+          "problemStatement": {
+            "title": "Challenges in the Mandi System",
+            "description": "The traditional Mandi system faces several challenges that affect its efficiency and stakeholders:",
+            "issues": [
+              {
+                "highlight": "Information Asymmetry",
+                "text": "Farmers lack real-time information on prices, demand, and market conditions, putting them at a disadvantage in negotiations."
+              },
+              {
+                "highlight": "Multi-layered Intermediation",
+                "text": "Multiple intermediaries increase transaction costs and reduce farmers' share of the final price."
+              },
+              {
+                "highlight": "Post-Harvest Losses",
+                "text": "Inadequate storage and handling facilities lead to significant post-harvest losses, estimated at 10-15% for grains."
+              },
+              {
+                "highlight": "Limited Market Access",
+                "text": "Small farmers face challenges transporting produce to distant Mandis, leading to distress sales at lower prices."
+              },
+              {
+                "highlight": "Lack of Transparency",
+                "text": "Opaque trading practices and collusion among traders can lead to price manipulation and farmer exploitation."
+              }
+            ],
+            "des1": "These challenges hinder the efficiency, transparency, and scalability of the Mandi system, impacting farmer incomes and agricultural growth.",
+            "des2": "Technology can address these issues by providing real-time information, streamlining operations, and connecting farmers directly with buyers."
+          },
+          "CaseAnalysis": {
+            "title": "Case Analysis",
+            "title1": "Challenges of the Traditional Mandi System:",
+            "des3": "The Mandi system is critical to India's agricultural supply chain but is plagued by inefficiencies. Technology, through platforms like e-NAM and EDIFAI, is transforming the system by addressing these challenges.",
+            "Challenges": [
+              "Complex intermediary networks reducing farmer profits",
+              "Lack of transparency in trading practices",
+              "Inadequate infrastructure leading to post-harvest losses",
+              "Labor-intensive manual processes",
+              "Limited market access for small farmers"
+            ],
+            "des4": "The presence of multiple intermediaries increases transaction costs, with farmers receiving only 50-70% of the final price. Information asymmetry disadvantages farmers in negotiations, while inadequate infrastructure results in significant losses.",
+            "des5": "Technology solutions like e-NAM integrate Mandis into a unified online platform, promoting transparency and wider market access. EDIFAI further enhances this by connecting farmers, agents, FPOs, and logistics providers.",
+            "des6": "By reducing intermediation, improving transparency, and streamlining logistics, technology can increase farmer incomes and reduce food inflation.",
+            "ProposedSolution": {
+              "title": "Proposed Solution: EDIFAI",
+              "Description": "EDIFAI is a comprehensive platform designed to integrate the procurement business with Mandis, offering solutions to traditional challenges:",
+              "benefits": [
+                {
+                  "highlight": "Farmer Empowerment",
+                  "text": "Farmers gain access to wider markets, better price realization, and timely payments."
+                },
+                {
+                  "highlight": "Agent Efficiency",
+                  "text": "Agents benefit from increased efficiency and an expanded network."
+                },
+                {
+                  "highlight": "FPO Integration",
+                  "text": "FPOs can aggregate produce and access direct buyers, enhancing bargaining power."
+                },
+                {
+                  "highlight": "Trader Benefits",
+                  "text": "Traders gain access to a larger pool of sellers and streamlined procurement."
+                },
+                {
+                  "highlight": "Consumer Access",
+                  "text": "Consumers benefit from high-quality produce at competitive prices."
+                }
+              ],
+              "des7": "EDIFAI provides real-time price discovery, electronic auctioning, logistics management, and secure payment gateways, ensuring seamless transactions.",
+              "des8": "The platform supports multi-lingual accessibility and mobile applications, making it user-friendly for all stakeholders.",
+              "des9": "Data analytics and reporting features enable informed decision-making, improving market transparency and efficiency."
+            },
+            "KeyMechanizedProcesses": {
+              "title": "Key Technological Processes",
+              "Description": "Key technological processes in modernizing the Mandi system include:",
+              "Processes": [
+                {
+                  "Process": "Farmer Registration",
+                  "Description": "Farmers register and manage crop profiles on the EDIFAI platform.",
+                  "Image": "./media/farmer-registration.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Electronic Auctioning",
+                  "Description": "Online auctions ensure transparent and competitive price discovery.",
+                  "Image": "./media/electronic-auction.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Logistics Management",
+                  "Description": "Integration with logistics providers ensures efficient transportation.",
+                  "Image": "./media/logistics-management.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Payment Gateways",
+                  "Description": "Secure online payment systems facilitate timely transactions.",
+                  "Image": "./media/payment-gateway.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Data Analytics",
+                  "Description": "Generates insights for stakeholders to optimize market strategies.",
+                  "Image": "./media/data-analytics.jpeg",
+                  "Source": "Placeholder"
+                }
+              ],
+              "des10": "Farmer registration streamlines access to the platform, while electronic auctioning ensures fair pricing.",
+              "des11": "Logistics management reduces transportation barriers, and payment gateways ensure timely payments.",
+              "des12": "Data analytics provides actionable insights, enhancing decision-making and market efficiency.",
+              "des13": "These processes collectively transform the Mandi system into a modern, transparent, and efficient marketplace.",
+              "des14": "EDIFAI's mobile accessibility and multi-lingual support make it inclusive for diverse stakeholders."
+            }
+          },
+          "Statistics": {
+            "title": "Statistics",
+            "condent": {
+              "MarketGrowth": {
+                "Description": "The Indian food and grocery market is projected to reach $852 billion in 2025, growing at a CAGR of 10.7%.",
+                "Image": "./media/food-grocery-market.jpeg",
+                "Source": "India Brand Equity Foundation (IBEF)"
+              },
+              "Adoption": {
+                "Description": "e-NAM has integrated over 1260 Mandis across 22 states and 3 UTs, with over 17 million farmers registered as of 2023.",
+                "Source": "e-NAM Portal"
+              },
+              "CostAndOutput": {
+                "Description": "Digital platforms can reduce transaction costs by 5-10% and increase farmers' income by 15-20%.",
+                "Image": "./media/transaction-costs.jpeg",
+                "Source": "National Bank for Agriculture and Rural Development (NABARD)",
+                "description1": "These figures highlight the economic benefits of technology in the Mandi system, improving farmer incomes and market efficiency."
+              }
+            }
+          },
+          "EconomicImpact": {
+            "title": "Economic Impact",
+            "Description": "Modernizing the Mandi system through technology has significant economic benefits:",
+            "Impacts": [
+              {
+                "highlight": "Increased Farmer Income",
+                "text": "Better market access and reduced intermediation help farmers realize higher prices."
+              },
+              {
+                "highlight": "Reduced Food Inflation",
+                "text": "Streamlined supply chains stabilize food prices."
+              },
+              {
+                "highlight": "Enhanced Agricultural Trade",
+                "text": "Improved logistics boost domestic and international trade."
+              },
+              {
+                "highlight": "Employment Generation",
+                "text": "New jobs in technology, logistics, and data analysis."
+              },
+              {
+                "highlight": "GDP Growth",
+                "text": "A more efficient agricultural sector contributes to economic growth."
+              }
+            ],
+            "description2": "These impacts enhance the sustainability and profitability of Indian agriculture."
+          },
+          "StrategiesToOvercome": {
+            "title": "Strategies to Overcome Barriers",
+            "Description": "To promote technology adoption, the following strategies can be implemented:",
+            "Strategies": [
+              {
+                "strategy": "Digital Literacy Programs",
+                "description": "Improve digital literacy among farmers and traders."
+              },
+              {
+                "strategy": "Infrastructure Development",
+                "description": "Enhance internet connectivity and access to devices in rural areas."
+              },
+              {
+                "strategy": "Awareness Campaigns",
+                "description": "Educate stakeholders about technology benefits."
+              },
+              {
+                "strategy": "Financial Assistance",
+                "description": "Provide subsidies or loans for technology investment."
+              }
+            ]
+          },
+          "FutureTrends": {
+            "title": "Future Trends",
+            "Description": "Emerging trends shaping the Mandi system include:",
+            "Trends": [
+              {
+                "technology": "Artificial Intelligence",
+                "description": "AI provides personalized crop management and pricing advice."
+              },
+              {
+                "technology": "Blockchain",
+                "description": "Enhances supply chain transparency and traceability."
+              },
+              {
+                "technology": "Internet of Things",
+                "description": "Monitors crop conditions and optimizes resource usage."
+              },
+              {
+                "technology": "Precision Farming",
+                "description": "Increases productivity and reduces input costs."
+              }
+            ]
+          },
+          "ImpactOnEmployment": {
+            "title": "Impact on Employment",
+            "Description": "Technology adoption in the Mandi system has mixed employment effects:",
+            "JobDisplacement": [
+              {
+                "area": "Manual Processes",
+                "description": "Jobs like manual weighing and recordkeeping may be displaced."
+              },
+              {
+                "area": "Technology Development",
+                "description": "New roles in platform development and maintenance."
+              },
+              {
+                "area": "Data Analysis",
+                "description": "Demand for data analysts to interpret market trends."
+              },
+              {
+                "area": "Logistics",
+                "description": "Jobs in supply chain and logistics management."
+              }
+            ],
+            "JustTransitionStrategies": [
+              {
+                "strategy": "Training Programs",
+                "description": "Upskill workers for new technology-related roles."
+              },
+              {
+                "strategy": "Social Support",
+                "description": "Provide safety nets for displaced workers."
+              },
+              {
+                "strategy": "Inclusive Growth",
+                "description": "Ensure benefits reach all stakeholders."
+              }
+            ]
+          },
+          "RegionalVariations": {
+            "title": "Regional Variations",
+            "Description": "Technology adoption varies across India due to:",
+            "AdoptionFactors": [
+              {
+                "factor": "Economic Development",
+                "description": "States with higher development have better infrastructure."
+              },
+              {
+                "factor": "Government Initiatives",
+                "description": "State policies influence technology adoption."
+              },
+              {
+                "factor": "Crop Type",
+                "description": "Different crops require specific technologies."
+              },
+              {
+                "factor": "Farmer Demographics",
+                "description": "Socio-economic status affects adoption."
+              }
+            ],
+            "CaseStudies": [],
+            "ChallengesDescription": "Regions with low adoption face challenges like limited connectivity and digital literacy.",
+            "ChallengesDescription1": "Targeted interventions can promote technology transfer and training.",
+            "ChallengesInLowAdoptionRegions": [
+              "Inadequate internet connectivity",
+              "Low digital literacy",
+              "Lack of access to smartphones",
+              "Resistance to change"
+            ]
+          },
+          "EnvironmentalImpact": {
+            "title": "Environmental Impact",
+            "Description": "Technology contributes to sustainability in the Mandi system:",
+            "Impacts": [
+              {
+                "impact": "Reduced Waste",
+                "description": "Efficient logistics minimize food waste."
+              },
+              {
+                "impact": "Optimized Resource Use",
+                "description": "Precision farming reduces water and pesticide use."
+              },
+              {
+                "impact": "Sustainable Practices",
+                "description": "Promotes environmentally friendly farming."
+              },
+              {
+                "impact": "Traceability",
+                "description": "Blockchain ensures sustainable sourcing."
+              }
+            ]
+          },
+          "QualityAndSafety": {
+            "title": "Quality and Safety",
+            "Description": "Technology enhances produce quality and safety:",
+            "Improvements": [
+              {
+                "process": "Quality Assessment",
+                "description": "Automated tools ensure accurate quality evaluation."
+              },
+              {
+                "process": "Hygienic Handling",
+                "description": "Mechanized processes reduce contamination."
+              },
+              {
+                "process": "Traceability",
+                "description": "Tracks produce from farm to consumer."
+              },
+              {
+                "process": "Standards Compliance",
+                "description": "Ensures adherence to food safety regulations."
+              }
+            ]
+          },
+          "FarmerPerspectives": {
+            "title": "Farmer Perspectives",
+            "Description": "Farmers' views on technology adoption vary:",
+            "BenefitsForFarmers": [
+              {
+                "benefit": "Increased Income",
+                "description": "Better price discovery and market access."
+              },
+              {
+                "benefit": "Reduced Costs",
+                "description": "Lower transaction and transportation costs."
+              },
+              {
+                "benefit": "Efficiency",
+                "description": "Faster and more efficient processes."
+              },
+              {
+                "benefit": "Information Access",
+                "description": "Real-time market and advisory services."
+              }
+            ],
+            "ChallengesFacedByFarmers": [
+              {
+                "challenge": "Digital Literacy",
+                "description": "Lack of skills to use technology."
+              },
+              {
+                "challenge": "Cost",
+                "description": "High initial investment costs."
+              },
+              {
+                "challenge": "Training Needs",
+                "description": "Requirement for technical training."
+              },
+              {
+                "challenge": "Trust",
+                "description": "Concerns about online transaction transparency."
+              }
+            ],
+            "StrategiesToPromoteAdoptionAmongSmallholderFarmers": [
+              {
+                "strategy": "Subsidies",
+                "description": "Financial assistance for technology adoption."
+              },
+              {
+                "strategy": "Training",
+                "description": "Programs to enhance digital literacy."
+              },
+              {
+                "strategy": "Community Programs",
+                "description": "Shared access to technology platforms."
+              },
+              {
+                "strategy": "Localized Solutions",
+                "description": "Develop region-specific technology."
+              }
+            ]
+          },
+          "developmentProcess": {
+            "title": "Development Process",
+            "sections": [
+              {
+                "subtitle": "Ideation",
+                "paragraphs": [
+                  {
+                    "text": "The ideation for EDIFAI stemmed from observing inefficiencies in the Mandi system, including high intermediation costs and lack of transparency.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Through stakeholder consultations, the need for a unified platform connecting farmers, agents, FPOs, and logistics was identified.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "The concept aimed to leverage digital technology to enhance market access and streamline operations."
+                  }
+                ]
+              },
+              {
+                "subtitle": "Design & Prototype",
+                "subtitleClass": "single-casestudy-layout1-subtitle test-selection-blue",
+                "paragraphs": [
+                  {
+                    "text": "Initial prototypes focused on integrating e-NAM features with additional functionalities like logistics and payments.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Challenges included ensuring multi-lingual support and mobile accessibility for rural users.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Iterative testing refined the platform to ensure user-friendliness and scalability."
+                  }
+                ]
+              }
+            ]
+          },
+          "challengesFaced": {
+            "title": "Challenges Faced",
+            "description": "Key challenges in developing EDIFAI included:",
+            "issues": [
+              {
+                "highlight": "Digital Literacy",
+                "text": "Ensuring the platform was accessible to farmers with low digital skills."
+              },
+              {
+                "highlight": "Infrastructure",
+                "text": "Addressing limited internet connectivity in rural areas."
+              },
+              {
+                "text": "Through user training and infrastructure partnerships, these challenges were mitigated."
+              }
+            ]
+          },
+          "impactBenefits": {
+            "title": "Impact and Benefits",
+            "benefits": [
+              {
+                "highlight": "Increased Farmer Income",
+                "text": "Better prices through transparent auctions."
+              },
+              {
+                "highlight": "Reduced Costs",
+                "text": "Lower transaction and logistics expenses."
+              },
+              {
+                "highlight": "Improved Efficiency",
+                "text": "Streamlined procurement processes."
+              },
+              {
+                "highlight": "Market Access",
+                "text": "Wider reach for smallholder farmers."
+              }
+            ]
+          },
+          "gallerytittle": "EDIFAI Platform",
+          "gallery": [
+            "https://placeholder.com/image1.jpg",
+            "https://placeholder.com/image2.jpg",
+            "https://placeholder.com/image3.jpg",
+            "https://placeholder.com/image4.jpg"
+          ],
+          "challenges": [
+            {
+              "challengestitle": "Conclusion",
+              "description": "EDIFAI represents a transformative solution for the Mandi system, enhancing transparency, efficiency, and farmer welfare. By integrating technology, it addresses longstanding challenges and paves the way for a modernized agricultural marketplace."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Case-Study-3",
+      "name": "Tech",
+      "data": [
+        {
+          "id": "Case-Study-3",
+          "department": "E-commerce",
+          "title": "Transforming Indian Commerce: The Rise of E-commerce Platforms",
+          "backgroundImage": "/assets/EcommerceBackground.png",
+          "imageURL": "/assets/caseStudy-3.webp",
+          "overview": {
+            "overviewtitle": "Introduction",
+            "description": "India's e-commerce sector is a key driver of economic growth, revolutionizing trade through platforms like Amazon and Flipkart. Fueled by increased internet penetration and mobile technology, the sector faces challenges like infrastructure limitations and regulatory uncertainties. This case study analyzes the current state, growth drivers, and future opportunities in India's e-commerce market."
+          },
+          "imageContent": {
+            "imagetitle": "Background",
+            "imageSrc": "/assets/singlepage-ecommerce.webp",
+            "content": [
+              "The rapid growth of India's e-commerce sector is driven by rising smartphone penetration, growing disposable incomes, and a burgeoning middle class. Online platforms have expanded access to goods and services, connecting buyers and sellers nationwide, but face challenges like digital divides and regulatory complexities."
+            ]
+          },
+          "Backgrounddes": {
+            "overviewtitle": "Introduction",
+            "description1": "E-commerce platforms have disrupted traditional retail, offering convenience and wider market access. However, challenges like inadequate logistics, digital literacy disparities, and data privacy concerns hinder growth.",
+            "description2": "Technology, including mobile commerce, AI, and digital payments, is driving the sector's expansion and addressing these challenges."
+          },
+          "salientFeatures": {
+            "title": "Salient Features",
+            "features": [
+              "Mobile commerce accessibility",
+              "AI-driven personalization",
+              "Secure digital payments",
+              "Social commerce integration",
+              "Omnichannel retailing"
+            ]
+          },
+          "problemStatement": {
+            "title": "Challenges in E-commerce",
+            "description": "The e-commerce sector faces several challenges:",
+            "issues": [
+              {
+                "highlight": "Infrastructure Limitations",
+                "text": "Inadequate logistics and last-mile delivery, especially in rural areas."
+              },
+              {
+                "highlight": "Digital Divide",
+                "text": "Disparities in internet access and digital literacy."
+              },
+              {
+                "highlight": "Trust and Security",
+                "text": "Concerns about online fraud and data security."
+              },
+              {
+                "highlight": "Regulatory Uncertainty",
+                "text": "Evolving regulations on data privacy and FDI."
+              },
+              {
+                "highlight": "Competition",
+                "text": "Intense competition leading to price wars."
+              }
+            ],
+            "des1": "These challenges limit the sector's reach and profitability, particularly in underserved regions.",
+            "des2": "Strategic interventions can address these issues, promoting inclusive growth."
+          },
+          "CaseAnalysis": {
+            "title": "Case Analysis",
+            "title1": "Challenges of E-commerce Platforms:",
+            "des3": "The e-commerce sector is transforming Indian commerce but faces significant hurdles. Strategic use of technology and innovative business models are key to overcoming these challenges.",
+            "Challenges": [
+              "Inadequate logistics infrastructure",
+              "Digital literacy disparities",
+              "Data privacy concerns",
+              "Regulatory complexities",
+              "Intense market competition"
+            ],
+            "des4": "Logistics challenges, particularly in rural areas, increase delivery costs and times. The digital divide limits access for many potential consumers, while data privacy concerns erode trust.",
+            "des5": "Companies are addressing these through hyperlocalization, digital literacy programs, and robust security measures.",
+            "des6": "Regulatory challenges require proactive compliance and engagement with policymakers to ensure sustainable growth.",
+            "ProposedSolution": {
+              "title": "Proposed Solution: Technology Integration",
+              "Description": "Technology-driven solutions can address e-commerce challenges:",
+              "benefits": [
+                {
+                  "highlight": "Improved Logistics",
+                  "text": "AI and IoT optimize supply chains and last-mile delivery."
+                },
+                {
+                  "highlight": "Enhanced Trust",
+                  "text": "Blockchain ensures data security and transparency."
+                },
+                {
+                  "highlight": "Wider Access",
+                  "text": "Mobile commerce reaches underserved regions."
+                },
+                {
+                  "highlight": "Personalized Experience",
+                  "text": "AI-driven recommendations boost customer satisfaction."
+                },
+                {
+                  "highlight": "Regulatory Compliance",
+                  "text": "Proactive measures ensure adherence to evolving regulations."
+                }
+              ],
+              "des7": "Technology integration enhances efficiency and consumer trust, driving e-commerce growth.",
+              "des8": "Hyperlocalization and vernacularization make platforms accessible to diverse populations.",
+              "des9": "Omnichannel strategies bridge online and offline experiences, improving customer retention."
+            },
+            "KeyMechanizedProcesses": {
+              "title": "Key Technological Processes",
+              "Description": "Key processes driving e-commerce include:",
+              "Processes": [
+                {
+                  "Process": "Mobile Commerce",
+                  "Description": "Smartphone-based platforms expand market reach.",
+                  "Image": "./media/mobile-commerce.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "AI Personalization",
+                  "Description": "AI tailors recommendations and pricing.",
+                  "Image": "./media/ai-personalization.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Digital Payments",
+                  "Description": "UPI and wallets facilitate secure transactions.",
+                  "Image": "./media/digital-payments.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Social Commerce",
+                  "Description": "Integration with social media drives sales.",
+                  "Image": "./media/social-commerce.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Logistics Optimization",
+                  "Description": "AI and IoT streamline supply chains.",
+                  "Image": "./media/logistics-optimization.jpeg",
+                  "Source": "Placeholder"
+                }
+              ],
+              "des10": "Mobile commerce expands access, while AI personalization enhances user experience.",
+              "des11": "Digital payments ensure secure transactions, and social commerce leverages social networks.",
+              "des12": "Logistics optimization reduces costs and delivery times, improving efficiency.",
+              "des13": "These processes collectively drive the growth and scalability of e-commerce platforms.",
+              "des14": "Emerging technologies like AR and blockchain will further revolutionize the sector."
+            }
+          },
+          "Statistics": {
+            "title": "Statistics",
+            "condent": {
+              "MarketGrowth": {
+                "Description": "India's e-commerce market is projected to reach $363.30 billion by 2030, with a CAGR of 21.5% from 2025 to 2030.",
+                "Image": "./media/ecommerce-market.jpeg",
+                "Source": "Mordor Intelligence"
+              },
+              "Adoption": {
+                "Description": "India had 850 million internet users in 2022, fueling e-commerce growth.",
+                "Source": "IBEF"
+              },
+              "CostAndOutput": {
+                "Description": "Mobile commerce represents a significant share of online transactions, driving efficiency and reach.",
+                "Image": "./media/mobile-commerce-stats.jpeg",
+                "Source": "Consultancy.in",
+                "description1": "These figures underscore the transformative potential of e-commerce in India."
+              }
+            }
+          },
+          "EconomicImpact": {
+            "title": "Economic Impact",
+            "Description": "E-commerce growth significantly impacts India's economy:",
+            "Impacts": [
+              {
+                "highlight": "Retail Expansion",
+                "text": "Increases market size and consumer access."
+              },
+              {
+                "highlight": "Employment Opportunities",
+                "text": "Creates jobs in logistics, technology, and customer service."
+              },
+              {
+                "highlight": "MSME Empowerment",
+                "text": "Enables small businesses to reach wider markets."
+              },
+              {
+                "highlight": "Price Competition",
+                "text": "Drives efficiency and affordability."
+              },
+              {
+                "highlight": "Foreign Investment",
+                "text": "Attracts global capital to the sector."
+              }
+            ],
+            "description2": "These impacts contribute to economic growth and innovation."
+          },
+          "StrategiesToOvercome": {
+            "title": "Strategies to Overcome Barriers",
+            "Description": "To promote e-commerce growth, the following strategies can be implemented:",
+            "Strategies": [
+              {
+                "strategy": "Digital Literacy",
+                "description": "Programs to enhance digital skills among consumers."
+              },
+              {
+                "strategy": "Infrastructure Development",
+                "description": "Improve logistics and internet connectivity."
+              },
+              {
+                "strategy": "Consumer Protection",
+                "description": "Strengthen measures against fraud and data breaches."
+              },
+              {
+                "strategy": "Clear Regulations",
+                "description": "Develop consistent regulatory frameworks."
+              }
+            ]
+          },
+          "FutureTrends": {
+            "title": "Future Trends",
+            "Description": "Emerging trends shaping e-commerce include:",
+            "Trends": [
+              {
+                "technology": "Social Commerce",
+                "description": "Integration with social media platforms."
+              },
+              {
+                "technology": "Quick Commerce",
+                "description": "Ultra-fast delivery services."
+              },
+              {
+                "technology": "Personalization",
+                "description": "AI-driven customized experiences."
+              },
+              {
+                "technology": "Emerging Technologies",
+                "description": "AR, VR, and blockchain adoption."
+              }
+            ]
+          },
+          "ImpactOnEmployment": {
+            "title": "Impact on Employment",
+            "Description": "E-commerce has mixed employment effects:",
+            "JobDisplacement": [
+              {
+                "area": "Traditional Retail",
+                "description": "Displacement of jobs in brick-and-mortar stores."
+              },
+              {
+                "area": "Logistics",
+                "description": "New roles in warehousing and delivery."
+              },
+              {
+                "area": "Technology",
+                "description": "Demand for developers and analysts."
+              },
+              {
+                "area": "Customer Service",
+                "description": "Jobs in support and engagement."
+              }
+            ],
+            "JustTransitionStrategies": [
+              {
+                "strategy": "Upskilling",
+                "description": "Train workers for new roles."
+              },
+              {
+                "strategy": "Support Programs",
+                "description": "Provide safety nets for displaced workers."
+              },
+              {
+                "strategy": "Inclusive Policies",
+                "description": "Ensure broad access to opportunities."
+              }
+            ]
+          },
+          "RegionalVariations": {
+            "title": "Regional Variations",
+            "Description": "E-commerce adoption varies due to:",
+            "AdoptionFactors": [
+              {
+                "factor": "Internet Penetration",
+                "description": "Higher in urban areas."
+              },
+              {
+                "factor": "Urbanization",
+                "description": "Drives demand in cities."
+              },
+              {
+                "factor": "Economic Development",
+                "description": "Influences consumer spending power."
+              },
+              {
+                "factor": "Consumer Preferences",
+                "description": "Vary across regions."
+              }
+            ],
+            "CaseStudies": [],
+            "ChallengesDescription": "Rural areas face challenges like low connectivity and literacy.",
+            "ChallengesDescription1": "Targeted interventions can bridge the digital divide.",
+            "ChallengesInLowAdoptionRegions": [
+              "Limited internet access",
+              "Low digital literacy",
+              "Logistical constraints",
+              "Preference for cash on delivery"
+            ]
+          },
+          "EnvironmentalImpact": {
+            "title": "Environmental Impact",
+            "Description": "E-commerce has mixed environmental impacts:",
+            "Impacts": [
+              {
+                "impact": "Reduced Physical Stores",
+                "description": "Lowers energy use from retail spaces."
+              },
+              {
+                "impact": "Increased Packaging",
+                "description": "Generates waste if not managed."
+              },
+              {
+                "impact": "Delivery Emissions",
+                "description": "Contributes to carbon footprint."
+              },
+              {
+                "impact": "Sustainable Practices",
+                "description": "Adoption of eco-friendly logistics."
+              }
+            ]
+          },
+          "QualityAndSafety": {
+            "title": "Quality and Safety",
+            "Description": "E-commerce ensures quality and safety through:",
+            "Improvements": [
+              {
+                "process": "Product Information",
+                "description": "Detailed listings enhance transparency."
+              },
+              {
+                "process": "Quality Control",
+                "description": "Ensures product authenticity."
+              },
+              {
+                "process": "Supply Chain Transparency",
+                "description": "Tracks product origins."
+              },
+              {
+                "process": "Consumer Feedback",
+                "description": "Drives continuous improvement."
+              }
+            ]
+          },
+          "FarmerPerspectives": {
+            "title": "Farmer Perspectives",
+            "Description": "E-commerce offers opportunities for farmers:",
+            "BenefitsForFarmers": [
+              {
+                "benefit": "Direct Sales",
+                "description": "Bypasses intermediaries for better prices."
+              },
+              {
+                "benefit": "Market Access",
+                "description": "Reaches urban and global markets."
+              },
+              {
+                "benefit": "Efficiency",
+                "description": "Streamlines sales processes."
+              },
+              {
+                "benefit": "Transparency",
+                "description": "Clear pricing and demand information."
+              }
+            ],
+            "ChallengesFacedByFarmers": [
+              {
+                "challenge": "Digital Literacy",
+                "description": "Limited skills to use platforms."
+              },
+              {
+                "challenge": "Quality Standards",
+                "description": "Meeting platform requirements."
+              },
+              {
+                "challenge": "Logistics",
+                "description": "Challenges in transportation."
+              },
+              {
+                "challenge": "Costs",
+                "description": "Fees for platform usage."
+              }
+            ],
+            "StrategiesToPromoteAdoptionAmongSmallholderFarmers": [
+              {
+                "strategy": "Training",
+                "description": "Enhance digital and platform skills."
+              },
+              {
+                "strategy": "Subsidies",
+                "description": "Support platform access costs."
+              },
+              {
+                "strategy": "Logistics Support",
+                "description": "Provide transportation solutions."
+              },
+              {
+                "strategy": "Quality Assistance",
+                "description": "Help meet standards."
+              }
+            ]
+          },
+          "developmentProcess": {
+            "title": "Development Process",
+            "sections": [
+              {
+                "subtitle": "Ideation",
+                "paragraphs": [
+                  {
+                    "text": "The rise of e-commerce platforms was driven by the need to bridge market gaps and enhance consumer access.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Stakeholder analysis identified opportunities in mobile and social commerce.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "The goal was to create scalable, user-friendly platforms."
+                  }
+                ]
+              },
+              {
+                "subtitle": "Design & Prototype",
+                "subtitleClass": "single-casestudy-layout1-subtitle test-selection-blue",
+                "paragraphs": [
+                  {
+                    "text": "Initial designs focused on mobile accessibility and AI integration.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Prototypes faced challenges in rural connectivity and user trust.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Iterative refinements improved usability and security."
+                  }
+                ]
+              }
+            ]
+          },
+          "challengesFaced": {
+            "title": "Challenges Faced",
+            "description": "Key challenges in e-commerce platform development included:",
+            "issues": [
+              {
+                "highlight": "Connectivity",
+                "text": "Ensuring access in low-connectivity areas."
+              },
+              {
+                "highlight": "Trust",
+                "text": "Building consumer confidence in online transactions."
+              },
+              {
+                "text": "Solutions involved vernacular interfaces and robust security."
+              }
+            ]
+          },
+          "impactBenefits": {
+            "title": "Impact and Benefits",
+            "benefits": [
+              {
+                "highlight": "Consumer Convenience",
+                "text": "Wider product access and ease of purchase."
+              },
+              {
+                "highlight": "Business Growth",
+                "text": "Expanded market reach for sellers."
+              },
+              {
+                "highlight": "Efficiency",
+                "text": "Streamlined transactions and logistics."
+              },
+              {
+                "highlight": "Innovation",
+                "text": "Drives technological advancements."
+              }
+            ]
+          },
+          "gallerytittle": "E-commerce Platforms",
+          "gallery": [
+            "https://placeholder.com/image1.jpg",
+            "https://placeholder.com/image2.jpg",
+            "https://placeholder.com/image3.jpg",
+            "https://placeholder.com/image4.jpg"
+          ],
+          "challenges": [
+            {
+              "challengestitle": "Conclusion",
+              "description": "E-commerce platforms are transforming Indian commerce by enhancing access, efficiency, and innovation. Addressing challenges through technology and strategic interventions will ensure continued growth and inclusivity."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Case-Study-4",
+      "name": "Electronics",
+      "data": [
+        {
+          "id": "Case-Study-4",
+          "department": "Sustainable Electronics",
+          "title": "Stacia Corp.'s Strategic Outlook: Navigating the Future of Sustainable Electronics",
+          "backgroundImage": "/assets/SustainableElectronicsBackground.png",
+          "imageURL": "/assets/caseStudy-4.webp",
+          "overview": {
+            "overviewtitle": "Introduction",
+            "description": "The electronics industry faces increasing pressure to adopt sustainable practices due to e-waste, resource depletion, and energy consumption. Stacia Corp. is leading the transition to sustainable electronics through eco-friendly design, circular economy principles, and ethical supply chains. This case study examines the challenges, opportunities, and Stacia Corp.'s strategic outlook."
+          },
+          "imageContent": {
+            "imagetitle": "Background",
+            "imageSrc": "/assets/singlepage-sustainable-electronics.webp",
+            "content": [
+              "The electronics industry has a significant environmental footprint, with e-waste being one of the fastest-growing waste streams. Consumer demand for sustainable products and stricter regulations are driving change, creating opportunities for innovation and market growth."
+            ]
+          },
+          "Backgrounddes": {
+            "overviewtitle": "Introduction",
+            "description1": "E-waste, resource-intensive production, and high energy consumption pose environmental challenges. Consumers, governments, and businesses are pushing for sustainable electronics, demanding eco-friendly materials and ethical practices.",
+            "description2": "Stacia Corp. is addressing these challenges through sustainable design, supply chain management, and circular economy models."
+          },
+          "salientFeatures": {
+            "title": "Salient Features",
+            "features": [
+              "Eco-friendly materials",
+              "Energy-efficient designs",
+              "Circular economy approach",
+              "Ethical supply chains",
+              "Repairability and recyclability"
+            ]
+          },
+          "problemStatement": {
+            "title": "Challenges in Sustainable Electronics",
+            "description": "The transition to sustainable electronics presents several challenges:",
+            "issues": [
+              {
+                "highlight": "Cost",
+                "text": "Sustainable materials and processes are more expensive."
+              },
+              {
+                "highlight": "Supply Chain Complexity",
+                "text": "Ensuring ethical sourcing across complex supply chains."
+              },
+              {
+                "highlight": "Technological Limitations",
+                "text": "Developing sustainable alternatives to certain components."
+              },
+              {
+                "highlight": "Lack of Standardization",
+                "text": "Inconsistent global sustainability standards."
+              },
+              {
+                "highlight": "Regulatory Compliance",
+                "text": "Navigating varying global regulations."
+              }
+            ],
+            "des1": "These challenges increase costs and complexity for electronics manufacturers.",
+            "des2": "Opportunities in market growth and innovation can offset these challenges."
+          },
+          "CaseAnalysis": {
+            "title": "Case Analysis",
+            "title1": "Challenges of Sustainable Electronics:",
+            "des3": "The electronics industry must balance sustainability with performance and cost. Stacia Corp.'s strategies address these challenges through innovation and collaboration.",
+            "Challenges": [
+              "High costs of sustainable materials",
+              "Complex supply chain management",
+              "Technological barriers to sustainability",
+              "Lack of global standards",
+              "Evolving regulatory landscape"
+            ],
+            "des4": "Sustainable materials increase production costs, while ethical sourcing requires transparency across global supply chains.",
+            "des5": "Technological limitations necessitate R&D investment, and varying regulations create compliance challenges.",
+            "des6": "Stacia Corp. leverages design innovation, supplier collaboration, and proactive compliance to navigate these issues.",
+            "ProposedSolution": {
+              "title": "Proposed Solution: Stacia Corp.'s Strategy",
+              "Description": "Stacia Corp.'s approach to sustainable electronics includes:",
+              "benefits": [
+                {
+                  "highlight": "Sustainable Design",
+                  "text": "Using recycled and biodegradable materials."
+                },
+                {
+                  "highlight": "Supply Chain Management",
+                  "text": "Ensuring ethical and transparent sourcing."
+                },
+                {
+                  "highlight": "Circular Economy",
+                  "text": "Promoting reuse, repair, and recycling."
+                },
+                {
+                  "highlight": "Stakeholder Engagement",
+                  "text": "Collaborating with customers and policymakers."
+                },
+                {
+                  "highlight": "Regulatory Compliance",
+                  "text": "Proactively meeting global standards."
+                }
+              ],
+              "des7": "Sustainable design reduces environmental impact while meeting consumer demand.",
+              "des8": "Ethical supply chains enhance brand reputation and compliance.",
+              "des9": "Circular economy models extend product lifespans and reduce waste."
+            },
+            "KeyMechanizedProcesses": {
+              "title": "Key Sustainable Processes",
+              "Description": "Key processes in sustainable electronics include:",
+              "Processes": [
+                {
+                  "Process": "Eco-friendly Design",
+                  "Description": "Using recycled and renewable materials.",
+                  "Image": "./media/eco-design.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Energy-efficient Manufacturing",
+                  "Description": "Reducing energy use in production.",
+                  "Image": "./media/energy-efficient-manufacturing.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Recycling Systems",
+                  "Description": "Implementing take-back and recycling programs.",
+                  "Image": "./media/recycling-systems.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Supply Chain Transparency",
+                  "Description": "Ensuring ethical sourcing practices.",
+                  "Image": "./media/supply-chain-transparency.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Repair Services",
+                  "Description": "Offering repair to extend product lifespans.",
+                  "Image": "./media/repair-services.jpeg",
+                  "Source": "Placeholder"
+                }
+              ],
+              "des10": "Eco-friendly design minimizes environmental impact.",
+              "des11": "Energy-efficient manufacturing reduces carbon footprints.",
+              "des12": "Recycling and repair services promote circularity.",
+              "des13": "Supply chain transparency ensures ethical practices.",
+              "des14": "These processes position Stacia Corp. as a leader in sustainability."
+            }
+          },
+          "Statistics": {
+            "title": "Statistics",
+            "condent": {
+              "MarketGrowth": {
+                "Description": "The sustainable electronics market is growing rapidly due to consumer demand and regulatory pressures.",
+                "Image": "./media/sustainable-electronics-market.jpeg",
+                "Source": "Coherent Market Insights"
+              },
+              "Adoption": {
+                "Description": "Increasing adoption of certifications like EPEAT and ISO 14001.",
+                "Source": "EPEAT, ISO"
+              },
+              "CostAndOutput": {
+                "Description": "Energy-efficient products reduce consumer costs and overall energy demand.",
+                "Image": "./media/energy-efficiency-stats.jpeg",
+                "Source": "International Energy Agency",
+                "description1": "These trends highlight the economic and environmental benefits of sustainable electronics."
+              }
+            }
+          },
+          "EconomicImpact": {
+            "title": "Economic Impact",
+            "Description": "Sustainable electronics drive economic benefits:",
+            "Impacts": [
+              {
+                "highlight": "Market Growth",
+                "text": "Rising demand creates new opportunities."
+              },
+              {
+                "highlight": "Cost Savings",
+                "text": "Energy-efficient products reduce consumer expenses."
+              },
+              {
+                "highlight": "Competitive Advantage",
+                "text": "Enhances brand reputation and market share."
+              },
+              {
+                "highlight": "Innovation",
+                "text": "Drives R&D in sustainable technologies."
+              },
+              {
+                "highlight": "Risk Reduction",
+                "text": "Mitigates regulatory and reputational risks."
+              }
+            ],
+            "description2": "These impacts enhance profitability and long-term sustainability."
+          },
+          "StrategiesToOvercome": {
+            "title": "Strategies to Overcome Barriers",
+            "Description": "To promote sustainable electronics, Stacia Corp. implements:",
+            "Strategies": [
+              {
+                "strategy": "Proactive Compliance",
+                "description": "Stay ahead of regulatory changes."
+              },
+              {
+                "strategy": "Supply Chain Collaboration",
+                "description": "Work with suppliers for ethical practices."
+              },
+              {
+                "strategy": "Design Innovation",
+                "description": "Incorporate sustainability from the design stage."
+              },
+              {
+                "strategy": "Industry Standards",
+                "description": "Adopt certifications like EPEAT."
+              }
+            ]
+          },
+          "FutureTrends": {
+            "title": "Future Trends",
+            "Description": "Trends shaping sustainable electronics include:",
+            "Trends": [
+              {
+                "technology": "Advanced Materials",
+                "description": "Development of sustainable alternatives."
+              },
+              {
+                "technology": "Energy Efficiency",
+                "description": "Focus on low-energy devices."
+              },
+              {
+                "technology": "Circular Economy",
+                "description": "Increased emphasis on recycling and reuse."
+              },
+              {
+                "technology": "Regulatory Evolution",
+                "description": "Stricter global sustainability standards."
+              }
+            ]
+          },
+          "ImpactOnEmployment": {
+            "title": "Impact on Employment",
+            "Description": "Sustainable electronics affect employment:",
+            "JobDisplacement": [
+              {
+                "area": "Traditional Manufacturing",
+                "description": "Some roles may be automated."
+              },
+              {
+                "area": "Sustainable Design",
+                "description": "New roles in eco-friendly product development."
+              },
+              {
+                "area": "Recycling",
+                "description": "Jobs in e-waste management."
+              },
+              {
+                "area": "Supply Chain",
+                "description": "Demand for ethical sourcing specialists."
+              }
+            ],
+            "JustTransitionStrategies": [
+              {
+                "strategy": "Upskilling",
+                "description": "Train workers for new sustainable roles."
+              },
+              {
+                "strategy": "Support Programs",
+                "description": "Provide safety nets for displaced workers."
+              },
+              {
+                "strategy": "Inclusive Growth",
+                "description": "Ensure opportunities for all."
+              }
+            ]
+          },
+          "RegionalVariations": {
+            "title": "Regional Variations",
+            "Description": "Adoption of sustainable electronics varies due to:",
+            "AdoptionFactors": [
+              {
+                "factor": "Regulatory Environment",
+                "description": "Stricter standards in regions like the EU."
+              },
+              {
+                "factor": "Economic Development",
+                "description": "Higher adoption in developed economies."
+              },
+              {
+                "factor": "Consumer Awareness",
+                "description": "Drives demand in informed markets."
+              },
+              {
+                "factor": "Infrastructure",
+                "description": "Affects recycling and production capabilities."
+              }
+            ],
+            "CaseStudies": [],
+            "ChallengesDescription": "Regions with lax regulations face slower adoption.",
+            "ChallengesDescription1": "Global standards can promote universal sustainability.",
+            "ChallengesInLowAdoptionRegions": [
+              "Weak regulatory frameworks",
+              "Limited consumer awareness",
+              "Inadequate recycling infrastructure",
+              "High costs of sustainable materials"
+            ]
+          },
+          "EnvironmentalImpact": {
+            "title": "Environmental Impact",
+            "Description": "Sustainable electronics reduce environmental harm:",
+            "Impacts": [
+              {
+                "impact": "Reduced E-waste",
+                "description": "Recycling and repair programs minimize waste."
+              },
+              {
+                "impact": "Lower Emissions",
+                "description": "Energy-efficient devices reduce carbon footprints."
+              },
+              {
+                "impact": "Resource Conservation",
+                "description": "Use of recycled materials preserves resources."
+              },
+              {
+                "impact": "Sustainable Practices",
+                "description": "Promotes eco-friendly manufacturing."
+              }
+            ]
+          },
+          "QualityAndSafety": {
+            "title": "Quality and Safety",
+            "Description": "Sustainable electronics enhance quality and safety:",
+            "Improvements": [
+              {
+                "process": "Material Safety",
+                "description": "Eliminates hazardous substances."
+              },
+              {
+                "process": "Durability",
+                "description": "Designs for longer product lifespans."
+              },
+              {
+                "process": "Recyclability",
+                "description": "Ensures safe end-of-life management."
+              },
+              {
+                "process": "Compliance",
+                "description": "Meets global safety standards."
+              }
+            ]
+          },
+          "FarmerPerspectives": {
+            "title": "Stakeholder Perspectives",
+            "Description": "Stakeholders in sustainable electronics include:",
+            "BenefitsForFarmers": [
+              {
+                "benefit": "Market Opportunities",
+                "description": "Growing demand for sustainable products."
+              },
+              {
+                "benefit": "Brand Reputation",
+                "description": "Enhances consumer trust."
+              },
+              {
+                "benefit": "Cost Savings",
+                "description": "Energy-efficient products reduce expenses."
+              },
+              {
+                "benefit": "Innovation",
+                "description": "Drives new product development."
+              }
+            ],
+            "ChallengesFacedByFarmers": [
+              {
+                "challenge": "Cost",
+                "description": "High initial investment in sustainable practices."
+              },
+              {
+                "challenge": "Supply Chain",
+                "description": "Ensuring ethical sourcing."
+              },
+              {
+                "challenge": "Regulation",
+                "description": "Navigating complex compliance requirements."
+              },
+              {
+                "challenge": "Technology",
+                "description": "Developing sustainable alternatives."
+              }
+            ],
+            "StrategiesToPromoteAdoptionAmongSmallholderFarmers": [
+              {
+                "strategy": "Financial Support",
+                "description": "Subsidies for sustainable investments."
+              },
+              {
+                "strategy": "Training",
+                "description": "Educate on sustainable practices."
+              },
+              {
+                "strategy": "Collaboration",
+                "description": "Partner with suppliers for ethical sourcing."
+              },
+              {
+                "strategy": "Certifications",
+                "description": "Adopt industry standards."
+              }
+            ]
+          },
+          "developmentProcess": {
+            "title": "Development Process",
+            "sections": [
+              {
+                "subtitle": "Ideation",
+                "paragraphs": [
+                  {
+                    "text": "The push for sustainable electronics arose from environmental concerns and consumer demand.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Stacia Corp. identified opportunities in eco-friendly design and circularity.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "The goal was to create sustainable, high-performance products."
+                  }
+                ]
+              },
+              {
+                "subtitle": "Design & Prototype",
+                "subtitleClass": "single-casestudy-layout1-subtitle test-selection-blue",
+                "paragraphs": [
+                  {
+                    "text": "Initial designs focused on recycled materials and energy efficiency.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Prototypes faced challenges in balancing cost and performance.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Iterative testing refined sustainable solutions."
+                  }
+                ]
+              }
+            ]
+          },
+          "challengesFaced": {
+            "title": "Challenges Faced",
+            "description": "Key challenges in sustainable electronics development included:",
+            "issues": [
+              {
+                "highlight": "Cost",
+                "text": "High costs of sustainable materials."
+              },
+              {
+                "highlight": "Performance",
+                "text": "Ensuring sustainable products meet performance standards."
+              },
+              {
+                "text": "R&D and supplier collaboration addressed these issues."
+              }
+            ]
+          },
+          "impactBenefits": {
+            "title": "Impact and Benefits",
+            "benefits": [
+              {
+                "highlight": "Environmental Protection",
+                "text": "Reduces e-waste and emissions."
+              },
+              {
+                "highlight": "Consumer Trust",
+                "text": "Builds loyalty through sustainable practices."
+              },
+              {
+                "highlight": "Market Growth",
+                "text": "Meets rising demand for green products."
+              },
+              {
+                "highlight": "Cost Efficiency",
+                "text": "Energy savings for consumers."
+              }
+            ]
+          },
+          "gallerytittle": "Sustainable Electronics",
+          "gallery": [
+            "https://placeholder.com/image1.jpg",
+            "https://placeholder.com/image2.jpg",
+            "https://placeholder.com/image3.jpg",
+            "https://placeholder.com/image4.jpg"
+          ],
+          "challenges": [
+            {
+              "challengestitle": "Conclusion",
+              "description": "Stacia Corp.'s commitment to sustainable electronics positions it as a leader in the industry. By integrating sustainability into design, supply chains, and circular economy models, it addresses environmental challenges and creates long-term value."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Case-Study-5",
+      "name": "AI",
+      "data": [
+        {
+          "id": "Case-Study-5",
+          "department": "Artificial Intelligence",
+          "title": "The Impact of AI on the Future of Work and Automation",
+          "backgroundImage": "/assets/AIBackground.png",
+          "imageURL": "/assets/caseStudy-1.webp",
+          "overview": {
+            "overviewtitle": "Introduction",
+            "description": "Artificial intelligence (AI) is transforming workplaces by automating tasks, enhancing decision-making, and creating new roles. However, it raises concerns about job displacement, ethical issues, and regulatory challenges. This case study explores AI's multifaceted impact on the future of work and strategies to navigate this evolving landscape."
+          },
+          "imageContent": {
+            "imagetitle": "Background",
+            "imageSrc": "/assets/singlepage-ai.webp",
+            "content": [
+              "AI-powered automation is reshaping industries, from manufacturing to healthcare, by increasing productivity and enabling new forms of work organization. However, its rapid adoption raises concerns about job displacement, wage inequality, and ethical considerations."
+            ]
+          },
+          "Backgrounddes": {
+            "overviewtitle": "Introduction",
+            "description1": "AI automates routine tasks, enhances decision-making, and creates new job roles, but its potential to displace low-skilled workers and exacerbate inequality necessitates proactive strategies.",
+            "description2": "Ethical frameworks, education, and governance are critical to harnessing AI's benefits responsibly."
+          },
+          "salientFeatures": {
+            "title": "Salient Features",
+            "features": [
+              "Task automation",
+              "Enhanced decision-making",
+              "New job roles",
+              "Human-AI collaboration",
+              "Data-driven insights"
+            ]
+          },
+          "problemStatement": {
+            "title": "Challenges of AI Adoption",
+            "description": "AI's integration into workplaces presents several challenges:",
+            "issues": [
+              {
+                "highlight": "Job Displacement",
+                "text": "Automation threatens low-skilled jobs."
+              },
+              {
+                "highlight": "Wage Inequality",
+                "text": "Increases demand for high-skilled workers."
+              },
+              {
+                "highlight": "Ethical Concerns",
+                "text": "Bias, fairness, and transparency issues."
+              },
+              {
+                "highlight": "Privacy and Security",
+                "text": "Risks from data misuse and breaches."
+              },
+              {
+                "highlight": "Regulatory Gaps",
+                "text": "Lack of comprehensive AI governance."
+              }
+            ],
+            "des1": "These challenges could hinder equitable adoption and public trust in AI.",
+            "des2": "Strategic interventions can mitigate risks and maximize benefits."
+          },
+          "CaseAnalysis": {
+            "title": "Case Analysis",
+            "title1": "Challenges of AI in the Workplace:",
+            "des3": "AI is transforming work but raises significant concerns. Proactive strategies can address these challenges and promote inclusive growth.",
+            "Challenges": [
+              "Widespread job displacement",
+              "Wage inequality",
+              "Ethical issues like bias and transparency",
+              "Data privacy and security risks",
+              "Lack of regulatory frameworks"
+            ],
+            "des4": "Job displacement threatens low-skilled workers, while ethical concerns like biased algorithms can lead to discriminatory outcomes.",
+            "des5": "Privacy risks from large datasets and the absence of clear regulations create uncertainty.",
+            "des6": "Education, ethical frameworks, and governance can mitigate these issues.",
+            "ProposedSolution": {
+              "title": "Proposed Solution: AI Strategies",
+              "Description": "Strategies to harness AI's benefits include:",
+              "benefits": [
+                {
+                  "highlight": "Education and Training",
+                  "text": "Equip workers with AI-related skills."
+                },
+                {
+                  "highlight": "Ethical Frameworks",
+                  "text": "Address bias, fairness, and transparency."
+                },
+                {
+                  "highlight": "Human-AI Collaboration",
+                  "text": "Leverage strengths of both humans and AI."
+                },
+                {
+                  "highlight": "Governance",
+                  "text": "Establish compliance mechanisms."
+                },
+                {
+                  "highlight": "Transparency",
+                  "text": "Increase explainability of AI systems."
+                }
+              ],
+              "des7": "Education ensures workers are prepared for AI-driven roles.",
+              "des8": "Ethical frameworks promote fair and responsible AI use.",
+              "des9": "Governance and transparency build trust and accountability."
+            },
+            "KeyMechanizedProcesses": {
+              "title": "Key AI Processes",
+              "Description": "Key AI processes transforming work include:",
+              "Processes": [
+                {
+                  "Process": "Task Automation",
+                  "Description": "Automates routine and repetitive tasks.",
+                  "Image": "./media/task-automation.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Decision Support",
+                  "Description": "Analyzes data for better decisions.",
+                  "Image": "./media/decision-support.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Human-AI Collaboration",
+                  "Description": "Combines human and AI capabilities.",
+                  "Image": "./media/human-ai-collaboration.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Data Analytics",
+                  "Description": "Provides insights from large datasets.",
+                  "Image": "./media/data-analytics-ai.jpeg",
+                  "Source": "Placeholder"
+                },
+                {
+                  "Process": "Predictive Maintenance",
+                  "Description": "Prevents equipment failures.",
+                  "Image": "./media/predictive-maintenance.jpeg",
+                  "Source": "Placeholder"
+                }
+              ],
+              "des10": "Task automation increases efficiency, freeing workers for creative tasks.",
+              "des11": "Decision support improves outcomes in fields like healthcare.",
+              "des12": "Human-AI collaboration leverages complementary strengths.",
+              "des13": "Data analytics and predictive maintenance enhance productivity.",
+              "des14": "These processes drive AI's transformative impact on work."
+            }
+          },
+          "Statistics": {
+            "title": "Statistics",
+            "condent": {
+              "MarketGrowth": {
+                "Description": "AI could boost global GDP by up to $15.7 trillion by 2030.",
+                "Image": "./media/ai-market-growth.jpeg",
+                "Source": "McKinsey Global Institute"
+              },
+              "Adoption": {
+                "Description": "AI could displace 85 million jobs but create 97 million by 2025.",
+                "Source": "World Economic Forum"
+              },
+              "CostAndOutput": {
+                "Description": "47% of US jobs are at high risk of automation.",
+                "Image": "./media/job-automation-stats.jpeg",
+                "Source": "Frey & Osborne, 2017",
+                "description1": "These figures highlight AI's economic and employment impacts."
+              }
+            }
+          },
+          "EconomicImpact": {
+            "title": "Economic Impact",
+            "Description": "AI drives significant economic benefits:",
+            "Impacts": [
+              {
+                "highlight": "Productivity Gains",
+                "text": "Increases efficiency across industries."
+              },
+              {
+                "highlight": "Job Creation",
+                "text": "New roles in AI development and data analysis."
+              },
+              {
+                "highlight": "Economic Growth",
+                "text": "Contributes to GDP through innovation."
+              },
+              {
+                "highlight": "Cost Savings",
+                "text": "Automation reduces operational expenses."
+              },
+              {
+                "highlight": "Market Expansion",
+                "text": "Creates new business opportunities."
+              }
+            ],
+            "description2": "These impacts drive economic transformation but require careful management."
+          },
+          "StrategiesToOvercome": {
+            "title": "Strategies to Overcome Barriers",
+            "Description": "To address AI challenges, the following strategies are proposed:",
+            "Strategies": [
+              {
+                "strategy": "Education",
+                "description": "Promote digital literacy and AI skills."
+              },
+              {
+                "strategy": "Ethical Guidelines",
+                "description": "Develop standards for fair AI use."
+              },
+              {
+                "strategy": "Governance",
+                "description": "Establish regulatory frameworks."
+              },
+              {
+                "strategy": "Transparency",
+                "description": "Enhance explainability of AI systems."
+              }
+            ]
+          },
+          "FutureTrends": {
+            "title": "Future Trends",
+            "Description": "Trends shaping AI's impact on work include:",
+            "Trends": [
+              {
+                "technology": "Advanced AI Models",
+                "description": "More sophisticated automation capabilities."
+              },
+              {
+                "technology": "Ethical AI",
+                "description": "Focus on fairness and transparency."
+              },
+              {
+                "technology": "Human-AI Integration",
+                "description": "Seamless collaboration models."
+              },
+              {
+                "technology": "Regulatory Evolution",
+                "description": "Stricter AI governance frameworks."
+              }
+            ]
+          },
+          "ImpactOnEmployment": {
+            "title": "Impact on Employment",
+            "Description": "AI has mixed employment effects:",
+            "JobDisplacement": [
+              {
+                "area": "Routine Tasks",
+                "description": "Displacement of low-skilled jobs."
+              },
+              {
+                "area": "AI Development",
+                "description": "New roles in programming and ethics."
+              },
+              {
+                "area": "Data Analysis",
+                "description": "Demand for data scientists."
+              },
+              {
+                "area": "Maintenance",
+                "description": "Jobs in AI system upkeep."
+              }
+            ],
+            "JustTransitionStrategies": [
+              {
+                "strategy": "Upskilling",
+                "description": "Train workers for AI-related roles."
+              },
+              {
+                "strategy": "Support Programs",
+                "description": "Provide safety nets for displaced workers."
+              },
+              {
+                "strategy": "Inclusive Policies",
+                "description": "Ensure equitable access to opportunities."
+              }
+            ]
+          },
+          "RegionalVariations": {
+            "title": "Regional Variations",
+            "Description": "AI adoption varies due to:",
+            "AdoptionFactors": [
+              {
+                "factor": "Economic Development",
+                "description": "Higher adoption in advanced economies."
+              },
+              {
+                "factor": "Regulatory Environment",
+                "description": "Stricter rules in regions like the EU."
+              },
+              {
+                "factor": "Skill Levels",
+                "description": "Influences workforce readiness."
+              },
+              {
+                "factor": "Infrastructure",
+                "description": "Affects AI deployment capabilities."
+              }
+            ],
+            "CaseStudies": [],
+            "ChallengesDescription": "Developing regions face challenges like skill gaps and infrastructure.",
+            "ChallengesDescription1": "Global collaboration can promote equitable AI adoption.",
+            "ChallengesInLowAdoptionRegions": [
+              "Limited digital infrastructure",
+              "Low AI literacy",
+              "Regulatory uncertainty",
+              "Economic constraints"
+            ]
+          },
+          "EnvironmentalImpact": {
+            "title": "Environmental Impact",
+            "Description": "AI has environmental implications:",
+            "Impacts": [
+              {
+                "impact": "Energy Efficiency",
+                "description": "Optimizes resource use in industries."
+              },
+              {
+                "impact": "Carbon Footprint",
+                "description": "High energy use in AI training."
+              },
+              {
+                "impact": "Sustainable Practices",
+                "description": "Supports eco-friendly innovations."
+              },
+              {
+                "impact": "Waste Reduction",
+                "description": "Improves manufacturing efficiency."
+              }
+            ]
+          },
+          "QualityAndSafety": {
+            "title": "Quality and Safety",
+            "Description": "AI enhances quality and safety through:",
+            "Improvements": [
+              {
+                "process": "Predictive Maintenance",
+                "description": "Prevents equipment failures."
+              },
+              {
+                "process": "Quality Control",
+                "description": "Ensures product consistency."
+              },
+              {
+                "process": "Safety Monitoring",
+                "description": "Detects workplace hazards."
+              },
+              {
+                "process": "Compliance",
+                "description": "Meets regulatory standards."
+              }
+            ]
+          },
+          "FarmerPerspectives": {
+            "title": "Stakeholder Perspectives",
+            "Description": "Stakeholders in AI adoption include:",
+            "BenefitsForFarmers": [
+              {
+                "benefit": "Productivity",
+                "description": "Automates repetitive tasks."
+              },
+              {
+                "benefit": "Decision-Making",
+                "description": "Improves strategic choices."
+              },
+              {
+                "benefit": "Innovation",
+                "description": "Drives new job roles."
+              },
+              {
+                "benefit": "Efficiency",
+                "description": "Streamlines operations."
+              }
+            ],
+            "ChallengesFacedByFarmers": [
+              {
+                "challenge": "Job Displacement",
+                "description": "Risk to low-skilled workers."
+              },
+              {
+                "challenge": "Skills Gap",
+                "description": "Need for AI literacy."
+              },
+              {
+                "challenge": "Ethics",
+                "description": "Concerns about bias and fairness."
+              },
+              {
+                "challenge": "Regulation",
+                "description": "Navigating governance frameworks."
+              }
+            ],
+            "StrategiesToPromoteAdoptionAmongSmallholderFarmers": [
+              {
+                "strategy": "Training",
+                "description": "Enhance AI skills."
+              },
+              {
+                "strategy": "Ethical Standards",
+                "description": "Promote fair AI use."
+              },
+              {
+                "strategy": "Support",
+                "description": "Provide resources for adoption."
+              },
+              {
+                "strategy": "Collaboration",
+                "description": "Partner with tech providers."
+              }
+            ]
+          },
+          "developmentProcess": {
+            "title": "Development Process",
+            "sections": [
+              {
+                "subtitle": "Ideation",
+                "paragraphs": [
+                  {
+                    "text": "AI development was driven by the need for efficiency and innovation.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Stakeholder needs identified automation and decision-making as priorities.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "The goal was to create scalable AI solutions."
+                  }
+                ]
+              },
+              {
+                "subtitle": "Design & Prototype",
+                "subtitleClass": "single-casestudy-layout1-subtitle test-selection-blue",
+                "paragraphs": [
+                  {
+                    "text": "Initial designs focused on automation and analytics.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Prototypes faced challenges in bias and transparency.",
+                    "className": "test-selection-blue"
+                  },
+                  {
+                    "text": "Iterative testing improved performance and ethics."
+                  }
+                ]
+              }
+            ]
+          },
+          "challengesFaced": {
+            "title": "Challenges Faced",
+            "description": "Key challenges in AI development included:",
+            "issues": [
+              {
+                "highlight": "Bias",
+                "text": "Ensuring fair and unbiased algorithms."
+              },
+              {
+                "highlight": "Transparency",
+                "text": "Making AI decisions explainable."
+              },
+              {
+                "text": "Ethical frameworks and testing addressed these issues."
+              }
+            ]
+          },
+          "impactBenefits": {
+            "title": "Impact and Benefits",
+            "benefits": [
+              {
+                "highlight": "Productivity",
+                "text": "Automates tasks for efficiency."
+              },
+              {
+                "highlight": "Innovation",
+                "text": "Creates new roles and opportunities."
+              },
+              {
+                "highlight": "Decision-Making",
+                "text": "Enhances strategic outcomes."
+              },
+              {
+                "highlight": "Cost Savings",
+                "text": "Reduces operational expenses."
+              }
+            ]
+          },
+          "gallerytittle": "AI in the Workplace",
+          "gallery": [
+            "https://placeholder.com/image1.jpg",
+            "https://placeholder.com/image2.jpg",
+            "https://placeholder.com/image3.jpg",
+            "https://placeholder.com/image4.jpg"
+          ],
+          "challenges": [
+            {
+              "challengestitle": "Conclusion",
+              "description": "AI is transforming the future of work by enhancing productivity and creating new opportunities. By addressing challenges through education, ethics, and governance, stakeholders can ensure a sustainable and inclusive AI-driven future."
             }
           ]
         }
