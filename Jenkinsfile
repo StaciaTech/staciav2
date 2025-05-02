@@ -57,7 +57,7 @@ pipeline {
             }
             steps {
                 script {
-                    def awsRegion = 'ap-south-1' // e.g., 'ap-south-1'
+                    def awsRegion = 'ap-south-1'
                     def s3BucketName = 'staciatech.com'
 
                     sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --region ${awsRegion}"
