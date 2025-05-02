@@ -24,7 +24,7 @@ pipeline {
                         gitTool: 'git',
                         submoduleCfg: [],
                         userRemoteConfigs: [[
-                            credentialsId: 'github-pat', // Replace with your GitHub credentials ID
+                            credentialsId: 'github-user-pat', // Replace with your GitHub credentials ID
                             url: 'https://github.com/StaciaTech/staciav2.git'
                         ]]
                     ])
