@@ -73,7 +73,7 @@ pipeline {
                 sshPublisher(
                     publishers: [
                         [
-                            configName: 'cpanel-scp', // The name you'll configure in Jenkins Global Tool Configuration
+                            configName: 'cpanel-scp',
                             transfers: [
                                 [
                                     cleanRemote: false,
