@@ -10,7 +10,6 @@
 // import Star from "../components/Star";
 // import { useParams } from "react-router-dom";
 
-
 // const data = [
 //   {
 //     id: "Case Study-1",
@@ -39,7 +38,6 @@
 //   const [casestudyData, setCasestudyData] = useState([]);
 //   const [activeDepartment, setActiveDepartment] = useState("All");
 //   const [cursorVisible, setCursorVisible] = useState(false);
-  
 
 //   const details = data.caseStudy;
 //   console.log(details,"Details");
@@ -106,12 +104,10 @@
 //   );
 // }
 
-
-
-// all filter dep split 
+// all filter dep split
 //Static
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/CaseStudy.css";
@@ -119,7 +115,6 @@ import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
 import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
-import { useParams } from "react-router-dom";
 
 const data = [
   {
@@ -146,35 +141,35 @@ const data = [
 ];
 
 export default function CaseStudy() {
-  const [casestudyData, setCasestudyData] = useState([]);
-  const [groupedData, setGroupedData] = useState({});
   const [activeDepartment, setActiveDepartment] = useState("All");
-  const [cursorVisible, setCursorVisible] = useState(false);
 
-  useEffect(() => {
+  // Memoize grouped data to avoid recalculating on every render
+  const groupedData = useMemo(() => {
+    return data.reduce((acc, item) => {
+      if (!acc[item.category]) {
+        acc[item.category] = [];
+      }
+      acc[item.category].push(item);
+      return acc;
+    }, {});
+  }, []); // Empty dependency array since `data` is static
+
+  // Derive the data to display based on activeDepartment
+  const displayData = useMemo(() => {
     if (activeDepartment === "All") {
-      // Group data by category for the "All" filter
-      const grouped = data.reduce((acc, item) => {
-        if (!acc[item.category]) {
-          acc[item.category] = [];
-        }
-        acc[item.category].push(item);
-        return acc;
-      }, {});
-      setGroupedData(grouped);
-      setCasestudyData([]); // Clear casestudyData since we'll use groupedData
-    } else {
-      // For specific categories, filter as before
-      setGroupedData({}); // Clear groupedData
-      setCasestudyData(
-        data.filter((article) => article.category === activeDepartment)
-      );
+      return groupedData;
     }
-  }, [activeDepartment]);
+    return {
+      [activeDepartment]: data.filter(
+        (article) => article.category === activeDepartment
+      ),
+    };
+  }, [activeDepartment, groupedData]);
 
+  // Unique categories for tabs
   const uniqueCategories = [
     "All",
-    ...new Set(data?.map((item) => item.category)),
+    ...new Set(data.map((item) => item.category)),
   ];
 
   return (
@@ -191,7 +186,7 @@ export default function CaseStudy() {
       </div>
 
       <div className="article-item-tabs-container">
-        {uniqueCategories?.map((category, i) => (
+        {uniqueCategories.map((category, i) => (
           <div
             key={i}
             className={`article-item-tab ${
@@ -205,22 +200,23 @@ export default function CaseStudy() {
       </div>
 
       <div>
-        {activeDepartment === "All" ? (
-          // Render grouped data for "All" filter
-          Object.keys(groupedData).map((category) => (
-            <div key={category}>
-              <h1>{category}</h1>
-              <hr />
-              <ReUsableArticle
-                data={groupedData[category]}
-                path={"single-caseStudy"}
-              />
-            </div>
-          ))
-        ) : (
-          // Render filtered data for specific categories
-          <ReUsableArticle data={casestudyData} path={"single-caseStudy"} />
-        )}
+        {Object.keys(displayData).map((category) => (
+          <div key={category}>
+            <h1 className="product-dep-name">{category}</h1>
+            <hr
+              style={{
+                width: "90%",
+                marginLeft: "100px",
+                backgroundColor: "#E5E5E5",
+                opacity: 0.3,
+              }}
+            />
+            <ReUsableArticle
+              data={displayData[category]}
+              path={"single-caseStudy"}
+            />
+          </div>
+        ))}
       </div>
 
       <Footer />

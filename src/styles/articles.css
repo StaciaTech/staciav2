@@ -40,7 +40,7 @@
   overflow-x: auto;
   margin: 0rem 5rem;
   padding: 3rem 0rem;
-  border-bottom: 1px solid #e5e5e5;
+ 
 }
 .article-item-tab {
   font-size: 20px;
@@ -100,6 +100,8 @@
   grid-template-columns: repeat(2, 1fr); */
   gap: 1rem;
 }
+
+
 .article-grid {
   width: 90%;
   margin: 0 auto;

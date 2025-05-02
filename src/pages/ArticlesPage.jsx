@@ -70,8 +70,8 @@
 // export default ArticlesPage;
 
 //  all filter deparment  split 
-
-import React, { useEffect, useState } from "react";
+import React, { useMemo, useState } from "react";
+import { useParams } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/articles.css";
@@ -79,40 +79,42 @@ import ReUsableArticlePage from "../components/ReUsableComp/ReUsableArticlePage"
 import MobileFooter from "../components/MobileFooter";
 import SideBar from "../components/SideBar";
 import Star from "../components/Star";
-import { useParams } from "react-router-dom";
 import articlesData from "../Data/Articles.json"; // Importing static JSON file
 
 function ArticlesPage() {
   const params = useParams();
-  const [articleData, setArticleData] = useState(articlesData.docs);
-  const [activeDepartment, setActiveDepartment] = useState("All"); // Default to "All"
-  const [articleObj, setArticleObj] = useState();
+  const [activeDepartment, setActiveDepartment] = useState(
+    params.department || "All"
+  );
 
-  useEffect(() => {
-    if (params.department) {
-      setActiveDepartment(params.department);
-    } else if (articleData) {
-      setActiveDepartment("All"); // Default to "All" if no department in params
-    }
-  }, [articleData, params]);
+  // Memoize article data
+  const articleData = useMemo(() => articlesData.docs || [], []);
 
-  useEffect(() => {
-    if (activeDepartment && activeDepartment !== "All" && articleData) {
-      setArticleObj(
-        articleData.find((eachItem) => eachItem.name === activeDepartment)
-      );
-    } else {
-      setArticleObj(null); // Clear articleObj when "All" is selected
-    }
+  // Memoize article object for the active department
+  const articleObj = useMemo(() => {
+    if (activeDepartment === "All") return null;
+    return articleData.find((item) => item.name === activeDepartment) || null;
   }, [activeDepartment, articleData]);
 
-  // Create the list of tabs, including "All"
-  const uniqueCategories = ["All", ...articleData.map((item) => item.name)];
+  // Memoize unique categories for tabs
+  const uniqueCategories = useMemo(
+    () => ["All", ...articleData.map((item) => item.name)],
+    [articleData]
+  );
+
+  // Memoize display data based on active department
+  const displayData = useMemo(() => {
+    if (activeDepartment === "All") {
+      return articleData;
+    }
+    return articleObj ? [articleObj] : [];
+  }, [activeDepartment, articleObj, articleData]);
 
   return (
     <div>
       <div className="nav_style">
-        <NavBar /> <SideBar />
+        <NavBar />
+        <SideBar />
       </div>
       {/* Articles Intro */}
       <div className="article-section1">
@@ -124,7 +126,7 @@ function ArticlesPage() {
         </div>
       </div>
       <div className="article-item-tabs-container">
-        {uniqueCategories?.map((category, i) => (
+        {uniqueCategories.map((category, i) => (
           <div
             key={i}
             className={`article-item-tab ${
@@ -137,12 +139,19 @@ function ArticlesPage() {
         ))}
       </div>
       <div>
-        {activeDepartment === "All" ? (
-          // Render grouped data for "All" filter
-          articleData.map((department) => (
+        {displayData.length > 0 ? (
+          displayData.map((department) => (
             <div key={department.name}>
-              <h2>{department.name}</h2>
-              <hr />
+              <h2 className="product-dep-name">{department.name}</h2>
+              <hr
+                className="department-separator"
+                style={{
+                  width: "90%",
+                  marginLeft: "100px",
+                  backgroundColor: "#E5E5E5",
+                  opacity: 0.3,
+                }}
+              />
               <ReUsableArticlePage
                 data={department.data}
                 path={"single-article"}
@@ -150,14 +159,11 @@ function ArticlesPage() {
             </div>
           ))
         ) : (
-          // Render filtered data for specific departments
-          <ReUsableArticlePage
-            data={articleObj?.data}
-            path={"single-article"}
-          />
+          <p>No articles found.</p>
         )}
       </div>
-      <Footer /> <MobileFooter />
+      <Footer />
+      <MobileFooter />
     </div>
   );
 }

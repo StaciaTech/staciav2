@@ -81,7 +81,7 @@ const StackScroll = () => {
       <div className="stack-scroll">
         <ul id="cards">
           {homeProductData.map((eachHomeProduct, i) => {
-            const targetScale = 1 - (homeProductData.length - i) * 0.05;
+            const targetScale = 1 - (homeProductData.length - i) * 0.01;
             return (
               <StackCard
                 key={eachHomeProduct.id}

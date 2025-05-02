@@ -557,12 +557,12 @@ function SingleCaseStudy() {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const bottomOffset = 1000; // Adjust this value as needed
-      if (scrollY > 1500) {
+      if (scrollY > 4200) {
         if (scrollY + windowHeight >= documentHeight - bottomOffset) {
           setShowButton(false); // Hide when near bottom
         } else {
           setShowButton(true); // Show otherwise
-        }
+        } 
       } else {
         setShowButton(false); // Hide before 1500px
       }
