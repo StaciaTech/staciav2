@@ -1,4 +1,3 @@
-
 // // import React, { useEffect, useState, useRef } from "react";
 // // import "../../styles/NavProductComp.css";
 // // import {
@@ -299,7 +298,7 @@
 // //                                 </span>
 // //                               )}
 // //                             </div>
-// //               <div className="navProComp-mainCat-item-container" 
+// //               <div className="navProComp-mainCat-item-container"
 // //               ref={categoryContainerRef}
 // //               onScroll={handleScroll}>
 // //                 {MainCatArr?.map((eachCat, i) => (
@@ -338,11 +337,11 @@
 // //                     }`}
 // //                   ></div>
 // //                 ))}
-// //               </div>         
+// //               </div>
 // //                <div className="arrow-wrapper">
 // //                               {showSubUpArrow && (
 // //                                 <span
-// //                                   onClick={scrollSubUp}                    
+// //                                   onClick={scrollSubUp}
 // //                                   aria-label="Scroll sub up"
 // //                                   className="arrow-up"
 // //                                 >
@@ -351,14 +350,14 @@
 // //                               )}
 // //                               {showSubDownArrow && (
 // //                                 <span
-// //                                   onClick={scrollSubDown}                    
+// //                                   onClick={scrollSubDown}
 // //                                   aria-label="Scroll sub down"
 // //                                   className="arrow-down"
 // //                                 >
 // //                                   <IoIosArrowDown />
 // //                                 </span>
 // //                               )}
-// //                             </div>     
+// //                             </div>
 // //               <div className="navProComp-subCat-item-container"
 // //               ref={subCategoryContainerRef}
 // //               onScroll={handleSubScroll}>
@@ -431,8 +430,6 @@
 // // }
 
 // // export default ResourceDropDown;
-
-
 
 // // src/components/ResourceDropDown.jsx
 // import React, { useEffect, useState, useRef } from "react";
@@ -851,12 +848,13 @@
 
 // export default ResourceDropDown;
 
-
-
-
 // src/components/ResourceDropDown.jsx
 import React, { useEffect, useState, useRef } from "react";
-import { IoIosArrowForward, IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import {
+  IoIosArrowForward,
+  IoIosArrowUp,
+  IoIosArrowDown,
+} from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import "../../styles/NavProductComp.css";
 import casedoc from "../../Data/SingleCaseStudy.json"; // Case study JSON
@@ -897,7 +895,9 @@ function ResourceDropDown({ handleClose }) {
     if (!defaultDept) return;
 
     // Deduplicate category names
-    const uniqueCategories = [...new Set(defaultDept.cats.map((cat) => cat.name))];
+    const uniqueCategories = [
+      ...new Set(defaultDept.cats.map((cat) => cat.name)),
+    ];
     const defaultCategoryName = uniqueCategories[0];
     const defaultCategoryData = defaultDept.cats
       .filter((cat) => cat.name === defaultCategoryName)
@@ -947,7 +947,9 @@ function ResourceDropDown({ handleClose }) {
 
   // Handle main category selection
   const handleMainCatHover = (mainCat) => {
-    const dept = resourceArr.find((item) => item.name === dropdownState.deptName);
+    const dept = resourceArr.find(
+      (item) => item.name === dropdownState.deptName
+    );
     const categoryData = dept?.cats
       .filter((cat) => cat.name === mainCat)
       .flatMap((cat) => cat.data);
@@ -1015,7 +1017,8 @@ function ResourceDropDown({ handleClose }) {
   // Scroll visibility handler
   const handleScroll = () => {
     if (categoryContainerRef.current) {
-      const { scrollTop, scrollHeight, clientHeight } = categoryContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } =
+        categoryContainerRef.current;
       setScrollArrows((prev) => ({
         ...prev,
         showUpArrow: scrollTop > 0,
@@ -1026,7 +1029,8 @@ function ResourceDropDown({ handleClose }) {
 
   const handleSubScroll = () => {
     if (subCategoryContainerRef.current) {
-      const { scrollTop, scrollHeight, clientHeight } = subCategoryContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } =
+        subCategoryContainerRef.current;
       setScrollArrows((prev) => ({
         ...prev,
         showSubUpArrow: scrollTop > 0,
@@ -1050,14 +1054,18 @@ function ResourceDropDown({ handleClose }) {
     }
 
     return () => {
-      if (categoryContainer) categoryContainer.removeEventListener("scroll", handleScroll);
-      if (subCategoryContainer) subCategoryContainer.removeEventListener("scroll", handleSubScroll);
+      if (categoryContainer)
+        categoryContainer.removeEventListener("scroll", handleScroll);
+      if (subCategoryContainer)
+        subCategoryContainer.removeEventListener("scroll", handleSubScroll);
     };
   }, []);
 
   // Navigation helpers
   const productCategoryNavigator = (categoryName) => {
-    const dept = resourceArr.find((item) => item.name === dropdownState.deptName);
+    const dept = resourceArr.find(
+      (item) => item.name === dropdownState.deptName
+    );
     const categoryExists = dept?.cats.some((cat) => cat.name === categoryName);
     if (!categoryExists) return;
 
@@ -1068,8 +1076,12 @@ function ResourceDropDown({ handleClose }) {
   };
 
   const singleProductNavigator = (productTitle) => {
-    const dept = resourceArr.find((item) => item.name === dropdownState.deptName);
-    const category = dept?.cats.find((cat) => cat.name === dropdownState.mainCatName);
+    const dept = resourceArr.find(
+      (item) => item.name === dropdownState.deptName
+    );
+    const category = dept?.cats.find(
+      (cat) => cat.name === dropdownState.mainCatName
+    );
     const product = category?.data.find((item) => item.title === productTitle);
     if (!product) return;
 
@@ -1126,7 +1138,9 @@ function ResourceDropDown({ handleClose }) {
                   <div
                     key={i}
                     className={`navProComp-dot ${
-                      cat === dropdownState.mainCatName ? "navProComp-dot-active" : ""
+                      cat === dropdownState.mainCatName
+                        ? "navProComp-dot-active"
+                        : ""
                     }`}
                   />
                 ))}
@@ -1167,7 +1181,9 @@ function ResourceDropDown({ handleClose }) {
                   >
                     <div
                       className={`navProComp-mainCat-item ${
-                        cat === dropdownState.mainCatName ? "mainCat-active" : ""
+                        cat === dropdownState.mainCatName
+                          ? "mainCat-active"
+                          : ""
                       }`}
                     >
                       {cat}
@@ -1189,7 +1205,9 @@ function ResourceDropDown({ handleClose }) {
                   <div
                     key={i}
                     className={`navProComp-dot ${
-                      subCat === dropdownState.subCatName ? "navProComp-dot-active" : ""
+                      subCat === dropdownState.subCatName
+                        ? "navProComp-dot-active"
+                        : ""
                     }`}
                   />
                 ))}
@@ -1230,7 +1248,9 @@ function ResourceDropDown({ handleClose }) {
                   >
                     <div
                       className={`navProComp-mainCat-item ${
-                        subCat === dropdownState.subCatName ? "mainCat-active" : ""
+                        subCat === dropdownState.subCatName
+                          ? "mainCat-active"
+                          : ""
                       }`}
                     >
                       {subCat}
@@ -1257,7 +1277,9 @@ function ResourceDropDown({ handleClose }) {
                   <img
                     src={dropdownState.displayProduct.imageURL}
                     alt={dropdownState.displayProduct.title}
-                    onError={(e) => (e.target.src = "/assets/fallback-image.webp")}
+                    onError={(e) =>
+                      (e.target.src = "/assets/fallback-image.webp")
+                    }
                   />
                 </div>
                 <div className="navProComp-products-title">

@@ -562,7 +562,7 @@ function SingleCaseStudy() {
           setShowButton(false); // Hide when near bottom
         } else {
           setShowButton(true); // Show otherwise
-        } 
+        }
       } else {
         setShowButton(false); // Hide before 1500px
       }
@@ -688,7 +688,6 @@ function SingleCaseStudy() {
                   </p>
                 ))}
               </div>
-
             </div>
             <p className="single-casestudy-layout1-des test-seclection-blue">
               {caseStudy.Backgrounddes.description1}
@@ -909,9 +908,11 @@ function SingleCaseStudy() {
             </ul>
             <p className="problem-statement-para1">
               {caseStudy.CaseAnalysis.des4}
-            </p><p className="problem-statement-para1">
+            </p>
+            <p className="problem-statement-para1">
               {caseStudy.CaseAnalysis.des5}
-            </p><p className="problem-statement-para1">
+            </p>
+            <p className="problem-statement-para1">
               {caseStudy.CaseAnalysis.des6}
             </p>
 
@@ -923,17 +924,22 @@ function SingleCaseStudy() {
               {caseStudy.CaseAnalysis.ProposedSolution.Description}
             </p>
             <ul className="problem-statement-para2">
-              {caseStudy.CaseAnalysis.ProposedSolution.benefits.map((benefits, index) => (
-                <li key={index}>
-                  <span className="highlight">{benefits.highlight}:</span> {benefits.text}
-                </li>
-              ))}
+              {caseStudy.CaseAnalysis.ProposedSolution.benefits.map(
+                (benefits, index) => (
+                  <li key={index}>
+                    <span className="highlight">{benefits.highlight}:</span>{" "}
+                    {benefits.text}
+                  </li>
+                )
+              )}
             </ul>
             <p className="problem-statement-para1">
               {caseStudy.CaseAnalysis.ProposedSolution.des7}
-            </p><p className="problem-statement-para1">
+            </p>
+            <p className="problem-statement-para1">
               {caseStudy.CaseAnalysis.ProposedSolution.des8}
-            </p><p className="problem-statement-para1">
+            </p>
+            <p className="problem-statement-para1">
               {caseStudy.CaseAnalysis.ProposedSolution.des9}
             </p>
 
@@ -942,18 +948,23 @@ function SingleCaseStudy() {
               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.title}
             </h2>
             <ul className="problem-statement-para2">
-              {caseStudy.CaseAnalysis.KeyMechanizedProcesses.Processes.map((Processes, index) => (
-                <li key={index}>
-                  <span className="highlight">{Processes.Process}:</span> {Processes.Description}
-                </li>
-              ))}
+              {caseStudy.CaseAnalysis.KeyMechanizedProcesses.Processes.map(
+                (Processes, index) => (
+                  <li key={index}>
+                    <span className="highlight">{Processes.Process}:</span>{" "}
+                    {Processes.Description}
+                  </li>
+                )
+              )}
             </ul>
 
             <p className="problem-statement-para1">
               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des10}
-            </p><p className="problem-statement-para1">
+            </p>
+            <p className="problem-statement-para1">
               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des11}
-            </p><p className="problem-statement-para1">
+            </p>
+            <p className="problem-statement-para1">
               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des12}
             </p>
 
@@ -972,9 +983,13 @@ function SingleCaseStudy() {
               {caseStudy.Statistics.condent.MarketGrowth.Description}
             </p>
             <ul className="problem-statement-para2">
-              {Object.values(caseStudy.Statistics.condent).map((feature, index) => (
-                <li key={index}>{feature.Description || 'No feature description'}</li>
-              ))}
+              {Object.values(caseStudy.Statistics.condent).map(
+                (feature, index) => (
+                  <li key={index}>
+                    {feature.Description || "No feature description"}
+                  </li>
+                )
+              )}
             </ul>
 
             {/* EconomicImpact */}
@@ -987,7 +1002,8 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.EconomicImpact.Impacts.map((Impacts, index) => (
                 <li key={index}>
-                  <span className="highlight">{Impacts.highlight}:</span> {Impacts.text}
+                  <span className="highlight">{Impacts.highlight}:</span>{" "}
+                  {Impacts.text}
                 </li>
               ))}
             </ul>
@@ -1000,13 +1016,15 @@ function SingleCaseStudy() {
               {caseStudy.StrategiesToOvercome.Description}
             </p>
             <ul className="problem-statement-para2">
-              {caseStudy.StrategiesToOvercome.Strategies.map((Strategies, index) => (
-                <li key={index}>
-                  <span className="highlight">{Strategies.strategy}:</span> {Strategies.description}
-                </li>
-              ))}
+              {caseStudy.StrategiesToOvercome.Strategies.map(
+                (Strategies, index) => (
+                  <li key={index}>
+                    <span className="highlight">{Strategies.strategy}:</span>{" "}
+                    {Strategies.description}
+                  </li>
+                )
+              )}
             </ul>
-
 
             {/* future trents */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
@@ -1018,7 +1036,8 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.FutureTrends.Trends.map((Trends, index) => (
                 <li key={index}>
-                  <span className="highlight">{Trends.technology}:</span> {Trends.description}
+                  <span className="highlight">{Trends.technology}:</span>{" "}
+                  {Trends.description}
                 </li>
               ))}
             </ul>
@@ -1032,15 +1051,17 @@ function SingleCaseStudy() {
               {caseStudy.ImpactOnEmployment.Description}
             </p>
             <ul className="problem-statement-para2">
-              {caseStudy.ImpactOnEmployment.JobDisplacement.map((JobDisplacement, index) => (
-                <li key={index}>
-                  <span className="highlight">{JobDisplacement.area}:</span> {JobDisplacement.description}
-                </li>
-              ))}
+              {caseStudy.ImpactOnEmployment.JobDisplacement.map(
+                (JobDisplacement, index) => (
+                  <li key={index}>
+                    <span className="highlight">{JobDisplacement.area}:</span>{" "}
+                    {JobDisplacement.description}
+                  </li>
+                )
+              )}
             </ul>
 
             {/* Regional variation*/}
-
 
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.RegionalVariations.title}
@@ -1049,13 +1070,15 @@ function SingleCaseStudy() {
               {caseStudy.RegionalVariations.Description}
             </p>
             <ul className="problem-statement-para2">
-              {caseStudy.RegionalVariations.AdoptionFactors.map((AdoptionFactors, index) => (
-                <li key={index}>
-                  <span className="highlight">{AdoptionFactors.factor}:</span> {AdoptionFactors.description}
-                </li>
-              ))}
+              {caseStudy.RegionalVariations.AdoptionFactors.map(
+                (AdoptionFactors, index) => (
+                  <li key={index}>
+                    <span className="highlight">{AdoptionFactors.factor}:</span>{" "}
+                    {AdoptionFactors.description}
+                  </li>
+                )
+              )}
             </ul>
-
 
             {/* EnvironmentalImpact */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
@@ -1067,7 +1090,8 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.EnvironmentalImpact.Impacts.map((Impacts, index) => (
                 <li key={index}>
-                  <span className="highlight">{Impacts.impact}:</span> {Impacts.description}
+                  <span className="highlight">{Impacts.impact}:</span>{" "}
+                  {Impacts.description}
                 </li>
               ))}
             </ul>
@@ -1079,11 +1103,14 @@ function SingleCaseStudy() {
               {caseStudy.QualityAndSafety.Description}
             </p>
             <ul className="problem-statement-para2">
-              {caseStudy.QualityAndSafety.Improvements.map((Improvements, index) => (
-                <li key={index}>
-                  <span className="highlight">{Improvements.process}:</span> {Improvements.description}
-                </li>
-              ))}
+              {caseStudy.QualityAndSafety.Improvements.map(
+                (Improvements, index) => (
+                  <li key={index}>
+                    <span className="highlight">{Improvements.process}:</span>{" "}
+                    {Improvements.description}
+                  </li>
+                )
+              )}
             </ul>
             {/* FarmerPerspectives */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
@@ -1093,18 +1120,18 @@ function SingleCaseStudy() {
               {caseStudy.FarmerPerspectives.Description}
             </p>
             <ul className="problem-statement-para2">
-              {caseStudy.FarmerPerspectives.BenefitsForFarmers.map((BenefitsForFarmers, index) => (
-                <li key={index}>
-                  <span className="highlight">{BenefitsForFarmers.benefit}:</span> {BenefitsForFarmers.description}
-                </li>
-              ))}
+              {caseStudy.FarmerPerspectives.BenefitsForFarmers.map(
+                (BenefitsForFarmers, index) => (
+                  <li key={index}>
+                    <span className="highlight">
+                      {BenefitsForFarmers.benefit}:
+                    </span>{" "}
+                    {BenefitsForFarmers.description}
+                  </li>
+                )
+              )}
             </ul>
-
-
           </div>
-
-
-
 
           {/* Development Process */}
           <div className="development-process">
@@ -1137,7 +1164,8 @@ function SingleCaseStudy() {
                 <li key={index}>
                   {issues.highlight ? (
                     <>
-                      <span className="highlight">{issues.highlight}:</span> {issues.text}
+                      <span className="highlight">{issues.highlight}:</span>{" "}
+                      {issues.text}
                     </>
                   ) : (
                     issues.text
@@ -1146,10 +1174,6 @@ function SingleCaseStudy() {
               ))}
             </ul>
           </div>
-
-
-
-
 
           {/* <div className="development-process">
             <h2 className="single-casestudy-layout1-title test-selection-blue">
@@ -1206,7 +1230,6 @@ function SingleCaseStudy() {
           
            */}
 
-
           {/* EnvironmentalImpact */}
           {/* QualityAndSafety */}
           {/* FarmerPerspectives */}
@@ -1252,7 +1275,8 @@ function SingleCaseStudy() {
             <ul>
               {caseStudy.impactBenefits.benefits.map((benefits, index) => (
                 <li key={index}>
-                  <span className="highlight">{benefits.highlight}:</span> {benefits.text}
+                  <span className="highlight">{benefits.highlight}:</span>{" "}
+                  {benefits.text}
                 </li>
               ))}
             </ul>
@@ -1305,4 +1329,3 @@ function SingleCaseStudy() {
 }
 
 export default SingleCaseStudy;
-  

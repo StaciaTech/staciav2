@@ -553,7 +553,6 @@
 // };
 
 // export default ServicePage;
-
 import React, { useEffect, useState, useRef } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -562,8 +561,7 @@ import "../styles/ServiceCard.css";
 import "../styles/SingleService.css";
 import MobileFooter from "../components/MobileFooter";
 import SideBar from "../components/SideBar";
-import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import serviceData from "../Data/Services.json";
 import CustomCursor from "../components/CustomCursor";
@@ -573,16 +571,19 @@ function ServicePage() {
   const params = useParams();
 
   const [ServiceData, setServiceData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]); // State for filtered data
   const [activeDepartment, setActiveDepartment] = useState("");
+  const [activeFilter, setActiveFilter] = useState("ALL"); // State for active filter
   const [cursorVisible, setCursorVisible] = useState(false);
-  const [isDotClickScroll, setIsDotClickScroll] = useState(false); // Tracks dot-initiated scrolls
+  const [isDotClickScroll, setIsDotClickScroll] = useState(false);
 
   const sectionsRef = useRef({});
-  const scrollTimeoutRef = useRef(null); // To manage scroll timeout
+  const scrollTimeoutRef = useRef(null);
 
   // Simulate fetching data
   useEffect(() => {
     setServiceData(serviceData);
+    setFilteredData(serviceData); // Initially show all data
   }, []);
 
   // Set initial active department from URL or default
@@ -594,13 +595,14 @@ function ServicePage() {
     }
   }, [ServiceData, params.department]);
 
-  // Scroll to active department on mount or when changed (not during dot-click scroll)
+  // Scroll to active department on mount or when changed
   useEffect(() => {
     if (ServiceData.length && activeDepartment && !isDotClickScroll) {
       const section = document.getElementById(activeDepartment);
       if (section) {
-        const yOffset = -80; // Adjust for navbar
-        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const yOffset = -80;
+        const y =
+          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
@@ -610,7 +612,7 @@ function ServicePage() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (!isDotClickScroll) { // Allow updates during manual scrolling
+        if (!isDotClickScroll) {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveDepartment(entry.target.id);
@@ -620,7 +622,7 @@ function ServicePage() {
       },
       {
         root: null,
-        threshold: 0.3, // Reverted to original threshold for visibility detection
+        threshold: 0.3,
       }
     );
 
@@ -635,22 +637,32 @@ function ServicePage() {
   // Handle dot click
   const handleDotClick = (departmentName) => {
     if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current); // Clear existing timeout
+      clearTimeout(scrollTimeoutRef.current);
     }
 
-    setIsDotClickScroll(true); // Disable observer updates for dot clicks
-    setActiveDepartment(departmentName); // Set target department
+    setIsDotClickScroll(true);
+    setActiveDepartment(departmentName);
 
     const section = document.getElementById(departmentName);
     if (section) {
       const yOffset = -80;
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
 
-      // Reset dot-click scroll after animation
       scrollTimeoutRef.current = setTimeout(() => {
         setIsDotClickScroll(false);
-      }, 1200); // Duration for scroll animation
+      }, 1200);
+    }
+  };
+
+  // Handle filter click
+  const handleFilterClick = (filter) => {
+    setActiveFilter(filter);
+    if (filter === "ALL") {
+      setFilteredData(ServiceData);
+    } else {
+      setFilteredData(ServiceData.filter((item) => item.name === filter));
     }
   };
 
@@ -668,6 +680,47 @@ function ServicePage() {
             <div className="service-title">
               <span style={{ userSelect: "none" }}>Our Services</span>
             </div>
+          </div>
+          {/* Filter Tabs */}
+          <div
+            className="filter-tabs"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "10px",
+              margin: "20px 0",
+            }}
+          >
+            <button
+              onClick={() => handleFilterClick("ALL")}
+              style={{
+                padding: "10px 20px",
+                backgroundColor: activeFilter === "ALL" ? "#007bff" : "#f0f0f0",
+                color: activeFilter === "ALL" ? "#fff" : "#000",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+              }}
+            >
+              ALL
+            </button>
+            {ServiceData.map((item, i) => (
+              <button
+                key={i}
+                onClick={() => handleFilterClick(item.name)}
+                style={{
+                  padding: "10px 20px",
+                  backgroundColor:
+                    activeFilter === item.name ? "#007bff" : "#f0f0f0",
+                  color: activeFilter === item.name ? "#fff" : "#000",
+                  border: "none",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                }}
+              >
+                {item.name}
+              </button>
+            ))}
           </div>
           <div className="mobile-navigation-tabs">
             {ServiceData.map((eachItem, i) => (
@@ -691,12 +744,12 @@ function ServicePage() {
                   key={i}
                   eachItem={eachItem}
                   activeDepartment={activeDepartment}
-                  setActiveDepartment={handleDotClick} // Use handleDotClick
+                  setActiveDepartment={handleDotClick}
                 />
               ))}
             </div>
             <div>
-              {ServiceData.map((eachItem, i) => (
+              {filteredData.map((eachItem, i) => (
                 <div
                   className="all-services"
                   key={i}
@@ -720,8 +773,15 @@ function ServicePage() {
                             );
                           }}
                         >
-                          <CustomCursor isVisible={cursorVisible} text={"Know more"} />
-                          <img src={data.imageUrl} alt="" style={{ cursor: "none" }} />
+                          <CustomCursor
+                            isVisible={cursorVisible}
+                            text={"Know more"}
+                          />
+                          <img
+                            src={data.imageUrl}
+                            alt=""
+                            style={{ cursor: "none" }}
+                          />
                         </div>
                         <div className="service-content-box">
                           <div className="feature-title">{data.name}</div>
@@ -776,13 +836,17 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
     <div className="service-page-dept-container">
       <div
         className={`service-page-main-dots ${
-          eachItem.name === activeDepartment ? "service-page-main-dots-active" : ""
+          eachItem.name === activeDepartment
+            ? "service-page-main-dots-active"
+            : ""
         }`}
         onClick={() => setActiveDepartment(eachItem.name)}
         onMouseOver={() => setShowDept(true)}
         onMouseOut={() => setShowDept(false)}
       ></div>
-      {showDept && <div className="service-page-dept-name">{eachItem.name}</div>}
+      {showDept && (
+        <div className="service-page-dept-name">{eachItem.name}</div>
+      )}
     </div>
   );
 };
