@@ -650,6 +650,97 @@
                 "Cooper, R. G.: Stage-Gate model for product development Stage-Gate International",
                 "Smartsheet: Phase-Gate approach for structured development Smartsheet"
               ]
+            },
+            {
+              "id": 3,
+              "title": "Tamarind Pod Breaking Machine: Enhancing Efficiency in Tamarind Processing ",
+              "mainDesc": "",
+              "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
+              "Executive-Summary": "The Tamarind Pod Breaking Machine is an innovative solution designed to automate the labor-intensive process of breaking tamarind pods. By integrating a silent pod breaker, an efficient fan system to separate husks, and a conveyor belt to transport the pulp, this machine streamlines tamarind processing, improving productivity and reducing manual effort. This Project explores the development, implementation, and benefits of the Tamarind Pod Breaking Machine.Performance Foodservice | Home+3vadic.vigyanashram.blog+3chinapeanutmachinery.com+3King County",
+              "Client-Overview": "The client is a mid-sized agro-processing enterprise specializing in tamarind-based products. Facing challenges with manual pod breaking, which was time-consuming and inconsistent, the client sought an automated solution to enhance processing efficiency and product quality",
+              "Project Objective": [
+                "Develop a machine to automate the tamarind pod breaking process.",
+                "Ensure the machine operates silently to maintain a conducive working environment.",
+                "Integrate a system to effectively separate husks from the pulp.",
+                "Design a conveyor mechanism to transport the pulp for further processing.ResearchGate+1IJSTR+1"
+              ],
+              "Challenges": [
+                "Designing a pod breaking mechanism that minimizes noise without compromising efficiency.",
+                "Ensuring complete separation of husks from the pulp to maintain product purity.",
+                "Creating a conveyor system that handles the delicate pulp without causing damage.",
+                "Developing a compact and cost-effective design suitable for small to medium-scale operations."
+              ],
+              "Solutions": [
+                {
+                  "title": "Silent Pod Breaker",
+                  "des": ": Implemented a drum-based breaking mechanism with rubberized components to reduce noise levels during operation"
+                },
+                {
+                  "title": "Husk Separation Fan",
+                  "des": "Integrated a high-speed fan system positioned post-breaking to blow away the lighter husk particles, ensuring clean pulp collection."
+                },
+                {
+                  "title": "Pulp Conveyor System",
+                  "des": "Designed a food-grade conveyor belt with adjustable speed settings to gently transport the pulp to the next processing stage"
+                },
+                {
+                  "title": "Compact Design",
+                  "des": ": Engineered the machine with a modular structure, allowing easy installation and maintenance, suitable for facilities with limited space.IRJET+2IJSTR+2Department of Transportation+2"
+                }
+              ],
+              "Development-Process": {
+                "stage": [
+                  {
+                    "id": 1,
+                    "title": "Research & Analysis",
+                    "des": "Studied existing tamarind processing methods and identified areas for automation and improvement."
+                  },
+                  {
+                    "id": 2,
+                    "title": "Design & Prototyping",
+                    "des": "Developed initial designs focusing on noise reduction and efficient separation, followed by prototype creation."
+                  },
+                  {
+                    "id": 3,
+                    "title": "Testing & Refinement",
+                    "des": "Conducted trials to assess performance, making necessary adjustments to optimize functionality and reliability."
+                  },
+                  {
+                    "id": 4,
+                    "title": "Implementation",
+                    "des": "Installed the finalized machine in the client's facility, providing training and support for seamless integration into their processing line.ResearchGate agriculture.vikaspedia.in"
+                  }
+                ]
+              },
+              "Impact": [
+                {
+                  "id": 1,
+                  "title": "Increased Efficiency",
+                  "des": "Reduced processing time by 50%, enabling higher throughput."
+                },
+                {
+                  "id": 2,
+                  "title": "Improved Product Quality",
+                  "des": "Achieved consistent and clean pulp separation, enhancing the quality of the final product."
+                },
+                {
+                  "id": 3,
+                  "title": "Labor Savings",
+                  "des": "Minimized manual labor requirements, allowing staff to focus on other critical tasks."
+                },
+                {
+                  "id": 4,
+                  "title": "Enhanced Workplace Environment",
+                  "des": "Lower noise levels contributed to a more comfortable and safer working environment."
+                }
+              ],
+              "Conclusion": "The Tamarind Pod Breaking Machine successfully addressed the client's challenges by automating the pod breaking process, improving efficiency, and ensuring product quality. Its silent operation and effective separation mechanisms make it a valuable addition to tamarind processing facilities, particularly for small to medium-sized enterprises seeking to modernize their operations",
+              "References": [
+                "Design and Fabrication of Tamarind Seed Removal Machine - IRJET",
+                "Design and Fabrication of Tamarind Cover and Seed Separation Machine - IJEIT",
+                "Tamarind Processing Machineries - Anjoplus Machines",
+                "Technologies from CIPHET - Agriculture - Vikaspedia"
+              ]
             }
           ]
         },
@@ -923,6 +1014,115 @@
                 "The 6 Principles of Stage-Gate. Stage-Gate.com. “This blog outlines the 6 principles at the core of the Stage-Gate Process ...” Stage-Gate International",
                 "Amazon’s Greatest Gadget Hits: Highlights of the Bezos Era. Wired. “Alexa, introduced in 2014, transformed consumer interactions ...” WIRED",
                 "Amazon Echo Dot Teardown: Insights into Product Development. PredictableDesigns. “In this teardown we’re looking at every piece required ...” PREDICTABLE DESIGNS"
+              ]
+            },
+            {
+              "id": 3,
+              "title": "HydroGen: The Smart Bottle Revolutionizing Personalized Hydration",
+              "Executive-Summary": "The HydroGen is a next-generation smart bottle designed by Stacia Corp to transform the way individuals manage their hydration. Combining cutting-edge temperature control, smart connectivity, eco-conscious engineering, and human-centered design, HydroGen serves as a daily essential for modern, health-conscious users. With instant heating and cooling features, Bluetooth-enabled smart control, and a powerful 5000 mAh battery, HydroGen is built for performance, portability, and sustainability. This Project explores the journey from ideation to impact of this revolutionary device.",
+              "Client-Overview": "Stacia Corp, a leading innovator in smart consumer products, envisioned the HydroGen to align with modern lifestyle demands—sustainability, personalization, and technological integration. Targeting health-focused individuals, fitness enthusiasts, and on-the-go professionals, HydroGen bridges the gap between hydration and intelligent living.",
+              "Project Objective": [
+                "Design a dual-purpose smart bottle for both heating and cooling of beverages.",
+                "Ensure eco-friendliness with zero CFC emissions and energy-efficient performance.",
+                "Integrate Bluetooth technology for real-time temperature control and hydration tracking.",
+                "Build an interactive user interface with LED indicators and hydration reminders.",
+                "Ensure portability with a 5000 mAh rechargeable battery lasting up to 2 days."
+              ],
+              "Challenges": [
+                "Developing an instant heating and cooling mechanism within a compact bottle design.",
+                "Achieving safe and sustainable thermal insulation that is both efficient and eco-friendly.",
+                "Designing an intuitive and non-intrusive user interface with multi-color LED feedback.",
+                "Ensuring long battery life without increasing the product’s weight or form factor.",
+                "Syncing hardware functionality with a robust mobile application for remote operation."
+              ],
+              "Solutions": [
+                {
+                  "id": 1,
+                  "title": "Dual Temperature Mode",
+                  "des": "Developed a thermal core capable of switching between hot and cold modes within minutes."
+                },
+                {
+                  "id": 2,
+                  "title": "Smart Connectivity",
+                  "des": "Integrated BLE (Bluetooth Low Energy) module to connect with mobile apps for temp monitoring and hydration analytics."
+                },
+                {
+                  "id": 3,
+                  "title": "LED & Ambient Lighting",
+                  "des": "Color-coded LED ring to indicate temperature ranges and hydration alerts."
+                },
+                {
+                  "id": 4,
+                  "title": "Hydration Intelligence",
+                  "des": "Built-in hydration tracker based on user consumption history and environmental data."
+                },
+                {
+                  "id": 5,
+                  "title": "Green Power System",
+                  "des": "Equipped with a high-capacity 5000 mAh battery using low energy components and zero-CFC technology."
+                }
+              ],
+              "Development-Process": [
+                {
+                  "id": 1,
+                  "title": "Research & Conceptualization",
+                  "des": "Market study on hydration behavior and existing thermal bottles; User-centric design thinking workshops"
+                },
+                {
+                  "id": 2,
+                  "title": "Prototyping & Iteration",
+                  "des": "Developed multiple prototypes to optimize temperature control speed and UI feedback"
+                },
+                {
+                  "id": 3,
+                  "title": "Smart App Development",
+                  "des": "Designed and tested Android/iOS apps for Bluetooth pairing, temp control, and hydration logging"
+                },
+                {
+                  "id": 4,
+                  "title": "Pilot Testing",
+                  "des": "Distributed early units to selected users and gathered feedback for real-world improvements"
+                },
+                {
+                  "id": 5,
+                  "title": "Final Production & QA",
+                  "des": "Ensured robust testing of battery performance, temperature calibration, and app integration"
+                }
+              ],
+              "Impact": [
+                {
+                  "id": 1,
+                  "title": "User Empowerment",
+                  "des": "Enables precise temperature control for beverages anytime, anywhere"
+                },
+                {
+                  "id": 2,
+                  "title": "Eco-Friendly",
+                  "des": "Zero-CFC emission and reduced energy use promotes sustainable living"
+                },
+                {
+                  "id": 3,
+                  "title": "Health Improvement",
+                  "des": "Hydration tracking helps users develop better drinking habits"
+                },
+                {
+                  "id": 4,
+                  "title": "Convenience Redefined",
+                  "des": "One device meets hot and cold beverage needs—perfect for travel, office, and fitness"
+                },
+                {
+                  "id": 5,
+                  "title": "Long-Lasting Power",
+                  "des": "2-day battery life ensures reliability on-the-go"
+                }
+              ],
+              "Conclusion": "HydroGen is more than a smart bottle—it's a hydration companion tailored for the future. By integrating sustainable engineering, intuitive tech, and lifestyle design, HydroGen marks a significant step forward in smart personal wellness products. With successful market entry and growing user adoption, it sets a new standard in beverage tech innovation.",
+              "References": [
+                "Internal Research Reports by Stacia Corp (2024-2025)",
+                "Bluetooth Smart Integration Guidelines – IEEE",
+                "Thermoelectric Heating and Cooling Module Designs – JouleX Whitepaper",
+                "User Behavior Report on Hydration Patterns (FitWell Research Group, 2023)",
+                "Sustainable Consumer Electronics Guidelines – UNEP"
               ]
             }
           ]
@@ -1246,9 +1446,114 @@
           "name": "Pest Contol",
           "projects": [
             {
-              "title": "Envu",
+              "title": "ENVU Pest Control Management App",
               "mainDesc": "A platform connecting manufacturing, fabricating, and machining vendors with OEMs, facilitating seamless vendor selection, order tracking, and project management through a user-centric interface",
-              "mainImageUrl": "/assets/ProjectPage/AI chatbot.webp"
+              "mainImageUrl": "/assets/ProjectPage/AI chatbot.webp",
+              "executEiveSummary": "The ENVU Pest Control Management App is envisioned as a centralized digital platform designed to streamline and digitize pest control processes across the urban food supply ecosystem. This application aims to enhance transparency, optimize chemical usage, strengthen compliance, and foster collaboration among key stakeholders such as pest management agencies (PMA), food business operators (FBO), chemical/equipment suppliers, and regulatory auditors.",
+              "clientOverview": "ENVU is a leading player in urban pest management, facing challenges of site specificity, chemical traceability, vendor coordination, and compliance management. The need for a unified digital solution that offers real-time tracking, auditing, and data sharing has driven the development of this application",
+              "projectObjective": [
+                "To digitize and centralize pest control management processes",
+                "To create a collaborative ecosystem among PMAs, FBOs, and suppliers",
+                "To ensure audit compliance and efficient documentation",
+                "To enhance the transparency and traceability of chemical usage",
+                "To improve overall pest management effectiveness and accountability"
+              ],
+              "challenges": [
+                "Site-specific and seasonal variations in pest occurrence",
+                "Lack of standardized communication between PMAs, FBOs, and suppliers",
+                "Paper-based documentation leads to inefficiency and data loss",
+                "Trust deficit and poor escalation tracking between stakeholders"
+              ],
+              "solution": [
+                {
+                  "id": 1,
+                  "title": "Centralized Platform",
+                  "description": "One-app ecosystem for all stakeholders."
+                },
+                {
+                  "id": 2,
+                  "title": "Role-Based Access",
+                  "description": "Restricted access based on stakeholder roles."
+                },
+                {
+                  "id": 3,
+                  "title": "Real-Time Tracking",
+                  "description": "Live incident reporting and audit scheduling."
+                },
+                {
+                  "id": 4,
+                  "title": "Audit Compliance",
+                  "description": "Support for multiple systems (Halal, HACCP, ISO, AIB)."
+                },
+                {
+                  "id": 5,
+                  "title": "Client Onboarding",
+                  "description": "PMA/FBO-driven onboarding with audit system selection."
+                },
+                {
+                  "id": 6,
+                  "title": "Dynamic Planning",
+                  "description": "Site-specific plans with continuous updates."
+                },
+                {
+                  "id": 7,
+                  "title": "Trend Analysis",
+                  "description": "Insights on seasonal, geographic, and treatment data."
+                },
+                {
+                  "id": 8,
+                  "title": "Security & Privacy",
+                  "description": "Cybersecurity measures and stakeholder consent protocols."
+                }
+              ],
+              "developmentProcess": [
+                {
+                  "id": 1,
+                  "title": "Requirement Gathering",
+                  "description": "Stakeholder-specific questionnaires."
+                },
+                {
+                  "id": 2,
+                  "title": "Architecture Design",
+                  "description": "Scalable cloud infrastructure with secure storage."
+                },
+                {
+                  "id": 3,
+                  "title": "Module Development",
+                  "description": "Incident Reporting, Audits, KPI Dashboards, Trend Analysis."
+                },
+                {
+                  "id": 4,
+                  "title": "User Testing",
+                  "description": "Pilot testing with selected PMAs and FBOs."
+                },
+                {
+                  "id": 5,
+                  "title": "Deployment",
+                  "description": "Mobile & Web Application rollout."
+                },
+                {
+                  "id": 6,
+                  "title": "Training",
+                  "description": "User onboarding, documentation, and support materials."
+                }
+              ],
+              "impactAndBenefits": [
+                "Reduction in paperwork and manual errors",
+                "Increased transparency and stakeholder trust",
+                "Faster issue escalation and resolution",
+                "Improved pest management through data insights",
+                "Enhanced audit compliance",
+                "Professionalization of pest control industry"
+              ],
+              "conclusions": "The ENVU Pest Control Management App stands to revolutionize urban pest control by offering a robust, transparent, and scalable digital platform. With successful implementation, it can set a new standard for data-driven pest management practices across industries.",
+              "references": [
+                "ENVU internal pest management SOPs",
+                "IPCA, NIPHM, NPMA certification standards",
+                "Compliance requirements from HACCP, ISO 22000, Halal, BIS",
+                "Pilot test feedback from PMAs and FBOs",
+                "Cybersecurity best practices for SaaS applications"
+              ]
             }
           ]
         },
@@ -1256,9 +1561,416 @@
           "name": "Agri-Tech",
           "projects": [
             {
-              "title": "EDIFAI",
+              "title": "Edifai – Idhayam Suite: Digitizing Field Operations for Enhanced Efficiency",
               "mainDesc": "Creating an AI-powered customer support chatbot.A procurement ERP tool for IDHAYAM, linked to Indian agricultural markets, streamlining supply chain processes with data-driven insights and automation",
-              "mainImageUrl": "/assets/ProjectPage/AI chatbot version.webp"
+              "mainImageUrl": "/assets/ProjectPage/AI chatbot version.webp",
+              "Executive-Summary": "Stacia's Edifai – Idhayam Suite is a comprehensive digital platform designed to transform traditional, manual processes into streamlined, automated workflows. By integrating modules such as Surveyor, Procurement, Calendar, Forms, Reimbursement, and Chat, the suite addresses critical issues like communication gaps, manual data collection, and lack of real-time insights. This Project explores the development, implementation, and impact of the Edifai – Idhayam Suite in enhancing operational efficiency and decision-making.",
+              "Client-Overview": "The client is a prominent organization involved in extensive field operations, including surveying, procurement, and logistics. Their operations were hindered by manual processes, leading to inefficiencies and delayed decision-making. Recognizing the need for digital transformation, they partnered with Stacia to develop a solution that would streamline their workflows and provide real-time operational insights.",
+              "Project Objective": [
+                "Digitize and automate field operations to reduce manual workload.",
+                "Enhance communication among field agents and administrative staff.",
+                "Implement real-time data collection and reporting mechanisms.",
+                "Provide a centralized platform for managing surveys, procurement, reimbursements, and logistics."
+              ],
+              "Challenges": [
+                {
+                  "id": 1,
+                  "title": "Manual Processes",
+                  "des": "Field surveys and procurement were conducted manually, leading to data inaccuracies and delays."
+                },
+                {
+                  "id": 2,
+                  "title": "Communication Gaps",
+                  "des": "Lack of a unified communication platform resulted in miscoordination between teams."
+                },
+                {
+                  "id": 3,
+                  "title": "Paperwork Overload",
+                  "des": "Physical forms and documents were prone to loss and hard to track."
+                },
+                {
+                  "id": 4,
+                  "title": "Lack of Insights",
+                  "des": "Absence of real-time data hindered timely decision-making and operational adjustments."
+                }
+              ],
+              "Solutions": [
+                {
+                  "id": 1,
+                  "title": "Surveyor",
+                  "des": "Digital tools for conducting and submitting field surveys in real-time."
+                },
+                {
+                  "id": 2,
+                  "title": "Procurement",
+                  "des": "Automated procurement processes with digital approvals and tracking."
+                },
+                {
+                  "id": 3,
+                  "title": "Calendar",
+                  "des": "Scheduling and tracking of field activities and deadlines."
+                },
+                {
+                  "id": 4,
+                  "title": "Forms",
+                  "des": "Customizable digital forms replacing paper-based documentation."
+                },
+                {
+                  "id": 5,
+                  "title": "Reimbursement",
+                  "des": "Streamlined expense submission and approval workflows."
+                },
+                {
+                  "id": 6,
+                  "title": "Chat",
+                  "des": "Integrated communication platform for instant messaging and updates."
+                }
+              ],
+              "Development-Process": [
+                {
+                  "id": 1,
+                  "title": "Needs Assessment",
+                  "des": "Conducted comprehensive analysis of existing workflows and identified areas for improvement."
+                },
+                {
+                  "id": 2,
+                  "title": "Design & Prototyping",
+                  "des": "Developed user-centric designs and prototypes for each module."
+                },
+                {
+                  "id": 3,
+                  "title": "Development",
+                  "des": "Built the suite using agile methodologies to ensure flexibility and iterative improvements."
+                },
+                {
+                  "id": 4,
+                  "title": "Testing",
+                  "des": "Performed rigorous testing to ensure reliability and user-friendliness."
+                },
+                {
+                  "id": 5,
+                  "title": "Deployment",
+                  "des": "Rolled out the suite in phases, providing training and support to users."
+                }
+              ],
+              "Impact": [
+                {
+                  "id": 1,
+                  "title": "Efficiency Gains",
+                  "des": "Significant reduction in time spent on manual data entry and processing."
+                },
+                {
+                  "id": 2,
+                  "title": "Improved Communication",
+                  "des": "Enhanced coordination between field and administrative teams."
+                },
+                {
+                  "id": 3,
+                  "title": "Data Accuracy",
+                  "des": "Real-time data collection improved the accuracy and reliability of information."
+                },
+                {
+                  "id": 4,
+                  "title": "Operational Insights",
+                  "des": "Access to real-time data enabled proactive decision-making and resource allocation."
+                }
+              ],
+              "Conclusion": "The implementation of the Edifai – Idhayam Suite marked a pivotal shift from manual to digital operations for the client. By automating key processes and enhancing communication, the suite not only improved operational efficiency but also empowered the organization with actionable insights, setting a foundation for continuous improvement and scalability.",
+              "References": [
+                "FlowForma: Procurement Automation Software Solutions",
+                "ProQsmart: Procurement Automation Key Workflows",
+                "Wikipedia: E-procurement"
+              ]
+            },
+            {
+              "project": {
+                "title": "Parikshan Website Revamp",
+                "executive_summary": {
+                  "description": "The Parikshan website revamp project successfully transformed an outdated platform into a modern, user-centric digital experience. By addressing critical issues such as poor usability, lack of mobile responsiveness, and unstructured information architecture, the revamped site now offers improved navigation, accessibility, and performance. Built with scalability and compliance with WCAG standards, the new design enhances user engagement, streamlines service discovery, and supports Parikshan’s mission to deliver food safety, testing, and training services effectively. Phase 1 of the project was completed using Figma for design, delivering wireframes, a refined UI, and a cohesive brand style guide."
+                },
+                "client_overview": "Parikshan is a leading provider of food safety services, offering lab testing, food safety audits, training programs, and FSSAI compliance support. Catering to food industry professionals, regulatory bodies, and trainees, Parikshan aims to uphold quality and safety standards through its comprehensive services. The organization sought to modernize its digital presence to better reflect its expertise, improve user trust, and facilitate seamless access to its offerings.",
+                "project_objective": {
+                  "primary_objective": "Create a modern, accessible, and scalable platform that enhances user experience and aligns with contemporary UI/UX standards.",
+                  "specific_goals": [
+                    "Improving usability and navigation for faster service discovery.",
+                    "Ensuring mobile responsiveness and WCAG-compliant accessibility.",
+                    "Enhancing visual appeal and brand consistency.",
+                    "Optimizing performance for faster load times and better SEO.",
+                    "Creating a scalable architecture for future feature integration."
+                  ]
+                },
+                "challenges": [
+                  {
+                    "id": 1,
+                    "title": "Outdated User Interface and Experience",
+                    "des": "The old design featured inconsistent visual elements, poor navigation, and a lack of engaging content, leading to low user trust and high bounce rates."
+                  },
+                  {
+                    "id": 2,
+                    "title": "Unstructured Information Architecture",
+                    "des": "Disorganized content made it difficult for users to locate services, resulting in inefficiencies and missed opportunities for engagement."
+                  },
+                  {
+                    "id": 3,
+                    "title": "Lack of Mobile Responsiveness and Accessibility",
+                    "des": "The site was not optimized for mobile devices, causing layout issues and slow load times, while also lacking accessibility features for users with disabilities."
+                  }
+                ],
+                "solution": [
+                  {
+                    "id": 1,
+                    "title": "Modernized User Interface and Enhanced Experience",
+                    "des": [
+                      "Designed a clean, visually appealing UI with consistent typography, high-contrast colors, and strategic use of Parikshan’s brand palette (Green #008E2F, Slate Blue #625EC8).",
+                      "Introduced interactive elements like a dynamic hero carousel, micro-animations, and clear CTAs to improve engagement."
+                    ]
+                  },
+                  {
+                    "id": 2,
+                    "title": "Streamlined Information Architecture",
+                    "des": [
+                      "Reorganized content into intuitive sections (Home, About Us, Services, FSSAI Related, Founder’s Desk, Careers, Contact Us) with a clean top navigation bar.",
+                      "Implemented a searchable service directory and dropdown menus to simplify access to testing, auditing, and training services."
+                    ]
+                  },
+                  {
+                    "id": 3,
+                    "title": "Fully Responsive and Accessible Design",
+                    "des": [
+                      "Developed a mobile-friendly layout optimized for desktops, tablets, and smartphones.",
+                      "Ensured compliance with WCAG standards through accessible typography, high-contrast visuals, and role-based content personalization."
+                    ]
+                  }
+                ],
+                "key_features": [
+                  "Modern hero section",
+                  "Event highlights section",
+                  "Structured service page with a side panel",
+                  "Interactive About Us section",
+                  "Contact section with an integrated map"
+                ],
+                "development_process": [
+                  {
+                    "stage": "Research and Analysis",
+                    "details": [
+                      "Conducted user research to identify pain points and preferences.",
+                      "Analyzed competitor websites to benchmark best practices."
+                    ]
+                  },
+                  {
+                    "stage": "Wireframing and Design",
+                    "details": [
+                      "Created wireframes in Figma to outline the site structure (available at: https://www.figma.com/design/3Jki1IeTM17cAE2eFeBSFA/Parikshan?node-id=3906-1367&t=0A7vTMmg4cgqj2Um-4).",
+                      "Developed a comprehensive style guide defining colors, typography (Clash Display, Raleway), buttons, forms, and icons."
+                    ]
+                  },
+                  {
+                    "stage": "Prototyping and Feedback",
+                    "details": [
+                      "Iterated on designs based on client feedback, addressing issues like weak carousel visuals and overloaded service pages.",
+                      "Enhanced the carousel with bold titles, high-resolution images, and CTAs; introduced a dropdown-based service directory for better navigation."
+                    ]
+                  },
+                  {
+                    "stage": "Implementation and Testing",
+                    "details": [
+                      "Ensured responsiveness across devices and compliance with accessibility standards.",
+                      "Optimized images and scripts for faster load times and SEO performance."
+                    ]
+                  },
+                  {
+                    "stage": "Launch",
+                    "details": [
+                      "Successfully completed Phase 1, delivering a fully functional, modern website."
+                    ]
+                  }
+                ],
+                "impact_and_benefits": [
+                  {
+                    "id": 1,
+                    "title": "Research and Analysis",
+                    "des": [
+                      "Conducted user research to identify pain points and preferences.",
+                      "Analyzed competitor websites to benchmark best practices."
+                    ]
+                  },
+                  {
+                    "id": 2,
+                    "title": "Wireframing and Design",
+                    "des": [
+                      "Created wireframes in Figma to outline the site structure (available at: https://www.figma.com/design/3Jki1IeTM17cAE2eFeBSFA/Parikshan?node-id=3906-1367&t=0A7vTMmg4cgqj2Um-4).",
+                      "Developed a comprehensive style guide defining colors, typography (Clash Display, Raleway), buttons, forms, and icons."
+                    ]
+                  },
+                  {
+                    "id": 3,
+                    "title": "Prototyping and Feedback",
+                    "des": [
+                      "Iterated on designs based on client feedback, addressing issues like weak carousel visuals and overloaded service pages.",
+                      "Enhanced the carousel with bold titles, high-resolution images, and CTAs; introduced a dropdown-based service directory for better navigation."
+                    ]
+                  },
+                  {
+                    "id": 4,
+                    "title": "Implementation and Testing",
+                    "des": [
+                      "Ensured responsiveness across devices and compliance with accessibility standards.",
+                      "Optimized images and scripts for faster load times and SEO performance."
+                    ]
+                  },
+                  {
+                    "id": 5,
+                    "title": "Launch",
+                    "des": [
+                      "Successfully completed Phase 1, delivering a fully functional, modern website."
+                    ]
+                  }
+                ],
+                "conclusions": "The Parikshan website revamp successfully addressed the challenges of an outdated platform, delivering a modern, accessible, and user-friendly digital experience. By prioritizing usability, responsiveness, and scalability, the project not only met but exceeded client expectations, positioning Parikshan as a trusted leader in food safety services. The completion of Phase 1 lays a strong foundation for future enhancements, ensuring the platform remains adaptable to evolving user needs and industry trends.",
+                "references": [
+                  {
+                    "id": 1,
+                    "title": "Figma Design Repository",
+                    "url": "https://www.figma.com/design/3Jki1IeTM17cAE2eFeBSFA/Parikshan?node-id=14-2&t=0A7vTMmg4cgqj2Um-1"
+                  },
+                  {
+                    "id": 2,
+                    "title": "Wireframes",
+                    "url": "https://www.figma.com/design/3Jki1IeTM17cAE2eFeBSFA/Parikshan?node-id=3906-1367&t=0A7vTMmg4cgqj2Um-4"
+                  },
+                  {
+                    "id": 3,
+                    "title": "Web Content Accessibility Guidelines (WCAG)",
+                    "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Sharada Store Mobile App",
+              "executive_summary": "The Sharada Store Mobile App is a user-centric e-commerce platform designed to bridge the gap between traditional homemade foods and modern digital shopping experiences. Crafted using Figma, the app offers a seamless interface that allows users to explore, order, and enjoy authentic regional delicacies with ease. The project was completed successfully, with the design repository available on Figma for further reference.",
+              "client_overview": "Sharada Stores is an identity in Chennai West Mambalam preserving and promoting traditional food products. The store specializes in authentic, homemade, and regionally crafted food items, aiming to provide customers with a digital storefront where they can explore and purchase these delicacies.",
+              "project_objective": [
+                [
+                  {
+                    "id": 1,
+                    "title": "Enhance Accessibility",
+                    "des": "Provide a platform where customers can easily access traditional food products that are often region-specific and not readily available in mainstream retail or online stores."
+                  },
+                  {
+                    "id": 2,
+                    "title": "Ensure Authenticity",
+                    "des": "Offer a curated selection of homemade and regionally crafted food items, ensuring quality and authenticity."
+                  },
+                  {
+                    "id": 3,
+                    "title": "Improve User Experience",
+                    "des": "Design a seamless and intuitive shopping experience that allows users to browse categories, read product details, and place orders effortlessly."
+                  }
+                ]
+              ],
+              "challenges": [
+                {
+                  "id": 1,
+                  "title": "Availability & Accessibility",
+                  "des": "Traditional food products are often region-specific and not easily accessible through mainstream e-commerce platforms."
+                },
+                {
+                  "id": 2,
+                  "title": "Authenticity & Trust",
+                  "des": "Consumers are concerned about the authenticity and quality of traditional food products, especially when sourced from unverified vendors."
+                },
+                {
+                  "id": 3,
+                  "title": "E-commerce Gaps",
+                  "des": "Existing e-commerce platforms lack dedicated sections for traditional food products, making it difficult for customers to discover and purchase these items."
+                },
+                {
+                  "id": 4,
+                  "title": "User Experience & Convenience",
+                  "des": "Many e-commerce platforms do not provide a tailored experience for traditional food lovers, lacking proper categorization and cultural storytelling."
+                }
+              ],
+              "solution": [
+                [
+                  {
+                    "id": 1,
+                    "title": "Enhanced Categorization",
+                    "des": "The app features clear categorization of products into sections like Vadam, Podi, Pickles, and Oils, making it easier for users to browse and discover items."
+                  },
+                  {
+                    "id": 2,
+                    "title": "Authenticity Assurance",
+                    "des": "Each product listing includes detailed descriptions, sourcing information, and maker stories to build trust and ensure authenticity."
+                  },
+                  {
+                    "id": 3,
+                    "title": "Tailored User Experience",
+                    "des": "The app's design focuses on cultural storytelling, with high-quality images and descriptions that highlight the heritage of each product."
+                  },
+                  {
+                    "id": 4,
+                    "title": "Seamless Shopping Journey",
+                    "des": "The user flow is designed to be intuitive, allowing users to search, browse, add items to the cart, and place orders with minimal effort."
+                  }
+                ]
+              ],
+              "development_process": [
+                {
+                  "id": 1,
+                  "title": "Research & Discovery",
+                  "des": "Understanding the target audience and their needs, as well as analyzing competitors in the traditional food e-commerce space."
+                },
+                {
+                  "id": 2,
+                  "title": "Wireframing & Prototyping",
+                  "des": "Creating wireframes and prototypes to visualize the app's structure and user flow."
+                },
+                {
+                  "id": 3,
+                  "title": "UI/UX Design",
+                  "des": "Designing the user interface with a focus on simplicity, accessibility, and cultural richness."
+                },
+                {
+                  "id": 4,
+                  "title": "User Testing",
+                  "des": "Conducting user testing to gather feedback and make necessary adjustments to the design."
+                },
+                {
+                  "id": 5,
+                  "title": "Handoff to Development",
+                  "des": "Providing developers with the necessary design assets and specifications for implementation."
+                }
+              ],
+              "impact_and_benefits": [
+                {
+                  "id": 1,
+                  "title": "Increased Accessibility",
+                  "des": "Customers can now easily access traditional food products from the comfort of their homes."
+                },
+                {
+                  "id": 2,
+                  "title": "Enhanced Trust",
+                  "des": "Detailed product information and maker stories have built customer trust in the authenticity of the products."
+                },
+                {
+                  "id": 3,
+                  "title": "Improved User Engagement",
+                  "des": "The intuitive design and cultural storytelling have enhanced user engagement and satisfaction."
+                },
+                {
+                  "id": 4,
+                  "title": "Business Growth",
+                  "des": "The app has attracted a wider customer base, leading to increased sales and brand recognition."
+                }
+              ],
+              "conclusions": "The Sharada Store Mobile App successfully addresses the challenges faced by traditional food enthusiasts in accessing authentic regional delicacies. Through thoughtful design and user-centric features, the app provides a seamless and engaging shopping experience, promoting the preservation and appreciation of traditional food products.",
+              "references": [
+                "Sharada Store Mobile App Design Repository on Figma",
+                "Design Assets & Deliverables",
+                "User Flow & Information Architecture",
+                "Design-to-Development Handoff Specifications"
+              ]
             }
           ]
         }
