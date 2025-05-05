@@ -8,23 +8,17 @@ import ContactIcon from "../assets/ContactIcon.svg";
 import { NavLink, Link } from "react-router-dom";
 import MobileNav from "../assets/MobileNav.png";
 import WhatsNew from "./WhatsNew";
-import Modal from "react-modal";
+import Modal from "react-modal";  
 import Contact from "./Contact";
 import { useAnimation, motion } from "framer-motion";
 import gsap from "gsap";
 import NavProductComp from "./ReUsableComp/NavProductComp";
 import ServcieNavComp from "./Services/ServcieNavComp";
-import { useParams } from "react-router-dom";
 import AboutDropDown from "./AboutDropDown";
 import ResourceDropDown from "./Resource/ResourceDropDown";
 import ProjectDropdown from "./ProjectDropdown";
 
 
-import CompetitionPage from "../pages/Competition";
-import BlueStar from "./Blue-Star";
-import down from "../assets/Vector-down.png";
-
-import { FaChevronDown } from "react-icons/fa";
 
 
 
@@ -309,10 +303,14 @@ function NavBar() {
       alignItems: "center",
       justifyContent: "center",
       zIndex: 9999,
-    },
+    }
+    ,
     content: {
-      width: "90%",
-      minHeight: "90%",
+      width: "70%",
+      background:"none",
+      outline:"none",
+      border:"none",
+      minHeight: "80%",
       inset: 0,
       margin: "auto",
       position: "relative",
@@ -559,8 +557,13 @@ function NavBar() {
               isOpen={showContact}
               onRequestClose={closeHandle}
             >
-              <Contact closeHandle={closeHandle} />
+              <Contact closeHandle={closeHandle}/>
             </Modal>
+             {/* {showContact && <div className="form-container" >
+              <Contact closeHandle={closeHandle} />
+              </div> }  */}
+              
+            
             {/* )} */}
           </div>
         </div>
