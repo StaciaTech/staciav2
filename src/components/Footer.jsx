@@ -39,7 +39,7 @@ function Footer() {
   };
 
 
-  const HandleClick = () =>{
+  const HandleClick = () => {
     navigate("/Privacy-Policy")
   }
 
@@ -203,7 +203,7 @@ function Footer() {
               rel="noreferrer"
             >
               <div className="footer-grey-tabs pointer test-seclection-blue">
-                Ground Floor, C-53, Guindy Industrial Estate,<br/>
+                Ground Floor, C-53, Guindy Industrial Estate,<br />
                 Guindy, Chennai - 32, Tamil Nadu
               </div>
               {/* <div
@@ -232,20 +232,20 @@ function Footer() {
             width: "35%",
           }}
         >
-          <a
-            href="https://staciacorp.com/"
+          {/* <a
+            href=""
             target="_blank"
             rel="noopener noreferrer"
+          > */}
+          <div
+            style={{
+              cursor: "pointer",
+              color: "black",
+            }}
           >
-            <div
-              style={{
-                cursor: "pointer",
-                color: "black",
-              }}
-            >
-              Terms of Service
-            </div>
-          </a>
+            Terms of Service
+          </div>
+          {/* </a> */}
           <div
             style={{
               width: "10px",
@@ -256,10 +256,10 @@ function Footer() {
               marginRight: "35px",
             }}
           />
-                    
-           
-            <div onClick={()=>navigate("/Privacy-Policy")} style={{ cursor: "pointer",color:"black" }}>Privacy policy</div>
-          
+
+
+          <div onClick={() => navigate("/Privacy-Policy")} style={{ cursor: "pointer", color: "black" }}>Privacy policy</div>
+
         </div>
         <div className="footer-icons">
           <div>

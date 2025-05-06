@@ -353,6 +353,8 @@ import SideBar from "../components/SideBar";
 import { useParams } from "react-router-dom";
 import articlesData from "../Data/SingleArticle.json"; // Path to JSON file
 
+import CaseStudyaudio from "../components/CaseStudy/CaseStudyaudio";
+
 function SingleArticle() {
   const { title } = useParams();
   const [articleData, setArticleData] = useState(null);
@@ -428,13 +430,17 @@ function SingleArticle() {
           </div>
         </div>
         <div className="single-article-content-card-container">
+        <CaseStudyaudio></CaseStudyaudio>
           {singleArticle.sections.map((section, index) => (
             <div key={index}>
               <div className="single-article-main-title test-seclection-blue">
                 {section.section_title}
               </div>
+              
               <div className="single-article-main-content-container">
+                
                 <div className="single-article-main-content-content">
+                  
                   {Array.isArray(section.content) ? (
                     section.content.map((item, i) => (
                       <div key={i}>

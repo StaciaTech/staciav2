@@ -101,7 +101,7 @@ function ProductPage() {
                 </div>
                 <div className="product_description">
                   <p className="test-seclection-white">
-                    <div style={{ userSelect: "none" }}>OverView</div>
+                    <div style={{ userSelect: "none" }}>Overview</div>
                     {FoundCat?.description}
                   </p>
                 </div>
