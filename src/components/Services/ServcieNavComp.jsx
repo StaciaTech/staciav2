@@ -355,12 +355,14 @@
 
 // export default ServcieNavComp;
 
-
-
 import React, { useEffect, useRef, useState } from "react";
 import "../../styles/NavProductComp.css";
 import Star from "../../assets/loadingStar.svg";
-import { IoIosArrowForward, IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import {
+  IoIosArrowForward,
+  IoIosArrowDown,
+  IoIosArrowUp,
+} from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import Data from "../../Data/Services.json"; // Import the static JSON data
 
@@ -371,35 +373,34 @@ function ServcieNavComp({ handleClose }) {
   const categoryContainerRef = useRef(null); // Ref for the main category container
   const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
 
-  useEffect(()=>{
+  useEffect(() => {
     setServiceData(Data);
 
-  const defaultDept = Data?.[0];
-  const defaultCategory = defaultDept?.categories?.[0];
-  const defaultService = defaultCategory?.services?.[0];
+    const defaultDept = Data?.[0];
+    const defaultCategory = defaultDept?.categories?.[0];
+    const defaultService = defaultCategory?.services?.[0];
 
-  console.log(defaultDept,defaultCategory,defaultService,"MosesData")
+    console.log(defaultDept, defaultCategory, defaultService, "MosesData");
 
-  if(defaultDept && defaultCategory && defaultService) {
-    setDeptname(defaultDept.name);
-    setMaincatArr(defaultDept.categories.map((cat)=>cat.name));
-    setMainCatName(defaultCategory.name);
-    setFinalServiceArr(defaultCategory.services);
-    setSubccatsArr(defaultCategory.services.map((ser)=>ser.title));
-    setSubCatName(defaultService.title);
-    setDisplayServices(defaultService);
-    setShowSubCats(true);
-    setShowServices(true);
-  }
-  document.body.classList.add("no-scroll");
+    if (defaultDept && defaultCategory && defaultService) {
+      setDeptname(defaultDept.name);
+      setMaincatArr(defaultDept.categories.map((cat) => cat.name));
+      setMainCatName(defaultCategory.name);
+      setFinalServiceArr(defaultCategory.services);
+      setSubccatsArr(defaultCategory.services.map((ser) => ser.title));
+      setSubCatName(defaultService.title);
+      setDisplayServices(defaultService);
+      setShowSubCats(true);
+      setShowServices(true);
+    }
+    document.body.classList.add("no-scroll");
 
-  return()=>{
-    document.body.classList.remove("no-scroll")
-  }
-    
-  },[])
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
 
-  console.log(serviceData, "ServiceData")
+  console.log(serviceData, "ServiceData");
 
   // Static data is directly imported, no need for useState to fetch it
   const [showSubCats, setShowSubCats] = useState(false);
@@ -418,34 +419,33 @@ function ServcieNavComp({ handleClose }) {
   const [showSubUpArrow, setShowSubUpArrow] = useState(false);
   const [showSubDownArrow, setShowSubDownArrow] = useState(false);
 
- 
   const DeptArr = serviceData?.map((item) => item.name);
   console.log(DeptArr, "DepartmentNames");
 
   const HandleDeptHovever = (DeptName) => {
     setDeptname(DeptName);
     const MainCatArrObj = serviceData?.find((item) => item.name === DeptName);
-    console.log(MainCatArrObj,"MainCatObjjServicePage");
+    console.log(MainCatArrObj, "MainCatObjjServicePage");
 
     if (MainCatArrObj) {
       const categories = MainCatArrObj.categories || [];
       console.log(categories, "ServiceCategories");
       const firstCategory = categories[0];
-      const firstService = firstCategory?.services[0];      
-      
+      const firstService = firstCategory?.services[0];
+
       setMaincatArr(MainCatArrObj?.categories?.map((item) => item.name));
 
-      if(firstCategory){
+      if (firstCategory) {
         setMainCatName(firstCategory.name);
         setFinalServiceArr(firstCategory?.services);
 
-        const subCatTitles = firstCategory?.services.map((ser)=>ser.title);
+        const subCatTitles = firstCategory?.services.map((ser) => ser.title);
         setSubccatsArr(subCatTitles);
         setShowSubCats(true);
-        if(firstService){
+        if (firstService) {
           setSubCatName(firstService.title);
           setDisplayServices(firstService);
-          setShowServices(true)
+          setShowServices(true);
         }
       }
     }
@@ -457,26 +457,24 @@ function ServcieNavComp({ handleClose }) {
     const subCatObj = MainCatArrObj?.categories?.find(
       (item) => item.name === MainCat
     );
+
     setFinalServiceArr(subCatObj?.services);
     if (subCatObj) {
       // Default
-      const serviceTitles = subCatObj?.services?.map((eachSubCat) => eachSubCat.title)
-      // setShowSubCats([]);
-      // setSubccatsArr(
-      //   subCatObj?.services?.map((eachSubCat) => eachSubCat.title)
-      // );
-    // }
-    setSubccatsArr(serviceTitles);
+      const serviceTitles = subCatObj?.services?.map(
+        (eachSubCat) => eachSubCat.title
+      );
+      setSubccatsArr(serviceTitles);
 
-    // Set default first service
+      // Set default first service
 
-    const firstService = subCatObj?.services?.[0];
-    if(firstService){
-      setSubCatName(firstService.title);
-      setDisplayServices(firstService);
-      setShowServices(true)
+      const firstService = subCatObj?.services?.[0];
+      if (firstService) {
+        setSubCatName(firstService.title);
+        setDisplayServices(firstService);
+        setShowServices(true);
+      }
     }
-  }
     setShowSubCats(true);
   };
 
@@ -489,43 +487,45 @@ function ServcieNavComp({ handleClose }) {
     setShowServices(true);
   };
 
-  const scrollUp = () =>{
-    if(categoryContainerRef.current){
+  const scrollUp = () => {
+    if (categoryContainerRef.current) {
       const container = categoryContainerRef.current;
-      const itemHeight = container.firstChild?.offsetHeight || 40;// Default to 40px if no items
+      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
       container.scrollTop -= itemHeight;
     }
-  }
+  };
 
-  const scrollDown = () =>{
-    if(categoryContainerRef.current){
+  const scrollDown = () => {
+    if (categoryContainerRef.current) {
       const container = categoryContainerRef.current;
       const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items;
-      container.scrollTop += itemHeight
+      container.scrollTop += itemHeight;
     }
-  }
+  };
 
-  const scrollSubUp = ()=>{
-    if(subCategoryContainerRef.current){
+  const scrollSubUp = () => {
+    if (subCategoryContainerRef.current) {
       const container = subCategoryContainerRef.current;
       const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
       container.scrollTop -= itemHeight;
     }
-  }
+  };
 
-  const scrollSubDown = () =>{
-    if(subCategoryContainerRef.current){
+  const scrollSubDown = () => {
+    if (subCategoryContainerRef.current) {
       const container = subCategoryContainerRef.current;
       const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
     }
-  }
+  };
 
   const handleScroll = () => {
     if (categoryContainerRef.current) {
       const container = categoryContainerRef.current;
       const { scrollTop, scrollHeight, clientHeight } = container;
       const lastItem = container.lastChild;
-      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
+      const lastItemOffset = lastItem
+        ? lastItem.offsetTop + lastItem.offsetHeight
+        : scrollHeight;
       setShowUpArrow(scrollTop > 0);
       setShowDownArrow(scrollTop + clientHeight < lastItemOffset);
     }
@@ -536,7 +536,9 @@ function ServcieNavComp({ handleClose }) {
       const container = subCategoryContainerRef.current;
       const { scrollTop, scrollHeight, clientHeight } = container;
       const lastItem = container.lastChild;
-      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
+      const lastItemOffset = lastItem
+        ? lastItem.offsetTop + lastItem.offsetHeight
+        : scrollHeight;
       setShowSubUpArrow(scrollTop > 0);
       setShowSubDownArrow(scrollTop + clientHeight < lastItemOffset);
     }
@@ -553,7 +555,7 @@ function ServcieNavComp({ handleClose }) {
           }
         }
       }
-      return null; // If product is not found
+      return null; // If service is not found
     }
   }
 
@@ -595,7 +597,7 @@ function ServcieNavComp({ handleClose }) {
           .join("-")}/${productKey}`
       );
     } else {
-      console.log("Product not found");
+      console.log("Service not found");
     }
   };
 
@@ -654,36 +656,35 @@ function ServcieNavComp({ handleClose }) {
               <div className="navprocomp-items-heading">Categories</div>
               <div className="navproComp-item-holder">
                 <div className="navProComp-dot-container">
-                  {
-                    MainCatArr?.map((dot, i) => (
-                      <div
-                        key={i}
-                        className={`navProComp-dot ${
-                          dot === mainCatName ? "navProComp-dot-active" : ""
-                        }`}
-                      ></div>
-                    ))}
+                  {MainCatArr?.map((dot, i) => (
+                    <div
+                      key={i}
+                      className={`navProComp-dot ${
+                        dot === mainCatName ? "navProComp-dot-active" : ""
+                      }`}
+                    ></div>
+                  ))}
                 </div>
                 <div className="arrow-wrapper">
-                                {showUpArrow && (
-                                  <span
-                                    onClick={scrollUp}
-                                    className="arrow-up"
-                                    aria-label="Scroll up"
-                                  >
-                                    <IoIosArrowUp />
-                                  </span>
-                                )}
-                                {showDownArrow && (
-                                  <span
-                                    onClick={scrollDown}
-                                    className="arrow-down"
-                                    aria-label="Scroll down"
-                                  >
-                                    <IoIosArrowDown />
-                                  </span>
-                                )}
-                              </div>
+                  {showUpArrow && (
+                    <span
+                      onClick={scrollUp}
+                      className="arrow-up"
+                      aria-label="Scroll up"
+                    >
+                      <IoIosArrowUp />
+                    </span>
+                  )}
+                  {showDownArrow && (
+                    <span
+                      onClick={scrollDown}
+                      className="arrow-down"
+                      aria-label="Scroll down"
+                    >
+                      <IoIosArrowDown />
+                    </span>
+                  )}
+                </div>
                 <div
                   className="navProComp-mainCat-item-container"
                   onMouseEnter={() => setHoveringOnmain(true)}
@@ -734,31 +735,33 @@ function ServcieNavComp({ handleClose }) {
                         dot === subCatName ? "navProComp-dot-active" : ""
                       }`}
                     ></div>
-                  ))}                 
+                  ))}
                 </div>
                 <div className="arrow-wrapper">
-                                {showSubUpArrow && (
-                                  <span
-                                    onClick={scrollSubUp}                    
-                                    aria-label="Scroll sub up"
-                                    className="arrow-up"
-                                  >
-                                    <IoIosArrowUp />
-                                  </span>
-                                )}
-                                {showSubDownArrow && (
-                                  <span
-                                    onClick={scrollSubDown}                    
-                                    aria-label="Scroll sub down"
-                                    className="arrow-down"
-                                  >
-                                    <IoIosArrowDown />
-                                  </span>
-                                )}
-                              </div>
-                <div className="navProComp-subCat-item-container"
-                ref={subCategoryContainerRef}
-                onScroll={handleSubScroll}>
+                  {showSubUpArrow && (
+                    <span
+                      onClick={scrollSubUp}
+                      aria-label="Scroll sub up"
+                      className="arrow-up"
+                    >
+                      <IoIosArrowUp />
+                    </span>
+                  )}
+                  {showSubDownArrow && (
+                    <span
+                      onClick={scrollSubDown}
+                      aria-label="Scroll sub down"
+                      className="arrow-down"
+                    >
+                      <IoIosArrowDown />
+                    </span>
+                  )}
+                </div>
+                <div
+                  className="navProComp-subCat-item-container"
+                  ref={subCategoryContainerRef}
+                  onScroll={handleSubScroll}
+                >
                   {subCatsArr?.map((eachItem, i) => (
                     <div
                       key={i}
@@ -794,20 +797,23 @@ function ServcieNavComp({ handleClose }) {
             <div className="navProComp-products-holder">
               <div>
                 <div>
-                  <div className="navProComp-products-img"
-                   onClick={() => {
-                    window.scrollTo(0, 0);
-                    singleProductNavigator(displayServices.title);
-                    handleClose();
-                  }}
-                  style={{cursor:"pointer"}}>
+                  <div
+                    className="navProComp-products-img"
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      singleProductNavigator(displayServices.title);
+                      handleClose();
+                    }}
+                    style={{ cursor: "pointer" }}
+                  >
                     <img src={displayServices.imageUrl} alt="" />
                   </div>
                   <div className="navProComp-products-title">
                     {displayServices.title}
                   </div>
                   <div className="navProComp-products-des">
-                    {displayServices.description} {/* Changed 'des' to 'description' to match JSON */}
+                    {displayServices.description}{" "}
+                    {/* Changed 'des' to 'description' to match JSON */}
                   </div>
                 </div>
               </div>
@@ -819,7 +825,7 @@ function ServcieNavComp({ handleClose }) {
                 singleProductNavigator(displayServices.title);
                 handleClose();
               }}
-              style={{cursor:"pointer"}}
+              style={{ cursor: "pointer" }}
             >
               <span>See More</span>
               <IoIosArrowForward />
@@ -827,7 +833,7 @@ function ServcieNavComp({ handleClose }) {
           </div>
         )}
       </div>
-    </div>
+    </div>  
   );
 }
 

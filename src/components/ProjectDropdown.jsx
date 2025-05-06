@@ -1,11 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/NavProductComp.css";
 import Star from "../assets/loadingStar.svg";
-import {
-  IoIosArrowDown,
-  IoIosArrowUp,
-  IoIosArrowForward,
-} from "react-icons/io";
+import {IoIosArrowDown,IoIosArrowUp,IoIosArrowForward} from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import ProjectsData from "../Data/ProjectsData.json";
 
@@ -16,26 +12,7 @@ function ProjectDropdown({ handleClose }) {
   const categoryContainerRef = useRef(null); // Ref for the main category container
   const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
 
-  const [showSubCats, setShowSubCats] = useState(false);
-  const [showProjects, setShowProjects] = useState(false);
-  const [isProjectsVisible, SetIsProjectVisible] = useState(true);
-  const [hoveringOnDept, setHoveringOnDept] = useState(false);
-  const [hoveringOnMain, setHoveringOnmain] = useState(false);
-  const [MainCatArr, setMainCatArr] = useState();
-  const [subCatsArr, setSubCatsArr] = useState();
-  const [deptName, setDeptName] = useState();
-  const [mainCatName, setMainCatName] = useState();
-  const [subCatName, setSubCatName] = useState();
-  const [displayProject, setDisplayProject] = useState();
-  const [finalProjectArr, setFinalProjectArr] = useState();
-  const [showUpArrow, setShowUpArrow] = useState(false);
-  const [showDownArrow, setShowDownArrow] = useState(false);
-  const [showSubUpArrow, setShowSubUpArrow] = useState(false);
-  const [showSubDownArrow, setShowSubDownArrow] = useState(false);
-
-  const DeptArr = projectData?.map((item) => item.name);
-
-  useEffect(() => {
+    useEffect(() => {
     // Set default values
     const defaultDept = projectData?.[0];
     const defaultCategory = defaultDept?.categories?.[0];
@@ -60,9 +37,31 @@ function ProjectDropdown({ handleClose }) {
     };
   }, []);
 
+  const [showSubCats, setShowSubCats] = useState(false);
+  const [showProjects, setShowProjects] = useState(false);
+  const [isProjectsVisible, SetIsProjectVisible] = useState(true);
+  const [hoveringOnDept, setHoveringOnDept] = useState(false);
+  const [hoveringOnMain, setHoveringOnmain] = useState(false);
+  const [MainCatArr, setMainCatArr] = useState();
+  const [subCatsArr, setSubCatsArr] = useState();
+  const [deptName, setDeptName] = useState();
+  const [mainCatName, setMainCatName] = useState();
+  const [subCatName, setSubCatName] = useState();
+  const [displayProject, setDisplayProject] = useState();
+  const [finalProjectArr, setFinalProjectArr] = useState();
+  const [showUpArrow, setShowUpArrow] = useState(false);
+  const [showDownArrow, setShowDownArrow] = useState(false);
+  const [showSubUpArrow, setShowSubUpArrow] = useState(false);
+  const [showSubDownArrow, setShowSubDownArrow] = useState(false);
+
+
+  const DeptArr = projectData?.map((item) => item.name);
+
   const HandleDeptHover = (DeptName) => {
     setDeptName(DeptName);
     const MainCatArrObj = projectData?.find((item) => item.name === DeptName);
+    console.log(MainCatArrObj,"MainCatObjjProjectPage");
+
     if (MainCatArrObj) {
       const categories = MainCatArrObj.categories || [];
       const firstCategory = categories[0];
@@ -94,10 +93,13 @@ function ProjectDropdown({ handleClose }) {
 
     setFinalProjectArr(subCatObj?.projects);
     if (subCatObj) {
+      // Default
       const projectTitles = subCatObj.projects.map(
         (eachSubCat) => eachSubCat.title
       );
       setSubCatsArr(projectTitles);
+
+      // Set default first project
       const firstProject = subCatObj.projects?.[0];
       if (firstProject) {
         setSubCatName(firstProject.title);
@@ -113,6 +115,7 @@ function ProjectDropdown({ handleClose }) {
     const projectFound = finalProjectArr?.find((item) => item.title === SubCat);
     setDisplayProject(projectFound);
     setShowProjects(true);
+
   };const scrollUp = () => {
     if (categoryContainerRef.current) {
       const container = categoryContainerRef.current;
@@ -183,7 +186,7 @@ function ProjectDropdown({ handleClose }) {
         }
       }
     }
-    return null;
+    return null; // If project is not found
   }
 
   function findCategoryPath(projectData, projectCategory) {
@@ -194,7 +197,7 @@ function ProjectDropdown({ handleClose }) {
         }
       }
     }
-    return null;
+    return null; // If category is not found
   }
 
   const projectCategoryNavigator = (categoryTitle) => {
@@ -220,6 +223,8 @@ function ProjectDropdown({ handleClose }) {
           .join("-")}/${projectTitle.split(" ").join("-")}`
       );
       handleClose();
+    }else{
+      console.log("Project not found")
     }
   };
 
@@ -300,7 +305,11 @@ function ProjectDropdown({ handleClose }) {
                                 </span>
                               )}
                             </div>
-              <div className="navProComp-mainCat-item-container">
+              <div className="navProComp-mainCat-item-container"
+              onMouseEnter={()=>setHoveringOnmain(true)}
+              onMouseLeave={()=>setHoveringOnmain(false)}
+              onScroll={handleScroll}
+              >
                 {MainCatArr?.map((eachCat, i) => (
                   <div
                     key={i}
@@ -308,6 +317,7 @@ function ProjectDropdown({ handleClose }) {
                     onClick={() => {
                       window.scrollTo(0, 0);
                       projectCategoryNavigator(eachCat);
+                      handleClose()
                     }}
                     className="pointer"
                   >
@@ -358,7 +368,10 @@ function ProjectDropdown({ handleClose }) {
                                 </span>
                               )}
                             </div>
-              <div className="navProComp-subCat-item-container">
+              <div className="navProComp-subCat-item-container" 
+              ref={subCategoryContainerRef}
+              onScroll={handleSubScroll}
+              >
                 {subCatsArr?.map((eachItem, i) => (
                   <div
                     key={i}
@@ -366,6 +379,7 @@ function ProjectDropdown({ handleClose }) {
                     onClick={() => {
                       window.scrollTo(0, 0);
                       singleProjectNavigator(eachItem);
+                      handleClose()
                     }}
                     className="pointer"
                   >
@@ -390,6 +404,7 @@ function ProjectDropdown({ handleClose }) {
                   onClick={() => {
                     window.scrollTo(0, 0);
                     singleProjectNavigator(displayProject.title);
+                    handleClose();
                   }}
                   style={{ cursor: "pointer" }}
                 >
@@ -413,6 +428,7 @@ function ProjectDropdown({ handleClose }) {
               onClick={() => {
                 window.scrollTo(0, 0);
                 singleProjectNavigator(displayProject.title);
+                handleClose()
               }}
             >
               <span>See More</span>
