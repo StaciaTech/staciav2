@@ -560,7 +560,7 @@ function ProductCategoryPage() {
         <div>Loading...</div>
       ) : (
         <div className="service-page-content-container">
-          <div className="mobile-navigation-tabs">
+          <div className="mobile-navigation-tabs" >
             {productData.map((eachItem, i) => (
               <div
                 key={i}

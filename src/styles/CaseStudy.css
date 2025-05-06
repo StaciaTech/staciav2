@@ -132,7 +132,22 @@
   }
   .mobile-navigation-tabs {
     display: block;
+    position: sticky;
   }
+  /* .mobile-navigation-tabs {
+    display: flex  ;
+    padding: 1.5rem;
+    column-gap: 6px;
+    overflow-x: auto;
+    position: sticky;
+    top: 80px;
+    z-index: 1;
+    background: #fff;
+    transform: translateY(-100%);
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  } */
   .case-study-main-dots-container {
     display: none;
   }

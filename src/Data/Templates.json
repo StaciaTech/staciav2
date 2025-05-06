@@ -9,7 +9,7 @@
             {
               "title": "One Drill",
               "mainDesc": "A project focused on modern bridge infrastructure.",
-              "mainImageUrl": "/assets/colorful-nature.webp",
+              "mainImageUrl": "/assets/ProjectPage/one-drill.webp",
               "starComponent": true,
               "template": "template5",
               "banner": {
@@ -95,7 +95,7 @@
             {
               "title": "ismart",
               "mainDesc": "Expanding the national highway for better connectivity.",
-              "mainImageUrl": "/assets/colorful-nature.webp",
+              "mainImageUrl": "/assets/ProjectPage/ismart.webp",
               "starComponent": "true",
               "template": "template2",
               "heading": {
@@ -169,7 +169,7 @@
               "id": 3,
               "title": "Chilli Solar House",
               "mainDesc": "A project focused on modern bridge infrastructure.",
-              "mainImageUrl": "/assets/colorful-nature.webp",
+              "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp",
               "starComponent": "true",
               "template": "template4",
               "banner": {
@@ -225,7 +225,7 @@
               "id": 4,
               "title": "Hydrogen Bottle",
               "mainDesc": "Expanding the national highway for better connectivity.",
-              "mainImageUrl": "/assets/colorful-nature.webp",
+              "mainImageUrl": "/assets/ProjectPage/Hydrogen Bottle.webp",
               "starComponent": "true",
               "template": "template3",
               "banner": {
@@ -324,7 +324,7 @@
             {
               "title": "Smart Implementation",
               "mainDesc": "Developing a smarter electrical grid for efficiency.",
-              "mainImageUrl": "/assets/colorful-nature.webp",
+              "mainImageUrl": "/assets/ProjectPage/Smart implementation.webp",
               "starComponent": true,
               "template": "template1",
               "banner": {
@@ -392,7 +392,7 @@
             {
               "title": "Reverse Kettle",
               "mainDesc": "Developing a smarter electrical grid for efficiency.",
-              "mainImageUrl": "/assets/colorful-nature.webp",
+              "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp",
               "starComponent": "true",
               "template": "template3",
               "banner": {
@@ -491,7 +491,7 @@
             {
               "title": "AI Chatbot",
               "mainDesc": "Creating an AI-powered customer support chatbot.",
-              "mainImageUrl": "/assets/colorful-nature.webp",
+              "mainImageUrl": "/assets/ProjectPage/AI chatbot.webp",
               "starComponent": true,
               "template": "template1",
               "banner": {
@@ -559,7 +559,7 @@
             {
               "title": "AI Chatbot version",
               "mainDesc": "Creating an AI-powered customer support chatbot.",
-              "mainImageUrl": "/assets/colorful-nature.webp",
+              "mainImageUrl": "/assets/ProjectPage/AI chatbot version.webp",
               "starComponent": "true",
               "template": "template2",
               "heading": {
