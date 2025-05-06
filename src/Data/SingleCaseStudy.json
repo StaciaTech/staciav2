@@ -550,13 +550,13 @@
           "imageURL": "/assets/caseStudy-2.webp",
           "overview": {
             "overviewtitle": "Introduction",
-            "description": "The agricultural sector is the backbone of the Indian economy, with the Mandi system playing a crucial role in facilitating trade of agricultural produce. However, traditional Mandi operations face inefficiencies, lack of transparency, and infrastructural limitations. This case study analyzes the impact of technology on modernizing the Mandi procurement system, focusing on initiatives like e-NAM and the proposed EDIFAI platform to enhance transparency, efficiency, and farmer welfare."
+            "description": "The agricultural sector is the backbone of the Indian economy, with a significant portion of the population relying on it for their livelihood. The Mandi system, a network of agricultural markets, plays a crucial role in facilitating the trade of agricultural produce from farmers to consumers. However, the traditional Mandi system faces numerous challenges, including inefficiencies, lack of transparency, and infrastructural limitations. This case study analyzes the current state of the Mandi procurement system in India, examines the impact of technology, and proposes solutions to modernize and optimize its operations. We will also explore how EDIFAI, a unifying application, can integrate the procurement business with Mandis, agents, FPOs, and the logistics team."
           },
           "imageContent": {
             "imagetitle": "Background",
             "imageSrc": "/assets/singlepage-mandi.webp",
             "content": [
-              "The Mandi system, regulated by state Agricultural Produce Market Committees (APMCs), serves as a trading platform for farmers to sell produce to intermediaries, traders, and government agencies. Despite its importance, the system suffers from complex intermediary networks, lack of transparency, inadequate infrastructure, labor-intensive processes, and limited market access, hindering agricultural growth and farmer welfare."
+              "The Mandi system in India comprises regulated markets established by state governments under the Agricultural Produce Market Committee (APMC) Acts. These markets serve as trading platforms where farmers can sell their produce to intermediaries, traders, and government agencies. While the Mandi system has played a vital role in ensuring price discovery and market access for farmers, it also suffers from several inherent limitations."
             ]
           },
           "Backgrounddes": {

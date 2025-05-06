@@ -65,8 +65,8 @@ function App() {
         {/* <Route path="/article/:department/:title" element={<SingleArticle />} /> */}
         <Route path="/article" element={<ArticlesPage />} />
         <Route path="/article/:department" element={<ArticlesPage />} />
-        <Route path="/article/:department/:title" element={<Template6 />} />
-        <Route path="/article/:department/single-article/:title" element={<Template6 />} />
+        <Route path="/article/:department/:title" element={<SingleArticle />} />
+        <Route path="/article/:department/single-article/:title" element={<SingleArticle />} />
 
         <Route
           path="/project/:department/:category/:title"

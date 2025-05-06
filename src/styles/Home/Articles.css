@@ -18,9 +18,28 @@
   padding-left: 3rem;
 }
 
-.single-article-card-image {
+/* .single-article-card-image {
   background-image: linear-gradient(to bottom, #0d022500, #0d0225cc),
     url("../../assets/artHomeImg.png");
+  height: 60vh;
+  width: 547px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  font-family: "Euclid";
+  filter: grayscale(0);
+  margin-left: 3rem;
+  margin-right: 1rem;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+  cursor: pointer;
+} */
+.single-article-card-image {
   height: 60vh;
   width: 547px;
   border-radius: 30px;
