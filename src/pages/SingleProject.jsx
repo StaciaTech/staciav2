@@ -69,7 +69,7 @@ console.log(projectKey, "projectKey")
 
      console.log(SelectedProject, "Selectproject")
 
-     const RemainingProjects= proData?.filter((eachPro)=>eachPro.title.split(" ").join("-") !== projectKey);
+     const RemainingProjects= proData?.filter((eachPro)=>eachPro?.title.split(" ").join("-") !== projectKey);
      console.log(RemainingProjects, "RemainingProjects");
 
       // useEffect(() => {

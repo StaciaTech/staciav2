@@ -7,7 +7,30 @@
   align-items: center;
   column-gap: 1rem;
 }
+.form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(13, 2, 37, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 
+  width: "70%";
+  min-height: "80%";
+  inset: 0;
+  margin: "auto";
+  position: "relative";
+  border-radius: "1rem";
+  padding: "3rem 5rem";
+  box-sizing: "border-box";
+}
 .navbar {
   transition: transform 0.3s ease;
   position: fixed;
