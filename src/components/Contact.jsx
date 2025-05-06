@@ -5,7 +5,6 @@ import "../styles/Contact.css";
 import StaciaContactLogo from "../assets/StaciaContactLogo.svg";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import axios from "axios";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
@@ -160,7 +159,8 @@ function Contact({ closeHandle }) {
   };
 
   return (
-    <div className="contact-overlay">
+    <div className="contact-form">
+      <div className="contact-overlay">
       <div className="contact-content">
         <div className="contact-form-container">
           <div className="contact-form-image-container">
@@ -352,6 +352,7 @@ function Contact({ closeHandle }) {
         hideProgressBar={true}
         icon={false}
       />
+    </div>
     </div>
   );
 }

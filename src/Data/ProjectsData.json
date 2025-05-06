@@ -7,11 +7,13 @@
           "name": "Mechanical-Industry",
           "projects": [
             {
+              "id":1,
               "title": "One Drill",
               "mainDesc": "A project focused on modern bridge infrastructure.",
-              "mainImageUrl": "/assets/ProductPage/onedrillssm.webp"
+              "mainImageUrl": "/assets/ProjectPage/one-drill.webp"
             },
             {
+              "id":2,
               "title": "ismart",
               "mainDesc": "Expanding the national highway for better connectivity.",
               "mainImageUrl": "/assets/ProjectPage/ismart.webp"
@@ -31,7 +33,7 @@
               "id": 4,
               "title": "Hydrogen Bottle",
               "mainDesc": "Expanding the national highway for better connectivity.",
-              "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp"
+              "mainImageUrl": "/assets/ProjectPage/Hydrogen Bottle.webp"
             }
           ]
         }
@@ -44,6 +46,7 @@
           "name": "Electronics-Industry",
           "projects": [
             {
+              "id":1,
               "title": "Smart Implementation",
               "mainDesc": "Developing a smarter electrical grid for efficiency.",
               "mainImageUrl": "/assets/ProjectPage/Smart implementation.webp"
@@ -54,6 +57,7 @@
           "name": "Electronics-Grid-Industry",
           "projects": [
             {
+              "id":2,
               "title": "Reverse Kettle",
               "mainDesc": "Developing a smarter electrical grid for efficiency.",
               "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp"

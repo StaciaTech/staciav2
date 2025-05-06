@@ -1249,7 +1249,9 @@ function SingleCaseStudy() {
           </div>
 
           <div className="single-casestudy-layout1-title test-seclection-blue">
-            <p>{caseStudy.gallerytittle}</p>
+            <p>
+              {/* {caseStudy.gallerytittle} */} Industries
+              </p>
           </div>
           {caseStudy.gallery && caseStudy.gallery.length > 0 && (
             <div className="single-casestudy-layout2">
@@ -1275,7 +1277,7 @@ function SingleCaseStudy() {
                 {caseStudy.challenges.map((challenge, index) => (
                   <div key={index} >
                     <div className="single-casestudy-layout3-title test-seclection-blue">
-                      {challenge.challengestitle}
+                      {challenge.challengestitle} 
                     </div>
                     <p className="test-seclection-blue-challenge">
                       {challenge.description}
