@@ -92,7 +92,13 @@
 
   .leader-profile-line {
     font-family: EuclidSemibold;
-    font-size: 2.75rem;
+    padding: 20px 0px ;
+    font-size: 1.75rem;
+  }
+  .download-icon{
+    font-family: EuclidSemibold;
+    padding: 6px 0px;
+
   }
 
   .leader-carousel-container {

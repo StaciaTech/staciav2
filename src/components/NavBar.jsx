@@ -18,6 +18,7 @@ import { useParams } from "react-router-dom";
 import AboutDropDown from "./AboutDropDown";
 import ResourceDropDown from "./Resource/ResourceDropDown";
 import ProjectDropdown from "./ProjectDropdown";
+import Sitemap from '../components/Sitemap'; // Assuming correct path
 
 
 import CompetitionPage from "../pages/Competition";
@@ -313,12 +314,16 @@ function NavBar() {
     content: {
       width: "90%",
       minHeight: "90%",
+      background:"none",
       inset: 0,
       margin: "auto",
       position: "relative",
       borderRadius: "1rem",
+      outline:"none",
+      border:"none",
       padding: "3rem 5rem",
       boxSizing: "border-box",
+    
     },
   };
   return (

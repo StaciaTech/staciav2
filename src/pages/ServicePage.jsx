@@ -21,7 +21,7 @@
 //   const [activeDepartment, setActiveDepartment] = useState("");
 //   const [cursorVisible, setCursorVisible] = useState(false);
 //   const [isManualScroll, setIsManualScroll] = useState(false);
-  
+
 //   // const apiUrl = process.env.REACT_APP_API_URL;
 
 //   const sectionsRef = useRef({}); // To track section DOM nodes
@@ -39,8 +39,6 @@
 //   // useEffect(() => {
 //   //   FetchServices();
 //   // }, []);
-
-
 
 //   useEffect(() => {
 //     // Simulate fetching data from a local JSON file
@@ -93,8 +91,7 @@
 //     })
 //     // Object.values(sectionsRef.current).forEach((section)=>{
 //     //   if (section) observer.observe(section);
-//     // });  
-    
+//     // });
 
 //     // Cleanup observer on component unmount
 //     return () => observer.disconnect();
@@ -115,8 +112,6 @@
 //   }
 
 // }
-
-
 
 //   return (
 //     <>
@@ -190,9 +185,9 @@
 //                                 .split(" ")
 //                                 .join("-")}/${data.name.split(" ").join("-")}`
 //                             );
-//                           }}                          
+//                           }}
 //                         >
-//                           <CustomCursor 
+//                           <CustomCursor
 //                            isVisible={cursorVisible}
 //                            text={"Know more"}
 //                           />
@@ -249,11 +244,11 @@
 //       setShowDept(false); // Ensure dept name is hidden for non-active dots
 //     }
 //   }, [activeDepartment, eachItem.name]);
-  
+
 //   return (
 //     <div className="service-page-dept-container">
 //       <div
-//         className={`service-page-main-dots ${eachItem.name === activeDepartment 
+//         className={`service-page-main-dots ${eachItem.name === activeDepartment
 //           ? "service-page-main-dots-active"
 //           : ""
 //           }`}
@@ -265,27 +260,17 @@
 //         }}
 //         onMouseOver={() => setShowDept(true)}
 //         onMouseOut={() => setShowDept(false)}
-//       ></div> 
+//       ></div>
 //       {showDept && (
 //         <div className="service-page-dept-name">
 //           {eachItem.name}
 //         </div>
 //       )}
-      
+
 //     </div>
-   
+
 //   );
 // };
-
-
-
-
-
-
-
-
-
-
 
 // // function ServicePage() {
 // //   const navigate = useNavigate();
@@ -312,10 +297,6 @@
 // //       }
 // //     }
 // //   }, [activeDepartment]);
-
-
-
-
 
 // First result
 
@@ -553,6 +534,7 @@
 // };
 
 // export default ServicePage;
+
 import React, { useEffect, useState, useRef } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -561,7 +543,8 @@ import "../styles/ServiceCard.css";
 import "../styles/SingleService.css";
 import MobileFooter from "../components/MobileFooter";
 import SideBar from "../components/SideBar";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import serviceData from "../Data/Services.json";
 import CustomCursor from "../components/CustomCursor";
@@ -571,19 +554,16 @@ function ServicePage() {
   const params = useParams();
 
   const [ServiceData, setServiceData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]); // State for filtered data
   const [activeDepartment, setActiveDepartment] = useState("");
-  const [activeFilter, setActiveFilter] = useState("ALL"); // State for active filter
   const [cursorVisible, setCursorVisible] = useState(false);
-  const [isDotClickScroll, setIsDotClickScroll] = useState(false);
+  const [isDotClickScroll, setIsDotClickScroll] = useState(false); // Tracks dot-initiated scrolls
 
   const sectionsRef = useRef({});
-  const scrollTimeoutRef = useRef(null);
+  const scrollTimeoutRef = useRef(null); // To manage scroll timeout
 
   // Simulate fetching data
   useEffect(() => {
     setServiceData(serviceData);
-    setFilteredData(serviceData); // Initially show all data
   }, []);
 
   // Set initial active department from URL or default
@@ -595,12 +575,12 @@ function ServicePage() {
     }
   }, [ServiceData, params.department]);
 
-  // Scroll to active department on mount or when changed
+  // Scroll to active department on mount or when changed (not during dot-click scroll)
   useEffect(() => {
     if (ServiceData.length && activeDepartment && !isDotClickScroll) {
       const section = document.getElementById(activeDepartment);
       if (section) {
-        const yOffset = -80;
+        const yOffset = -80; // Adjust for navbar
         const y =
           section.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
@@ -613,6 +593,7 @@ function ServicePage() {
     const observer = new IntersectionObserver(
       (entries) => {
         if (!isDotClickScroll) {
+          // Allow updates during manual scrolling
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveDepartment(entry.target.id);
@@ -622,7 +603,7 @@ function ServicePage() {
       },
       {
         root: null,
-        threshold: 0.3,
+        threshold: 0.3, // Reverted to original threshold for visibility detection
       }
     );
 
@@ -637,11 +618,11 @@ function ServicePage() {
   // Handle dot click
   const handleDotClick = (departmentName) => {
     if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current);
+      clearTimeout(scrollTimeoutRef.current); // Clear existing timeout
     }
 
-    setIsDotClickScroll(true);
-    setActiveDepartment(departmentName);
+    setIsDotClickScroll(true); // Disable observer updates for dot clicks
+    setActiveDepartment(departmentName); // Set target department
 
     const section = document.getElementById(departmentName);
     if (section) {
@@ -650,19 +631,10 @@ function ServicePage() {
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
 
+      // Reset dot-click scroll after animation
       scrollTimeoutRef.current = setTimeout(() => {
         setIsDotClickScroll(false);
-      }, 1200);
-    }
-  };
-
-  // Handle filter click
-  const handleFilterClick = (filter) => {
-    setActiveFilter(filter);
-    if (filter === "ALL") {
-      setFilteredData(ServiceData);
-    } else {
-      setFilteredData(ServiceData.filter((item) => item.name === filter));
+      }, 1200); // Duration for scroll animation
     }
   };
 
@@ -680,47 +652,6 @@ function ServicePage() {
             <div className="service-title">
               <span style={{ userSelect: "none" }}>Our Services</span>
             </div>
-          </div>
-          {/* Filter Tabs */}
-          <div
-            className="filter-tabs"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "10px",
-              margin: "20px 0",
-            }}
-          >
-            <button
-              onClick={() => handleFilterClick("ALL")}
-              style={{
-                padding: "10px 20px",
-                backgroundColor: activeFilter === "ALL" ? "#007bff" : "#f0f0f0",
-                color: activeFilter === "ALL" ? "#fff" : "#000",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-              }}
-            >
-              ALL
-            </button>
-            {ServiceData.map((item, i) => (
-              <button
-                key={i}
-                onClick={() => handleFilterClick(item.name)}
-                style={{
-                  padding: "10px 20px",
-                  backgroundColor:
-                    activeFilter === item.name ? "#007bff" : "#f0f0f0",
-                  color: activeFilter === item.name ? "#fff" : "#000",
-                  border: "none",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                }}
-              >
-                {item.name}
-              </button>
-            ))}
           </div>
           <div className="mobile-navigation-tabs">
             {ServiceData.map((eachItem, i) => (
@@ -744,12 +675,12 @@ function ServicePage() {
                   key={i}
                   eachItem={eachItem}
                   activeDepartment={activeDepartment}
-                  setActiveDepartment={handleDotClick}
+                  setActiveDepartment={handleDotClick} // Use handleDotClick
                 />
               ))}
             </div>
             <div>
-              {filteredData.map((eachItem, i) => (
+              {ServiceData.map((eachItem, i) => (
                 <div
                   className="all-services"
                   key={i}

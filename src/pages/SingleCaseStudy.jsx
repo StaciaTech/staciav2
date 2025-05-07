@@ -531,7 +531,7 @@
 // export default SingleCaseStudy;
 
 import React, { useEffect, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "../styles/SingleCaseStudy.css";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
@@ -539,11 +539,11 @@ import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
 import data from "../Data/SingleCaseStudy.json";
-
 import loading from "../assets/loading.png";
 
 function SingleCaseStudy() {
   const [caseStudy, setCaseStudy] = useState(null);
+  const [otherCaseStudies, setOtherCaseStudies] = useState([]);
   const { id } = useParams();
 
   const [showButton, setShowButton] = useState(false);
@@ -570,6 +570,7 @@ function SingleCaseStudy() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const handleClick = () => {
     setShowHelpPage(true);
     setShowForm(true);
@@ -577,23 +578,35 @@ function SingleCaseStudy() {
 
   useEffect(() => {
     if (showForm) {
-      document.body.style.overflow = "hidden";
+      // Store the current scroll position
+      const scrollY = window.scrollY;
       document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
       document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      // Restore the scroll position
+      const scrollY = document.body.style.top;
       document.body.style.position = "";
+      document.body.style.top = "";
       document.body.style.width = "";
+      document.body.style.overflow = "auto";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
+
     return () => {
-      document.body.style.overflow = "auto";
+      // Reset on unmount
       document.body.style.position = "";
+      document.body.style.top = "";
       document.body.style.width = "";
+      document.body.style.overflow = "auto";
     };
   }, [showForm]);
+
+
   const handleWheel = (e) => {
     const container = e.currentTarget;
-    if (container.scrollHeight > container.clientHeigth) {
+    if (container.scrollHeight > container.clientHeight) {
       e.preventDefault();
       e.preventPropagation();
     }
@@ -601,18 +614,25 @@ function SingleCaseStudy() {
 
   useEffect(() => {
     let selectedCaseStudy = null;
+    let allCaseStudies = [];
 
-    // Find the case study by id
+    // Find the current case study and collect all case studies
     data.singlecasestudy.forEach((category) => {
       category.data.forEach((study) => {
         if (study.id === id) {
           selectedCaseStudy = study;
         }
+        allCaseStudies.push(study);
       });
     });
 
     if (selectedCaseStudy) {
       setCaseStudy(selectedCaseStudy);
+      // Filter out the current case study and limit to 3 others
+      const others = allCaseStudies
+        .filter((study) => study.id !== id)
+        .slice(0, 5);
+      setOtherCaseStudies(others);
     } else {
       console.error("Case study not found!");
     }
@@ -647,8 +667,6 @@ function SingleCaseStudy() {
             </div>
           </div>
         </div>
-
-        {/* <CaseStudyAudio /> */}
 
         <div className="single-casestudy-content-container">
           <div>
@@ -697,19 +715,7 @@ function SingleCaseStudy() {
             </p>
           </div>
 
-          {/* Salient Features */}
-          {/* <div className="salient-features">
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.salientFeatures.title}
-            </h2>
-            <ul>
-              {caseStudy.salientFeatures.features.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-          </div> */}
-
-          {/* MarketDemand */}
+          {/* Problem Statement */}
           <div className="problem-statement">
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.problemStatement.title}
@@ -719,7 +725,7 @@ function SingleCaseStudy() {
             </p>
             <ul className="problem-statement-para2">
               {caseStudy.problemStatement.issues.map((issue, index) => (
-                <li key={index}>
+                <li key={index} className="li-text">
                   <span className="highlight">{issue.highlight}:</span>{" "}
                   {issue.text}
                 </li>
@@ -732,6 +738,7 @@ function SingleCaseStudy() {
               {caseStudy.problemStatement.des2}
             </p>
           </div>
+
           {showButton && !showHelpPage && (
             <button onClick={handleClick} className="help-button">
               <img
@@ -744,68 +751,8 @@ function SingleCaseStudy() {
               How Stacia Can help
             </button>
           )}
-          {/* Help Page Section */}
-          {/* {showForm && showHelpPage && (
-            <div className="help-section">
-              <div
-                className="help-container"
-                onWheel={handleWheel}
-                ref={popupRef}
-              >
-                <div className="help-sidebar">
-                  <img
-                    src=""
-                    alt=""
-                    style={{
-                      width: "30px",
-                    }}
-                  />
-                  <h2>How stacia can help</h2>
-                  <div className="help-tabs">
-                    <button className="active">Services</button>
-                    <button>Products</button>
-                    <button>Projects</button>
-                  </div>
-                  <ul className="help-links">
-                    <li>Mechanical</li>
-                    <li className="active">Electronics</li>
-                    <li>Tech</li>
-                    <li>column 1</li>
-                    <li>column 2</li>
-                    <li>column 3</li>
-                  </ul>
-                </div>
-                <div className="help-card-section">
-                  <div className="help-card">
-                    <img
-                      src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
-                      alt="Car"
-                    />
-                    <h3>Placeholder text</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur. Ullamcorper eu
-                      egestas tempor nunc nec habitant. Dolor vulputate tempor
-                      sagittis et maecenas praesent congue ac. Blandit in
-                      sagittis sem quis lectus aliquam. Lorem ipsum dolor sit
-                      amet consectetur. Blandit in sagittis sem quis lectus
-                      aliquam.
-                    </p>
-                    <a href="#">Know more →</a>
-                  </div>
-                </div>
-                <button
-                  className="help-close-btn"
-                  onClick={() => {
-                    setShowHelpPage(false);
-                    setShowForm(false);
-                  }}
-                >
-                  ×
-                </button>
-              </div>
-            </div>
-          )} */}
 
+          {/* Help Page Section */}
           {showForm && showHelpPage && (
             <div className="help-section">
               <div
@@ -903,7 +850,9 @@ function SingleCaseStudy() {
             </h2>
             <ul className="problem-statement-para2">
               {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
-                <li key={index}>{feature}</li>
+                <li key={index} className="li-text">
+                  {feature}
+                </li>
               ))}
             </ul>
             <p className="problem-statement-para1">
@@ -916,7 +865,7 @@ function SingleCaseStudy() {
               {caseStudy.CaseAnalysis.des6}
             </p>
 
-            {/* ProposedSolution */}
+            {/* Proposed Solution */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.CaseAnalysis.ProposedSolution.title}
             </h2>
@@ -926,7 +875,7 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.CaseAnalysis.ProposedSolution.benefits.map(
                 (benefits, index) => (
-                  <li key={index}>
+                  <li key={index} className="li-text">
                     <span className="highlight">{benefits.highlight}:</span>{" "}
                     {benefits.text}
                   </li>
@@ -943,14 +892,14 @@ function SingleCaseStudy() {
               {caseStudy.CaseAnalysis.ProposedSolution.des9}
             </p>
 
-            {/* KeyMechanizedProcesses */}
+            {/* Key Mechanized Processes */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.title}
             </h2>
             <ul className="problem-statement-para2">
               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.Processes.map(
                 (Processes, index) => (
-                  <li key={index}>
+                  <li key={index} className="li-text">
                     <span className="highlight">{Processes.Process}:</span>{" "}
                     {Processes.Description}
                   </li>
@@ -985,14 +934,14 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {Object.values(caseStudy.Statistics.condent).map(
                 (feature, index) => (
-                  <li key={index}>
+                  <li key={index} className="li-text">
                     {feature.Description || "No feature description"}
                   </li>
                 )
               )}
             </ul>
 
-            {/* EconomicImpact */}
+            {/* Economic Impact */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.EconomicImpact.title}
             </h2>
@@ -1001,14 +950,14 @@ function SingleCaseStudy() {
             </p>
             <ul className="problem-statement-para2">
               {caseStudy.EconomicImpact.Impacts.map((Impacts, index) => (
-                <li key={index}>
+                <li key={index} className="li-text">
                   <span className="highlight">{Impacts.highlight}:</span>{" "}
                   {Impacts.text}
                 </li>
               ))}
             </ul>
 
-            {/* Strategies to overcome Baarriers */}
+            {/* Strategies to Overcome Barriers */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.StrategiesToOvercome.title}
             </h2>
@@ -1018,7 +967,7 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.StrategiesToOvercome.Strategies.map(
                 (Strategies, index) => (
-                  <li key={index}>
+                  <li key={index} className="li-text">
                     <span className="highlight">{Strategies.strategy}:</span>{" "}
                     {Strategies.description}
                   </li>
@@ -1026,7 +975,7 @@ function SingleCaseStudy() {
               )}
             </ul>
 
-            {/* future trents */}
+            {/* Future Trends */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.FutureTrends.title}
             </h2>
@@ -1035,15 +984,14 @@ function SingleCaseStudy() {
             </p>
             <ul className="problem-statement-para2">
               {caseStudy.FutureTrends.Trends.map((Trends, index) => (
-                <li key={index}>
+                <li key={index} className="li-text">
                   <span className="highlight">{Trends.technology}:</span>{" "}
                   {Trends.description}
                 </li>
               ))}
             </ul>
 
-            {/* impact employment */}
-
+            {/* Impact on Employment */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.ImpactOnEmployment.title}
             </h2>
@@ -1053,7 +1001,7 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.ImpactOnEmployment.JobDisplacement.map(
                 (JobDisplacement, index) => (
-                  <li key={index}>
+                  <li key={index} className="li-text">
                     <span className="highlight">{JobDisplacement.area}:</span>{" "}
                     {JobDisplacement.description}
                   </li>
@@ -1061,8 +1009,7 @@ function SingleCaseStudy() {
               )}
             </ul>
 
-            {/* Regional variation*/}
-
+            {/* Regional Variations */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.RegionalVariations.title}
             </h2>
@@ -1072,7 +1019,7 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.RegionalVariations.AdoptionFactors.map(
                 (AdoptionFactors, index) => (
-                  <li key={index}>
+                  <li key={index} className="li-text">
                     <span className="highlight">{AdoptionFactors.factor}:</span>{" "}
                     {AdoptionFactors.description}
                   </li>
@@ -1080,7 +1027,7 @@ function SingleCaseStudy() {
               )}
             </ul>
 
-            {/* EnvironmentalImpact */}
+            {/* Environmental Impact */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.EnvironmentalImpact.title}
             </h2>
@@ -1089,13 +1036,14 @@ function SingleCaseStudy() {
             </p>
             <ul className="problem-statement-para2">
               {caseStudy.EnvironmentalImpact.Impacts.map((Impacts, index) => (
-                <li key={index}>
+                <li key={index} className="li-text">
                   <span className="highlight">{Impacts.impact}:</span>{" "}
                   {Impacts.description}
                 </li>
               ))}
             </ul>
-            {/* QualityAndSafety */}
+
+            {/* Quality and Safety */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.QualityAndSafety.title}
             </h2>
@@ -1105,14 +1053,15 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.QualityAndSafety.Improvements.map(
                 (Improvements, index) => (
-                  <li key={index}>
+                  <li key={index} className="li-text">
                     <span className="highlight">{Improvements.process}:</span>{" "}
                     {Improvements.description}
                   </li>
                 )
               )}
             </ul>
-            {/* FarmerPerspectives */}
+
+            {/* Farmer Perspectives */}
             <h2 className="single-casestudy-layout1-title test-selection-blue">
               {caseStudy.FarmerPerspectives.title}
             </h2>
@@ -1122,7 +1071,7 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.FarmerPerspectives.BenefitsForFarmers.map(
                 (BenefitsForFarmers, index) => (
-                  <li key={index}>
+                  <li key={index} className="li-text">
                     <span className="highlight">
                       {BenefitsForFarmers.benefit}:
                     </span>{" "}
@@ -1161,7 +1110,7 @@ function SingleCaseStudy() {
             <p>{caseStudy.challengesFaced.description}</p>
             <ul>
               {caseStudy.challengesFaced.issues.map((issues, index) => (
-                <li key={index}>
+                <li key={index} className="li-text">
                   {issues.highlight ? (
                     <>
                       <span className="highlight">{issues.highlight}:</span>{" "}
@@ -1175,98 +1124,6 @@ function SingleCaseStudy() {
             </ul>
           </div>
 
-          {/* <div className="development-process">
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <p className="problem-statement-para1">
-              {caseStudy.CaseAnalysis.des3}
-            </p>
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <ul className="problem-statement-para2">
-              {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-          </div> */}
-          {/* future trents */}
-          {/* <div className="development-process">
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <p className="problem-statement-para1">
-              {caseStudy.CaseAnalysis.des3}
-            </p>
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <ul className="problem-statement-para2">
-              {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-          </div> */}
-          {/* impact employment */}
-          {/* <div className="development-process">
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <p className="problem-statement-para1">
-              {caseStudy.CaseAnalysis.des3}
-            </p>
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <ul className="problem-statement-para2">
-              {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-          </div> */}
-
-          {/* Regional variation
-          
-           */}
-
-          {/* EnvironmentalImpact */}
-          {/* QualityAndSafety */}
-          {/* FarmerPerspectives */}
-          {/* <div className="development-process">
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <p className="problem-statement-para1">
-              {caseStudy.CaseAnalysis.des3}
-            </p>
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <ul className="problem-statement-para2">
-              {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-          </div> */}
-          {/* casestudies */}
-          {/* <div className="development-process">
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <p className="problem-statement-para1">
-              {caseStudy.CaseAnalysis.des3}
-            </p>
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.CaseAnalysis.title}
-            </h2>
-            <ul className="problem-statement-para2">
-              {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-          </div> */}
-
           {/* Impact and Benefits */}
           <div className="impact-benefits">
             <h2 className="single-casestudy-layout1-title test-selection-blue">
@@ -1274,7 +1131,7 @@ function SingleCaseStudy() {
             </h2>
             <ul>
               {caseStudy.impactBenefits.benefits.map((benefits, index) => (
-                <li key={index}>
+                <li key={index} className="li-text">
                   <span className="highlight">{benefits.highlight}:</span>{" "}
                   {benefits.text}
                 </li>
@@ -1318,6 +1175,50 @@ function SingleCaseStudy() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Other Case Studies Section */}
+        <div className="other-case-studies">
+          <h2 className="single-casestudy-layout1-title test-selection-blue">
+            Other Case Studies
+          </h2>
+          <div className="other-case-studies-grid">
+            {otherCaseStudies.map((study, index) => (
+              <div className="other-case-study-card" key={index}>
+                <Link to={`/case-study/single-caseStudy/${study.id}`}>
+                  <img
+                    src={
+                      study.imageURL ||
+                      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+                    }
+                    alt={study.title}
+                    style={{
+                      width: "100%",
+                      height: "280px",
+                      objectFit: "cover",
+                      borderRadius: "8px 8px 0 0",
+                    }}
+                    onClick={() => window.scrollTo(0, 0)}
+                  />
+                </Link>
+                <div className="other-case-study-content">
+                  <h3>{study.title}</h3>
+                  <p>
+                    {study.overview.description.length > 100
+                      ? `${study.overview.description.substring(0, 100)}...`
+                      : study.overview.description}
+                  </p>
+                  <Link
+                    to={`/case-study/single-caseStudy/${study.id}`}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="know-more-link"
+                  >
+                    Know more →
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

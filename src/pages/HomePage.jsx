@@ -201,8 +201,7 @@ const MobileArticle = lazy(() => import("../components/Home/MobileArticle"));
 const HomeCaseStudy = lazy(() => import("../components/Home/HomeCaseStudy"));
 const ClientComponent = lazy(() => import("./Client"));
 
-// Uncomment if reverse.png is used in the critical path
-// import reverse from "../assets/reverse.png";
+
 
 const words = [
   "Innovation",

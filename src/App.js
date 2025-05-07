@@ -35,6 +35,7 @@ import CertificateView from "./components/CertificateView";
 
 import EventDetails from "./components/Competition/Event-Detail";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import Sitemap from "./components/Sitemap";
 
 function App() {
   
@@ -45,7 +46,7 @@ function App() {
       {/* <Box1 /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Privacy-Policy" element={<PrivacyPolicy/>}/>
+        <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route
@@ -63,7 +64,10 @@ function App() {
         <Route path="/article" element={<ArticlesPage />} />
         <Route path="/article/:department" element={<ArticlesPage />} />
         <Route path="/article/:department/:title" element={<Template6 />} />
-        <Route path="/article/:department/single-article/:title" element={<Template6 />} />
+        <Route
+          path="/article/:department/single-article/:title"
+          element={<Template6 />}
+        />
 
         <Route
           path="/project/:department/:category/:title"
@@ -76,10 +80,10 @@ function App() {
         />
         <Route
           // path="/case-study/:department/:title (home) "
-          path="/case-study/single-caseStudy/:id" //------------- 
+          path="/case-study/single-caseStudy/:id" //-------------
           element={<SingleCaseStudy />}
         />
-        
+
         <Route
           // path="/case-study/:department/:title (direct navigation from navbar)"
           path="/case-study/:department/:id" //-------------
@@ -127,10 +131,14 @@ function App() {
           </Route>
  */}
 
+        {/* //sitemap */}
+
+        <Route path="/sitemap" element={<Sitemap />} />
+
         <Route path="/event/:title" element={<EventDetails />} />
 
         <Route path="/whatsnew" element={<WhatsNewPage />} />
-       
+
         <Route path="/about/:key" element={<About />} />
         <Route path="/about" element={<About />} />
         <Route path="/partners" element={<Partners />} />

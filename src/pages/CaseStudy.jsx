@@ -98,92 +98,92 @@
 
 // src/pages/CaseStudy.js
 
-import React, { useEffect, useState } from "react";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import "../styles/CaseStudy.css";
-import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
-import SideBar from "../components/SideBar";
-import MobileFooter from "../components/MobileFooter";
-import Star from "../components/Star";
-import caseStudiesData from "../Data/SingleCaseStudy.json"; // Import JSON data
+  import React, { useEffect, useState } from "react";
+  import NavBar from "../components/NavBar";
+  import Footer from "../components/Footer";
+  import "../styles/CaseStudy.css";
+  import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
+  import SideBar from "../components/SideBar";
+  import MobileFooter from "../components/MobileFooter";
+  import Star from "../components/Star";
+  import caseStudiesData from "../Data/SingleCaseStudy.json"; // Import JSON data
 
-export default function CaseStudy() {
-  const [casestudyData, setCasestudyData] = useState([]);
-  const [activeDepartment, setActiveDepartment] = useState("All");
+  export default function CaseStudy() {
+    const [casestudyData, setCasestudyData] = useState([]);
+    const [activeDepartment, setActiveDepartment] = useState("All");
 
-  useEffect(() => {
-    const data = caseStudiesData.singlecasestudy;
+    useEffect(() => {
+      const data = caseStudiesData.singlecasestudy;
 
-    if (activeDepartment === "All") {
-      // Group all case studies by department for "All" filter
-      const groupedByDepartment = data.map((category) => ({
-        department: category.name,
-        studies: category.data,
-      }));
-      setCasestudyData(groupedByDepartment);
-    } else {
-      // Filter case studies by selected category
-      const filteredData = data
-        .filter((category) => category.name === activeDepartment)
-        .flatMap((category) => category.data);
-      setCasestudyData(filteredData);
-    }
-  }, [activeDepartment]);
+      if (activeDepartment === "All") {
+        // Group all case studies by department for "All" filter
+        const groupedByDepartment = data.map((category) => ({
+          department: category.name,
+          studies: category.data,
+        }));
+        setCasestudyData(groupedByDepartment);
+      } else {
+        // Filter case studies by selected category
+        const filteredData = data
+          .filter((category) => category.name === activeDepartment)
+          .flatMap((category) => category.data);
+        setCasestudyData(filteredData);
+      }
+    }, [activeDepartment]);
 
-  // Extract unique categories from JSON data
-  const uniqueCategories = [
-    "All",
-    ...new Set(caseStudiesData.singlecasestudy.map((item) => item.name)),
-  ];
+    // Extract unique categories from JSON data
+    const uniqueCategories = [
+      "All",
+      ...new Set(caseStudiesData.singlecasestudy.map((item) => item.name)),
+    ];
 
-  return (
-    <>
-      <NavBar />
-      <SideBar />
-      <div className="case-study-section1">
-        <div className="case-study-section-overlay">
-          <div className="case-study-title1">
-            <span style={{ userSelect: "none" }}>Case Study</span>
-            <Star />
+    return (
+      <>
+        <NavBar />
+        <SideBar />
+        <div className="case-study-section1">
+          <div className="case-study-section-overlay">
+            <div className="case-study-title1">
+              <span style={{ userSelect: "none" }}>Case Study</span>
+              <Star />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="article-item-tabs-container">
-        {uniqueCategories.map((category, i) => (
-          <div
-            key={i}
-            className={`article-item-tab ${
-              category === activeDepartment ? "article-item-tab-active" : ""
-            }`}
-            onClick={() => setActiveDepartment(category)}
-          >
-            {category}
-          </div>
-        ))}
-      </div>
-
-      <div>
-        {activeDepartment === "All" ? (
-          // Render grouped case studies by department
-          casestudyData.map((group, index) => (
-            <div key={index} className="department-section">
-              <h2>{group.department}</h2>
-              <ReUsableArticle
-                data={group.studies}
-                path={"single-caseStudy"}
-              />
+        <div className="article-item-tabs-container">
+          {uniqueCategories.map((category, i) => (
+            <div
+              key={i}
+              className={`article-item-tab ${
+                category === activeDepartment ? "article-item-tab-active" : ""
+              }`}
+              onClick={() => setActiveDepartment(category)}
+            >
+              {category}
             </div>
-          ))
-        ) : (
-          // Render filtered case studies for a specific department
-          <ReUsableArticle data={casestudyData} path={"single-caseStudy"} />
-        )}
-      </div>
+          ))}
+        </div>
 
-      <Footer />
-      <MobileFooter />
-    </>
-  );
-}
+        <div>
+          {activeDepartment === "All" ? (
+            // Render grouped case studies by department
+            casestudyData.map((group, index) => (
+              <div key={index} className="department-section">
+                <h2>{group.department}</h2>
+                <ReUsableArticle
+                  data={group.studies}
+                  path={"single-caseStudy"}
+                />
+              </div>
+            ))
+          ) : (
+            // Render filtered case studies for a specific department
+            <ReUsableArticle data={casestudyData} path={"single-caseStudy"} />
+          )}
+        </div>
+
+        <Footer />
+        <MobileFooter />
+      </>
+    );
+  }

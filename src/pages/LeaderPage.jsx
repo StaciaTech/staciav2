@@ -175,18 +175,30 @@ function LeaderPage() {
                   <img src={singleLeader?.imageUrl} alt="Leader" />
                 </div>
                 <div>
-                  <div className="leader-profile-name">{singleLeader?.name}</div>
-                  <div className="leader-profile-role">{singleLeader?.designation}</div>
+                  <div className="leader-profile-name">
+                    {singleLeader?.name}
+                  </div>
+                  <div className="leader-profile-role">
+                    {singleLeader?.designation}
+                  </div>
                   <div className="leader-icons">
                     <div>
-                      <a href={`mailto:${singleLeader?.email}`} target="_blank" rel="noreferrer">
+                      <a
+                        href={`mailto:${singleLeader?.email}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <div className="leader-icon-container">
                           <FaEnvelope className="footer-facebook-icon" />
                         </div>
                       </a>
                     </div>
                     <div>
-                      <a href={singleLeader?.linkedin} target="_blank" rel="noreferrer">
+                      <a
+                        href={singleLeader?.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <div className="leader-icon-container">
                           <FaLinkedinIn className="footer-linkedin-icon" />
                         </div>
@@ -195,21 +207,26 @@ function LeaderPage() {
                     {singleLeader?.file?.fileUrl && (
                       <div
                         onClick={() =>
-                          downloadFile(singleLeader.file.fileUrl, singleLeader.name)
+                          downloadFile(
+                            singleLeader.file.fileUrl,
+                            singleLeader.name
+                          )
                         }
                         style={{ cursor: "pointer" }}
                       >
-                        <div className="leader-icon-container">
+                        <div
+                          className="leader-icon-container"
+                          style={{ display: "flex" }}
+                        >
                           <FaFileDownload className="footer-linkedin-icon" />
                         </div>
                       </div>
                     )}
+                    <div  className="download-icon">Download File</div>
                   </div>
                 </div>
               </div>
-              <div className="leader-profile-line">
-                {singleLeader?.quote}
-              </div>
+              <div className="leader-profile-line">{singleLeader?.quote}</div>
             </div>
           </div>
 

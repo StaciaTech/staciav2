@@ -127,7 +127,7 @@ console.log(projectKey, "projectKey")
               {projectData ? templates[project?.template] : <p>No matching template found.</p>}
               <RelatedProjects depKey={depKey} category={FoundCat} projectKey={projectKey} RemainingProjects={RemainingProjects} />
               <Footer />
-              <MobileFooter /> 
+              <MobileFooter/> 
             </div>
           );
         }

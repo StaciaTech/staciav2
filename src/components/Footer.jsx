@@ -38,11 +38,9 @@ function Footer() {
     },
   };
 
-
-  const HandleClick = () =>{
-    navigate("/Privacy-Policy")
-  }
-
+  const HandleClick = () => {
+    navigate("/Privacy-Policy");
+  };
 
   return (
     <div className="footer-contaier">
@@ -203,7 +201,8 @@ function Footer() {
               rel="noreferrer"
             >
               <div className="footer-grey-tabs pointer test-seclection-blue">
-                Ground Floor, C-53, Guindy Industrial Estate,<br/>
+                Ground Floor, C-53, Guindy Industrial Estate,
+                <br />
                 Guindy, Chennai - 32, Tamil Nadu
               </div>
               {/* <div
@@ -211,7 +210,7 @@ function Footer() {
                 className="footer-grey-tabs pointer test-seclection-blue"
               >
                 Thiru Vi Ka Industrial Estate, SIDCO Industrial
-              </div> 
+              </div>
               <div className="footer-grey-tabs-child test-seclection-blue">
                 Guindy, Chennai - 32, Tamil Nadu
               </div> */}
@@ -225,6 +224,16 @@ function Footer() {
           Rights Reserved
         </div>
         <div
+          className="sitemap"
+          onClick={() => {
+            navigate("/sitemap");
+            window.scrollTo(0, 0);
+          }}
+          style={{ cursor: "pointer" }}
+        >
+          Sitemap
+        </div>
+        <div
           style={{
             display: "flex",
             alignItems: "center",
@@ -232,20 +241,20 @@ function Footer() {
             width: "35%",
           }}
         >
-          <a
-            href="https://staciacorp.com/"
+          {/* <a
+            href=""
             target="_blank"
             rel="noopener noreferrer"
+          > */}
+          <div
+            style={{
+              cursor: "pointer",
+              color: "black",
+            }}
           >
-            <div
-              style={{
-                cursor: "pointer",
-                color: "black",
-              }}
-            >
-              Terms of Service
-            </div>
-          </a>
+            Terms of Service
+          </div>
+          {/* </a> */}
           <div
             style={{
               width: "10px",
@@ -256,10 +265,13 @@ function Footer() {
               marginRight: "35px",
             }}
           />
-                    
-           
-            <div onClick={()=>navigate("/Privacy-Policy")} style={{ cursor: "pointer",color:"black" }}>Privacy policy</div>
-          
+
+          <div
+            onClick={() => navigate("/Privacy-Policy")}
+            style={{ cursor: "pointer", color: "black" }}
+          >
+            Privacy policy
+          </div>
         </div>
         <div className="footer-icons">
           <div>
