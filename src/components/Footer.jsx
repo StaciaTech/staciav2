@@ -225,6 +225,16 @@ function Footer() {
           Rights Reserved
         </div>
         <div
+          className="sitemap"
+          onClick={() => {
+            navigate("/sitemap");
+            window.scrollTo(0, 0);
+          }}
+          style={{ cursor: "pointer" }}
+        >
+          Sitemap
+        </div>
+        <div
           style={{
             display: "flex",
             alignItems: "center",
@@ -232,6 +242,8 @@ function Footer() {
             width: "35%",
           }}
         >
+          
+
           {/* <a
             href=""
             target="_blank"

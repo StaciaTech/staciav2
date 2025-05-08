@@ -18,6 +18,7 @@ import ServcieNavComp from "./Services/ServcieNavComp";
 import AboutDropDown from "./AboutDropDown";
 import ResourceDropDown from "./Resource/ResourceDropDown";
 import ProjectDropdown from "./ProjectDropdown";
+import Sitemap from '../components/Sitemap';
 
 function NavBar() {
   const [openWhatsNew, setOpenWhatsNew] = useState(false);

@@ -56,22 +56,22 @@ function FooterAccordion({ data }) {
       </div>
       {accordion
         ? data.links.map((link) => (
-            <div className="mbfooter-links">
-              <span
-                onClick={() => {
-                  if (link.path !== "") {
-                    navigate(link.path);
-                    window.scrollTo(0, 0);
-                  }
-                  if (link.name === "Contact") {
-                    setShowContactForm(true);
-                  }
-                }}
-              >
-                {link.name}
-              </span>
-            </div>
-          ))
+          <div className="mbfooter-links">
+            <span
+              onClick={() => {
+                if (link.path !== "") {
+                  navigate(link.path);
+                  window.scrollTo(0, 0);
+                }
+                if (link.name === "Contact") {
+                  setShowContactForm(true);
+                }
+              }}
+            >
+              {link.name}
+            </span>
+          </div>
+        ))
         : ""}
       <div className="foo-line"></div>{" "}
       {showContactForm && <Contact closeHandle={closeForm} />}
@@ -176,7 +176,19 @@ export default function MobileFooter() {
         <div className="terms">Terms of service</div>
         <div className="dot"></div>
         <div className="terms">Privacy Policy</div>
+
       </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "23px",
+          marginLeft: "20px",
+        }}
+      >
+        {/* <div className="dot"> */}
+        <div className="terms">Sitemap</div>
+        </div>
       <div className="copy-rights">
         © Copyright StaciaCorp. All Rights Reserved
       </div>

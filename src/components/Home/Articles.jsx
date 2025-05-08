@@ -176,7 +176,7 @@ function SingleArticleCard({ article }) {
         window.scrollTo(0, 0);
       }}
     >
-      <div
+      <div  
         className="single-article-card-image"
         style={{
           backgroundImage: `linear-gradient(to bottom, #0d022500, #0d0225cc), url(${article.mainImageUrl})`,
@@ -212,7 +212,7 @@ function Articles() {
     <div style={{ marginBottom: "1rem" }}>
       <div className="articles-title">Articles</div>
       <div className="article-slider">
-        <Marquee
+        {/* <Marquee
           // style={{
           //   display: "flex",
           //   alignItems: "flex-end",
@@ -227,6 +227,18 @@ function Articles() {
           speed={30}
           loop
           pauseOnHover
+        > */}
+
+        <Marquee
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            height: "100%",
+            position: "relative",
+            gap: "50px"
+          }}
+          speed={50}
+          pauseOnHover={true}
         >
           {articlesData.articles.map((article, index) => (
             <SingleArticleCard key={index} article={article} />

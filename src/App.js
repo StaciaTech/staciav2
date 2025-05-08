@@ -35,6 +35,7 @@ import CertificateView from "./components/CertificateView";
 
 import EventDetails from "./components/Competition/Event-Detail";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import Sitemap from "./components/Sitemap";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
       {/* <StackScroll /> */}
       {/* <Box1 /> */}
       <Routes>
+        <Route path="/sitemap" element={<Sitemap />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="/career" element={<CareerPage />} />
@@ -86,7 +88,7 @@ function App() {
           element={<SingleCaseStudy />}
         />
 
-                                  {/* Project */}
+        {/* Project */}
 
         <Route path="/project" element={<ProjectPage />} />
         <Route path="/project/:department" element={<ProjectPage />} />
@@ -101,7 +103,7 @@ function App() {
         {/* <Route path="/project/:department/:title" element={<SingleProject />} /> */}
 
 
-                              {/* CaseStudy */}
+        {/* CaseStudy */}
 
         <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/case-study/:department" element={<CaseStudy />} />
