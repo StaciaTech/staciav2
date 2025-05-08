@@ -71,11 +71,23 @@
 }
 
 
-.founder-content:hover {
-  gap: 4.5rem;
-  
+.icon-wrapper:hover {
+  margin-right: 4.5rem; /* Increase gap */
+  animation: iconBounce 0.10s ease-in-out; /* Bounce animation */
 }
 
+/* Keyframe animation for a subtle bounce effect */
+@keyframes iconBounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px); /* Slight push to the right */
+  }
+  100% {
+    transform: translateX(0); /* Return to original position */
+  }
+}
 .icon-wrapper {
   position: relative;
   display: flex;

@@ -85,16 +85,8 @@ function App() {
           element={<SingleCaseStudy />}
         />
 
-<<<<<<< HEAD
-        <Route
-          // path="/case-study/:department/:title"
-          path="/case-study/:department/single-caseStudy/:id"
-          element={<SingleCaseStudy />}
-        />
-=======
                                   {/* Project */}
 
->>>>>>> d27b8ac75b1c3f6b4afdd2a6f7d1aa220e6226c6
         <Route path="/project" element={<ProjectPage />} />
         <Route path="/project/:department" element={<ProjectPage />} />
         <Route
