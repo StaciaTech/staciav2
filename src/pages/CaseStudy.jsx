@@ -10,7 +10,6 @@
 // import Star from "../components/Star";
 // import { useParams } from "react-router-dom";
 
-
 // const data = [
 //   {
 //     id: "Case Study-1",
@@ -26,7 +25,6 @@
 //   const [casestudyData, setCasestudyData] = useState([]);
 //   const [activeDepartment, setActiveDepartment] = useState("All");
 //   const [cursorVisible, setCursorVisible] = useState(false);
-
 
 //   const details = data.caseStudy;
 //   console.log(details,"Details");
@@ -93,97 +91,257 @@
 //   );
 // }
 
-
-
-
 // src/pages/CaseStudy.js
+// import React, { useEffect, useState } from "react";
+// import NavBar from "../components/NavBar";
+// import Footer from "../components/Footer";
+// import "../styles/CaseStudy.css";
+// import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
+// import SideBar from "../components/SideBar";
+// import MobileFooter from "../components/MobileFooter";
+// import Star from "../components/Star";
+// import caseStudiesData from "../Data/SingleCaseStudy.json"; // Import JSON data
 
-  import React, { useEffect, useState } from "react";
-  import NavBar from "../components/NavBar";
-  import Footer from "../components/Footer";
-  import "../styles/CaseStudy.css";
-  import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
-  import SideBar from "../components/SideBar";
-  import MobileFooter from "../components/MobileFooter";
-  import Star from "../components/Star";
-  import caseStudiesData from "../Data/SingleCaseStudy.json"; // Import JSON data
+// export default function CaseStudy() {
+//   const [casestudyData, setCasestudyData] = useState([]);
+//   const [activeDepartment, setActiveDepartment] = useState("All");
 
-  export default function CaseStudy() {
-    const [casestudyData, setCasestudyData] = useState([]);
-    const [activeDepartment, setActiveDepartment] = useState("All");
+//   useEffect(() => {
+//     const data = caseStudiesData.singlecasestudy;
 
-    useEffect(() => {
-      const data = caseStudiesData.singlecasestudy;
+//     if (activeDepartment === "All") {
+//       // Select one case study per category for "All" filter
+//       const uniqueCategoryStudies = [];
+//       const addedCategories = new Set();
 
-      if (activeDepartment === "All") {
-        // Group all case studies by department for "All" filter
-        const groupedByDepartment = data.map((category) => ({
-          department: category.name,
-          studies: category.data,
-        }));
-        setCasestudyData(groupedByDepartment);
-      } else {
-        // Filter case studies by selected category
-        const filteredData = data
-          .filter((category) => category.name === activeDepartment)
-          .flatMap((category) => category.data);
-        setCasestudyData(filteredData);
+//       data.forEach((category) => {
+//         if (!addedCategories.has(category.name) && category.data.length > 0) {
+//           uniqueCategoryStudies.push(category.data[0]); // Take first case study from each category
+//           addedCategories.add(category.name);
+//         }
+//       });
+
+//       setCasestudyData(uniqueCategoryStudies);
+//     } else {
+//       // Filter case studies by selected category
+//       const filteredData = data
+//         .filter((category) => category.name === activeDepartment)
+//         .flatMap((category) => category.data);
+//       setCasestudyData(filteredData);
+//     }
+//   }, [activeDepartment]);
+
+//   // Extract unique categories from JSON data
+//   const uniqueCategories = [
+//     "All",
+//     ...new Set(caseStudiesData.singlecasestudy.map((item) => item.name)),
+//   ];
+
+//   return (
+//     <>
+//       <NavBar />
+//       <SideBar />
+//       <div className="case-study-section1">
+//         <div className="case-study-section-overlay">
+//           <div className="case-study-title1">
+//             <span style={{ userSelect: "none" }}>Case Study</span>
+//             <Star />
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="article-item-tabs-container">
+//         {uniqueCategories.map((category, i) => (
+//           <div
+//             key={i}
+//             className={`article-item-tab ${category === activeDepartment ? "article-item-tab-active" : ""
+//               }`}
+//             onClick={() => setActiveDepartment(category)}
+//           >
+//             {category}
+//           </div>
+//         ))}
+//       </div>
+
+//       <div>
+//         <ReUsableArticle data={casestudyData} path={"single-caseStudy"} />
+//       </div>
+
+//       <Footer />
+//       <MobileFooter />
+//     </>
+//   );
+// }
+
+
+
+
+// Dot container
+
+import React, { useEffect, useState, useRef } from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import "../styles/CaseStudy.css";
+import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
+import SideBar from "../components/SideBar";
+import MobileFooter from "../components/MobileFooter";
+import Star from "../components/Star";
+import caseStudiesData from "../Data/SingleCaseStudy.json";
+
+function CaseStudy() {
+  const [activeDepartment, setActiveDepartment] = useState("");
+  const [isDotClickScroll, setIsDotClickScroll] = useState(false);
+  const sectionsRef = useRef({});
+  const scrollTimeoutRef = useRef(null);
+
+  // Extract unique categories from JSON data
+  const uniqueCategories = [
+    ...new Set(caseStudiesData.singlecasestudy.map((item) => item.name)),
+  ];
+
+  // Set initial active department
+  useEffect(() => {
+    if (caseStudiesData.singlecasestudy.length > 0) {
+      setActiveDepartment(caseStudiesData.singlecasestudy[0].name);
+    }
+  }, []);
+
+  // Intersection Observer for updating active department during scrolling
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!isDotClickScroll) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveDepartment(entry.target.id);
+            }
+          });
+        }
+      },
+      {
+        root: null,
+        threshold: 0.3,
       }
-    }, [activeDepartment]);
+    );
 
-    // Extract unique categories from JSON data
-    const uniqueCategories = [
-      "All",
-      ...new Set(caseStudiesData.singlecasestudy.map((item) => item.name)),
-    ];
+    uniqueCategories.forEach((category) => {
+      const section = sectionsRef.current[category];
+      if (section) observer.observe(section);
+    });
 
-    return (
-      <>
-        <NavBar />
-        <SideBar />
-        <div className="case-study-section1">
-          <div className="case-study-section-overlay">
-            <div className="case-study-title1">
-              <span style={{ userSelect: "none" }}>Case Study</span>
-              <Star />
-            </div>
+    return () => observer.disconnect();
+  }, [uniqueCategories, isDotClickScroll]);
+
+  // Handle dot or tab click
+  const handleDotClick = (category) => {
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+
+    setIsDotClickScroll(true);
+    setActiveDepartment(category);
+
+    const section = document.getElementById(category);
+    if (section) {
+      const yOffset = -80;
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+
+      scrollTimeoutRef.current = setTimeout(() => {
+        setIsDotClickScroll(false);
+      }, 1200);
+    }
+  };
+
+  return (
+    <>
+      <NavBar />
+      <SideBar />
+      <div className="case-study-section1">
+        <div className="case-study-section-overlay">
+          <div className="case-study-title1">
+            <span style={{ userSelect: "none" }}>Case Study</span>
+            <Star />
           </div>
         </div>
 
-        <div className="article-item-tabs-container">
+      <div className="mobile-navigation-tabs">
+        {uniqueCategories.map((category, i) => (
+          <div
+            key={i}
+            onClick={() => handleDotClick(category)}
+            className={
+              activeDepartment === category ? "active-service-mob-tab" : ""
+            }
+          >
+            {category}
+          </div>
+        ))}
+      </div>
+
+      <div className="case-study-content-container">
+        <div className="case-study-main-dots-container">
           {uniqueCategories.map((category, i) => (
-            <div
+            <CategoryDot
               key={i}
-              className={`article-item-tab ${
-                category === activeDepartment ? "article-item-tab-active" : ""
-              }`}
-              onClick={() => setActiveDepartment(category)}
+              category={category}
+              activeDepartment={activeDepartment}
+              setActiveDepartment={handleDotClick}
+            />
+          ))}
+        </div>
+        <div>
+          {caseStudiesData.singlecasestudy.map((category, i) => (
+            <div
+              className="case-study-section"
+              key={i}
+              id={category.name}
+              ref={(el) => (sectionsRef.current[category.name] = el)}
             >
-              {category}
+              <div className="case-study-category-title">{category.name}</div>
+              <ReUsableArticle data={category.data} path={"single-caseStudy"} />
             </div>
           ))}
         </div>
+      </div>
 
-        <div>
-          {activeDepartment === "All" ? (
-            // Render grouped case studies by department
-            casestudyData.map((group, index) => (
-              <div key={index} className="department-section">
-                <h2>{group.department}</h2>
-                <ReUsableArticle
-                  data={group.studies}
-                  path={"single-caseStudy"}
-                />
-              </div>
-            ))
-          ) : (
-            // Render filtered case studies for a specific department
-            <ReUsableArticle data={casestudyData} path={"single-caseStudy"} />
-          )}
-        </div>
+      <Footer />
+      <MobileFooter />
+    </>
+  );
+}
 
-        <Footer />
-        <MobileFooter />
-      </>
-    );
-  }
+const CategoryDot = ({ category, activeDepartment, setActiveDepartment }) => {
+  const [showCategory, setShowCategory] = useState(false);
+
+  useEffect(() => {
+    if (category === activeDepartment) {
+      setShowCategory(true);
+      const timeoutId = setTimeout(() => {
+        setShowCategory(false);
+      }, 3000);
+      return () => clearTimeout(timeoutId);
+    } else {
+      setShowCategory(false);
+    }
+  }, [activeDepartment, category]);
+
+  return (
+    <div className="case-study-dept-container">
+      <div
+        className={`case-study-main-dots ${
+          category === activeDepartment ? "case-study-main-dots-active" : ""
+        }`}
+        onClick={() => setActiveDepartment(category)}
+        onMouseOver={() => setShowCategory(true)}
+        onMouseOut={() => setShowCategory(false)}
+      ></div>
+      {showCategory && (
+        <div className="case-study-dept-name">{category}</div>
+      )}
+    </div>
+  );
+};
+
+export default CaseStudy;
+

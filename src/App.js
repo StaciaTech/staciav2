@@ -38,7 +38,6 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import Sitemap from "./components/Sitemap";
 
 function App() {
-  
   return (
     <div className="App">
       {/* Lwdnkjgkufefkl */}
@@ -70,10 +69,6 @@ function App() {
         />
 
         <Route
-          path="/project/:department/:category/:title"
-          element={<SingleProject />}
-        />
-        <Route
           // path="/case-study/:department/:title (Through department from nav bar)"
           path="/case-study/:department/single-caseStudy/:id" //-------------
           element={<SingleCaseStudy />}
@@ -90,17 +85,31 @@ function App() {
           element={<SingleCaseStudy />}
         />
 
+<<<<<<< HEAD
         <Route
           // path="/case-study/:department/:title"
           path="/case-study/:department/single-caseStudy/:id"
           element={<SingleCaseStudy />}
         />
+=======
+                                  {/* Project */}
+
+>>>>>>> d27b8ac75b1c3f6b4afdd2a6f7d1aa220e6226c6
         <Route path="/project" element={<ProjectPage />} />
         <Route path="/project/:department" element={<ProjectPage />} />
         <Route
           path="/project/:department/:category"
           element={<ProjectPage />}
         />
+        <Route
+          path="/project/:department/:category/:title"
+          element={<SingleProject />}
+        />
+        {/* <Route path="/project/:department/:title" element={<SingleProject />} /> */}
+
+
+                              {/* CaseStudy */}
+
         <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/case-study/:department" element={<CaseStudy />} />
         <Route path="/case-study/:department:id" element={<CaseStudy />} />
@@ -162,4 +171,3 @@ function App() {
 }
 
 export default App;
-

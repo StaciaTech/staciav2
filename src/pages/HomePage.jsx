@@ -3,14 +3,14 @@
 // import Footer from "../components/Footer";
 // import "../styles/Home.css";  
 
-
+// import ClientComponent from "./Client";
 // import reverse from "../assets/reverse.png";
-
+// import HomeCaseStudy from "../components/Home/HomeCaseStudy";
 // // import Four from "../components/Home/Four";
 // // import Testimonials from "../components/Home/Testimonials";
 // // import ServiceDisplay from "../components/Home/ServiceDisplay";
 // // import { graphcms, QUERY_SLUG_CATEGORIES } from "../Graphql/Queries";
-// import StackScroll from "./StackScroll";
+// // import StackScroll from "./StackScroll";
 // // import MobileStackScroll from "../components/Home/MobileStackScroll";
 // // import MobileFooter from "../components/MobileFooter";
 // import EventsHosted from "../components/Home/EventsHosted";
@@ -28,7 +28,7 @@
 // const ServiceDisplay = React.lazy(() =>
 //   import("../components/Home/ServiceDisplay")
 // );
-
+// const StackScroll = React.lazy(() => import("./StackScroll"));
 // const MobileStackScroll = React.lazy(() =>
 //   import("../components/Home/MobileStackScroll")
 // );
@@ -38,14 +38,6 @@
 // const MobileArticle = React.lazy(() =>
 //   import("../components/Home/MobileArticle")
 // );
-
-// const HomeCaseStudy = React.lazy(() =>
-//   import("../components/Home/HomeCaseStudy")
-// );
-
-// const ClientComponent = React.lazy(() => import("./Client"));
-
-
 
 
 // const words = [
@@ -75,12 +67,6 @@
 
 //     return () => clearInterval(interval); // Cleanup on unmount
 //   }, []);
-
-
-//   console.log("Four component loaded -------------");
-
-//   console.log("casestudy=-=--=-=-=-=-=---")
-
 
 //   return (
 //     <div>
@@ -117,36 +103,37 @@
 //       </div>
 //       {/* product */}
 //       <div className="stack-scroll-container">
-    
+//         <React.Suspense fallback={<LoadingStar />}>
 //           <StackScroll />
-       
+//         </React.Suspense>
 //       </div>
 //       {/* <DestopStacking /> */}
 //       <React.Suspense fallback={<LoadingStar />}>
 //         <MobileStackScroll />
 //       </React.Suspense>
 //       {/* client */}
-
-//       <React.Suspense fallback={<LoadingStar />}>
-//         <ClientComponent />
-//       </React.Suspense>
+      
+//       <ClientComponent />
 //       {/* our services */}
 //       <div>
 //         <React.Suspense fallback={<LoadingStar />}>
 //           <ServiceDisplay />
 //         </React.Suspense>
 //       </div>
+     
+
 
 //       {/* Events */}
 //       <EventsHosted />
 
+
 //       {/* case study */}
-//       <React.Suspense fallback={<LoadingStar />}>
-//         <HomeCaseStudy />
-//       </React.Suspense>
+//       <HomeCaseStudy />
+
 
 //       {/* Home Projects */}
-//       <OurProjects />
+//       <OurProjects /> 
+
 
 //       {/* Home Articles  */}
 
@@ -181,7 +168,6 @@ import { motion } from "framer-motion";
 import LoadingStar from "../components/LoadingStar";
 import Star from "../components/Star";
 import "../styles/Home.css"; // Inline critical CSS and minify this file
-
 // Lazy-loaded components
 const NavBar = lazy(() => import("../components/NavBar"));
 const Footer = lazy(() => import("../components/Footer"));
@@ -200,9 +186,8 @@ const SideBar = lazy(() => import("../components/SideBar"));
 const MobileArticle = lazy(() => import("../components/Home/MobileArticle"));
 const HomeCaseStudy = lazy(() => import("../components/Home/HomeCaseStudy"));
 const ClientComponent = lazy(() => import("./Client"));
-
-
-
+// Uncomment if reverse.png is used in the critical path
+// import reverse from "../assets/reverse.png";
 const words = [
   "Innovation",
   "Growth",
@@ -215,17 +200,14 @@ const words = [
   "Sustainability",
   "Scalability",
 ];
-
 function HomePage() {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   // Word-changing animation state
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
-
   useEffect(() => {
     setIsMounted(true); // Delay animation until after initial render
     const interval = setInterval(() => {
@@ -233,7 +215,6 @@ function HomePage() {
     }, 3000); // Change word every 3 seconds
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
-
   return (
     <React.Suspense fallback={<LoadingStar />}>
       <div>
@@ -242,7 +223,6 @@ function HomePage() {
           <NavBar />
           <SideBar />
         </div>
-
         {/* Hero Section */}
         <div className="home">
           <div className="homeSection">
@@ -267,12 +247,10 @@ function HomePage() {
             </div>
           </div>
         </div>
-
         {/* Stack Scroll Section */}
         <div className="stack-scroll-container">
           <StackScroll />
         </div>
-
         {/* Other Sections */}
         <MobileStackScroll />
         <ClientComponent />
@@ -290,6 +268,4 @@ function HomePage() {
     </React.Suspense>
   );
 }
-
 export default HomePage;
-
