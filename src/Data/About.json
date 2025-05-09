@@ -169,60 +169,17 @@
     }
   ],
   "teamData": [
+    
     {
-      "designation": "Full Stack Engineer",
-      "firstName": "Vignesh",
-      "fullName": "Vignesh Kalithas",
+      "designation": " Senior Design Engineer - Stacia Corp , Vice president Operations - Samrat",
+      "firstName": "Ganesh",
+      "fullName": "Ganesh Rajendran",
       "gender": "Male",
-      "id": "6734588324f4c4c8a775d013",
+      "id": "67345ab77a970b308b574eac",
       "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
-      "lastName": "Kalithas",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
-      "_id": "6734588324f4c4c8a775d013"
-    },
-    {
-      "designation": "Backend Engineer",
-      "firstName": "Raja",
-      "fullName": "Raja Vignesh M",
-      "gender": "Male",
-      "id": "673459e47a970b308b574ea7",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
-      "lastName": "Vignesh M",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
-      "_id": "673459e47a970b308b574ea7"
-    },
-    {
-      "designation": "Visual Design Engineer",
-      "firstName": "Manoj",
-      "fullName": "Manoj Kumar S",
-      "gender": "Male",
-      "id": "67345a397a970b308b574ea8",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
-      "lastName": "Kumar S",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
-      "_id": "67345a397a970b308b574ea8"
-    },
-    {
-      "designation": "Front-End Developer",
-      "firstName": "Ponbaskar",
-      "fullName": "Ponbaskar U",
-      "gender": "Male",
-      "id": "67345a5d7a970b308b574ea9",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
-      "lastName": "U",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
-      "_id": "67345a5d7a970b308b574ea9"
-    },
-    {
-      "designation": "Full Stack Associate",
-      "firstName": "Shimiyon",
-      "fullName": "Shimiyon S",
-      "gender": "Male",
-      "id": "67345a887a970b308b574eaa",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
-      "lastName": "S",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
-      "_id": "67345a887a970b308b574eaa"
+      "lastName": "Rajendran",
+      "outlook": "Ganesh Rajendran leads the R&D and Design department in Industrial Automation and Solutions at Stacia Corp. He is responsible for client interactions, concept generation, and engineering design. Alongside innovation, he actively supports the operations of manufacturing in Samrat – the Manufacturing division of Stacia Corp. With a focus on delivering tailored automation solutions, Ganesh guides the team through ideation to execution, ensuring that every project aligns with client needs and industrial standards.",
+      "_id": "67345ab77a970b308b574eac"
     },
     {
       "designation": "Visual Design Engineer",
@@ -232,73 +189,54 @@
       "id": "67345ab77a970b308b574eab",
       "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
       "lastName": "Kumar J",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "outlook": "Dilip crafts engaging visual experiences, blending creativity with functionality. He focuses on user-centered design to enhance brand identity, usability, and digital interface aesthetics across platforms and media.",
       "_id": "67345ab77a970b308b574eab"
     },
+   
     {
-      "designation": "Design and experience",
-      "firstName": "Manju",
-      "fullName": "Manju Parkavi S",
-      "gender": "Female",
-      "id": "67345af17a970b308b574eac",
-      "imageUrl": "https://img.freepik.com/premium-photo/3d-cartoon-cute-girl_995235-7.jpg",
-      "lastName": "Parkavi S",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
-      "_id": "67345af17a970b308b574eac"
-    },
-    {
-      "designation": "Front-End Associate",
+      "designation": " Front-End Associate, Software Research and Development",
       "firstName": "Vikram",
       "fullName": "Vikram Varma V",
       "gender": "Male",
       "id": "67345b237a970b308b574ead",
       "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
       "lastName": "Varma V",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "outlook": "Vikram develops interactive user interfaces using modern web technologies. He collaborates closely with designers and backend teams to deliver seamless, responsive, and performance-optimized web applications and prototypes",
       "_id": "67345b237a970b308b574ead"
     },
+    
+    
     {
-      "designation": "Embedded Design Associate",
-      "firstName": "Abu",
-      "fullName": "Abu ",
-      "gender": "Male",
-      "id": "67345b5d7a970b308b574eae",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
-      "lastName": "",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
-      "_id": "67345b5d7a970b308b574eae"
-    },
-    {
-      "designation": "Embedded Design Associate",
-      "firstName": "SASIKANTH",
-      "fullName": "SASIKANTH R",
-      "gender": "Male",
-      "id": "67345b887a970b308b574eaf",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
-      "lastName": "R",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
-      "_id": "67345b887a970b308b574eaf"
-    },
-    {
-      "designation": "Embedded Design Associate",
-      "firstName": "ABDUL",
-      "fullName": "ABDUL RAHEEM M",
+      "designation": "Embedded Design Associate, Electronic Innovation Research And Development",
+      "firstName": "Abdul",
+      "fullName": "Abdul Raheem M",
       "gender": "Male",
       "id": "67345cd77a970b308b574eb0",
       "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
-      "lastName": "RAHEEM M",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "lastName": "Raheem M",
+      "outlook": "Abdul designs and tests embedded systems for innovative electronics solutions. His role includes circuit design, firmware development, and integrating hardware-software systems for advanced technology applications.",
       "_id": "67345cd77a970b308b574eb0"
     },
     {
-      "designation": "Employee Experience Associate",
+      "designation": "Procurement Associate, Strategic Sourcing and Procurement Intelligence",
+      "firstName": "Abrar",
+      "fullName": "Abrar Ahamed M ",
+      "gender": "Male",
+      "id": "67345b5d7a970b308b574eae",
+      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "lastName": "Ahamed M",
+      "outlook": " Abrar supports strategic procurement by analyzing market trends, managing vendor relationships, and optimizing sourcing strategies—including global sourcing to ensure cost-effective, high-quality procurement aligned with organizational goals.",
+      "_id": "67345b5d7a970b308b574eae"
+    },
+    {
+      "designation": "Employee Experience Associate, Human Resource",
       "firstName": "Divya",
       "fullName": "Divya U",
       "gender": "Female",
       "id": "67345efd7a970b308b574eb1",
       "imageUrl": "https://img.freepik.com/premium-photo/3d-cartoon-cute-girl_995235-7.jpg",
       "lastName": "U",
-      "outlook": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant.",
+      "outlook": "Divya handles end-to-end HR operations including talent sourcing, onboarding, payroll, employee engagement, feedback processes, and wellness programs—fostering a productive, inclusive, and growth-oriented workplace culture.",
       "_id": "67345efd7a970b308b574eb1"
     }
   ],
@@ -376,12 +314,12 @@
         {
           "title": "Promising Young Alumni Award 2025 – SVCE",
           "desc": "Conferred by the alma mater, this award celebrates the early career achievements and potential of a young graduate. It recognizes individuals who have demonstrated remarkable success and made notable contributions in their respective fields shortly after graduation, serving as an inspiration to current students and the wider alumni network.",
-          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+          "img": "/assets/LeaderPage/Promising Young Alumni Award 2025.webp"
         },
         {
           "title": "Entrepreneur of the Year 2024 – Recognized for innovation-led impact",
           "desc": "This prestigious award, received at the Millionaire Farmer of India (MFOI) event organized by Krishi Jagran and ICAR, celebrates outstanding entrepreneurial vision and execution. The recognition highlights a leader who has demonstrated exceptional innovation, driving significant positive impact. Presented by the honorable Shri Nitin Gadkari, this award underscores the power of entrepreneurial spirit in creating meaningful change and setting new industry benchmarks",
-          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+          "img": "/assets/LeaderPage/Entrepreneur of the Year 2024.webp"
         },
         
         {
@@ -392,13 +330,13 @@
         {
           "title": "Best Paper Award – IASTEM Brisbane 2019 – Advanced IoT research, published in World Research Library",
           "desc": "This accolade acknowledges exceptional scholarly work in the field of advanced Internet of Things. The award recognizes the paper's significant contribution to IoT research, its rigor, and its potential impact on the field, further validated by its publication in the esteemed World Research Library.",
-          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+          "img": "/assets/LeaderPage/IASTEM Brisbane 2019.webp"
         },
       
         {
           "title": "Global 3rd Place Winner– IEEE AUV Challenge 2018 – National University of Singapore (NUS)",
           "desc": "This international recognition highlights exceptional technical skills and innovation in autonomous underwater vehicle technology. Achieving a top global ranking in a prestigious IEEE competition demonstrates a high level of engineering prowess, problem-solving abilities, and the capacity to excel in a demanding and competitive field.",
-          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+          "img": "/assets/LeaderPage/National University of Singapore.webp"
         },
        
         {
@@ -436,7 +374,7 @@
         {
           "title": "Best Entrepreneur Award",
           "desc": "Honored by Nitin Gadkari for outstanding contributions to innovation and entrepreneurship, particularly in the fields of thermal technology, hydration tracking, and automation.",
-          "img": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+          "img": "/assets/LeaderPage/Entrepreneur of the Year 2024.webp"
         },
         {
           "title": "Top 30 Innovation – RKVY-RAFTAAR Program",

@@ -56,6 +56,7 @@ export default function ServiceDisplay() {
             <img
               src={homeServiceData?.[currentSlide]?.imageUrl}
               alt={homeServiceData?.[currentSlide]?.title}
+              loading="lazy"
             />
           </div>
         </div>

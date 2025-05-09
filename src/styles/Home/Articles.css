@@ -1,6 +1,6 @@
 .articles-title {
-  /* color: #e0e0e0; */
-  color: #6b6084;
+  /* color: #E0E0E0; */
+  color: #6B6084;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
@@ -60,11 +60,12 @@
   align-self: flex-end;
   transition: all 0.3s ease;
   cursor: pointer;
+  transform-origin: bottom; /* Scale from the bottom to match align-items: flex-end */
   /* border: 1px solid black; */
 }
 
 .single-article-card-image:hover {
-height: 60vh;
+  transform: scaleY(1.33); /* Matches the 45vh to 60vh ratio (60/45 = 1.33) */
 }
 
 .article-text-container {
@@ -108,7 +109,6 @@ height: 60vh;
   font-weight: 600;
   margin: 1rem 0;
   /* border: 1px solid black; */
-
 }
 
 /* .card-article-title:hover {
@@ -135,7 +135,7 @@ height: 60vh;
 } */
 
 .article-learn-more-link {
-  color: #0047ff;
+  color: #0047FF;
   user-select: none;
 }
 
@@ -145,8 +145,8 @@ height: 60vh;
 }
 
 .mobile-article-title {
-  /* color: #e0e0e0; */
-  color: #6b6084;
+  /* color: #E0E0E0; */
+  color: #6B6084;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -160,7 +160,7 @@ height: 60vh;
 }
 
 .mobile-article-des {
-  font-size: 0.5srem;
+  font-size: 0.5rem;
   font-weight: 400;
   margin: 0.5rem 0;
   line-height: 2.2rem;
@@ -198,7 +198,6 @@ height: 60vh;
 }
 
 @media screen and (max-width: 1024px) {
-
   .article-outline-holder,
   .article-slider,
   .articles-title {
