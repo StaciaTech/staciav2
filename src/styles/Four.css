@@ -48,7 +48,7 @@
 
 .founder-content {
   position: absolute;
-  bottom: 0.9%;
+  bottom: 0.8%;
   display: none;
   color: white;
   gap: 0.5rem; 
@@ -62,7 +62,7 @@
   width: 100%;
   padding: 0.8em 2rem;
   justify-content: flex-start;
-  border-radius: 20px;
+  border-radius: 25px;
   transition: transform 0.3s ease-in-out, gap 0.5s ease;
 }
 
@@ -166,7 +166,6 @@
   .four-text {
     font-size: 28px;
   }
-
   /* Always show content on mobile */
   .founder-content {
     display: flex !important;
@@ -215,7 +214,6 @@
   .four-pos {
     font-size: 12px;
   }
-
   .four-para > p {
     font-size: 12px;
     line-height: 22px;

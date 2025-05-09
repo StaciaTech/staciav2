@@ -639,6 +639,7 @@
 // export default NavBar;
 
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../styles/navbar.css";
 import Star from "../components/Star";
 import StaciaLogo from "../assets/Stacia Monogram.svg";
@@ -657,8 +658,9 @@ import ServcieNavComp from "./Services/ServcieNavComp";
 import AboutDropDown from "./AboutDropDown";
 import ResourceDropDown from "./Resource/ResourceDropDown";
 import ProjectDropdown from "./ProjectDropdown";
+import Sitemap from '../components/Sitemap';
 
-function NavBar({ scrollToDepartment }) {
+function NavBar() {
   const [openWhatsNew, setOpenWhatsNew] = useState(false);
   const [showContact, setShowContact] = useState(false);
   const [logo, setLogo] = useState(StaciaLogo);
@@ -666,10 +668,16 @@ function NavBar({ scrollToDepartment }) {
   const [scrollY, setScrollY] = useState(0);
   const animationStarted = useRef(false);
   const [text, setText] = useState("Innovating for you");
+  const location = useLocation();
+  const [activeDropdown, setActiveDropdown] = useState(null); // Unified dropdown state
+  const navAreaRef = useRef(null); // Ref for the entire nav area
+  const [isOpenRes, setIsOpenRes] = useState(false); // For Resource click toggle
+  const dropdownRef = useRef(null); // For Resource click outside detection
   const closeHandle = () => {
     setShowContact(false);
   };
 
+  // Handle scroll for navbar hide/show
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -682,6 +690,7 @@ function NavBar({ scrollToDepartment }) {
     };
   }, []);
 
+  // Animation controls for scroll-based effects
   useEffect(() => {
     if (scrollY > 0) {
       if (!animationStarted.current) {
@@ -696,6 +705,7 @@ function NavBar({ scrollToDepartment }) {
     }
   }, [scrollY, controls]);
 
+  // eslint-disable-next-line no-unused-vars
   const letterVariants = {
     visible: {
       opacity: 1,
@@ -713,6 +723,7 @@ function NavBar({ scrollToDepartment }) {
     },
   };
 
+  // eslint-disable-next-line no-unused-vars
   const containerVariants = {
     visible: {
       transition: {
@@ -741,6 +752,7 @@ function NavBar({ scrollToDepartment }) {
     },
   };
 
+  // Logo and text animation interval
   useEffect(() => {
     const interval = setInterval(() => {
       setLogo((prevLogo) => (prevLogo === StaciaLogo ? five : StaciaLogo));
@@ -754,13 +766,7 @@ function NavBar({ scrollToDepartment }) {
     return () => clearInterval(interval);
   }, []);
 
-  const [isOpenRes, setIsOpenRes] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const toggleDropdown = () => {
-    setIsOpenRes((prevState) => !prevState);
-  };
-
+  // Handle click outside for Resource dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -774,8 +780,8 @@ function NavBar({ scrollToDepartment }) {
     };
   }, []);
 
+  // GSAP animation for text
   const textRef = useRef(null);
-
   useEffect(() => {
     const letters = textRef.current.querySelectorAll("span");
 
@@ -804,36 +810,7 @@ function NavBar({ scrollToDepartment }) {
     return () => clearTimeout(timeout);
   }, [text]);
 
-  const [showProductComp, setShowProductComp] = useState(false);
-  const [showServiceComp, setShowServiceComp] = useState(false);
-  const [showAboutComp, setShowAboutComp] = useState(false);
-  const [showResourceComp, setShowResourceComp] = useState(false);
-  const [showProjectComp, setShowProjectComp] = useState(false);
-
-  useEffect(() => {
-    if (
-      showProductComp ||
-      showServiceComp ||
-      showAboutComp ||
-      showResourceComp ||
-      showProjectComp
-    ) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [
-    showProductComp,
-    showServiceComp,
-    showAboutComp,
-    showResourceComp,
-    showProjectComp,
-  ]);
-
+  // Handle navbar hide/show on scroll
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -841,14 +818,7 @@ function NavBar({ scrollToDepartment }) {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (
-        showAboutComp ||
-        showServiceComp ||
-        showProductComp ||
-        showProjectComp ||
-        showResourceComp ||
-        openWhatsNew
-      ) {
+      if (activeDropdown || openWhatsNew) {
         setShowNavbar(true);
       } else if (currentScrollY > lastScrollY) {
         setShowNavbar(false);
@@ -864,35 +834,14 @@ function NavBar({ scrollToDepartment }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [
-    lastScrollY,
-    showProductComp,
-    showServiceComp,
-    showAboutComp,
-    showResourceComp,
-    showProjectComp,
-    openWhatsNew,
-  ]);
+  }, [lastScrollY, activeDropdown, openWhatsNew]);
 
-  const closeServicehandler = () => {
-    setShowServiceComp(false);
-  };
-  const closeProductHandler = () => {
-    setShowProductComp(false);
-  };
-  const closeProjectHandler = () => {
-    setShowProjectComp(false);
-  };
-  const closeResourcehandler = () => {
-    setShowResourceComp(false);
-  };
-  const closeAboutHandler = () => {
-    setShowAboutComp(false);
-  };
-  const closeWhatsnewHandler = () => {
-    setOpenWhatsNew(false);
+  // Resource dropdown click toggle
+  const toggleDropdown = () => {
+    setIsOpenRes((prevState) => !prevState);
   };
 
+  // Modal styles for Contact
   const ModelStyles = {
     overlay: {
       position: "fixed",
@@ -918,8 +867,14 @@ function NavBar({ scrollToDepartment }) {
       borderRadius: "1rem",
       padding: "3rem 5rem",
       boxSizing: "border-box",
+    
     },
   };
+
+  // Determine if Resource should be active based on route
+  const isResourceActive =
+    location.pathname.startsWith("/case-study") ||
+    location.pathname.startsWith("/article");
 
   return (
     <div className={`navbar ${showNavbar ? "show" : "hide"}`}>
@@ -957,11 +912,7 @@ function NavBar({ scrollToDepartment }) {
                 exit="hidden"
                 variants={flipVariants}
               />
-              <div
-                style={{
-                  marginBottom: "0.3rem",
-                }}
-              >
+              <div style={{ marginBottom: "0.3rem" }}>
                 <img
                   src={StaciaLogoText}
                   alt="Home"
@@ -976,27 +927,20 @@ function NavBar({ scrollToDepartment }) {
               </div>
             </Link>
             <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
+              style={{ display: "flex", alignItems: "center" }}
+              ref={navAreaRef}
+              onMouseLeave={() => setActiveDropdown(null)} // Close dropdowns when leaving nav area
             >
               <NavLink
                 to={"/services"}
                 onClick={() => {
                   window.scrollTo(0, 0);
                 }}
-                className="nav-items"
-                onMouseEnter={() => {
-                  setShowServiceComp(true);
-                }}
-                onMouseLeave={() => {
-                  setTimeout(() => {
-                    if (!document.querySelector(".nav-service-comp:hover")) {
-                      setShowServiceComp(false);
-                    }
-                  }, 100);
-                }}
+                className={`nav-items ${
+                  activeDropdown === "services" ? "nav-item-active" : ""
+                }`}
+                onMouseEnter={() => setActiveDropdown("services")}
+                aria-expanded={activeDropdown === "services"}
               >
                 Services
               </NavLink>
@@ -1005,107 +949,85 @@ function NavBar({ scrollToDepartment }) {
                 onClick={() => {
                   window.scrollTo(0, 0);
                 }}
-                className="nav-items"
-                onMouseEnter={() => {
-                  setShowProductComp(true);
-                }}
-                onMouseLeave={() => {
-                  setTimeout(() => {
-                    if (!document.querySelector(".nav-product-comp:hover")) {
-                      setShowProductComp(false);
-                    }
-                  }, 100);
-                }}
+                className={`nav-items ${
+                  activeDropdown === "products" ? "nav-item-active" : ""
+                }`}
+                onMouseEnter={() => setActiveDropdown("products")}
+                aria-expanded={activeDropdown === "products"}
               >
                 Products
               </NavLink>
               <NavLink
                 to={"/project"}
-                className="nav-items"
                 onClick={() => {
                   window.scrollTo(0, 0);
                 }}
-                onMouseEnter={() => {
-                  setShowProjectComp(true);
-                }}
-                onMouseLeave={() => {
-                  setTimeout(() => {
-                    if (!document.querySelector(".nav-project-comp:hover")) {
-                      setShowProjectComp(false);
-                    }
-                  }, 100);
-                }}
+                className={`nav-items ${
+                  activeDropdown === "project" ? "nav-item-active" : ""
+                }`}
+                onMouseEnter={() => setActiveDropdown("project")}
+                aria-expanded={activeDropdown === "project"}
               >
                 Projects
               </NavLink>
               <div
-                className="dropdown-name nav-items"
+                className={`dropdown-name nav-items ${
+                  activeDropdown === "resource" ? "nav-item-active" : ""
+                } ${isResourceActive ? "active" : ""}`}
                 ref={dropdownRef}
                 onClick={toggleDropdown}
-                onMouseEnter={() => {
-                  setShowResourceComp(true);
-                }}
-                onMouseLeave={() => {
-                  setTimeout(() => {
-                    if (!document.querySelector(".nav-resource-comp:hover")) {
-                      setShowResourceComp(false);
-                    }
-                  }, 100);
-                }}
+                onMouseEnter={() => setActiveDropdown("resource")}
+                aria-expanded={activeDropdown === "resource"}
               >
                 Resource
               </div>
               <NavLink
                 to={"/career"}
-                className="nav-items"
                 onClick={() => {
                   window.scrollTo(0, 0);
                 }}
+                className="nav-items"
+                onMouseEnter={() => setActiveDropdown(null)} // No dropdown for Careers
               >
                 Careers
               </NavLink>
               <NavLink
                 to={"/competition"}
-                className="nav-items"
                 onClick={() => {
                   window.scrollTo(0, 0);
                 }}
+                className="nav-items"
                 style={{ position: "relative" }}
+                onMouseEnter={() => setActiveDropdown(null)} // No dropdown for Competition
               >
                 Competition
                 <Star />
               </NavLink>
               <NavLink
                 to={"/about"}
-                className="nav-items"
                 onClick={() => {
                   window.scrollTo(0, 0);
                 }}
-                onMouseEnter={() => {
-                  setShowAboutComp(true);
-                }}
-                onMouseLeave={() => {
-                  setTimeout(() => {
-                    if (!document.querySelector(".nav-about-comp:hover")) {
-                      setShowAboutComp(false);
-                    }
-                  }, 100);
-                }}
+                className={`nav-items ${
+                  activeDropdown === "about" ? "nav-item-active" : ""
+                }`}
+                onMouseEnter={() => setActiveDropdown("about")}
+                aria-expanded={activeDropdown === "about"}
               >
                 About
               </NavLink>
               <div
-                className="nav-whats-new-item pointer"
+                className={`nav-whats-new-item pointer ${
+                  openWhatsNew ? "nav-item-active" : ""
+                }`}
                 onMouseEnter={() => {
+                  setActiveDropdown(null);
                   setOpenWhatsNew(true);
                 }}
                 onMouseLeave={() => {
-                  setTimeout(() => {
-                    if (!document.querySelector(".nav-whatsnew-comp:hover")) {
-                      setOpenWhatsNew(false);
-                    }
-                  }, 100);
+                  setOpenWhatsNew(false);
                 }}
+                aria-expanded={openWhatsNew}
               >
                 What's New
               </div>
@@ -1131,70 +1053,55 @@ function NavBar({ scrollToDepartment }) {
           <div
             className="nav-whatsnew-comp"
             onMouseEnter={() => setOpenWhatsNew(true)}
-            onMouseLeave={() => {
-              setOpenWhatsNew(false);
-            }}
+            onMouseLeave={() => setOpenWhatsNew(false)}
           >
-            <WhatsNew handleClose={closeWhatsnewHandler} />
+            <WhatsNew handleClose={() => setOpenWhatsNew(false)} />
           </div>
         )}
       </div>
-      {showProductComp && (
-        <div
-          className="nav-product-comp"
-          onMouseEnter={() => setShowProductComp(true)}
-          onMouseLeave={() => {
-            setShowProductComp(false);
-          }}
-        >
-          <NavProductComp handleClose={closeProductHandler} />
-        </div>
-      )}
-      {showServiceComp && (
+      {activeDropdown === "services" && (
         <div
           className="nav-service-comp"
-          onMouseEnter={() => setShowServiceComp(true)}
-          onMouseLeave={() => {
-            setShowServiceComp(false);
-          }}
+          onMouseEnter={() => setActiveDropdown("services")}
+          onMouseLeave={() => setActiveDropdown(null)}
         >
-          <ServcieNavComp handleClose={closeServicehandler} />
+          <ServcieNavComp handleClose={() => setActiveDropdown(null)} />
         </div>
       )}
-      {showAboutComp && (
+      {activeDropdown === "products" && (
         <div
-          className="nav-about-comp"
-          onMouseEnter={() => setShowAboutComp(true)}
-          onMouseLeave={() => {
-            setShowAboutComp(false);
-          }}
+          className="nav-product-comp"
+          onMouseEnter={() => setActiveDropdown("products")}
+          onMouseLeave={() => setActiveDropdown(null)}
         >
-          <AboutDropDown handleClose={closeAboutHandler} />
+          <NavProductComp handleClose={() => setActiveDropdown(null)} />
         </div>
       )}
-      {showResourceComp && (
-        <div
-          className="nav-resource-comp"
-          onMouseEnter={() => setShowResourceComp(true)}
-          onMouseLeave={() => {
-            setShowResourceComp(false);
-          }}
-        >
-          <ResourceDropDown handleClose={closeResourcehandler} />
-        </div>
-      )}
-      {showProjectComp && (
+      {activeDropdown === "project" && (
         <div
           className="nav-project-comp"
-          onMouseEnter={() => setShowProjectComp(true)}
-          onMouseLeave={() => {
-            setShowProjectComp(false);
-          }}
+          onMouseEnter={() => setActiveDropdown("project")}
+          onMouseLeave={() => setActiveDropdown(null)}
         >
-          <ProjectDropdown
-            handleClose={closeProjectHandler}
-            scrollToDepartment={scrollToDepartment}
-          />
+          <ProjectDropdown handleClose={() => setActiveDropdown(null)} />
+        </div>
+      )}
+      {activeDropdown === "resource" && (
+        <div
+          className="nav-resource-comp"
+          onMouseEnter={() => setActiveDropdown("resource")}
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          <ResourceDropDown handleClose={() => setActiveDropdown(null)} />
+        </div>
+      )}
+      {activeDropdown === "about" && (
+        <div
+          className="nav-about-comp"
+          onMouseEnter={() => setActiveDropdown("about")}
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          <AboutDropDown handleClose={() => setActiveDropdown(null)} />
         </div>
       )}
     </div>

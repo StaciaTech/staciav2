@@ -19,8 +19,8 @@
 }
 
 .single-casestudy-title {
-  color: rgba(255, 255, 255);
-  font-size: 120px;
+  color:#fff;
+  font-size: 5vw;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -84,7 +84,7 @@
 
 .test-seclection-blue-challenge {
   font-size: 2.5rem;
-  
+
 
 }
 
@@ -210,11 +210,21 @@
 
 }
 
+.li-text {
+  font-size: 18px;
+  line-height: 35px;
+  color: #6B6084;
+  /* color: red; */
+  font-family: EuclidMedium;
+  padding: 16px;
+}
+
 .problem-statement-para1 {
   font-size: 18px;
   color: #6B6084;
   font-family: EuclidMedium;
-   padding: 10px 0px;
+  padding: 10px 0px;
+  line-height: 35px;
 
 }
 
@@ -275,7 +285,7 @@
   color: #6B6084;
   font-family: EuclidMedium;
   padding: 10px;
-  
+
 }
 
 .Challenges-Faced li {
@@ -491,10 +501,10 @@
 .other-case-studies h2 {
   font-size: 2rem;
   font-weight: 600;
-color: #dcd9e3;
-    font-family: EuclidSemiBold;
+  color: #DCD9E3;
+  font-family: EuclidSemiBold;
   margin-bottom: 2rem;
-  
+
 }
 
 .other-case-studies-grid {
@@ -506,6 +516,7 @@ color: #dcd9e3;
 .other-case-study-card {
   background: #fff;
   border-radius: 12px;
+  padding: 10px 0px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -554,7 +565,6 @@ color: #dcd9e3;
 .know-more-link {
   color: #0047FF;
   font-size: 0.95rem;
-  
   font-weight: 600;
 
   transition: text-decoration 0.2s ease;
@@ -815,6 +825,13 @@ color: #dcd9e3;
     padding: 10px;
   }
 
+  .li-text{
+    font-size: 1rem;
+    line-height: 30px;
+    color: #6B6084;
+    padding: 10px;
+  }
+
   .Challenges-Faced {
     line-height: 1.5;
   }
@@ -931,7 +948,8 @@ color: #dcd9e3;
   }
 
   .other-case-studies-grid {
-    grid-template-columns: 1fr; /* Single column for very small screens */
+    grid-template-columns: 1fr;
+    /* Single column for very small screens */
     gap: 1rem;
   }
 

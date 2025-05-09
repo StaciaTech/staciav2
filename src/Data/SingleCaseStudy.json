@@ -8,8 +8,8 @@
           "id": "Case-Study-1",
           "department": "Electronics Sector",
           "title": "Spicing Up Efficiency: The Impact of Mechanization on the Chilli Industry",
-          "backgroundImage": "/assets/ChilliBackground.png",
-          "imageURL": "/assets/ChilliBackground.png",
+          "backgroundImage": "/assets/CaseStudy/ChilliBannerImage.webp",
+          "imageURL": "/assets/CaseStudy/ChilliBackgroundImage.webp",
           "overview": {
             "overviewtitle": "Introduction",
             "description": "The global demand for chilli and chilli-derived products is experiencing substantial growth, propelled by evolving culinary preferences and increasing applications within the food processing, pharmaceutical, and cosmetic sectors. This heightened demand necessitates a fundamental shift in traditional chilli processing methodologies. Mechanization, characterized by the integration of advanced technologies and automated systems, is of paramount importance to optimize efficiency, enhance product quality, and effectively address escalating market demands. This case study provides a comprehensive analysis of the mechanization landscape within the chilli processing industry, examining its current state, future trends, and transformative impact."
@@ -526,10 +526,10 @@
           },
           "gallerytittle": "Chili Ladling Machine",
           "gallery": [
-            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
-            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
-            "https://plus.unsplash.com/premium_photo-1709440655728-295d8c1cb722?w=500&auto=format&fit=crop&q=60",
-            "https://images.unsplash.com/photo-1567274333060-04b18e634717?w=500&auto=format&fit=crop&q=60"
+            "/assets/CaseStudy/Chilli1.webp",
+            "/assets/CaseStudy/Chilli2.webp",
+            "/assets/CaseStudy/Chilli3.webp",
+            "/assets/CaseStudy/Chilli4.webp"
           ],
           "challenges": [
             {
@@ -548,17 +548,17 @@
           "id": "Case-Study-2",
           "department": "Agricultural Technology",
           "title": "Transforming Indian Agriculture: The Impact of Technology on the Mandi Procurement System",
-          "backgroundImage": "/assets/MandiBackground.png",
-          "imageURL": "/assets/caseStudy-2.webp",
+          "backgroundImage": "/assets/CaseStudy/MandiBanner.webp",
+          "imageURL": "/assets/CaseStudy/MandiBackgroundImg.webp",
           "overview": {
             "overviewtitle": "Introduction",
-            "description": "The agricultural sector is the backbone of the Indian economy, with the Mandi system playing a crucial role in facilitating trade of agricultural produce. However, traditional Mandi operations face inefficiencies, lack of transparency, and infrastructural limitations. This case study analyzes the impact of technology on modernizing the Mandi procurement system, focusing on initiatives like e-NAM and the proposed EDIFAI platform to enhance transparency, efficiency, and farmer welfare."
+            "description": "The agricultural sector is the backbone of the Indian economy, with a significant portion of the population relying on it for their livelihood. The Mandi system, a network of agricultural markets, plays a crucial role in facilitating the trade of agricultural produce from farmers to consumers. However, the traditional Mandi system faces numerous challenges, including inefficiencies, lack of transparency, and infrastructural limitations. This case study analyzes the current state of the Mandi procurement system in India, examines the impact of technology, and proposes solutions to modernize and optimize its operations. We will also explore how EDIFAI, a unifying application, can integrate the procurement business with Mandis, agents, FPOs, and the logistics team."
           },
           "imageContent": {
             "imagetitle": "Background",
             "imageSrc": "/assets/singlepage-mandi.webp",
             "content": [
-              "The Mandi system, regulated by state Agricultural Produce Market Committees (APMCs), serves as a trading platform for farmers to sell produce to intermediaries, traders, and government agencies. Despite its importance, the system suffers from complex intermediary networks, lack of transparency, inadequate infrastructure, labor-intensive processes, and limited market access, hindering agricultural growth and farmer welfare."
+              "The Mandi system in India comprises regulated markets established by state governments under the Agricultural Produce Market Committee (APMC) Acts. These markets serve as trading platforms where farmers can sell their produce to intermediaries, traders, and government agencies. While the Mandi system has played a vital role in ensuring price discovery and market access for farmers, it also suffers from several inherent limitations."
             ]
           },
           "Backgrounddes": {
@@ -1027,10 +1027,10 @@
           },
           "gallerytittle": "EDIFAI Platform",
           "gallery": [
-            "https://placeholder.com/image1.jpg",
-            "https://placeholder.com/image2.jpg",
-            "https://placeholder.com/image3.jpg",
-            "https://placeholder.com/image4.jpg"
+            "/assets/CaseStudy/Mandi1.webp",
+            "/assets/CaseStudy/Mandi2.webp",
+            "/assets/CaseStudy/Mandi3.webp",
+            "/assets/CaseStudy/Mandi4.webp"
           ],
           "challenges": [
             {
@@ -1049,8 +1049,8 @@
           "id": "Case-Study-3",
           "department": "E-commerce",
           "title": "Transforming Indian Commerce: The Rise of E-commerce Platforms",
-          "backgroundImage": "/assets/EcommerceBackground.png",
-          "imageURL": "/assets/caseStudy-3.webp",
+          "backgroundImage": "/assets/CaseStudy/EcommerceBanner.webp",
+          "imageURL": "/assets/CaseStudy/EcommerceBackgroundImage.webp",
           "overview": {
             "overviewtitle": "Introduction",
             "description": "India's e-commerce sector is a key driver of economic growth, revolutionizing trade through platforms like Amazon and Flipkart. Fueled by increased internet penetration and mobile technology, the sector faces challenges like infrastructure limitations and regulatory uncertainties. This case study analyzes the current state, growth drivers, and future opportunities in India's e-commerce market."
@@ -1528,10 +1528,10 @@
           },
           "gallerytittle": "E-commerce Platforms",
           "gallery": [
-            "https://placeholder.com/image1.jpg",
-            "https://placeholder.com/image2.jpg",
-            "https://placeholder.com/image3.jpg",
-            "https://placeholder.com/image4.jpg"
+            "/assets/CaseStudy/Ecommerce1.webp.webp",
+            "/assets/CaseStudy/Ecommerce2.webp.webp",
+            "/assets/CaseStudy/Ecommerce3.webp.webp",
+            "/assets/CaseStudy/Ecommerce4.webp.webp"
           ],
           "challenges": [
             {
@@ -1550,8 +1550,8 @@
           "id": "Case-Study-4",
           "department": "Sustainable Electronics",
           "title": "Stacia Corp.'s Strategic Outlook: Navigating the Future of Sustainable Electronics",
-          "backgroundImage": "/assets/SustainableElectronicsBackground.png",
-          "imageURL": "/assets/caseStudy-4.webp",
+          "backgroundImage": "/assets/CaseStudy/ElectronicBanner.webp",
+          "imageURL": "/assets/CaseStudy/ElectronicBackground.webp",
           "overview": {
             "overviewtitle": "Introduction",
             "description": "The electronics industry faces increasing pressure to adopt sustainable practices due to e-waste, resource depletion, and energy consumption. Stacia Corp. is leading the transition to sustainable electronics through eco-friendly design, circular economy principles, and ethical supply chains. This case study examines the challenges, opportunities, and Stacia Corp.'s strategic outlook."
@@ -2029,10 +2029,10 @@
           },
           "gallerytittle": "Sustainable Electronics",
           "gallery": [
-            "https://placeholder.com/image1.jpg",
-            "https://placeholder.com/image2.jpg",
-            "https://placeholder.com/image3.jpg",
-            "https://placeholder.com/image4.jpg"
+            "/assets/CaseStudy/Electronic1.webp",
+            "/assets/CaseStudy/Electronic2.webp",
+            "/assets/CaseStudy/Electronic3.webp",
+            "/assets/CaseStudy/Electronic4.webp"
           ],
           "challenges": [
             {
@@ -2051,8 +2051,8 @@
           "id": "Case-Study-5",
           "department": "Artificial Intelligence",
           "title": "The Impact of AI on the Future of Work and Automation",
-          "backgroundImage": "/assets/AIBackground.png",
-          "imageURL": "/assets/caseStudy-1.webp",
+          "backgroundImage": "/assets/CaseStudy/AiBanner.webp",
+          "imageURL": "/assets/CaseStudy/AiBackgroundImage.webp",
           "overview": {
             "overviewtitle": "Introduction",
             "description": "Artificial intelligence (AI) is transforming workplaces by automating tasks, enhancing decision-making, and creating new roles. However, it raises concerns about job displacement, ethical issues, and regulatory challenges. This case study explores AI's multifaceted impact on the future of work and strategies to navigate this evolving landscape."
@@ -2530,10 +2530,10 @@
           },
           "gallerytittle": "AI in the Workplace",
           "gallery": [
-            "https://placeholder.com/image1.jpg",
-            "https://placeholder.com/image2.jpg",
-            "https://placeholder.com/image3.jpg",
-            "https://placeholder.com/image4.jpg"
+            "/assets/CaseStudy/Ai1.webp",
+            "/assets/CaseStudy/Ai2.webp",
+            "/assets/CaseStudy/Ai3.webp",
+            "/assets/CaseStudy/Ai4.webp"
           ],
           "challenges": [
             {

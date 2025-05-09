@@ -38,9 +38,11 @@ function Footer() {
     },
   };
 
+
   const HandleClick = () => {
-    navigate("/Privacy-Policy");
-  };
+    navigate("/Privacy-Policy")
+  }
+
 
   return (
     <div className="footer-contaier">
@@ -201,8 +203,7 @@ function Footer() {
               rel="noreferrer"
             >
               <div className="footer-grey-tabs pointer test-seclection-blue">
-                Ground Floor, C-53, Guindy Industrial Estate,
-                <br />
+                Ground Floor, C-53, Guindy Industrial Estate,<br />
                 Guindy, Chennai - 32, Tamil Nadu
               </div>
               {/* <div
@@ -241,6 +242,8 @@ function Footer() {
             width: "35%",
           }}
         >
+          
+
           {/* <a
             href=""
             target="_blank"
@@ -266,12 +269,9 @@ function Footer() {
             }}
           />
 
-          <div
-            onClick={() => navigate("/Privacy-Policy")}
-            style={{ cursor: "pointer", color: "black" }}
-          >
-            Privacy policy
-          </div>
+
+          <div onClick={() => navigate("/Privacy-Policy")} style={{ cursor: "pointer", color: "black" }}>Privacy policy</div>
+
         </div>
         <div className="footer-icons">
           <div>

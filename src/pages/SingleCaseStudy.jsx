@@ -575,7 +575,6 @@ function SingleCaseStudy() {
     setShowHelpPage(true);
     setShowForm(true);
   };
-
   useEffect(() => {
     if (showForm) {
       // Store the current scroll position
@@ -602,7 +601,6 @@ function SingleCaseStudy() {
       document.body.style.overflow = "auto";
     };
   }, [showForm]);
-
 
   const handleWheel = (e) => {
     const container = e.currentTarget;
@@ -642,6 +640,7 @@ function SingleCaseStudy() {
     return <div>Loading...</div>;
   }
 
+  
   return (
     <>
       <NavBar />
@@ -850,9 +849,7 @@ function SingleCaseStudy() {
             </h2>
             <ul className="problem-statement-para2">
               {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
-                <li key={index} className="li-text">
-                  {feature}
-                </li>
+                <li key={index} className="li-text">{feature}</li>
               ))}
             </ul>
             <p className="problem-statement-para1">
@@ -899,7 +896,7 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.Processes.map(
                 (Processes, index) => (
-                  <li key={index} className="li-text">
+                  <li key={index}className="li-text">
                     <span className="highlight">{Processes.Process}:</span>{" "}
                     {Processes.Description}
                   </li>

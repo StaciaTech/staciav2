@@ -36,7 +36,6 @@ export default function FourCard({ data, path }) {
               <div className="icon-name">LinkedIn</div>
             </a>
           </div>
-
           {/* Email Icon */}
           <div className="icon-wrapper">
             <a

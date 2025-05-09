@@ -19,8 +19,8 @@
   justify-content: center;
 }
 .single-product-name {
-  font-size: 7rem;
-  font-weight: 900;
+  font-size: 5vw;
+  font-weight: 600;
   color: #fff;
   position: relative;
   width: fit-content;
@@ -129,6 +129,7 @@
 }
 .single-pro-container2 > p {
   color: rgba(255, 255, 255, 0.6);
+  /* color: #fff; */
   font-size: 20px;
   line-height: 0.9cm;
 }
@@ -212,8 +213,8 @@
   box-sizing: border-box;
 }
 .cat-product_text {
-  font-size: 7vw;
-  font-weight: 800;
+  font-size: 5vw;
+  font-weight: 600;
   color: #fff;
   width: fit-content;
   position: relative;

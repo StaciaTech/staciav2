@@ -44,6 +44,7 @@ function App() {
       {/* <StackScroll /> */}
       {/* <Box1 /> */}
       <Routes>
+        <Route path="/sitemap" element={<Sitemap />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="/career" element={<CareerPage />} />
@@ -62,7 +63,9 @@ function App() {
         {/* <Route path="/article/:department/:title" element={<SingleArticle />} /> */}
         <Route path="/article" element={<ArticlesPage />} />
         <Route path="/article/:department" element={<ArticlesPage />} />
-        <Route path="/article/:department/:title" element={<Template6 />} />
+        <Route path="/article/:department/:title" element={<SingleArticle />} />
+        <Route path="/article/:department/single-article/:title" element={<SingleArticle />} />
+
         <Route
           path="/article/:department/single-article/:title"
           element={<Template6 />}
@@ -85,7 +88,7 @@ function App() {
           element={<SingleCaseStudy />}
         />
 
-                                  {/* Project */}
+        {/* Project */}
 
         <Route path="/project" element={<ProjectPage />} />
         <Route path="/project/:department" element={<ProjectPage />} />
@@ -100,7 +103,7 @@ function App() {
         {/* <Route path="/project/:department/:title" element={<SingleProject />} /> */}
 
 
-                              {/* CaseStudy */}
+        {/* CaseStudy */}
 
         <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/case-study/:department" element={<CaseStudy />} />

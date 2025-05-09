@@ -295,21 +295,21 @@
       "category": [
         {
           "id": "category-001",
-          "name": "Research and Development",
+          "name": "Research & Development",
           "description": "Explore cutting-edge innovation with our Research and Development team. We specialize in creating tailored solutions for complex challenges, leveraging advanced technologies and industry expertise. From concept design to prototyping and testing, we deliver groundbreaking products that redefine efficiency and functionality. Partner with us to transform ideas into reality, ensuring your business stays ahead of the competition in a rapidly evolving technological landscape",
           "imageUrl": "/assets/ProductPage/istockphoto.webp",
           "products": [
             {
               "id": "product-001",
               "title": "Hydration tracking (G-sensor)",
-              "domainName": "Research and Development",
+              "domainName": "Research & Development",
               "description": "An innovative R&D project designed to measure water levels inside a bottle and track the amount consumed with exceptional accuracy of 10mm. It provides hydration reminders at user-specified or AI-recommended intervals, enhancing hydration habits. This technology integrates advanced sensors for real-time monitoring and ensures precision, making it ideal for personalized hydration management and improving overall wellness",
               "imageUrl": "/assets/ProductPage/Default.webp",
               "briefDetails": "This advanced hydration tracking system is an R&D innovation that utilizes a G-sensor and intelligent algorithms to accurately measure the amount of water consumed directly from a bottle. With an impressive accuracy of up to 10mm water level detection, the system monitors the intake each time the user drinks and updates hydration status in real time. It supports both user-defined reminder intervals and AI/ML-based smart recommendations that learn from daily habits, body metrics, and environmental factors. Ideal for fitness enthusiasts, patients, professionals, and general users aiming for better health, this system promotes personalized hydration habits, reduces dehydration risk, and ensures timely reminders—all within a sleek, integrated design for use in smart bottles or other containers"
             },
             {
               "id": "product-002",
-              "domainName": "Research and Development",
+              "domainName": "Research & Development",
               "title": "Portable Heating, cooling device using semiconductor",
               "description": "A groundbreaking R&D innovation featuring a compact semiconductor-based heating and cooling system. This portable device is small enough to integrate seamlessly into a water bottle and versatile for applications like kettles, tiffin boxes, table coffee warmers/coolers, kitchen appliances, and medical devices. It redefines thermal management, offering convenience, efficiency, and adaptability for diverse personal, professional, and industrial use cases",
               "imageUrl": "/assets/ProductPage/Default.webp"
@@ -317,7 +317,7 @@
             {
               "id": "product-003",
               "title": "LoRa mesh system with encryption",
-              "domainName": "Research and Development",
+              "domainName": "Research & Development",
               "description": "This R&D project introduces a highly secure LoRa mesh communication system capable of transmitting signals over a 10km radius. It offers encrypted, long-range connectivity ideal for remote monitoring, smart agriculture, disaster management, industrial automation, and IoT networks. Its robust design enables seamless communication in isolated or large-scale environments, making it an excellent choice for applications demanding extended coverage and reliable data transfer.",
               "imageUrl": "/assets/ProductPage/Default.webp",
               "briefDetails": "The LoRa Mesh System with Encryption is a robust R&D-based long-range wireless communication solution designed for secure, decentralized data transmission across a 10km radius. Unlike traditional point-to-point systems, this mesh network enables multiple nodes to relay data, ensuring strong signal integrity even in remote or obstructed environments. With built-in encryption, it offers high-level data security, making it suitable for sensitive and mission-critical applications. The system is ideal for smart agriculture, disaster management, military communication, industrial automation, campus-wide IoT setups, and rural connectivity solutions. Its low power consumption and wide coverage make it a scalable, cost-effective alternative to traditional cellular networks for smart cities and infrastructure."
@@ -326,14 +326,14 @@
         },
         {
           "id": "category-002",
-          "name": "IoT Smart Products",
+          "name": "Electronics Product Engineering ",
           "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
           "imageUrl": "/assets/ProductPage/iot_devices.webp",
           "products": [
             {
               "id": "product-001",
               "title": "Hydrogen (Smart-water-bottle)",
-              "domainName": "IoT Smart Products",
+              "domainName": "Electronics Product Engineering ",
               "description": "Hydrogen is an AI-powered smart water bottle that features rapid heating and cooling, hydration tracking with advanced sensors, and personalized reminders for optimal water intake. Its ergonomic squircle design ensures style and comfort, while its innovative technology offers superior functionality. Perfect for on-the-go hydration, it redefines smart drinking solutions with intelligence, performance, and modern aesthetics",
               "imageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
               "briefDetails": "HydroGen is a next-generation smart water bottle designed to revolutionize personal hydration. It features an AI/ML-based hydration tracking system with a built-in G-sensor that monitors water intake with up to 10mm accuracy. The bottle integrates a compact semiconductor-based heating and cooling unit, allowing users to enjoy water at their preferred temperature on the go. Its ergonomic squircle (square + circle) design ensures a comfortable grip, while customizable LED indicators provide hydration reminders at user-defined or AI-recommended intervals. HydroGen combines health insights, advanced technology, and sleek design, making it ideal for daily use at work, school, gym, or travel",
@@ -373,7 +373,7 @@
             {
               "id": "product-002",
               "title": "RFID Child Tracking Device",
-              "domainName": "IoT Smart Products",
+              "domainName": "Electronics Product Engineering ",
               "description": "A versatile child safety solution available as a card, module, or watch, this RFID tracking device ensures real-time location updates and customizable alerts. It’s adaptable for school, play, and travel, and extends its utility to applications like pet tracking, asset management, and workforce monitoring. This device offers parents peace of mind and provides efficient tracking for a wide range of needs",
               "imageUrl": "/assets/ProductPage/RFID-Child-Tracking-Device.webp",
               "briefDetails": "The RFID Child Tracking Device is a reliable and innovative safety solution designed to monitor and ensure the real-time location of children in schools, parks, or public spaces. With a tracking range of up to 200 meters, the system uses RFID tags available in card, wristband, or module forms—customizable to suit different use cases. It alerts guardians or school staff if a child moves beyond the designated safe zone, enhancing security without compromising freedom. The system supports integration with attendance management and access control systems. Built for ease of use and minimal maintenance, it’s ideal for schools, daycare centers, theme parks, and public events.",
@@ -398,7 +398,7 @@
             {
               "id": "product-003",
               "title": "Smart Furniture",
-              "domainName": "IoT Smart Products",
+              "domainName": "Electronics Product Engineering ",
               "description": "Experience the future of home and office living with Smart Furniture. Featuring wireless charging, a built-in beverage heating and cooling system, intelligent lighting, and a retractable arm system for holding laptops or books with a nightlight. It also includes pop-up sockets and AI voice assistance for basic electronic controls like lights and AC. Smart Furniture combines functionality, comfort, and technology to redefine your personal and professional spaces",
               "imageUrl": "/assets/ProductPage/Smart Furniture.webp",
               "briefDetails": "The Smart Furniture – Carbon Series is a multifunctional innovation combining comfort, technology, and productivity. Designed for homes, offices, and tech-enabled spaces, it features built-in wireless charging, a beverage heating and cooling system, an intelligent light setup, and a retractable arm to hold books or laptops—ideal for night reading or work. It also includes a pop-up socket hub and AI voice assistance for controlling devices like lights, fans, or AC. Crafted with ergonomic and modular design principles, Carbon enhances both functionality and aesthetics. Perfect for modern lifestyles, it supports efficiency, reduces clutter, and creates a seamless smart workspace or relaxation zone",
@@ -433,7 +433,7 @@
             {
               "id": "product-004",
               "title": "S Connect (Smart Speaker)",
-              "domainName": "IoT Smart Products",
+              "domainName": "Electronics Product Engineering ",
               "description": "S Connect is a next-gen smart speaker combining premium sound quality with intelligent voice control. It connects seamlessly to your smart devices, enabling hands-free operation and integration with IoT systems. Designed for versatility, it fits effortlessly into any setting, offering personalized assistance, dynamic entertainment, and superior connectivity. S Connect transforms your space into a hub of convenience and innovation.",
               "imageUrl": "/assets/ProductPage/S Connect (Smart Speaker).webp",
               "briefDetails": "S Connect is an AI-powered smart speaker crafted for seamless voice interaction and intelligent control. Designed to integrate effortlessly into smart homes, offices, and learning environments, it supports voice commands for managing connected devices like lights, fans, AC, and more. The speaker offers clear audio output for music, calls, and announcements while also enabling personalized reminders, daily updates, and voice notes. Equipped with Wi-Fi and Bluetooth connectivity, S Connect serves as a smart hub that bridges IoT devices and enhances automation. Its sleek, minimalistic design complements any space, making it a versatile addition for productivity, comfort, and entertainment.",
@@ -496,7 +496,7 @@
             },
             {
               "id": "product-002",
-              "title": "The Aigentcy",
+              "title": "The AiGentcy",
               "domainName": "Stellar",
               "description": "Agentcy is a web-based platform offering audit and consulting solutions to improve business workflows. It begins by analyzing a company’s current processes and identifying inefficiencies through detailed audit reports.Based on the findings, Agentcy provides customized,actionable solutions to streamline operations, reducewaste, and enhance productivity. From optimizing coordination to automating tasks, Agentcy empowers businesses to implement practical improvements. It provides a data-driven foundation for informed decision-making and continuous improvement across all levels of the organization",
               "imageUrl": "/assets/ProductPage/Default.webp",

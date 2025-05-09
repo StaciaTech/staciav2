@@ -214,15 +214,14 @@ function LeaderPage() {
                         }
                         style={{ cursor: "pointer" }}
                       >
-                        <div
-                          className="leader-icon-container"
-                          style={{ display: "flex" }}
-                        >
-                          <FaFileDownload className="footer-linkedin-icon" />
+                        <div className="leader-icon-container">
+                          <FaFileDownload className="footer-linkedin-icon" > Download</FaFileDownload>
                         </div>
                       </div>
                     )}
-                    <div  className="download-icon">Download File</div>
+                    <div >
+                      <p className="downloadicon-txt">Download file</p>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -27,7 +27,7 @@
 }
 .article-title1 {
   color: rgba(255, 255, 255);
-  font-size: 120px;
+  font-size: 5vw;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -170,7 +170,7 @@
 }
 @media screen and (max-width: 1024px) {
   .article-title1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .article-item-tab {
     font-size: 16px;

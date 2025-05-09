@@ -92,12 +92,14 @@
 
   .leader-profile-line {
     font-family: EuclidSemibold;
-    padding: 20px 0px ;
+    padding: 20px 0px;
     font-size: 1.75rem;
   }
-  .download-icon{
+  .downloadicon-txt{
     font-family: EuclidSemibold;
-    padding: 6px 0px;
+    color: #6b6084;
+    font-size: 1.25rem;
+    /* padding: 6px 0px; */
 
   }
 
