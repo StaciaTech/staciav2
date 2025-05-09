@@ -64,7 +64,10 @@ function App() {
         <Route path="/article" element={<ArticlesPage />} />
         <Route path="/article/:department" element={<ArticlesPage />} />
         <Route path="/article/:department/:title" element={<SingleArticle />} />
-        <Route path="/article/:department/single-article/:title" element={<SingleArticle />} />
+        <Route
+          path="/article/:department/single-article/:title"
+          element={<SingleArticle />}
+        />
 
         <Route
           path="/article/:department/single-article/:title"
@@ -101,7 +104,6 @@ function App() {
           element={<SingleProject />}
         />
         {/* <Route path="/project/:department/:title" element={<SingleProject />} /> */}
-
 
         {/* CaseStudy */}
 

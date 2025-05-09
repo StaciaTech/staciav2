@@ -73,7 +73,7 @@
 
 .icon-wrapper:hover {
   margin-right: 4.5rem; /* Increase gap */
-  animation: iconBounce 0.10s ease-in-out; /* Bounce animation */
+  animation: iconBounce 1s ease-in-out; /* Bounce animation */
 }
 
 /* Keyframe animation for a subtle bounce effect */
@@ -82,7 +82,7 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(5px); /* Slight push to the right */
+    transform: translateX(6px); /* Slight push to the right */
   }
   100% {
     transform: translateX(0); /* Return to original position */

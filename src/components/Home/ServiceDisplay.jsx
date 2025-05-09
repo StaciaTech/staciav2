@@ -48,7 +48,7 @@ export default function ServiceDisplay() {
   return (
     <div className="service-display">
       <div className="our-service-display-title test-seclection-blue">
-        Our Services
+        Our Service
       </div>
       <div className="service-display1">
         <div className="service-left">
@@ -56,6 +56,7 @@ export default function ServiceDisplay() {
             <img
               src={homeServiceData?.[currentSlide]?.imageUrl}
               alt={homeServiceData?.[currentSlide]?.title}
+              loading="lazy"
             />
           </div>
         </div>
@@ -106,6 +107,7 @@ export default function ServiceDisplay() {
                     navigateTo(`/services/${data.title}`);
                     window.scrollTo(0, 0);
                   }}
+                  loading="lazy"
                 />
               </div>
               <div

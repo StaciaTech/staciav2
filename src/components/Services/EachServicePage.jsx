@@ -180,24 +180,20 @@
 // };
 
 
-
-
-
-
-import React, { useRef } from "react";
+import React, { useRef, lazy, Suspense } from "react";
 import "../../styles/Services/EachService.css";
-import NavBar from "../NavBar"; // Ensure default export in NavBar.jsx
-import SideBar from "../SideBar"; // Ensure default export in SideBar.jsx
-import Footer from "../Footer"; // Ensure default export in Footer.jsx
-import MobileFooter from "../MobileFooter"; // Ensure default export in MobileFooter.jsx
-import Star from "../Star"; // Ensure default export in Star.jsx
 import { SlLike } from "react-icons/sl";
-import FAQComp from "../FAQComp"; // Ensure default export in FAQComp.jsx
 import { useParams } from "react-router-dom";
-import { motion, useTransform, useScroll, useMotionValue } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
+import servicesData from "../../Data/Services.json";
 
-// Import JSON data
-import servicesData from "../../Data/Services.json"; // Verify this path
+// Lazy load components
+const NavBar = lazy(() => import("../NavBar"));
+const SideBar = lazy(() => import("../SideBar"));
+const Star = lazy(() => import("../Star"));
+const Footer = lazy(() => import("../Footer"));
+const MobileFooter = lazy(() => import("../MobileFooter"));
+const FAQComp = lazy(() => import("../FAQComp"));
 
 // Static card data
 const cardsData = [
@@ -216,121 +212,79 @@ function EachServicePage() {
     .find(service => service.title.toLowerCase() === productKey);
 
   return (
-    <div>
-      <div className="nav_style">
-        <NavBar />
-        <SideBar />
-      </div>
-      <div className="each-service-hero-section">
-        <div className="each-service-title">
-          <span>{singleService?.title || "Service Not Found"}</span>
-          <Star />
-        </div>
-      </div>
-      <div className="each-service-container">
-        <div className="each-service-section1">
-          <div className="each-service-section1-img">
-            <img
-              src={singleService?.imageUrl || "No image available."}
-              alt=""
-            />
-          </div>
-          <div className="each-service-section1-content">
-            <div>Overview</div>
-            <p>{singleService?.oneLine || "No description available."}</p>
-          </div>
-        </div>
-        <div className="each-service-howWeDo-section">
-          {singleService?.whatWeDo?.length ? (
-            <HorizontalScrollContainer singleServiceWhatweDo={singleService.whatWeDo} />
-          ) : (
-            <div />
-          )}
-        </div>
-        <div className="each-service-howWeDo-section-mob">
-          <HorizontalScrollMobile singleServiceWhatweDo={singleService?.whatWeDo || []} />
-        </div>
-        {/* <div className="each-service-card-section">
-          {cardsData.map((eachItem, i) => (
-            <div key={i} className="each-service-card">
-              <div>
-                <img
-                  src="https://media.istockphoto.com/id/1977348709/photo/laughing-young-businesswoman-talking-with-colleagues-in-an-office-hallway.webp?a=1&b=1&s=612x612&w=0&k=20&c=1QrGBVFBZyfg0zm_EETpeG49dbAjIPDEOxKRtf7L16Q="
-                  alt=""
-                />
-              </div>
-              <p>{eachItem.des}</p>
-            </div>
-          ))}
-        </div> */}
-        <FAQComp />
-      </div>
+    <Suspense fallback={<div>Loading Service Page...</div>}>
       <div>
-        <Footer />
-        <MobileFooter />
+        <div className="nav_style">
+          <Suspense fallback={<div>Loading Navigation...</div>}>
+            <NavBar />
+          </Suspense>
+          <Suspense fallback={<div>Loading Sidebar...</div>}>
+            <SideBar />
+          </Suspense>
+        </div>
+        <div className="each-service-hero-section">
+          <div className="each-service-title">
+            <span>{singleService?.title || "Service Not Found"}</span>
+            <Suspense fallback={<div>Loading Star...</div>}>
+              <Star />
+            </Suspense>
+          </div>
+        </div>
+        <div className="each-service-container">
+          <div className="each-service-section1">
+            <div className="each-service-section1-img">
+              <img
+                src={singleService?.imageUrl || "No image available."}
+                alt={singleService?.title || "Service"}
+                loading="lazy"
+              />
+            </div>
+            <div className="each-service-section1-content">
+              <div>Overview</div>
+              <p>{singleService?.oneLine || "No description available."}</p>
+            </div>
+          </div>
+          <div className="each-service-howWeDo-section">
+            {singleService?.whatWeDo?.length ? (
+              <HorizontalScrollContainer singleServiceWhatweDo={singleService.whatWeDo} />
+            ) : (
+              <div />
+            )}
+          </div>
+          <div className="each-service-howWeDo-section-mob">
+            <HorizontalScrollMobile singleServiceWhatweDo={singleService?.whatWeDo || []} />
+          </div>
+          {/* Commented-out section with image, adding loading="lazy" for completeness */}
+          {/* <div className="each-service-card-section">
+            {cardsData.map((eachItem, i) => (
+              <div key={i} className="each-service-card">
+                <div>
+                  <img
+                    src="https://media.istockphoto.com/id/1977348709/photo/laughing-young-businesswoman-talking-with-colleagues-in-an-office-hallway.webp?a=1&b=1&s=612x612&w=0&k=20&c=1QrGBVFBZyfg0zm_EETpeG49dbAjIPDEOxKRtf7L16Q="
+                    alt="Card"
+                    loading="lazy"
+                  />
+                </div>
+                <p>{eachItem.des}</p>
+              </div>
+            ))}
+          </div> */}
+          <Suspense fallback={<div>Loading FAQs...</div>}>
+            <FAQComp />
+          </Suspense>
+        </div>
+        <div>
+          <Suspense fallback={<div>Loading Footer...</div>}>
+            <Footer />
+          </Suspense>
+          <Suspense fallback={<div>Loading Mobile Footer...</div>}>
+            <MobileFooter />
+          </Suspense>
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
-
-// const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
-//   const targetRef = useRef(null);
-//   // const { scrollYProgress } = useScroll({
-//   //   target: targetRef,
-//   // });
-
-//   // const x = useTransform(scrollYProgress, [0, 1], ["1%", "-70%"]);
-
-//   // const dragX = useMotionValue(0);
-//   // const [width, setWidth] = React.useState(0);
-
-//   // React.useEffect(()=>{
-//   //   if(targetRef.current){
-//   //     const scrollWidth = targetRef.current.scrollWidth;
-//   //     const offsetWidth = targetRef.current.offsetWidth;
-//   //     setWidth(scrollWidth - offsetWidth)
-//   //   }
-//   // },[singleServiceWhatweDo])
-//   // const x = useTransform(dragX,(latest)=>Math.min(0, Math.max(-width,latest)))
-//   return (
-//     <div ref={targetRef} 
-//     style={{ 
-//     // height: "300vh", 
-//     position: "relative" }}
-//     >
-//       <div
-//         style={{
-//           height: "50vh",
-//           position: "sticky",
-//           top: "80px",
-//           overflowX: "auto"
-//         }}
-//         className="no-scrollbar"
-//       >
-//         <div className="each-service-howWeDo-title">How We Do?</div>
-//         <p className="each-service-howWeDo-des">
-//           Problem Solved, Step by Step. Your Guide to a Smooth Solution.
-//         </p>
-//         {/* <motion.div style={{ display: "flex", columnGap: "6rem", x }}> */}
-//         <div style={{ display: "flex", columnGap: "6rem", padding:"0.2rem" }}>
-
-//           {singleServiceWhatweDo.map((eachItem, i) => (
-//             <div key={i} className="each-service-howWeDo-step">
-//               <div className="each-service-howWeDo-step-icon">
-//                 <SlLike color="#fff" fontSize={28} />
-//               </div>
-//               <div className="each-service-howWeDo-step-title">
-//                 {eachItem.title}
-//               </div>
-//               <p className="each-service-howWeDo-step-des">{eachItem.des}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 
 const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
   const targetRef = useRef(null);
@@ -340,37 +294,31 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
 
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
   return (
-    <>
-      <div ref={targetRef} style={{ height: "50vh", position: "relative", }} >
-        <div
-          // className="career-hiring-data-container"
-          className="howWeDo-container"
-        >
-          <div className="each-service-howWeDo-title">How We Do?</div>
-          <p className="each-service-howWeDo-des">
-            Problem Solved, Step by Step. Your Guide to a Smooth Solution.
-          </p>
-          <motion.div style={{ display: "flex", columnGap: "6rem", x }}>
-            {singleServiceWhatweDo?.map((eachItem, i) => (
-              <div key={i} className="each-service-howWeDo-step">
-                <div className="each-service-howWeDo-step-icon">
-                  <SlLike color="#fff" fontSize={28} />
-                </div>
-                <div className="each-service-howWeDo-step-title">
-                  {eachItem?.title}
-                </div>
-                <p className="each-service-howWeDo-step-des">
-                  {eachItem?.des}
-                </p>
+    <div ref={targetRef} style={{ height: "50vh", position: "relative" }}>
+      <div className="howWeDo-container">
+        <div className="each-service-howWeDo-title">How We Do?</div>
+        <p className="each-service-howWeDo-des">
+          Problem Solved, Step by Step. Your Guide to a Smooth Solution.
+        </p>
+        <motion.div style={{ display: "flex", columnGap: "6rem", x }}>
+          {singleServiceWhatweDo?.map((eachItem, i) => (
+            <div key={i} className="each-service-howWeDo-step">
+              <div className="each-service-howWeDo-step-icon">
+                <SlLike color="#fff" fontSize={28} />
               </div>
-            ))}
-          </motion.div>
-        </div>
+              <div className="each-service-howWeDo-step-title">
+                {eachItem?.title}
+              </div>
+              <p className="each-service-howWeDo-step-des">
+                {eachItem?.des}
+              </p>
+            </div>
+          ))}
+        </motion.div>
       </div>
-    </>
+    </div>
   );
 };
-
 
 const HorizontalScrollMobile = ({ singleServiceWhatweDo }) => {
   return (
@@ -396,6 +344,4 @@ const HorizontalScrollMobile = ({ singleServiceWhatweDo }) => {
   );
 };
 
-export default EachServicePage; // Ensure this is pr
-
-
+export default EachServicePage;

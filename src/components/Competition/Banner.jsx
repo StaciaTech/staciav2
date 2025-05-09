@@ -83,6 +83,7 @@ const Banner = () => {
         src={futureEvents[currentIndex]?.bannerUrl}
         alt={futureEvents[currentIndex]?.bannerTitle}
         className="banner-image"
+        loading="lazy"
       />
 
       {/* Overlay Content */}
@@ -96,11 +97,16 @@ const Banner = () => {
           {/* Event Date & Tag */}
           <div className="banner-details">
             <span className="banner-info">
-              <img src={bancal} alt="calendar" className="icon" />{" "}
+              <img
+                src={bancal}
+                alt="calendar"
+                className="icon"
+                loading="lazy"
+              />{" "}
               {formatDate(futureEvents[currentIndex]?.date)}
             </span>
             <span className="banner-info">
-              <img src={bancal} alt="tag" className="icon" />{" "}
+              <img src={bancal} alt="tag" className="icon" loading="lazy" />{" "}
               {futureEvents[currentIndex]?.eventTags}
             </span>
           </div>

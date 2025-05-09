@@ -547,7 +547,9 @@ function ProductCategoryPage() {
       <div className="cat-product_container">
         <div className="cat-product_section cat-p-section">
           <div className="cat-product_text">
-            <span className="test-seclection-white">Stacia Corp Products</span>
+            <span className="test-seclection-white">
+              Stacia Corp Products
+            </span>
             <Star />
           </div>
         </div>
@@ -556,7 +558,7 @@ function ProductCategoryPage() {
         <div>Loading...</div>
       ) : (
         <div className="service-page-content-container">
-          <div className="mobile-navigation-tabs" >
+          <div className="mobile-navigation-tabs">
             {productData.map((eachItem, i) => (
               <div
                 key={i}
@@ -618,9 +620,15 @@ function ProductCategoryPage() {
                               key={i}
                               onClick={() => {
                                 window.scrollTo(0, 0);
-                                const deptKey = eachItem.name.split(" ").join("-");
-                                const catKey = eachCat.name.split(" ").join("-");
-                                const productKey = eachPro.title.split(" ").join("-");
+                                const deptKey = eachItem.name
+                                  .split(" ")
+                                  .join("-");
+                                const catKey = eachCat.name
+                                  .split(" ")
+                                  .join("-");
+                                const productKey = eachPro.title
+                                  .split(" ")
+                                  .join("-");
                                 navigate(
                                   `/products/${deptKey}/${catKey}/${productKey}`
                                 );
@@ -662,7 +670,7 @@ function ProductCategoryPage() {
                         isVisible={cursorVisible}
                         text={"View all Products"}
                       />
-                      <img src={eachCat.imageUrl} alt="" />
+                      <img src={eachCat.imageUrl} alt="" loading="lazy" />
                     </div>
                   </div>
                 ))}

@@ -1,12 +1,5 @@
- 
-
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { useParams } from "react-router-dom";
-import NavBar from "../NavBar";
-import Footer from "../Footer";
-import SideBar from "../SideBar";
-import MobileFooter from "../MobileFooter";
-import Star from "../Star";
 import "../../styles/Eventspage.css";
 import { FaCalendarAlt } from "react-icons/fa";
 import { GoClockFill } from "react-icons/go";
@@ -14,7 +7,14 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
 import eventData from "../../Data/Compition.json";
 
-function EventDetails() {
+// Lazy load all components
+const NavBar = lazy(() => import("../NavBar"));
+const Footer = lazy(() => import("../Footer"));
+const SideBar = lazy(() => import("../SideBar"));
+const MobileFooter = lazy(() => import("../MobileFooter"));
+const Star = lazy(() => import("../Star"));
+
+const EventDetails = () => {
   const { title } = useParams();
   // Decode and normalize the title from the URL
   const paramsTitle = decodeURIComponent(title).trim();
@@ -24,7 +24,10 @@ function EventDetails() {
   useEffect(() => {
     // Log the paramsTitle for debugging
     console.log("URL Title (paramsTitle):", paramsTitle);
-    console.log("Available Event Titles in JSON:", eventData.map(e => e.title));
+    console.log(
+      "Available Event Titles in JSON:",
+      eventData.map((e) => e.title)
+    );
 
     try {
       // Normalize titles for comparison (lowercase, remove extra spaces)
@@ -36,7 +39,9 @@ function EventDetails() {
       });
 
       if (!foundEvent) {
-        setError("Event not found. Please check the event title or browse our events list.");
+        setError(
+          "Event not found. Please check the event title or browse our events list."
+        );
         return;
       }
       setSingleEvent(foundEvent);
@@ -84,13 +89,21 @@ function EventDetails() {
   if (error) {
     return (
       <div className="nav_style">
-        <NavBar />
-        <SideBar />
+        <Suspense fallback={<div>Loading Navigation...</div>}>
+          <NavBar />
+        </Suspense>
+        <Suspense fallback={<div>Loading Sidebar...</div>}>
+          <SideBar />
+        </Suspense>
         <div style={{ padding: "5rem", textAlign: "center", color: "red" }}>
           {error}
         </div>
-        <Footer />
-        <MobileFooter />
+        <Suspense fallback={<div>Loading Footer...</div>}>
+          <Footer />
+        </Suspense>
+        <Suspense fallback={<div>Loading Mobile Footer...</div>}>
+          <MobileFooter />
+        </Suspense>
       </div>
     );
   }
@@ -98,13 +111,21 @@ function EventDetails() {
   if (!singleEvent) {
     return (
       <div className="nav_style">
-        <NavBar />
-        <SideBar />
+        <Suspense fallback={<div>Loading Navigation...</div>}>
+          <NavBar />
+        </Suspense>
+        <Suspense fallback={<div>Loading Sidebar...</div>}>
+          <SideBar />
+        </Suspense>
         <div style={{ padding: "5rem", textAlign: "center" }}>
           Loading event details...
         </div>
-        <Footer />
-        <MobileFooter />
+        <Suspense fallback={<div>Loading Footer...</div>}>
+          <Footer />
+        </Suspense>
+        <Suspense fallback={<div>Loading Mobile Footer...</div>}>
+          <MobileFooter />
+        </Suspense>
       </div>
     );
   }
@@ -112,13 +133,19 @@ function EventDetails() {
   return (
     <div>
       <div className="nav_style">
-        <NavBar />
-        <SideBar />
+        <Suspense fallback={<div>Loading Navigation...</div>}>
+          <NavBar />
+        </Suspense>
+        <Suspense fallback={<div>Loading Sidebar...</div>}>
+          <SideBar />
+        </Suspense>
       </div>
       <div className="events-hero">
         <div>
           <span>{singleEvent.title}</span>
-          <Star />
+          <Suspense fallback={<div>Loading Star...</div>}>
+            <Star />
+          </Suspense>
         </div>
       </div>
       <div className="single-event-container">
@@ -145,12 +172,15 @@ function EventDetails() {
         </div>
         <div className="single-event-content-container">
           <div className="single-event-text">
-            <p>{singleEvent.detail || "No details available for this event."}</p>
+            <p>
+              {singleEvent.detail || "No details available for this event."}
+            </p>
           </div>
           <div className="single-event-img">
             <img
               src={singleEvent.imageUrl || "/assets/default-event.png"}
               alt={`${singleEvent.title} event illustration`}
+              loading="lazy"
             />
           </div>
         </div>
@@ -165,10 +195,21 @@ function EventDetails() {
           <IoIosArrowForward aria-hidden="true" />
         </a>
       </div>
-      <Footer />
-      <MobileFooter />
+      <Suspense fallback={<div>Loading Footer...</div>}>
+        <Footer />
+      </Suspense>
+      <Suspense fallback={<div>Loading Mobile Footer...</div>}>
+        <MobileFooter />
+      </Suspense>
     </div>
   );
-}
+};
 
-export default EventDetails;
+// Export with Suspense wrapper
+export default function LazyEventDetails() {
+  return (
+    <Suspense fallback={<div>Loading Event Details...</div>}>
+      <EventDetails />
+    </Suspense>
+  );
+}

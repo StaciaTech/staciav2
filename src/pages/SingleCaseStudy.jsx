@@ -530,6 +530,12 @@
 
 // export default SingleCaseStudy;
 
+
+
+
+//how stacia can help
+
+
 import React, { useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import "../styles/SingleCaseStudy.css";
@@ -538,7 +544,13 @@ import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
+import ServcieNavComp from "../components/Services/ServcieNavComp";
+import NavProductComp from "../components/ReUsableComp/NavProductComp";
+import ProjectDropdown from "../components/ProjectDropdown";
 import data from "../Data/SingleCaseStudy.json";
+import ServicesData from "../Data/Services.json";
+import ProductsData from "../Data/ProductPage.json";
+import ProjectsData from "../Data/ProjectsData.json";
 import loading from "../assets/loading.png";
 
 function SingleCaseStudy() {
@@ -549,22 +561,146 @@ function SingleCaseStudy() {
   const [showButton, setShowButton] = useState(false);
   const [showHelpPage, setShowHelpPage] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [activeTab, setActiveTab] = useState("Services");
+  const [relatedContent, setRelatedContent] = useState({
+    Services: [],
+    Products: [],
+    Projects: [],
+  });
   const popupRef = useRef(null);
+
+  // Function to fetch items related to the case study title
+  const fetchRelatedData = (caseStudyTitle) => {
+    const relatedData = {
+      Services: [],
+      Products: [],
+      Projects: [],
+    };
+
+    const titleLower = caseStudyTitle.toLowerCase();
+    const chilliKeyword = "chilli";
+
+    // Placeholder ServicesData (since not provided)
+    const ServicesData = [
+      {
+        department: "Consulting",
+        categories: [
+          {
+            name: "Agricultural Consulting",
+            services: [
+              {
+                title: "Chilli Crop Optimization",
+                description:
+                  "Enhancing chilli crop yield through advanced techniques.",
+                relatedTo: ["Chilli"],
+                imageUrl: "/assets/services/chilli-optimization.webp",
+                link: "/services/chilli-optimization",
+              },
+              {
+                title: "Soil Analysis",
+                description:
+                  "Analyzing soil for optimal crop growth, including chilli.",
+                relatedTo: [],
+                imageUrl: "/assets/services/soil-analysis.webp",
+                link: "/services/soil-analysis",
+              },
+            ],
+          },
+        ],
+      },
+    ];
+
+    // Placeholder ProductsData (since not provided)
+    const ProductsData = {
+      department: [
+        {
+          name: "Agricultural Tools",
+          category: [
+            {
+              name: "Crop Enhancement",
+              products: [
+                {
+                  title: "Chilli Growth Fertilizer",
+                  description: "Specialized fertilizer for chilli plants.",
+                  relatedTo: ["Chilli"],
+                  imageUrl: "/assets/products/chilli-fertilizer.webp",
+                  link: "/products/chilli-fertilizer",
+                },
+                {
+                  title: "Generic Crop Spray",
+                  description: "Spray for various crops, including chilli.",
+                  relatedTo: [],
+                  imageUrl: "/assets/products/crop-spray.webp",
+                  link: "/products/crop-spray",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    // Fetch related services
+    ServicesData?.forEach((department) => {
+      department.categories?.forEach((category) => {
+        category.services?.forEach((service) => {
+          if (
+            service.relatedTo?.includes(caseStudyTitle) ||
+            service.title.toLowerCase().includes(chilliKeyword) ||
+            service.description?.toLowerCase().includes(chilliKeyword)
+          ) {
+            relatedData.Services.push(service);
+          }
+        });
+      });
+    });
+
+    // Fetch related products
+    ProductsData.department?.forEach((dept) => {
+      dept.category?.forEach((category) => {
+        category.products?.forEach((product) => {
+          if (
+            product.relatedTo?.includes(caseStudyTitle) ||
+            product.title.toLowerCase().includes(chilliKeyword) ||
+            product.description?.toLowerCase().includes(chilliKeyword)
+          ) {
+            relatedData.Products.push(product);
+          }
+        });
+      });
+    });
+
+    // Fetch related projects from provided ProjectsData
+    ProjectsData.Departments?.forEach((dept) => {
+      dept.categories?.forEach((category) => {
+        category.projects?.forEach((project) => {
+          if (
+            project.title.toLowerCase().includes(chilliKeyword) ||
+            project.mainDesc?.toLowerCase().includes(chilliKeyword)
+          ) {
+            relatedData.Projects.push(project);
+          }
+        });
+      });
+    });
+
+    return relatedData;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      const bottomOffset = 1000; // Adjust this value as needed
+      const bottomOffset = 1000;
       if (scrollY > 4200) {
         if (scrollY + windowHeight >= documentHeight - bottomOffset) {
-          setShowButton(false); // Hide when near bottom
+          setShowButton(false);
         } else {
-          setShowButton(true); // Show otherwise
+          setShowButton(true);
         }
       } else {
-        setShowButton(false); // Hide before 1500px
+        setShowButton(false);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -574,17 +710,20 @@ function SingleCaseStudy() {
   const handleClick = () => {
     setShowHelpPage(true);
     setShowForm(true);
+    // Fetch related data when popup is opened
+    if (caseStudy?.title) {
+      setRelatedContent(fetchRelatedData(caseStudy.title));
+    }
   };
+
   useEffect(() => {
     if (showForm) {
-      // Store the current scroll position
       const scrollY = window.scrollY;
       document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}px`;
       document.body.style.width = "100%";
       document.body.style.overflow = "hidden";
     } else {
-      // Restore the scroll position
       const scrollY = document.body.style.top;
       document.body.style.position = "";
       document.body.style.top = "";
@@ -594,7 +733,6 @@ function SingleCaseStudy() {
     }
 
     return () => {
-      // Reset on unmount
       document.body.style.position = "";
       document.body.style.top = "";
       document.body.style.width = "";
@@ -614,7 +752,6 @@ function SingleCaseStudy() {
     let selectedCaseStudy = null;
     let allCaseStudies = [];
 
-    // Find the current case study and collect all case studies
     data.singlecasestudy.forEach((category) => {
       category.data.forEach((study) => {
         if (study.id === id) {
@@ -626,7 +763,6 @@ function SingleCaseStudy() {
 
     if (selectedCaseStudy) {
       setCaseStudy(selectedCaseStudy);
-      // Filter out the current case study and limit to 3 others
       const others = allCaseStudies
         .filter((study) => study.id !== id)
         .slice(0, 5);
@@ -636,11 +772,51 @@ function SingleCaseStudy() {
     }
   }, [id]);
 
+  // Render navigation component
+  const renderNavComponent = () => {
+    const currentContent = relatedContent[activeTab];
+    if (!currentContent || currentContent.length === 0) return null;
+
+    switch (activeTab) {
+      case "Services":
+        return (
+          <ServcieNavComp
+            handleClose={() => {
+              setShowHelpPage(false);
+              setShowForm(false);
+            }}
+            relatedItems={currentContent}
+          />
+        );
+      case "Products":
+        return (
+          <NavProductComp
+            handleClose={() => {
+              setShowHelpPage(false);
+              setShowForm(false);
+            }}
+            relatedItems={currentContent}
+          />
+        );
+      case "Projects":
+        return (
+          <ProjectDropdown
+            handleClose={() => {
+              setShowHelpPage(false);
+              setShowForm(false);
+            }}
+            relatedItems={currentContent}
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
   if (!caseStudy) {
     return <div>Loading...</div>;
   }
 
-  
   return (
     <>
       <NavBar />
@@ -751,7 +927,7 @@ function SingleCaseStudy() {
             </button>
           )}
 
-          {/* Help Page Section */}
+          {/* Help Section */}
           {showForm && showHelpPage && (
             <div className="help-section">
               <div
@@ -771,54 +947,38 @@ function SingleCaseStudy() {
 
                   {/* Tabs */}
                   <div className="help-tabs">
-                    {["Services", "Products", "Projects"].map((tab, index) => (
+                    {["Services", "Products", "Projects"].map((tab) => (
                       <button
-                        key={index}
-                        className={tab === "Services" ? "active" : ""}
+                        key={tab}
+                        className={activeTab === tab ? "active" : ""}
+                        onClick={() => setActiveTab(tab)}
                       >
                         {tab}
                       </button>
                     ))}
                   </div>
 
-                  {/* Links */}
-                  <ul className="help-links">
-                    {[
-                      "Mechanical",
-                      "Electronics",
-                      "Tech",
-                      "column 1",
-                      "column 2",
-                      "column 3",
-                    ].map((link, index) => (
-                      <li
-                        key={index}
-                        className={link === "Electronics" ? "active" : ""}
-                      >
-                        {link}
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Navigation Component */}
+                  <div className="nav-component">{renderNavComponent()}</div>
                 </div>
 
                 {/* Help Card Section */}
                 <div className="help-card-section">
-                  {[
-                    {
-                      img: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
-                      title: "Placeholder text",
-                      description:
-                        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in sagittis sem quis lectus aliquam.",
-                      link: "#",
-                    },
-                  ].map((card, index) => (
-                    <div className="help-card" key={index}>
-                      <img src={card.img} alt={card.title} />
-                      <h3>{card.title}</h3>
-                      <p>{card.description}</p>
-                      <a href={card.link}>Know more →</a>
-                    </div>
-                  ))}
+                  {relatedContent[activeTab].length > 0 ? (
+                    relatedContent[activeTab].map((item, index) => (
+                      <div key={index} className="help-card">
+                        <img
+                          src={item.imageUrl || item.mainImageUrl}
+                          alt={item.title}
+                        />
+                        <h3>{item.title}</h3>
+                        <p>{item.description || item.mainDesc}</p>
+                        <a href={item.link || "#"}>Know more →</a>
+                      </div>
+                    ))
+                  ) : (
+                    <p>No related content available for this category.</p>
+                  )}
                 </div>
 
                 {/* Close Button */}
@@ -849,7 +1009,9 @@ function SingleCaseStudy() {
             </h2>
             <ul className="problem-statement-para2">
               {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
-                <li key={index} className="li-text">{feature}</li>
+                <li key={index} className="li-text">
+                  {feature}
+                </li>
               ))}
             </ul>
             <p className="problem-statement-para1">
@@ -896,7 +1058,7 @@ function SingleCaseStudy() {
             <ul className="problem-statement-para2">
               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.Processes.map(
                 (Processes, index) => (
-                  <li key={index}className="li-text">
+                  <li key={index} className="li-text">
                     <span className="highlight">{Processes.Process}:</span>{" "}
                     {Processes.Description}
                   </li>
@@ -1137,9 +1299,7 @@ function SingleCaseStudy() {
           </div>
 
           <div className="single-casestudy-layout1-title test-seclection-blue">
-            <p>
-              {/* {caseStudy.gallerytittle} */} Industries
-              </p>
+            <p>Industries</p>
           </div>
           {caseStudy.gallery && caseStudy.gallery.length > 0 && (
             <div className="single-casestudy-layout2">
@@ -1165,7 +1325,7 @@ function SingleCaseStudy() {
                 {caseStudy.challenges.map((challenge, index) => (
                   <div key={index}>
                     <div className="single-casestudy-layout3-title test-seclection-blue">
-                      {challenge.challengestitle} 
+                      {challenge.challengestitle}
                     </div>
                     <p className="test-seclection-blue-challenge">
                       {challenge.description}
