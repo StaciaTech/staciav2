@@ -43,7 +43,7 @@
   background: linear-gradient(to top, #000000, transparent);
 }
 .single-article-heading {
-  font-size: 6rem;
+  font-size: 5rem;
   font-family: EuclidSemiBold;
   padding: 4rem;
   color: #fff;
@@ -53,6 +53,7 @@
 .single-article-main-title {
   font-family: EuclidSemiBold;
   font-size: 2rem;
+  
 }
 .single-article-content-card-container {
   /* padding: 7.5rem; */
@@ -74,7 +75,7 @@
   width: 50%;
 }
 .single-article-main-content-content {
-  background-color: #f9f6ff;
+  /* background-color: #f9f6ff; */
   padding: 1rem;
   display: flex;
   flex-direction: column;
