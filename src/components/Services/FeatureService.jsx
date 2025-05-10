@@ -9,7 +9,7 @@ export default function FeatureService({ img, description, title, id }) {
   return (
     <div className="feature-service">
       <div className="feature-service-img-box">
-        <img src={img} alt=""  loading="lazy"/>
+        <img src={img} alt="" loading="lazy" />
       </div>
 
       <div className="feature-content">

@@ -69,23 +69,20 @@
 .four-img:hover .founder-content {
   display: flex;
 }
-
-
 .icon-wrapper:hover {
-  margin-right: 4.5rem; /* Increase gap */
-  animation: iconBounce 1s ease-in-out; /* Bounce animation */
+  margin-right: 4.5rem; 
+  animation: iconBounce 1s ease-in-out;
 }
 
-/* Keyframe animation for a subtle bounce effect */
 @keyframes iconBounce {
   0% {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(6px); /* Slight push to the right */
+    transform: translateX(6px);
   }
   100% {
-    transform: translateX(0); /* Return to original position */
+    transform: translateX(0); 
   }
 }
 .icon-wrapper {

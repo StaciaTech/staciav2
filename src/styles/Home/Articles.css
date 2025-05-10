@@ -1,6 +1,6 @@
 .articles-title {
-  /* color: #e0e0e0; */
-  color: #6b6084;
+  /* color: #E0E0E0; */
+  color: #6B6084;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
@@ -135,7 +135,7 @@
 } */
 
 .article-learn-more-link {
-  color: #0047ff;
+  color: #0047FF;
   user-select: none;
 }
 
@@ -145,8 +145,8 @@
 }
 
 .mobile-article-title {
-  /* color: #e0e0e0; */
-  color: #6b6084;
+  /* color: #E0E0E0; */
+  color: #6B6084;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
