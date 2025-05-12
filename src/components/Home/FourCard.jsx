@@ -4,6 +4,16 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 export default function FourCard({ data, path }) {
   const navigate = useNavigate();
+  const animateText = (text) =>
+    text.split("").map((char, idx) => (
+      <span
+        key={idx}
+        className="char"
+        style={{ transitionDelay: `${idx * 50}ms` }}
+      >
+        {char}
+      </span>
+    ));
   return (
     <div className="four-card">
       <div className="four-pos test-seclection-blue">{data.pos}</div>
@@ -18,23 +28,27 @@ export default function FourCard({ data, path }) {
         />
         <div className="founder-content">
           {/* LinkedIn Icon */}
-          <div>
+          <div className="icon-wrapper">
             <a href={data.proId} target="_blank" rel="noopener noreferrer">
               <div className="leader-icon-container">
                 <FaLinkedinIn className="footer-linkedin-icon" />
               </div>
+              <div className="icon-name">LinkedIn</div>
             </a>
           </div>
-          <div className="icon-name">LinkedinIn</div>
           {/* Email Icon */}
-          <div>
-            <a href={`mailto:${data.email}`} target="/blank">
+          <div className="icon-wrapper">
+            <a
+              href={`mailto:${data.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="leader-icon-container">
                 <FaEnvelope className="footer-facebook-icon" />
               </div>
+              <div className="icon-name"> Email</div>
             </a>
           </div>
-          <div className="icon-name">Email</div>
         </div>
       </div>
       <div className="four-para">
@@ -44,15 +58,3 @@ export default function FourCard({ data, path }) {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-

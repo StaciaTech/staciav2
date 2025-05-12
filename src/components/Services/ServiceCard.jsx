@@ -6,7 +6,7 @@ export default function ServiceCard({ img, title, description, id }) {
   return (
     <div className="service-card">
       <div className="service-card-img-box">
-        <img src={img} alt="" />
+        <img src={img} alt=""  loading="lazy"/>
       </div>
       <div className="service-content-box">
         <div className="feature-title">{title}</div>

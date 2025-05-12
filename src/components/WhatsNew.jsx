@@ -123,7 +123,7 @@ export default function WhatsNew({ handleClose }) {
             handleClose();
           }}
         >
-          See More
+          
         </div>
       </div>
     </div>

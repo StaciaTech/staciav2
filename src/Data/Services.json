@@ -6,7 +6,7 @@
     "categories": [
       {
         "name": "Industrial Automation",
-        "description": "Industrial Automation is the integration of advanced technologies into manufacturing and production processes to increase efficiency, accuracy, and safety. It encompasses specialized machines such as SPMs (Special Purpose Machines), precision test rigs for product validation, vision systems for quality inspection, and robotic pick-and-place units for streamlined material handling. Additionally, custom-designed jigs and fixtures enhance process stability and repeatability. This automation minimizes human intervention, reduces errors, and boosts overall productivity. Widely used across automotive, electronics, FMCG, and heavy industries, industrial automation is essential for modern production lines seeking consistent output, cost optimization, and competitive scalability in dynamic global markets",
+        "description": "Industrial Automation integrates technologies such as SPMs, precision test rigs, vision inspection systems, and robotic handling units to enhance manufacturing efficiency, accuracy, and safety. It minimizes human intervention, reduces errors, and increases productivity. Custom jigs and fixtures further ensure process stability. Widely used in automotive, electronics, FMCG, and heavy industries, it supports consistent output and scalable production.",
         "imageUrl": "/assets/2d-drafting.webp",
         "position": 1,
         "services": [
@@ -412,7 +412,7 @@
       },
       {
         "name": "CAD Engineering",
-        "description": "CAD Engineering encompasses a range of services designed to enhance product development and design precision. Our expertise includes CAD Conversion, transforming legacy drawings into detailed digital formats for easy editing and integration. Product/Industrial Design focuses on creating functional, aesthetically appealing, and manufacturable products tailored to client specifications. Reverse Engineering enables us to reconstruct and improve existing products, extracting valuable design data from physical objects. Our 3D Renderings bring concepts to life, offering highly detailed visual representations for prototyping, presentations, and client approvals. This comprehensive approach streamlines product development, ensuring accuracy, efficiency, and innovation",
+        "description": "CAD Engineering offers services that improve product development and design accuracy. Key areas include CAD Conversion, Industrial Design, Reverse Engineering, and 3D Renderings. We digitize legacy drawings, design functional and manufacturable products, extract design data from physical objects, and create detailed visual models. This streamlined approach enhances innovation, efficiency, and precision in product development from concept to approval.",
         "imageUrl": "/assets/CAD-Conversion.webp",
         "position": 2,
         "services": [
@@ -739,7 +739,7 @@
       },
       {
         "name": "Consultancy and Audit",
-        "description": "Design consultancy and audit services offer expert guidance and evaluation throughout the product design process. We help businesses optimize product designs for functionality, manufacturability, and user experience. Our consultants provide insights into design best practices, materials, and technology, ensuring innovation and efficiency. We also conduct comprehensive design audits to assess design quality, adherence to industry standards, and compliance with safety regulations. This service aims to identify potential improvements, reduce costs, and enhance product performance. Whether developing new products or refining existing ones, our consultancy ensures that designs meet both aesthetic and functional requirements while improving overall valu",
+        "description": "Design consultancy and audit services provide expert support to optimize product designs for functionality, manufacturability, and user experience. We offer insights on materials, technology, and best practices, ensuring efficient, innovative outcomes. Through comprehensive audits, we evaluate design quality, compliance, and industry standards. This helps identify improvements, reduce costs, and boost performance, ensuring products meet both functional and aesthetic goals.",
         "imageUrl": "/assets/design audit.webp",
         "position": 3,
         "services": [
@@ -920,7 +920,7 @@
     "categories": [
       {
         "name": "Embedded Hardware & Firmware",
-        "description": "Design consultancy and audit services offer expert guidance and evaluation throughout the product design process. We help businesses optimize product designs for functionality, manufacturability, and user experience. Our consultants provide insights into design best practices, materials, and technology, ensuring innovation and efficiency. We also conduct comprehensive design audits to assess design quality, adherence to industry standards, and compliance with safety regulations. This service aims to identify potential improvements, reduce costs, and enhance product performance. Whether developing new products or refining existing ones, our consultancy ensures that designs meet both aesthetic and functional requirements while improving overall valu",
+        "description": "Design consultancy and audit services provide expert guidance to improve product design across functionality, manufacturability, and user experience. We advise on best practices, materials, and technology to drive innovation and efficiency. Our audits evaluate design quality, industry compliance, and safety standards. This helps identify enhancements, reduce costs, and boost performance. We support both new development and refinement of existing designs.",
         "imageUrl": "/assets/Embedded-Systems-Development.webp",
         "position": 1,
         "services": [
@@ -1094,7 +1094,7 @@
       },
       {
         "name": "PCB ",
-        "description": " PCB Design & Development involves the creation and optimization of printed circuit boards for various applications. Our experts provide tailored solutions, from schematic capture to layout design, ensuring the highest standards of performance and manufacturability. We focus on reducing complexity, enhancing signal integrity, and optimizing component placement for cost-effective production. Additionally, we conduct thorough testing and validation to guarantee functionality, durability, and compliance with industry standards. Our comprehensive services include multi-layer design, high-speed PCB design, and prototyping for rapid market entry.",
+        "description": "PCB Design & Development focuses on creating optimized printed circuit boards for diverse applications. Our services cover schematic capture, layout design, and prototyping, ensuring high performance and manufacturability. We enhance signal integrity, reduce complexity, and optimize component placement for cost-effective production. With thorough testing and validation, including multi-layer and high-speed designs, we ensure reliable, industry-compliant PCB solutions.",
         "imageUrl": "/assets/PCB-Design-and-Manufacturing.webp",
         "position": 2,
         "services": [
@@ -1272,7 +1272,7 @@
       },
       {
         "name": "Electronics Product Engineering ",
-        "description": " Electronics Product Engineering encompasses the entire lifecycle of electronic products, from concept and design to prototyping and production. We specialize in developing smart devices, embedded systems, and consumer electronics. Our team ensures that products are not only functional but also reliable, cost-effective, and scalable for mass production. We integrate hardware and software design, conduct rigorous testing, and provide innovative solutions that meet market demands. Our end-to-end services include circuit design, firmware development, prototyping, and product development, ensuring high-performance and compliance with regulatory standards",
+        "description": " Electronics Product Engineering covers the full lifecycle of electronic products—from concept to production. We develop smart devices, embedded systems, and consumer electronics with a focus on functionality, reliability, and scalability. Our services include circuit design, firmware development, prototyping, and testing. By integrating hardware and software, we deliver innovative, high-performance solutions that meet market needs and regulatory standards.",
         "imageUrl": "/assets/product design.webp",
         "position": 3,
         "services": [
@@ -1446,7 +1446,7 @@
       },
       {
         "name": "Consultancy & Audit",
-        "description": "Consultancy & Audit services focus on optimizing product designs, ensuring regulatory compliance, and improving manufacturing processes. Our team assists in product design reviews, compliance gap analysis, and obtaining necessary certifications such as CE, FCC, and UL. We offer pre-compliance testing to address potential issues early, helping clients avoid costly delays. Additionally, we conduct process audits to improve operational efficiency, reduce waste, and enhance product reliability. Our goal is to provide actionable insights and recommendations, ensuring a smooth path from design to production while meeting industry standards and maximizing product performance",
+        "description": "Consultancy & Audit services aim to optimize product designs, ensure compliance, and enhance manufacturing efficiency. We assist with design reviews, gap analysis, and certifications like CE, FCC, and UL. Our pre-compliance testing identifies issues early, while process audits improve reliability and reduce waste. We deliver actionable insights to support a seamless transition from design to production, meeting industry standards.",
         "imageUrl": "/assets/Electronics-Consulting-and-Review.webp",
         "position": 4,
         "services": [
@@ -1616,7 +1616,7 @@
     "position": 3,
     "categories": [
       {
-        "description": "Our Design Services focus on creating visually appealing, user-centric designs that align with your brand identity and business objectives. From UI/UX design to graphic design and prototyping, we work closely with clients to craft seamless digital experiences that drive engagement and conversions. Whether designing user interfaces, developing intricate graphics, or building prototypes to test design concepts, our team delivers exceptional design solutions for a wide range of digital platforms. We combine creativity with functionality to produce designs that not only look good but also enhance usability, ensuring your audience has an enjoyable interaction with your brand.",
+        "description": "Our Design Services deliver visually compelling, user-focused solutions aligned with your brand and goals. We specialize in UI/UX design, graphic design, and prototyping to create seamless digital experiences. From intuitive interfaces to detailed visual assets, we enhance usability and engagement across platforms. Our creative, functional approach ensures designs that not only look great but also drive meaningful user interactions",
         "imageUrl": "/assets/Design-Services.webp",
         "departmentId": "672eefbf81be8191d93ce4bd",
         "id": "67529615d6387bac980467b3",
@@ -1761,7 +1761,7 @@
         ]
       },
       {
-        "description": "Our Development Services offer comprehensive solutions to create dynamic, high-performing applications and websites. We specialize in full-stack web development, mobile app development, custom software development, and API integration. Our team works with businesses to bring their ideas to life by building scalable, secure, and efficient systems that provide outstanding user experiences. From crafting robust backends to developing intuitive frontends and designing mobile applications, we focus on delivering solutions that drive growth and achieve your business goals. We leverage the latest technologies and best practices to ensure that your applications are reliable, functional, and scalable.",
+        "description": "Our Development Services provide end-to-end solutions for building dynamic, high-performance applications and websites. We specialize in full-stack web development, mobile app development, custom software, and API integration. Our team creates scalable, secure systems that deliver exceptional user experiences, from robust backends to intuitive frontends and mobile apps. We use the latest technologies to ensure reliability, functionality, and scalability, helping businesses achieve their goals.",
         "imageUrl": "/assets/Development-Services.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
         "id": "6769383a51dcda17a0f93888",
@@ -2069,7 +2069,7 @@
         ]
       },
       {
-        "description": "Our DevOps and Infrastructure Management services streamline the development lifecycle and ensure smooth, reliable operation of your systems. By automating key processes such as deployment, testing, and monitoring, we help organizations deliver high-quality software faster and with greater consistency. We focus on infrastructure as code (IaC), continuous integration and deployment (CI/CD), and robust server management to ensure scalability, security, and efficiency. With our services, businesses can reduce downtime, enhance collaboration between development and operations teams, and maintain the reliability of their applications.",
+        "description": "Our DevOps and Infrastructure Management services optimize the development lifecycle, ensuring reliable system operations. We automate deployment, testing, and monitoring to accelerate software delivery with consistency. By focusing on infrastructure as code (IaC), CI/CD, and server management, we ensure scalability, security, and efficiency. Our services reduce downtime, foster collaboration between teams, and maintain application reliability.",
         "imageUrl": "/assets/DevOps-Infrastructure-Management.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
         "id": "6769386151dcda17a0f93889",
@@ -2436,7 +2436,7 @@
         ]
       },
       {
-        "description": "Our Data and Analytics Services empower businesses to unlock the potential of their data through efficient management, analysis, and visualization. By leveraging cutting-edge tools and technologies, we help organizations make data-driven decisions that lead to better business outcomes. From database management to big data solutions and advanced data visualization, we ensure that businesses can access, interpret, and utilize their data effectively. Our services also include business intelligence (BI) solutions that provide actionable insights, allowing businesses to gain a competitive edge and optimize operations.",
+        "description": "Our Data and Analytics Services help businesses harness the power of data for better decision-making. We provide efficient data management, analysis, and visualization using advanced tools and technologies. From database management to big data solutions and BI, we ensure businesses can access and interpret data effectively. Our insights drive competitive advantage and operational optimization.",
         "imageUrl": "/assets/Data-Analytics-Services.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
         "id": "6769388d51dcda17a0f9388a",
@@ -2588,7 +2588,7 @@
         ]
       },
       {
-        "description": "Our Maintenance and Support Services ensure that your applications run smoothly and are always up-to-date. Whether it’s fixing bugs, optimizing performance, or ensuring the availability of your systems, our team is committed to keeping your technology working at its best. We provide timely updates, routine monitoring, and proactive issue resolution to minimize downtime and maximize user satisfaction. With our services, you can focus on innovation and growth while we take care of the technical maintenance and support your business needs to stay competitive.",
+        "description": "Our Maintenance and Support Services ensure your applications remain smooth and up-to-date. We handle bug fixes, performance optimization, and system availability, providing timely updates and proactive monitoring. Our team resolves issues quickly to minimize downtime and enhance user satisfaction. Focus on innovation while we manage the technical maintenance, helping your business stay competitive and efficient",
         "imageUrl": "/assets/Maintenance-Support-Services.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
         "id": "6769388d51dcda17a0f9388a",
@@ -2820,7 +2820,7 @@
         ]
       },
       {
-        "description": "Our Quality Assurance (QA) and Testing Services ensure that your applications are robust, secure, and meet the highest quality standards. We conduct thorough testing, including functional, performance, and security testing, to ensure that your software delivers a seamless user experience. Our team applies best practices and industry standards to identify and fix issues before your application is deployed, helping to reduce the risk of defects and ensuring that your software functions as expected in real-world scenarios",
+        "description": "Our Quality Assurance (QA) and Testing Services ensure robust, secure applications that meet the highest standards. We perform functional, performance, and security testing to guarantee a seamless user experience. By applying industry best practices, we identify and fix issues before deployment, reducing defects and ensuring your software performs as expected in real-world scenarios.",
         "imageUrl": "/assets/Quality-Assurance(QA).webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
         "id": "6769388d51dcda17a0f9388a",
@@ -3045,7 +3045,7 @@
         ]
       },
       {
-        "description": "Our Consulting Services provide expert guidance to help organizations optimize their IT strategies, digital transformation processes, and technology adoption. From aligning IT infrastructure with business objectives to implementing the latest technologies, we offer solutions that drive operational efficiency and innovation. Our consultants leverage their expertise across industries to offer actionable insights and strategies for businesses to thrive in the digital age, ensuring long-term growth and success.",
+        "description": "Our Consulting Services offer expert guidance to optimize IT strategies, digital transformation, and technology adoption. We align IT infrastructure with business goals and implement cutting-edge solutions to drive efficiency and innovation. Our consultants provide actionable insights across industries, helping businesses thrive in the digital age and ensuring long-term growth and success.",
         "imageUrl": "/assets/Consulting-Services.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
         "id": "6769388d51dcda17a0f9388a",

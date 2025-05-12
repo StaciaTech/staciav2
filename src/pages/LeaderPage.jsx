@@ -199,10 +199,13 @@ function LeaderPage() {
                         style={{ cursor: "pointer" }}
                       >
                         <div className="leader-icon-container">
-                          <FaFileDownload className="footer-linkedin-icon" />
+                          <FaFileDownload className="footer-linkedin-icon" > Download</FaFileDownload>
                         </div>
                       </div>
                     )}
+                    <div >
+                      <p className="downloadicon-txt">Download file</p>
+                    </div>
                   </div>
                 </div>
               </div>
