@@ -133,6 +133,7 @@
   .mobile-navigation-tabs {
     display: block;
     position: sticky;
+    top: 60px;
   }
   /* .mobile-navigation-tabs {
     display: flex  ;

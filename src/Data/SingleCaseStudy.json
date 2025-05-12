@@ -6,7 +6,7 @@
       "data": [
         {
           "id": "Case-Study-1",
-          "department": "Electronics Sector",
+          "department": "Mechanical Sector",
           "title": "Spicing Up Efficiency: The Impact of Mechanization on the Chilli Industry",
           "backgroundImage": "/assets/CaseStudy/ChilliBannerImage.webp",
           "imageURL": "/assets/CaseStudy/ChilliBackgroundImage.webp",
@@ -19,6 +19,32 @@
             "imageSrc": "/assets/singlepage-2.webp",
             "content": [
               "Chilli processing, historically a labor-intensive endeavour, encompasses a series of operations, including harvesting, drying, cleaning, sorting, grinding, and packaging. Traditional methods are frequently characterized by inefficiencies, inconsistencies in product quality, and elevated labor costs. These limitations impede scalability and the ability to conform to the stringent quality standards of the global market. The advent of advanced engineering and automation technologies has facilitated the mechanization of these processes, offering a pathway to enhanced productivity and profitability. The transition from traditional, manual methods to mechanized systems represents a significant advancement in agricultural technology."
+            ]
+          },
+         "helpbox": {
+            "tabs": ["Services", "Products", "Projects"],
+            "cards": [
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Automation Services",
+                "description": "Consulting and implementation of automation solutions.",
+                "link": "/services/automation",
+                "tab": "Services"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Smart Farming Products",
+                "description": "IoT devices for precision agriculture.",
+                "link": "/products/smart-farming",
+                "tab": "Products"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Project Management",
+                "description": "End-to-end project support for farm automation.",
+                "link": "/projects/management",
+                "tab": "Projects"
+              }
             ]
           },
           "Backgrounddes": {
@@ -552,6 +578,34 @@
             "overviewtitle": "Introduction",
             "description": "The agricultural sector is the backbone of the Indian economy, with a significant portion of the population relying on it for their livelihood. The Mandi system, a network of agricultural markets, plays a crucial role in facilitating the trade of agricultural produce from farmers to consumers. However, the traditional Mandi system faces numerous challenges, including inefficiencies, lack of transparency, and infrastructural limitations. This case study analyzes the current state of the Mandi procurement system in India, examines the impact of technology, and proposes solutions to modernize and optimize its operations. We will also explore how EDIFAI, a unifying application, can integrate the procurement business with Mandis, agents, FPOs, and the logistics team."
           },
+
+           "helpbox": {
+            "tabs": ["Services", "Products", "Projects"],
+            "cards": [
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Automation Services",
+                "description": "Consulting and implementation of automation solutions.",
+                "link": "/services/automation",
+                "tab": "Services"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Smart Farming Products",
+                "description": "IoT devices for precision agriculture.",
+                "link": "/products/smart-farming",
+                "tab": "Products"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Project Management",
+                "description": "End-to-end project support for farm automation.",
+                "link": "/projects/management",
+                "tab": "Projects"
+              }
+            ]
+          },
+          
           "imageContent": {
             "imagetitle": "Background",
             "imageSrc": "/assets/singlepage-mandi.webp",
@@ -1053,6 +1107,33 @@
             "overviewtitle": "Introduction",
             "description": "India's e-commerce sector is a key driver of economic growth, revolutionizing trade through platforms like Amazon and Flipkart. Fueled by increased internet penetration and mobile technology, the sector faces challenges like infrastructure limitations and regulatory uncertainties. This case study analyzes the current state, growth drivers, and future opportunities in India's e-commerce market."
           },
+           "helpbox": {
+            "tabs": ["Services", "Products", "Projects"],
+            "cards": [
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Automation Services",
+                "description": "Consulting and implementation of automation solutions.",
+                "link": "/services/automation",
+                "tab": "Services"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Smart Farming Products",
+                "description": "IoT devices for precision agriculture.",
+                "link": "/products/smart-farming",
+                "tab": "Products"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Project Management",
+                "description": "End-to-end project support for farm automation.",
+                "link": "/projects/management",
+                "tab": "Projects"
+              }
+            ]
+          },
+          
           "imageContent": {
             "imagetitle": "Background",
             "imageSrc": "/assets/singlepage-ecommerce.webp",
@@ -1526,10 +1607,10 @@
           },
           "gallerytittle": "E-commerce Platforms",
           "gallery": [
-            "/assets/CaseStudy/Ecommerce1.webp.webp",
-            "/assets/CaseStudy/Ecommerce2.webp.webp",
-            "/assets/CaseStudy/Ecommerce3.webp.webp",
-            "/assets/CaseStudy/Ecommerce4.webp.webp"
+            "/assets/CaseStudy/Ecommerce1.webp",
+            "/assets/CaseStudy/Ecommerce2.webp",
+            "/assets/CaseStudy/Ecommerce3.webp",
+            "/assets/CaseStudy/Ecommerce4.webp"
           ],
           "challenges": [
             {
@@ -1554,6 +1635,34 @@
             "overviewtitle": "Introduction",
             "description": "The electronics industry faces increasing pressure to adopt sustainable practices due to e-waste, resource depletion, and energy consumption. Stacia Corp. is leading the transition to sustainable electronics through eco-friendly design, circular economy principles, and ethical supply chains. This case study examines the challenges, opportunities, and Stacia Corp.'s strategic outlook."
           },
+
+           "helpbox": {
+            "tabs": ["Services", "Products", "Projects"],
+            "cards": [
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Automation Services",
+                "description": "Consulting and implementation of automation solutions.",
+                "link": "/services/automation",
+                "tab": "Services"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Smart Farming Products",
+                "description": "IoT devices for precision agriculture.",
+                "link": "/products/smart-farming",
+                "tab": "Products"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Project Management",
+                "description": "End-to-end project support for farm automation.",
+                "link": "/projects/management",
+                "tab": "Projects"
+              }
+            ]
+          },
+          
           "imageContent": {
             "imagetitle": "Background",
             "imageSrc": "/assets/singlepage-sustainable-electronics.webp",
@@ -2055,6 +2164,33 @@
             "overviewtitle": "Introduction",
             "description": "Artificial intelligence (AI) is transforming workplaces by automating tasks, enhancing decision-making, and creating new roles. However, it raises concerns about job displacement, ethical issues, and regulatory challenges. This case study explores AI's multifaceted impact on the future of work and strategies to navigate this evolving landscape."
           },
+           "helpbox": {
+            "tabs": ["Services", "Products", "Projects"],
+            "cards": [
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Automation Services",
+                "description": "Consulting and implementation of automation solutions.",
+                "link": "/services/automation",
+                "tab": "Services"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Smart Farming Products",
+                "description": "IoT devices for precision agriculture.",
+                "link": "/products/smart-farming",
+                "tab": "Products"
+              },
+              {
+                "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+                "title": "Project Management",
+                "description": "End-to-end project support for farm automation.",
+                "link": "/projects/management",
+                "tab": "Projects"
+              }
+            ]
+          },
+          
           "imageContent": {
             "imagetitle": "Background",
             "imageSrc": "/assets/singlepage-ai.webp",

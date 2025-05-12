@@ -9,6 +9,11 @@
         "title": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design - July 2025",
         "des": "Local developer community gathering",
         "imageUrl": "/assets/banner2.webp"
+      },
+      {
+        "title": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design - May 2025",
+        "des": "Local developer community gathering",
+        "imageUrl": "/assets/Banner.webp"
       }
     ],
     "products": [
@@ -16,20 +21,45 @@
         "title": "Onedril (SSM)",
         "des": "Agri and Food Processing SPM",
         "imageUrl": "/assets/ProductPage/onedrillssm.webp"
+      },
+      {
+        "title": "Hydration tracking (G-sensor)",
+        "des": "Research & Development",
+        "imageUrl": "/assets/ProductPage/Default.webp"
+      },
+      {
+        "title": "Edifai (Simplify your business)",
+        "des": "Edifai ",
+        "imageUrl": "/assets/New Product Development.webp"
       }
     ],
     "caseStudy": [
       {
         "title": "Spicing Up Efficiency: The Impact of Mechanization on the Chilli Industry",
         "des": "Mechanical",
-        "imageUrl": "/assets/ChilliBackground.png"
+        "imageUrl": "/assets/CaseStudy/ChilliBannerImage.webp"
+      },
+      {
+        "title": "Navigating the Future of Sustainable Electronics",
+        "des": "Electronics",
+        "imageUrl": "/assets/CaseStudy/ElectronicBanner.webp"
+      },
+      {
+        "title": "Transforming Indian Agriculture",
+        "des": "Tech",
+        "imageUrl": "/assets/CaseStudy/MandiBanner.webp"
       }
     ],
     "articles": [
       {
         "title": "Ascendant Intelligence",
         "des": "AI’s Transformative Role in the Future",
-        "imageUrl": "/assets/ascendent.webp"
+        "imageUrl": "/assets/Article/ascendent.webp"
+      },
+      {
+        "title": "Nanostructured Photovoltaic Cells",
+        "des": "Nanostructured Photovoltaics is a new type of solar technology that uses nanometer-sized structures to harvest sunlight.",
+        "imageUrl": "/assets/Article/nanostructured.webp"
       }
     ],
     "newsroom": [

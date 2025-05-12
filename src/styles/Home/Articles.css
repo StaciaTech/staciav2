@@ -1,52 +1,25 @@
+/* ---------- DESKTOP STYLES ---------- */
 .articles-title {
-  /* color: #E0E0E0; */
   color: #6B6084;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   width: 90%;
-  margin: 0rem auto;
-  margin-top: 1rem;
-  /* border: 1px solid black; */
+  margin: 1rem auto 0 auto;
 }
 
 .article-outline-holder {
   margin: 1rem;
-  /* margin-right: 23rem; */
-  align-items: flex-end;
   display: flex;
-  padding: 2rem;
-  padding-left: 3rem;
-  /* border: 1px solid black; */
+  align-items: flex-end;
+  padding: 2rem 2rem 2rem 3rem;
 }
 
-/* .single-article-card-image {
-  background-image: linear-gradient(to bottom, #0d022500, #0d0225cc),
-    url("../../assets/artHomeImg.png");
-  height: 60vh;
-  width: 547px;
-  border-radius: 30px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: white;
-  font-family: "Euclid";
-  filter: grayscale(0);
-  margin-left: 3rem;
-  margin-right: 1rem;
-  align-self: flex-end;
-  transition: all 0.3s ease;
-  cursor: pointer;
-} */
 .single-article-card-image {
   height: 45vh;
   width: 547px;
   border-radius: 30px;
-  /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -60,61 +33,36 @@
   align-self: flex-end;
   transition: all 0.3s ease;
   cursor: pointer;
-  transform-origin: bottom; /* Scale from the bottom to match align-items: flex-end */
-  /* border: 1px solid black; */
+  transform-origin: bottom;
 }
 
 .single-article-card-image:hover {
-  transform: scaleY(1.33); /* Matches the 45vh to 60vh ratio (60/45 = 1.33) */
-}
-
-.article-text-container {
-  display: none;
-  /* Hide the text container by default */
+  transform: scaleY(1.33);
 }
 
 .article-text-container {
   display: block;
-  /* Show the text container when hovering over the image */
+  padding: 0 3rem 2rem 2rem;
 }
 
 .article-slider {
   display: flex;
   align-items: flex-end;
-  /* height: 579px; */
   height: 70vh;
-  /* background-color: pink; */
   width: 100%;
-  /* border: 1px solid black; */
-}
-
-/* .single-article-card-image:hover {
-  filter: grayscale(0);
-  height: 60vh;
-} */
-
-.article-text-container {
-  padding: 0 3rem 2rem 2rem;
 }
 
 .article-author-name {
   font-size: 1rem;
   font-weight: 500;
   margin: 1rem 0;
-  /* border: 1px solid black; */
 }
 
 .card-article-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1rem 0;
-  /* border: 1px solid black; */
 }
-
-/* .card-article-title:hover {
-  font-size: 1.8rem;
-  font-family: EuclidSemibold;
-} */
 
 .card-article-body {
   font-size: 1rem;
@@ -127,25 +75,19 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* border: 1px solid black; */
 }
-
-/* .card-article-body:hover {
-  -webkit-line-clamp: 4;
-} */
 
 .article-learn-more-link {
   color: #0047FF;
   user-select: none;
 }
 
-/* Mobile Article styles*/
+/* ---------- MOBILE STYLES ---------- */
 .mobile-article {
   padding: 1.5rem;
 }
 
 .mobile-article-title {
-  /* color: #E0E0E0; */
   color: #6B6084;
   font-size: 24px;
   font-style: normal;
@@ -160,10 +102,10 @@
 }
 
 .mobile-article-des {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
   font-weight: 400;
   margin: 0.5rem 0;
-  line-height: 2.2rem;
+  line-height: 1.6rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -175,6 +117,8 @@
   display: flex;
   overflow-x: auto;
   column-gap: 1.5rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
 }
 
 .mobile-article-card-container::-webkit-scrollbar {
@@ -182,7 +126,8 @@
 }
 
 .mobile-article-card {
-  min-width: 100%;
+  min-width: 90%;
+  scroll-snap-align: center;
   background-image: linear-gradient(to bottom, #0d022500, #0d0225cc),
     url("../../assets/artHomeImg.png");
   border-radius: 2rem;
@@ -193,14 +138,15 @@
 }
 
 .mobile-article-card-content {
-  margin-top: 30%;
+  margin-top: 60%;
   color: #fff;
 }
 
+/* ---------- RESPONSIVE VISIBILITY ---------- */
 @media screen and (max-width: 1024px) {
+  .articles-title,
   .article-outline-holder,
-  .article-slider,
-  .articles-title {
+  .article-slider {
     display: none;
   }
 }

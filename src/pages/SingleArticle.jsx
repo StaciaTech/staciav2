@@ -79,7 +79,7 @@ function SingleArticle() {
                   alt=""
                   style={{
                     width: "100%",
-                    height: "100%",
+                    height: "20%",
                     objectFit: "cover",
                     userSelect: "none",
                     marginTop: "2rem",

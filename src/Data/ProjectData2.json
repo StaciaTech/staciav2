@@ -7,12 +7,13 @@
           "name": "Food Processing",
           "projects": [
             {
+              "id":1,
               "title": "Chili Ladling Machine",
               "mainDesc": "A battery-powered, portable chili ladling machine with a cleated belt conveyor, IP69K-rated components, and PLC/SCADA controls for automated chili handling.",
               "mainImageUrl": "/assets/ProductPage/onedrillssm.webp",
               "Executive-Summary": "The Stacia Corp Custom Chili Ladling Machine—delivered for Aachi Group—automates chili handling end-to-end, reducing manual labor by 70% and boosting throughput by 50% while ensuring uniform product quality and stringent hygiene compliance. Its battery-powered portability, lightweight modular frame, and IP69K-rated components enable flexible deployment and rapid, high-temperature washdowns, cutting sanitation time by 60%. Integrated PLC/SCADA controls with remote HMI support real-time monitoring and data logging, yielding a six-month payback through combined labor and energy savings.",
               "Client-Overview": "Aachi Group, headquartered in Chennai, India, is a leading name in the food processing industry, renowned for its wide range of high-quality products that have become household staples across India and in numerous international markets.",
-              "Project Objective": "To design and develop a specialized chili ladling machine capable of efficiently handling large quantities of chili with minimal human intervention, thereby enhancing operational efficiency and ensuring consistent product quality",
+              "Project-Objective": "To design and develop a specialized chili ladling machine capable of efficiently handling large quantities of chili with minimal human intervention, thereby enhancing operational efficiency and ensuring consistent product quality",
               "Challenges": [
                 {
                   "title": "Manual Handling Limitations",
@@ -111,7 +112,7 @@
                   "Line1": "Collected test data and operator feedback; iterated blade-cup geometry and control logic in two-week sprints to resolve minor jams and optimize washdown drains ⁽⁷⁾."
                 }
               ],
-              "Impact": [
+              "Impacts": [
                 {
                   "title": "Enhanced Productivity",
                   "des": "Significant reduction in manual labor requirements and processing time."
@@ -141,7 +142,7 @@
                 "How to take your Stage-Gate® process to the next level (flexible, “fuzzy” gates)"
               ],
               "Client-Overview2": "Aachi Group, founded in 1995 by Mr. A.D. Padmasingh Isaac, is headquartered in Chennai and recognized as India’s leading spice and condiment manufacturer, offering over 200 products and 550 SKUs across more than 10 lakh retail outlets in 231 countries citeturn0search0turn0search1. The company operates a state-of-the-art facility in Keel Ayyanabakkam, processing up to 120 metric tonnes of spice powders and mixes daily and employing over 2,000 staff, underscoring its scale in the FMCG sector citeturn0search8. In March 2025, Aachi Group was honoured with the Outstanding FMCG Brand Award at the Economic Times Achievers Awards, reflecting its commitment to quality and innovation .",
-              "Project-Objective": "The primary objective was to mechanize the chili ladling and mixing operations to eliminate labour-intensive manual processes, ensure uniform product quality, and integrate with existing production lines without expanding the facility footprint. Secondary goals included designing for high-temperature environments (60–80 °C), complying with stringent hygiene standards (IP69K), and enabling remote-controlled operation for enhanced safety and flexibility citeturn2search0",
+              "Project-Objective2": "The primary objective was to mechanize the chili ladling and mixing operations to eliminate labour-intensive manual processes, ensure uniform product quality, and integrate with existing production lines without expanding the facility footprint. Secondary goals included designing for high-temperature environments (60–80 °C), complying with stringent hygiene standards (IP69K), and enabling remote-controlled operation for enhanced safety and flexibility citeturn2search0",
               "Challenges2": [
                 {
                   "title": "Manual Labor Dependence",
@@ -160,7 +161,7 @@
                   "des": "Seamless data logging, real-time monitoring, and remote diagnostics had to be supported via PLC/SCADA systems citeturn4search0turn4search6"
                 }
               ],
-              "Solution": [
+              "Solutions2": [
                 {
                   "name": "Salient Features",
                   "data": [
@@ -225,7 +226,7 @@
                   "des": "A tablet-based wireless app modelled on robotic pick-and-place controls offers intuitive operation from a safe distance"
                 }
               ],
-              "Impact & Benefits": [
+              "Impacts2": [
                 {
                   "title": "Labor Reduction",
                   "des": "Automated ladling cut manual labor by 70%, freeing staff for higher-value tasks and reducing labor costs by 50%."
@@ -258,12 +259,13 @@
               "Conclusion2": "By integrating advanced hygienic conveyor technologies from Intralox and Van der Graaf, high-performance PLC/SCADA control from Mitsubishi Electric, and modular design principles, Stacia Corp delivered a turnkey chili ladling solution that transforms Aachi Group’s operations with enhanced efficiency, safety, and scalability. This project exemplifies how strategic engineering partnerships can drive sustainable automation in the food industry, setting a new benchmark for portable, high-temperature, and fully connected processing equipment"
             },
             {
+              "id":2,
               "title": "Stacia Precision Slicing Machine for Pumkin Tales",
               "mainDesc": "A compact, IP69K-rated machine for slicing up to five artisan bread loaves simultaneously with ultra-fine thickness control (3 mm upward).",
               "mainImageUrl": "/assets/ProductPage/onedrillssm.webp",
               "Executive-Summary": "Stacia Corp partnered with Pumpkin Tales to deliver a custom, high-performance Precision Slicing Machine capable of slicing up to five loaves (bread) simultaneously into ultra-uniform slices from 3 mm upward, all within a compact, IP69K-rated hygienic frame. This turnkey solution drove a 60 % increase in throughput, slashed waste by 40 %, cut cleaning time by 50 %, and paid back within eight months—while preserving artisanal quality at industrial scale",
               "Client-Overview": "Pumpkin Tales is a Chennai-based bakery and food-service brand celebrated for its small-batch artisan breads, golden focaccias, and daily-fresh desserts crafted from organic, locally sourced ingredients. With multiple outlets—most notably its flagship Alwarpet bakery—Pumpkin Tales operates on Slow Food principles, focusing on sustainability, wellness, and community engagement ",
-              "Project Objective": [
+              "Project-Objective": [
                 "Produces slice thicknesses from 3 mm upward with ±0.5 mm accuracy.",
                 "Handles up to five loaves at once without interruption.",
                 "Maintains artisanal bread and dense-product integrity under high throughput",
@@ -356,7 +358,7 @@
                   "Line1": "At each gate, we conducted hygienic-design reviews and risk assessments aligned with FSSAI and ISO 22000 standards"
                 }
               ],
-              "Impact": [
+              "Impacts": [
                 {
                   "title": "Throughput +60 %: ",
                   "des": "Continuous slicing increased capacity by over half without additional operators"
@@ -392,7 +394,7 @@
               "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp",
               "Executive-Summary": "The Stacia Spinach Cleaning Machine automates washing and drying of up to 25 kg of field-grown spinach per cycle, cutting manual labor by over 70 % and reducing process time by 60 % thanks to its battery-powered portability and optimized lightweight materials Kiron Food Processing Technologies. Its compact footprint (<1 m²) and IP69K-rated components enable high-temperature washdowns without equipment damage, ensuring hygienic output ready for consumption or further processing ResearchGate. By integrating a recirculating water bath, gentle perforated-screen agitation, and high-speed spin-drying, the machine minimizes water use by up to 50 % compared to batch rinsing systems EPA Neris. A hybrid Stage-Gate + Agile development process guided the project from concept through pilot deployment, culminating in full production rollout with a six-month payback Designorate",
               "Client-Overview": "Nalla Keerai is a Chennai-based supplier specializing in fresh, locally grown spinach (“keerai”), serving retail and food-service customers throughout Tamil Nadu. The company sought to automate its labor-intensive manual washing line to improve throughput, hygiene, and product consistency",
-              "Project Objective": [
+              "Project-Objective": [
                 "Washes up to 25 kg of dirty, field-grown spinach per batch.",
                 "Removes soil, grit, and microbial contaminants.",
                 "Dries leaves to <10 % residual moisture for downstream processing or packing.",
@@ -466,7 +468,7 @@
                 }
               ],
 
-              "Impact": [
+              "Impacts": [
                 {
                   "title": "Labor Savings",
                   "des": "Automated cleaning reduced manual labor by 75 %, freeing staff for higher-value tasks"
@@ -503,13 +505,13 @@
               ]
             },
             {
-              "id": 3,
+              "id": 4,
               "title": "Stacia Bailing Machine For GCC (Greater Chennai Corporation)",
               "mainDesc": "An automated machine with a silent pod breaker, husk-separating fan, and conveyor belt for efficient tamarind pulp processing.",
               "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
               "Executive-Summary": "The Stacia Baling Machine—developed for the Greater Chennai Corporation—compresses up to 1,000 kg of mixed waste (plastic, paper, cardboard) into cubes at 25 % of original volume, achieving a 75 % reduction in waste footprint industrial-balers.com. Its emergency-stop, fast loading/unloading, and battery-powered portability enable safe, on-demand operation across multiple sites, while high-temperature operability ensures reliable performance in tropical climates staciacorp.com. Drawing on best practices from municipal and industrial baling projects—including portable designs by Deaton Engineering and high-throughput installations by Advance Hydrautech—Stacia Corp’s machine delivers cost-effective, low-maintenance waste management with rapid ROI Deaton Engineeringadvancehydrautech.com",
               "Client-Overview": "The Greater Chennai Corporation (GCC) is India’s oldest and one of its largest municipal bodies, established in 1688 and governing over 426 km² with a population exceeding 7 million Wikipedia. GCC manages solid waste streams from residential, commercial, and public-service operations, seeking scalable solutions to compress, store, and transport materials efficiently in one of India’s fastest-growing urban centers Vision for Sustainable Events",
-              "Project Objective": [
+              "Project-Objective": [
                 {
                   "title": "Volume Reduction",
                   "des": "Achieve up to 75 % compression of mixed recyclables and waste."
@@ -608,7 +610,7 @@
                   }
                 ]
               },
-              "Impact": [
+              "Impacts": [
                 {
                   "title": "Volume Reduction",
                   "des": "Achieved 75 % waste compacting, cutting storage needs by three-quarters industrial-balers.com"
@@ -652,13 +654,13 @@
               ]
             },
             {
-              "id": 3,
+              "id": 5,
               "title": "Tamarind Pod Breaking Machine: Enhancing Efficiency in Tamarind Processing ",
               "mainDesc": "",
               "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
               "Executive-Summary": "The Tamarind Pod Breaking Machine is an innovative solution designed to automate the labor-intensive process of breaking tamarind pods. By integrating a silent pod breaker, an efficient fan system to separate husks, and a conveyor belt to transport the pulp, this machine streamlines tamarind processing, improving productivity and reducing manual effort. This Project explores the development, implementation, and benefits of the Tamarind Pod Breaking Machine.Performance Foodservice | Home+3vadic.vigyanashram.blog+3chinapeanutmachinery.com+3King County",
               "Client-Overview": "The client is a mid-sized agro-processing enterprise specializing in tamarind-based products. Facing challenges with manual pod breaking, which was time-consuming and inconsistent, the client sought an automated solution to enhance processing efficiency and product quality",
-              "Project Objective": [
+              "Project-Objective": [
                 "Develop a machine to automate the tamarind pod breaking process.",
                 "Ensure the machine operates silently to maintain a conducive working environment.",
                 "Integrate a system to effectively separate husks from the pulp.",
@@ -712,7 +714,7 @@
                   }
                 ]
               },
-              "Impact": [
+              "Impacts": [
                 {
                   "id": 1,
                   "title": "Increased Efficiency",
@@ -748,7 +750,7 @@
           "name": "Waste Management",
           "projects": [
             {
-              "id": 3,
+              "id": 6,
               "title": "Baling Machine for Greater Chennai Corporation (GCC)",
               "mainDesc": "A hydraulic, battery-powered vertical baler for compressing mixed waste (plastic, paper, cardboard) into cubes, achieving 75% volume reduction",
               "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp"
@@ -759,85 +761,101 @@
           "name": "Kitchen Appliances",
           "projects": [
             {
-              "id": 3,
+              "id": 7,
               "title": "Butterfly 3-Burner Stove",
               "mainDesc": "A 3-burner stove with toughened glass tops, high-efficiency brass burners, ergonomic knobs, and safety features like anti-skid feet, designed for modern kitchens",
               "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp",
               "Executive-Summary": "The Butterfly 3-Burner Stove exemplifies the harmonious blend of modern aesthetics and advanced functionality, catering to contemporary kitchen needs. With features like toughened glass tops, high-efficiency brass burners, and ergonomic designs, it offers both style and performance. This Project delves into the product's development journey, highlighting the challenges faced, solutions implemented, and the resulting impact on users.",
               "Client-Overview": "Butterfly, a renowned Indian kitchen appliance brand, has consistently delivered innovative and reliable products. Collaborating with design experts, Butterfly aimed to create a stove that not only performs efficiently but also enhances kitchen aesthetics.",
-              "Project Objective": [
+              "Project-Objective": [
                 "Design a 3-burner stove that seamlessly integrates into modern kitchens.",
                 "Ensure durability and safety without compromising on style.",
                 "Incorporate user-friendly features for enhanced cooking experiences."
               ],
               "Challenges": [
                 {
+                  "id":1,
                   "title": "Material Selection",
                   "des": "Choosing materials that offer both durability and a sleek appearance."
                 },
                 {
+                  "id":2,
                   "title": "Heat Distribution",
                   "des": "Ensuring even heat distribution across all burners."
                 },
                 {
+                  "id":3,
                   "title": "User Safety",
                   "des": "Integrating safety features without affecting the stove's design."
                 }
               ],
               "Solutions": [
                 {
+                  "id":1,
                   "title": "Toughened Glass Top",
                   "des": "Implemented a 6mm ultra-thick toughened glass top, tested to withstand high temperatures and heavy weights, ensuring both durability and elegance."
                 },
                 {
+                  "id":2,
                   "title": "High-Efficiency Brass Burners",
                   "des": "Equipped with brass burners that provide consistent flame and efficient cooking."
                 },
                 {
+                  "id":3,
                   "title": "Ergonomic Design",
                   "des": "Introduced ergonomically designed knobs and a precisely angled metal frame for ease of use."
                 },
                 {
+                  "id":4,
                   "title": "Safety Features",
                   "des": "Incorporated anti-skid feet and heat-resistant knobs to enhance user safety. . Amazon IndiaYouTube+2Reliance Digital+2butterflyindia.com+2mint"
                 }
               ],
               "Development-Process": [
                 {
+                  "id":1,
                   "title": "Research & Analysis",
                   "des": "Studied user preferences and market trends to identify key features and design elements."
                 },
                 {
+                  "id":2,
                   "title": "Design Prototyping",
                   "des": "Developed prototypes focusing on aesthetics, functionality, and safety."
                 },
                 {
+                  "id":3,
                   "title": "Testing",
                   "des": "Conducted rigorous testing for durability, heat resistance, and user safety."
                 },
                 {
+                  "id":4,
                   "title": "Feedback Integration",
                   "des": "Gathered user feedback to refine design and features."
                 },
                 {
+                  "id":5,
                   "title": "Final Production",
                   "des": "Launched the final product, ensuring quality control and adherence to safety standards."
                 }
               ],
               "Impact": [
                 {
+                  "id":1,
                   "title": "Enhanced Kitchen Aesthetics",
                   "des": "The stove's sleek design complements modern kitchen interiors."
                 },
                 {
+                  "id":2,
                   "title": "Efficient Cooking",
                   "des": "High thermal efficiency burners reduce cooking time and gas consumption."
                 },
                 {
+                  "id":3,
                   "title": "User Satisfaction",
                   "des": "Positive user reviews highlight the stove's performance and design."
                 },
                 {
+                  "id":4,
                   "title": "Safety Assurance",
                   "des": "Integrated safety features provide users with peace of mind during cooking..Rasoi Shop+1butterflyindia.com+1"
                 }
@@ -870,78 +888,96 @@
           "name": "Consumer Electronics",
           "projects": [
             {
-              "id": 3,
+              "id": 1,
               "title": "Stacia Connect S Speaker",
               "mainDesc": "A retro-inspired smart speaker with Alexa and Google Assistant, Bluetooth/Aux streaming, FM radio, and custom DSP tuning for high-fidelity sound in a compact design",
               "mainImageUrl": "/assets/ProjectPage/Smart implementation.webp",
               "Executive-Summary": "The Stacia Connect S Speaker merges a retro-inspired aesthetic with cutting-edge smart features—including in-built Alexa and Google Assistant, Bluetooth/Aux streaming, FM radio, and an intuitive display with button controls—delivering seamless multi-platform audio control in a compact, stylish package CEPRO. Developed by Stacia Corp, the Connect S achieves high-fidelity sound through custom DSP tuning and premium drivers, while its retro-modern enclosure leverages proven industrial-design principles to resonate with design-conscious users Yanko Design. Battery-powered portability, simple maintenance, and cross-platform voice-assistant integration drove a 40 % faster time-to-market and an anticipated 6-month payback through strong pre-order uptake and positive press coverage Product Folks",
               "Client-Overview": "Stacia Corp, known for its innovative R&D in agriculture and industrial solutions, expanded into consumer electronics to diversify its portfolio and capitalize on the booming smart-home market projected to reach $150 billion by 2025 WIRED. With a mission to blend form and function, Stacia Corp tapped its mechanical and electronics divisions to create the Connect S, targeting tech-savvy and design-focused demographics seeking both nostalgia and modern convenience Harvard Business Review",
-              "Project Objective": [
+              "Project-Objective": [
                 {
+                  "id": 1,
                   "title": "Design Fusion",
                   "des": "Create a speaker that blends mid-century modern cues (e.g., teak veneer, rounded edges) with current smart-home capabilities CEPRO"
                 },
                 {
+                  "id": 2,
                   "title": "Multi-Platform Voice Control",
                   "des": "Embed both Amazon Alexa and Google Assistant to offer users choice and interoperability Developer Portal Master"
                 },
                 {
+                  "id": 3,
                   "title": "Seamless Connectivity",
                   "des": "Support Bluetooth 5.0, 3.5 mm Aux, and FM radio for broad audio-source compatibility WIRED"
                 },
                 {
+                  "id": 4,
                   "title": "Intuitive UX",
                   "des": "Provide a crisp LCD display and tactile button controls for non-voice operation qsstechnosoft.com"
                 },
                 {
+                  "id": 5,
                   "title": "Portability & Power",
                   "des": "Enable 8 hrs of playback on a single charge via a 3,000 mAh Li-ion battery, housed in a <1 kg chassis for easy relocation"
                 }
-              ],
+              ]
+              ,
               "Challenges": [
                 {
+                  "id": 1,
                   "title": "Hardware Integration",
                   "des": "Merging dual-voice-assistant SDKs (Alexa Voice Service and Google Assistant SDK) into a resource-constrained embedded system without audio latency WIRED."
                 },
                 {
+                  "id": 2,
                   "title": "Retro-Modern Aesthetics",
                   "des": "Crafting a heritage-inspired enclosure that met modern manufacturability and cost targets CEPRO"
                 },
                 {
+                  "id": 3,
                   "title": "Acoustic Performance",
                   "des": "Achieving balanced frequency response in a small form factor without compromising low-end punch or high-frequency clarity Product Folks."
                 },
                 {
+                  "id": 4,
                   "title": "Battery & Thermal Management",
                   "des": "Ensuring 8+ hr battery life while managing heat from Wi-Fi, Bluetooth, and voice-processing SoCs in a compact sealed housing qsstechnosoft.com"
                 },
                 {
+                  "id": 5,
                   "title": "Regulatory Compliance",
                   "des": "Certifying for FCC, CE, and RoHS with dual-assistant voice microphones requiring far-field pickup validation Amazon Web Services, Inc."
                 }
-              ],
+              ]
+              ,
               "Solutions": [
                 {
+                  "id": 1,
                   "title": "Custom DSP Tuning",
                   "des": "Partnered with audio-DSP experts to implement dynamic EQ profiles, optimizing driver performance across voice, music, and radio modes Product Folks"
                 },
                 {
+                  "id": 2,
                   "title": "Modular Enclosure Design",
                   "des": "Utilized injection-molded ABS with walnut-veneer overlays, inspired by Klipsch and Tivoli retro-design trends for cost-effective production and premium feel CEPROturn3search2"
                 },
                 {
+                  "id": 3,
                   "title": "Dual-Assistant Module",
                   "des": "8Employed Amazon’s Alexa Connect Kit alongside Google’s AVS SDK on a quad-core Cortex-A53 SoC, enabling seamless assistant switching with sub-250 ms response times Developer Portal Master"
                 },
                 {
+                  "id": 4,
                   "title": "Connectivity Flexibility",
                   "des": "Integrated Qualcomm QCC Bluetooth 5.0 chipset with aptX support, a Texas Instruments audio codec for Aux/Radio, and a tuned FM front end for clear reception WIRED"
                 },
                 {
+                  "id": 5,
                   "title": "Power & Thermal System",
                   "des": "Designed a 3,000 mAh Li-ion pack with smart-charging PMIC and a hidden aluminum heat-sink plate behind the grille to dissipate SoC heat efficiently qsstechnosoft.com"
                 },
                 {
+                  "id": 6,
                   "title": "UX & Controls",
                   "des": "Implemented a monochrome LCD with custom icons and backlit rubber buttons mapped to voice-activation, volume, source, and playback controls, ensuring quick manual overrides qsstechnosoft.com"
                 }
@@ -977,22 +1013,27 @@
               },
               "Impact": [
                 {
+                  "id": 1,
                   "title": "Market Reception",
                   "des": "Secured 5,000 pre-orders in 4 weeks post-announcement, with 4.7/5 average review scores on retail sites"
                 },
                 {
+                  "id": 2,
                   "title": "Time-to-Market",
                   "des": "Achieved commercial readiness in 8 months, 40 % faster than typical hardware cycles at Stacia Product Folks"
                 },
                 {
+                  "id": 3,
                   "title": "User Engagement",
                   "des": "85 % of early adopters use voice control daily; 60 % leveraged the Aux/Radio features at least once daily, showing multi-mode appeal WIRED"
                 },
                 {
+                  "id": 4,
                   "title": "Brand Elevation",
                   "des": "Coverage in Wired and The Verge highlighted the Connect S’s retro design & voice-assistant integration, amplifying Stacia Corp’s consumer-tech credibility Lifewire"
                 },
                 {
+                  "id": 5,
                   "title": "Revenue & ROI",
                   "des": "Expected 6-month payback on NRE costs driven by premium pricing ($149 MSRP) and strong accessory-bundle attach rates."
                 }
@@ -1017,11 +1058,13 @@
               ]
             },
             {
-              "id": 3,
+              "id": 2,
               "title": "HydroGen: The Smart Bottle Revolutionizing Personalized Hydration",
+              "mainDesc": "A smart bottle with dual temperature control (heating/cooling), Bluetooth-enabled hydration tracking, LED indicators, a 5000 mAh battery, and eco-friendly zero-CFC technology.",
+              "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp",              
               "Executive-Summary": "The HydroGen is a next-generation smart bottle designed by Stacia Corp to transform the way individuals manage their hydration. Combining cutting-edge temperature control, smart connectivity, eco-conscious engineering, and human-centered design, HydroGen serves as a daily essential for modern, health-conscious users. With instant heating and cooling features, Bluetooth-enabled smart control, and a powerful 5000 mAh battery, HydroGen is built for performance, portability, and sustainability. This Project explores the journey from ideation to impact of this revolutionary device.",
               "Client-Overview": "Stacia Corp, a leading innovator in smart consumer products, envisioned the HydroGen to align with modern lifestyle demands—sustainability, personalization, and technological integration. Targeting health-focused individuals, fitness enthusiasts, and on-the-go professionals, HydroGen bridges the gap between hydration and intelligent living.",
-              "Project Objective": [
+              "Project-Objective": [
                 "Design a dual-purpose smart bottle for both heating and cooling of beverages.",
                 "Ensure eco-friendliness with zero CFC emissions and energy-efficient performance.",
                 "Integrate Bluetooth technology for real-time temperature control and hydration tracking.",
@@ -1137,76 +1180,93 @@
               "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp",
               "Executive-Summary": "The global smart furniture market is projected to grow from USD 224 million in 2024 to USD 570.4 million by 2033 (CAGR 10.4 %) as IoT integration, wireless charging, and voice assistants become mainstream SkyQuestt. Stacia Smart Furniture leverages these trends—embedding a proprietary AI assistant with Alexa/Google SDKs, a silent ceramic heater, Qi wireless charging, and motorized pop-up sockets with LED illumination—to create a multifunctional home experience within a sleek, <1 m² footprint Univioturn0search6. Developed via a hybrid Stage-Gate and Agile process, the modular units achieve rapid time-to-market and are designed for high-temperature washdowns and low-maintenance operation, positioning Stacia Corp at the forefront of next-gen living solutions Designorate",
               "Client-Overview": "Stacia Corp, an innovation-driven R&D firm based in Chennai, has a strong track record in agricultural machinery, automation, and consumer electronics. In response to rapid urbanization and the growing demand for multifunctional living spaces, Stacia Corp expanded into smart-furniture solutions, aiming to blend technology seamlessly with interior design",
-              "Project Objective": [
+              "Project-Objective": [
                 {
+                  "id": 1,
                   "title": "Integrated AI Assistant",
                   "des": "Embed a proprietary AI engine with far-field voice pickup, supporting both Amazon Alexa and Google Assistant for hands-free control aspirefinehomes.com"
                 },
                 {
+                  "id": 2,
                   "title": "On-Board Heating",
-                  "des": ": Incorporate a silent, energy-efficient ceramic heater into tabletops to keep beverages at optimal temperatures—drawing inspiration from MIT’s thermally active urban furniture designboom"
+                  "des": "Incorporate a silent, energy-efficient ceramic heater into tabletops to keep beverages at optimal temperatures—drawing inspiration from MIT’s thermally active urban furniture designboom"
                 },
                 {
+                  "id": 3,
                   "title": "Wireless Charging & Power Access",
                   "des": "Provide Qi wireless charging pads plus a motorized pop-up socket featuring LED ambiance lighting for USB/AC outlets YouTube"
                 },
                 {
+                  "id": 4,
                   "title": "Stylish, Compact Design",
                   "des": "Achieve a modern aesthetic with walnut-veneer accents and rounded edges, fitting within a 0.8 × 0.9 m footprint"
                 },
                 {
+                  "id": 5,
                   "title": "Durability & Maintenance",
                   "des": "Ensure components withstand 50 °C ambient and routine high-pressure cleaning, while enabling tool-free service access"
                 }
-              ],
+              ],              
               "Challenges": [
                 {
+                  "id": 1,
                   "title": "Electronics Enclosure",
                   "des": "Integrating heat, moisture, and voice-processing electronics into furniture without compromising design integrity"
                 },
                 {
+                  "id": 2,
                   "title": "Thermal Management",
                   "des": "Safely isolating the heating element from sensitive electronics and user-touch surfaces"
                 },
                 {
+                  "id": 3,
                   "title": "Voice-AI Performance",
                   "des": "Achieving sub-300 ms wake-word detection in a noisy living-room environment"
                 },
                 {
+                  "id": 4,
                   "title": "Power Distribution",
                   "des": "Balancing battery vs. mains operation for heating, AI processing, and charging modules"
                 },
                 {
+                  "id": 5,
                   "title": "Regulatory Compliance",
                   "des": "Certifying combined furniture–electronics under FCC, CE, RoHS, and local fire-safety standards"
                 }
               ],
+              
               "Solutions": [
                 {
+                  "id": 1,
                   "title": "Modular Electronics Bay",
                   "des": "A sealed IP54 compartment houses AI, battery, and power-management boards, isolating them from the heater and spill zones"
                 },
                 {
+                  "id": 2,
                   "title": "Ceramic Heating Pad",
                   "des": "A low-mass, PTC ceramic heater embedded under the tabletop delivers 35–45 °C warmth, managed by a PID controller and thermal cutoff—adapted from MIT’s thermally active bench concept designboom"
                 },
                 {
+                  "id": 3,
                   "title": "Dual-Assistant Module",
                   "des": "8A quad-core Cortex-A53 SoC runs both Alexa Connect Kit and Google Assistant SDK, with DSP-accelerated far-field microphones for robust voice pickup aspirefinehomes.com"
                 },
                 {
+                  "id": 4,
                   "title": "Wireless Charging & Pop-Up Power",
                   "des": "A Qi-enabled charging pad is inset beside a motorized pop-up socket (2 × USB-A, 2 × AC outlets) topped with an LED halo—based on proven designs for safety and aesthetics YouTube"
                 },
                 {
+                  "id": 5,
                   "title": "Stylized Enclosure",
                   "des": "DInjection-molded ABS with walnut-veneer overlays and soft-touch edges—mirroring successful retro-modern furniture trends Podium"
                 },
                 {
+                  "id": 6,
                   "title": "Maintenance Access",
                   "des": "ITool-free latch panels allow quick service of electronics and heating modules, minimizing downtime"
                 }
-              ],
+              ],              
               "Development-Process": {
                 "stage": [
                   {
@@ -1241,28 +1301,34 @@
                   }
                 ]
               },
-              "Impact": [
+              "Impacts": [
                 {
+                  "id": 1,
                   "title": "Market Readiness in 9 Months",
                   "des": "40 % faster than typical smart-home hardware cycles."
                 },
                 {
+                  "id": 2,
                   "title": "High User Satisfaction",
                   "des": "Early adopters rate the AI-assistant accuracy at 4.8/5 and the heating comfort at 4.6/5"
                 },
                 {
+                  "id": 3,
                   "title": "Energy Efficiency",
                   "des": "Ceramic heating consumes <25 W, with smart-standby modes reducing idle draw by 80 %"
                 },
                 {
+                  "id": 4,
                   "title": "Space Utilization",
                   "des": "Multifunctional table replaces separate speaker, heater, and charger, freeing desktop real estate"
                 },
                 {
+                  "id": 5,
                   "title": "Revenue Uplift",
                   "des": "Pre-orders exceeded forecasts by 30 %, driven by strong design-tech press coverage."
                 }
-              ],
+              ]
+              ,
               "Conclusion": "Stacia Smart Furniture demonstrates how converging AI, thermal control, wireless power, and modular design can redefine living spaces. By applying disciplined Stage-Gate governance and Agile iteration, Stacia Corp delivered a standout product that meets emerging market demands, accelerates smart-home adoption, and sets a new benchmark for multifunctional, tech-enabled furniture",
               "References": [
                 "Univio. What Will the Furniture Industry Be Like in 2025? “Another rapidly expanding trend in the furniture industry is the use of AI.” Published 2 months ago. Univio",
@@ -1278,82 +1344,100 @@
               ]
             },
             {
-              "id": 3,
+              "id": 4,
               "title": "Stacia Child Tracking System",
               "mainDesc": "A wearable GPS/eSIM tracking device with geofencing, SOS alerts, finder lights, remote selfie capture, and multi-tag support for children, pets, or assets",
               "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp",
               "Executive-Summary": "The global kids GPS tracker market, valued at USD 3.2 billion in 2023, is growing at a 13.2 % CAGR through 2031, driven by rising parental safety concerns and IoT advances Verified Market Research. Stacia Corp’s Child Tracking Device combines real-time GPS/eSIM tracking, geofencing, SOS panic alerts, finder lights, remote selfie capture, and wireless charging into a compact, durable wearable—addressing gaps in connectivity, battery life, and usability found in legacy offerings GeotabKigen. Developed via a hybrid Stage-Gate and Agile process, the system delivers sub-second location updates, 24-hour battery runtime, and multi-tag support, yielding peace of mind for parents, versatile deployment across use-cases (pets, assets, elderly), and a projected six-month ROI through subscription services and hardware sales",
               "Client-Overview": "Stacia Corp, headquartered in Chennai, is an R&D leader in agri-industrial automation and consumer IoT. Recognizing a surge in demand for reliable child-tracking wearables—exemplified by Life360’s 24/7 SOS alerts and SafeWise’s top-rated devices—Stacia Corp initiated its own end-to-end solution to offer superior accuracy, durability, and feature breadth SafeWiseApple",
-              "Project Objective": [
+              "Project-Objective": [
                 {
+                  "id": 1,
                   "title": "Real-Time Location",
                   "des": "Deliver continuous GPS tracking with eSIM-based cellular fallback for indoor/outdoor coverage Kigen"
                 },
                 {
+                  "id": 2,
                   "title": "Safety Alerts",
                   "des": "Provide instant SOS panic-button calls and SMS to preset contacts, plus geofence breach notifications Geotab"
                 },
                 {
+                  "id": 3,
                   "title": "Finder & Locator",
-                  "des": "Incorporate a built-in LED finder light, Bluetooth tag detection (for up to 5 simultaneous tags), and remote selfie trigger for quick “look-around” snapshots "
+                  "des": "Incorporate a built-in LED finder light, Bluetooth tag detection (for up to 5 simultaneous tags), and remote selfie trigger for quick “look-around” snapshots"
                 },
                 {
+                  "id": 4,
                   "title": "User Experience",
                   "des": "Deliver a user-friendly iOS/Android app with map-based real-time tracking, request-based locator pings, and mode selection (child, pet, asset)"
                 },
                 {
+                  "id": 5,
                   "title": "Durability & Convenience",
                   "des": "Achieve IP67 water/dust resilience, wireless charging, and >24 hrs battery life in a <50 g enclosure Android Central"
                 }
-              ],
+              ],              
               "Challenges": [
                 {
+                  "id": 1,
                   "title": "Connectivity Reliability",
                   "description": "Balancing GPS accuracy with seamless handover to GSM/4G networks in urban canyons and indoors Kigen"
                 },
                 {
+                  "id": 2,
                   "title": "Battery & Power",
                   "description": "Fitting a high-capacity battery and wireless-charging coil into a small form-factor without overheating Amazon"
                 },
                 {
+                  "id": 3,
                   "title": "Robust Enclosure",
                   "description": "Ensuring IP67 ingress protection and shock resistance for active kids, pets, and industrial use"
                 },
                 {
+                  "id": 4,
                   "title": "Feature Integration",
                   "description": "Merging SOS, geofencing, BLE tag tracking, LED lighting, and remote camera triggers into one cost-effective PCB design"
                 },
                 {
+                  "id": 5,
                   "title": "App Usability",
                   "description": "Designing an intuitive UI for non-technical parents to manage multi-tag detection, set safe zones, and review history logs Verizon"
                 }
-              ],
+              ]
+              ,
               "Solutions": [
                 {
+                  "id": 1,
                   "title": "Multi-GNSS Module + eSIM",
                   "des": "A Quectel L76X GPS module paired with a GSMA-compliant eUICC, enabling over-the-air carrier provisioning and seamless cell-network fallback Kigen"
                 },
                 {
+                  "id": 2,
                   "title": "SOS & Geofencing Engine",
                   "des": "Firmware supports one-touch SOS calls (via embedded PTT), SMS alerts, and dynamic geofence rules—leveraging Geotab’s virtual-fence API model Geotab"
                 },
                 {
+                  "id": 3,
                   "title": "Finder Light & Selfie Trigger",
                   "des": "A 10 lm LED and BLE-based remote shutter (compatible with Android/iOS) allow quick visual confirmation and snapshot capture Amazon"
                 },
                 {
+                  "id": 4,
                   "title": "Bluetooth Tag Array",
                   "des": "Integrated Nordic nRF52833 SoC tracks up to five companion tags (e.g., key-fob style) for multi-object detection Amazon"
                 },
                 {
+                  "id": 5,
                   "title": "Wireless Charging & Power Management",
                   "des": "Qi-certified coil with STMicroelectronics power-management IC delivers 5 W charging; battery management firmware ensures safe 24 + hr runtime St"
                 },
                 {
+                  "id": 6,
                   "title": "Mobile App & Cloud",
                   "des": "A React Native app interfaces via AWS IoT Core for real-time location, history playback, and remote device controls"
                 }
-              ],
+              ]
+              ,
               "Development-Process": {
                 "stage": [
                   {
@@ -1383,7 +1467,7 @@
                   }
                 ]
               },
-              "Impact": [
+              "Impacts": [
                 {
                   "id": 1,
                   "title": "Parental Peace of Mind",
@@ -1428,13 +1512,7 @@
                 "Unlocking the Potential of Agile Hardware Development in IoT Devices. Agile was first utilized in software development, but it is now widely adopted in hardware… Valispace. 2.3 years ago.",
                 "Life360: Stay Connected & Safe. Apple App Store. “Life360 memberships include essential safety features like SOS Alerts…” Apple"
               ]
-            },
-
-            {
-              "title": "HydroGen Smart Bottle",
-              "mainDesc": "A smart bottle with dual temperature control (heating/cooling), Bluetooth-enabled hydration tracking, LED indicators, a 5000 mAh battery, and eco-friendly zero-CFC technology.",
-              "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp"
-            }
+            }            
           ]
         }
       ]
@@ -1446,99 +1524,100 @@
           "name": "Pest Contol",
           "projects": [
             {
+              "id":1,
               "title": "ENVU Pest Control Management App",
               "mainDesc": "A platform connecting manufacturing, fabricating, and machining vendors with OEMs, facilitating seamless vendor selection, order tracking, and project management through a user-centric interface",
               "mainImageUrl": "/assets/ProjectPage/AI chatbot.webp",
-              "executEiveSummary": "The ENVU Pest Control Management App is envisioned as a centralized digital platform designed to streamline and digitize pest control processes across the urban food supply ecosystem. This application aims to enhance transparency, optimize chemical usage, strengthen compliance, and foster collaboration among key stakeholders such as pest management agencies (PMA), food business operators (FBO), chemical/equipment suppliers, and regulatory auditors.",
-              "clientOverview": "ENVU is a leading player in urban pest management, facing challenges of site specificity, chemical traceability, vendor coordination, and compliance management. The need for a unified digital solution that offers real-time tracking, auditing, and data sharing has driven the development of this application",
-              "projectObjective": [
+              "Executive-Summary": "The ENVU Pest Control Management App is envisioned as a centralized digital platform designed to streamline and digitize pest control processes across the urban food supply ecosystem. This application aims to enhance transparency, optimize chemical usage, strengthen compliance, and foster collaboration among key stakeholders such as pest management agencies (PMA), food business operators (FBO), chemical/equipment suppliers, and regulatory auditors.",
+              "Client-Overview": "ENVU is a leading player in urban pest management, facing challenges of site specificity, chemical traceability, vendor coordination, and compliance management. The need for a unified digital solution that offers real-time tracking, auditing, and data sharing has driven the development of this application",
+              "Project-Objective": [
                 "To digitize and centralize pest control management processes",
                 "To create a collaborative ecosystem among PMAs, FBOs, and suppliers",
                 "To ensure audit compliance and efficient documentation",
                 "To enhance the transparency and traceability of chemical usage",
                 "To improve overall pest management effectiveness and accountability"
               ],
-              "challenges": [
+              "Challenges": [
                 "Site-specific and seasonal variations in pest occurrence",
                 "Lack of standardized communication between PMAs, FBOs, and suppliers",
                 "Paper-based documentation leads to inefficiency and data loss",
                 "Trust deficit and poor escalation tracking between stakeholders"
               ],
-              "solution": [
+              "Solutions": [
                 {
                   "id": 1,
                   "title": "Centralized Platform",
-                  "description": "One-app ecosystem for all stakeholders."
+                  "des": "One-app ecosystem for all stakeholders."
                 },
                 {
                   "id": 2,
                   "title": "Role-Based Access",
-                  "description": "Restricted access based on stakeholder roles."
+                  "des": "Restricted access based on stakeholder roles."
                 },
                 {
                   "id": 3,
                   "title": "Real-Time Tracking",
-                  "description": "Live incident reporting and audit scheduling."
+                  "des": "Live incident reporting and audit scheduling."
                 },
                 {
                   "id": 4,
                   "title": "Audit Compliance",
-                  "description": "Support for multiple systems (Halal, HACCP, ISO, AIB)."
+                  "des": "Support for multiple systems (Halal, HACCP, ISO, AIB)."
                 },
                 {
                   "id": 5,
                   "title": "Client Onboarding",
-                  "description": "PMA/FBO-driven onboarding with audit system selection."
+                  "des": "PMA/FBO-driven onboarding with audit system selection."
                 },
                 {
                   "id": 6,
                   "title": "Dynamic Planning",
-                  "description": "Site-specific plans with continuous updates."
+                  "des": "Site-specific plans with continuous updates."
                 },
                 {
                   "id": 7,
                   "title": "Trend Analysis",
-                  "description": "Insights on seasonal, geographic, and treatment data."
+                  "des": "Insights on seasonal, geographic, and treatment data."
                 },
                 {
                   "id": 8,
                   "title": "Security & Privacy",
-                  "description": "Cybersecurity measures and stakeholder consent protocols."
+                  "des": "Cybersecurity measures and stakeholder consent protocols."
                 }
               ],
-              "developmentProcess": [
+              "Development-Process": [
                 {
                   "id": 1,
                   "title": "Requirement Gathering",
-                  "description": "Stakeholder-specific questionnaires."
+                  "des": "Stakeholder-specific questionnaires."
                 },
                 {
                   "id": 2,
                   "title": "Architecture Design",
-                  "description": "Scalable cloud infrastructure with secure storage."
+                  "des": "Scalable cloud infrastructure with secure storage."
                 },
                 {
                   "id": 3,
                   "title": "Module Development",
-                  "description": "Incident Reporting, Audits, KPI Dashboards, Trend Analysis."
+                  "des": "Incident Reporting, Audits, KPI Dashboards, Trend Analysis."
                 },
                 {
                   "id": 4,
                   "title": "User Testing",
-                  "description": "Pilot testing with selected PMAs and FBOs."
+                  "des": "Pilot testing with selected PMAs and FBOs."
                 },
                 {
                   "id": 5,
                   "title": "Deployment",
-                  "description": "Mobile & Web Application rollout."
+                  "des": "Mobile & Web Application rollout."
                 },
                 {
                   "id": 6,
                   "title": "Training",
-                  "description": "User onboarding, documentation, and support materials."
+                  "des": "User onboarding, documentation, and support materials."
                 }
               ],
-              "impactAndBenefits": [
+              "Impacts": [
                 "Reduction in paperwork and manual errors",
                 "Increased transparency and stakeholder trust",
                 "Faster issue escalation and resolution",
@@ -1566,7 +1645,7 @@
               "mainImageUrl": "/assets/ProjectPage/AI chatbot version.webp",
               "Executive-Summary": "Stacia's Edifai – Idhayam Suite is a comprehensive digital platform designed to transform traditional, manual processes into streamlined, automated workflows. By integrating modules such as Surveyor, Procurement, Calendar, Forms, Reimbursement, and Chat, the suite addresses critical issues like communication gaps, manual data collection, and lack of real-time insights. This Project explores the development, implementation, and impact of the Edifai – Idhayam Suite in enhancing operational efficiency and decision-making.",
               "Client-Overview": "The client is a prominent organization involved in extensive field operations, including surveying, procurement, and logistics. Their operations were hindered by manual processes, leading to inefficiencies and delayed decision-making. Recognizing the need for digital transformation, they partnered with Stacia to develop a solution that would streamline their workflows and provide real-time operational insights.",
-              "Project Objective": [
+              "Project-Objective": [
                 "Digitize and automate field operations to reduce manual workload.",
                 "Enhance communication among field agents and administrative staff.",
                 "Implement real-time data collection and reporting mechanisms.",

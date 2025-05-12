@@ -267,15 +267,7 @@ function About() {
               A Story of Passion, creativity and innovation
             </div>
             <p className="about-section2-text test-seclection-blue">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              consequat justo id mauris ultrices, vel placerat libero tincidunt.
-              Phasellus pretium velit ac odio pulvinar, ac mollis tortor
-              laoreet. Duis vel mauris nec libero molestie laoreet. Nunc commodo
-              velit quis nunc volutpat, at suscipit quam finibus. Sed interdum
-              euismod nisl, nec finibus orci finibus vel. Proin ultricies sem
-              nec fermentum accumsan. Vivamus eget eros eu risus fermentum
-              placerat. Sed at ligula sapien. Suspendisse quis risus nec turpis
-              bibendum ullamcorper.
+              Stacia Corp is a MSME, and Government of India recognised Start-up created as a R&D centre aimed to solve engineering problems for industries of various genres. Stacia Corp provides efficient and effective solutions in the form of engineering design or innovative ideas. We also specialise in providing niche, customizable solutions to client. Stacia has successfully executed a variety of projects in different verticals. We have often served as a client's one- stop-shop throughout the life cycle of product design & development. This approach helps the client engage with Stacia Corp's expertise from plan to production. Through this approach Stacia collaborates and handholds the client in identifying and solving roadblocks in the business process. We have demonstrated cutting-edge expertise in providing solutions in launching new products. In a short span we have forayed into several such product development for our clients.
             </p>
           </div>
           <div className="about-section2-img-container">
