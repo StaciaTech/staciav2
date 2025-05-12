@@ -10,7 +10,6 @@
 // // import axios from "axios";
 // import eventsData from "../Data/Event.json";
 
-
 // function EventsPage() {
 //   const navigate = useNavigate();
 //   // const apiUrl = process.env.REACT_APP_API_URL;
@@ -128,17 +127,7 @@
 import React, { useEffect, useState, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
-// import axios from "axios";
 import eventsData from "../Data/Event.json";
-import "../styles/Eventspage.css";
-
-// Lazy load components
-const NavBar = React.lazy(() => import("../components/NavBar"));
-const SideBar = React.lazy(() => import("../components/SideBar"));
-const Footer = React.lazy(() => import("../components/Footer"));
-const MobileFooter = React.lazy(() => import("../components/MobileFooter"));
-const Star = React.lazy(() => import("../components/Star"));
 import "../styles/Eventspage.css";
 
 // Lazy load components

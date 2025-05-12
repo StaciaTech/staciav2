@@ -83,7 +83,7 @@
 .footer-facebook-icon {
   color: #6B6084;
   font-size: 18px;
-  transition: all 0.3s;
+  transition: all 0.2s;
 
 }
 .sitemap {
@@ -107,7 +107,9 @@
   border-radius: 3px;
   height: 2rem;
   width: 2rem;
-  padding: 5px;
+  /* padding: 5px; */
+  justify-items: center;
+  align-items: center;
    border-radius: 0.3rem;
   /* color: transparent;
   background-clip: text; */
@@ -122,7 +124,7 @@ height: 2rem;
    border-radius: 0.3rem;
 }
 .footer-facebook-icon:hover {
-  background-color: #316FF6;
+  background-color: #1877F2;
   padding: 5px;
   color: white;
   height: 2rem;
@@ -130,7 +132,7 @@ height: 2rem;
    border-radius: 0.3rem;
 }
 .footer-linkedin-icon:hover {
-  background-color: #316FF6;
+  background-color:#0077B5;
   padding: 5px;
   color: white;
   height: 1.9rem;

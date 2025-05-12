@@ -203,7 +203,8 @@ function Footer() {
               rel="noreferrer"
             >
               <div className="footer-grey-tabs pointer test-seclection-blue">
-                Ground Floor, C-53, Guindy Industrial Estate,<br />
+                Ground Floor, C-53, Guindy Industrial Estate,
+                <br />
                 Guindy, Chennai - 32, Tamil Nadu
               </div>
               {/* <div
@@ -242,8 +243,6 @@ function Footer() {
             width: "35%",
           }}
         >
-          
-
           {/* <a
             href=""
             target="_blank"
@@ -269,9 +268,12 @@ function Footer() {
             }}
           />
 
-
-          <div onClick={() => navigate("/Privacy-Policy")} style={{ cursor: "pointer", color: "black" }}>Privacy policy</div>
-
+          <div
+            onClick={() => navigate("/Privacy-Policy")}
+            style={{ cursor: "pointer", color: "black" }}
+          >
+            Privacy policy
+          </div>
         </div>
         <div className="footer-icons">
           <div>
@@ -287,10 +289,13 @@ function Footer() {
             </a>
           </div>
           <div style={{ marginLeft: "20px", marginRight: "20px" }}>
-            <a href="https://x.com/StaciaCorp" target="_blank" rel="noreferrer">
-              <div className="footer-icon-container">
-                <BsTwitterX className="footer-twitter-icon" />
-              </div>
+            <a
+              href="https://x.com/StaciaCorp"
+              target="_blank"
+              rel="noreferrer"
+              className="footer-icon-container"
+            >
+              <BsTwitterX className="footer-twitter-icon" />
             </a>
           </div>
           <div style={{ marginRight: "20px" }}>
