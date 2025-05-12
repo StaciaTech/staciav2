@@ -123,27 +123,50 @@
 }
 .image5 {
   color: black;
-  font-family: "Euclid";
+  font-family: "EuclidMedium";
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .image5-title {
-  font-family: "Euclid";
-  font-size: 2.5rem;
+  font-family: "EuclidMedium";
+  font-size: 3.5rem;
   font-weight: 600;
-  color: #DCD9E3;
+  /* color: #6b6084; */
+  /* color: #DCD9E3; */
 }
 .image5-count {
-  font-family: "Euclid";
-  font-size: 8rem;
+  font-family: "EuclidMedium";
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #0047FF;
+  font-size: 3.5rem;
   font-weight: 600;
+  justify-items: center;
+  align-items: center;
+  
+}
+
+
+.image5-count>span{
+  font-size: 2.8rem;
+  font-family: "EuclidMedium";
+  position: absolute;
+  top: 40%;
+  
+}
+.image5-count>div{
+  font-family: "EuclidMedium";
+  font-size: 3.5rem;
+  padding-top: 1rem;
+
 }
 .image5-link {
   font-size: 1.5rem;
   font-weight: 600;
-  color:black;
+  font-family: "EuclidMedium";
+  color:#0047FF;
   text-align: center;
   cursor: pointer;
 }

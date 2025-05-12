@@ -348,7 +348,14 @@ function OurProjects() {
           }}
         >
           <div className="image5-title">Overall Projects</div>
-          <div className="image5-count">{totalProjects}</div>
+          <div className="image5-count">
+            200 <span >+</span>
+            <div>
+              Completed
+            </div>
+            {/* {totalProjects} */}
+            
+          </div>
         </div>
         {lastFourProjects.map((project, index) => (
           <div
