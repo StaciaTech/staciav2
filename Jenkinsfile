@@ -6,6 +6,8 @@ pipeline {
     CPANEL_HOST = 'staciacorp.com'
     CPANEL_DEST_DIR = '/home2/staciacorp/public_html'
     CPANEL_CRED_ID = 'cpanel-scp'
+    AWS_ACCESS_KEY_ID = credentials('aws-access-key-id')
+    AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
     AWS_CRED_ID = 'aws-creds'
     S3_BUCKET = 'staciatech.com'
     REGION = 'ap-south-1'
@@ -65,7 +67,7 @@ pipeline {
       }
       steps {
         script {
-                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${env.S3_BUCKET} --region ${env.BRANCH}"
+                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${env.S3_BUCKET} --region ${env.REGION}"
                     echo "Successfully deployed to S3://${env.S3_BUCKET}"
       }
     }
