@@ -845,7 +845,8 @@ function Template5() {
             delivered a turnkey chili ladling solution that transforms Aachi
             Group’s operations with enhanced efficiency, safety, and
             scalability. This project exemplifies how strategic engineering
-            partnerships can drive sustainable automation in the food industry,
+            partnerships can drive sustainable automation in the food industry, 
+
             setting a new benchmark for portable, high-temperature, and fully
             connected processing equipment.
           </p>
@@ -856,3 +857,310 @@ function Template5() {
 }
 
 export default Template5;
+
+
+
+// import React, { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+// import "../styles/Templet.css";
+// import Star from "../components/Star";
+// import Data from "../Data/ProjectData2.json"; // Use ProjectData2.json instead of Templates.json
+
+// function Template5() {
+//   const { title } = useParams(); // Get title from URL
+//   const [project, setProject] = useState(null);
+
+//   useEffect(() => {
+//     if (!Data || !Data.Departments) {
+//       console.error("Data is undefined or does not contain Departments", Data);
+//       return;
+//     }
+
+//     // Normalize project title from URL
+//     const normalizedTitle = decodeURIComponent(title)
+//       .replace(/-/g, " ")
+//       .trim()
+//       .toLowerCase();
+
+//     let foundProject = null;
+
+//     // Loop through each department to find the matching project
+//     Data.Departments.forEach((department) => {
+//       department.categories.forEach((category) => {
+//         category.projects.forEach((item) => {
+//           if (item.title.trim().toLowerCase() === normalizedTitle) {
+//             foundProject = item;
+//           }
+//         });
+//       });
+//     });
+
+//     if (foundProject) {
+//       setProject(foundProject);
+//     } else {
+//       console.error("Project not found for title:", normalizedTitle);
+//     }
+//   }, [title]);
+
+//   if (!project) {
+//     return <div>Loading...</div>;
+//   }
+
+//   // Map ProjectData2.json fields to the expected structure
+//   const mappedProject = {
+//     title: project.title,
+//     starComponent: false, // Adjust based on your logic for Star component
+//     banner: {
+//       image: project.mainImageUrl || "/assets/default-banner.jpg", // Fallback image
+//       description: project.mainDesc || "No description available",
+//     },
+//     industry: {
+//       topics: [], // Derive from category/department if needed
+//     },
+//     section1: {
+//       summaryHeading: "Executive Summary",
+//       executiveSummary: [project["Executive-Summary"] || ""],
+//       image: project.mainImageUrl || "/assets/default-image.jpg",
+//     },
+//     section2: {
+//       clientOverview: [project["Client-Overview"] || project["Client-Overview2"] || ""],
+//       projectObjective: project["Project-Objective"] || [project["Project-Objective2"] || ""],
+//       listItems: (project.Challenges || project.Challenges2 || []).map((challenge, index) => ({
+//         number: (index + 1).toString().padStart(2, "0"),
+//         title: challenge.title,
+//         description: challenge.des,
+//       })),
+//     },
+//     section3: {
+//       subheading: "Key Solutions",
+//       features: (project.Solutions || project.Solutions2?.[0]?.data || []).map((solution) => ({
+//         title: solution.title,
+//         description: solution.des,
+//       })),
+//       technicalImplementation: (project["Technical-Implementation"] || []).map((tech) => ({
+//         title: tech.title,
+//         description: tech.des,
+//       })),
+//     },
+//     section4: {
+//       intro: project["Development-Process"]?.[0]?.des || "The development process followed a structured approach.",
+//       stages: (project["Development-Process"]?.Stage || project["Development-Process"]?.stage || []).map((stage) => ({
+//         title: stage.name || stage.title,
+//         activities: [stage.Line1, stage.Line2, stage.Line3].filter(Boolean),
+//         gate: stage.Gate
+//           ? {
+//               title: stage.Gate.name || "Decision Gate",
+//               decisions: [stage.Gate.Line1].filter(Boolean),
+//             }
+//           : null,
+//       })),
+//     },
+//     section5: {
+//       image: project.mainImageUrl || "/assets/default-impact.jpg",
+//       impacts: (project.Impacts || project.Impacts2 || []).map((impact) => ({
+//         title: impact.title,
+//         description: impact.des,
+//       })),
+//     },
+//     conclusion: [project.Conclusion || project.Conclusion2 || ""],
+//     references: project.References || [],
+//   };
+
+//   return (
+//     <div>
+//       {/* Project Header */}
+//       <div className="temp5-project_container">
+//         <div className="temp5-project_section temp5-p-section">
+//           <div className="temp5-project_text">
+//             <span className="test-selection-white">{mappedProject.title}</span>
+//             {mappedProject.starComponent && <Star />}
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Banner Section */}
+//       <div
+//         className="temp5-banner-img"
+//         style={{ backgroundImage: `url(${mappedProject.banner.image})` }}
+//       >
+//         <div className="temp5-img-text test-selection-white">
+//           <div>{mappedProject.banner.description}</div>
+//         </div>
+//       </div>
+
+//       {/* Content Container */}
+//       <div className="temp5-content-container">
+//         {/* Industry and Topics */}
+//         <div className="temp5-heading">
+//           <div className="temp5-title">Industry</div>
+//           <div className="temp5-topic">
+//             Topics:{" "}
+//             {mappedProject.industry.topics.map((topic, index) => (
+//               <span key={index}>
+//                 <span style={{ color: "#0047FF" }}>#</span>
+//                 {topic}
+//               </span>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Executive Summary */}
+//         <div>
+//           <div className="temp5-sec1-title">{mappedProject.title}</div>
+//           <div className="temp5-sec1-container">
+//             <div className="temp5-sec1-content">
+//               <div>{mappedProject.section1.summaryHeading}</div>
+//               {mappedProject.section1.executiveSummary.map((para, index) => (
+//                 <p className="para-temp-styles temp-margin" key={index}>
+//                   {para}
+//                 </p>
+//               ))}
+//             </div>
+//             <div className="temp5-sec1-img">
+//               <img src={mappedProject.section1.image} alt={`${mappedProject.title} Image`} />
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Client Overview */}
+//         <div>
+//           <div className="head-temp-style">Client Overview</div>
+//           {mappedProject.section2.clientOverview.map((para, index) => (
+//             <p className="para-temp-styles temp-margin" key={index}>
+//               {para}
+//             </p>
+//           ))}
+//         </div>
+
+//         {/* Project Objective */}
+//         <div>
+//           <div className="head-temp-style">Project Objective</div>
+//           {mappedProject.section2.projectObjective.flat().map((para, index) => (
+//             <p className="para-temp-styles temp-margin" key={index}>
+//               {typeof para === "string" ? para : para.des}
+//             </p>
+//           ))}
+//         </div>
+
+//         {/* Challenges */}
+//         <div>
+//           <div className="head-temp-style">Challenges</div>
+//           {mappedProject.section2.listItems.map((item, index) => (
+//             <div className="temp5-sec2-list-container" key={index}>
+//               <div className="temp5-sec2-list-num">{item.number}</div>
+//               <div>
+//                 <div className="temp5-sec2-list-title">{item.title}</div>
+//                 <p className="para-temp-styles">{item.description}</p>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Solution */}
+//         <div className="Solution">
+//           <div className="head-temp-style">Solution</div>
+//           <p className="temp5-sec4-subheading">{mappedProject.section3.subheading}</p>
+//           <ul className="sol">
+//             {mappedProject.section3.features.map((feature, index) => (
+//               <li className="para-temp-styles temp-margin" key={index}>
+//                 <span className="temp5-sec4-subheading">{feature.title}: </span>
+//                 {feature.description}
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+
+//         {/* Technical Implementation */}
+//         <div>
+//           <div className="head-temp-style">Technical Implementation</div>
+//           <ul>
+//             {mappedProject.section3.technicalImplementation.map((item, index) => (
+//               <li className="para-temp-styles temp-margin" key={index}>
+//                 <span className="temp5-sec4-subheading">{item.title}: </span>
+//                 {item.description}
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+
+//         {/* Development Process */}
+//         <div>
+//           <div className="head-temp-style">Development Process</div>
+//           <p className="para-temp-styles temp-margin">{mappedProject.section4.intro}</p>
+//           {mappedProject.section4.stages.map((stage, index) => (
+//             <div key={index}>
+//               <p className="temp5-sec4-title">{stage.title}</p>
+//               <ul>
+//                 {stage.activities.map((activity, idx) => (
+//                   <li className="para-temp-styles temp-margin" key={idx}>
+//                     {activity}
+//                   </li>
+//                 ))}
+//               </ul>
+//               {stage.gate && (
+//                 <>
+//                   <p className="temp5-sec4-subheading">{stage.gate.title}</p>
+//                   <ul>
+//                     {stage.gate.decisions.map((decision, idx) => (
+//                       <li className="para-temp-styles temp-margin" key={idx}>
+//                         {decision}
+//                       </li>
+//                     ))}
+//                   </ul>
+//                 </>
+//               )}
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Impact */}
+//         {mappedProject.section5 && (
+//           <div>
+//             <div className="head-temp-style">Impact</div>
+//             <div className="temp5-sec3-container">
+//               <div className="temp5-sec4-img">
+//                 <img src={mappedProject.section5.image} alt="Impact Image" />
+//               </div>
+//               <div>
+//                 <ul>
+//                   {mappedProject.section5.impacts.map((impact, index) => (
+//                     <li className="para-temp-styles temp-margin" key={index}>
+//                       <span className="temp5-sec4-subheading">{impact.title}: </span>
+//                       {impact.description}
+//                     </li>
+//                   ))}
+//                 </ul>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+
+//         {/* Conclusion */}
+//         <div>
+//           <div className="head-temp-style">Conclusion</div>
+//           {mappedProject.conclusion.map((item, index) => (
+//             <p className="para-temp-styles temp-margin" key={index}>
+//               {item}
+//             </p>
+//           ))}
+//         </div>
+
+//         {/* References */}
+//         <div>
+//           <div className="head-temp-style">References</div>
+//           <div className="refer-con">
+//             <ol>
+//               {mappedProject.references.map((ref, index) => (
+//                 <li className="para-temp-styles temp-margin" key={index}>
+//                   {ref}
+//                 </li>
+//               ))}
+//             </ol>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Template5;

@@ -374,6 +374,7 @@
   column-gap: 5rem;
   overflow-x: auto;
   margin: 2rem 0rem;
+  
 }
 
 .about-section8-items-container::-webkit-scrollbar {
@@ -389,7 +390,9 @@
 .about-section8-item-card {
   display: flex;
   align-items: center;
-  min-width: 60vw;
+  min-width: 77vw;
+  /* height: 400px; */
+  /* background-color: red; */
   background-color: #f8faff;
 }
 

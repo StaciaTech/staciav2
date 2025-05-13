@@ -11,7 +11,7 @@ const fourData = [
     id: 1,
     pos: "Founder Partner, CEO",
     img: p1,
-    name: "Mr Sarabesh",
+    name: "Mr Sarabesh Sriram",
     about: `Sarabesh Sriram is a visionary entrepreneur and innovator driving change. With a deep-tech mindset, empathetic leadership, and purpose-driven approach, he transforms complex challenges into impactful solutions that shape industries and position India at the forefront of global innovation.`,
     proId: "https://www.linkedin.com/in/sarabeshsriram/",
     email: "sarabeshsriram@staciacorp.com",
@@ -20,7 +20,7 @@ const fourData = [
     id: 2,
     pos: "Founder Partner, COO",
     img: p2,
-    name: "Mr Lakshman",
+    name: "Mr Lakshman PV",
     about:
       "Founder of Stacia Corp, Stacia Tech, and Director at SASTEM Global. Expertise in mechanical engineering, data science, AI, and ML. Specializes in technological innovation, strategic development, and managing operations and financial oversight across organizations.",
     proId: "https://www.linkedin.com/in/lakshman-p-v-50522a168/",
@@ -30,7 +30,7 @@ const fourData = [
     id: 3,
     pos: "Founder Partner, CTO",
     img: p3,
-    name: "Mr Revanth",
+    name: "Mr Revanth S",
     about:
       "Co-founder of Stacia Tech. Specializes in mechanical engineering, software development, and DevOps. Drives ERP systems and digital transformation in manufacturing with a focus on efficient, scalable solutions.",
     proId: "https://www.linkedin.com/in/revanth-s-36b2bb18a/",

@@ -58,7 +58,7 @@ function ReUsableArticle({ data, path }) {
               <p className="reusable-art-des test-seclection-blue">
                 {eachItem.mainDesc || eachItem.description}
               </p>
-              <div className="all-know-more" >    
+              <div className="know-more" >    
               
                 <span>Know More</span>
                 <IoIosArrowForward />

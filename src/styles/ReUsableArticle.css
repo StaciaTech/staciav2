@@ -28,6 +28,7 @@
   text-overflow: ellipsis;
   padding: 1rem 0 1rem 0;
   font-size: 1.25rem;
+  font-family: EuclidMedium;
 }
 .reusable-art-content-container {
   padding: 1rem 0rem;
@@ -109,9 +110,9 @@
     padding: 1rem;
   }
   .reusable-art-title {
-    font-size: 1.5rem;
+    font-size: 16px;
   }
   .reusable-art-des {
-    font-size: 1rem;
+    font-size: 14px;
   }
 }

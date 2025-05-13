@@ -191,10 +191,10 @@
 }
 
 .mobile-article-des {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
   font-weight: 400;
   margin: 0.5rem 0;
-  line-height: 2.2rem;
+  line-height: 1.6rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -206,6 +206,8 @@
   display: flex;
   overflow-x: auto;
   column-gap: 1.5rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
 }
 
 .mobile-article-card-container::-webkit-scrollbar {
@@ -213,7 +215,8 @@
 }
 
 .mobile-article-card {
-  min-width: 100%;
+  min-width: 90%;
+  scroll-snap-align: center;
   background-image: linear-gradient(to bottom, #0d022500, #0d0225cc),
     url("../../assets/artHomeImg.png");
   border-radius: 2rem;
@@ -224,11 +227,13 @@
 }
 
 .mobile-article-card-content {
-  margin-top: 30%;
+  margin-top: 60%;
   color: #fff;
 }
 
+/* ---------- RESPONSIVE VISIBILITY ---------- */
 @media screen and (max-width: 1024px) {
+  .articles-title,
   .article-outline-holder,
   .article-slider,
   .articles-title,
