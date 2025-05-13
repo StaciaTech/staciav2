@@ -265,6 +265,7 @@ import "../../styles/Home/OurProjects.css";
 import { useNavigate } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
 import projectData from "../../Data/ProjectsData.json"; // Adjust path as needed
+import { Center } from "@react-three/drei";
 
 function OurProjects() {
   const navigate = useNavigate();
@@ -400,13 +401,18 @@ function OurProjects() {
       </div>
       <div
         className="image5-link"
+        
+      >
+        <div
         onClick={() => {
           navigate("/project");
           window.scrollTo(0, 0);
         }}
-        style={{ cursor: "pointer" }}
-      >
+        style={{ cursor: "pointer" }}>
+
         See More <FaChevronRight style={{ verticalAlign: "middle" }} />
+
+        </div>
       </div>
     </div>
   );
