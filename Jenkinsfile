@@ -51,7 +51,7 @@ pipeline {
       steps {
         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${AWS_CRED_ID}"]]) {
           sh """
-            aws s3 sync ${BUILD_DIR}/ ${S3_BUCKET} --region ${REGION} --delete
+            aws s3 sync ${BUILD_DIR}/ ${S3_BUCKET} --region ${REGION}
           """
         }
       }
