@@ -10,7 +10,11 @@ pipeline {
     S3_BUCKET = 's3://your-bucket-name'
     REGION = 'ap-south-1'
   }
-
+  
+  tools {
+        nodejs 'Node-20.11.1'
+    }
+  
   stages {
     stage('Checkout & Build') {
       when {
