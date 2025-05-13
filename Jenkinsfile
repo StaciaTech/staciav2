@@ -57,11 +57,9 @@ pipeline {
                         ]
                     ]
                 )
-        }
+            }
       }
-    }
-
-    stage('Deploy to S3') {
+        stage('Deploy to S3') {
       when {
         branch 'release'
       }
@@ -72,6 +70,7 @@ pipeline {
       }
     }
   }
+}
 
   post {
     success {
