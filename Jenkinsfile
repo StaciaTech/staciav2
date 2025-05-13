@@ -4,7 +4,7 @@ pipeline {
   environment {
     BUILD_DIR = 'build' // Or 'dist
     CPANEL_HOST = 'staciacorp.com'
-    CPANEL_DEST_DIR = '/home2/staciacorp/public_html'
+    CPANEL_REMOTE_DIR = '/home2/staciacorp/public_html'
     CPANEL_CRED_ID = 'cpanel-scp'
     AWS_CRED_ID = 'aws-creds'
     S3_BUCKET = 'staciatech.com'
