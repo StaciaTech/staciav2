@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    BUILD_DIR = 'build' // Or 'dist'
+    BUILD_DIR = 'build' // Or 'dist
     CPANEL_HOST = 'staciacorp.com'
     CPANEL_DEST_DIR = '/home2/staciacorp/public_html'
     CPANEL_CRED_ID = 'cpanel-scp'
