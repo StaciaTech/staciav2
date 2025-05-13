@@ -39,7 +39,7 @@ pipeline {
         sshPublisher(
                     publishers: [
                         [
-                            configName: 'cpanel-scp',
+                            configName: 'staciacorp',
                             transfers: [
                                 [
                                     cleanRemote: false,
