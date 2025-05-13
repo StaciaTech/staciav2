@@ -7,7 +7,7 @@ pipeline {
     CPANEL_DEST_DIR = '/home2/staciacorp/public_html'
     CPANEL_CRED_ID = 'cpanel-scp'
     AWS_CRED_ID = 'aws-creds'
-    S3_BUCKET = 's3://your-bucket-name'
+    S3_BUCKET = 'staciatech.com'
     REGION = 'ap-south-1'
     CI = 'false'
   }
@@ -36,10 +36,27 @@ pipeline {
         branch 'main'
       }
       steps {
-        withCredentials([usernamePassword(credentialsId: "${CPANEL_CRED_ID}", usernameVariable: 'SCP_USER', passwordVariable: 'SCP_PASS')]) {
-          sh """
-            sshpass -p "$SCP_PASS" scp -o StrictHostKeyChecking=no -r ${BUILD_DIR}/* ${SCP_USER}@${CPANEL_HOST}:${CPANEL_DEST_DIR}
-          """
+        sshPublisher(
+                    publishers: [
+                        [
+                            configName: 'cpanel-scp',
+                            transfers: [
+                                [
+                                    cleanRemote: false,
+                                    excludes: '',
+                                    flatten: false,
+                                    makeEmptyDirs: false,
+                                    noDefaultExcludes: false,
+                                    remoteDirectory: CPANEL_REMOTE_DIR,
+                                    removePrefix: "${env.BUILD_OUTPUT_DIR}/",
+                                    sourceFiles: "${env.BUILD_OUTPUT_DIR}/**/*"
+                                ]
+                            ],
+                            useWorkspaceInPromotion: false,
+                            verbose: true
+                        ]
+                    ]
+                )
         }
       }
     }
@@ -49,11 +66,9 @@ pipeline {
         branch 'release'
       }
       steps {
-        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${AWS_CRED_ID}"]]) {
-          sh """
-            aws s3 sync ${BUILD_DIR}/ ${S3_BUCKET} --region ${REGION}
-          """
-        }
+        script {
+                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${env.S3_BUCKET} --region ${env.BRANCH}"
+                    echo "Successfully deployed to S3://${env.S3_BUCKET}"
       }
     }
   }
