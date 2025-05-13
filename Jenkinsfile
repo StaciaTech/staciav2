@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    BUILD_DIR = 'build' // Or 'dist'
+    BUILD_DIR = 'build' // Or 'dist
     CPANEL_HOST = 'staciacorp.com'
     CPANEL_DEST_DIR = '/home2/staciacorp/public_html'
     CPANEL_CRED_ID = 'cpanel-scp'
@@ -10,7 +10,11 @@ pipeline {
     S3_BUCKET = 's3://your-bucket-name'
     REGION = 'ap-south-1'
   }
-
+  
+  tools {
+        nodejs 'Node-20.11.1'
+    }
+  
   stages {
     stage('Checkout & Build') {
       when {
