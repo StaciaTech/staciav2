@@ -86,6 +86,20 @@
   transition: all 0.3s;
   
 }
+.sitemap {
+  font-size: 18px;
+ color: #316FF6;
+}
+.sitemap:hover {
+  color: #316FF6;
+}
+
+
+
+
+
+
+
 .footer-insta-icon:hover {
   color: #fff;
   background: #833AB4;
@@ -207,6 +221,7 @@ height: 2rem;
   font-weight: 500;
   line-height: normal;
 }
+
 .dot {
   width: 6px;
   height: 6px;

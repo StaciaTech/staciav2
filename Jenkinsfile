@@ -1,94 +1,68 @@
 pipeline {
-    agent any
+  agent any
 
-    environment {
-        CPANEL_REMOTE_DIR = '/public_html/'
+  environment {
+    BUILD_DIR = 'build' // Or 'dist
+    CPANEL_HOST = 'staciacorp.com'
+    CPANEL_DEST_DIR = '/home2/staciacorp/public_html'
+    CPANEL_CRED_ID = 'cpanel-scp'
+    AWS_CRED_ID = 'aws-s3-creds'
+    S3_BUCKET = 's3://your-bucket-name'
+    REGION = 'ap-south-1'
+  }
+  
+  tools {
+        nodejs 'Node-20.11.1'
+    }
+  
+  stages {
+    stage('Checkout & Build') {
+      when {
+        anyOf {
+          branch 'main'
+          branch 'release'
+        }
+      }
+      steps {
+        git branch: "${env.BRANCH_NAME}", url: 'https://github.com/StaciaTech/staciav2.git', credentialsId: 'github-pat'
+        sh 'npm install'
+        sh 'npm run build'
+      }
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
+    stage('Deploy to cPanel') {
+      when {
+        branch 'main'
+      }
+      steps {
+        withCredentials([usernamePassword(credentialsId: "${CPANEL_CRED_ID}", usernameVariable: 'SCP_USER', passwordVariable: 'SCP_PASS')]) {
+          sh """
+            sshpass -p "$SCP_PASS" scp -o StrictHostKeyChecking=no -r ${BUILD_DIR}/* ${SCP_USER}@${CPANEL_HOST}:${CPANEL_DEST_DIR}
+          """
         }
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'npm run build'
-            }
-        }
-        stage('Determine Build Output') {
-            steps {
-                script {
-                    if (fileExists('build')) {
-                        env.BUILD_OUTPUT_DIR = 'build'
-                        echo "Build output directory found: build"
-                    } else if (fileExists('dist')) {
-                        env.BUILD_OUTPUT_DIR = 'dist'
-                        echo "Build output directory found: dist"
-                    } else {
-                        error "Neither 'build' nor 'dist' directory found after build!"
-                    }
-                }
-            }
-        }
-        stage('Deploy to S3') {
-            when {
-                branch 'release'
-            }
-            steps {
-                script {
-                    def awsRegion = 'ap-south-1'
-                    def s3BucketName = 'staciatech.com'
-
-                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${s3BucketName} --region ${awsRegion}"
-                    echo "Successfully deployed to S3://${s3BucketName}"
-                }
-            }
-        }
-        stage('Deploy to cPanel') {
-            when {
-                branch 'main'
-            }
-            steps {
-                sshPublisher(
-                    publishers: [
-                        [
-                            configName: 'cpanel-scp', // The name you'll configure in Jenkins Global Tool Configuration
-                            transfers: [
-                                [
-                                    cleanRemote: false,
-                                    excludes: '',
-                                    flatten: false,
-                                    makeEmptyDirs: false,
-                                    noDefaultExcludes: false,
-                                    remoteDirectory: CPANEL_REMOTE_DIR,
-                                    removePrefix: "${env.BUILD_OUTPUT_DIR}/", // Remove the build or dist prefix
-                                    sourceFiles: "${env.BUILD_OUTPUT_DIR}/**/*"
-                                ]
-                            ],
-                            useWorkspaceInPromotion: false,
-                            verbose: true
-                        ]
-                    ]
-                )
-            }
-        }
+      }
     }
-triggers {
-    githubPush()
-    githubPullRequests(
-        branchRestriction: [
-            includes: [
-                'release',
-                'main'
-            ]
-        ],
-        events: ['opened', 'synchronize', 'reopened', 'closed']
-    )
-}
+
+    stage('Deploy to S3') {
+      when {
+        branch 'release'
+      }
+      steps {
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${AWS_CRED_ID}"]]) {
+          sh """
+            aws s3 sync ${BUILD_DIR}/ ${S3_BUCKET} --region ${REGION} --delete
+          """
+        }
+      }
+    }
+  }
+
+  post {
+    success {
+      echo "✅ Successfully built and deployed ${env.BRANCH_NAME}"
+    }
+    failure {
+      echo "❌ Build or deployment failed for ${env.BRANCH_NAME}"
+    }
+  }
 }

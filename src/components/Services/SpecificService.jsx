@@ -123,54 +123,164 @@
 
 
 
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
+// import { useParams } from "react-router-dom";
+// import NavBar from "../NavBar";
+// import Footer from "../Footer";
+// import "../../styles/Services/SpecificServices.css";
+// import WhatWeDoCard from "./WhatWeDoCard";
+// import WhatWeDoAccordion from "./WhatWeDoAccordion";
+// import MobileFooter from "../MobileFooter";
+// import SideBar from "../SideBar";
+// import Star from "../Star";
+// import serviceData from "../../Data/Services.json";
+
+
+// export default function SpecificService() {
+//   const params = useParams();
+//   console.log("Params:", params);
+
+//   const [ServiceData, setServiceData] = useState([]);
+
+//   useEffect(() => {
+//     // Simulating fetching data from local JSON
+//     setServiceData(serviceData);
+//   }, []);
+
+//   const ServiceCategory = ServiceData?.find(
+//     (eachServ) => eachServ.name === params.department.split("-").join(" ")
+//   );
+
+//   const singleService = ServiceCategory?.categories?.find(
+//     (eachCat) => eachCat.name === params.category.split("-").join(" ")
+//   );
+
+//   console.log("ServiceCategory:", ServiceCategory);
+//   console.log("SingleService:", singleService);
+//   console.log(singleService?.oneLine, "Description")
+//   const [accordion, setAccordion] = useState(null);
+
+//   return (
+//     <>
+//       <div className="nav_style">
+//         <NavBar />
+//         <SideBar />
+//       </div>
+//       <div>
+//         <div className="service-hero-container">
+//           <div>
+//             <div className="service-title">
+//               <Star />
+//               <span style={{ userSelect: "none" }}>
+//                 {singleService?.name || "Service Not Found"}
+//               </span>
+//             </div>
+//             <div className="service-section1-content-box">
+//               <div>
+//                 <div className="service-overview-title">Overview</div>
+//                 <p className="test-seclection-white service-cat-des">
+//                   {singleService?.description || "No description available."}
+//                 </p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="specific-service-section2">
+//           <div className="whatwedo">What We Do?</div>
+
+//           {/* Ensure services exist before mapping */}
+//           {singleService?.services && singleService.services.length > 0 ? (
+//             <>
+//               <div className="what-we-do-grid">
+//                 {singleService.services.map((data, i) => (
+//                   <WhatWeDoCard
+//                     key={i}
+//                     title={data?.title}
+//                     desc={data?.oneLine}
+//                     department={params.department}
+//                     category={params.category}
+//                   />
+//                 ))}
+//               </div>
+
+//               <div className="what-we-do-accordion-container">
+//                 {singleService.services.map((data, i) => (
+//                   <WhatWeDoAccordion
+//                     key={i}
+//                     title={data?.title}
+//                     desc={data?.oneLine}
+//                     department={params.department}
+//                     category={params.category}
+//                     i={i}
+//                     setAccordion={setAccordion}
+//                     accordion={accordion}
+//                   />
+//                 ))}
+//               </div>
+//             </>
+//           ) : (
+//             <p className="no-services">No services available for this category.</p>
+//           )}
+//         </div>
+//       </div>
+//       <Footer />
+//       <MobileFooter />
+//     </>
+//   );
+// }
+
+
+
+//lazy loading 
+
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
-import NavBar from "../NavBar";
-import Footer from "../Footer";
 import "../../styles/Services/SpecificServices.css";
-import WhatWeDoCard from "./WhatWeDoCard";
-import WhatWeDoAccordion from "./WhatWeDoAccordion";
-import MobileFooter from "../MobileFooter";
-import SideBar from "../SideBar";
-import Star from "../Star";
 import serviceData from "../../Data/Services.json";
-
-
+// Lazy load components
+const NavBar = lazy(() => import("../NavBar"));
+const SideBar = lazy(() => import("../SideBar"));
+const Star = lazy(() => import("../Star"));
+const Footer = lazy(() => import("../Footer"));
+const MobileFooter = lazy(() => import("../MobileFooter"));
+const WhatWeDoCard = lazy(() => import("./WhatWeDoCard"));
+const WhatWeDoAccordion = lazy(() => import("./WhatWeDoAccordion"));
 export default function SpecificService() {
   const params = useParams();
   console.log("Params:", params);
-
   const [ServiceData, setServiceData] = useState([]);
-
   useEffect(() => {
     // Simulating fetching data from local JSON
     setServiceData(serviceData);
   }, []);
-
   const ServiceCategory = ServiceData?.find(
     (eachServ) => eachServ.name === params.department.split("-").join(" ")
   );
-
   const singleService = ServiceCategory?.categories?.find(
     (eachCat) => eachCat.name === params.category.split("-").join(" ")
   );
-
   console.log("ServiceCategory:", ServiceCategory);
   console.log("SingleService:", singleService);
-
+  console.log(singleService?.oneLine, "Description");
   const [accordion, setAccordion] = useState(null);
-
   return (
-    <>
+    <Suspense fallback={<div>Loading Service Page...</div>}>
       <div className="nav_style">
-        <NavBar />
-        <SideBar />
+        <Suspense fallback={<div>Loading Navigation...</div>}>
+          <NavBar />
+        </Suspense>
+        <Suspense fallback={<div>Loading Sidebar...</div>}>
+          <SideBar />
+        </Suspense>
       </div>
       <div>
         <div className="service-hero-container">
           <div>
             <div className="service-title">
-              <Star />
+              <Suspense fallback={<div>Loading Star...</div>}>
+                <Star />
+              </Suspense>
               <span style={{ userSelect: "none" }}>
                 {singleService?.name || "Service Not Found"}
               </span>
@@ -185,47 +295,52 @@ export default function SpecificService() {
             </div>
           </div>
         </div>
-
         <div className="specific-service-section2">
           <div className="whatwedo">What We Do?</div>
-
           {/* Ensure services exist before mapping */}
           {singleService?.services && singleService.services.length > 0 ? (
             <>
               <div className="what-we-do-grid">
                 {singleService.services.map((data, i) => (
-                  <WhatWeDoCard
-                    key={i}
-                    title={data?.title}
-                    desc={data?.description}
-                    department={params.department}
-                    category={params.category}
-                  />
+                  <Suspense key={i} fallback={<div>Loading Card...</div>}>
+                    <WhatWeDoCard
+                      title={data?.title}
+                      desc={data?.oneLine}
+                      department={params.department}
+                      category={params.category}
+                    />
+                  </Suspense>
                 ))}
               </div>
-
               <div className="what-we-do-accordion-container">
                 {singleService.services.map((data, i) => (
-                  <WhatWeDoAccordion
-                    key={i}
-                    title={data?.title}
-                    desc={data?.description}
-                    department={params.department}
-                    category={params.category}
-                    i={i}
-                    setAccordion={setAccordion}
-                    accordion={accordion}
-                  />
+                  <Suspense key={i} fallback={<div>Loading Accordion...</div>}>
+                    <WhatWeDoAccordion
+                      title={data?.title}
+                      desc={data?.oneLine}
+                      department={params.department}
+                      category={params.category}
+                      i={i}
+                      setAccordion={setAccordion}
+                      accordion={accordion}
+                    />
+                  </Suspense>
                 ))}
               </div>
             </>
           ) : (
-            <p className="no-services">No services available for this category.</p>
+            <p className="no-services">
+              No services available for this category.
+            </p>
           )}
         </div>
       </div>
-      <Footer />
-      <MobileFooter />
-    </>
+      <Suspense fallback={<div>Loading Footer...</div>}>
+        <Footer />
+      </Suspense>
+      <Suspense fallback={<div>Loading Mobile Footer...</div>}>
+        <MobileFooter />
+      </Suspense>
+    </Suspense>
   );
 }

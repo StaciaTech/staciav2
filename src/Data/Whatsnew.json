@@ -1,35 +1,65 @@
 {
     "events": [
       {
-        "title": "Tech Conference 2025",
+        "title": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design - June 2025",
         "des": "Annual technology conference featuring latest innovations",
-        "imageUrl": "/assets/image1.png"
+        "imageUrl": "/assets/banner1.webp"
       },
       {
-        "title": "Developer Meetup",
+        "title": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design - July 2025",
         "des": "Local developer community gathering",
-        "imageUrl": "/assets/image2.png"
+        "imageUrl": "/assets/banner2.webp"
+      },
+      {
+        "title": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design - May 2025",
+        "des": "Local developer community gathering",
+        "imageUrl": "/assets/Banner.webp"
       }
     ],
     "products": [
       {
-        "title": "New Widget Release",
-        "des": "Version 2.0 with enhanced features",
-        "imageUrl": "/assets/case1.1.webp"
+        "title": "Onedril (SSM)",
+        "des": "Agri and Food Processing SPM",
+        "imageUrl": "/assets/ProductPage/onedrillssm.webp"
+      },
+      {
+        "title": "Hydration tracking (G-sensor)",
+        "des": "Research & Development",
+        "imageUrl": "/assets/ProductPage/Default.webp"
+      },
+      {
+        "title": "Edifai (Simplify your business)",
+        "des": "Edifai ",
+        "imageUrl": "/assets/New Product Development.webp"
       }
     ],
     "caseStudy": [
       {
-        "title": "E-commerce Success",
-        "des": "How Company X increased sales by 200%",
-        "imageUrl": "/assets/case4.4.webp"
+        "title": "Spicing Up Efficiency: The Impact of Mechanization on the Chilli Industry",
+        "des": "Mechanical",
+        "imageUrl": "/assets/CaseStudy/ChilliBannerImage.webp"
+      },
+      {
+        "title": "Navigating the Future of Sustainable Electronics",
+        "des": "Electronics",
+        "imageUrl": "/assets/CaseStudy/ElectronicBanner.webp"
+      },
+      {
+        "title": "Transforming Indian Agriculture",
+        "des": "Tech",
+        "imageUrl": "/assets/CaseStudy/MandiBanner.webp"
       }
     ],
     "articles": [
       {
-        "title": "AI Trends",
-        "des": "Future of artificial intelligence",
-        "imageUrl": "/assets/case3.3.webp"
+        "title": "Ascendant Intelligence",
+        "des": "AI’s Transformative Role in the Future",
+        "imageUrl": "/assets/Article/ascendent.webp"
+      },
+      {
+        "title": "Nanostructured Photovoltaic Cells",
+        "des": "Nanostructured Photovoltaics is a new type of solar technology that uses nanometer-sized structures to harvest sunlight.",
+        "imageUrl": "/assets/Article/nanostructured.webp"
       }
     ],
     "newsroom": [

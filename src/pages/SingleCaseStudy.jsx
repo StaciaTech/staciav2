@@ -1,48 +1,638 @@
+// // import React, { useEffect, useState } from "react";
+// // import { useParams } from "react-router-dom";
+// // import "../styles/SingleCaseStudy.css";
+// // import NavBar from "../components/NavBar";
+// // import SideBar from "../components/SideBar";
+// // import Footer from "../components/Footer";
+// // import MobileFooter from "../components/MobileFooter";
+// // import data from "../Data/SingleCaseStudy.json";
+// // import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
+// // import RelatedCaseStudy from "../components/CaseStudy/RelatedCaseStudy";
 
-// import React, { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
+// // function SingleCaseStudy() {
+// //   const [caseStudy, setCaseStudy] = useState(null);
+// //   const { id } = useParams();
+// //   const formattedId = id.replace(/-+/g, "-");
+
+// //   const [relatedCases, setRelatedCases] = useState([]);
+// //   console.log("Extracted ID from URL----:", id);
+
+// //   useEffect(() => {
+// //     console.log("Received ID:", id);
+// //     console.log("JSON Data:", data);
+
+// //     let selectedCaseStudy = null;
+// //     let allCaseStudies = [];
+
+// //     data.singlecasestudy.forEach((category) => {
+// //       category.data.forEach((study) => {
+// //         allCaseStudies.push(study);
+// //         if (study.id === formattedId) {
+// //           selectedCaseStudy = study;
+// //         }
+// //       });
+// //     });
+
+// //     console.log("Selected Case Study:", selectedCaseStudy);
+
+// //     if (selectedCaseStudy) {
+// //       setCaseStudy(selectedCaseStudy);
+// //       const related = allCaseStudies
+// //         .filter((study) => study.id !== formattedId)
+// //         .slice(0, 5);
+// //       setRelatedCases(related);
+// //       console.log(related, "-----------");
+// //     } else {
+// //       console.error("Case study not found!");
+// //     }
+// //   }, [id]);
+
+// //   if (!caseStudy) {
+// //     return <div>Loading...</div>;
+// //   }
+
+// //   return (
+// //     <>
+// //       <NavBar />
+// //       <SideBar />
+// //       <div>
+// //         <div className="single-casestudy-section">
+// //           <div className="single-casestudy-section-overlay">
+// //             <div className="single-casestudy-title test-seclection-white">
+// //               {caseStudy?.title}
+// //             </div>
+// //           </div>
+// //         </div>
+
+// //         <div>
+// //           <div
+// //             className="single-casestudy-heading-card-container"
+// //             style={{
+// //               backgroundImage: `url(${caseStudy.backgroundImage || ""})`,
+// //             }}
+// //           >
+// //             <div className="single-casestudy-heading test-seclection-white">
+// //               {caseStudy?.title}
+// //             </div>
+// //           </div>
+// //         </div>
+
+// //         <CaseStudyAudio />
+
+// //         <div className="single-casestudy-content-container">
+// //           <div>
+// //             <div className="single-casestudy-layout1-title test-seclection-blue">
+// //               {caseStudy?.overview?.overviewtitle}
+// //             </div>
+// //             <p className="single-casestudy-layout1-des test-seclection-blue">
+// //               {caseStudy?.overview?.description}
+// //             </p>
+
+// //             <div className="single-casestudy-layout1-img-content-container">
+// //               {caseStudy?.imageContent?.imageSrc && (
+// //                 <div>
+// //                   <img
+// //                     src={caseStudy?.imageContent.imageSrc}
+// //                     alt="Overview"
+// //                     style={{
+// //                       width: "100%",
+// //                       height: "100%",
+// //                       objectFit: "cover",
+// //                       userSelect: "none",
+// //                     }}
+// //                   />
+// //                 </div>
+// //               )}
+// //               <div>
+// //                 {caseStudy?.imageContent?.content?.map((text, index) => (
+// //                   <p key={index} className="test-seclection-blue-img-cont">
+// //                     {text}
+// //                   </p>
+// //                 ))}
+// //               </div>
+// //             </div>
+// //           </div>
+
+// //           <div className="single-casestudy-layout1-title test-seclection-blue">
+// //             <p>{caseStudy?.gallerytittle}</p>
+// //           </div>
+
+// //           {caseStudy?.gallery && caseStudy.gallery.length > 0 && (
+// //             <div className="single-casestudy-layout2">
+// //               {caseStudy.gallery.map((img, index) => (
+// //                 <div key={index}>
+// //                   <img
+// //                     src={img}
+// //                     alt={`Gallery ${index}`}
+// //                     style={{
+// //                       width: "100%",
+// //                       height: "100%",
+// //                       objectFit: "cover",
+// //                     }}
+// //                   />
+// //                 </div>
+// //               ))}
+// //             </div>
+// //           )}
+// //           <div className="challenges">
+// //             <div
+// //               className="single-casestudy-layout3"
+// //               style={{ display: "flex" }}
+// //             >
+// //               <div>
+// //                 {caseStudy?.challenges?.map((challenge, index) => (
+// //                   <div key={index}>
+// //                     <div className="single-casestudy-layout3-title test-seclection-blue">
+// //                       {challenge.challengestitle}
+// //                     </div>
+// //                     <p className="test-seclection-blue-challenge">
+// //                       {challenge.description}
+// //                     </p>
+// //                   </div>
+// //                 ))}
+// //               </div>
+// //               {caseStudy?.imageContent?.imageSrc && (
+// //                 <div>
+// //                   <img
+// //                     src={caseStudy.imageContent.imageSrc}
+// //                     alt="Challenge"
+// //                     style={{
+// //                       width: "100%",
+// //                       height: "100%",
+// //                       objectFit: "cover",
+// //                       userSelect: "none",
+// //                     }}
+// //                   />
+// //                 </div>
+// //               )}
+// //             </div>
+// //             <div className="relatable-casestudy">
+// //               <RelatedCaseStudy relatedCases={relatedCases} />
+// //             </div>
+// //           </div>
+// //         </div>
+// //       </div>
+
+// //       <Footer />
+// //       <MobileFooter />
+// //     </>
+// //   );
+// // }
+
+// // export default SingleCaseStudy;
+
+// // import React, { useEffect, useState } from "react";
+// // import { useParams } from "react-router-dom";
+// // import "../styles/SingleCaseStudy.css";
+// // import NavBar from "../components/NavBar";
+// // import SideBar from "../components/SideBar";
+// // import Footer from "../components/Footer";
+// // import MobileFooter from "../components/MobileFooter";
+// // import data from "../Data/SingleCaseStudy.json";
+// // import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
+// // import RelatedCaseStudy from "../components/CaseStudy/RelatedCaseStudy";
+
+// // function SingleCaseStudy() {
+// //   const [caseStudy, setCaseStudy] = useState(null);
+// //   const { id } = useParams();
+// //   const formattedId = id.replace(/-+/g, "-");
+
+// //   const [relatedCases, setRelatedCases] = useState([]);
+// //   console.log("Extracted ID from URL----:", id);
+
+// //   useEffect(() => {
+// //     console.log("Received ID:", id);
+// //     console.log("JSON Data:", data);
+
+// //     let selectedCaseStudy = null;
+// //     let allCaseStudies = [];
+
+// //     data.singlecasestudy.forEach((category) => {
+// //       category.data.forEach((study) => {
+// //         allCaseStudies.push(study);
+// //         if (study.id === formattedId) {
+// //           selectedCaseStudy = study;
+// //         }
+// //       });
+// //     });
+
+// //     console.log("Selected Case Study:", selectedCaseStudy);
+// // //filter realted casestudy
+
+// //     if (selectedCaseStudy) {
+// //       setCaseStudy(selectedCaseStudy);
+// //       const related = allCaseStudies
+// //         .filter((study) => study.id !== formattedId)
+// //         .slice(0, 5);
+// //       setRelatedCases(related);
+// //       console.log(related, "-----------");
+// //     } else {
+// //       console.error("Case study not found!");
+// //     }
+// //   }, [id]);
+
+// //   if (!caseStudy) {
+// //     return <div>Loading...</div>;
+// //   }
+
+// //   return (
+// //     <>
+// //       <NavBar />
+// //       <SideBar />
+// //       <div>
+// //         <div className="single-casestudy-section">
+// //           <div className="single-casestudy-section-overlay">
+// //             <div className="single-casestudy-title test-seclection-white">
+// //               {caseStudy?.title}
+// //             </div>
+// //           </div>
+// //         </div>
+
+// //         <div>
+// //           <div
+// //             className="single-casestudy-heading-card-container"
+// //             style={{
+// //               backgroundImage: `url(${caseStudy.backgroundImage || ""})`,
+// //             }}
+// //           >
+// //             <div className="single-casestudy-heading test-seclection-white">
+// //               {caseStudy?.title}
+// //             </div>
+// //           </div>
+// //         </div>
+
+// //         <CaseStudyAudio />
+
+// //         <div className="single-casestudy-content-container">
+// //           <div>
+// //             <div className="single-casestudy-layout1-title test-seclection-blue">
+// //               {caseStudy?.overview?.overviewtitle}
+// //             </div>
+
+// //             <p className="single-casestudy-layout1-des test-seclection-blue">
+// //               {caseStudy?.overview?.description}
+// //             </p>
+
+// //             <div className="single-casestudy-layout1-img-content-container">
+// //               {caseStudy?.imageContent?.imageSrc && (
+// //                 <div>
+// //                   <img
+// //                     src={caseStudy?.imageContent.imageSrc}
+// //                     alt="Overview"
+// //                     style={{
+// //                       width: "100%",
+// //                       height: "100%",
+// //                       objectFit: "cover",
+// //                       userSelect: "none",
+// //                     }}
+// //                   />
+// //                 </div>
+// //               )}
+// //               <div>
+// //                <h4 className="background">Background</h4>
+// //                 {caseStudy?.imageContent?.content?.map((text, index) => (
+// //                   <p key={index} className="test-seclection-blue-img-cont">
+// //                     {text}
+// //                   </p>
+// //                 ))}
+// //               </div>
+// //             </div>
+// //           </div>
+// //           {/* salient feature */}
+// //           <div className="salient-features">
+// //             <h2 className="single-casestudy-layout1-title test-selection-blue">
+// //               Salient Features
+// //             </h2>
+// //             <ul>
+// //               <li>Highly efficient</li>
+// //               <li>Portability due to its battery operation</li>
+// //               <li>Lightweight due to optimized selection of material</li>
+// //               <li>Occupies less space</li>
+// //               <li>High temperature operability</li>
+// //             </ul>
+// //           </div>
+// //           {/* Problem Statement */}
+// //           <div className="problem-statement">
+// //             <h2 className="single-casestudy-layout1-title test-selection-blue">
+// //               Problem Statement
+// //             </h2>
+// //             <p className="problem-statement-para1">
+// //               Traditional chili handling methods often involve several
+// //               challenges that can negatively impact product quality.
+// //               Additionally, manual handling of chili is labor-intensive,
+// //               time-consuming, and can lead to repetitive strain injuries.
+// //             </p>
+// //             <ul className="problem-statement-para2">
+// //               <li>
+// //                 <span className="highlight">Inconsistent Drying:</span> The
+// //                 drying process was time-consuming and often resulted in uneven
+// //                 moisture content.
+// //               </li>
+// //               <li>
+// //                 <span className="highlight">Manual Labor:</span> The manual
+// //                 handling of chili was labour-intensive.
+// //               </li>
+// //               <li>
+// //                 <span className="highlight">Chili Breakage:</span> Manual usage
+// //                 of ladle caused breakage in chili which affects the quality.
+// //               </li>
+// //               <li>
+// //                 <span className="highlight">Ambitious Temperature:</span> The
+// //                 chili is generally dried at 50°C – 60°C. Hence working under
+// //                 these conditions can pose several hazards to human health.
+// //               </li>
+// //             </ul>
+// //           </div>
+// //           {/* Development Process */}
+// //           <div className="development-process">
+// //             <h2 className="single-casestudy-layout1-title test-selection-blue">
+// //               Development Process
+// //             </h2>
+// //             <div>
+
+// //               <h3 className="">Ideation:</h3>
+// //               <p className="test-selection-blue">
+// //                 The ideation process for the chili ladling machine at Aachi
+// //                 Masala was driven by the observation and analysis of existing
+// //                 challenges within their chili handling operations. Through field
+// //                 visits and interactions with plant personnel, it became evident
+// //                 that the current methods of chili ladling were inefficient,
+// //                 time-consuming, and prone to product damage.
+// //               </p>
+// //               <p className="test-selection-blue">
+// //                 To address these challenges, a creative and innovative solution
+// //                 was sought. Understanding the unique properties of chili, and
+// //                 leveraging technological advancements, the concept of a
+// //                 specialized chili ladling machine emerged.
+// //               </p>
+// //               <p>
+// //                 This machine would automate the process, improve efficiency, and
+// //                 ensure consistent quality, ultimately enhancing the overall
+// //                 productivity and profitability of Aachi Masala's chili
+// //                 production.
+// //               </p>
+// //             </div>
+// //             <div>
+// //               <h3 className="single-casestudy-layout1-subtitle test-selection-blue">
+// //                 Design & Prototype:
+// //               </h3>
+// //               <p className="test-selection-blue">
+// //                 The development of the chili ladling machine involved a series
+// //                 of iterations to refine its design and functionality. Initial
+// //                 concepts focused on fixed incline mechanisms, which proved
+// //                 ineffective in efficiency.
+// //               </p>
+// //               <p>
+// //                 In the initial two prototypes, the chili encountered
+// //                 difficulties in traversing. The twisting and intertwining of the
+// //                 chili resulted in blockages and uneven movement, hindering the
+// //                 efficient
+// //               </p>
+// //               <p>
+// //                 Through iterative testing and experimentation, the team
+// //                 eventually integrated a conveyor belt system into the design.
+// //                 This proved to be the most effective solution for handling large
+// //                 quantities of chili while minimizing breakage and ensuring
+// //                 consistent processing. The conveyor belt design allowed for
+// //                 efficient movement and mixing of the chili, addressing the
+// //                 challenges encountered in earlier prototypes.
+// //               </p>
+// //             </div>
+// //           </div>
+// //           {/* Challenges Faced */}
+// //           <div className="Challenges-Faced">
+// //             <h2>Challenges Faced</h2>
+// //             <p>
+// //               One of the primary challenges encountered during the development
+// //               of the chili ladling machine was determining the optimal conveyor
+// //               angle and RPM speed.
+// //             </p>
+// //             <ul>
+// //               <li>
+// //                 <span className="highlight">Conveyor Angle:</span> TFinding the
+// //                 ideal angle for the conveyor belt was crucial to ensure proper
+// //                 movement and distribution of the chili. An angle that was too
+// //                 steep could cause the chili to slide off the belt, while an
+// //                 angle that was too shallow might not provide sufficient
+// //                 movement.
+// //               </li>
+// //               <li>
+// //                 <span className="highlight">Increased Efficiency:</span> The
+// //                 machine streamlined the chili handling process, reducing labor
+// //                 costs and increasing overall productivity.
+// //               </li>
+// //               <li>
+// //                 <span className="highlight">RPM Speed:</span> The RPM speed of
+// //                 the conveyor belt also needed to be carefully calibrated. Too
+// //                 high a speed could lead to excessive breakage of the chili,
+// //                 while too low a speed might result in inefficient processing.
+// //               </li>
+// //               <li>
+// //                 Through extensive testing and experimentation, the optimal
+// //                 conveyor angle and RPM speed were determined to be and 110 RPM,
+// //                 respectively. These settings provided the necessary balance
+// //                 between efficient chili movement and minimal breakage.
+// //               </li>
+// //             </ul>
+// //           </div>
+// //           {/* Impact and Benefits */}
+// //           <div className="impact-benefits">
+// //             <h2 className="single-casestudy-layout1-title test-selection-blue">
+// //               Impact and Benefits
+// //             </h2>
+// //             <ul>
+// //               <li>
+// //                 <span className="highlight">Improved Hygiene:</span> The
+// //                 automated handling process reduced the risk of contamination,
+// //                 ensuring the safety and quality of the final product.
+// //               </li>
+// //               <li>
+// //                 <span className="highlight">Increased Efficiency:</span> The
+// //                 machine streamlined the chili handling process, reducing labor
+// //                 costs and increasing overall productivity.
+// //               </li>
+// //               <li>
+// //                 <span className="highlight">Consistent Drying:</span> The
+// //                 controlled drying chamber ensured even drying of chili,
+// //                 resulting in a more uniform product.
+// //               </li>
+// //               <li>
+// //                 <span className="highlight">Reduced Breakage:</span> The gentle
+// //                 handling mechanism minimized chili breakage, improving product
+// //                 yield and reducing waste.
+// //               </li>
+// //             </ul>
+// //           </div>
+// //           <div className="single-casestudy-layout1-title test-seclection-blue">
+// //             <p>{caseStudy?.gallerytittle}</p>
+// //           </div>
+// //           {caseStudy?.gallery && caseStudy.gallery.length > 0 && (
+// //             <div className="single-casestudy-layout2">
+// //               {caseStudy.gallery.map((img, index) => (
+// //                 <div key={index}>
+// //                   <img
+// //                     src={img}
+// //                     alt={`Gallery ${index}`}
+// //                     style={{
+// //                       width: "100%",
+// //                       height: "100%",
+// //                       objectFit: "cover",
+// //                     }}
+// //                   />
+// //                 </div>
+// //               ))}
+// //             </div>
+// //           )}
+// //           <div className="challenges">
+// //             <div
+// //               className="single-casestudy-layout3"
+// //               style={{ display: "flex" }}
+// //             >
+// //               <div>
+// //                 {caseStudy?.challenges?.map((challenge, index) => (
+// //                   <div key={index}>
+// //                     <div className="single-casestudy-layout3-title test-seclection-blue">
+// //                       {challenge.challengestitle}
+// //                     </div>
+// //                     <p className="test-seclection-blue-challenge">
+// //                       {challenge.description}
+// //                     </p>
+// //                   </div>
+// //                 ))}
+// //               </div>
+// //               {caseStudy?.imageContent?.imageSrc && (
+// //                 <div>
+// //                   {/* <img
+// //                     src={caseStudy.imageContent.imageSrc}
+// //                     alt="Challenge"
+// //                     style={{
+// //                       width: "100%",
+// //                       height: "100%",
+// //                       objectFit: "cover",
+// //                       userSelect: "none",
+// //                     }}
+// //                   /> */}
+// //                 </div>
+// //               )}
+// //             </div>
+// //             <div className="relatable-casestudy">
+// //               <RelatedCaseStudy relatedCases={relatedCases} />
+// //             </div>
+// //           </div>
+// //         </div>
+// //       </div>
+
+// //       <Footer />
+// //       <MobileFooter />
+// //     </>
+// //   );
+// // }
+
+// // export default SingleCaseStudy;
+
+// import React, { useEffect, useState, useRef } from "react";
+// import { useParams, Link } from "react-router-dom";
 // import "../styles/SingleCaseStudy.css";
 // import NavBar from "../components/NavBar";
 // import SideBar from "../components/SideBar";
 // import Footer from "../components/Footer";
 // import MobileFooter from "../components/MobileFooter";
-// import data from "../Data/SingleCaseStudy.json";
 // import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
-// import RelatedCaseStudy from "../components/CaseStudy/RelatedCaseStudy";
+// import data from "../Data/SingleCaseStudy.json";
+// import loading from "../assets/loading.png";
+
+
+// import { IoMdClose } from "react-icons/io";
 
 // function SingleCaseStudy() {
 //   const [caseStudy, setCaseStudy] = useState(null);
+//   const [otherCaseStudies, setOtherCaseStudies] = useState([]);
 //   const { id } = useParams();
-//   const formattedId = id.replace(/-+/g, "-");
 
-//   const [relatedCases, setRelatedCases] = useState([]);
-//   console.log("Extracted ID from URL----:", id);
+//   const [showButton, setShowButton] = useState(false);
+//   const [showHelpPage, setShowHelpPage] = useState(false);
+//   const [showForm, setShowForm] = useState(false);
+//   const popupRef = useRef(null);
 
 //   useEffect(() => {
-//     console.log("Received ID:", id);
-//     console.log("JSON Data:", data);
+//     const handleScroll = () => {
+//       const scrollY = window.scrollY || document.documentElement.scrollTop;
+//       const windowHeight = window.innerHeight;
+//       const documentHeight = document.documentElement.scrollHeight;
+//       const bottomOffset = 1000; // Adjust this value as needed
+//       if (scrollY > 4200) {
+//         if (scrollY + windowHeight >= documentHeight - bottomOffset) {
+//           setShowButton(false); // Hide when near bottom
+//         } else {
+//           setShowButton(true); // Show otherwise
+//         }
+//       } else {
+//         setShowButton(false); // Hide before 1500px
+//       }
+//     };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
 
+//   const handleClick = () => {
+//     setShowHelpPage(true);
+//     setShowForm(true);
+//   };
+//   useEffect(() => {
+//     if (showForm) {
+//       // Store the current scroll position
+//       const scrollY = window.scrollY;
+//       document.body.style.position = "fixed";
+//       document.body.style.top = `-${scrollY}px`;
+//       document.body.style.width = "100%";
+//       document.body.style.overflow = "hidden";
+//     } else {
+//       // Restore the scroll position
+//       const scrollY = document.body.style.top;
+//       document.body.style.position = "";
+//       document.body.style.top = "";
+//       document.body.style.width = "";
+//       document.body.style.overflow = "auto";
+//       window.scrollTo(0, parseInt(scrollY || "0") * -1);
+//     }
+//     return () => {
+//       // Reset on unmount
+//       document.body.style.position = "";
+//       document.body.style.top = "";
+//       document.body.style.width = "";
+//       document.body.style.overflow = "auto";
+//     };
+//   }, [showForm]);
+
+//   const handleWheel = (e) => {
+//     const container = e.currentTarget;
+//     if (container.scrollHeight > container.clientHeight) {
+//       e.preventDefault();
+//       e.preventPropagation();
+//     }
+//   };
+
+//   useEffect(() => {
 //     let selectedCaseStudy = null;
 //     let allCaseStudies = [];
 
+//     // Find the current case study and collect all case studies
 //     data.singlecasestudy.forEach((category) => {
 //       category.data.forEach((study) => {
-//         allCaseStudies.push(study);
-//         if (study.id === formattedId) {
+//         if (study.id === id) {
 //           selectedCaseStudy = study;
 //         }
+//         allCaseStudies.push(study);
 //       });
 //     });
 
-//     console.log("Selected Case Study:", selectedCaseStudy);
-
 //     if (selectedCaseStudy) {
 //       setCaseStudy(selectedCaseStudy);
-//       const related = allCaseStudies
-//         .filter((study) => study.id !== formattedId)
+//       // Filter out the current case study and limit to 3 others
+//       const others = allCaseStudies
+//         .filter((study) => study.id !== id)
 //         .slice(0, 5);
-//       setRelatedCases(related);
-//       console.log(related, "-----------");
+//       setOtherCaseStudies(others);
 //     } else {
 //       console.error("Case study not found!");
 //     }
@@ -52,6 +642,7 @@
 //     return <div>Loading...</div>;
 //   }
 
+
 //   return (
 //     <>
 //       <NavBar />
@@ -60,7 +651,7 @@
 //         <div className="single-casestudy-section">
 //           <div className="single-casestudy-section-overlay">
 //             <div className="single-casestudy-title test-seclection-white">
-//               {caseStudy?.title}
+//               {caseStudy.title}
 //             </div>
 //           </div>
 //         </div>
@@ -73,213 +664,29 @@
 //             }}
 //           >
 //             <div className="single-casestudy-heading test-seclection-white">
-//               {caseStudy?.title}
+//               {caseStudy.title}
 //             </div>
 //           </div>
 //         </div>
 
-//         <CaseStudyAudio />
-
 //         <div className="single-casestudy-content-container">
 //           <div>
+//             <CaseStudyAudio />
+//           </div>
+//           <div>
 //             <div className="single-casestudy-layout1-title test-seclection-blue">
-//               {caseStudy?.overview?.overviewtitle}
+//               {caseStudy.overview.overviewtitle}
 //             </div>
+
 //             <p className="single-casestudy-layout1-des test-seclection-blue">
-//               {caseStudy?.overview?.description}
+//               {caseStudy.overview.description}
 //             </p>
 
 //             <div className="single-casestudy-layout1-img-content-container">
-//               {caseStudy?.imageContent?.imageSrc && (
-//                 <div>
-//                   <img
-//                     src={caseStudy?.imageContent.imageSrc}
-//                     alt="Overview"
-//                     style={{
-//                       width: "100%",
-//                       height: "100%",
-//                       objectFit: "cover",
-//                       userSelect: "none",
-//                     }}
-//                   />
-//                 </div>
-//               )}
-//               <div>
-//                 {caseStudy?.imageContent?.content?.map((text, index) => (
-//                   <p key={index} className="test-seclection-blue-img-cont">
-//                     {text}
-//                   </p>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-
-//           <div className="single-casestudy-layout1-title test-seclection-blue">
-//             <p>{caseStudy?.gallerytittle}</p>
-//           </div>
-
-//           {caseStudy?.gallery && caseStudy.gallery.length > 0 && (
-//             <div className="single-casestudy-layout2">
-//               {caseStudy.gallery.map((img, index) => (
-//                 <div key={index}>
-//                   <img
-//                     src={img}
-//                     alt={`Gallery ${index}`}
-//                     style={{
-//                       width: "100%",
-//                       height: "100%",
-//                       objectFit: "cover",
-//                     }}
-//                   />
-//                 </div>
-//               ))}
-//             </div>
-//           )}
-//           <div className="challenges">
-//             <div
-//               className="single-casestudy-layout3"
-//               style={{ display: "flex" }}
-//             >
-//               <div>
-//                 {caseStudy?.challenges?.map((challenge, index) => (
-//                   <div key={index}>
-//                     <div className="single-casestudy-layout3-title test-seclection-blue">
-//                       {challenge.challengestitle}
-//                     </div>
-//                     <p className="test-seclection-blue-challenge">
-//                       {challenge.description}
-//                     </p>
-//                   </div>
-//                 ))}
-//               </div>
-//               {caseStudy?.imageContent?.imageSrc && (
+//               {caseStudy.imageContent.imageSrc && (
 //                 <div>
 //                   <img
 //                     src={caseStudy.imageContent.imageSrc}
-//                     alt="Challenge"
-//                     style={{
-//                       width: "100%",
-//                       height: "100%",
-//                       objectFit: "cover",
-//                       userSelect: "none",
-//                     }}
-//                   />
-//                 </div>
-//               )}
-//             </div>
-//             <div className="relatable-casestudy">
-//               <RelatedCaseStudy relatedCases={relatedCases} />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       <Footer />
-//       <MobileFooter />
-//     </>
-//   );
-// }
-
-// export default SingleCaseStudy;
-
-// import React, { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
-// import "../styles/SingleCaseStudy.css";
-// import NavBar from "../components/NavBar";
-// import SideBar from "../components/SideBar";
-// import Footer from "../components/Footer";
-// import MobileFooter from "../components/MobileFooter";
-// import data from "../Data/SingleCaseStudy.json";
-// import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
-// import RelatedCaseStudy from "../components/CaseStudy/RelatedCaseStudy";
-
-
-// function SingleCaseStudy() {
-//   const [caseStudy, setCaseStudy] = useState(null);
-//   const { id } = useParams();
-//   const formattedId = id.replace(/-+/g, "-");
-
-//   const [relatedCases, setRelatedCases] = useState([]);
-//   console.log("Extracted ID from URL----:", id);
-
-//   useEffect(() => {
-//     console.log("Received ID:", id);
-//     console.log("JSON Data:", data);
-
-//     let selectedCaseStudy = null;
-//     let allCaseStudies = [];
-
-//     data.singlecasestudy.forEach((category) => {
-//       category.data.forEach((study) => {
-//         allCaseStudies.push(study);
-//         if (study.id === formattedId) {
-//           selectedCaseStudy = study;
-//         }
-//       });
-//     });
-
-//     console.log("Selected Case Study:", selectedCaseStudy);
-// //filter realted casestudy
-
-//     if (selectedCaseStudy) {
-//       setCaseStudy(selectedCaseStudy);
-//       const related = allCaseStudies
-//         .filter((study) => study.id !== formattedId)
-//         .slice(0, 5);
-//       setRelatedCases(related);
-//       console.log(related, "-----------");
-//     } else {
-//       console.error("Case study not found!");
-//     }
-//   }, [id]);
-
-//   if (!caseStudy) {
-//     return <div>Loading...</div>;
-//   }
-
-//   return (
-//     <>
-//       <NavBar />
-//       <SideBar />
-//       <div>
-//         <div className="single-casestudy-section">
-//           <div className="single-casestudy-section-overlay">
-//             <div className="single-casestudy-title test-seclection-white">
-//               {caseStudy?.title}
-//             </div>
-//           </div>
-//         </div>
-
-//         <div>
-//           <div
-//             className="single-casestudy-heading-card-container"
-//             style={{
-//               backgroundImage: `url(${caseStudy.backgroundImage || ""})`,
-//             }}
-//           >
-//             <div className="single-casestudy-heading test-seclection-white">
-//               {caseStudy?.title}
-//             </div>
-//           </div>
-//         </div>
-
-//         <CaseStudyAudio />
-
-//         <div className="single-casestudy-content-container">
-//           <div>
-//             <div className="single-casestudy-layout1-title test-seclection-blue">
-//               {caseStudy?.overview?.overviewtitle}
-//             </div>
-
-//             <p className="single-casestudy-layout1-des test-seclection-blue">
-//               {caseStudy?.overview?.description}
-//             </p>
-
-//             <div className="single-casestudy-layout1-img-content-container">
-//               {caseStudy?.imageContent?.imageSrc && (
-//                 <div>
-//                   <img
-//                     src={caseStudy?.imageContent.imageSrc}
 //                     alt="Overview"
 //                     style={{
 //                       width: "100%",
@@ -291,184 +698,452 @@
 //                 </div>
 //               )}
 //               <div>
-//                <h4 className="background">Background</h4>
-//                 {caseStudy?.imageContent?.content?.map((text, index) => (
+//                 <h4 className="background">
+//                   {caseStudy.imageContent.imagetitle}
+//                 </h4>
+//                 {caseStudy.imageContent.content.map((text, index) => (
 //                   <p key={index} className="test-seclection-blue-img-cont">
 //                     {text}
 //                   </p>
 //                 ))}
 //               </div>
 //             </div>
+//             <p className="single-casestudy-layout1-des test-seclection-blue">
+//               {caseStudy.Backgrounddes.description1}
+//             </p>
+//             <p className="single-casestudy-layout1-des test-seclection-blue">
+//               {caseStudy.Backgrounddes.description2}
+//             </p>
 //           </div>
-//           {/* salient feature */}
-//           <div className="salient-features">
-//             <h2 className="single-casestudy-layout1-title test-selection-blue">
-//               Salient Features
-//             </h2>
-//             <ul>
-//               <li>Highly efficient</li>
-//               <li>Portability due to its battery operation</li>
-//               <li>Lightweight due to optimized selection of material</li>
-//               <li>Occupies less space</li>
-//               <li>High temperature operability</li>
-//             </ul>
-//           </div>
+
 //           {/* Problem Statement */}
 //           <div className="problem-statement">
 //             <h2 className="single-casestudy-layout1-title test-selection-blue">
-//               Problem Statement
+//               {caseStudy.problemStatement.title}
 //             </h2>
 //             <p className="problem-statement-para1">
-//               Traditional chili handling methods often involve several
-//               challenges that can negatively impact product quality.
-//               Additionally, manual handling of chili is labor-intensive,
-//               time-consuming, and can lead to repetitive strain injuries.
+//               {caseStudy.problemStatement.description}
 //             </p>
 //             <ul className="problem-statement-para2">
-//               <li>
-//                 <span className="highlight">Inconsistent Drying:</span> The
-//                 drying process was time-consuming and often resulted in uneven
-//                 moisture content.
-//               </li>
-//               <li>
-//                 <span className="highlight">Manual Labor:</span> The manual
-//                 handling of chili was labour-intensive.
-//               </li>
-//               <li>
-//                 <span className="highlight">Chili Breakage:</span> Manual usage
-//                 of ladle caused breakage in chili which affects the quality.
-//               </li>
-//               <li>
-//                 <span className="highlight">Ambitious Temperature:</span> The
-//                 chili is generally dried at 50°C – 60°C. Hence working under
-//                 these conditions can pose several hazards to human health.
-//               </li>
+//               {caseStudy.problemStatement.issues.map((issue, index) => (
+//                 <li key={index} className="li-text">
+//                   <span className="highlight">{issue.highlight}:</span>{" "}
+//                   {issue.text}
+//                 </li>
+//               ))}
+//             </ul>
+//             <p className="problem-statement-para1">
+//               {caseStudy.problemStatement.des1}
+//             </p>
+//             <p className="problem-statement-para1">
+//               {caseStudy.problemStatement.des2}
+//             </p>
+//           </div>
+
+//           {showButton && !showHelpPage && (
+//             <button onClick={handleClick} className="help-button">
+//               <img
+//                 src={loading}
+//                 alt=""
+//                 style={{
+//                   width: "30px",
+//                 }}
+//               />
+//               How Stacia Can help
+//             </button>
+//           )}
+
+//           {/* Help Page Section */}
+//           {showForm && showHelpPage && (
+//             <div className="help-section">
+//               <div
+//                 className="help-container"
+//                 onWheel={handleWheel}
+//                 ref={popupRef}
+//               >
+//                 <div className="help-sidebar">
+//                   <img
+//                     src={loading}
+//                     alt=""
+//                     style={{
+//                       width: "30px",
+//                     }}
+//                   />
+//                   <h2>How Stacia Can Help</h2>
+
+//                   {/* Tabs */}
+//                   <div className="help-tabs">
+//                     {caseStudy.helpbox.map((tab, index) => (
+//                       <button
+//                         key={index}
+//                         className={tab === "Services" ? "active" : ""}
+//                       >
+//                         {tab}
+//                       </button>
+//                     ))}
+//                   </div>
+
+//                   {/* Links */}
+//                   <ul className="help-links">
+//                     {[
+//                       "Mechanical",
+//                       "Electronics",
+//                       "Tech",
+//                       "column 1",
+//                       "column 2",
+//                       "column 3",
+//                     ].map((link, index) => (
+//                       <li
+//                         key={index}
+//                         className={link === "Electronics" ? "active" : ""}
+//                       >
+//                         {link}
+//                       </li>
+//                     ))}
+//                   </ul>
+//                 </div>
+
+//                 {/* Help Card Section */}
+//                 <div className="help-card-section">
+//                   {[
+//                     {
+//                       img: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
+//                       title: "Placeholder text",
+//                       description:
+//                         "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in sagittis sem quis lectus aliquam.",
+//                       link: "#",
+//                     },
+//                   ].map((card, index) => (
+//                     <div className="help-card" key={index}>
+//                       <img src={card.img} alt={card.title} />
+//                       <h3>{card.title}</h3>
+//                       <p>{card.description}</p>
+//                       <a href={card.link}>Know more →</a>
+//                     </div>
+//                   ))}
+//                 </div>
+
+//                 {/* Close Button */}
+//                 <button
+//                   className="help-close-btn"
+//                   onClick={() => {
+//                     setShowHelpPage(false);
+//                     setShowForm(false);
+//                   }}
+//                 >
+//                  <IoMdClose />
+//                 </button>
+//               </div>
+//             </div>
+//           )}
+
+//           {/* Case Analysis */}
+//           <div className="development-process">
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.CaseAnalysis.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.des3}
+//             </p>
+//             {/* Challenges */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.CaseAnalysis.title1}
+//             </h2>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
+//                 <li key={index} className="li-text">{feature}</li>
+//               ))}
+//             </ul>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.des4}
+//             </p>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.des5}
+//             </p>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.des6}
+//             </p>
+
+//             {/* Proposed Solution */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.CaseAnalysis.ProposedSolution.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.ProposedSolution.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.CaseAnalysis.ProposedSolution.benefits.map(
+//                 (benefits, index) => (
+//                   <li key={index} className="li-text">
+//                     <span className="highlight">{benefits.highlight}:</span>{" "}
+//                     {benefits.text}
+//                   </li>
+//                 )
+//               )}
+//             </ul>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.ProposedSolution.des7}
+//             </p>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.ProposedSolution.des8}
+//             </p>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.ProposedSolution.des9}
+//             </p>
+
+//             {/* Key Mechanized Processes */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.title}
+//             </h2>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.Processes.map(
+//                 (Processes, index) => (
+//                   <li key={index}className="li-text">
+//                     <span className="highlight">{Processes.Process}:</span>{" "}
+//                     {Processes.Description}
+//                   </li>
+//                 )
+//               )}
+//             </ul>
+
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des10}
+//             </p>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des11}
+//             </p>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des12}
+//             </p>
+
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des13}
+//             </p>
+//             <p className="problem-statement-para1">
+//               {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des14}
+//             </p>
+
+//             {/* Statistics */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.Statistics.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.Statistics.condent.MarketGrowth.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {Object.values(caseStudy.Statistics.condent).map(
+//                 (feature, index) => (
+//                   <li key={index} className="li-text">
+//                     {feature.Description || "No feature description"}
+//                   </li>
+//                 )
+//               )}
+//             </ul>
+
+//             {/* Economic Impact */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.EconomicImpact.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.EconomicImpact.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.EconomicImpact.Impacts.map((Impacts, index) => (
+//                 <li key={index} className="li-text">
+//                   <span className="highlight">{Impacts.highlight}:</span>{" "}
+//                   {Impacts.text}
+//                 </li>
+//               ))}
+//             </ul>
+
+//             {/* Strategies to Overcome Barriers */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.StrategiesToOvercome.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.StrategiesToOvercome.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.StrategiesToOvercome.Strategies.map(
+//                 (Strategies, index) => (
+//                   <li key={index} className="li-text">
+//                     <span className="highlight">{Strategies.strategy}:</span>{" "}
+//                     {Strategies.description}
+//                   </li>
+//                 )
+//               )}
+//             </ul>
+
+//             {/* Future Trends */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.FutureTrends.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.FutureTrends.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.FutureTrends.Trends.map((Trends, index) => (
+//                 <li key={index} className="li-text">
+//                   <span className="highlight">{Trends.technology}:</span>{" "}
+//                   {Trends.description}
+//                 </li>
+//               ))}
+//             </ul>
+
+//             {/* Impact on Employment */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.ImpactOnEmployment.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.ImpactOnEmployment.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.ImpactOnEmployment.JobDisplacement.map(
+//                 (JobDisplacement, index) => (
+//                   <li key={index} className="li-text">
+//                     <span className="highlight">{JobDisplacement.area}:</span>{" "}
+//                     {JobDisplacement.description}
+//                   </li>
+//                 )
+//               )}
+//             </ul>
+
+//             {/* Regional Variations */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.RegionalVariations.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.RegionalVariations.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.RegionalVariations.AdoptionFactors.map(
+//                 (AdoptionFactors, index) => (
+//                   <li key={index} className="li-text">
+//                     <span className="highlight">{AdoptionFactors.factor}:</span>{" "}
+//                     {AdoptionFactors.description}
+//                   </li>
+//                 )
+//               )}
+//             </ul>
+
+//             {/* Environmental Impact */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.EnvironmentalImpact.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.EnvironmentalImpact.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.EnvironmentalImpact.Impacts.map((Impacts, index) => (
+//                 <li key={index} className="li-text">
+//                   <span className="highlight">{Impacts.impact}:</span>{" "}
+//                   {Impacts.description}
+//                 </li>
+//               ))}
+//             </ul>
+
+//             {/* Quality and Safety */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.QualityAndSafety.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.QualityAndSafety.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.QualityAndSafety.Improvements.map(
+//                 (Improvements, index) => (
+//                   <li key={index} className="li-text">
+//                     <span className="highlight">{Improvements.process}:</span>{" "}
+//                     {Improvements.description}
+//                   </li>
+//                 )
+//               )}
+//             </ul>
+
+//             {/* Farmer Perspectives */}
+//             <h2 className="single-casestudy-layout1-title test-selection-blue">
+//               {caseStudy.FarmerPerspectives.title}
+//             </h2>
+//             <p className="problem-statement-para1">
+//               {caseStudy.FarmerPerspectives.Description}
+//             </p>
+//             <ul className="problem-statement-para2">
+//               {caseStudy.FarmerPerspectives.BenefitsForFarmers.map(
+//                 (BenefitsForFarmers, index) => (
+//                   <li key={index} className="li-text">
+//                     <span className="highlight">
+//                       {BenefitsForFarmers.benefit}:
+//                     </span>{" "}
+//                     {BenefitsForFarmers.description}
+//                   </li>
+//                 )
+//               )}
 //             </ul>
 //           </div>
+
 //           {/* Development Process */}
 //           <div className="development-process">
 //             <h2 className="single-casestudy-layout1-title test-selection-blue">
-//               Development Process
+//               {caseStudy.developmentProcess.title}
 //             </h2>
-//             <div>
-
-//               <h3 className="">Ideation:</h3>
-//               <p className="test-selection-blue">
-//                 The ideation process for the chili ladling machine at Aachi
-//                 Masala was driven by the observation and analysis of existing
-//                 challenges within their chili handling operations. Through field
-//                 visits and interactions with plant personnel, it became evident
-//                 that the current methods of chili ladling were inefficient,
-//                 time-consuming, and prone to product damage.
-//               </p>
-//               <p className="test-selection-blue">
-//                 To address these challenges, a creative and innovative solution
-//                 was sought. Understanding the unique properties of chili, and
-//                 leveraging technological advancements, the concept of a
-//                 specialized chili ladling machine emerged.
-//               </p>
-//               <p>
-//                 This machine would automate the process, improve efficiency, and
-//                 ensure consistent quality, ultimately enhancing the overall
-//                 productivity and profitability of Aachi Masala's chili
-//                 production.
-//               </p>
-//             </div>
-//             <div>
-//               <h3 className="single-casestudy-layout1-subtitle test-selection-blue">
-//                 Design & Prototype:
-//               </h3>
-//               <p className="test-selection-blue">
-//                 The development of the chili ladling machine involved a series
-//                 of iterations to refine its design and functionality. Initial
-//                 concepts focused on fixed incline mechanisms, which proved
-//                 ineffective in efficiency.
-//               </p>
-//               <p>
-//                 In the initial two prototypes, the chili encountered
-//                 difficulties in traversing. The twisting and intertwining of the
-//                 chili resulted in blockages and uneven movement, hindering the
-//                 efficient
-//               </p>
-//               <p>
-//                 Through iterative testing and experimentation, the team
-//                 eventually integrated a conveyor belt system into the design.
-//                 This proved to be the most effective solution for handling large
-//                 quantities of chili while minimizing breakage and ensuring
-//                 consistent processing. The conveyor belt design allowed for
-//                 efficient movement and mixing of the chili, addressing the
-//                 challenges encountered in earlier prototypes.
-//               </p>
-//             </div>
+//             {caseStudy.developmentProcess.sections.map((section, index) => (
+//               <div key={index}>
+//                 <h3 className={section.subtitleClass || ""}>
+//                   {section.subtitle}
+//                 </h3>
+//                 {section.paragraphs.map((para, paraIndex) => (
+//                   <p
+//                     key={paraIndex}
+//                     className={para.className || "test-selection-blue"}
+//                   >
+//                     {para.text}
+//                   </p>
+//                 ))}
+//               </div>
+//             ))}
 //           </div>
+
 //           {/* Challenges Faced */}
 //           <div className="Challenges-Faced">
-//             <h2>Challenges Faced</h2>
-//             <p>
-//               One of the primary challenges encountered during the development
-//               of the chili ladling machine was determining the optimal conveyor
-//               angle and RPM speed.
-//             </p>
+//             <h2>{caseStudy.challengesFaced.title}</h2>
+//             <p>{caseStudy.challengesFaced.description}</p>
 //             <ul>
-//               <li>
-//                 <span className="highlight">Conveyor Angle:</span> TFinding the
-//                 ideal angle for the conveyor belt was crucial to ensure proper
-//                 movement and distribution of the chili. An angle that was too
-//                 steep could cause the chili to slide off the belt, while an
-//                 angle that was too shallow might not provide sufficient
-//                 movement.
-//               </li>
-//               <li>
-//                 <span className="highlight">Increased Efficiency:</span> The
-//                 machine streamlined the chili handling process, reducing labor
-//                 costs and increasing overall productivity.
-//               </li>
-//               <li>
-//                 <span className="highlight">RPM Speed:</span> The RPM speed of
-//                 the conveyor belt also needed to be carefully calibrated. Too
-//                 high a speed could lead to excessive breakage of the chili,
-//                 while too low a speed might result in inefficient processing.
-//               </li>
-//               <li>
-//                 Through extensive testing and experimentation, the optimal
-//                 conveyor angle and RPM speed were determined to be and 110 RPM,
-//                 respectively. These settings provided the necessary balance
-//                 between efficient chili movement and minimal breakage.
-//               </li>
+//               {caseStudy.challengesFaced.issues.map((issues, index) => (
+//                 <li key={index} className="li-text">
+//                   {issues.highlight ? (
+//                     <>
+//                       <span className="highlight">{issues.highlight}:</span>{" "}
+//                       {issues.text}
+//                     </>
+//                   ) : (
+//                     issues.text
+//                   )}
+//                 </li>
+//               ))}
 //             </ul>
 //           </div>
+
 //           {/* Impact and Benefits */}
 //           <div className="impact-benefits">
 //             <h2 className="single-casestudy-layout1-title test-selection-blue">
-//               Impact and Benefits
+//               {caseStudy.impactBenefits.title}
 //             </h2>
 //             <ul>
-//               <li>
-//                 <span className="highlight">Improved Hygiene:</span> The
-//                 automated handling process reduced the risk of contamination,
-//                 ensuring the safety and quality of the final product.
-//               </li>
-//               <li>
-//                 <span className="highlight">Increased Efficiency:</span> The
-//                 machine streamlined the chili handling process, reducing labor
-//                 costs and increasing overall productivity.
-//               </li>
-//               <li>
-//                 <span className="highlight">Consistent Drying:</span> The
-//                 controlled drying chamber ensured even drying of chili,
-//                 resulting in a more uniform product.
-//               </li>
-//               <li>
-//                 <span className="highlight">Reduced Breakage:</span> The gentle
-//                 handling mechanism minimized chili breakage, improving product
-//                 yield and reducing waste.
-//               </li>
+//               {caseStudy.impactBenefits.benefits.map((benefits, index) => (
+//                 <li key={index} className="li-text">
+//                   <span className="highlight">{benefits.highlight}:</span>{" "}
+//                   {benefits.text}
+//                 </li>
+//               ))}
 //             </ul>
 //           </div>
+
 //           <div className="single-casestudy-layout1-title test-seclection-blue">
-//             <p>{caseStudy?.gallerytittle}</p>
+//             <p>
+//               {/* {caseStudy.gallerytittle} */} Industries
+//               </p>
 //           </div>
-//           {caseStudy?.gallery && caseStudy.gallery.length > 0 && (
+//           {caseStudy.gallery && caseStudy.gallery.length > 0 && (
 //             <div className="single-casestudy-layout2">
 //               {caseStudy.gallery.map((img, index) => (
 //                 <div key={index}>
@@ -485,16 +1160,14 @@
 //               ))}
 //             </div>
 //           )}
+
 //           <div className="challenges">
-//             <div
-//               className="single-casestudy-layout3"
-//               style={{ display: "flex" }}
-//             >
-//               <div>
-//                 {caseStudy?.challenges?.map((challenge, index) => (
+//             <div className="single-casestudy-layout3">
+//               <div className="conclusion">
+//                 {caseStudy.challenges.map((challenge, index) => (
 //                   <div key={index}>
 //                     <div className="single-casestudy-layout3-title test-seclection-blue">
-//                       {challenge.challengestitle}
+//                       {challenge.challengestitle} 
 //                     </div>
 //                     <p className="test-seclection-blue-challenge">
 //                       {challenge.description}
@@ -502,24 +1175,51 @@
 //                   </div>
 //                 ))}
 //               </div>
-//               {caseStudy?.imageContent?.imageSrc && (
-//                 <div>
-//                   {/* <img
-//                     src={caseStudy.imageContent.imageSrc}
-//                     alt="Challenge"
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Other Case Studies Section */}
+//         <div className="other-case-studies">
+//           <h2 className="single-casestudy-layout1-title test-selection-blue">
+//             Other Case Studies
+//           </h2>
+//           <div className="other-case-studies-grid">
+//             {otherCaseStudies.map((study, index) => (
+//               <div className="other-case-study-card" key={index}>
+//                 <Link to={`/case-study/single-caseStudy/${study.id}`}>
+//                   <img
+//                     src={
+//                       study.imageURL ||
+//                       "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+//                     }
+//                     alt={study.title}
 //                     style={{
 //                       width: "100%",
-//                       height: "100%",
+//                       height: "280px",
 //                       objectFit: "cover",
-//                       userSelect: "none",
+//                       borderRadius: "8px 8px 0 0",
 //                     }}
-//                   /> */}
+//                     onClick={() => window.scrollTo(0, 0)}
+//                   />
+//                 </Link>
+//                 <div className="other-case-study-content">
+//                   <h3>{study.title}</h3>
+//                   <p>
+//                     {study.overview.description.length > 100
+//                       ? `${study.overview.description.substring(0, 100)}...`
+//                       : study.overview.description}
+//                   </p>
+//                   <Link
+//                     to={`/case-study/single-caseStudy/${study.id}`}
+//                     onClick={() => window.scrollTo(0, 0)}
+//                     className="know-more-link"
+//                   >
+//                     Know more →
+//                   </Link>
 //                 </div>
-//               )}
-//             </div>
-//             <div className="relatable-casestudy">
-//               <RelatedCaseStudy relatedCases={relatedCases} />
-//             </div>
+//               </div>
+//             ))}
 //           </div>
 //         </div>
 //       </div>
@@ -533,8 +1233,9 @@
 // export default SingleCaseStudy;
 
 
+
 import React, { useEffect, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "../styles/SingleCaseStudy.css";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
@@ -542,88 +1243,99 @@ import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
 import data from "../Data/SingleCaseStudy.json";
-
 import loading from "../assets/loading.png";
+import { IoMdClose } from "react-icons/io";
 
 function SingleCaseStudy() {
   const [caseStudy, setCaseStudy] = useState(null);
+  const [otherCaseStudies, setOtherCaseStudies] = useState([]);
+  const [activeTab, setActiveTab] = useState(null); // For tab selection
+  const [hoveredTitle, setHoveredTitle] = useState(null); // For hover state
   const { id } = useParams();
 
   const [showButton, setShowButton] = useState(false);
   const [showHelpPage, setShowHelpPage] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const popupRef = useRef(null)
+  const popupRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      const bottomOffset = 1000; // Adjust this value as needed
-      if (scrollY > 1500) {
+      const bottomOffset = 1000;
+      if (scrollY > 4200) {
         if (scrollY + windowHeight >= documentHeight - bottomOffset) {
-          setShowButton(false); // Hide when near bottom
+          setShowButton(false);
         } else {
-          setShowButton(true); // Show otherwise
+          setShowButton(true);
         }
       } else {
-        setShowButton(false); // Hide before 1500px
+        setShowButton(false);
       }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const handleClick = () => {
     setShowHelpPage(true);
     setShowForm(true);
+    if (caseStudy?.helpbox?.tabs?.length > 0) {
+      setActiveTab(caseStudy.helpbox.tabs[0]); // Set first tab as active
+    }
   };
 
   useEffect(() => {
     if (showForm) {
-      document.body.style.overflow = "hidden";
+      const scrollY = window.scrollY;
       document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
       document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      const scrollY = document.body.style.top;
       document.body.style.position = "";
+      document.body.style.top = "";
       document.body.style.width = "";
+      document.body.style.overflow = "auto";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
     return () => {
-      document.body.style.overflow = "auto";
       document.body.style.position = "";
+      document.body.style.top = "";
       document.body.style.width = "";
-    }
-  }, [showForm])
+      document.body.style.overflow = "auto";
+    };
+  }, [showForm]);
+
   const handleWheel = (e) => {
     const container = e.currentTarget;
-    if (container.scrollHeight > container.clientHeigth) {
+    if (container.scrollHeight > container.clientHeight) {
       e.preventDefault();
       e.preventPropagation();
     }
-  }
-
-
-
-
-
-
-
-
+  };
 
   useEffect(() => {
     let selectedCaseStudy = null;
+    let allCaseStudies = [];
 
-    // Find the case study by id
     data.singlecasestudy.forEach((category) => {
       category.data.forEach((study) => {
         if (study.id === id) {
           selectedCaseStudy = study;
         }
+        allCaseStudies.push(study);
       });
     });
 
     if (selectedCaseStudy) {
       setCaseStudy(selectedCaseStudy);
+      const others = allCaseStudies
+        .filter((study) => study.id !== id)
+        .slice(0, 5);
+      setOtherCaseStudies(others);
     } else {
       console.error("Case study not found!");
     }
@@ -632,6 +1344,17 @@ function SingleCaseStudy() {
   if (!caseStudy) {
     return <div>Loading...</div>;
   }
+
+  // Filter cards based on the active tab
+  const filteredCards = caseStudy.helpbox?.cards?.filter(
+    (card) => card.tab === activeTab
+  ) || [];
+
+  // Get the card to display based on the hovered title, or the first card by default
+  const displayedCard =
+    filteredCards.find((card) => card.title === hoveredTitle) ||
+    filteredCards[0] ||
+    null;
 
   return (
     <>
@@ -659,8 +1382,6 @@ function SingleCaseStudy() {
           </div>
         </div>
 
-        {/* <CaseStudyAudio /> */}
-
         <div className="single-casestudy-content-container">
           <div>
             <CaseStudyAudio />
@@ -678,7 +1399,7 @@ function SingleCaseStudy() {
               {caseStudy.imageContent.imageSrc && (
                 <div>
                   <img
-                    src={caseStudy.imageContent.imageSrc}
+                    src={caseStudy.imageURL}
                     alt="Overview"
                     style={{
                       width: "100%",
@@ -690,7 +1411,9 @@ function SingleCaseStudy() {
                 </div>
               )}
               <div>
-                <h4 className="background">{caseStudy.imageContent.imagetitle}</h4>
+                <h4 className="background">
+                  {caseStudy.imageContent.imagetitle}
+                </h4>
                 {caseStudy.imageContent.content.map((text, index) => (
                   <p key={index} className="test-seclection-blue-img-cont">
                     {text}
@@ -698,18 +1421,12 @@ function SingleCaseStudy() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Salient Features */}
-          <div className="salient-features">
-            <h2 className="single-casestudy-layout1-title test-selection-blue">
-              {caseStudy.salientFeatures.title}
-            </h2>
-            <ul>
-              {caseStudy.salientFeatures.features.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
+            <p className="single-casestudy-layout1-des test-seclection-blue">
+              {caseStudy.Backgrounddes.description1}
+            </p>
+            <p className="single-casestudy-layout1-des test-seclection-blue">
+              {caseStudy.Backgrounddes.description2}
+            </p>
           </div>
 
           {/* Problem Statement */}
@@ -722,97 +1439,41 @@ function SingleCaseStudy() {
             </p>
             <ul className="problem-statement-para2">
               {caseStudy.problemStatement.issues.map((issue, index) => (
-                <li key={index}>
-                  <span className="highlight">{issue.highlight}:</span> {issue.text}
+                <li key={index} className="li-text">
+                  <span className="highlight">{issue.highlight}:</span>{" "}
+                  {issue.text}
                 </li>
               ))}
             </ul>
+            <p className="problem-statement-para1">
+              {caseStudy.problemStatement.des1}
+            </p>
+            <p className="problem-statement-para1">
+              {caseStudy.problemStatement.des2}
+            </p>
           </div>
+
           {showButton && !showHelpPage && (
             <button onClick={handleClick} className="help-button">
               <img
                 src={loading}
-                alt=""
+                alt="Loading"
                 style={{
                   width: "30px",
                 }}
               />
-              How Stacia Can help
+              How Stacia Can Help
             </button>
           )}
-          {/* Help Page Section */}
-          {/* {showForm && showHelpPage && (
-            <div className="help-section">
-              <div
-                className="help-container"
-                onWheel={handleWheel}
-                ref={popupRef}
-              >
-                <div className="help-sidebar">
-                  <img
-                    src=""
-                    alt=""
-                    style={{
-                      width: "30px",
-                    }}
-                  />
-                  <h2>How stacia can help</h2>
-                  <div className="help-tabs">
-                    <button className="active">Services</button>
-                    <button>Products</button>
-                    <button>Projects</button>
-                  </div>
-                  <ul className="help-links">
-                    <li>Mechanical</li>
-                    <li className="active">Electronics</li>
-                    <li>Tech</li>
-                    <li>column 1</li>
-                    <li>column 2</li>
-                    <li>column 3</li>
-                  </ul>
-                </div>
-                <div className="help-card-section">
-                  <div className="help-card">
-                    <img
-                      src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
-                      alt="Car"
-                    />
-                    <h3>Placeholder text</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur. Ullamcorper eu
-                      egestas tempor nunc nec habitant. Dolor vulputate tempor
-                      sagittis et maecenas praesent congue ac. Blandit in
-                      sagittis sem quis lectus aliquam. Lorem ipsum dolor sit
-                      amet consectetur. Blandit in sagittis sem quis lectus
-                      aliquam.
-                    </p>
-                    <a href="#">Know more →</a>
-                  </div>
-                </div>
-                <button
-                  className="help-close-btn"
-                  onClick={() => {
-                    setShowHelpPage(false);
-                    setShowForm(false);
-                  }}
-                >
-                  ×
-                </button>
-              </div>
-            </div>
-          )} */}
 
-          {showForm && showHelpPage && (
+          {/* Help Page Section */}
+          {showForm && showHelpPage && caseStudy.helpbox && (
             <div className="help-section">
-              <div
-                className="help-container"
-                onWheel={handleWheel}
-                ref={popupRef}
-              >
+              <div className="help-container" onWheel={handleWheel} ref={popupRef}>
                 <div className="help-sidebar">
                   <img
                     src={loading}
-                    alt=""
+                    alt="Loading"
                     style={{
                       width: "30px",
                     }}
@@ -821,41 +1482,49 @@ function SingleCaseStudy() {
 
                   {/* Tabs */}
                   <div className="help-tabs">
-                    {["Services", "Products", "Projects"].map((tab, index) => (
-                      <button key={index} className={tab === "Services" ? "active" : ""}>
+                    {caseStudy.helpbox.tabs.map((tab, index) => (
+                      <button
+                        key={index}
+                        className={activeTab === tab ? "active" : ""}
+                        onClick={() => {
+                          setActiveTab(tab);
+                          setHoveredTitle(null); // Reset hovered title when switching tabs
+                        }}
+                      >
                         {tab}
                       </button>
                     ))}
                   </div>
 
-                  {/* Links */}
-                  <ul className="help-links">
-                    {["Mechanical", "Electronics", "Tech", "column 1", "column 2", "column 3"].map((link, index) => (
-                      <li key={index} className={link === "Electronics" ? "active" : ""}>
-                        {link}
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Titles List */}
+                  {activeTab && (
+                    <ul className="help-links">
+                      {filteredCards.map((card, index) => (
+                        <li
+                          key={index}
+                          className={hoveredTitle === card.title ? "active" : ""}
+                          onMouseEnter={() => setHoveredTitle(card.title)}
+                          onMouseLeave={() => setHoveredTitle(null)}
+                        >
+                          {card.title}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
 
-                {/* Help Card Section */}
+                {/* Help Card Section (Right Side) */}
                 <div className="help-card-section">
-                  {[
-                    {
-                      img: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
-                      title: "Placeholder text",
-                      description:
-                        "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis et maecenas praesent congue ac. Blandit in sagittis sem quis lectus aliquam. Lorem ipsum dolor sit amet consectetur. Blandit in sagittis sem quis lectus aliquam.",
-                      link: "#",
-                    },
-                  ].map((card, index) => (
-                    <div className="help-card" key={index}>
-                      <img src={card.img} alt={card.title} />
-                      <h3>{card.title}</h3>
-                      <p>{card.description}</p>
-                      <a href={card.link}>Know more →</a>
+                  {displayedCard ? (
+                    <div className="help-card">
+                      <img src={displayedCard.img} alt={displayedCard.title} />
+                      <h3>{displayedCard.title}</h3>
+                      <p>{displayedCard.description}</p>
+                      <a href={displayedCard.link}>Know more →</a>
                     </div>
-                  ))}
+                  ) : (
+                    <p>No cards available for this tab.</p>
+                  )}
                 </div>
 
                 {/* Close Button */}
@@ -864,14 +1533,257 @@ function SingleCaseStudy() {
                   onClick={() => {
                     setShowHelpPage(false);
                     setShowForm(false);
+                    setHoveredTitle(null); // Reset on close
                   }}
                 >
-                  ×
+                  <IoMdClose />
                 </button>
               </div>
             </div>
           )}
 
+          {/* Rest of the sections remain unchanged */}
+          {/* Case Analysis */}
+          <div className="development-process">
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.CaseAnalysis.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.des3}
+            </p>
+            {/* Challenges */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.CaseAnalysis.title1}
+            </h2>
+            <ul className="problem-statement-para2">
+              {caseStudy.CaseAnalysis.Challenges.map((feature, index) => (
+                <li key={index} className="li-text">{feature}</li>
+              ))}
+            </ul>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.des4}
+            </p>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.des5}
+            </p>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.des6}
+            </p>
+
+            {/* Proposed Solution */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.CaseAnalysis.ProposedSolution.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.ProposedSolution.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {caseStudy.CaseAnalysis.ProposedSolution.benefits.map(
+                (benefits, index) => (
+                  <li key={index} className="li-text">
+                    <span className="highlight">{benefits.highlight}:</span>{" "}
+                    {benefits.text}
+                  </li>
+                )
+              )}
+            </ul>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.ProposedSolution.des7}
+            </p>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.ProposedSolution.des8}
+            </p>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.ProposedSolution.des9}
+            </p>
+
+            {/* Key Mechanized Processes */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.CaseAnalysis.KeyMechanizedProcesses.title}
+            </h2>
+            <ul className="problem-statement-para2">
+              {caseStudy.CaseAnalysis.KeyMechanizedProcesses.Processes.map(
+                (Processes, index) => (
+                  <li key={index} className="li-text">
+                    <span className="highlight">{Processes.Process}:</span>{" "}
+                    {Processes.Description}
+                  </li>
+                )
+              )}
+            </ul>
+
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des10}
+            </p>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des11}
+            </p>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des12}
+            </p>
+
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des13}
+            </p>
+            <p className="problem-statement-para1">
+              {caseStudy.CaseAnalysis.KeyMechanizedProcesses.des14}
+            </p>
+
+            {/* Statistics */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.Statistics.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.Statistics.condent.MarketGrowth.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {Object.values(caseStudy.Statistics.condent).map(
+                (feature, index) => (
+                  <li key={index} className="li-text">
+                    {feature.Description || "No feature description"}
+                  </li>
+                )
+              )}
+            </ul>
+
+            {/* Economic Impact */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.EconomicImpact.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.EconomicImpact.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {caseStudy.EconomicImpact.Impacts.map((Impacts, index) => (
+                <li key={index} className="li-text">
+                  <span className="highlight">{Impacts.highlight}:</span>{" "}
+                  {Impacts.text}
+                </li>
+              ))}
+            </ul>
+
+            {/* Strategies to Overcome Barriers */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.StrategiesToOvercome.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.StrategiesToOvercome.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {caseStudy.StrategiesToOvercome.Strategies.map(
+                (Strategies, index) => (
+                  <li key={index} className="li-text">
+                    <span className="highlight">{Strategies.strategy}:</span>{" "}
+                    {Strategies.description}
+                  </li>
+                )
+              )}
+            </ul>
+
+            {/* Future Trends */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.FutureTrends.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.FutureTrends.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {caseStudy.FutureTrends.Trends.map((Trends, index) => (
+                <li key={index} className="li-text">
+                  <span className="highlight">{Trends.technology}:</span>{" "}
+                  {Trends.description}
+                </li>
+              ))}
+            </ul>
+
+            {/* Impact on Employment */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.ImpactOnEmployment.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.ImpactOnEmployment.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {caseStudy.ImpactOnEmployment.JobDisplacement.map(
+                (JobDisplacement, index) => (
+                  <li key={index} className="li-text">
+                    <span className="highlight">{JobDisplacement.area}:</span>{" "}
+                    {JobDisplacement.description}
+                  </li>
+                )
+              )}
+            </ul>
+
+            {/* Regional Variations */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.RegionalVariations.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.RegionalVariations.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {caseStudy.RegionalVariations.AdoptionFactors.map(
+                (AdoptionFactors, index) => (
+                  <li key={index} className="li-text">
+                    <span className="highlight">{AdoptionFactors.factor}:</span>{" "}
+                    {AdoptionFactors.description}
+                  </li>
+                )
+              )}
+            </ul>
+
+            {/* Environmental Impact */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.EnvironmentalImpact.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.EnvironmentalImpact.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {caseStudy.EnvironmentalImpact.Impacts.map((Impacts, index) => (
+                <li key={index} className="li-text">
+                  <span className="highlight">{Impacts.impact}:</span>{" "}
+                  {Impacts.description}
+                </li>
+              ))}
+            </ul>
+
+            {/* Quality and Safety */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.QualityAndSafety.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.QualityAndSafety.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {caseStudy.QualityAndSafety.Improvements.map(
+                (Improvements, index) => (
+                  <li key={index} className="li-text">
+                    <span className="highlight">{Improvements.process}:</span>{" "}
+                    {Improvements.description}
+                  </li>
+                )
+              )}
+            </ul>
+
+            {/* Farmer Perspectives */}
+            <h2 className="single-casestudy-layout1-title test-selection-blue">
+              {caseStudy.FarmerPerspectives.title}
+            </h2>
+            <p className="problem-statement-para1">
+              {caseStudy.FarmerPerspectives.Description}
+            </p>
+            <ul className="problem-statement-para2">
+              {caseStudy.FarmerPerspectives.BenefitsForFarmers.map(
+                (BenefitsForFarmers, index) => (
+                  <li key={index} className="li-text">
+                    <span className="highlight">{BenefitsForFarmers.benefit}:</span>{" "}
+                    {BenefitsForFarmers.description}
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
 
           {/* Development Process */}
           <div className="development-process">
@@ -880,9 +1792,14 @@ function SingleCaseStudy() {
             </h2>
             {caseStudy.developmentProcess.sections.map((section, index) => (
               <div key={index}>
-                <h3 className={section.subtitleClass || ""}>{section.subtitle}</h3>
+                <h3 className={section.subtitleClass || ""}>
+                  {section.subtitle}
+                </h3>
                 {section.paragraphs.map((para, paraIndex) => (
-                  <p key={paraIndex} className={para.className || "test-selection-blue"}>
+                  <p
+                    key={paraIndex}
+                    className={para.className || "test-selection-blue"}
+                  >
                     {para.text}
                   </p>
                 ))}
@@ -895,14 +1812,15 @@ function SingleCaseStudy() {
             <h2>{caseStudy.challengesFaced.title}</h2>
             <p>{caseStudy.challengesFaced.description}</p>
             <ul>
-              {caseStudy.challengesFaced.issues.map((issue, index) => (
-                <li key={index}>
-                  {issue.highlight ? (
+              {caseStudy.challengesFaced.issues.map((issues, index) => (
+                <li key={index} className="li-text">
+                  {issues.highlight ? (
                     <>
-                      <span className="highlight">{issue.highlight}:</span> {issue.text}
+                      <span className="highlight">{issues.highlight}:</span>{" "}
+                      {issues.text}
                     </>
                   ) : (
-                    issue.text
+                    issues.text
                   )}
                 </li>
               ))}
@@ -915,16 +1833,17 @@ function SingleCaseStudy() {
               {caseStudy.impactBenefits.title}
             </h2>
             <ul>
-              {caseStudy.impactBenefits.benefits.map((benefit, index) => (
-                <li key={index}>
-                  <span className="highlight">{benefit.highlight}:</span> {benefit.text}
+              {caseStudy.impactBenefits.benefits.map((benefits, index) => (
+                <li key={index} className="li-text">
+                  <span className="highlight">{benefits.highlight}:</span>{" "}
+                  {benefits.text}
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="single-casestudy-layout1-title test-seclection-blue">
-            <p>{caseStudy.gallerytittle}</p>
+            <p>Industries</p>
           </div>
           {caseStudy.gallery && caseStudy.gallery.length > 0 && (
             <div className="single-casestudy-layout2">
@@ -945,10 +1864,10 @@ function SingleCaseStudy() {
           )}
 
           <div className="challenges">
-            <div className="single-casestudy-layout3" >
+            <div className="single-casestudy-layout3">
               <div className="conclusion">
                 {caseStudy.challenges.map((challenge, index) => (
-                  <div key={index} >
+                  <div key={index}>
                     <div className="single-casestudy-layout3-title test-seclection-blue">
                       {challenge.challengestitle}
                     </div>
@@ -959,6 +1878,50 @@ function SingleCaseStudy() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Other Case Studies Section */}
+        <div className="other-case-studies">
+          <h2 className="single-casestudy-layout1-title test-selection-blue">
+            Other Case Studies
+          </h2>
+          <div className="other-case-studies-grid">
+            {otherCaseStudies.map((study, index) => (
+              <div className="other-case-study-card" key={index}>
+                <Link to={`/case-study/single-caseStudy/${study.id}`}>
+                  <img
+                    src={
+                      study.imageURL ||
+                      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+                    }
+                    alt={study.title}
+                    style={{
+                      width: "100%",
+                      height: "280px",
+                      objectFit: "cover",
+                      borderRadius: "8px 8px 0 0",
+                    }}
+                    onClick={() => window.scrollTo(0, 0)}
+                  />
+                </Link>
+                <div className="other-case-study-content">
+                  <h3>{study.title}</h3>
+                  <p>
+                    {study.overview.description.length > 100
+                      ? `${study.overview.description.substring(0, 100)}...`
+                      : study.overview.description}
+                  </p>
+                  <Link
+                    to={`/case-study/single-caseStudy/${study.id}`}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="know-more-link"
+                  >
+                    Know more →
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -317,7 +317,8 @@
 
 
 
-// First result
+
+// With dot container and mobile view scroll buttons
 
 // import React, { useEffect, useState, useRef } from "react";
 // import NavBar from "../components/NavBar";
@@ -340,7 +341,7 @@
 //   const [ServiceData, setServiceData] = useState([]);
 //   const [activeDepartment, setActiveDepartment] = useState("");
 //   const [cursorVisible, setCursorVisible] = useState(false);
-//   const [isManualScroll, setIsManualScroll] = useState(false); // Tracks manual dot clicks
+//   const [isDotClickScroll, setIsDotClickScroll] = useState(false); // Tracks dot-initiated scrolls
 
 //   const sectionsRef = useRef({});
 //   const scrollTimeoutRef = useRef(null); // To manage scroll timeout
@@ -359,9 +360,9 @@
 //     }
 //   }, [ServiceData, params.department]);
 
-//   // Scroll to active department on mount or when changed (not during manual scroll)
+//   // Scroll to active department on mount or when changed (not during dot-click scroll)
 //   useEffect(() => {
-//     if (ServiceData.length && activeDepartment && !isManualScroll) {
+//     if (ServiceData.length && activeDepartment && !isDotClickScroll) {
 //       const section = document.getElementById(activeDepartment);
 //       if (section) {
 //         const yOffset = -80; // Adjust for navbar
@@ -369,13 +370,13 @@
 //         window.scrollTo({ top: y, behavior: "smooth" });
 //       }
 //     }
-//   }, [activeDepartment, ServiceData, isManualScroll]);
+//   }, [activeDepartment, ServiceData, isDotClickScroll]);
 
-//   // Intersection Observer for updating active department during natural scrolling
+//   // Intersection Observer for updating active department during scrolling
 //   useEffect(() => {
 //     const observer = new IntersectionObserver(
 //       (entries) => {
-//         if (!isManualScroll) { // Only update if not manually scrolling
+//         if (!isDotClickScroll) { // Allow updates during manual scrolling
 //           entries.forEach((entry) => {
 //             if (entry.isIntersecting) {
 //               setActiveDepartment(entry.target.id);
@@ -385,7 +386,7 @@
 //       },
 //       {
 //         root: null,
-//         threshold: 0.5, // Increased threshold for more reliable detection
+//         threshold: 0.3, // Reverted to original threshold for visibility detection
 //       }
 //     );
 
@@ -395,15 +396,15 @@
 //     });
 
 //     return () => observer.disconnect();
-//   }, [ServiceData, isManualScroll]);
+//   }, [ServiceData, isDotClickScroll]);
 
 //   // Handle dot click
 //   const handleDotClick = (departmentName) => {
 //     if (scrollTimeoutRef.current) {
-//       clearTimeout(scrollTimeoutRef.current); // Clear any existing timeout
+//       clearTimeout(scrollTimeoutRef.current); // Clear existing timeout
 //     }
 
-//     setIsManualScroll(true); // Disable observer updates
+//     setIsDotClickScroll(true); // Disable observer updates for dot clicks
 //     setActiveDepartment(departmentName); // Set target department
 
 //     const section = document.getElementById(departmentName);
@@ -412,10 +413,10 @@
 //       const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 //       window.scrollTo({ top: y, behavior: "smooth" });
 
-//       // Reset manual scroll after animation
+//       // Reset dot-click scroll after animation
 //       scrollTimeoutRef.current = setTimeout(() => {
-//         setIsManualScroll(false);
-//       }, 1200); // Increased to ensure scroll completes
+//         setIsDotClickScroll(false);
+//       }, 1200); // Duration for scroll animation
 //     }
 //   };
 
@@ -465,10 +466,10 @@
 //                 <div
 //                   className="all-services"
 //                   key={i}
-//                   id={eachItem.name}
-//                   ref={(el) => (sectionsRef.current[eachItem.name] = el)}
+//                   id={eachItem?.name}
+//                   ref={(el) => (sectionsRef.current[eachItem?.name] = el)}
 //                 >
-//                   <div className="all-service-dept-title">{eachItem.name}</div>
+//                   <div className="all-service-dept-title">{eachItem?.name}</div>
 //                   <div className="all-service-box">
 //                     {eachItem?.categories?.map((data, i) => (
 //                       <div className="service-card" key={i}>
@@ -479,9 +480,9 @@
 //                           onClick={() => {
 //                             window.scrollTo(0, 0);
 //                             navigate(
-//                               `/services/${eachItem.name
+//                               `/services/${eachItem?.name
 //                                 .split(" ")
-//                                 .join("-")}/${data.name.split(" ").join("-")}`
+//                                 .join("-")}/${data?.name.split(" ").join("-")}`
 //                             );
 //                           }}
 //                         >
@@ -554,19 +555,25 @@
 
 // export default ServicePage;
 
-import React, { useEffect, useState, useRef } from "react";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import "../styles/services.css";
-import "../styles/ServiceCard.css";
-import "../styles/SingleService.css";
-import MobileFooter from "../components/MobileFooter";
-import SideBar from "../components/SideBar";
+
+
+//lazy loading 
+
+import React, { useEffect, useState, useRef, lazy, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import serviceData from "../Data/Services.json";
-import CustomCursor from "../components/CustomCursor";
+import "../styles/services.css";
+import "../styles/ServiceCard.css";
+import "../styles/SingleService.css";
+
+// Lazy load components
+const NavBar = lazy(() => import("../components/NavBar"));
+const Footer = lazy(() => import("../components/Footer"));
+const MobileFooter = lazy(() => import("../components/MobileFooter"));
+const SideBar = lazy(() => import("../components/SideBar"));
+const CustomCursor = lazy(() => import("../components/CustomCursor"));
 
 function ServicePage() {
   const navigate = useNavigate();
@@ -600,7 +607,8 @@ function ServicePage() {
       const section = document.getElementById(activeDepartment);
       if (section) {
         const yOffset = -80; // Adjust for navbar
-        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const y =
+          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
@@ -610,7 +618,8 @@ function ServicePage() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (!isDotClickScroll) { // Allow updates during manual scrolling
+        if (!isDotClickScroll) {
+          // Allow updates during manual scrolling
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveDepartment(entry.target.id);
@@ -644,7 +653,8 @@ function ServicePage() {
     const section = document.getElementById(departmentName);
     if (section) {
       const yOffset = -80;
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
 
       // Reset dot-click scroll after animation
@@ -656,103 +666,121 @@ function ServicePage() {
 
   return (
     <>
-      <div className="nav_style">
-        <NavBar />
-        <SideBar />
-      </div>
-      {!ServiceData.length ? (
-        <div>Loading...</div>
-      ) : (
-        <>
-          <div className="service-hero-container">
-            <div className="service-title">
-              <span style={{ userSelect: "none" }}>Our Services</span>
-            </div>
-          </div>
-          <div className="mobile-navigation-tabs">
-            {ServiceData.map((eachItem, i) => (
-              <div
-                key={i}
-                onClick={() => handleDotClick(eachItem.name)}
-                className={
-                  activeDepartment === eachItem.name
-                    ? "active-service-mob-tab"
-                    : ""
-                }
-              >
-                {eachItem.name}
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className="nav_style">
+          <NavBar />
+          <SideBar />
+        </div>
+        {!ServiceData.length ? (
+          <div>Loading...</div>
+        ) : (
+          <>
+            <div className="service-hero-container">
+              <div className="service-title">
+                <span style={{ userSelect: "none" }}>Our Services</span>
               </div>
-            ))}
-          </div>
-          <div className="service-page-content-container">
-            <div className="service-page-main-dots-container">
-              {ServiceData.map((eachItem, i) => (
-                <DepartmentDot
-                  key={i}
-                  eachItem={eachItem}
-                  activeDepartment={activeDepartment}
-                  setActiveDepartment={handleDotClick} // Use handleDotClick
-                />
-              ))}
             </div>
-            <div>
+            <div className="mobile-navigation-tabs">
               {ServiceData.map((eachItem, i) => (
                 <div
-                  className="all-services"
                   key={i}
-                  id={eachItem.name}
-                  ref={(el) => (sectionsRef.current[eachItem.name] = el)}
+                  onClick={() => handleDotClick(eachItem.name)}
+                  className={
+                    activeDepartment === eachItem.name
+                      ? "active-service-mob-tab"
+                      : ""
+                  }
                 >
-                  <div className="all-service-dept-title">{eachItem.name}</div>
-                  <div className="all-service-box">
-                    {eachItem?.categories?.map((data, i) => (
-                      <div className="service-card" key={i}>
-                        <div
-                          className="service-card-img-box"
-                          onMouseEnter={() => setCursorVisible(true)}
-                          onMouseLeave={() => setCursorVisible(false)}
-                          onClick={() => {
-                            window.scrollTo(0, 0);
-                            navigate(
-                              `/services/${eachItem.name
-                                .split(" ")
-                                .join("-")}/${data.name.split(" ").join("-")}`
-                            );
-                          }}
-                        >
-                          <CustomCursor isVisible={cursorVisible} text={"Know more"} />
-                          <img src={data.imageUrl} alt="" style={{ cursor: "none" }} />
-                        </div>
-                        <div className="service-content-box">
-                          <div className="feature-title">{data.name}</div>
-                          <div className="feature-para">{data.description}</div>
-                          <div
-                            className="know-more"
-                            onClick={() => {
-                              navigate(
-                                `/services/${eachItem.name
-                                  .split(" ")
-                                  .join("-")}/${data.name.split(" ").join("-")}`
-                              );
-                              window.scrollTo(0, 0);
-                            }}
-                            style={{ cursor: "pointer" }}
-                          >
-                            <span>Know More</span>
-                            <IoIosArrowForward />
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  {eachItem.name}
                 </div>
               ))}
             </div>
-          </div>
-        </>
-      )}
-      <Footer />
-      <MobileFooter />
+            <div className="service-page-content-container">
+              <div className="service-page-main-dots-container">
+                {ServiceData.map((eachItem, i) => (
+                  <DepartmentDot
+                    key={i}
+                    eachItem={eachItem}
+                    activeDepartment={activeDepartment}
+                    setActiveDepartment={handleDotClick} // Use handleDotClick
+                  />
+                ))}
+              </div>
+              <div>
+                {ServiceData.map((eachItem, i) => (
+                  <div
+                    className="all-services"
+                    key={i}
+                    id={eachItem?.name}
+                    ref={(el) => (sectionsRef.current[eachItem?.name] = el)}
+                  >
+                    <div className="all-service-dept-title">
+                      {eachItem?.name}
+                    </div>
+                    <div className="all-service-box">
+                      {eachItem?.categories?.map((data, i) => (
+                        <div className="service-card" key={i}>
+                          <div
+                            className="service-card-img-box"
+                            onMouseEnter={() => setCursorVisible(true)}
+                            onMouseLeave={() => setCursorVisible(false)}
+                            onClick={() => {
+                              window.scrollTo(0, 0);
+                              navigate(
+                                `/services/${eachItem?.name
+                                  .split(" ")
+                                  .join("-")}/${data?.name
+                                  .split(" ")
+                                  .join("-")}`
+                              );
+                            }}
+                          >
+                            <CustomCursor
+                              isVisible={cursorVisible}
+                              text={"Know more"}
+                            />
+                            <img
+                              src={data.imageUrl}
+                              alt=""
+                              style={{ cursor: "none" }}
+                              loading="lazy"
+                            />
+                          </div>
+                          <div className="service-content-box">
+                            <div className="feature-title">{data.name}</div>
+                            <div className="feature-para">
+                              {data.description}
+                            </div>
+                            <div
+                              className="know-more"
+                              onClick={() => {
+                                navigate(
+                                  `/services/${eachItem.name
+                                    .split(" ")
+                                    .join("-")}/${data.name
+                                    .split(" ")
+                                    .join("-")}`
+                                );
+                                window.scrollTo(0, 0);
+                              }}
+                              style={{ cursor: "pointer" }}
+                            >
+                              <span>Know More</span>
+                              <IoIosArrowForward />
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+        <Footer />
+        <MobileFooter />
+      </Suspense>
     </>
   );
 }
@@ -776,13 +804,17 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
     <div className="service-page-dept-container">
       <div
         className={`service-page-main-dots ${
-          eachItem.name === activeDepartment ? "service-page-main-dots-active" : ""
+          eachItem.name === activeDepartment
+            ? "service-page-main-dots-active"
+            : ""
         }`}
         onClick={() => setActiveDepartment(eachItem.name)}
         onMouseOver={() => setShowDept(true)}
         onMouseOut={() => setShowDept(false)}
       ></div>
-      {showDept && <div className="service-page-dept-name">{eachItem.name}</div>}
+      {showDept && (
+        <div className="service-page-dept-name">{eachItem.name}</div>
+      )}
     </div>
   );
 };

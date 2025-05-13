@@ -3,38 +3,35 @@
   margin-top: 60px;
   margin-bottom: 5%;
 }
-
 .four2 {
   width: 90%;
   margin: 0 auto;
 }
-
 .four-text {
-  /* color: #E7E7E7; */
-  color: #6b6084;
+  color: #6B6084;
   font-size: 60px;
   font-weight: 600;
   font-family: EuclidSemibold;
 }
-
 .sty {
   color: #0047FF;
   font-weight: 600;
   padding: 0.5rem 0;
   width: fit-content;
 }
-
 .four-card {
   margin-top: 40px;
   cursor: pointer;
 }
-
 .four-img {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.four-img>img {
+.leader-icon-container {
+  background-color: white;
+}
+.four-img > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -43,38 +40,78 @@
 }
 .founder-content {
   position: absolute;
-  bottom: 0.9%;
+  bottom: 0.8%;
   display: none;
   color: white;
-  gap: 1rem;
-  /* background: linear-gradient(to left, #0d022500, #0d0225cc); */
-  background: linear-gradient(110.72deg, rgba(255, 255, 255, 0.36) 1.21%, rgba(196, 196, 196, 0.06) 100%);
-
+  gap: 0.5rem;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3),
+    rgba(200, 200, 200, 0.1)
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(20px);
   width: 100%;
-  padding: 0.5em 2rem;
-  justify-content: flex-end;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  transition: transform 0.3s ease-in-out;
+  padding: 0.8em 2rem;
+  justify-content: flex-start;
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out, gap 0.5s ease;
 }
 .four-img:hover .founder-content {
   display: flex;
 }
+.icon-wrapper:hover {
+  margin-right: 4.5rem; 
+  animation: iconBounce 1s ease-in-out;
+}
 
+@keyframes iconBounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+.icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  margin-right: 0.5rem;
+}
+.icon-name {
+  font-size: 15px;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+.icon-wrapper:hover .icon-name {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
 .four-pos {
   color: #0D0225;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 1rem;
 }
-
 .four-name {
   color: #0D0225;
   font-size: 20px;
   font-weight: 600;
   padding: 2rem 0 1rem;
 }
-.four-para>p {
+.four-para > p {
   color: #6B6084;
   font-size: 16px;
   line-height: 30px;
@@ -86,18 +123,16 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 @media (max-width: 1024px) {
   .four-text {
     font-size: 36px;
-    /* text-align: center; */
   }
   .four-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .four-pos,
   .four-name,
-  .four-para>p {
+  .four-para > p {
     font-size: 14px;
   }
 }
@@ -108,18 +143,35 @@
   .four-text {
     font-size: 28px;
   }
-  /*  Always show content on mobile */
+  /* Always show content on mobile */
   .founder-content {
     display: flex !important;
     padding: 1rem;
     font-size: 14px;
-    justify-content: flex-end;
+    justify-content: flex-start;
     border-bottom-left-radius: 36px;
     border-bottom-right-radius: 20px;
     bottom: 0.5%;
+    gap: 1rem;
   }
   .four-img:hover .founder-content {
     display: flex;
+  }
+  .founder-content:hover {
+    gap: 1rem;
+  }
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    margin-right: 0;
+  }
+  .icon-name {
+    position: static;
+    transform: none;
+    opacity: 1 !important;
+    transition: none !important;
   }
 }
 @media (max-width: 425px) {
@@ -129,20 +181,37 @@
   .four-name {
     font-size: 16px;
   }
-
   .four-pos {
     font-size: 12px;
   }
-  .four-para>p {
+  .four-para > p {
     font-size: 12px;
     line-height: 22px;
   }
   .founder-content {
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 1rem;
+    gap: 1rem;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     bottom: 1%;
+    display: flex !important;
+  }
+  .founder-content:hover {
+    gap: 1rem;
+  }
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    margin-right: 0;
+  }
+  .icon-name {
+    position: static;
+    transform: none;
+    opacity: 1 !important;
+    transition: none !important;
   }
 }

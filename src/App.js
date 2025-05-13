@@ -28,27 +28,25 @@ import LeaderPage from "./pages/LeaderPage";
 import MediaKit from "./pages/MediaKit";
 import Partners from "./pages/Partners";
 
-
 import Template6 from "./Templets/Template6";
-
 
 import CompetitionPage from "./pages/Competition";
 import CertificateView from "./components/CertificateView";
 
-
 import EventDetails from "./components/Competition/Event-Detail";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import Sitemap from "./components/Sitemap";
 
 function App() {
-  
   return (
     <div className="App">
       {/* Lwdnkjgkufefkl */}
       {/* <StackScroll /> */}
       {/* <Box1 /> */}
       <Routes>
+        <Route path="/sitemap" element={<Sitemap />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/Privacy-Policy" element={<PrivacyPolicy/>}/>
+        <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route
@@ -65,13 +63,14 @@ function App() {
         {/* <Route path="/article/:department/:title" element={<SingleArticle />} /> */}
         <Route path="/article" element={<ArticlesPage />} />
         <Route path="/article/:department" element={<ArticlesPage />} />
-        <Route path="/article/:department/:title" element={<Template6 />} />
-        <Route path="/article/:department/single-article/:title" element={<Template6 />} />
+        <Route path="/article/:department/:title" element={<SingleArticle />} />
+        <Route path="/article/:department/single-article/:title" element={<SingleArticle />} />
 
         <Route
-          path="/project/:department/:category/:title"
-          element={<SingleProject />}
+          path="/article/:department/single-article/:title"
+          element={<Template6 />}
         />
+
         <Route
           // path="/case-study/:department/:title (Through department from nav bar)"
           path="/case-study/:department/single-caseStudy/:id" //-------------
@@ -82,22 +81,34 @@ function App() {
           path="/case-study/single-caseStudy/:id" //-------------
           element={<SingleCaseStudy />}
         />
+
         <Route
           // path="/case-study/:department/:title (direct navigation from navbar)"
           path="/case-study/:department/:id" //-------------
           element={<SingleCaseStudy />}
         />
+
+        {/* Project */}
+
         <Route path="/project" element={<ProjectPage />} />
         <Route path="/project/:department" element={<ProjectPage />} />
         <Route
           path="/project/:department/:category"
           element={<ProjectPage />}
         />
-        <Route path="/case-study" element={<CaseStudy />} />
-        <Route path="/case-study/:department" element={<CaseStudy />} />
+        <Route
+          path="/project/:department/:category/:title"
+          element={<SingleProject />}
+        />
+        {/* <Route path="/project/:department/:title" element={<SingleProject />} /> */}
+
+
+        {/* CaseStudy */}
 
         <Route path="/case-study" element={<CaseStudy />} />
+        <Route path="/case-study/:department" element={<CaseStudy />} />
         <Route path="/case-study/:department:id" element={<CaseStudy />} />
+
         <Route path="/services" element={<ServicePage />} />
         <Route path="/services/:department" element={<ServicePage />} />
         <Route
@@ -126,25 +137,19 @@ function App() {
 
         <Route path="/event/:title" element={<EventDetails />} />
 
-
-
-
-
         <Route path="/whatsnew" element={<WhatsNewPage />} />
-       
+
         <Route path="/about/:key" element={<About />} />
         <Route path="/about" element={<About />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/media-kit" element={<MediaKit />} />
         <Route path="/about/leader/:name" element={<LeaderPage />} />
 
-
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About />} />
         <Route path="/about/:subsection" element={<About />} />
         <Route path="/about/leader/:leaderName" element={<About />} />
         {/* <Route path="/partners" element={<PartnersPage />} /> */}
         {/* <Route path="/media-kit" element={<MediaKitPage />} /> */}
-
 
         <Route path="/news" element={<NewsRoomPage />} />
         <Route path="/events" element={<EventsPage />} />
@@ -157,4 +162,3 @@ function App() {
 }
 
 export default App;
-
