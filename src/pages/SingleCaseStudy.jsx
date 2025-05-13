@@ -541,7 +541,6 @@
 // import data from "../Data/SingleCaseStudy.json";
 // import loading from "../assets/loading.png";
 
-
 // import { IoMdClose } from "react-icons/io";
 
 // function SingleCaseStudy() {
@@ -641,7 +640,6 @@
 //   if (!caseStudy) {
 //     return <div>Loading...</div>;
 //   }
-
 
 //   return (
 //     <>
@@ -1167,7 +1165,7 @@
 //                 {caseStudy.challenges.map((challenge, index) => (
 //                   <div key={index}>
 //                     <div className="single-casestudy-layout3-title test-seclection-blue">
-//                       {challenge.challengestitle} 
+//                       {challenge.challengestitle}
 //                     </div>
 //                     <p className="test-seclection-blue-challenge">
 //                       {challenge.description}
@@ -1232,8 +1230,6 @@
 
 // export default SingleCaseStudy;
 
-
-
 import React, { useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import "../styles/SingleCaseStudy.css";
@@ -1242,13 +1238,7 @@ import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
-import ServcieNavComp from "../components/Services/ServcieNavComp";
-import NavProductComp from "../components/ReUsableComp/NavProductComp";
-import ProjectDropdown from "../components/ProjectDropdown";
 import data from "../Data/SingleCaseStudy.json";
-import ServicesData from "../Data/Services.json";
-import ProductsData from "../Data/ProductPage.json";
-import ProjectsData from "../Data/ProjectsData.json";
 import loading from "../assets/loading.png";
 import { IoMdClose } from "react-icons/io";
 
@@ -1262,131 +1252,7 @@ function SingleCaseStudy() {
   const [showButton, setShowButton] = useState(false);
   const [showHelpPage, setShowHelpPage] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [activeTab, setActiveTab] = useState("Services");
-  const [relatedContent, setRelatedContent] = useState({
-    Services: [],
-    Products: [],
-    Projects: [],
-  });
   const popupRef = useRef(null);
-
-  // Function to fetch items related to the case study title
-  const fetchRelatedData = (caseStudyTitle) => {
-    const relatedData = {
-      Services: [],
-      Products: [],
-      Projects: [],
-    };
-
-    const titleLower = caseStudyTitle.toLowerCase();
-    const chilliKeyword = "chilli";
-
-    // Placeholder ServicesData (since not provided)
-    const ServicesData = [
-      {
-        department: "Consulting",
-        categories: [
-          {
-            name: "Agricultural Consulting",
-            services: [
-              {
-                title: "Chilli Crop Optimization",
-                description:
-                  "Enhancing chilli crop yield through advanced techniques.",
-                relatedTo: ["Chilli"],
-                imageUrl: "/assets/services/chilli-optimization.webp",
-                link: "/services/chilli-optimization",
-              },
-              {
-                title: "Soil Analysis",
-                description:
-                  "Analyzing soil for optimal crop growth, including chilli.",
-                relatedTo: [],
-                imageUrl: "/assets/services/soil-analysis.webp",
-                link: "/services/soil-analysis",
-              },
-            ],
-          },
-        ],
-      },
-    ];
-
-    // Placeholder ProductsData (since not provided)
-    const ProductsData = {
-      department: [
-        {
-          name: "Agricultural Tools",
-          category: [
-            {
-              name: "Crop Enhancement",
-              products: [
-                {
-                  title: "Chilli Growth Fertilizer",
-                  description: "Specialized fertilizer for chilli plants.",
-                  relatedTo: ["Chilli"],
-                  imageUrl: "/assets/products/chilli-fertilizer.webp",
-                  link: "/products/chilli-fertilizer",
-                },
-                {
-                  title: "Generic Crop Spray",
-                  description: "Spray for various crops, including chilli.",
-                  relatedTo: [],
-                  imageUrl: "/assets/products/crop-spray.webp",
-                  link: "/products/crop-spray",
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    };
-
-    // Fetch related services
-    ServicesData?.forEach((department) => {
-      department.categories?.forEach((category) => {
-        category.services?.forEach((service) => {
-          if (
-            service.relatedTo?.includes(caseStudyTitle) ||
-            service.title.toLowerCase().includes(chilliKeyword) ||
-            service.description?.toLowerCase().includes(chilliKeyword)
-          ) {
-            relatedData.Services.push(service);
-          }
-        });
-      });
-    });
-
-    // Fetch related products
-    ProductsData.department?.forEach((dept) => {
-      dept.category?.forEach((category) => {
-        category.products?.forEach((product) => {
-          if (
-            product.relatedTo?.includes(caseStudyTitle) ||
-            product.title.toLowerCase().includes(chilliKeyword) ||
-            product.description?.toLowerCase().includes(chilliKeyword)
-          ) {
-            relatedData.Products.push(product);
-          }
-        });
-      });
-    });
-
-    // Fetch related projects from provided ProjectsData
-    ProjectsData.Departments?.forEach((dept) => {
-      dept.categories?.forEach((category) => {
-        category.projects?.forEach((project) => {
-          if (
-            project.title.toLowerCase().includes(chilliKeyword) ||
-            project.mainDesc?.toLowerCase().includes(chilliKeyword)
-          ) {
-            relatedData.Projects.push(project);
-          }
-        });
-      });
-    });
-
-    return relatedData;
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -1431,7 +1297,6 @@ function SingleCaseStudy() {
       document.body.style.overflow = "auto";
       window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
-
     return () => {
       document.body.style.position = "";
       document.body.style.top = "";
@@ -1472,55 +1337,13 @@ function SingleCaseStudy() {
     }
   }, [id]);
 
-  // Render navigation component
-  const renderNavComponent = () => {
-    const currentContent = relatedContent[activeTab];
-    if (!currentContent || currentContent.length === 0) return null;
-
-    switch (activeTab) {
-      case "Services":
-        return (
-          <ServcieNavComp
-            handleClose={() => {
-              setShowHelpPage(false);
-              setShowForm(false);
-            }}
-            relatedItems={currentContent}
-          />
-        );
-      case "Products":
-        return (
-          <NavProductComp
-            handleClose={() => {
-              setShowHelpPage(false);
-              setShowForm(false);
-            }}
-            relatedItems={currentContent}
-          />
-        );
-      case "Projects":
-        return (
-          <ProjectDropdown
-            handleClose={() => {
-              setShowHelpPage(false);
-              setShowForm(false);
-            }}
-            relatedItems={currentContent}
-          />
-        );
-      default:
-        return null;
-    }
-  };
-
   if (!caseStudy) {
     return <div>Loading...</div>;
   }
 
   // Filter cards based on the active tab
-  const filteredCards = caseStudy.helpbox?.cards?.filter(
-    (card) => card.tab === activeTab
-  ) || [];
+  const filteredCards =
+    caseStudy.helpbox?.cards?.filter((card) => card.tab === activeTab) || [];
 
   // Get the card to display based on the hovered title, or the first card by default
   const displayedCard =
@@ -1641,7 +1464,11 @@ function SingleCaseStudy() {
           {/* Help Page Section */}
           {showForm && showHelpPage && caseStudy.helpbox && (
             <div className="help-section">
-              <div className="help-container" onWheel={handleWheel} ref={popupRef}>
+              <div
+                className="help-container"
+                onWheel={handleWheel}
+                ref={popupRef}
+              >
                 <div className="help-sidebar">
                   <img
                     src={loading}
@@ -1674,7 +1501,9 @@ function SingleCaseStudy() {
                       {filteredCards.map((card, index) => (
                         <li
                           key={index}
-                          className={hoveredTitle === card.title ? "active" : ""}
+                          className={
+                            hoveredTitle === card.title ? "active" : ""
+                          }
                           onMouseEnter={() => setHoveredTitle(card.title)}
                           onMouseLeave={() => setHoveredTitle(null)}
                         >
@@ -1951,7 +1780,9 @@ function SingleCaseStudy() {
               {caseStudy.FarmerPerspectives.BenefitsForFarmers.map(
                 (BenefitsForFarmers, index) => (
                   <li key={index} className="li-text">
-                    <span className="highlight">{BenefitsForFarmers.benefit}:</span>{" "}
+                    <span className="highlight">
+                      {BenefitsForFarmers.benefit}:
+                    </span>{" "}
                     {BenefitsForFarmers.description}
                   </li>
                 )
