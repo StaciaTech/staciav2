@@ -6,7 +6,7 @@ pipeline {
     CPANEL_HOST = 'staciacorp.com'
     CPANEL_DEST_DIR = '/home2/staciacorp/public_html'
     CPANEL_CRED_ID = 'cpanel-scp'
-    AWS_CRED_ID = 'aws-s3-creds'
+    AWS_CRED_ID = 'aws-creds'
     S3_BUCKET = 's3://your-bucket-name'
     REGION = 'ap-south-1'
     CI = 'false'
