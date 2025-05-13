@@ -44,13 +44,13 @@ function SingleArticle() {
       <NavBar />
       <SideBar />
 
-      <div className="single-article-section">
+      {/* <div className="single-article-section">
         <div className="single-article-section-overlay">
           <div className="single-article-title test-seclection-white">
             {singleArticle.title}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         className="single-article-heading-card-container"
@@ -59,7 +59,9 @@ function SingleArticle() {
         }}
       >
         <div className="single-article-heading test-seclection-white">
-          {getFirstTwoWords(singleArticle.title)}
+          {/* {getFirstTwoWords(singleArticle.title)} */}
+
+          {singleArticle.title}
         </div>
       </div>
 
