@@ -9,6 +9,7 @@ pipeline {
     AWS_CRED_ID = 'aws-s3-creds'
     S3_BUCKET = 's3://your-bucket-name'
     REGION = 'ap-south-1'
+    CI = 'false'
   }
   
   tools {
