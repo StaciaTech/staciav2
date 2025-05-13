@@ -65,7 +65,7 @@ pipeline {
       }
       steps {
         script {
-                    sh "aws s3 sync ${env.BUILD_DIR}/* s3://${env.S3_BUCKET} --region ${env.REGION}"
+                    sh "aws s3 cp ${env.BUILD_DIR}/* s3://${env.S3_BUCKET} --recursive"
                     echo "Successfully deployed to S3://${env.S3_BUCKET}"
       }
     }
