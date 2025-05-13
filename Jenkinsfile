@@ -48,8 +48,8 @@ pipeline {
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     remoteDirectory: CPANEL_REMOTE_DIR,
-                                    removePrefix: "${env.BUILD_OUTPUT_DIR}/",
-                                    sourceFiles: "${env.BUILD_OUTPUT_DIR}/**/*"
+                                    removePrefix: "${env.BUILD_DIR}/",
+                                    sourceFiles: "${env.BUILD_DIR}/**/*"
                                 ]
                             ],
                             useWorkspaceInPromotion: false,
@@ -57,21 +57,20 @@ pipeline {
                         ]
                     ]
                 )
-        }
+            }
       }
-    }
-
-    stage('Deploy to S3') {
+        stage('Deploy to S3') {
       when {
         branch 'release'
       }
       steps {
         script {
-                    sh "aws s3 sync ${env.BUILD_OUTPUT_DIR}/* s3://${env.S3_BUCKET} --region ${env.BRANCH}"
+                    sh "aws s3 sync ${env.BUILD_DIR}/* s3://${env.S3_BUCKET} --region ${env.REGION}"
                     echo "Successfully deployed to S3://${env.S3_BUCKET}"
       }
     }
   }
+}
 
   post {
     success {
