@@ -1379,7 +1379,7 @@ function SingleCaseStudy() {
 
         <div className="single-casestudy-content-container">
           <div>
-            <CaseStudyAudio />
+            <CaseStudyAudio caseStudyId={id} />
           </div>
           <div>
             <div className="single-casestudy-layout1-title test-seclection-blue">
