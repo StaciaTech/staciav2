@@ -64,12 +64,11 @@ pipeline {
         branch 'release'
       }
       steps {
-        script {
-                    sh "aws s3 cp ${env.BUILD_DIR}/ s3://${env.S3_BUCKET} --recursive"
-                    echo "Successfully deployed to S3://${env.S3_BUCKET}"
+                withCredentials([usernamePassword(credentialsId: 'aws-creds', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                    sh 'aws s3 cp build/ s3://staciatech.com --recursive'
+         }
       }
-    }
-  }
+   }
 }
 
   post {
