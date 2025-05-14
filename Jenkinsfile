@@ -48,7 +48,6 @@ pipeline {
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     remoteDirectory: CPANEL_REMOTE_DIR,
-                                    removePrefix: "${env.BUILD_DIR}/",
                                     sourceFiles: "${env.BUILD_DIR}/**/*"
                                 ]
                             ],
@@ -63,13 +62,17 @@ pipeline {
       when {
         branch 'release'
       }
-      steps {
-        script {
-                    sh "aws s3 cp ${env.BUILD_DIR}/ s3://${env.S3_BUCKET} --recursive"
-                    echo "Successfully deployed to S3://${env.S3_BUCKET}"
-      }
-    }
-  }
+            steps {
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${AWS_CRED_ID}"]]) {
+                    script {
+                        echo "Transferring files from ${env.BUILD_DIR} to s3://${env.S3_BUCKET}"
+                        // Corrected aws s3 sync command:
+                        sh "aws s3 sync ${env.BUILD_DIR}/ s3://${env.S3_BUCKET}/ --region ${env.REGION} --delete"
+                        echo "Successfully transferred files to s3://${env.S3_BUCKET}"
+                    }
+                }
+            }
+   }
 }
 
   post {
