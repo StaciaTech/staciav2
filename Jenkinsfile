@@ -48,7 +48,6 @@ pipeline {
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     remoteDirectory: CPANEL_REMOTE_DIR,
-                                    removePrefix: "${env.BUILD_DIR}/",
                                     sourceFiles: "${env.BUILD_DIR}/**/*"
                                 ]
                             ],
