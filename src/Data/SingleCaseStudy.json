@@ -3,7 +3,7 @@
     {
       "id": "Case-Study-1",
       "name": "Mechanical",
-      "data": [
+       "data": [
         {
           "id": "Case-Study-1",
           "department": "Mechanical Sector",
@@ -21,8 +21,12 @@
               "Chilli processing, historically a labor-intensive endeavour, encompasses a series of operations, including harvesting, drying, cleaning, sorting, grinding, and packaging. Traditional methods are frequently characterized by inefficiencies, inconsistencies in product quality, and elevated labor costs. These limitations impede scalability and the ability to conform to the stringent quality standards of the global market. The advent of advanced engineering and automation technologies has facilitated the mechanization of these processes, offering a pathway to enhanced productivity and profitability. The transition from traditional, manual methods to mechanized systems represents a significant advancement in agricultural technology."
             ]
           },
-         "helpbox": {
-            "tabs": ["Services", "Products", "Projects"],
+          "helpbox": {
+            "tabs": [
+              "Services",
+              "Products",
+              "Projects"
+            ],
             "cards": [
               {
                 "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
@@ -63,7 +67,7 @@
             ]
           },
           "problemStatement": {
-            "title": "MarketDemand",
+            "title": "Market Demand for Chilli",
             "description": "The global market for chilli is robust and expanding. Factors contributing to this demand include:",
             "issues": [
               {
@@ -242,7 +246,7 @@
             ],
             "description2": "The adoption of mechanization can transform the overall competitiveness of the chilli industry. By improving efficiency, reducing costs, and enhancing product quality, mechanization enables chilli processors to compete more effectively in the global market. This can lead to increased exports, greater market share for domestic producers, and a more sustainable and profitable industry"
           },
-          "Challenges and Barriers": {
+          "ChallengesandBarriers": {
             "title": "Challenges and Barriers to Mechanization",
             "Description": "Despite the numerous benefits, the adoption of mechanization in the chilli processing industry faces several challenges and barriers:",
             "Impacts": [
@@ -252,25 +256,21 @@
               },
               {
                 "highlight": "Lack of technical expertise:",
-                "text": "Implementing and maintaining mechanized systems requires specialized technical knowledge, which may not be readily available in all regions"
+                "text": " Some stakeholders, including farmers and processors, may be resistant to adopting new technologies due to concerns about job displacement or the disruption of traditional practices."
               },
               {
-                "highlight": "ImprovedProductQuality",
+                "highlight": "Resistance to change:",
                 "text": "Mechanized processes ensure consistent quality, leading to higher market prices and enhanced competitiveness."
               },
               {
-                "highlight": "ReducedPostHarvestLosses",
-                "text": "Automation minimizes waste, maximizing the yield from the harvested crop and improving profitability. Studies have shown that mechanization can decrease post-harvest losses by up to 20%."
-              },
-              {
-                "highlight": "EnhancedCompetitiveness",
-                "text": "Companies that invest in mechanization gain a competitive edge by being able to offer higher-quality products at competitive prices. This can lead to increased market share and profitability."
+                "highlight": "Availability of suitable technology for specific contexts:",
+                "text": " In some cases, suitable mechanization technologies may not be available for the specific needs of certain regions or types of chilli production (e.g., small-scale farms, diverse topographies)."
               }
             ],
-            "description2": "The adoption of mechanization can transform the overall competitiveness of the chilli industry. By improving efficiency, reducing costs, and enhancing product quality, mechanization enables chilli processors to compete more effectively in the global market. This can lead to increased exports, greater market share for domestic producers, and a more sustainable and profitable industry"
+            "description2": ""
           },
           "StrategiesToOvercome": {
-            "title": "StrategiesToOvercome",
+            "title": "Strategies to Overcome Barriers",
             "Description": "To overcome these barriers and promote the wider adoption of mechanization, the following strategies can be implemented:",
             "Strategies": [
               {
@@ -318,34 +318,48 @@
             "Description": "Mechanization in the chilli processing industry has multifaceted effects on employment:",
             "JobDisplacement": [
               {
-                "area": "EquipmentOperationAndMaintenance",
-                "description": "The automation of tasks previously performed by manual laborers can lead to job displacement, particularly for those involved in harvesting, sorting, and packaging."
-              },
+                "area": "Strategies to Overcome Barriers",
+                "description": " The automation of tasks previously performed by manual laborers can lead to job displacement, particularly for those involved in harvesting, sorting, and packaging. "
+              }
+            ],
+            "JustCreation": [
               {
-                "area": "EquipmentOperationAndMaintenance",
-                "description": "Skilled technicians are needed to operate and maintain complex machinery."
-              },
-              {
-                "area": "TechnologyDevelopmentAndInnovation",
-                "description": "Engineers and scientists are required to design, develop, and improve mechanization technologies."
-              },
-              {
-                "area": "DataAnalysisAndManagement",
-                "description": "The use of sensors and data analytics in mechanized systems creates demand for professionals who can collect, analyze, and interpret data."
+                "area": "Job creation:",
+                "description": " Mechanization also creates new job opportunities in areas such as: ",
+                "job": [
+                  {
+                    "strategy": "Equipment operation and maintenance: ",
+                    "description": "Skilled technicians are needed to operate and maintain complex machinery. "
+                  },
+                  {
+                    "strategy": "Technology development and innovation: ",
+                    "description": "Engineers and scientists are required to design, develop, and improve mechanization technologies."
+                  },
+                  {
+                    "strategy": "Data analysis and management: ",
+                    "description": "The use of sensors and data analytics in mechanized systems creates a demand for professionals who can collect, analyze, and interpret data."
+                  }
+                ]
               }
             ],
             "JustTransitionStrategies": [
               {
-                "strategy": "RetrainingAndUpskillingPrograms",
-                "description": "Providing workers with skills needed to take on new roles in the mechanized industry."
-              },
-              {
-                "strategy": "SocialSafetyNets",
-                "description": "Offering unemployment benefits and other support to workers who lose jobs due to automation."
-              },
-              {
-                "strategy": "PromotingInclusiveGrowth",
-                "description": "Ensuring the benefits of mechanization are shared broadly and vulnerable groups are not left behind."
+                "area": "Just transition:",
+                "description": "To mitigate the negative impacts of job displacement, it is crucial to implement strategies that support a just transition for affected workers. These strategies may include: ",
+                "job": [
+                  {
+                    "strategy": "Retraining and upskilling programs: ",
+                    "description": "Providing workers with the skills needed to take on new roles in the mechanized industry.  "
+                  },
+                  {
+                    "strategy": "Social safety nets: ",
+                    "description": "Offering unemployment benefits and other forms of support to workers who lose their jobs due to automation. "
+                  },
+                  {
+                    "strategy": "Promoting inclusive growth: ",
+                    "description": "Ensuring that the benefits of mechanization are shared broadly and that vulnerable groups are not left behind. "
+                  }
+                ]
               }
             ]
           },
@@ -373,8 +387,11 @@
                 "factor": "CulturalFactors",
                 "description": "In some regions, resistance to adopting new technologies may arise due to cultural traditions or concerns about disrupting existing social structures."
               }
-            ],
-            "CaseStudies": [
+            ]
+          },
+          "CaseStudies": {
+            "title": "Case Studies:",
+            "Case": [
               {
                 "Region": "United States",
                 "Description": "The US chilli industry is highly mechanized, with widespread adoption of automated harvesting, processing, and packaging technologies, leading to high efficiency and productivity, making the US a major player in the global chilli market."
@@ -387,7 +404,10 @@
                 "Region": "Mexico",
                 "Description": "Mexico has a mix of traditional and mechanized chilli production. Large-scale commercial farms have adopted mechanization for efficiency, while many smallholder farmers rely on manual labor."
               }
-            ],
+            ]
+          },
+          "ChallengesInRegion": {
+            "title": "Challenges in Regions with Low Adoption Rates:",
             "ChallengesDescription": "Regions with low adoption rates often face a combination of challenges, including:",
             "ChallengesDescription1": "To address these challenges, it is essential to implement targeted interventions that promote technology transfer, improve access to finance, and provide training and support to farmers and processors. ",
             "ChallengesInLowAdoptionRegions": [
@@ -443,62 +463,71 @@
             ]
           },
           "FarmerPerspectives": {
-            "title": "ImpactOnEmployment",
+            "title": "Farmer Perspectives",
             "Description": "Chilli farmers are key stakeholders in the mechanization of the chilli processing industry, with varied perspectives based on their circumstances:",
-            "BenefitsForFarmers": [
-              {
-                "benefit": "ReducedLaborCosts",
-                "description": "Mechanization significantly reduces the need for manual labor, a major expense for chilli farmers."
-              },
-              {
-                "benefit": "IncreasedYields",
-                "description": "Mechanization improves efficiency and productivity, leading to higher yields and increased income for farmers."
-              },
-              {
-                "benefit": "ImprovedEfficiency",
-                "description": "Automated systems perform tasks such as planting, harvesting, and sorting more quickly and efficiently, allowing farmers to manage larger areas of production."
-              },
-              {
-                "benefit": "ReducedPostHarvestLosses",
-                "description": "Mechanized handling and processing minimize damage to the crop, reducing post-harvest losses and improving the quality of the final product."
-              }
-            ],
-            "ChallengesFacedByFarmers": [
-              {
-                "challenge": "CostOfEquipment",
-                "description": "The high cost of mechanization equipment can be a major barrier for many farmers, particularly smallholder farmers with limited resources."
-              },
-              {
-                "challenge": "AccessToCredit",
-                "description": "Farmers may lack access to affordable credit to finance the purchase of mechanization equipment."
-              },
-              {
-                "challenge": "LackOfTechnicalKnowledge",
-                "description": "Some farmers may lack the technical knowledge and skills needed to operate and maintain mechanized equipment."
-              },
-              {
-                "challenge": "SuitabilityForSmallScaleFarms",
-                "description": "Existing mechanization technologies may not be suitable for the needs of small-scale farmers, who may require smaller, more affordable equipment."
-              }
-            ],
-            "StrategiesToPromoteAdoptionAmongSmallholderFarmers": [
-              {
-                "strategy": "SubsidiesAndFinancialAssistance",
-                "description": "Governments and organizations can provide subsidies or financial assistance to help smallholder farmers purchase mechanization equipment."
-              },
-              {
-                "strategy": "EquipmentSharingPrograms",
-                "description": "Cooperative or community-based equipment sharing programs can make mechanization more accessible to smallholder farmers."
-              },
-              {
-                "strategy": "TrainingAndExtensionServices",
-                "description": "Providing training and extension services to farmers can help them acquire the knowledge and skills needed to use mechanization technologies effectively."
-              },
-              {
-                "strategy": "DevelopmentOfAppropriateTechnology",
-                "description": "Research and development efforts should focus on developing mechanization technologies specifically designed for the needs of smallholder farmers."
-              }
-            ]
+            "BenefitsForFarmers": {
+              "title": "Benefits of mechanization for farmers: ",
+              "benifits": [
+                {
+                  "benefit": "ReducedLaborCosts",
+                  "description": "Mechanization significantly reduces the need for manual labor, a major expense for chilli farmers."
+                },
+                {
+                  "benefit": "IncreasedYields",
+                  "description": "Mechanization improves efficiency and productivity, leading to higher yields and increased income for farmers."
+                },
+                {
+                  "benefit": "ImprovedEfficiency",
+                  "description": "Automated systems perform tasks such as planting, harvesting, and sorting more quickly and efficiently, allowing farmers to manage larger areas of production."
+                },
+                {
+                  "benefit": "ReducedPostHarvestLosses",
+                  "description": "Mechanized handling and processing minimize damage to the crop, reducing post-harvest losses and improving the quality of the final product."
+                }
+              ]
+            },
+            "ChallengesFacedByFarmers": {
+              "title": "Challenges faced by farmers:",
+              "challenges": [
+                {
+                  "challenge": "CostOfEquipment",
+                  "description": "The high cost of mechanization equipment can be a major barrier for many farmers, particularly smallholder farmers with limited resources."
+                },
+                {
+                  "challenge": "AccessToCredit",
+                  "description": "Farmers may lack access to affordable credit to finance the purchase of mechanization equipment."
+                },
+                {
+                  "challenge": "LackOfTechnicalKnowledge",
+                  "description": "Some farmers may lack the technical knowledge and skills needed to operate and maintain mechanized equipment."
+                },
+                {
+                  "challenge": "SuitabilityForSmallScaleFarms",
+                  "description": "Existing mechanization technologies may not be suitable for the needs of small-scale farmers, who may require smaller, more affordable equipment."
+                }
+              ]
+            },
+            "StrategiesToPromoteAdoptionAmongSmallholderFarmers": {
+              "title": "",
+              "strategies": [
+                {
+                  "strategy": "SubsidiesAndFinancialAssistance",
+                  "description": "Governments and organizations can provide subsidies or financial assistance to help smallholder farmers purchase mechanization equipment."
+                },
+                {
+                  "strategy": "EquipmentSharingPrograms",
+                  "description": "Cooperative or community-based equipment sharing programs can make mechanization more accessible to smallholder farmers."
+                },
+                {
+                  "strategy": "TrainingAndExtensionServices",
+                  "description": "Providing training and extension services to farmers can help them acquire the knowledge and skills needed to use mechanization technologies effectively."
+                },
+                {
+                  "strategy": "DevelopmentOfAppropriateTechnology",
+                  "description": "Research and development efforts should focus on developing mechanization technologies specifically designed for the needs of smallholder farmers."
+                }
+              ]
+            }
           },
           "developmentProcess": {
             "title": "Development Process",
