@@ -2147,7 +2147,7 @@ function SingleCaseStudy() {
   if (!caseStudy) {
     return (
       <div className="loading-container">
-        <img src={loading} alt="Loading" style={{ width: "50px" }} />
+        {/* <img src={loading} alt="Loading" style={{ width: "50px" }} /> */}
         <p>Loading case study...</p>
       </div>
     );
@@ -2177,7 +2177,8 @@ function SingleCaseStudy() {
 
         <div className="single-casestudy-content-container">
           <div>
-            <CaseStudyAudio />
+            {/* <CaseStudyAudio /> */}
+            <CaseStudyAudio caseStudyId={id} />
           </div>
           <div>
             <div className="single-casestudy-layout1-title test-seclection-blue">

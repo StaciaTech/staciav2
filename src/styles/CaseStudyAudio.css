@@ -27,9 +27,10 @@
   .header-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     margin-bottom: 10px;
+    gap: 200px;
   }
 
 
@@ -84,7 +85,8 @@
    color: #0047FF;
   }
   .topic-head{
-    color: #0047FF;
+    /* color: #0047FF; */
+    color: #000;
 
   }
 
@@ -223,6 +225,7 @@
     .header-section {
       flex-direction: column;
       align-items: flex-start;
+      gap: 30px;
     }
 
     .topics {
