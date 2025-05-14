@@ -93,12 +93,14 @@ pipeline {
 
   post {
     success {
-      echo "✅ Successfully built and deployed ${env.BRANCH_NAME}"
-      if (env.BRANCH_NAME == 'main') {
-                echo "cPanel Deployment URL: ${CPANEL_URL}"
-            } else if (env.BRANCH_NAME == 'release') {
-                echo "S3 Deployment URL: https://${S3_BUCKET}.s3.${REGION}.amazonaws.com/"
-            }
+        script { 
+              echo "✅ Successfully built and deployed ${env.BRANCH_NAME}"
+              if (env.BRANCH_NAME == 'main') {
+                  echo "cPanel Deployment URL: ${CPANEL_URL}"
+              } else if (env.BRANCH_NAME == 'release') {
+                  echo "S3 Deployment URL: https://${S3_BUCKET}.s3.${REGION}.amazonaws.com/"
+              }
+          }
     }
     failure {
       echo "❌ Build or deployment failed for ${env.BRANCH_NAME}"
