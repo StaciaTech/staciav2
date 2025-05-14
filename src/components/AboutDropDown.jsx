@@ -12,16 +12,16 @@ function AboutDropDown({ handleClose }) {
   const AboutArr = data.aboutSections;
 
   const [productData, setProductData] = useState();
-  const categoryContainerRef = useRef(null); // Ref for the main category container
-  const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
+  const categoryContainerRef = useRef(null); // Ref for the subsection titles container
+  const subCategoryContainerRef = useRef(null); // Ref for the sub-category container (not used in this component)
 
   const [sectionTitles, setSectionTitles] = useState([]);
   const [subSectionTitles, setSubSectionTitles] = useState([]);
   const [foundLeader, setFoundLeader] = useState();
   const [activeTitle, setActiveTitle] = useState();
   const [activeSubTitle, setActiveSubTitle] = useState();
-  const [showUpArrow, setShowUpArrow] = useState(false);
-  const [showDownArrow, setShowDownArrow] = useState(false);
+  const [canScrollDeptUp, setCanScrollDeptUp] = useState(false); // For up arrow visibility
+  const [canScrollDeptDown, setCanScrollDeptDown] = useState(false); // For down arrow visibility
 
   // Set main section titles
   useEffect(() => {
@@ -34,21 +34,21 @@ function AboutDropDown({ handleClose }) {
       const subSectionArr = AboutArr?.find(
         (item) => item.section === activeTitle
       );
-      setSubSectionTitles(subSectionArr?.SectionItems);
+      setSubSectionTitles(subSectionArr?.SectionItems || []);
     }
   }, [activeTitle]);
 
+  // Set default values on initial render
   useEffect(() => {
     if (AboutArr.length > 0) {
       const firstSection = AboutArr[0];
       setActiveTitle(firstSection.section);
-      // setActiveSubTitle(firstSection.SectionItems);
 
       if (firstSection.SectionItems?.length > 0) {
         const firstItem = firstSection.SectionItems[0];
         setActiveSubTitle(firstItem.name);
 
-        if (firstSection.section === "LeaderShip") {
+        if (firstSection.section === "Leadership") {
           setFoundLeader(firstItem);
         }
       }
@@ -69,11 +69,25 @@ function AboutDropDown({ handleClose }) {
     }
   }, [activeSubTitle, subSectionTitles]);
 
+  // Check scrollability for Subsection Titles whenever subSectionTitles changes
+  useEffect(() => {
+    const checkScrollability = () => {
+      if (categoryContainerRef.current) {
+        const container = categoryContainerRef.current;
+        const { scrollHeight, clientHeight } = container;
+        setCanScrollDeptDown(scrollHeight > clientHeight);
+        setCanScrollDeptUp(container.scrollTop > 0);
+      }
+    };
+
+    const timer = setTimeout(checkScrollability, 0);
+    return () => clearTimeout(timer);
+  }, [subSectionTitles]);
 
   const scrollUp = () => {
     if (categoryContainerRef.current) {
       const container = categoryContainerRef.current;
-      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      const itemHeight = container.firstChild?.offsetHeight || 40;
       container.scrollTop -= itemHeight;
     }
   };
@@ -81,7 +95,7 @@ function AboutDropDown({ handleClose }) {
   const scrollDown = () => {
     if (categoryContainerRef.current) {
       const container = categoryContainerRef.current;
-      const itemHeight = container.firstChild?.offsetHeight || 40; // Default to 40px if no items
+      const itemHeight = container.firstChild?.offsetHeight || 40;
       container.scrollTop += itemHeight;
     }
   };
@@ -90,12 +104,22 @@ function AboutDropDown({ handleClose }) {
     if (categoryContainerRef.current) {
       const container = categoryContainerRef.current;
       const { scrollTop, scrollHeight, clientHeight } = container;
-      const lastItem = container.lastChild;
-      const lastItemOffset = lastItem ? lastItem.offsetTop + lastItem.offsetHeight : scrollHeight;
-      setShowUpArrow(scrollTop > 0);
-      setShowDownArrow(scrollTop + clientHeight < lastItemOffset);
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+      setCanScrollDeptUp(scrollTop > 0);
+      setCanScrollDeptDown(!isAtBottom);
+      console.log(
+        "Subsection Scroll - scrollTop:",
+        scrollTop,
+        "clientHeight:",
+        clientHeight,
+        "scrollHeight:",
+        scrollHeight,
+        "canScrollDeptDown:",
+        !isAtBottom
+      );
     }
   };
+
   return (
     <div className="about-drop-down-container">
       {/* Main Section Titles */}
@@ -105,7 +129,6 @@ function AboutDropDown({ handleClose }) {
             key={i}
             onMouseEnter={() => {
               setActiveTitle(eachTitle.section);
-              // const subsections = eachTitle.section;
               const subsections = eachTitle.SectionItems;
 
               if (Array.isArray(subsections) && subsections?.length > 0) {
@@ -113,8 +136,7 @@ function AboutDropDown({ handleClose }) {
                 const firstItem = subsections[0];
                 setActiveSubTitle(firstItem.name);
 
-                // setActiveSubTitle(subsections[0].name);
-                if (eachTitle.section === "LeaderShip") {
+                if (eachTitle.section === "Leadership") {
                   setFoundLeader(firstItem);
                 }
               } else {
@@ -123,23 +145,17 @@ function AboutDropDown({ handleClose }) {
                 setFoundLeader(null);
               }
             }}
-            className={`about-dd-main-title ${eachTitle.section === activeTitle
-              ? "about-dd-main-title-active"
-              : ""
-              }`}
+            className={`about-dd-main-title ${
+              eachTitle.section === activeTitle
+                ? "about-dd-main-title-active"
+                : ""
+            }`}
             onClick={() => {
               navigate(`/${eachTitle.path}`);
               handleClose();
             }}
           >
             <span>{eachTitle.section}</span>
-            {/* {eachTitle.section === activeTitle && (
-              <img
-                src={Star}
-                alt=""
-                style={{ width: "18px", marginLeft: "1rem" }}
-              />
-            )} */}
           </div>
         ))}
       </div>
@@ -151,67 +167,37 @@ function AboutDropDown({ handleClose }) {
             {subSectionTitles?.map((eachItem, i) => (
               <div
                 key={i}
-                className={`about-dd-sub-title-dot ${eachItem.name === activeSubTitle
-                  ? "about-dd-sub-title-dot-active"
-                  : ""
-                  }`}
+                className={`about-dd-sub-title-dot ${
+                  eachItem.name === activeSubTitle
+                    ? "about-dd-sub-title-dot-active"
+                    : ""
+                }`}
               ></div>
             ))}
           </div>
-          <div className="arrow-wrapper">
-            {showUpArrow && (
-              <span
-                onClick={scrollUp}
-                className="arrow-up"
-                aria-label="Scroll up"
-              >
-                <IoIosArrowUp />
-              </span>
-            )}
-            {showDownArrow && (
-              <span
-                onClick={scrollDown}
-                className="arrow-down"
-                aria-label="Scroll down"
-              >
-                <IoIosArrowDown />
-              </span>
-            )}
-          </div>
+          {subSectionTitles?.length > 5 && (
+            <div className="arrow-wrapper">
+              {canScrollDeptUp && (
+                <span
+                  onClick={scrollUp}
+                  className="arrow-up"
+                  aria-label="Scroll up"
+                >
+                  <IoIosArrowUp />
+                </span>
+              )}
+              {canScrollDeptDown && (
+                <span
+                  onClick={scrollDown}
+                  className="arrow-down"
+                  aria-label="Scroll down"
+                >
+                  <IoIosArrowDown />
+                </span>
+              )}
+            </div>
+          )}
         </div>
-{/* 
-        <div className="about-dd-sub-title-holder"
-          ref={categoryContainerRef}
-          onScroll={handleScroll}>
-          {subSectionTitles?.map((eachItem, i) => (
-            <div
-              key={i}
-              onMouseEnter={() => setActiveSubTitle(eachItem.name)}
-              className={`about-dd-main-title ${eachItem.name === activeSubTitle
-                ? "about-dd-main-title-active"
-                : ""
-                }`}
-              onClick={() => {
-                window.scrollTo(0, 0);
-                if (activeTitle === "Leadership") {
-                  navigate(`/${foundLeader?.path}`);
-                } else {
-                  navigate(`/${eachItem.path}`);
-                }
-                handleClose();
-              }}
-            >
-              <span>{eachItem.name}</span>
-              {/* {eachItem.name === activeSubTitle && (
-                <img
-                  src={Star}
-                  alt=""
-                  style={{ width: "18px", marginLeft: "1rem" }}
-                />
-              )} */}
-           {/* </div>
-          ))}
-        </div> */}
 
         <div
           className="about-dd-sub-title-holder"
@@ -222,19 +208,18 @@ function AboutDropDown({ handleClose }) {
             <div
               key={i}
               onMouseEnter={() => setActiveSubTitle(eachItem.name)}
-              className={`about-dd-main-title ${eachItem.name === activeSubTitle
+              className={`about-dd-main-title ${
+                eachItem.name === activeSubTitle
                   ? "about-dd-main-title-active"
                   : ""
-                }`}
+              }`}
               onClick={() => {
                 window.scrollTo(0, 0);
                 if (activeTitle === "Leadership") {
                   navigate(`/${foundLeader?.path}`);
                 } else if (activeTitle === "Partnerships") {
-                  // Open Partnerships links in a new tab
                   window.open(eachItem.path, "_blank");
                 } else {
-                  // Navigate internally for other sections
                   navigate(`/${eachItem.path}`);
                 }
                 handleClose();
@@ -244,10 +229,7 @@ function AboutDropDown({ handleClose }) {
             </div>
           ))}
         </div>
-
       </div>
-
-
 
       {/* Info Section */}
       {activeSubTitle && (
