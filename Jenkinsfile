@@ -98,7 +98,7 @@ pipeline {
               if (env.BRANCH_NAME == 'main') {
                   echo "cPanel Deployment URL: ${CPANEL_URL}"
               } else if (env.BRANCH_NAME == 'release') {
-                  echo "S3 Deployment URL: https://${S3_BUCKET}.s3.${REGION}.amazonaws.com/"
+                  echo "S3 Deployment URL: http://${S3_BUCKET}.s3-website.${REGION}.amazonaws.com/"
               }
           }
     }
