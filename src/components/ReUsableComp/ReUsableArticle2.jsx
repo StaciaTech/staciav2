@@ -142,15 +142,19 @@ function ReUsableArticle2({ data, path, onProjectClick }) {
           return (
             <div
               key={i}
-              className="reusable-art-card"
+              // className="reusable-art-card"
+              className="service-card"
               style={{ cursor: "none" }}
-              onClick={() =>{ handleClick(eachItem)
-                window.scrollTo(0,0)
+              onClick={() => {
+                handleClick(eachItem)
+                window.scrollTo(0, 0)
               }}
-              
+
             >
               <div
-                className="reusable-art-img-container"
+                // className="reusable-art-img-container"
+                className="service-card-img-box"
+
                 onMouseEnter={() => setCursorVisible(true)}
                 onMouseLeave={() => setCursorVisible(false)}
               >
@@ -170,20 +174,25 @@ function ReUsableArticle2({ data, path, onProjectClick }) {
                   }}
                 />
               </div>
-              <div className="reusable-art-content-container">
-                <div className="reusable-art-title test-seclection-blue">
+              {/* <div className="reusable-art-content-container">
+                <div className="reusable-art-title test-seclection-blue"> */}
+              <div className="service-content-box">
+                <div className="feature-title">
                   {eachItem.mainTitle || eachItem.title || "Untitled"}
                 </div>
-                <p className="reusable-art-des test-seclection-blue">
+                {/* <p className="reusable-art-des test-seclection-blue">
                   {eachItem.mainDesc || eachItem.description || "No description"}
-                </p>
+                </p> */}
+                  <div className="feature-para">
+                             {eachItem.mainDesc || eachItem.description || "No description"}
+                            </div>
                 <div
-                  className="all-know-more"
+                  className="know-more "
                   onClick={() => {
                     handleClick(eachItem)
-                    window.scrollTo(0,0)
+                    window.scrollTo(0, 0)
                   }}
-                  
+
                 >
                   <span>Know More</span>
                   <IoIosArrowForward />

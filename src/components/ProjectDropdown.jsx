@@ -7,7 +7,7 @@
 //   IoIosArrowForward,
 // } from "react-icons/io";
 // import { useNavigate } from "react-router-dom";
-// import ProjectsData from "../Data/ProjectsData.json";
+// import ProjectsData from "../Data/ProjectData2.json";
 
 // function ProjectDropdown({ handleClose }) {
 //   const navigate = useNavigate();
@@ -84,7 +84,6 @@
 //       }
 //     }
 //   };
-//   console.log("DeptArr length:", DeptArr.length);
 
 //   const HandleMainCatHover = (MainCat) => {
 //     const MainCatArrObj = projectData?.find((item) => item.name === deptName);
@@ -429,7 +428,7 @@
 // export default ProjectDropdown;
 
 
-//pk
+//pk arrow default show
 
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/NavProductComp.css";
@@ -440,7 +439,7 @@ import {
   IoIosArrowForward,
 } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import ProjectsData from "../Data/ProjectsData.json";
+import ProjectsData from "../Data/ProjectData2.json";
 
 function ProjectDropdown({ handleClose }) {
   const navigate = useNavigate();

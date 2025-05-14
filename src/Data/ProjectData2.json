@@ -504,8 +504,105 @@
                 "Stage Gate Process: The Complete Practice Guide. Designorate. “The Stage-Gate Process guides product development through six main phases, including Discovery, Scoping, Define Business Case, Development, Testing & Validation, and Launch.” Designorate"
               ]
             },
+           
             {
               "id": 4,
+              "title": "Tamarind Pod Breaking Machine: Enhancing Efficiency in Tamarind Processing ",
+              "mainDesc": "",
+              "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
+              "Executive-Summary": "The Tamarind Pod Breaking Machine is an innovative solution designed to automate the labor-intensive process of breaking tamarind pods. By integrating a silent pod breaker, an efficient fan system to separate husks, and a conveyor belt to transport the pulp, this machine streamlines tamarind processing, improving productivity and reducing manual effort. This Project explores the development, implementation, and benefits of the Tamarind Pod Breaking Machine.Performance Foodservice | Home+3vadic.vigyanashram.blog+3chinapeanutmachinery.com+3King County",
+              "Client-Overview": "The client is a mid-sized agro-processing enterprise specializing in tamarind-based products. Facing challenges with manual pod breaking, which was time-consuming and inconsistent, the client sought an automated solution to enhance processing efficiency and product quality",
+              "Project-Objective": [
+                "Develop a machine to automate the tamarind pod breaking process.",
+                "Ensure the machine operates silently to maintain a conducive working environment.",
+                "Integrate a system to effectively separate husks from the pulp.",
+                "Design a conveyor mechanism to transport the pulp for further processing.ResearchGate+1IJSTR+1"
+              ],
+              "Challenges": [
+                "Designing a pod breaking mechanism that minimizes noise without compromising efficiency.",
+                "Ensuring complete separation of husks from the pulp to maintain product purity.",
+                "Creating a conveyor system that handles the delicate pulp without causing damage.",
+                "Developing a compact and cost-effective design suitable for small to medium-scale operations."
+              ],
+              "Solutions": [
+                {
+                  "title": "Silent Pod Breaker",
+                  "des": ": Implemented a drum-based breaking mechanism with rubberized components to reduce noise levels during operation"
+                },
+                {
+                  "title": "Husk Separation Fan",
+                  "des": "Integrated a high-speed fan system positioned post-breaking to blow away the lighter husk particles, ensuring clean pulp collection."
+                },
+                {
+                  "title": "Pulp Conveyor System",
+                  "des": "Designed a food-grade conveyor belt with adjustable speed settings to gently transport the pulp to the next processing stage"
+                },
+                {
+                  "title": "Compact Design",
+                  "des": ": Engineered the machine with a modular structure, allowing easy installation and maintenance, suitable for facilities with limited space.IRJET+2IJSTR+2Department of Transportation+2"
+                }
+              ],
+              "Development-Process": {
+                "stage": [
+                  {
+                    "id": 1,
+                    "title": "Research & Analysis",
+                    "des": "Studied existing tamarind processing methods and identified areas for automation and improvement."
+                  },
+                  {
+                    "id": 2,
+                    "title": "Design & Prototyping",
+                    "des": "Developed initial designs focusing on noise reduction and efficient separation, followed by prototype creation."
+                  },
+                  {
+                    "id": 3,
+                    "title": "Testing & Refinement",
+                    "des": "Conducted trials to assess performance, making necessary adjustments to optimize functionality and reliability."
+                  },
+                  {
+                    "id": 4,
+                    "title": "Implementation",
+                    "des": "Installed the finalized machine in the client's facility, providing training and support for seamless integration into their processing line.ResearchGate agriculture.vikaspedia.in"
+                  }
+                ]
+              },
+              "Impacts": [
+                {
+                  "id": 1,
+                  "title": "Increased Efficiency",
+                  "des": "Reduced processing time by 50%, enabling higher throughput."
+                },
+                {
+                  "id": 2,
+                  "title": "Improved Product Quality",
+                  "des": "Achieved consistent and clean pulp separation, enhancing the quality of the final product."
+                },
+                {
+                  "id": 3,
+                  "title": "Labor Savings",
+                  "des": "Minimized manual labor requirements, allowing staff to focus on other critical tasks."
+                },
+                {
+                  "id": 4,
+                  "title": "Enhanced Workplace Environment",
+                  "des": "Lower noise levels contributed to a more comfortable and safer working environment."
+                }
+              ],
+              "Conclusion": "The Tamarind Pod Breaking Machine successfully addressed the client's challenges by automating the pod breaking process, improving efficiency, and ensuring product quality. Its silent operation and effective separation mechanisms make it a valuable addition to tamarind processing facilities, particularly for small to medium-sized enterprises seeking to modernize their operations",
+              "References": [
+                "Design and Fabrication of Tamarind Seed Removal Machine - IRJET",
+                "Design and Fabrication of Tamarind Cover and Seed Separation Machine - IJEIT",
+                "Tamarind Processing Machineries - Anjoplus Machines",
+                "Technologies from CIPHET - Agriculture - Vikaspedia"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Waste Management",
+          "projects": [
+             {
+              "id": 5,
               "title": "Stacia Bailing Machine For GCC (Greater Chennai Corporation)",
               "mainDesc": "An automated machine with a silent pod breaker, husk-separating fan, and conveyor belt for efficient tamarind pulp processing.",
               "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
@@ -652,116 +749,15 @@
                 "Cooper, R. G.: Stage-Gate model for product development Stage-Gate International",
                 "Smartsheet: Phase-Gate approach for structured development Smartsheet"
               ]
-            },
-            {
-              "id": 5,
-              "title": "Tamarind Pod Breaking Machine: Enhancing Efficiency in Tamarind Processing ",
-              "mainDesc": "",
-              "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
-              "Executive-Summary": "The Tamarind Pod Breaking Machine is an innovative solution designed to automate the labor-intensive process of breaking tamarind pods. By integrating a silent pod breaker, an efficient fan system to separate husks, and a conveyor belt to transport the pulp, this machine streamlines tamarind processing, improving productivity and reducing manual effort. This Project explores the development, implementation, and benefits of the Tamarind Pod Breaking Machine.Performance Foodservice | Home+3vadic.vigyanashram.blog+3chinapeanutmachinery.com+3King County",
-              "Client-Overview": "The client is a mid-sized agro-processing enterprise specializing in tamarind-based products. Facing challenges with manual pod breaking, which was time-consuming and inconsistent, the client sought an automated solution to enhance processing efficiency and product quality",
-              "Project-Objective": [
-                "Develop a machine to automate the tamarind pod breaking process.",
-                "Ensure the machine operates silently to maintain a conducive working environment.",
-                "Integrate a system to effectively separate husks from the pulp.",
-                "Design a conveyor mechanism to transport the pulp for further processing.ResearchGate+1IJSTR+1"
-              ],
-              "Challenges": [
-                "Designing a pod breaking mechanism that minimizes noise without compromising efficiency.",
-                "Ensuring complete separation of husks from the pulp to maintain product purity.",
-                "Creating a conveyor system that handles the delicate pulp without causing damage.",
-                "Developing a compact and cost-effective design suitable for small to medium-scale operations."
-              ],
-              "Solutions": [
-                {
-                  "title": "Silent Pod Breaker",
-                  "des": ": Implemented a drum-based breaking mechanism with rubberized components to reduce noise levels during operation"
-                },
-                {
-                  "title": "Husk Separation Fan",
-                  "des": "Integrated a high-speed fan system positioned post-breaking to blow away the lighter husk particles, ensuring clean pulp collection."
-                },
-                {
-                  "title": "Pulp Conveyor System",
-                  "des": "Designed a food-grade conveyor belt with adjustable speed settings to gently transport the pulp to the next processing stage"
-                },
-                {
-                  "title": "Compact Design",
-                  "des": ": Engineered the machine with a modular structure, allowing easy installation and maintenance, suitable for facilities with limited space.IRJET+2IJSTR+2Department of Transportation+2"
-                }
-              ],
-              "Development-Process": {
-                "stage": [
-                  {
-                    "id": 1,
-                    "title": "Research & Analysis",
-                    "des": "Studied existing tamarind processing methods and identified areas for automation and improvement."
-                  },
-                  {
-                    "id": 2,
-                    "title": "Design & Prototyping",
-                    "des": "Developed initial designs focusing on noise reduction and efficient separation, followed by prototype creation."
-                  },
-                  {
-                    "id": 3,
-                    "title": "Testing & Refinement",
-                    "des": "Conducted trials to assess performance, making necessary adjustments to optimize functionality and reliability."
-                  },
-                  {
-                    "id": 4,
-                    "title": "Implementation",
-                    "des": "Installed the finalized machine in the client's facility, providing training and support for seamless integration into their processing line.ResearchGate agriculture.vikaspedia.in"
-                  }
-                ]
-              },
-              "Impacts": [
-                {
-                  "id": 1,
-                  "title": "Increased Efficiency",
-                  "des": "Reduced processing time by 50%, enabling higher throughput."
-                },
-                {
-                  "id": 2,
-                  "title": "Improved Product Quality",
-                  "des": "Achieved consistent and clean pulp separation, enhancing the quality of the final product."
-                },
-                {
-                  "id": 3,
-                  "title": "Labor Savings",
-                  "des": "Minimized manual labor requirements, allowing staff to focus on other critical tasks."
-                },
-                {
-                  "id": 4,
-                  "title": "Enhanced Workplace Environment",
-                  "des": "Lower noise levels contributed to a more comfortable and safer working environment."
-                }
-              ],
-              "Conclusion": "The Tamarind Pod Breaking Machine successfully addressed the client's challenges by automating the pod breaking process, improving efficiency, and ensuring product quality. Its silent operation and effective separation mechanisms make it a valuable addition to tamarind processing facilities, particularly for small to medium-sized enterprises seeking to modernize their operations",
-              "References": [
-                "Design and Fabrication of Tamarind Seed Removal Machine - IRJET",
-                "Design and Fabrication of Tamarind Cover and Seed Separation Machine - IJEIT",
-                "Tamarind Processing Machineries - Anjoplus Machines",
-                "Technologies from CIPHET - Agriculture - Vikaspedia"
-              ]
             }
-          ]
-        },
-        {
-          "name": "Waste Management",
-          "projects": [
-            {
-              "id": 6,
-              "title": "Baling Machine for Greater Chennai Corporation (GCC)",
-              "mainDesc": "A hydraulic, battery-powered vertical baler for compressing mixed waste (plastic, paper, cardboard) into cubes, achieving 75% volume reduction",
-              "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp"
-            }
+           
           ]
         },
         {
           "name": "Kitchen Appliances",
           "projects": [
             {
-              "id": 7,
+              "id": 6,
               "title": "Butterfly 3-Burner Stove",
               "mainDesc": "A 3-burner stove with toughened glass tops, high-efficiency brass burners, ergonomic knobs, and safety features like anti-skid feet, designed for modern kitchens",
               "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp",

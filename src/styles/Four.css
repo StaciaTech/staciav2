@@ -3,12 +3,10 @@
   margin-top: 60px;
   margin-bottom: 5%;
 }
-
 .four2 {
   width: 90%;
   margin: 0 auto;
 }
-
 .four-text {
   color: #6b6084;
   font-size: 60px;
@@ -18,39 +16,33 @@
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
-
 .sty {
   color: #0047ff;
   font-weight: 600;
   padding: 0.5rem 0;
   width: fit-content;
 }
-
 .four-card {
   margin-top: 40px;
   cursor: pointer;
 }
-
 .four-img {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-
 .leader-icon-container {
   background-color: white;
 }
-
 .four-img > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
-
 .founder-content {
   position: absolute;
-  bottom: 0.8%;
+  bottom: 0.5%;
   display: none;
   color: white;
   /* gap: 1rem; */
@@ -63,27 +55,22 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
-
 .four-img:hover .founder-content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 .icon-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   /* gap: 8px; */
   width: auto;
-  padding-top: 12px;
-  
+  padding-top: 6px;
 }
-
 .icon-name {
   font-size: 15px;
   opacity: 0;
@@ -91,7 +78,6 @@
   transition: opacity 0.3s ease;
   white-space: nowrap;
   position: relative;
- 
 }
 .icon-name-1{
   font-size: 15px;
@@ -100,16 +86,11 @@
   transition: opacity 0.3s ease;
   white-space: nowrap;
   position: relative;
-
 }
-
-
 .icon-wrapper:hover {
   gap: 90px;
-  
-  animation: iconBounce 1s ease-in-out 1; 
+  animation: iconBounce 1s ease-in-out 1; /* Play animation only once */
 }
-
 .icon-wrapper:hover .icon-name {
   opacity: 1;
 }
@@ -121,21 +102,17 @@ right: 14px;
   justify-content: center;
   display: flex;
 }
-
 @keyframes iconBounce {
   0% {
     transform: translateX(0);
   }
-
   50% {
     transform: translateX(6px);
   }
-
   100% {
     transform: translateX(0);
   }
 }
-
 .four-pos {
   color: #0d0225;
   font-size: 18px;
@@ -143,7 +120,6 @@ right: 14px;
   margin-bottom: 1rem;
 
 }
-
 .four-name {
   color: #0d0225;
   font-size: 20px;
@@ -151,21 +127,18 @@ right: 14px;
   padding: 2rem 0 1rem;
   
 }
-
 .four-para > p {
-  color: #6b6084;
+  color: #6B6084;
   font-size: 16px;
   line-height: 30px;
   font-family: EuclidMedium;
 }
-
 /* === Responsive Grid === */
 .four-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 @media (max-width: 1024px) {
   .four-text {
     font-size: 36px;
@@ -173,30 +146,25 @@ right: 14px;
     padding-bottom: 0.8rem;
     margin-bottom: 1.5rem;
   }
-
   .four-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .four-pos,
   .four-name,
-  .four-para>p {
+  .four-para > p {
     font-size: 14px;
   }
 }
-
 @media (max-width: 768px) {
   .four-grid {
     grid-template-columns: 1fr;
   }
-
   .four-text {
     font-size: 28px;
     border-bottom: 1px solid rgba(107, 96, 132, 0.5);
     padding-bottom: 0.6rem;
     margin-bottom: 1rem;
   }
-
   .founder-content {
     display: flex !important;
     padding: 1rem;
@@ -209,11 +177,9 @@ right: 14px;
     bottom: 0.5%;
     gap: 1rem;
   }
-
   .four-img:hover .founder-content {
     display: flex;
   }
-
   .icon-wrapper {
     display: flex;
     flex-direction: row;
@@ -221,13 +187,11 @@ right: 14px;
     gap: 10px;
     width: auto;
   }
-
   .icon-name {
     opacity: 1 !important;
     transition: none !important;
   }
 }
-
 @media (max-width: 425px) {
   .four-text {
     font-size: 24px;
@@ -235,20 +199,16 @@ right: 14px;
     padding-bottom: 0.5rem;
     margin-bottom: 0.8rem;
   }
-
   .four-name {
     font-size: 16px;
   }
-
   .four-pos {
     font-size: 12px;
   }
-
   .four-para > p {
     font-size: 12px;
     line-height: 22px;
   }
-
   .founder-content {
     flex-direction: row;
     justify-content: flex-start;
@@ -260,7 +220,6 @@ right: 14px;
     bottom: 1%;
     display: flex !important;
   }
-
   .icon-wrapper {
     display: flex;
     flex-direction: row;
@@ -268,21 +227,9 @@ right: 14px;
     gap: 10px;
     width: auto;
   }
-
   .icon-name {
     font-size: 14px;
     opacity: 1 !important;
     transition: none !important;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .four {
-    width: 100%;
-    margin-top: 25px;
-    margin-bottom: 5%;
-  }
-  .four-card{
-    margin-top: 20px;
   }
 }

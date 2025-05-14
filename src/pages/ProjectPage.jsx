@@ -12,7 +12,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import { useParams } from "react-router-dom";
 import Star from "../components/Star";
-import ProjectsData from "../Data/ProjectsData.json";
+import ProjectsData from "../Data/ProjectData2.json";
 
 function ProjectPage() {
   const params = useParams();

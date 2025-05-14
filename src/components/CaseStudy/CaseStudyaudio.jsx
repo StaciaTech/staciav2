@@ -35,24 +35,20 @@
 //         </div>
 
 //         <div className="topics">
-//           <div>
+//           <div >
 //             <span className="topic-head">Topics:</span>
-
-//             <a href="/topics/nano" className="topic">
-//               <span className="hashtag">#lorem</span>
-//             </a>
-
-//             <a href="/topics/lorem" className="topic">
-//               <span className="#\hashtag">#lorem</span>
-//             </a>
-
-//             <a href="/topics/lorem" className="topic">
-//               <span className="hashtag">#lorem</span>
-//             </a>
+//             <span className="topic">
+//               <span>#</span>Nano
+//             </span>
+//             <span className="topic">
+//               <span>#</span>lorem
+//             </span>
+//             <span className="topic">
+//               <span>#</span>lorem
+//             </span>
 //           </div>
-
 //           <div className="details">
-//             Duration: 1.1m 1s | 07 Oct, 2025 | Podcast
+//             Duration: 12m 16s | 26 Dec, 2023 | Podcast
 //           </div>
 //         </div>
 
@@ -84,17 +80,14 @@
 
 // export default CaseStudyaudio;
 
-// CaseStudyaudio.js
 
 import { FiDownload, FiVolumeX, FiVolume2 } from "react-icons/fi";
 import React, { useRef, useState } from "react";
 import "../../styles/CaseStudyAudio.css";
 import data from "../../Data/SingleCaseStudy.json";
-
 const CaseStudyAudio = ({ caseStudyId }) => {
   const audioRef = useRef(null);
   const [isMuted, setIsMuted] = useState(false);
-
   // Find the case study data based on caseStudyId
   let caseStudy = null;
   data.singlecasestudy.forEach((category) => {
@@ -104,7 +97,6 @@ const CaseStudyAudio = ({ caseStudyId }) => {
       }
     });
   });
-
   // Fallback data if case study or audioData is not found
   const defaultAudioData = {
     audioURL: "/assets/audio/default.mp3",
@@ -120,23 +112,19 @@ const CaseStudyAudio = ({ caseStudyId }) => {
     publishDate: "01 Jan, 2025",
     type: "Podcast",
   };
-
   const audioData = caseStudy?.audioData || defaultAudioData;
-
   const handleMute = () => {
     if (audioRef.current) {
       audioRef.current.muted = !audioRef.current.muted;
       setIsMuted(audioRef.current.muted);
     }
   };
-
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = audioData.audioURL;
     link.download = `${caseStudyId}-audio.mp3`;
     link.click();
   };
-
   return (
     <div className="audio-container">
       <div className="audio-title">Published By</div>
@@ -150,7 +138,6 @@ const CaseStudyAudio = ({ caseStudyId }) => {
             <div className="subtitle">{audioData.publisher.subtitle}</div>
           </div>
         </div>
-
         <div className="topics">
           <div>
             <span className="topic-head">Topics:</span>
@@ -165,10 +152,8 @@ const CaseStudyAudio = ({ caseStudyId }) => {
             Duration: {audioData.duration} | {audioData.publishDate} | {audioData.type}
           </div>
         </div>
-
         {/* <button className="subscribe-button">Subscribe</button> */}
       </div>
-
       <div className="audio-section">
         <audio
           ref={audioRef}
@@ -191,5 +176,4 @@ const CaseStudyAudio = ({ caseStudyId }) => {
     </div>
   );
 };
-
 export default CaseStudyAudio;

@@ -833,6 +833,9 @@
 
 // export default ServcieNavComp;
 
+
+//pk
+
 import React, { useEffect, useRef, useState } from "react";
 import "../../styles/NavProductComp.css";
 import Star from "../../assets/loadingStar.svg";
