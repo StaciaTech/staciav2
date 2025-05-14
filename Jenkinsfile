@@ -94,7 +94,7 @@ pipeline {
   post {
     success {
         script { 
-              echo "✅ Successfully built and deployed the ${env.BRANCH_NAME} branch"
+              echo "✅ Successfully built and deployed ${env.BRANCH_NAME} branch"
               if (env.BRANCH_NAME == 'main') {
                   echo "cPanel Deployment URL: ${CPANEL_URL}"
               } else if (env.BRANCH_NAME == 'release') {
