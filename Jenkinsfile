@@ -63,11 +63,16 @@ pipeline {
       when {
         branch 'release'
       }
-      steps {
-                withAWS(credentials: 'aws-creds', region: 'ap-south-1') {
-                    sh 'aws s3 cp build/ s3://staciatech.com --recursive'
-         }
-      }
+            steps {
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${AWS_CRED_ID}"]]) {
+                    script {
+                        echo "Transferring files from ${env.BUILD_DIR} to s3://${env.S3_BUCKET}"
+                        // Corrected aws s3 sync command:
+                        sh "aws s3 sync ${env.BUILD_DIR}/ s3://${env.S3_BUCKET}/ --region ${env.REGION --delete}"
+                        echo "Successfully transferred files to s3://${env.S3_BUCKET}"
+                    }
+                }
+            }
    }
 }
 
