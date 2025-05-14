@@ -14,6 +14,9 @@
   font-size: 60px;
   font-weight: 600;
   font-family: EuclidSemibold;
+  border-bottom: 2px solid rgba(107, 96, 132, 0.5);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .sty {
@@ -43,7 +46,6 @@
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  transition: transform 0.3s ease-in-out;
 }
 
 .founder-content {
@@ -51,27 +53,73 @@
   bottom: 0.8%;
   display: none;
   color: white;
-  gap: 0.5rem; 
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.3),
-    rgba(200, 200, 200, 0.1)
-  );
+  /* gap: 1rem; */
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(200, 200, 200, 0.1));
+  /* background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(200, 200, 200, 0.1) 100%); */
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(20px);
   width: 100%;
-  padding: 0.8em 2rem;
+  padding: 0.5em 2rem;
   justify-content: flex-start;
-  border-radius: 25px;
-  transition: transform 0.3s ease-in-out, gap 0.5s ease;
+  align-items: center;
+  flex-direction: row;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .four-img:hover .founder-content {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 8px; */
+  width: auto;
+  padding-top: 12px;
+  
+}
+
+.icon-name {
+  font-size: 15px;
+  opacity: 0;
+  display: block;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+ 
+}
+.icon-name-1{
+  font-size: 15px;
+  opacity: 0;
+  display: block;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+
+}
+
+
 .icon-wrapper:hover {
-  margin-right: 4.5rem; 
-  animation: iconBounce 1s ease-in-out;
+  gap: 90px;
+  
+  animation: iconBounce 1s ease-in-out 1; 
+}
+
+.icon-wrapper:hover .icon-name {
+  opacity: 1;
+}
+.icon-wrapper:hover .icon-name-1 {
+  opacity: 1;
+position: relative;
+right: 14px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 @keyframes iconBounce {
@@ -82,33 +130,8 @@
     transform: translateX(6px);
   }
   100% {
-    transform: translateX(0); 
+    transform: translateX(0);
   }
-}
-.icon-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 30px; 
-  margin-right: 0.5rem;
-}
-
-.icon-name {
-  font-size: 15px;
-  position: absolute; 
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-  pointer-events: none;
-  display: block;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  white-space: nowrap;
-}
-
-.icon-wrapper:hover .icon-name {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
 }
 
 .four-pos {
@@ -116,6 +139,7 @@
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 1rem;
+
 }
 
 .four-name {
@@ -123,6 +147,7 @@
   font-size: 20px;
   font-weight: 600;
   padding: 2rem 0 1rem;
+  
 }
 
 .four-para > p {
@@ -142,6 +167,9 @@
 @media (max-width: 1024px) {
   .four-text {
     font-size: 36px;
+    border-bottom: 1.5px solid rgba(107, 96, 132, 0.5);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 
   .four-grid {
@@ -162,38 +190,37 @@
 
   .four-text {
     font-size: 28px;
+    border-bottom: 1px solid rgba(107, 96, 132, 0.5);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
   }
-  /* Always show content on mobile */
+
   .founder-content {
     display: flex !important;
     padding: 1rem;
     font-size: 14px;
     justify-content: flex-start;
-    border-bottom-left-radius: 36px;
+    align-items: center;
+    flex-direction: row;
+    border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     bottom: 0.5%;
-    gap: 1rem; 
+    gap: 1rem;
   }
 
   .four-img:hover .founder-content {
     display: flex;
   }
 
-  .founder-content:hover {
-    gap: 1rem; 
-  }
-
   .icon-wrapper {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 8px;
-    width: auto; 
-    margin-right: 0;
+    gap: 10px;
+    width: auto;
   }
 
   .icon-name {
-    position: static;
-    transform: none; 
     opacity: 1 !important;
     transition: none !important;
   }
@@ -202,6 +229,9 @@
 @media (max-width: 425px) {
   .four-text {
     font-size: 24px;
+    border-bottom: 1px solid rgba(107, 96, 132, 0.5);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
   .four-name {
@@ -211,6 +241,7 @@
   .four-pos {
     font-size: 12px;
   }
+
   .four-para > p {
     font-size: 12px;
     line-height: 22px;
@@ -219,6 +250,7 @@
   .founder-content {
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     padding: 1rem;
     gap: 1rem;
     border-bottom-left-radius: 20px;
@@ -227,21 +259,16 @@
     display: flex !important;
   }
 
-  .founder-content:hover {
-    gap: 1rem;
-  }
-
   .icon-wrapper {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 8px;
-    width: auto; 
-    margin-right: 0; 
+    gap: 10px;
+    width: auto;
   }
 
   .icon-name {
-    position: static; 
-    transform: none;
+    font-size: 14px;
     opacity: 1 !important;
     transition: none !important;
   }

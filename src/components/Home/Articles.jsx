@@ -269,7 +269,7 @@ function SingleArticleCard({ article }) {
       typeof firstSection.content === "string"
         ? firstSection.content
         : firstSection.content.map((item) => item.description).join(" ");
-    return content.length > 200 ? `${content.substring(0, 200)}...` : content;
+    return content.length > 200 ? `${content.substring(0, 90)}...` : content;
   };
 
   return (
@@ -297,9 +297,7 @@ function SingleArticleCard({ article }) {
           <div className="card-article-title test-seclection-white">
             {article.title}
           </div>
-          <div className="card-article-body test-seclection-white">
-            {getPreviewContent()}
-          </div>
+          
           <div
             className="article-learn-more-link pointer"
             onClick={() => {
@@ -311,6 +309,7 @@ function SingleArticleCard({ article }) {
               window.scrollTo(0, 0);
             }}
           >
+            <span >{getPreviewContent()}</span>
             Read More
           </div>
         </div>

@@ -52,11 +52,12 @@
   color: white;
   background: linear-gradient(#0d022500, #0d0225cc);
   width: 100%;
-  padding: 1rem 2rem;
-  font-size: 10px;
+  padding: 2rem 2rem;
+  font-size:8px;
   bottom: 0rem;
   border-radius: 12px;
 }
+
 
 .image-box-right {
   width: 40px;

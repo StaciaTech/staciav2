@@ -4,6 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 export default function FourCard({ data, path }) {
   const navigate = useNavigate();
+  
   const animateText = (text) =>
     text.split("").map((char, idx) => (
       <span
@@ -29,15 +30,19 @@ export default function FourCard({ data, path }) {
         <div className="founder-content">
           {/* LinkedIn Icon */}
           <div className="icon-wrapper">
+
             <a href={data.proId} target="_blank" rel="noopener noreferrer">
               <div className="leader-icon-container">
                 <FaLinkedinIn className="footer-linkedin-icon" />
               </div>
-              <div className="icon-name">LinkedIn</div>
+              <div className="icon-name-1">LinkedIn</div>
             </a>
           </div>
+
           {/* Email Icon */}
+          
           <div className="icon-wrapper">
+          
             <a
               href={`mailto:${data.email}`}
               target="_blank"

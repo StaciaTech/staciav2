@@ -12,7 +12,7 @@
           "imageURL": "/assets/CaseStudy/ChilliBackgroundImage.webp",
           "overview": {
             "overviewtitle": "Introduction",
-            "description": "The global demand for chilli and chilli-derived products is experiencing substantial growth, propelled by evolving culinary preferences and increasing applications within the food processing, pharmaceutical, and cosmetic sectors. This heightened demand necessitates a fundamental shift in traditional chilli processing methodologies. Mechanization, characterized by the integration of advanced technologies and automated systems, is of paramount importance to optimize efficiency, enhance product quality, and effectively address escalating market demands. This case study provides a comprehensive analysis of the mechanization landscape within the chilli processing industry, examining its current state, future trends, and transformative impact."
+            "description": "The global demand forz chilli and chilli-derived products is experiencing substantial growth, propelled by evolving culinary preferences and increasing applications within the food processing, pharmaceutical, and cosmetic sectors. This heightened demand necessitates a fundamental shift in traditional chilli processing methodologies. Mechanization, characterized by the integration of advanced technologies and automated systems, is of paramount importance to optimize efficiency, enhance product quality, and effectively address escalating market demands. This case study provides a comprehensive analysis of the mechanization landscape within the chilli processing industry, examining its current state, future trends, and transformative impact."
           },
           "imageContent": {
             "imagetitle": "Background",
@@ -51,6 +51,7 @@
           "Backgrounddes": {
             "overviewtitle": "Introduction",
             "description1": "Traditional chilli processing often relies on manual labor for each stage, from the initial harvesting in the fields to the final packaging of the product. This reliance on manual labor results in several challenges. Firstly, it leads to elevated production costs, as labor constitutes a significant expense for agricultural operations. Secondly, it can engender inconsistent product quality. Manual handling of the produce can lead to variations in how the chillies are processed, adversely affecting the final product's color, texture, and overall quality. Thirdly, traditional methods render the produce more susceptible to contamination and spoilage. Open-air drying, for instance, exposes the chillies to dust, insects, and other contaminants. Fourthly, these methods limit scalability. Meeting large-scale market demands with manual labor is often unfeasible. Finally, traditional methods frequently result in substantial post-harvest losses due to inefficient handling and processing.",
+
             "description2": "Mechanization addresses these challenges by introducing automated systems capable of performing these tasks with greater precision and speed."
           },
           "salientFeatures": {
@@ -64,7 +65,7 @@
             ]
           },
           "problemStatement": {
-            "title": "MarketDemand",
+            "title": "Market Demand for chilli",
             "description": "The global market for chilli is robust and expanding. Factors contributing to this demand include:",
             "issues": [
               {
@@ -189,7 +190,7 @@
             }
           },
           "Statistics": {
-            "title": "Statistics",
+            "title": "Statistics-Projection/Past",
             "condent": {
               "MarketGrowth": {
                 "Description": "The global spice processing machinery market is projected to grow at a CAGR of 6.5% from 2023 to 2030, driven by rising demand for processed spices, increased efficiency needs, and growing automation awareness.",
@@ -417,7 +418,7 @@
             ]
           },
           "FarmerPerspectives": {
-            "title": "ImpactOnEmployment",
+            "title": "Farmer Perspectives",
             "Description": "Chilli farmers are key stakeholders in the mechanization of the chilli processing industry, with varied perspectives based on their circumstances:",
             "BenefitsForFarmers": [
               {
@@ -474,82 +475,7 @@
               }
             ]
           },
-          "developmentProcess": {
-            "title": "Case Analysis",
-            "des-2":"The chilli processing industry is undergoing a significant transformation,  driven by the adoption of advanced mechanization technologies.  Companies are increasingly investing in automated systems to address  the limitations of traditional methods.",
-            "sections": [
-              {
-                "subtitle": "Ideation",
-                "paragraphs": [
-                  {
-                    "text": "The ideation process for the chili ladling machine at Aachi Masala was driven by the observation and analysis of existing challenges within their chili handling operations. Through field visits and interactions with plant personnel, it became evident that the current methods of chili ladling were inefficient, time-consuming, and prone to product damage.",
-                    "className": "test-selection-blue"
-                  },
-                  {
-                    "text": "To address these challenges, a creative and innovative solution was sought. Understanding the unique properties of chili, and leveraging technological advancements, the concept of a specialized chili ladling machine emerged.",
-                    "className": "test-selection-blue"
-                  },
-                  {
-                    "text": "This machine would automate the process, improve efficiency, and ensure consistent quality, ultimately enhancing the overall productivity and profitability of Aachi Masala's chili production."
-                  }
-                ]
-              },
-              {
-                "subtitle": "Design & Prototype",
-                "subtitleClass": "single-casestudy-layout1-subtitle test-selection-blue",
-                "paragraphs": [
-                  {
-                    "text": "The development of the chili ladling machine involved a series of iterations to refine its design and functionality. Initial concepts focused on fixed incline mechanisms, which proved ineffective in efficiency.",
-                    "className": "test-selection-blue"
-                  },
-                  {
-                    "text": "In the initial two prototypes, the chili encountered difficulties in traversing. The twisting and intertwining of the chili resulted in blockages and uneven movement, hindering efficient processing."
-                  },
-                  {
-                    "text": "Through iterative testing and experimentation, the team eventually integrated a conveyor belt system into the design. This proved to be the most effective solution for handling large quantities of chili while minimizing breakage and ensuring consistent processing."
-                  }
-                ]
-              }
-            ]
-          },
-          "challengesFaced": {
-            "title": "Challenges Faced",
-            "description": "One of the primary challenges encountered during the development of the chili ladling machine was determining the optimal conveyor angle and RPM speed.",
-            "issues": [
-              {
-                "highlight": "Conveyor Angle",
-                "text": "Finding the ideal angle for the conveyor belt was crucial to ensure proper movement and distribution of the chili. An angle that was too steep could cause the chili to slide off the belt, while an angle that was too shallow might not provide sufficient movement."
-              },
-              {
-                "highlight": "RPM Speed",
-                "text": "The RPM speed of the conveyor belt also needed to be carefully calibrated. Too high a speed could lead to excessive breakage of the chili, while too low a speed might result in inefficient processing."
-              },
-              {
-                "text": "Through extensive testing and experimentation, the optimal conveyor angle and RPM speed were determined, providing the necessary balance between efficient chili movement and minimal breakage."
-              }
-            ]
-          },
-          "impactBenefits": {
-            "title": "Impact and Benefits",
-            "benefits": [
-              {
-                "highlight": "Improved Hygiene",
-                "text": "The automated handling process reduced the risk of contamination, ensuring the safety and quality of the final product."
-              },
-              {
-                "highlight": "Increased Efficiency",
-                "text": "The machine streamlined the chili handling process, reducing labor costs and increasing overall productivity."
-              },
-              {
-                "highlight": "Consistent Drying",
-                "text": "The controlled drying chamber ensured even drying of chili, resulting in a more uniform product."
-              },
-              {
-                "highlight": "Reduced Breakage",
-                "text": "The gentle handling mechanism minimized chili breakage, improving product yield and reducing waste."
-              }
-            ]
-          },
+        
           "gallerytittle": "Chili Ladling Machine",
           "gallery": [
             "/assets/CaseStudy/Chilli1.webp",
