@@ -68,7 +68,7 @@ pipeline {
                     script {
                         echo "Transferring files from ${env.BUILD_DIR} to s3://${env.S3_BUCKET}"
                         // Corrected aws s3 sync command:
-                        sh "aws s3 sync ${env.BUILD_DIR}/ s3://${env.S3_BUCKET}/ --region ${env.REGION --delete}"
+                        sh "aws s3 sync ${env.BUILD_DIR}/ s3://${env.S3_BUCKET}/ --region ${env.REGION} --delete"
                         echo "Successfully transferred files to s3://${env.S3_BUCKET}"
                     }
                 }
