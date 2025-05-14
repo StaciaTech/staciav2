@@ -10,6 +10,7 @@ pipeline {
     S3_BUCKET = 'staciatech.com'
     REGION = 'ap-south-1'
     CI = 'false'
+    CPANEL_URL = "http://staciacorp.com"
   }
   
   tools {
@@ -30,7 +31,22 @@ pipeline {
         sh 'npm run build'
       }
     }
-
+      stage('Check Build Output') {
+          steps {
+              script {
+                  if (fileExists('dist')) {
+                      echo "Detected 'dist' folder, using it for deployment"
+                      BUILD_DIR = 'dist'
+                  } else if (fileExists('build')) {
+                      echo "Detected 'build' folder, using it for deployment"
+                      BUILD_DIR = 'build'
+                  } else {
+                      error "Neither 'build' nor 'dist' folder found!"
+                  }
+                  echo "BUILD_DIR is set to: ${BUILD_DIR}"
+              }
+          }
+      }
     stage('Deploy to cPanel') {
       when {
         branch 'main'
@@ -77,7 +93,14 @@ pipeline {
 
   post {
     success {
-      echo "✅ Successfully built and deployed ${env.BRANCH_NAME}"
+        script { 
+              echo "✅ Successfully built and deployed ${env.BRANCH_NAME} branch"
+              if (env.BRANCH_NAME == 'main') {
+                  echo "cPanel Deployment URL: ${CPANEL_URL}"
+              } else if (env.BRANCH_NAME == 'release') {
+                  echo "S3 Deployment URL: http://${S3_BUCKET}.s3-website.${REGION}.amazonaws.com/"
+              }
+          }
     }
     failure {
       echo "❌ Build or deployment failed for ${env.BRANCH_NAME}"
