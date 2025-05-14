@@ -124,6 +124,7 @@ function About() {
   //   sectionsRef.current[index].scrollIntoView({behavior:"smooth"});
   // }
 
+//pk
 
   useEffect(() => {
     const observer = new IntersectionObserver(
