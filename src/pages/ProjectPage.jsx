@@ -1288,7 +1288,7 @@ import ReUsableArticle2 from "../components/ReUsableComp/ReUsableArticle2";
 import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
-import ProjectsData from "../Data/ProjectsData.json";
+import ProjectsData from "../Data/ProjectData2.json";
 
 function ProjectPage() {
   const navigate = useNavigate();

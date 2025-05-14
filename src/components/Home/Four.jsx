@@ -4,7 +4,7 @@ import FourCard from "./FourCard";
 import p1 from "../../assets/Mr Sarabesh.webp";
 import p2 from "../../assets/Mr Lakshman.webp";
 import p3 from "../../assets/Mr Revanth.webp";
-import p4 from "../../assets/Mr Prahlad Saravanapriyan.webp";
+import p4 from "../../assets/Mr Prahlad Saravanapriyan1.webp";
 
 const fourData = [
   {
