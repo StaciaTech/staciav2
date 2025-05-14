@@ -1356,13 +1356,13 @@ function SingleCaseStudy() {
       <NavBar />
       <SideBar />
       <div>
-        <div className="single-casestudy-section">
+        {/* <div className="single-casestudy-section">
           <div className="single-casestudy-section-overlay">
             <div className="single-casestudy-title test-seclection-white">
               {caseStudy.title}
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div>
           <div

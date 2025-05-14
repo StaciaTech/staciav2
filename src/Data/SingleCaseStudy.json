@@ -190,15 +190,15 @@
             }
           },
           "Statistics": {
-            "title": "Statistics-Projection/Past",
+            "title": "Statistics - Projection/Past",
             "condent": {
               "MarketGrowth": {
-                "Description": "The global spice processing machinery market is projected to grow at a CAGR of 6.5% from 2023 to 2030, driven by rising demand for processed spices, increased efficiency needs, and growing automation awareness.",
+                "Description": "The global spice processing machinery market is projected to grow at a CAGR of 6.5% from 2023 to 2030. This growth is indicative of the increasing adoption of mechanization in the chilli processing sector, as well as in the broader spice industry. This expansion is driven by several factors, including the rising demand for processed spices, the need for increased efficiency and productivity in spice processing, and the growing awareness of the benefits of automation. As the spice industry continues to grow, the demand for advanced processing machinery is expected to rise, further fueling the growth of the spice processing machinery market.",
                 "Image": "./media/image14.jpeg",
                 "Source": "https://www.marketdataforecast.com/market-reports/global-spices-market"
               },
               "Adoption": {
-                "Description": "In developed agricultural economies like the United States and Australia, over 70% of large-scale chilli processing plants have adopted fully automated packaging lines, compared to less than 30% in developing economies.",
+                "Description": "The adoption of mechanization in chilli processing has demonstrated a significant increase in the past decade, with a projected acceleration in the coming years. For instance, in developed agricultural economies like the United States and Australia, over 70% of large-scale chilli processing plants have adopted fully automated packaging lines, compared to less than 30% in developing economies.",
                 "Source": "USDA Agricultural Technology Report, 2022"
               },
               "CostAndOutput": {
@@ -228,6 +228,33 @@
               {
                 "highlight": "ReducedLaborCosts",
                 "text": "Automation lowers the reliance on manual labor, resulting in significant cost savings over time. In some regions, labor costs can account for 30-50% of total processing expenses, and mechanization can reduce these costs by up to 40%."
+              },
+              {
+                "highlight": "ImprovedProductQuality",
+                "text": "Mechanized processes ensure consistent quality, leading to higher market prices and enhanced competitiveness."
+              },
+              {
+                "highlight": "ReducedPostHarvestLosses",
+                "text": "Automation minimizes waste, maximizing the yield from the harvested crop and improving profitability. Studies have shown that mechanization can decrease post-harvest losses by up to 20%."
+              },
+              {
+                "highlight": "EnhancedCompetitiveness",
+                "text": "Companies that invest in mechanization gain a competitive edge by being able to offer higher-quality products at competitive prices. This can lead to increased market share and profitability."
+              }
+            ],
+            "description2": "The adoption of mechanization can transform the overall competitiveness of the chilli industry. By improving efficiency, reducing costs, and enhancing product quality, mechanization enables chilli processors to compete more effectively in the global market. This can lead to increased exports, greater market share for domestic producers, and a more sustainable and profitable industry"
+          },
+          "Challenges and Barriers": {
+            "title": "Challenges and Barriers to Mechanization",
+            "Description": "Despite the numerous benefits, the adoption of mechanization in the chilli processing industry faces several challenges and barriers:",
+            "Impacts": [
+              {
+                "highlight": "High initial investment costs:",
+                "text": "The cost of acquiring and installing automated systems can be prohibitive, particularly for small and medium-sized enterprises (SMEs). "
+              },
+              {
+                "highlight": "Lack of technical expertise:",
+                "text": "Implementing and maintaining mechanized systems requires specialized technical knowledge, which may not be readily available in all regions"
               },
               {
                 "highlight": "ImprovedProductQuality",
