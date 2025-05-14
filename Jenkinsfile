@@ -2,9 +2,9 @@ pipeline {
   agent any
 
   environment {
-    BUILD_DIR = 'build' // Or 'dist
+    BUILD_DIR = 'build'
     CPANEL_HOST = 'staciacorp.com'
-    CPANEL_REMOTE_DIR = '/home2/staciacorp/react/'
+    CPANEL_REMOTE_DIR = '/public_html/'
     CPANEL_CRED_ID = 'cpanel-scp'
     AWS_CRED_ID = 'aws-creds'
     S3_BUCKET = 'staciatech.com'
@@ -48,6 +48,7 @@ pipeline {
                                     makeEmptyDirs: false,
                                     noDefaultExcludes: false,
                                     remoteDirectory: CPANEL_REMOTE_DIR,
+                                    removePrefix: "${env.BUILD_DIR}/",
                                     sourceFiles: "${env.BUILD_DIR}/**/*"
                                 ]
                             ],
@@ -66,7 +67,6 @@ pipeline {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${AWS_CRED_ID}"]]) {
                     script {
                         echo "Transferring files from ${env.BUILD_DIR} to s3://${env.S3_BUCKET}"
-                        // Corrected aws s3 sync command:
                         sh "aws s3 sync ${env.BUILD_DIR}/ s3://${env.S3_BUCKET}/ --region ${env.REGION} --delete"
                         echo "Successfully transferred files to s3://${env.S3_BUCKET}"
                     }
