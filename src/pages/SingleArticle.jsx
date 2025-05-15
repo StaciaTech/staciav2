@@ -5,7 +5,8 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import SideBar from "../components/SideBar";
-import CaseStudyaudio from "../components/CaseStudy/CaseStudyaudio";
+// import CaseStudyaudio from "../components/CaseStudy/CaseStudyaudio";
+import ArticleAudio from '../components/Articles/ArticleAudio'
 import articlesData from "../Data/SingleArticle.json";
 
 function SingleArticle() {
@@ -55,7 +56,9 @@ function SingleArticle() {
       <div
         className="single-article-heading-card-container"
         style={{
-          backgroundImage: `url(${singleArticle.mainImageUrl || "/default-image.jpg"})`,
+          backgroundImage: `url(${
+            singleArticle.mainImageUrl || "/default-image.jpg"
+          })`,
         }}
       >
         <div className="single-article-heading test-seclection-white">
@@ -66,7 +69,7 @@ function SingleArticle() {
       </div>
 
       <div className="single-article-content-card-container">
-        <CaseStudyaudio />
+        <ArticleAudio articleTitle={decodedTitle} />
 
         {singleArticle.sections.map((section, index) => (
           <div key={index}>
@@ -92,18 +95,26 @@ function SingleArticle() {
 
             <div className="single-article-main-content-container">
               <div className="single-article-main-content-content">
-                {Array.isArray(section.content) ? (
-                  section.content.map((item, i) => (
-                    <li key={i} className="li-text">
-                      <span className="highlight">
-                        {item.point || item.application || item.benefit || item.challenge}:
-                      </span>{" "}
-                      {item.description}
-                    </li>
-                  ))
-                ) : (
-                  ["content", "content1", "content2", "slogan", "content3"]
-                    .map((key, i) =>
+                {Array.isArray(section.content)
+                  ? section.content.map((item, i) => (
+                      <li key={i} className="li-text">
+                        <span className="highlight">
+                          {item.point ||
+                            item.application ||
+                            item.benefit ||
+                            item.challenge}
+                          :
+                        </span>{" "}
+                        {item.description}
+                      </li>
+                    ))
+                  : [
+                      "content",
+                      "content1",
+                      "content2",
+                      "slogan",
+                      "content3",
+                    ].map((key, i) =>
                       section[key] ? (
                         <p
                           key={i}
@@ -113,8 +124,7 @@ function SingleArticle() {
                           {section[key]}
                         </p>
                       ) : null
-                    )
-                )}
+                    )}
               </div>
             </div>
           </div>
@@ -128,7 +138,11 @@ function SingleArticle() {
             <div className="single-article-main-content-container">
               <div className="single-article-main-content-content">
                 {singleArticle.references.map((ref, i) => (
-                  <p key={i} style={{ color: "#6B6084" }} className="test-seclection-blue">
+                  <p
+                    key={i}
+                    style={{ color: "#6B6084" }}
+                    className="test-seclection-blue"
+                  >
                     {ref}
                   </p>
                 ))}

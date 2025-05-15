@@ -7,6 +7,34 @@
       "platform": "LinkedIn Pulse",
       "department": "Electronics",
       "mainImageUrl": "/assets/Article/nanostructured.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-1"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "What Are Nanostructured Photovoltaic Cells?",
@@ -57,6 +85,34 @@
       "platform": "LinkedIn Pulse",
       "department": "AI",
       "mainImageUrl": "/assets/Article/ascendent.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-2"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "",
@@ -141,6 +197,34 @@
       "platform": "LinkedIn Pulse",
       "department": "Mechanical",
       "mainImageUrl": "/assets/Article/nanostructured.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-3"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "What Are Nanostructured Photovoltaic Cells?",
@@ -191,6 +275,34 @@
       "platform": "LinkedIn Pulse",
       "department": "Mechanical",
       "mainImageUrl": "/assets/Article/nanostructured.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-4"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "What Are Nanostructured Photovoltaic Cells?",
@@ -241,6 +353,34 @@
       "platform": "LinkedIn Pulse",
       "department": "Mechanical",
       "mainImageUrl": "/assets/Article/nanostructured.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-5"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "What Are Nanostructured Photovoltaic Cells?",
@@ -291,6 +431,34 @@
       "platform": "LinkedIn Pulse",
       "department": "Mechanical",
       "mainImageUrl": "/assets/Article/nanostructured.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-6"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "What Are Nanostructured Photovoltaic Cells?",
@@ -341,6 +509,34 @@
       "platform": "LinkedIn Pulse",
       "department": "Mechanical",
       "mainImageUrl": "/assets/Article/nanostructured.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-7"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "What Are Nanostructured Photovoltaic Cells?",
@@ -391,6 +587,34 @@
       "platform": "LinkedIn Pulse",
       "department": "Mechanical",
       "mainImageUrl": "/assets/Article/nanostructured.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-8"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "What Are Nanostructured Photovoltaic Cells?",
