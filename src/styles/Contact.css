@@ -152,7 +152,10 @@
   font-family: EuclidMedium;
   color: #c8c8c9;
   font-size: 1remn;
+  background-color: transparent;
 }
+
+
 .message-area {
   margin-bottom: 1rem;
   height: 30vh;
@@ -377,7 +380,7 @@
 }
 
 /* Laptop view (1024px and up) */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .contact-form-container {
     flex-direction: row;
   }

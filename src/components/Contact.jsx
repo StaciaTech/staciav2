@@ -271,7 +271,7 @@ function Contact({ closeHandle }) {
                       value={form.organization}
                       readOnly
                       className="contact-org-inp"
-                      style={{ border: "none" }}
+                    
                     />
                     <IoIosArrowDown />
                     {showOpt && (
