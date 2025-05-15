@@ -439,7 +439,10 @@ import {
   IoIosArrowForward,
 } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import ProjectsData from "../Data/ProjectsData2.json";
+// import ProjectsData from "../Data/ProjectsData2.json";
+
+
+import ProjectsData from "../Data/ProjectData2.json";
 
 function ProjectDropdown({ handleClose }) {
   const navigate = useNavigate();
