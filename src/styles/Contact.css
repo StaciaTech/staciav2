@@ -154,7 +154,12 @@
   font-size: 1remn;
   background-color: transparent;
 }
-
+.contact-org-inp{
+  background-color: transparent !important;
+    background: transparent !important;
+    outline: none !important;
+    border: none !important;
+}
 
 .message-area {
   margin-bottom: 1rem;

@@ -54,12 +54,7 @@
   width: 50%;
   margin-top: 1rem;
 }
-.contact-org-inp{
-  background-color: transparent !important;
-    background: transparent !important;
-    outline: none !important;
-    border: none !important;
-}
+
 .job-input-holder > input,
 .job-input-holde > PhoneInput {
   min-width: 100%;
