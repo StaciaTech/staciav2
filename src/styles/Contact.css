@@ -30,6 +30,7 @@
 .contact-form-image-container {
   width: 40%;
   display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -37,6 +38,11 @@
 }
 .contact-form-content-container {
   width: 60%;
+  overflow-y: auto;
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for IE/Edge */
+  -ms-overflow-style: none;
 }
 .contact-socials {
   display: flex;
@@ -54,6 +60,9 @@
   font-family: EuclidSemiBold;
   font-size: 2.5rem;
   color: #000;
+}
+.contact-content::-webkit-scrollbar {
+  display: none;
 }
 .input-container {
   /* width: 100%; */
@@ -139,10 +148,10 @@
   color: #000;
 }
 .PhoneInput {
-  border: none; /* Remove the border */
-  outline: none; /* Remove outline on focus */
-  padding: 10px; /* Add some padding for better spacing */
-  font-size: 16px; /* Set the font size */
+  border: none;
+  outline: none;
+  padding: 10px; 
+  font-size: 16px; 
 }
 .PhoneInput::placeholder,
 .input-field::placeholder,
@@ -172,6 +181,12 @@
   border-radius: 10px;
   box-sizing: border-box;
   font-family: EuclidMedium;
+  
+}
+body.no-scroll {
+  overflow: auto;
+  height: auto;
+  position: static;
 }
 .submit-style {
   padding: 1rem 7rem;
@@ -181,6 +196,9 @@
   border-radius: 8px;
   font-family: EuclidMedium;
   cursor: pointer;
+}
+.error-message{
+  color: red;
 }
 
 /* ✅ Mobile View (320px to 480px) */
@@ -295,6 +313,7 @@
     height: auto;
     position: static;
   }
+  
 }
 
 /* Tablet view (481px to 1024px) */
@@ -305,6 +324,7 @@
   .contact-form-container {
     flex-direction: column;
     min-height: auto;
+   
   }
 
   .contact-form-image-container {
@@ -385,14 +405,18 @@
 }
 
 /* Laptop view (1024px and up) */
+
 @media screen and (min-width: 1025px) {
   .contact-form-container {
     flex-direction: row;
+   
   }
 
   .contact-form-image-container {
     display: flex;
     width: 40%;
+    padding-right: 60px;
+    padding-top: 50px;
   }
 
   .contact-form-content-container {
