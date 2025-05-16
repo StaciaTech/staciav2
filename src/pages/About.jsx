@@ -38,7 +38,7 @@ const Industries = [
   },
   {
     id: 3,
-    title: "Enrgy",
+    title: "Energy",
     img: <SlEnergy />,
   },
   {

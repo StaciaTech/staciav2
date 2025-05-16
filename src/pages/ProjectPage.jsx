@@ -1465,7 +1465,8 @@ function ProjectPage() {
             <div>
               {projectsData.map((eachItem, i) => {
                 const categories = eachItem.categories.map((cat) => cat.name);
-                const categoryButtons = ["All", ...categories.slice(0, 2)];
+                const categoryButtons = ["All", ...categories];
+                // const categoryButtons = ["All", ...categories.slice(0, 2)];
                 const activeCategory = activeCategories[eachItem.name] || "All";
                 const filteredProjects =
                   activeCategory === "All"
@@ -1556,3 +1557,284 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
 };
 
 export default ProjectPage;
+
+
+
+// import React, { useEffect, useState, useRef } from "react";
+// import { useNavigate, useParams } from "react-router-dom";
+// import NavBar from "../components/NavBar";
+// import Footer from "../components/Footer";
+// import "../styles/projects.css";
+// import ReUsableArticle2 from "../components/ReUsableComp/ReUsableArticle2";
+// import SideBar from "../components/SideBar";
+// import MobileFooter from "../components/MobileFooter";
+// import Star from "../components/Star";
+// import ProjectsData from "../Data/ProjectData2.json";
+
+// function ProjectPage() {
+//   const navigate = useNavigate();
+//   const { department } = useParams();
+//   const [projectsData, setProjectsData] = useState([]);
+//   const [activeDepartment, setActiveDepartment] = useState("");
+//   const [activeCategories, setActiveCategories] = useState({});
+//   const [isDotClickScroll, setIsDotClickScroll] = useState(false);
+//   const [isLoading, setIsLoading] = useState(true);
+
+//   const sectionsRef = useRef({});
+//   const scrollTimeoutRef = useRef(null);
+
+//   // Process JSON data
+//   useEffect(() => {
+//     try {
+//       const processedData = ProjectsData.Departments.map((dept) => ({
+//         ...dept,
+//         projects: dept.categories.flatMap((category) =>
+//           category.projects.map((project) => ({
+//             ...project,
+//             category: category.name,
+//             originalDepartment: dept.name,
+//           }))
+//         ),
+//       }));
+//       setProjectsData(processedData);
+//       setIsLoading(false);
+
+//       // Initialize active categories
+//       const initialCategories = processedData.reduce((acc, dept) => {
+//         acc[dept.name] = "All";
+//         return acc;
+//       }, {});
+//       setActiveCategories(initialCategories);
+//     } catch (error) {
+//       console.error("Error processing project data:", error);
+//       setIsLoading(false);
+//     }
+//   }, []);
+
+//   // Set initial active department
+//   useEffect(() => {
+//     if (department && projectsData.some((dept) => dept.name === department)) {
+//       setActiveDepartment(department);
+//     } else if (projectsData.length > 0) {
+//       setActiveDepartment(projectsData[0].name);
+//     }
+//   }, [projectsData, department]);
+
+//   // Scroll to active department
+//   useEffect(() => {
+//     if (projectsData.length && activeDepartment && !isDotClickScroll) {
+//       const section = document.getElementById(activeDepartment);
+//       if (section) {
+//         const yOffset = -80;
+//         const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+//         window.scrollTo({ top: y, behavior: "smooth" });
+//       }
+//     }
+//   }, [activeDepartment, projectsData, isDotClickScroll]);
+
+//   // Intersection Observer for updating active department
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       (entries) => {
+//         if (!isDotClickScroll) {
+//           entries.forEach((entry) => {
+//             if (entry.isIntersecting) {
+//               setActiveDepartment(entry.target.id);
+//             }
+//           });
+//         }
+//       },
+//       { root: null, threshold: 0.3 }
+//     );
+
+//     projectsData.forEach((item) => {
+//       const section = sectionsRef.current[item.name];
+//       if (section) observer.observe(section);
+//     });
+
+//     return () => observer.disconnect();
+//   }, [projectsData, isDotClickScroll]);
+
+//   // Handle dot click
+//   const handleDotClick = (departmentName) => {
+//     if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+
+//     setIsDotClickScroll(true);
+//     setActiveDepartment(departmentName);
+
+//     const section = document.getElementById(departmentName);
+//     if (section) {
+//       const yOffset = -80;
+//       const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+//       window.scrollTo({ top: y, behavior: "smooth" });
+
+//       scrollTimeoutRef.current = setTimeout(() => {
+//         setIsDotClickScroll(false);
+//       }, 1200);
+//     }
+//   };
+
+//   // Handle category change
+//   const handleCategoryChange = (deptName, categoryName) => {
+//     setActiveCategories((prev) => ({
+//       ...prev,
+//       [deptName]: categoryName,
+//     }));
+//   };
+
+//   // Handle project click
+//   const handleProjectClick = (project, deptName) => {
+//     const category = formatUrlString(project.category);
+//     const title = formatUrlString(project.title);
+//     navigate(`/project/${deptName}/${category}/${title}`);
+//   };
+
+//   // Utility to format URL strings
+//   const formatUrlString = (text) => {
+//     if (!text || typeof text !== "string") return "untitled";
+//     return text
+//       .toLowerCase()
+//       .replace(/[^a-z0-9\s-]/g, "")
+//       .trim()
+//       .split(/\s+/)
+//       .join("-");
+//   };
+
+//   return (
+//     <>
+//       <div className="nav_style">
+//         <NavBar />
+//         <SideBar />
+//       </div>
+//       {isLoading ? (
+//         <div className="loading">Loading projects...</div>
+//       ) : projectsData.length === 0 ? (
+//         <div className="error">No projects available.</div>
+//       ) : (
+//         <>
+//           <div className="project-page-hero-section">
+//             <div>
+//               <span>Projects</span>
+//               <Star />
+//             </div>
+//           </div>
+//           <div className="mobile-navigation-tabs">
+//             {projectsData.map((item) => (
+//               <button
+//                 key={item.name}
+//                 onClick={() => handleDotClick(item.name)}
+//                 className={`mobile-tab ${
+//                   activeDepartment === item.name ? "active-service-mob-tab" : ""
+//                 }`}
+//                 aria-label={`Navigate to ${item.name} department`}
+//               >
+//                 {item.name}
+//               </button>
+//             ))}
+//           </div>
+//           <div className="project-page-content-container">
+//             <div className="service-page-main-dots-container">
+//               {projectsData.map((item) => (
+//                 <DepartmentDot
+//                   key={item.name}
+//                   eachItem={item}
+//                   activeDepartment={activeDepartment}
+//                   setActiveDepartment={handleDotClick}
+//                 />
+//               ))}
+//             </div>
+//             <div>
+//               {projectsData.map((item) => {
+//                 const categories = item.categories.map((cat) => cat.name);
+//                 const categoryButtons = ["All", ...categories];
+//                 const activeCategory = activeCategories[item.name] || "All";
+//                 const filteredProjects =
+//                   activeCategory === "All"
+//                     ? item.projects
+//                     : item.projects.filter(
+//                         (project) => project.category === activeCategory
+//                       );
+
+//                 return (
+//                   <section
+//                     key={item.name}
+//                     id={item.name}
+//                     className="department-section"
+//                     ref={(el) => (sectionsRef.current[item.name] = el)}
+//                     aria-labelledby={`dept-${item.name}`}
+//                   >
+//                     <h2 id={`dept-${item.name}`} className="department-name">
+//                       {item.name}
+//                     </h2>
+//                     <div className="project-page-filter-container">
+//                       {categoryButtons.map((category) => (
+//                         <button
+//                           key={category}
+//                           onClick={() => handleCategoryChange(item.name, category)}
+//                           className={`project-item-tab ${
+//                             activeCategory === category
+//                               ? "project-item-tab-active"
+//                               : ""
+//                           }`}
+//                           aria-pressed={activeCategory === category}
+//                         >
+//                           {category}
+//                         </button>
+//                       ))}
+//                     </div>
+//                     <ReUsableArticle2
+//                       data={filteredProjects}
+//                       path={`/project/${item.name}`}
+//                       onProjectClick={(project) =>
+//                         handleProjectClick(project, item.name)
+//                       }
+//                     />
+//                   </section>
+//                 );
+//               })}
+//             </div>
+//           </div>
+//           <Footer />
+//           <MobileFooter />
+//         </>
+//       )}
+//     </>
+//   );
+// }
+
+// function DepartmentDot({ eachItem, activeDepartment, setActiveDepartment }) {
+//   const [showDept, setShowDept] = useState(false);
+
+//   useEffect(() => {
+//     if (eachItem.name === activeDepartment) {
+//       setShowDept(true);
+//       const timeoutId = setTimeout(() => setShowDept(false), 3000);
+//       return () => clearTimeout(timeoutId);
+//     } else {
+//       setShowDept(false);
+//     }
+//   }, [activeDepartment, eachItem.name]);
+
+//   return (
+//     <div className="service-page-dept-container">
+//       <button
+//         className={`service-page-main-dots ${
+//           eachItem.name === activeDepartment
+//             ? "service-page-main-dots-active"
+//             : ""
+//         }`}
+//         onClick={() => setActiveDepartment(eachItem.name)}
+//         onMouseEnter={() => setShowDept(true)}
+//         onMouseLeave={() => setShowDept(false)}
+//         onFocus={() => setShowDept(true)}
+//         onBlur={() => setShowDept(false)}
+//         aria-label={`Navigate to ${eachItem.name} department`}
+//       />
+//       {showDept && (
+//         <span className="service-page-dept-name">{eachItem.name}</span>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default ProjectPage;
