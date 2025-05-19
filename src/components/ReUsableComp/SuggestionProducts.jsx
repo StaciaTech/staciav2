@@ -1,14 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../../Data/ProductPage.json";
 import "../../styles/SuggestionCasestudys.css";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 const SuggestionProducts = ({ currentProductId }) => {
   const scrollRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   // Function to format title for URL: replace spaces with hyphens, preserve case and parentheses
   const formatTitleForUrl = (title) => {
-    return encodeURIComponent(title.replace(/\s+/g, "-"));
+    return encodeURIComponent(title?.replace(/\s+/g, "-") || "");
   };
 
   // Flatten the nested JSON structure to get all products with department and category
@@ -29,21 +33,66 @@ const SuggestionProducts = ({ currentProductId }) => {
     });
   });
 
-  // Scroll to center the clicked product card
-  const scrollToProduct = (index) => {
+  // Function to check scroll position and update arrow states
+  const updateScrollState = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1); // -1 to account for rounding
+    }
+  };
+
+  // Update scroll state on mount and on scroll
+  useEffect(() => {
+    updateScrollState();
     const scrollContainer = scrollRef.current;
     if (scrollContainer) {
-      const cardWidth = 374; // 350px card + 24px gap (1.5rem)
-      const containerWidth = scrollContainer.clientWidth;
-      const scrollPosition =
-        index * cardWidth - (containerWidth - cardWidth) / 2;
-      scrollContainer.scrollTo({ left: scrollPosition, behavior: "smooth" });
+      scrollContainer.addEventListener("scroll", updateScrollState);
+      return () =>
+        scrollContainer.removeEventListener("scroll", updateScrollState);
+    }
+  }, [allProducts]);
+
+  // Function to scroll one card at a time
+  const scrollCard = (direction) => {
+    if (scrollRef.current) {
+      const cardWidth =
+        scrollRef.current.querySelector(".suggestion-casestudy-card")
+          ?.offsetWidth || 397;
+      const gap = 24; // CSS gap is 1.5rem (24px)
+      const scrollAmount = cardWidth + gap;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
     }
   };
 
   return (
     <div className="suggestion-casestudys-container">
-      <h2>Suggested Products</h2>
+      <div className="header-with-arrows">
+        <h2>Suggested Products</h2>
+        {allProducts.length > 1 && (
+          <div className="carousel-controls">
+            <button
+              className="carousel-arrow carousel-arrow-left"
+              onClick={() => scrollCard("left")}
+              disabled={!canScrollLeft}
+              aria-label="Scroll left"
+            >
+              <FaArrowLeft />
+            </button>
+            <button
+              className="carousel-arrow carousel-arrow-right"
+              onClick={() => scrollCard("right")}
+              disabled={!canScrollRight}
+              aria-label="Scroll right"
+            >
+              <FaArrowRight />
+            </button>
+          </div>
+        )}
+      </div>
       <div className="suggestion-casestudys-scroll-wrapper">
         <div className="suggestion-casestudys-scroll" ref={scrollRef}>
           {allProducts.length > 0 ? (
@@ -77,12 +126,7 @@ const SuggestionProducts = ({ currentProductId }) => {
                   />
                 </Link>
                 <div className="content">
-                  <h3
-                    onClick={() => scrollToProduct(index)}
-                    className="pointer"
-                  >
-                    {product.title || "Untitled"}
-                  </h3>
+                  <h3>{product.title || "Untitled"}</h3>
                   <p>
                     {product.description?.length > 80
                       ? `${product.description.substring(0, 80)}...`

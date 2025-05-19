@@ -238,6 +238,7 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
 import "../../styles/Services/SpecificServices.css";
 import serviceData from "../../Data/Services.json";
+import SuggestionService from "../ReUsableComp/SuggestionService";
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
 const SideBar = lazy(() => import("../SideBar"));
@@ -334,6 +335,7 @@ export default function SpecificService() {
             </p>
           )}
         </div>
+        <SuggestionService/>
       </div>
       <Suspense fallback={<div>Loading Footer...</div>}>
         <Footer />

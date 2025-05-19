@@ -259,6 +259,8 @@ import React, { useState } from "react";
 import "../../styles/Home/Articles.css";
 import { useNavigate } from "react-router-dom";
 import articlesData from "../../Data/SingleArticle.json";
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 function SingleArticleCard({ article }) {
   const navigate = useNavigate();
@@ -351,14 +353,14 @@ function Articles() {
             onClick={handlePrev}
             disabled={currentIndex === 0}
           >
-            ←
+            <FaArrowLeft />
           </button>
           <button
             className="carousel-arrow carousel-arrow-right"
             onClick={handleNext}
             disabled={currentIndex >= maxIndex}
           >
-            →
+            <FaArrowRight />
           </button>
         </div>
       </div>

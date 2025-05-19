@@ -1,6 +1,5 @@
 /* Container for the suggested case studies section */
 .suggestion-casestudys-container {
-
   margin: 0 auto;
   position: relative;
   padding: 2rem 8rem;
@@ -42,25 +41,55 @@
 
 /* Individual card styling */
 .suggestion-casestudy-card {
-  min-width: 397px;
+  min-width: 209px;
+  height: 380px;
 
   border-radius: 12px; /* From Other Case Studies */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* From Other Case Studies */
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* From Other Case Studies */
   position: relative;
-
 }
 
 /* Add vertical separator between cards, except for the last one */
 .suggestion-casestudy-card:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -12px; /* Center in the 24px gap */
   top: 10%;
   height: 80%;
   width: 1px;
   background: #e5e7eb; /* Gray-200 */
+}
+
+.carousel-arrow {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #6b6084;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  color: #6b6084;
+  font-size: 1.5rem;
+}
+.carousel-controls {
+  display: flex;
+  gap: 1rem;
+}
+.carousel-arrow:hover {
+  border-color: #000;
+  color: #000;
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: #6b6084;
+  color: #6b6084;
 }
 
 /* Hover effect for cards */
@@ -72,7 +101,7 @@
 /* Card image styling */
 .suggestion-casestudy-card img {
   width: 100%;
-  height: 350px;
+  height: 170px;
   object-fit: cover;
   border-radius: 12px 12px 0 0; /* From Other Case Studies */
 }
@@ -87,7 +116,7 @@
 
 /* Card title styling */
 .suggestion-casestudy-card h3 {
-  font-size: 1.2rem; /* From Other Case Studies */
+  font-size: 1rem; /* From Other Case Studies */
   font-weight: 600;
   color: black; /* From Other Case Studies */
   font-family: EuclidSemiBold; /* From Other Case Studies */
@@ -122,57 +151,41 @@
 .suggestion-casestudy-card a:hover {
   text-decoration: none; /* From Other Case Studies */
 }
-
-/* Navigation arrows */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #ffffff;
-  color: #1e3a8a; /* Blue-900 */
-  border: 1px solid #e5e7eb; /* Gray-200 border */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 0.75rem;
-  cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+/* Header section with title and arrows */
+.header-with-arrows {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 1rem;
 }
 
-.arrow:hover {
-  background: #2563eb; /* Blue-600 */
-  color: #ffffff;
-  transform: translateY(-50%) scale(1.1);
+/* Container for the arrows */
+.arrow-controls {
+  display: flex;
+  gap: 10px;
+  /* Space between the arrows */
 }
 
-.arrow-left {
-  left: -24px;
+/* Adjust arrow positioning for this layout */
+.arrow {
+  position: relative; /* Override the absolute positioning used previously */
+  top: auto;
+  transform: none; /* Remove the translateY transform */
 }
 
+/* Ensure arrows remain circular and styled as before */
+.arrow-left,
 .arrow-right {
-  right: -24px;
+  left: auto;
+  right: auto;
 }
-
-.arrow:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  background: #f3f4f6; /* Gray-100 */
-  color: #9ca3af; /* Gray-400 */
-}
-
 /* No case studies message */
 .suggestion-casestudys-scroll p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #4b5563; /* Gray-600 */
   text-align: left;
   width: 100%;
   padding: 0rem 0;
-
 }
 @media (max-width: 479px) {
   .suggestion-casestudys-container {
