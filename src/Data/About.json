@@ -267,8 +267,8 @@
     }
   ],
   "images": [
-    "assets/PartnerPage/partner1.webp",
-    "assets/PartnerPage/partner2.webp",
+    "assets/PartnerPage/parikshan.webp",
+    "assets/PartnerPage/digiguroo.webp",
     "assets/PartnerPage/partner1.webp"
     
   ],
@@ -277,14 +277,14 @@
       "title": "Parikshan",
       "description": "PARIKSHAN is a one-point solution for all food safety needs. Lab services, Hygiene monitoring team, FSSAI compliance score cards, ISO 22000/HACCP certification guidance and various levels of Food Safety Training all under one roof. NABL accredited food testing Laboratory",
       "image": {
-        "imageUrl": "assets/PartnerPage/partner1.webp"
+        "imageUrl": "assets/PartnerPage/parikshan.webp"
       }
     },
     {
       "title": "Digiguroo",
       "description": "Digi Guru is a team of skilled Professional working together to deliver high-quality services in Digital Marketing, SMM, SEO, Logo Design, Website Content & Design, IT Recruitment, and more. With years of experience and a collaborative approach, we ensure creative, reliable, and client-focused solutions for every project.",
       "image": {
-        "imageUrl": "assets/PartnerPage/partner2.webp"
+        "imageUrl": "assets/PartnerPage/digiguroo.webp"
       }
     },
     {
