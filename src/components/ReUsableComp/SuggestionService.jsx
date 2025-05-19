@@ -1,23 +1,77 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import data from "../../Data/Services.json"; // Adjust path as needed
 import "../../styles/SuggestionCasestudys.css"; // Ensure this path is correct
 
-const SuggestionService = ({ currentServiceId }) => {
-  // Flatten all services from JSON, excluding the current one
+const SuggestionService = () => {
+  const { departmentName, categoryName, serviceTitle } = useParams(); 
+
+  const formatTitleForUrl = (title) => {
+    return encodeURIComponent(title.replace(/\s+/g, "-"));
+  };
+
+  
+  let currentServiceId = null;
+  data.forEach((department) => {
+    if (formatTitleForUrl(department.name) === departmentName) {
+      if (department.categories && department.categories.length > 0) {
+        // Department has categories
+        department.categories.forEach((category) => {
+          if (formatTitleForUrl(category.name) === categoryName) {
+            category.services?.forEach((service) => {
+              if (formatTitleForUrl(service.title) === serviceTitle) {
+                currentServiceId = service.id; 
+              }
+            });
+          }
+        });
+      } else {
+      
+        department.services?.forEach((service) => {
+          if (formatTitleForUrl(service.title) === serviceTitle) {
+            currentServiceId = service.id; 
+          }
+        });
+      }
+    }
+  });
+
+  // Collect all services, excluding the current one
   const allServices = [];
   data.forEach((department) => {
-    department.categories.forEach((category) => {
-      category.services.forEach((service) => {
+    if (department.categories && department.categories.length > 0) {
+      // Department has categories
+      department.categories.forEach((category) => {
+        category.services?.forEach((service) => {
+          if (service.id !== currentServiceId) {
+            allServices.push({
+              id: service.id,
+              title: service.title,
+              oneLine: service.oneLine, // Use oneLine for description
+              imageUrl: service.imageUrl,
+              departmentName: department.name,
+              categoryName: category.name,
+              type: "service",
+            });
+          }
+        });
+      });
+    } else {
+      // Department has direct services
+      department.services?.forEach((service) => {
         if (service.id !== currentServiceId) {
           allServices.push({
-            ...service,
+            id: service.id,
+            title: service.title,
+            oneLine: service.oneLine, // Use oneLine for description
+            imageUrl: service.imageUrl,
             departmentName: department.name,
-            categoryName: category.name,
+            categoryName: department.name, // Use department name as pseudo-category
+            type: "service",
           });
         }
       });
-    });
+    }
   });
 
   return (
@@ -25,41 +79,62 @@ const SuggestionService = ({ currentServiceId }) => {
       <h2 className="suggestion-casestudys-title">Suggested Services</h2>
       <div className="suggestion-casestudys-scroll">
         {allServices.length > 0 ? (
-          allServices.map((service, index) => (
-            <div key={index} className="suggestion-casestudy-card">
-              <Link
-                to={`/service/${service.id}`}
-                className="suggestion-casestudy-link"
+          allServices.map((service, index) => {
+            // Generate URL: /services/:departmentName/:categoryName/:serviceTitle
+            const serviceUrl = `/services/${formatTitleForUrl(
+              service.departmentName
+            )}/${formatTitleForUrl(service.categoryName)}/${formatTitleForUrl(
+              service.title
+            )}`;
+            return (
+              <div
+                key={`${service.id}-${index}`}
+                className="suggestion-casestudy-card"
               >
-                <img
-                  src={
-                    service.imageUrl ||
-                    "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
-                  }
-                  alt={service.title || "Service"}
-                  className="suggestion-casestudy-image"
-                  onClick={() => window.scrollTo(0, 0)}
-                />
-              </Link>
-              <div className="suggestion-casestudy-content">
-                <h3 className="suggestion-casestudy-title">
-                  {service.title || "Untitled"}
-                </h3>
-                <p className="suggestion-casestudy-description">
-                  {service.description?.length > 80
-                    ? `${service.description.substring(0, 80)}...`
-                    : service.description || "No description available."}
-                </p>
                 <Link
-                  to={`/service/${service.id}`}
-                  className="suggestion-casestudy-know-more"
-                  onClick={() => window.scrollTo(0, 0)}
+                  to={serviceUrl}
+                  className="suggestion-casestudy-link"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    console.log(
+                      `Clicked Image: ${service.title}, URL: ${serviceUrl}`
+                    );
+                  }}
                 >
-                  Know more →
+                  <img
+                    src={
+                      service.imageUrl ||
+                      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+                    }
+                    alt={service.title || "Service"}
+                    className="suggestion-casestudy-image"
+                  />
                 </Link>
+                <div className="content">
+                  <h3 >
+                    {service.title || "Untitled"}
+                  </h3>
+                  <p className="">
+                    {service.oneLine && service.oneLine.length > 80
+                      ? `${service.oneLine.substring(0, 80)}...`
+                      : service.oneLine || "No description available."}
+                  </p>
+                  <Link
+                    to={serviceUrl}
+                    className="suggestion-casestudy-know-more"
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      console.log(
+                        `Clicked Know More: ${service.title}, URL: ${serviceUrl}`
+                      );
+                    }}
+                  >
+                    Know more →
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))
+            );
+          })
         ) : (
           <p className="suggestion-casestudys-empty">
             No other services available.

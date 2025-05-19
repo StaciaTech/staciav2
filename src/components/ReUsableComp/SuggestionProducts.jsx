@@ -6,14 +6,23 @@ import "../../styles/SuggestionCasestudys.css";
 const SuggestionProducts = ({ currentProductId }) => {
   const scrollRef = useRef(null);
 
-  // Flatten the nested JSON structure to get all products
+  // Function to format title for URL: replace spaces with hyphens, preserve case and parentheses
+  const formatTitleForUrl = (title) => {
+    return encodeURIComponent(title.replace(/\s+/g, "-"));
+  };
+
+  // Flatten the nested JSON structure to get all products with department and category
   const allProducts = [];
   data.department.forEach((dept) => {
     dept.category.forEach((category) => {
       if (category.products) {
         category.products.forEach((product) => {
           if (product.id !== currentProductId) {
-            allProducts.push(product);
+            allProducts.push({
+              ...product,
+              departmentName: dept.name,
+              categoryName: category.name,
+            });
           }
         });
       }
@@ -40,18 +49,38 @@ const SuggestionProducts = ({ currentProductId }) => {
           {allProducts.length > 0 ? (
             allProducts.map((product, index) => (
               <div key={product.id} className="suggestion-casestudy-card">
-                <Link to={`/products/${product.id}`}>
+                <Link
+                  to={`/products/${formatTitleForUrl(
+                    product.departmentName
+                  )}/${formatTitleForUrl(
+                    product.categoryName
+                  )}/${formatTitleForUrl(product.title)}`}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    console.log(
+                      `Navigating to product: ${
+                        product.title
+                      }, URL: /products/${formatTitleForUrl(
+                        product.departmentName
+                      )}/${formatTitleForUrl(
+                        product.categoryName
+                      )}/${formatTitleForUrl(product.title)}`
+                    );
+                  }}
+                >
                   <img
                     src={
                       product.imageUrl ||
                       "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
                     }
                     alt={product.title || "Product"}
-                    onClick={() => window.scrollTo(0, 0)}
                   />
                 </Link>
                 <div className="content">
-                  <h3 onClick={() => scrollToProduct(index)}>
+                  <h3
+                    onClick={() => scrollToProduct(index)}
+                    className="pointer"
+                  >
                     {product.title || "Untitled"}
                   </h3>
                   <p>
@@ -60,8 +89,23 @@ const SuggestionProducts = ({ currentProductId }) => {
                       : product.description || "No description available."}
                   </p>
                   <Link
-                    to={`/products/${product.id}`}
-                    onClick={() => window.scrollTo(0, 0)}
+                    to={`/products/${formatTitleForUrl(
+                      product.departmentName
+                    )}/${formatTitleForUrl(
+                      product.categoryName
+                    )}/${formatTitleForUrl(product.title)}`}
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      console.log(
+                        `Know more clicked: ${
+                          product.title
+                        }, URL: /products/${formatTitleForUrl(
+                          product.departmentName
+                        )}/${formatTitleForUrl(
+                          product.categoryName
+                        )}/${formatTitleForUrl(product.title)}`
+                      );
+                    }}
                   >
                     Know more →
                   </Link>

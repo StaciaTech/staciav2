@@ -491,7 +491,6 @@
     transform: translateY(0);
   }
 }
-
 /* Other Case Studies */
 .other-case-studies {
   padding: 2rem 8rem;
@@ -499,20 +498,39 @@
 }
 
 .other-case-studies h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #dcd9e3;
   font-family: EuclidSemiBold;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem
+  
+
 }
 
-.other-case-studies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+.other-case-studies-scroll {
+  display: flex;
+  overflow-x: auto;
   gap: 2rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+/* Hide scrollbar for better aesthetics */
+.other-case-studies-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.other-case-studies-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  padding: 0.5rem ;
+  gap: 1.5rem;
 }
 
 .other-case-study-card {
+  flex: 0 0 auto;
+  width: 397px; /* Matches your original minmax(320px, 1fr) */
   background: #fff;
   border-radius: 12px;
   padding: 10px 0px;

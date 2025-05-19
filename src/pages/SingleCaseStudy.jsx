@@ -2075,7 +2075,7 @@ function SingleCaseStudy() {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      const bottomOffset = 1000;
+      const bottomOffset = 800;
       if (scrollY > 4200 && scrollY + windowHeight < documentHeight - bottomOffset) {
         setShowButton(true);
       } else {
@@ -2801,49 +2801,53 @@ function SingleCaseStudy() {
         </div>
 
         {/* Other Case Studies Section */}
-        <div className="other-case-studies">
-          <h2 className="single-casestudy-layout1-title test-selection-blue">
-            Other Case Studies
-          </h2>
-          <div className="other-case-studies-grid">
-            {otherCaseStudies.map((study, index) => (
-              <div className="other-case-study-card" key={index}>
-                <Link to={`/case-study/single-caseStudy/${study.id}`}>
-                  <img
-                    src={
-                      study.imageURL ||
-                      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
-                    }
-                    alt={study.title || "Case Study"}
-                    style={{
-                      width: "100%",
-                      height: "280px",
-                      objectFit: "cover",
-                      borderRadius: "8px 8px 0 0",
-                    }}
-                    onClick={() => window.scrollTo(0, 0)}
-                  />
-                </Link>
-                <div className="other-case-study-content">
-                  <h3>{study.title || "Untitled"}</h3>
-                  <p>
-                    {study.overview?.description?.length > 100
-                      ? `${study.overview.description.substring(0, 100)}...`
-                      : study.overview?.description ||
-                        "No description available."}
-                  </p>
-                  <Link
-                    to={`/case-study/single-caseStudy/${study.id}`}
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="know-more-link"
-                  >
-                    Know more →
-                  </Link>
-                </div>
-              </div>
-            ))}
+     <div className="other-case-studies">
+  <h2 className="single-casestudy-layout1-title test-selection-blue">
+    Other Case Studies
+  </h2>
+  <div className="other-case-studies-scroll">
+    {otherCaseStudies.length > 0 ? (
+      otherCaseStudies.map((study, index) => (
+        <div className="other-case-study-card" key={index}>
+          <Link to={`/case-study/single-caseStudy/${study.id}`}>
+            <img
+              src={
+                study.imageURL ||
+                "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+              }
+              alt={study.title || "Case Study"}
+              style={{
+                width: "100%",
+                height: "280px",
+                objectFit: "cover",
+                borderRadius: "8px 8px 0 0",
+              }}
+              onClick={() => window.scrollTo(0, 0)}
+            />
+          </Link>
+          <div className="other-case-study-content">
+            <h3>{study.title || "Untitled"}</h3>
+            <p>
+              {study.overview?.description?.length > 80
+                ? `${study.overview.description.substring(0, 80)}...`
+                : study.overview?.description ||
+                  "No description available."}
+            </p>
+            <Link
+              to={`/case-study/single-caseStudy/${study.id}`}
+              onClick={() => window.scrollTo(0, 0)}
+              className="know-more-link"
+            >
+              Know more →
+            </Link>
           </div>
         </div>
+      ))
+    ) : (
+      <p>No other case studies available.</p>
+    )}
+  </div>
+</div>
         <SuggestionCasestudys />
         <SuggestionProjects />
         <SuggestionProducts/>

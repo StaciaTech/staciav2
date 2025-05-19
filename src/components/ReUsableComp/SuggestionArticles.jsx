@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import data from "../../Data/SingleArticle.json"; // Adjust path as needed
+import data from "../../Data/SingleArticle.json";
 import "../../styles/SuggestionCasestudys.css";
 
 const SuggestionArticles = ({ currentArticleHashtag }) => {
@@ -12,25 +12,42 @@ const SuggestionArticles = ({ currentArticleHashtag }) => {
       )
   );
 
+  // Function to format title for URL
+  const formatTitleForUrl = (title) => {
+    return encodeURIComponent(title.replace(/\s+/g, "-").toLowerCase());
+  };
+
   return (
     <div className="suggestion-casestudys-container">
       <h2>Suggested Articles</h2>
       <div className="suggestion-casestudys-scroll">
         {suggestedArticles.length > 0 ? (
           suggestedArticles.map((article, index) => {
-            // Get the first section's content for description
             const description =
               article.sections[0]?.content || "No description available.";
+            const articleUrl = `/article/single-article/${formatTitleForUrl(
+              article.title
+            )}`;
             return (
-              <div key={index} className="suggestion-casestudy-card">
-                <Link to={`/article/${article.audioData.topics[0].hashtag}`}>
+              <div
+                key={`${article.audioData.topics[0].hashtag}-${index}`}
+                className="suggestion-casestudy-card"
+              >
+                <Link
+                  to={articleUrl}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    console.log(
+                      `Clicked Image: ${article.title}, URL: ${articleUrl}`
+                    );
+                  }}
+                >
                   <img
                     src={
                       article.mainImageUrl ||
                       "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
                     }
                     alt={article.title || "Article"}
-                    onClick={() => window.scrollTo(0, 0)}
                   />
                 </Link>
                 <div className="content">
@@ -41,8 +58,13 @@ const SuggestionArticles = ({ currentArticleHashtag }) => {
                       : description}
                   </p>
                   <Link
-                    to={`/article/${article.audioData.topics[0].hashtag}`}
-                    onClick={() => window.scrollTo(0, 0)}
+                    to={articleUrl}
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      console.log(
+                        `Clicked Know More: ${article.title}, URL: ${articleUrl}`
+                      );
+                    }}
                   >
                     Know more →
                   </Link>
