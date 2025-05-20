@@ -178,8 +178,8 @@ const SuggestionService = () => {
                       {service.oneLine && service.oneLine.length > 80
                         ? `${service.oneLine.substring(0, 80)}...`
                         : service.oneLine || "No description available."}
-                        
-                    
+
+
                     </p>
                     <Link
                       to={serviceUrl}

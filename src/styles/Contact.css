@@ -53,7 +53,7 @@
 .contact-second-title {
   font-family: EuclidSemiBold;
   font-size: 1.5rem;
-  color: #0047ff;
+  color: #0047FF;
   padding: 1rem 0rem;
 }
 .contact-main-title {
@@ -76,12 +76,12 @@
 }
 .PhoneInputInput::placeholder {
   font-family: EuclidMedium;
-  color: #c8c8c9;
+  color: #C8C8C9;
   /* font-size: 1rem; */
 }
 .mobile-container {
   width: 100%;
-  border: 1px solid #cadbea;
+  border: 1px solid #CADBEA;
   border-radius: 10px;
   padding: 0rem 0.5rem;
   display: flex;
@@ -90,7 +90,7 @@
 .organization-container {
   width: 100%;
   height: 3rem;
-  border: 1px solid #cadbea;
+  border: 1px solid #CADBEA;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -100,14 +100,14 @@
 }
 .org-text {
   font-family: EuclidMedium;
-  color: #c8c8c9;
+  color: #C8C8C9;
 }
 .org-options {
   position: absolute;
   top: 120%;
   left: 0;
   background-color: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #E5E5E5;
   width: 100%;
   border-radius: 10px;
   z-index: 999;
@@ -121,10 +121,10 @@
 }
 .org-options > p {
   padding: 0.5rem;
-  /* border-bottom: 1px solid #e5e5e5; */
+  /* border-bottom: 1px solid #E5E5E5; */
 }
 .org-options > p:hover {
-  border-left: 3px solid #0047ff;
+  border-left: 3px solid #0047FF;
   margin-left: 0.5rem;
   padding-left: 0.5rem;
   transition: 0.2s ease-in;
@@ -137,7 +137,7 @@
 }
 .input-field {
   width: 100%;
-  border: 1px solid #cadbea;
+  border: 1px solid #CADBEA;
   padding: 1.5rem 1rem;
   font-family: EuclidMedium;
   outline: none;
@@ -150,8 +150,8 @@
 .PhoneInput {
   border: none;
   outline: none;
-  padding: 10px; 
-  font-size: 16px; 
+  padding: 10px;
+  font-size: 16px;
 }
 .PhoneInput::placeholder,
 .input-field::placeholder,
@@ -159,7 +159,7 @@
 .contact-org-inp::placeholder,
 .job-org-inp::placeholder {
   font-family: EuclidMedium;
-  color: #c8c8c9;
+  color: #C8C8C9;
   font-size: 1remn;
   background-color: transparent;
 }
@@ -173,7 +173,7 @@
 .message-area {
   margin-bottom: 1rem;
   height: 30vh;
-  border: 1px solid #cadbea;
+  border: 1px solid #CADBEA;
   padding: 1rem;
   width: 100%;
   resize: none;
@@ -181,7 +181,6 @@
   border-radius: 10px;
   box-sizing: border-box;
   font-family: EuclidMedium;
-  
 }
 body.no-scroll {
   overflow: auto;
@@ -190,7 +189,7 @@ body.no-scroll {
 }
 .submit-style {
   padding: 1rem 7rem;
-  background-color: #0047ff;
+  background-color: #0047FF;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -201,7 +200,7 @@ body.no-scroll {
   color: red;
 }
 
-/* ✅ Mobile View (320px to 480px) */
+/* :white_check_mark: Mobile View (320px to 480px) */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   /* Layout Adjustments */
   .contact-form-container {
@@ -313,7 +312,6 @@ body.no-scroll {
     height: auto;
     position: static;
   }
-  
 }
 
 /* Tablet view (481px to 1024px) */
@@ -324,7 +322,6 @@ body.no-scroll {
   .contact-form-container {
     flex-direction: column;
     min-height: auto;
-   
   }
 
   .contact-form-image-container {
@@ -409,7 +406,6 @@ body.no-scroll {
 @media screen and (min-width: 1025px) {
   .contact-form-container {
     flex-direction: row;
-   
   }
 
   .contact-form-image-container {

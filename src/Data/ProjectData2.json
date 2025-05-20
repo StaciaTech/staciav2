@@ -8,9 +8,9 @@
           "projects": [
             {
               "id":1,
-              "title": "Chili Ladling Machine",
+              "title": "Custom Chili Ladling Machine for Aachi Group",
               "mainDesc": "A battery-powered, portable chili ladling machine with a cleated belt conveyor, IP69K-rated components, and PLC/SCADA controls for automated chili handling.",
-              "mainImageUrl": "/assets/ProductPage/onedrillssm.webp",
+              "mainImageUrl": "/assets/ProjectPage/chilli-lading-machine.webp",
               "Executive-Summary": "The Stacia Corp Custom Chili Ladling Machine—delivered for Aachi Group—automates chili handling end-to-end, reducing manual labor by 70% and boosting throughput by 50% while ensuring uniform product quality and stringent hygiene compliance. Its battery-powered portability, lightweight modular frame, and IP69K-rated components enable flexible deployment and rapid, high-temperature washdowns, cutting sanitation time by 60%. Integrated PLC/SCADA controls with remote HMI support real-time monitoring and data logging, yielding a six-month payback through combined labor and energy savings.",
               "Client-Overview": "Aachi Group, headquartered in Chennai, India, is a leading name in the food processing industry, renowned for its wide range of high-quality products that have become household staples across India and in numerous international markets.",
               "Project-Objective": "To design and develop a specialized chili ladling machine capable of efficiently handling large quantities of chili with minimal human intervention, thereby enhancing operational efficiency and ensuring consistent product quality",
@@ -262,7 +262,7 @@
               "id":2,
               "title": "Stacia Precision Slicing Machine for Pumkin Tales",
               "mainDesc": "A compact, IP69K-rated machine for slicing up to five artisan bread loaves simultaneously with ultra-fine thickness control (3 mm upward).",
-              "mainImageUrl": "/assets/ProductPage/onedrillssm.webp",
+              "mainImageUrl": "/assets/ProductPage/Precision Slicing Machine.webp",
               "Executive-Summary": "Stacia Corp partnered with Pumpkin Tales to deliver a custom, high-performance Precision Slicing Machine capable of slicing up to five loaves (bread) simultaneously into ultra-uniform slices from 3 mm upward, all within a compact, IP69K-rated hygienic frame. This turnkey solution drove a 60 % increase in throughput, slashed waste by 40 %, cut cleaning time by 50 %, and paid back within eight months—while preserving artisanal quality at industrial scale",
               "Client-Overview": "Pumpkin Tales is a Chennai-based bakery and food-service brand celebrated for its small-batch artisan breads, golden focaccias, and daily-fresh desserts crafted from organic, locally sourced ingredients. With multiple outlets—most notably its flagship Alwarpet bakery—Pumpkin Tales operates on Slow Food principles, focusing on sustainability, wellness, and community engagement ",
               "Project-Objective": [
@@ -320,6 +320,7 @@
                 }
               ],
               "Development-Process": "Stacia adopted a hybrid Stage-Gate and agile approach to ensure rigor and flexibility",
+              "title1":"Stage Gate Framework",
               "stage-Gate-Framework": "A five-stage Phase-Gate model guided ideation through launch, with formal “gates” to review scope, risk, and resource allocation citeturn0search0turn0search5",
               "Stage": [
                 {
@@ -391,7 +392,7 @@
               "id": 3,
               "title": "Engineering a Custom Stacia Spinach cleaning Machine for Nallakeerai",
               "mainDesc": "A portable, battery-powered machine for washing and drying 25 kg of spinach per cycle, with a recirculating water bath and IP69K-rated components",
-              "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp",
+              "mainImageUrl": "/assets/ProjectPage/spinach cleaning with Frames1.webp",
               "Executive-Summary": "The Stacia Spinach Cleaning Machine automates washing and drying of up to 25 kg of field-grown spinach per cycle, cutting manual labor by over 70 % and reducing process time by 60 % thanks to its battery-powered portability and optimized lightweight materials Kiron Food Processing Technologies. Its compact footprint (<1 m²) and IP69K-rated components enable high-temperature washdowns without equipment damage, ensuring hygienic output ready for consumption or further processing ResearchGate. By integrating a recirculating water bath, gentle perforated-screen agitation, and high-speed spin-drying, the machine minimizes water use by up to 50 % compared to batch rinsing systems EPA Neris. A hybrid Stage-Gate + Agile development process guided the project from concept through pilot deployment, culminating in full production rollout with a six-month payback Designorate",
               "Client-Overview": "Nalla Keerai is a Chennai-based supplier specializing in fresh, locally grown spinach (“keerai”), serving retail and food-service customers throughout Tamil Nadu. The company sought to automate its labor-intensive manual washing line to improve throughput, hygiene, and product consistency",
               "Project-Objective": [
@@ -509,7 +510,7 @@
               "id": 4,
               "title": "Tamarind Pod Breaking Machine: Enhancing Efficiency in Tamarind Processing ",
               "mainDesc": "",
-              "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
+              "mainImageUrl": "/assets/ProductPage/tamarind conveyor.webp",
               "Executive-Summary": "The Tamarind Pod Breaking Machine is an innovative solution designed to automate the labor-intensive process of breaking tamarind pods. By integrating a silent pod breaker, an efficient fan system to separate husks, and a conveyor belt to transport the pulp, this machine streamlines tamarind processing, improving productivity and reducing manual effort. This Project explores the development, implementation, and benefits of the Tamarind Pod Breaking Machine.Performance Foodservice | Home+3vadic.vigyanashram.blog+3chinapeanutmachinery.com+3King County",
               "Client-Overview": "The client is a mid-sized agro-processing enterprise specializing in tamarind-based products. Facing challenges with manual pod breaking, which was time-consuming and inconsistent, the client sought an automated solution to enhance processing efficiency and product quality",
               "Project-Objective": [
@@ -605,7 +606,7 @@
               "id": 5,
               "title": "Stacia Bailing Machine For GCC (Greater Chennai Corporation)",
               "mainDesc": "An automated machine with a silent pod breaker, husk-separating fan, and conveyor belt for efficient tamarind pulp processing.",
-              "mainImageUrl": "/assets/ProductPage/Hydrogen-(Smart water bottle).webp",
+              "mainImageUrl": "/assets/ProductPage/BailingMachine.webp",
               "Executive-Summary": "The Stacia Baling Machine—developed for the Greater Chennai Corporation—compresses up to 1,000 kg of mixed waste (plastic, paper, cardboard) into cubes at 25 % of original volume, achieving a 75 % reduction in waste footprint industrial-balers.com. Its emergency-stop, fast loading/unloading, and battery-powered portability enable safe, on-demand operation across multiple sites, while high-temperature operability ensures reliable performance in tropical climates staciacorp.com. Drawing on best practices from municipal and industrial baling projects—including portable designs by Deaton Engineering and high-throughput installations by Advance Hydrautech—Stacia Corp’s machine delivers cost-effective, low-maintenance waste management with rapid ROI Deaton Engineeringadvancehydrautech.com",
               "Client-Overview": "The Greater Chennai Corporation (GCC) is India’s oldest and one of its largest municipal bodies, established in 1688 and governing over 426 km² with a population exceeding 7 million Wikipedia. GCC manages solid waste streams from residential, commercial, and public-service operations, seeking scalable solutions to compress, store, and transport materials efficiently in one of India’s fastest-growing urban centers Vision for Sustainable Events",
               "Project-Objective": [
@@ -884,10 +885,10 @@
           "name": "Consumer Electronics",
           "projects": [
             {
-              "id": 1,
+              "id": 7,
               "title": "Stacia Connect S Speaker",
               "mainDesc": "A retro-inspired smart speaker with Alexa and Google Assistant, Bluetooth/Aux streaming, FM radio, and custom DSP tuning for high-fidelity sound in a compact design",
-              "mainImageUrl": "/assets/ProjectPage/Smart implementation.webp",
+              "mainImageUrl": "/assets/ProjectPage/S Connect (Smart Speaker).webp",
               "Executive-Summary": "The Stacia Connect S Speaker merges a retro-inspired aesthetic with cutting-edge smart features—including in-built Alexa and Google Assistant, Bluetooth/Aux streaming, FM radio, and an intuitive display with button controls—delivering seamless multi-platform audio control in a compact, stylish package CEPRO. Developed by Stacia Corp, the Connect S achieves high-fidelity sound through custom DSP tuning and premium drivers, while its retro-modern enclosure leverages proven industrial-design principles to resonate with design-conscious users Yanko Design. Battery-powered portability, simple maintenance, and cross-platform voice-assistant integration drove a 40 % faster time-to-market and an anticipated 6-month payback through strong pre-order uptake and positive press coverage Product Folks",
               "Client-Overview": "Stacia Corp, known for its innovative R&D in agriculture and industrial solutions, expanded into consumer electronics to diversify its portfolio and capitalize on the booming smart-home market projected to reach $150 billion by 2025 WIRED. With a mission to blend form and function, Stacia Corp tapped its mechanical and electronics divisions to create the Connect S, targeting tech-savvy and design-focused demographics seeking both nostalgia and modern convenience Harvard Business Review",
               "Project-Objective": [
@@ -1054,10 +1055,10 @@
               ]
             },
             {
-              "id": 2,
+              "id": 8,
               "title": "HydroGen: The Smart Bottle Revolutionizing Personalized Hydration",
               "mainDesc": "A smart bottle with dual temperature control (heating/cooling), Bluetooth-enabled hydration tracking, LED indicators, a 5000 mAh battery, and eco-friendly zero-CFC technology.",
-              "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp",              
+              "mainImageUrl": "/assets/ProjectPage/Hydrogen Bottle.webp",              
               "Executive-Summary": "The HydroGen is a next-generation smart bottle designed by Stacia Corp to transform the way individuals manage their hydration. Combining cutting-edge temperature control, smart connectivity, eco-conscious engineering, and human-centered design, HydroGen serves as a daily essential for modern, health-conscious users. With instant heating and cooling features, Bluetooth-enabled smart control, and a powerful 5000 mAh battery, HydroGen is built for performance, portability, and sustainability. This Project explores the journey from ideation to impact of this revolutionary device.",
               "Client-Overview": "Stacia Corp, a leading innovator in smart consumer products, envisioned the HydroGen to align with modern lifestyle demands—sustainability, personalization, and technological integration. Targeting health-focused individuals, fitness enthusiasts, and on-the-go professionals, HydroGen bridges the gap between hydration and intelligent living.",
               "Project-Objective": [
@@ -1170,10 +1171,10 @@
           "name": "IoT",
           "projects": [
             {
-              "id": 3,
+              "id": 9,
               "title": "Stacia Smart Furniture: Seamless Integration of AI, Heating, Charging, and Connectivity",
               "mainDesc": "Multifunctional furniture with embedded AI assistant (Alexa/Google SDKs), ceramic heater, Qi wireless charging, and motorized pop-up sockets, designed for modern living spaces",
-              "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp",
+              "mainImageUrl": "/assets/ProjectPage/Smart Furniture.webp",
               "Executive-Summary": "The global smart furniture market is projected to grow from USD 224 million in 2024 to USD 570.4 million by 2033 (CAGR 10.4 %) as IoT integration, wireless charging, and voice assistants become mainstream SkyQuestt. Stacia Smart Furniture leverages these trends—embedding a proprietary AI assistant with Alexa/Google SDKs, a silent ceramic heater, Qi wireless charging, and motorized pop-up sockets with LED illumination—to create a multifunctional home experience within a sleek, <1 m² footprint Univioturn0search6. Developed via a hybrid Stage-Gate and Agile process, the modular units achieve rapid time-to-market and are designed for high-temperature washdowns and low-maintenance operation, positioning Stacia Corp at the forefront of next-gen living solutions Designorate",
               "Client-Overview": "Stacia Corp, an innovation-driven R&D firm based in Chennai, has a strong track record in agricultural machinery, automation, and consumer electronics. In response to rapid urbanization and the growing demand for multifunctional living spaces, Stacia Corp expanded into smart-furniture solutions, aiming to blend technology seamlessly with interior design",
               "Project-Objective": [
@@ -1340,10 +1341,10 @@
               ]
             },
             {
-              "id": 4,
+              "id": 10,
               "title": "Stacia Child Tracking System",
               "mainDesc": "A wearable GPS/eSIM tracking device with geofencing, SOS alerts, finder lights, remote selfie capture, and multi-tag support for children, pets, or assets",
-              "mainImageUrl": "/assets/ProjectPage/Reverse Kettle.webp",
+              "mainImageUrl": "/assets/ProjectPage/RFID-Child-Tracking-Device.webp",
               "Executive-Summary": "The global kids GPS tracker market, valued at USD 3.2 billion in 2023, is growing at a 13.2 % CAGR through 2031, driven by rising parental safety concerns and IoT advances Verified Market Research. Stacia Corp’s Child Tracking Device combines real-time GPS/eSIM tracking, geofencing, SOS panic alerts, finder lights, remote selfie capture, and wireless charging into a compact, durable wearable—addressing gaps in connectivity, battery life, and usability found in legacy offerings GeotabKigen. Developed via a hybrid Stage-Gate and Agile process, the system delivers sub-second location updates, 24-hour battery runtime, and multi-tag support, yielding peace of mind for parents, versatile deployment across use-cases (pets, assets, elderly), and a projected six-month ROI through subscription services and hardware sales",
               "Client-Overview": "Stacia Corp, headquartered in Chennai, is an R&D leader in agri-industrial automation and consumer IoT. Recognizing a surge in demand for reliable child-tracking wearables—exemplified by Life360’s 24/7 SOS alerts and SafeWise’s top-rated devices—Stacia Corp initiated its own end-to-end solution to offer superior accuracy, durability, and feature breadth SafeWiseApple",
               "Project-Objective": [
@@ -1520,7 +1521,7 @@
           "name": "Pest Contol",
           "projects": [
             {
-              "id":1,
+              "id":11,
               "title": "ENVU Pest Control Management App",
               "mainDesc": "A platform connecting manufacturing, fabricating, and machining vendors with OEMs, facilitating seamless vendor selection, order tracking, and project management through a user-centric interface",
               "mainImageUrl": "/assets/ProjectPage/AI chatbot.webp",
@@ -1636,6 +1637,7 @@
           "name": "Agri-Tech",
           "projects": [
             {
+              "id":12,
               "title": "Edifai – Idhayam Suite: Digitizing Field Operations for Enhanced Efficiency",
               "mainDesc": "Creating an AI-powered customer support chatbot.A procurement ERP tool for IDHAYAM, linked to Indian agricultural markets, streamlining supply chain processes with data-driven insights and automation",
               "mainImageUrl": "/assets/ProjectPage/AI chatbot version.webp",
@@ -1758,7 +1760,7 @@
               ]
             },
             {
-              "project": {
+              "id":13,
                 "title": "Parikshan Website Revamp",
                 "executive_summary": {
                   "description": "The Parikshan website revamp project successfully transformed an outdated platform into a modern, user-centric digital experience. By addressing critical issues such as poor usability, lack of mobile responsiveness, and unstructured information architecture, the revamped site now offers improved navigation, accessibility, and performance. Built with scalability and compliance with WCAG standards, the new design enhances user engagement, streamlines service discovery, and supports Parikshan’s mission to deliver food safety, testing, and training services effectively. Phase 1 of the project was completed using Figma for design, delivering wireframes, a refined UI, and a cohesive brand style guide."
@@ -1919,9 +1921,9 @@
                     "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
                   }
                 ]
-              }
-            },
+              },
             {
+              
               "title": "Sharada Store Mobile App",
               "executive_summary": "The Sharada Store Mobile App is a user-centric e-commerce platform designed to bridge the gap between traditional homemade foods and modern digital shopping experiences. Crafted using Figma, the app offers a seamless interface that allows users to explore, order, and enjoy authentic regional delicacies with ease. The project was completed successfully, with the design repository available on Figma for further reference.",
               "client_overview": "Sharada Stores is an identity in Chennai West Mambalam preserving and promoting traditional food products. The store specializes in authentic, homemade, and regionally crafted food items, aiming to provide customers with a digital storefront where they can explore and purchase these delicacies.",

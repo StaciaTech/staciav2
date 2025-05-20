@@ -97,7 +97,11 @@
   transform: translateY(-6px); /* From Other Case Studies */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* From Other Case Studies */
 }
-
+.content p a {
+  display: inline;
+  text-decoration: underline;
+  color: blue; /* Adjust color as needed */
+}
 /* Card image styling */
 .suggestion-casestudy-card img {
   width: 100%;

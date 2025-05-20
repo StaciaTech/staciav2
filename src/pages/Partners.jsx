@@ -17,7 +17,7 @@ function Partners() {
         <SideBar />
       </div>
       <div>
-        <div className="partners-hero" >Partners</div>
+        <div className="partners-hero" >Partnership</div>
       </div>
       <div className="partners-container">
         <div className="partner-title">Our Partnership</div>
@@ -33,7 +33,7 @@ function Partners() {
             </div>
           ))}
         </div>
-        <div>
+        <div className="partners-detail-container">
           {data.partners.map((eachItem, i) => (
             <div key={i} className="partner-data-card">
               <div className="partner-data-card-content">

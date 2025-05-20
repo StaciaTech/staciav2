@@ -2052,7 +2052,9 @@ import MobileFooter from "../components/MobileFooter";
 import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
 import data from "../Data/SingleCaseStudy.json";
 import loading from "../assets/loading.png";
-import { IoMdClose } from "react-icons/io";
+import { IoMdClose } from "react-icons/io"; 
+
+
 import SuggestionCasestudys from "../components/ReUsableComp/SuggestionCasestudys";
 import SuggestionProjects from "../components/ReUsableComp/SuggestionProjects";
 import SuggestionProducts from "../components/ReUsableComp/SuggestionProducts";
@@ -2801,6 +2803,12 @@ function SingleCaseStudy() {
         </div>
         <SuggestionProducts />
         <SuggestionService />
+
+        <SuggestionProducts />
+        <SuggestionService />
+   
+    
+
 
         {/* Other Case Studies Section */}
        <SuggestionCasestudys/>

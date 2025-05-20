@@ -29,6 +29,7 @@ import MediaKit from "./pages/MediaKit";
 import Partners from "./pages/Partners";
 
 import Template6 from "./Templets/Template6";
+import Template5 from "./Templets/Template5";
 
 import CompetitionPage from "./pages/Competition";
 import CertificateView from "./components/CertificateView";
@@ -99,9 +100,13 @@ function App() {
           path="/project/:department/:category"
           element={<ProjectPage />}
         />
-        <Route
+        {/* <Route
           path="/project/:department/:category/:title"
           element={<SingleProject />}
+        /> */}
+        <Route
+          path="/project/:department/:category/:title"
+          element={< Template5/>}
         />
         {/* <Route path="/project/:department/:title" element={<SingleProject />} /> */}
 

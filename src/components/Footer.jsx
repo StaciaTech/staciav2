@@ -231,7 +231,7 @@ function Footer() {
             navigate("/sitemap");
             window.scrollTo(0, 0);
           }}
-          style={{ cursor: "pointer" }}
+          style={{ color: "black", cursor: "pointer", opacity: "0.6" }}
         >
           Sitemap
         </div>
@@ -248,6 +248,19 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           > */}
+          
+           <div
+            style={{
+              width: "10px",
+              height: "10px",
+              backgroundColor: "#D9D9D9",
+              borderRadius: "50%",
+              marginLeft: "35px",
+              marginRight: "35px",
+            }}
+          />
+          
+          
           <div
             style={{
               cursor: "pointer",
