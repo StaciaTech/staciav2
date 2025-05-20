@@ -168,6 +168,7 @@ function CareerPage() {
                 display: "flex",
                 justifyContent: "space-between",
                 gap: "1rem",
+                
               }}
             >
               <div className="img-container2">
@@ -272,7 +273,7 @@ const HorizontalScrollContainer = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-55%"]);
   return (
     <div ref={targetRef} style={{ height: "300vh", position: "relative" }}>
       <div

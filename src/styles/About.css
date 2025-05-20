@@ -499,6 +499,10 @@
   font-family: EuclidSemibold;
   transition: all 0.3s;
 }
+.about-team-marquee-desk{
+  padding: 0 0.5rem;
+
+}
 
 .about-section9-item:hover {
   background: #000088;
@@ -563,10 +567,13 @@
 .about-team-marquee {
   display: flex;
   flex-grow: 1;
+  margin: 0;
   align-items: center;
   /* overflow: hidden; */
   white-space: nowrap;
   animation: scroll 20s linear infinite;
+  gap: 1rem;
+  
 }
 
 .about-team-marquee:hover {

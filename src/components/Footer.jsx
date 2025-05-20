@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import Contact from "./Contact";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+// import { Fa```jsx
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import Modal from "react-modal";
+
 function Footer() {
   const navigate = useNavigate();
   const [showContactForm, setShowContactForm] = useState(false);
@@ -35,21 +37,16 @@ function Footer() {
       borderRadius: "1rem",
       padding: "3rem 5rem",
       boxSizing: "border-box",
+      
     },
   };
 
-
   const HandleClick = () => {
-    navigate("/Privacy-Policy")
-  }
-
+    navigate("/Privacy-Policy");
+  };
 
   return (
     <div className="footer-contaier">
-      {/* <div style={{ display: "flex", alignItems: "center" }}>
-        <img src={ContactArrow} alt="" />
-        <span style={{ color: "#6B6084", marginLeft: "20px" }}>Contact</span>
-      </div> */}
       <div
         style={{
           display: "flex",
@@ -106,7 +103,6 @@ function Footer() {
             +91-9363034150
           </div>
         </div>
-        {/* <div className="footer-nav-tabs"> */}
         <div>
           <div>Company</div>
           <div
@@ -207,15 +203,6 @@ function Footer() {
                 <br />
                 Guindy, Chennai - 32, Tamil Nadu
               </div>
-              {/* <div
-                style={{ marginTop: "10px", marginBottom: "10px" }}
-                className="footer-grey-tabs pointer test-seclection-blue"
-              >
-                Thiru Vi Ka Industrial Estate, SIDCO Industrial
-              </div>
-              <div className="footer-grey-tabs-child test-seclection-blue">
-                Guindy, Chennai - 32, Tamil Nadu
-              </div> */}
             </a>
           </div>
         </div>
@@ -225,65 +212,45 @@ function Footer() {
           ©Copyright Stacia<span style={{ color: "#0047FF" }}>Corp</span>. All
           Rights Reserved
         </div>
-        <div
-          className="sitemap"
-          onClick={() => {
-            navigate("/sitemap");
-            window.scrollTo(0, 0);
-          }}
-          style={{ color: "black", cursor: "pointer", opacity: "0.6" }}
-        >
-          Sitemap
-        </div>
+
         <div
           style={{
             display: "flex",
             alignItems: "center",
             opacity: "0.6",
-            width: "35%",
+            width: "40%",
+            textDecoration: "none",
           }}
         >
-          {/* <a
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-          > */}
-          
-           <div
-            style={{
-              width: "10px",
-              height: "10px",
-              backgroundColor: "#D9D9D9",
-              borderRadius: "50%",
-              marginLeft: "35px",
-              marginRight: "35px",
+          <div
+            className="sitemap"
+            onClick={() => {
+              navigate("/sitemap");
+              window.scrollTo(0, 0);
             }}
-          />
-          
-          
+            style={{
+              color: "black",
+              cursor: "pointer",
+              padding: "0rem 1.2rem",
+            }}
+          >
+            Sitemap
+          </div>
+
           <div
             style={{
               cursor: "pointer",
               color: "black",
+              padding:"0rem 1.2rem"
+              
             }}
           >
             Terms of Service
           </div>
-          {/* </a> */}
-          <div
-            style={{
-              width: "10px",
-              height: "10px",
-              backgroundColor: "#D9D9D9",
-              borderRadius: "50%",
-              marginLeft: "35px",
-              marginRight: "35px",
-            }}
-          />
 
           <div
             onClick={() => navigate("/Privacy-Policy")}
-            style={{ cursor: "pointer", color: "black" }}
+            style={{ cursor: "pointer", color: "black",padding:"0rem 1rem" }}
           >
             Privacy policy
           </div>
@@ -298,7 +265,6 @@ function Footer() {
               <div className="footer-icon-container">
                 <FaInstagram className="footer-insta-icon" />
               </div>
-              {/* <img src={InstaIcon} alt="" /> */}
             </a>
           </div>
           <div style={{ marginLeft: "20px", marginRight: "20px" }}>
@@ -334,7 +300,7 @@ function Footer() {
             </a>
           </div>
         </div>
-      </div>{" "}
+      </div>
       <Modal
         style={ModelStyles}
         isOpen={showContactForm}
@@ -342,7 +308,6 @@ function Footer() {
       >
         <Contact closeHandle={closeForm} />
       </Modal>
-      {/* {showContactForm && <Contact closeHandle={closeForm} />} */}
     </div>
   );
 }

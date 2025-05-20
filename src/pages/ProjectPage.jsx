@@ -8,7 +8,7 @@ import ReUsableArticle2 from "../components/ReUsableComp/ReUsableArticle2";
 import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
-import ProjectsData from "../Data/ProjectsData.json";
+import ProjectsData from "../Data/ProjectData2.json";
 
 function ProjectPage() {
   const navigate = useNavigate();
@@ -58,8 +58,7 @@ function ProjectPage() {
       const section = document.getElementById(activeDepartment);
       if (section) {
         const yOffset = -80;
-        const y =
-          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
@@ -103,8 +102,7 @@ function ProjectPage() {
     const section = document.getElementById(departmentName);
     if (section) {
       const yOffset = -80;
-      const y =
-        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
 
       scrollTimeoutRef.current = setTimeout(() => {
@@ -215,8 +213,9 @@ function ProjectPage() {
                               : ""
                           }`}
                           onClick={() =>
-                            handleCategoryChange(eachItem.name, category)
+                            handleCategoryChange(eachItem.name, category)                            
                           }
+                          
                         >
                           {category}
                         </button>
@@ -229,6 +228,7 @@ function ProjectPage() {
                         onProjectClick={(project) =>
                           handleProjectClick(project, eachItem.name)
                         }
+                        
                       />
                     ) : (
                       <p>No projects available for this category.</p>
@@ -265,22 +265,17 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
     <div className="service-page-dept-container">
       <div
         className={`service-page-main-dots ${
-          eachItem.name === activeDepartment
-            ? "service-page-main-dots-active"
-            : ""
+          eachItem.name === activeDepartment ? "service-page-main-dots-active" : ""
         }`}
         onClick={() => setActiveDepartment(eachItem.name)}
         onMouseOver={() => setShowDept(true)}
         onMouseOut={() => setShowDept(false)}
       ></div>
-      {showDept && (
-        <div className="service-page-dept-name">{eachItem.name}</div>
-      )}
+      {showDept && <div className="service-page-dept-name">{eachItem.name}</div>}
     </div>
   );
 };
 
 export default ProjectPage;
-
 
 

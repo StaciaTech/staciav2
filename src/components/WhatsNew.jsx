@@ -107,7 +107,13 @@ export default function WhatsNew({ handleClose }) {
               <div
                 key={i}
                 className="whats-new-grid-item"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  navigate("/competition");
+                  handleClose();
+                }}
                 style={{
+                  cursor:'pointer',
                   backgroundImage: `url(${
                     eachItem.imageUrl || eachItem.mainImageUrl
                   })`,

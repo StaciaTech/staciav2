@@ -155,12 +155,7 @@
             }
           ]
         },
-        {
-          "id": "category-002",
-          "name": "Industrial Automation (SPM)",
-          "description": "Drive innovation in the automotive industry with our custom-built SPMs. Designed for precision and reliability, our machines cater to various applications, including assembly, testing, and component manufacturing. Leveraging cutting-edge technology, we ensure streamlined workflows and high-quality output. Partner with us for tailored solutions that meet the rigorous demands of the automotive sector, enhancing both efficiency and profitability",
-          "imageUrl": "/assets/ProductPage/Industrial automation.webp"
-        },
+
         {
           "id": "category-003",
           "name": "Test Rig",
@@ -223,7 +218,7 @@
               "domainName": "Reciprocating Arm",
               "description": "A reciprocating machine equipped with a brake gear motor, for horizontal and vertical moving features, allows for consistent, even coverage while maintaining control and stability. Ideal for industrial applications like painting, spraying, and coating industries",
               "imageUrl": "/assets/ProductPage/VERTICAL RECIPROCATOR MAIN VIEW.webp",
-              "briefDetails":"Reciprocating painting machines automate the application of coatings, ensuring uniform coverage and high-quality finishes. They improve efficiency by minimizing overspray and high-volume production,",
+              "briefDetails": "Reciprocating painting machines automate the application of coatings, ensuring uniform coverage and high-quality finishes. They improve efficiency by minimizing overspray and high-volume production,",
               "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/VERTICAL DRIVE PNG.webp",
@@ -238,12 +233,12 @@
               "domainName": "Reciprocating Arm",
               "description": "The X-axis serves as the foundation for configuring multi-axis systems and is utilized across various automation levels of a coating line. Its overall stability and high load capacity contribute to reliable operation and flexible application arrangements of the associated components",
               "imageUrl": "/assets/ProductPage/horizontal full view.webp",
-              "briefDetails":"Horizontal reciprocators are utilized in various applications, including paint spraying, powder coating, mirror coating, and even in some machine tools where the workpiece moves horizontally for grinding or machining",
-              "productDetails":[
+              "briefDetails": "Horizontal reciprocators are utilized in various applications, including paint spraying, powder coating, mirror coating, and even in some machine tools where the workpiece moves horizontally for grinding or machining",
+              "productDetails": [
                 {
-                 "imageUrl": "/assets/ProductPage/horizontal bed.webp",
+                  "imageUrl": "/assets/ProductPage/horizontal bed.webp",
                   "title": "Horizontal Bed Drive",
-                  "description": "The axis automatically position a vertical reciprocator to the object, adapting the gun to the object's width, Free axis programming,storable programming, and technology are integrated in the control" 
+                  "description": "The axis automatically position a vertical reciprocator to the object, adapting the gun to the object's width, Free axis programming,storable programming, and technology are integrated in the control"
                 }
               ]
             },
@@ -253,13 +248,13 @@
               "domainName": "Reciprocating Arm",
               "description": "The reciprocator moves multiple lines synchronously with the conveying motion of the objects. It is used for inside coating and other difficult applications",
               "imageUrl": "/assets/ProductPage/SYNCHRONIZE FULL VIEW.webp",
-              "briefDetails":"The process typically involves using a synchroscope to monitor the phase and frequency   difference   between   the generator and the grid, and then adjusting the generator's speed until they match Enables   maximum   contour   coating, increases   productivity,   and   reduces process times, even at high line speeds",
-              "productDetails":[
+              "briefDetails": "The process typically involves using a synchroscope to monitor the phase and frequency   difference   between   the generator and the grid, and then adjusting the generator's speed until they match Enables   maximum   contour   coating, increases   productivity,   and   reduces process times, even at high line speeds",
+              "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/VERTICAL ARRANGMENT.webp",
-                   "title": "Vertical arrangement",
-                   "description": "The axis is synchronized with the movement of the conveyor. The axis is the basis for setting up multi-axis systems and is used in various automation levels of a coating system" 
-                 }
+                  "title": "Vertical arrangement",
+                  "description": "The axis is synchronized with the movement of the conveyor. The axis is the basis for setting up multi-axis systems and is used in various automation levels of a coating system"
+                }
               ]
             }
           ]
@@ -276,8 +271,8 @@
               "domainName": "Actuator",
               "description": "Electric actuators convert electrical energy into mechanical motion using an electric motor and various mechanical components. This process involves a motor's rotational motion being transformed into either linear or rotary motion, depending on the actuator's design. The converted mechanical energy then powers the desired task,such as controlling valves, moving robotic arms, or adjusting various mechanisms",
               "imageUrl": "/assets/ProductPage/actuator png.webp",
-              "briefDetails":"electric actuators are versatile devices that play a crucial role in modern automation and control systems by converting electrical energy into mechanical motion, enabling precise and efficient control of various industrial processes and machinery",
-              "productDetails":[
+              "briefDetails": "electric actuators are versatile devices that play a crucial role in modern automation and control systems by converting electrical energy into mechanical motion, enabling precise and efficient control of various industrial processes and machinery",
+              "productDetails": [
                 {
                   "imageUrl": "/assets/ProductPage/electric actuator main view.webp",
                   "title": "Electrical motor drive",
@@ -461,7 +456,7 @@
               ]
             }
           ]
-        }         
+        }
       ]
     },
     {
@@ -480,17 +475,17 @@
               "domainName": "Stellar",
               "description": "Stello is an efficient application designed to streamline the collection of client requirements through a structured Business Requirement Document (BRD). Once the BRD is finalized, the platform enables the rapid development of customized websites, delivered within 48 hours. Engineered for operational efficiency and precision, Stello enhances communication between clients and agents, ensuring a smooth and effective transition from planning to execution. It serves as a reliable bridge between requirement gathering and timely website deployment",
               "imageUrl": "/assets/ProductPage/Default.webp",
-              "briefDetails":"Stello simplifies the process of creating websites by obtaining client needs through a formal Business Requirement Document (BRD). Capturing detailed inputs from clients, agents use these inputs as a basis for creating bespoke, high-quality websites efficiently and accurately. The platform ensures open communication, eliminates confusion, and supports alignment of client expectations with end-results. By integrating requirement gathering with action seamlessly, Stello provides an enhanced, customer-focused process that is built around reliability, responsiveness, and professional standards",
-              "productDetails":[
+              "briefDetails": "Stello simplifies the process of creating websites by obtaining client needs through a formal Business Requirement Document (BRD). Capturing detailed inputs from clients, agents use these inputs as a basis for creating bespoke, high-quality websites efficiently and accurately. The platform ensures open communication, eliminates confusion, and supports alignment of client expectations with end-results. By integrating requirement gathering with action seamlessly, Stello provides an enhanced, customer-focused process that is built around reliability, responsiveness, and professional standards",
+              "productDetails": [
                 {
                   "imageUrl": "",
                   "title": "Homepage",
-                  "description": "The Stello homepage serves as a gateway to a streamlined website creation experience, guiding users through requirement collection and project initiation. With a clean, intuitive interface, it allows agents to quickly capture client needs using the BRD framework. Core features and progress indicators are easily accessible, ensuring users remain informed and engaged throughout the process. The homepage reflects Stello’s commitment to clarity, speed, and professionalism, providing a seamless entry point for efficient, goal-driven website development."                  
+                  "description": "The Stello homepage serves as a gateway to a streamlined website creation experience, guiding users through requirement collection and project initiation. With a clean, intuitive interface, it allows agents to quickly capture client needs using the BRD framework. Core features and progress indicators are easily accessible, ensuring users remain informed and engaged throughout the process. The homepage reflects Stello’s commitment to clarity, speed, and professionalism, providing a seamless entry point for efficient, goal-driven website development."
                 },
                 {
                   "imageUrl": "",
                   "title": "BRD (Business Requirement Document)",
-                  "description": "The BRD (Business Requirement Document) page is the core of Stello’s requirement-gathering process. It offers a structured, user-friendly interface where agents can input detailed client specifications across key categories such as objectives, features, design preferences, and functionality. The page ensures that all essential information is captured accurately, minimizing ambiguity and aligning expectations. With guided prompts and validation checks, the BRD page enables efficient, comprehensive data collection that forms the foundation for successful and timely website development."                  
+                  "description": "The BRD (Business Requirement Document) page is the core of Stello’s requirement-gathering process. It offers a structured, user-friendly interface where agents can input detailed client specifications across key categories such as objectives, features, design preferences, and functionality. The page ensures that all essential information is captured accurately, minimizing ambiguity and aligning expectations. With guided prompts and validation checks, the BRD page enables efficient, comprehensive data collection that forms the foundation for successful and timely website development."
                 }
               ]
             },
@@ -500,12 +495,12 @@
               "domainName": "Stellar",
               "description": "Agentcy is a web-based platform offering audit and consulting solutions to improve business workflows. It begins by analyzing a company’s current processes and identifying inefficiencies through detailed audit reports.Based on the findings, Agentcy provides customized,actionable solutions to streamline operations, reducewaste, and enhance productivity. From optimizing coordination to automating tasks, Agentcy empowers businesses to implement practical improvements. It provides a data-driven foundation for informed decision-making and continuous improvement across all levels of the organization",
               "imageUrl": "/assets/ProductPage/Default.webp",
-              "briefDetails":"Agentcy provides end-to-end workflow improvement through audit-led insights and customized consulting. Having performed an exhaustive analysis of a business, it presents elaborate reports identifying areas of inefficiency and scope for improvement. The platform then furnishes actionable, data-led recommendations—process automation to team redesign—that align with business objectives. Agentcy not just suggests improvements but assists in implementing them, thus enabling businesses to attain measurable levels of efficiency, decision-making, and sustainable growth",
-              "productDetails":[
+              "briefDetails": "Agentcy provides end-to-end workflow improvement through audit-led insights and customized consulting. Having performed an exhaustive analysis of a business, it presents elaborate reports identifying areas of inefficiency and scope for improvement. The platform then furnishes actionable, data-led recommendations—process automation to team redesign—that align with business objectives. Agentcy not just suggests improvements but assists in implementing them, thus enabling businesses to attain measurable levels of efficiency, decision-making, and sustainable growth",
+              "productDetails": [
                 {
                   "imageUrl": "",
                   "title": "Homepage",
-                  "description": "The Agentcy introduces a modern platform dedicated to transforming business processes through AI-driven solutions. It highlights the integration of advanced technologies aimed at enhancing operational efficiency and decision-making. The platform emphasizes reengineering existing workflows to make them more agile and responsive to market dynamics. With a user-centric design, Agentcy ensures intuitive navigation, allowing users to leverage its features without a steep learning curve.Scalability is a key aspect, accommodating businesses of various sizes and evolving needs. Clear calls to action guide visitors to explore the platform's capabilities further or initiate contact for personalized solutions."                  
+                  "description": "The Agentcy introduces a modern platform dedicated to transforming business processes through AI-driven solutions. It highlights the integration of advanced technologies aimed at enhancing operational efficiency and decision-making. The platform emphasizes reengineering existing workflows to make them more agile and responsive to market dynamics. With a user-centric design, Agentcy ensures intuitive navigation, allowing users to leverage its features without a steep learning curve.Scalability is a key aspect, accommodating businesses of various sizes and evolving needs. Clear calls to action guide visitors to explore the platform's capabilities further or initiate contact for personalized solutions."
                 }
               ]
             }

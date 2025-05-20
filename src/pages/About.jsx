@@ -222,7 +222,7 @@ function About() {
                   <p className="test-seclection-blue">people</p>
                 </div>
                 <div className="about-section1-left-title-item">
-                  <div className="test-seclection-blue">150+</div>
+                  <div className="test-seclection-blue">200+</div>
                   <p className="test-seclection-blue">projects</p>
                 </div>
                 <div className="about-section1-left-title-item">
@@ -268,7 +268,21 @@ function About() {
               A Story of Passion, creativity and innovation
             </div>
             <p className="about-section2-text test-seclection-blue">
-              Stacia Corp is a MSME, and Government of India recognised Start-up created as a R&D centre aimed to solve engineering problems for industries of various genres. Stacia Corp provides efficient and effective solutions in the form of engineering design or innovative ideas. We also specialise in providing niche, customizable solutions to client. Stacia has successfully executed a variety of projects in different verticals. We have often served as a client's one- stop-shop throughout the life cycle of product design & development. This approach helps the client engage with Stacia Corp's expertise from plan to production. Through this approach Stacia collaborates and handholds the client in identifying and solving roadblocks in the business process. We have demonstrated cutting-edge expertise in providing solutions in launching new products. In a short span we have forayed into several such product development for our clients.
+              Stacia Corp is a MSME, and Government of India recognised Start-up
+              created as a R&D centre aimed to solve engineering problems for
+              industries of various genres. Stacia Corp provides efficient and
+              effective solutions in the form of engineering design or
+              innovative ideas. We also specialise in providing niche,
+              customizable solutions to client. Stacia has successfully executed
+              a variety of projects in different verticals. We have often served
+              as a client's one- stop-shop throughout the life cycle of product
+              design & development. This approach helps the client engage with
+              Stacia Corp's expertise from plan to production. Through this
+              approach Stacia collaborates and handholds the client in
+              identifying and solving roadblocks in the business process. We
+              have demonstrated cutting-edge expertise in providing solutions in
+              launching new products. In a short span we have forayed into
+              several such product development for our clients.
             </p>
           </div>
           <div className="about-section2-img-container">
@@ -282,9 +296,11 @@ function About() {
           <div className="about-section3-dot-container">
             {staciaHistory?.map((a, i) => (
               <div
-                key={i}               
-                className={`about-section3-dots ${activeSection===i ?'about-active-dot':""}`}
-                onClick={()=>scrollToSection(i)}
+                key={i}
+                className={`about-section3-dots ${
+                  activeSection === i ? "about-active-dot" : ""
+                }`}
+                onClick={() => scrollToSection(i)}
               ></div>
             ))}
           </div>
@@ -304,7 +320,7 @@ function About() {
                             {eachAch.title}
                           </div>
                           <p className="about-section3-achivment-des test-seclection-blue">
-                            {eachAch.des} 
+                            {eachAch.des}
                           </p>
                         </div>
                       ))}
@@ -410,19 +426,21 @@ function About() {
             Why Stacia?
           </div>
           <p className="about-whyus-des test-seclection-blue">
-            The name "Stacia" is rich in meaning—derived from Greek, it signifies
-            "resurrection," while in old Italian, it denotes "smart and
-            intelligent." This perfectly aligns with our philosophy of providing
-            smart, intelligent solutions to rejuvenate and transform business
-            prospects. Our logo reflects this ethos, combining colors that
-            symbolize creative thinking, trust, and reliability—values that are
-            at the core of everything we do.
+            The name "Stacia" is rich in meaning—derived from Greek, it
+            signifies "resurrection," while in old Italian, it denotes "smart
+            and intelligent." This perfectly aligns with our philosophy of
+            providing smart, intelligent solutions to rejuvenate and transform
+            business prospects. Our logo reflects this ethos, combining colors
+            that symbolize creative thinking, trust, and reliability—values that
+            are at the core of everything we do.
           </p>
           <div className="about-whyus-grid">
             {whyus?.map((eachItem, i) => {
               const givenIndex = i + 1;
               const doubledigit =
-                givenIndex.toString().length > 1 ? givenIndex : `0${givenIndex}`;
+                givenIndex.toString().length > 1
+                  ? givenIndex
+                  : `0${givenIndex}`;
 
               return (
                 <div key={i}>
@@ -468,8 +486,8 @@ function About() {
         </div>
         <div className="about-section8-container" id="our-expertise">
           <Suspense fallback={<div>Loading carousel....</div>}>
-          <AboutCarousel />
-          </Suspense> 
+            <AboutCarousel />
+          </Suspense>
         </div>
         <div className="about-section9-container" id="industries-covered">
           <div className="about-section9-title test-seclection-blue">
@@ -487,10 +505,7 @@ function About() {
                 <div key={i} className="about-section9-item">
                   <div className="about-section9-icon-contaienr">
                     {/* <PiPottedPlant className="about-section9-icon" /> */}
-                    <div className="about-section9-icon">
-                      {eachItem.img}
-                    </div>
-
+                    <div className="about-section9-icon">{eachItem.img}</div>
                   </div>
                   <div className="about-section9-item-name test-seclection-blue">
                     {eachItem.title}
@@ -533,7 +548,7 @@ function About() {
           </div>
         </div>
         <Suspense fallback={<div>Loading....</div>}>
-        <ClientComponent />
+          <ClientComponent />
         </Suspense>
         <div className="about-section10-container" id="our-leadership">
           <div className="about-section-title test-seclection-blue">
