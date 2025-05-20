@@ -15,7 +15,7 @@
               "title": "Onedril (SSM)",
               "domainName": "Agri and Food Processing SPM",
               "description": "OneDril is a manual, portable seed-sowing machine designed for precise and efficient planting. Capable of handling seeds between 2 to 25mm, it follows the line-sowing principle for uniform crop growth. Ideal for micro and large seeds alike, OneDril’s ergonomic design ensures convenience and accuracy. It empowers farmers with a cost-effective, versatile solution for boosting agricultural productivity.",
-              "imageUrl": "/assets/ProductPage/onedrillssm.webp",
+              "imageUrl": "/assets/ProductPage/update-onedrill.webp",
               "briefDetails": "Onedril is a manually operated, portable seed sowing machine designed specifically for micro seeds but capable of handling seeds ranging from 2mm to 25mm. Built on the principle of line sowing, it ensures precise seed placement, optimal spacing, and improved germination. Its compact and ergonomic design makes it easy to carry and operate across various terrains, especially suitable for small to mid-sized farms. Onedril enhances sowing efficiency, reduces manual labor, and supports sustainable farming practices. It’s ideal for crops like millet, mustard, sunflower, and beans, making it a versatile tool for modern-day farmers seeking affordable, effective sowing solutions.",
               "productDetails": [
                 {
@@ -222,11 +222,11 @@
               "title": "Vertical Reciprocator",
               "domainName": "Reciprocating Arm",
               "description": "A reciprocating machine equipped with a brake gear motor, for horizontal and vertical moving features, allows for consistent, even coverage while maintaining control and stability. Ideal for industrial applications like painting, spraying, and coating industries",
-              "imageUrl": "/assets/ProductPage/Default.webp",
+              "imageUrl": "/assets/ProductPage/VERTICAL RECIPROCATOR MAIN VIEW.webp",
               "briefDetails":"Reciprocating painting machines automate the application of coatings, ensuring uniform coverage and high-quality finishes. They improve efficiency by minimizing overspray and high-volume production,",
               "productDetails": [
                 {
-                  "imageUrl": "",
+                  "imageUrl": "/assets/ProductPage/VERTICAL DRIVE PNG.webp",
                   "title": "Belt drive",
                   "description": "The reciprocator is designed for short or long stroke operation. The guns can be mounted in a horizontal or vertical arrangement.The heavy load version of Axis is capable of carrying up to 100 kg.  A high number of guns with extreme precision and high reliability.The working range can be customizable from 3 to 10. Foot from the floor"
                 }
@@ -237,11 +237,11 @@
               "title": "Horizontal Reciprocator",
               "domainName": "Reciprocating Arm",
               "description": "The X-axis serves as the foundation for configuring multi-axis systems and is utilized across various automation levels of a coating line. Its overall stability and high load capacity contribute to reliable operation and flexible application arrangements of the associated components",
-              "imageUrl": "/assets/ProductPage/Default.webp",
+              "imageUrl": "/assets/ProductPage/horizontal full view.webp",
               "briefDetails":"Horizontal reciprocators are utilized in various applications, including paint spraying, powder coating, mirror coating, and even in some machine tools where the workpiece moves horizontally for grinding or machining",
               "productDetails":[
                 {
-                 "imageUrl": "",
+                 "imageUrl": "/assets/ProductPage/horizontal bed.webp",
                   "title": "Horizontal Bed Drive",
                   "description": "The axis automatically position a vertical reciprocator to the object, adapting the gun to the object's width, Free axis programming,storable programming, and technology are integrated in the control" 
                 }
@@ -252,11 +252,11 @@
               "title": "Synchronizing Reciprocator",
               "domainName": "Reciprocating Arm",
               "description": "The reciprocator moves multiple lines synchronously with the conveying motion of the objects. It is used for inside coating and other difficult applications",
-              "imageUrl": "/assets/ProductPage/Default.webp",
+              "imageUrl": "/assets/ProductPage/SYNCHRONIZE FULL VIEW.webp",
               "briefDetails":"The process typically involves using a synchroscope to monitor the phase and frequency   difference   between   the generator and the grid, and then adjusting the generator's speed until they match Enables   maximum   contour   coating, increases   productivity,   and   reduces process times, even at high line speeds",
               "productDetails":[
                 {
-                  "imageUrl": "",
+                  "imageUrl": "/assets/ProductPage/VERTICAL ARRANGMENT.webp",
                    "title": "Vertical arrangement",
                    "description": "The axis is synchronized with the movement of the conveyor. The axis is the basis for setting up multi-axis systems and is used in various automation levels of a coating system" 
                  }
@@ -268,18 +268,18 @@
           "id": "category-005",
           "name": "Actuator",
           "description": "Power your operations with our high-performance Actuators. Designed for precision and efficiency, our actuators deliver smooth and controlled motion across a variety of applications. From industrial automation to heavy machinery, we offer a range of electric, hydraulic, and pneumatic actuators to suit your needs. Experience enhanced productivity and reliability with our innovative actuator solutions",
-          "imageUrl": "/assets/Actuator.webp",
+          "imageUrl": "/assets/ProductPage/electric actuator main view.webp",
           "products": [
             {
               "id": "product-001",
               "title": "Electrical Actuator",
               "domainName": "Actuator",
               "description": "Electric actuators convert electrical energy into mechanical motion using an electric motor and various mechanical components. This process involves a motor's rotational motion being transformed into either linear or rotary motion, depending on the actuator's design. The converted mechanical energy then powers the desired task,such as controlling valves, moving robotic arms, or adjusting various mechanisms",
-              "imageUrl": "/assets/ProductPage/Default.webp",
+              "imageUrl": "/assets/ProductPage/actuator png.webp",
               "briefDetails":"electric actuators are versatile devices that play a crucial role in modern automation and control systems by converting electrical energy into mechanical motion, enabling precise and efficient control of various industrial processes and machinery",
               "productDetails":[
                 {
-                  "imageUrl": "",
+                  "imageUrl": "/assets/ProductPage/electric actuator main view.webp",
                   "title": "Electrical motor drive",
                   "description": "An electric actuator is a linear motion device that utilizes a rod extending and retracting from a housing to generate linear motion, allowing it to push or pull objects in a linear direction"
                 }

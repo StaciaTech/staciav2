@@ -408,6 +408,8 @@ import { useParams } from "react-router-dom";
 import { motion, useTransform, useScroll } from "framer-motion";
 import servicesData from "../../Data/Services.json";
 
+import SuggestionService from "../ReUsableComp/SuggestionService";
+
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
 const SideBar = lazy(() => import("../SideBar"));
@@ -493,6 +495,9 @@ function EachServicePage() {
           <Suspense fallback={<div>Loading FAQs...</div>}>
             <FAQComp />
           </Suspense>
+        </div>
+        <div>
+          <SuggestionService />
         </div>
         <div>
           <Suspense fallback={<div>Loading Footer...</div>}>

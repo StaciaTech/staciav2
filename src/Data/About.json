@@ -187,7 +187,7 @@
       "fullName": "Dilip Kumar J",
       "gender": "Male",
       "id": "67345ab77a970b308b574eab",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "imageUrl": "assets/Team/Dilip.webp",
       "lastName": "Kumar J",
       "outlook": "Dilip crafts engaging visual experiences, blending creativity with functionality. He focuses on user-centered design to enhance brand identity, usability, and digital interface aesthetics across platforms and media.",
       "_id": "67345ab77a970b308b574eab"
@@ -199,7 +199,7 @@
       "fullName": "Vikram Varma V",
       "gender": "Male",
       "id": "67345b237a970b308b574ead",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "imageUrl": "assets/Team/Vikram.webp",
       "lastName": "Varma V",
       "outlook": "Vikram develops interactive user interfaces using modern web technologies. He collaborates closely with designers and backend teams to deliver seamless, responsive, and performance-optimized web applications and prototypes",
       "_id": "67345b237a970b308b574ead"
@@ -212,7 +212,7 @@
       "fullName": "Abdul Raheem M",
       "gender": "Male",
       "id": "67345cd77a970b308b574eb0",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "imageUrl": "assets/Team/Abdul.webp",
       "lastName": "Raheem M",
       "outlook": "Abdul designs and tests embedded systems for innovative electronics solutions. His role includes circuit design, firmware development, and integrating hardware-software systems for advanced technology applications.",
       "_id": "67345cd77a970b308b574eb0"
@@ -223,7 +223,7 @@
       "fullName": "Abrar Ahamed M ",
       "gender": "Male",
       "id": "67345b5d7a970b308b574eae",
-      "imageUrl": "https://img.freepik.com/premium-photo/cartoon-boy-jumping-air-with-backpack-backpack-generative-ai_902639-100855.jpg",
+      "imageUrl": "assets/Team/Abu.webp",
       "lastName": "Ahamed M",
       "outlook": " Abrar supports strategic procurement by analyzing market trends, managing vendor relationships, and optimizing sourcing strategies—including global sourcing to ensure cost-effective, high-quality procurement aligned with organizational goals.",
       "_id": "67345b5d7a970b308b574eae"
@@ -234,7 +234,7 @@
       "fullName": "Divya U",
       "gender": "Female",
       "id": "67345efd7a970b308b574eb1",
-      "imageUrl": "https://img.freepik.com/premium-photo/3d-cartoon-cute-girl_995235-7.jpg",
+      "imageUrl": "assets/Team/Divya.webp",
       "lastName": "U",
       "outlook": "Divya handles end-to-end HR operations including talent sourcing, onboarding, payroll, employee engagement, feedback processes, and wellness programs—fostering a productive, inclusive, and growth-oriented workplace culture.",
       "_id": "67345efd7a970b308b574eb1"
@@ -267,31 +267,31 @@
     }
   ],
   "images": [
-    "assets/PartnerPage/partner1.webp",
-    "assets/PartnerPage/partner2.webp",
-    "assets/PartnerPage/partner1.webp",
-    "assets/PartnerPage/partner1.webp"
+    "assets/PartnerPage/parikshan.webp",
+    "assets/PartnerPage/digiguroo.webp",
+    "assets/PartnerPage/elleone.webp"
+    
   ],
   "partners": [
     {
-      "title": "Partner 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Parikshan",
+      "description": "PARIKSHAN is a one-point solution for all food safety needs. Lab services, Hygiene monitoring team, FSSAI compliance score cards, ISO 22000/HACCP certification guidance and various levels of Food Safety Training all under one roof. NABL accredited food testing Laboratory",
       "image": {
-        "imageUrl": "assets/PartnerPage/partner1.webp"
+        "imageUrl": "assets/PartnerPage/parikshan.webp"
       }
     },
     {
-      "title": "Partner 2",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Digiguroo",
+      "description": "Digi Guru is a team of skilled Professional working together to deliver high-quality services in Digital Marketing, SMM, SEO, Logo Design, Website Content & Design, IT Recruitment, and more. With years of experience and a collaborative approach, we ensure creative, reliable, and client-focused solutions for every project.",
       "image": {
-        "imageUrl": "assets/PartnerPage/partner2.webp"
+        "imageUrl": "assets/PartnerPage/digiguroo.webp"
       }
     },
     {
-      "title": "Partner 3",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Ello one",
+      "description": "Ello one specialize in AI, ML, software development, and advanced engineering to deliver innovative solutions that enhance efficiency, automate processes, and power intelligent systems. Their expertise drives the evolution of product ecosystems, enabling businesses to stay ahead in a digital-first world.",
       "image": {
-        "imageUrl": "assets/PartnerPage/partner1.webp"
+        "imageUrl": "assets/PartnerPage/elleone.webp"
       }
     }
   ],
