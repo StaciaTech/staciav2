@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../../Data/ProductPage.json";
-import "../../styles/SuggestionCasestudys.css";
+
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
+import "../../styles/SuggestionProducts.css"
 
 const SuggestionProducts = ({ currentProductId }) => {
   const scrollRef = useRef(null);
@@ -69,13 +70,13 @@ const SuggestionProducts = ({ currentProductId }) => {
   };
 
   return (
-    <div className="suggestion-casestudys-container">
-      <div className="header-with-arrows">
+    <div className="suggestion-casestudys-container-1">
+      <div className="header-with-arrows-1">
         <h2>Suggested Products</h2>
         {allProducts.length > 1 && (
           <div className="carousel-controls">
             <button
-              className="carousel-arrow carousel-arrow-left"
+              className="carousel-arrow carousel-arrow-left-"
               onClick={() => scrollCard("left")}
               disabled={!canScrollLeft}
               aria-label="Scroll left"
@@ -93,11 +94,11 @@ const SuggestionProducts = ({ currentProductId }) => {
           </div>
         )}
       </div>
-      <div className="suggestion-casestudys-scroll-wrapper">
-        <div className="suggestion-casestudys-scroll" ref={scrollRef}>
+      <div className="suggestion-casestudys-scroll-wrapper-1">
+        <div className="suggestion-casestudys-scroll-1" ref={scrollRef}>
           {allProducts.length > 0 ? (
             allProducts.map((product, index) => (
-              <div key={product.id} className="suggestion-casestudy-card">
+              <div key={product.id} className="suggestion-casestudy-card-1">
                 <Link
                   to={`/products/${formatTitleForUrl(
                     product.departmentName
@@ -125,7 +126,7 @@ const SuggestionProducts = ({ currentProductId }) => {
                     alt={product.title || "Product"}
                   />
                 </Link>
-                <div className="content">
+                <div className="content-1">
                   <h3>{product.title || "Untitled"}</h3>
                   <p>
                     {product.description?.length > 80

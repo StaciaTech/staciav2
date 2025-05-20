@@ -116,9 +116,9 @@ const SuggestionService = () => {
   };
 
   return (
-    <div className="suggestion-casestudys-container">
-      <div className="header-with-arrows">
-        <h2 className="suggestion-casestudys-title">Suggested Services</h2>
+    <div className="suggestion-casestudys-container-1">
+      <div className="header-with-arrows-1">
+        <h2 className="suggestion-casestudys-title-1">Suggested Services</h2>
 
         <div className="carousel-controls">
           <button
@@ -139,8 +139,8 @@ const SuggestionService = () => {
           </button>
         </div>
       </div>
-      <div className="suggestion-casestudys-scroll-wrapper">
-        <div className="suggestion-casestudys-scroll" ref={scrollRef}>
+      <div className="suggestion-casestudys-scroll-wrapper-1">
+        <div className="suggestion-casestudys-scroll-1" ref={scrollRef}>
           {allServices.length > 0 ? (
             allServices.map((service, index) => {
               const serviceUrl = `/services/${formatTitleForUrl(
@@ -151,11 +151,11 @@ const SuggestionService = () => {
               return (
                 <div
                   key={`${service.id}-${index}`}
-                  className="suggestion-casestudy-card"
+                  className="suggestion-casestudy-card-1"
                 >
                   <Link
                     to={serviceUrl}
-                    className="suggestion-casestudy-link"
+                    className="suggestion-casestudy-link-1"
                     onClick={() => {
                       window.scrollTo(0, 0);
                       console.log(
@@ -169,20 +169,21 @@ const SuggestionService = () => {
                         "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
                       }
                       alt={service.title || "Service"}
-                      className="suggestion-casestudy-image"
+                      className="suggestion-casestudy-image-1"
                     />
                   </Link>
-                  <div className="content">
+                  <div className="content-1">
                     <h3>{service.title || "Untitled"}</h3>
                     <p>
                       {service.oneLine && service.oneLine.length > 80
                         ? `${service.oneLine.substring(0, 80)}...`
                         : service.oneLine || "No description available."}
+                        
                     
                     </p>
                     <Link
                       to={serviceUrl}
-                      className="suggestion-casestudy-know-more"
+                      className="suggestion-casestudy-know-more-1"
                       onClick={() => {
                         window.scrollTo(0, 0);
                         console.log(
@@ -197,7 +198,7 @@ const SuggestionService = () => {
               );
             })
           ) : (
-            <p className="suggestion-casestudys-empty">
+            <p className="suggestion-casestudys-empty-1">
               No other services available.
             </p>
           )}

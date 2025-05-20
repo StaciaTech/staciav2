@@ -408,6 +408,7 @@ import { useParams } from "react-router-dom";
 import { motion, useTransform, useScroll } from "framer-motion";
 import servicesData from "../../Data/Services.json";
 
+
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
 const SideBar = lazy(() => import("../SideBar"));
@@ -561,6 +562,7 @@ const HorizontalScrollMobile = ({ singleServiceWhatweDo }) => {
           </div>
         ))}
       </div>
+      
     </div>
   );
 };
