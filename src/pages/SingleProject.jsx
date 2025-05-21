@@ -14,6 +14,8 @@ import RelatedProjects from "../components/RelatedProjects";
 import templatesData from "../Data/Templates.json";
 // import ProjectsData from "../Data/ProjectsData.json"
 
+
+
 function SingleProject() {
   const params = useParams();
   const depKey = params.department.split(" ").join("-");
@@ -135,6 +137,7 @@ function SingleProject() {
         projectKey={projectKey}
         RemainingProjects={RemainingProjects}
       />
+   
       <Footer />
       <MobileFooter />
     </div>

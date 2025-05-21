@@ -2,10 +2,10 @@
   /* background-color: aquamarine; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100%;
   /* margin: 0rem auto; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 40px;
 }
 
@@ -28,7 +28,7 @@
   object-fit: cover;
   aspect-ratio: 1.64 / 1;
   transition: 0.3s ease-in-out;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .service-card-img-box > img:hover {
   transform: scale(1.2);
@@ -104,5 +104,24 @@
 
   .service-card-img-box {
     height: 380px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .all-service-box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 20px;
+   
+  }
+
+  .service-card {
+    min-height: 430px;
+    transition: none;
+  }
+
+  .service-card-img-box {
+    height: 180px;
+    
   }
 }

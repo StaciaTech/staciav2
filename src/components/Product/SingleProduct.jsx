@@ -435,6 +435,8 @@ import next from "../../assets/next.png";
 import "../../styles/ProductDetails.css";
 import { useNavigate } from "react-router-dom";
 import data from "../../Data/ProductPage.json";
+import SuggestionProducts from "../ReUsableComp/SuggestionProducts";
+import SuggestionService from "../ReUsableComp/SuggestionService";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
@@ -664,58 +666,8 @@ export default function SingleProduct() {
             </div>
           </div>
           <div className="remaining-products-card-container-holder">
-            <div className="single-other-service-title">Other Products</div>
-            <div className="remaining-products-card-container">
-              {RemainingProducts?.map((eachPro, i) => {
-                const ProductKey = eachPro
-                  ? eachPro?.title?.split(" ").join("-")
-                  : "";
-                return (
-                  <React.Fragment key={i}>
-                    {i < 6 && (
-                      <div>
-                        <div className="single-product-card">
-                          <div
-                            className="single-product-card-img-container pointer"
-                            onClick={() => {
-                              navigateTo(
-                                `/products/${DeptKey}/${CatogeryKey}/${ProductKey}`
-                              );
-                              window.scrollTo(0, 0);
-                            }}
-                          >
-                            <img
-                              src={eachPro?.imageUrl}
-                              alt={eachPro?.title}
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "contain",
-                              }}
-                              loading="lazy"
-                            />
-                          </div>
-                          <div
-                            className="single-product-card-title pointer test-seclection-blue"
-                            onClick={() => {
-                              navigateTo(
-                                `/products/${DeptKey}/${CatogeryKey}/${ProductKey}`
-                              );
-                              window.scrollTo(0, 0);
-                            }}
-                          >
-                            {eachPro?.title}
-                          </div>
-                          <p className="single-product-card-des test-seclection-blue">
-                            {eachPro?.description}
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                  </React.Fragment>
-                );
-              })}
-            </div>
+           <SuggestionService/>
+           <SuggestionProducts/>
           </div>
         </div>
       )}

@@ -509,195 +509,209 @@ function Contact({ closeHandle }) {
   return (
     <div className="contact-form">
       <div className="contact-overlay">
-      <div className="contact-content">
-        <div className="contact-form-container">
-          <div className="contact-form-image-container">
-            <div>
-              <img src={StaciaContactLogo} alt="Stacia Logo" />
-            </div>
-            <div className="contact-socials">
+        <div className="contact-content">
+          <div className="contact-form-container">
+            <div className="contact-form-image-container">
               <div>
-                <a
-                  href="https://www.facebook.com/staciacorp/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div className="footer-icon-container">
-                    <FaFacebookF className="footer-facebook-icon" />
-                  </div>
-                </a>
+                <img src={StaciaContactLogo} alt="Stacia Logo" />
               </div>
-              <div>
-                <a
-                  href="https://www.linkedin.com/company/staciacorp"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div className="footer-icon-container">
-                    <FaLinkedinIn className="footer-linkedin-icon" />
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://x.com/StaciaCorp"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div className="footer-icon-container">
-                    <BsTwitterX className="footer-twitter-icon" />
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://www.instagram.com/stacia_corp_?igsh=MTA5MGdnZms5ZjhwMA=="
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div className="footer-icon-container">
-                    <FaInstagram className="footer-insta-icon" />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="contact-form-content-container">
-            <div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <div className="contact-main-title">
-                  Love to hear from you :blue_heart:
-                </div>
-                <IoClose
-                  onClick={closeHandle}
-                  className="pointer"
-                  color="#000"
-                  fontSize={32}
-                />
-              </div>
-              <div className="contact-second-title">Keep in Touch!</div>
-            </div>
-            <form onSubmit={onSubmit}>
-              <div className="input-container">
-                <div className="input-wrapper">
-                  <input
-                    type="text"
-                    placeholder="Name*"
-                    value={form.name}
-                    onChange={(e) => handleChange("name", e.target.value)}
-                    className={`input-field ${errors.name ? "invalid" : ""}`}
-                  />
-                  {errors.name && (
-                    <span className="error-message">{errors.name}</span>
-                  )}
-                </div>
-                <div className="input-wrapper">
-                  <input
-                    type="email"
-                    placeholder="Enter Your Mail*"
-                    value={form.mail}
-                    onChange={(e) => handleChange("mail", e.target.value)}
-                    className={`input-field ${errors.mail ? "invalid" : ""}`}
-                  />
-                  {errors.mail && (
-                    <span className="error-message">{errors.mail}</span>
-                  )}
-                </div>
-              </div>
-              <div className="input-container">
-                <div className="input-wrapper">
-                  <div
-                    className={`organization-container ${
-                      errors.organization ? "invalid" : ""
-                    }`}
-                    onClick={() => setShowOpt(!showOpt)}
+              <div className="contact-socials">
+                <div>
+                  <a
+                    href="https://www.facebook.com/staciacorp/"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <input
-                      type="text"
-                      placeholder="Select Your Organization*"
-                      value={form.organization}
-                      readOnly
-                      className="contact-org-inp"
-                    />
-                    <IoIosArrowDown />
-                    {showOpt && (
-                      <div className="org-options">
-                        {titles.map((title, idx) => (
-                          <p
-                            key={idx}
-                            onClick={() => {
-                              handleChange("organization", title);
-                              setShowOpt(false);
-                            }}
-                          >
-                            {title}
-                          </p>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  {errors.organization && (
-                    <span className="error-message">{errors.organization}</span>
-                  )}
+                    <div className="footer-icon-container">
+                      <FaFacebookF className="footer-facebook-icon" />
+                    </div>
+                  </a>
                 </div>
-                <div className="input-wrapper">
-                  <div
-                    className={`mobile-container ${errors.phone ? "invalid" : ""}`}
+                <div>
+                  <a
+                    href="https://www.linkedin.com/company/staciacorp"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <PhoneInput
-                      placeholder="Enter phone number*"
-                      value={form.phone}
-                      defaultCountry="IN"
-                      onChange={(value) => handleChange("phone", value || "")}
-                      className={`PhoneInput ${errors.phone ? "invalid" : ""}`}
-                    />
-                  </div>
-                  {errors.phone && (
-                    <span className="error-message">{errors.phone}</span>
-                  )}
+                    <div className="footer-icon-container">
+                      <FaLinkedinIn className="footer-linkedin-icon" />
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="https://x.com/StaciaCorp"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="footer-icon-container">
+                      <BsTwitterX className="footer-twitter-icon" />
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="https://www.instagram.com/stacia_corp_?igsh=MTA5MGdnZms5ZjhwMA=="
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="footer-icon-container">
+                      <FaInstagram className="footer-insta-icon" />
+                    </div>
+                  </a>
                 </div>
               </div>
-              {form.organization === "Others" && (
+            </div>
+            <div className="contact-form-content-container">
+              <div>
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <div className="contact-main-title">
+                    Love to hear from you 💙
+                  </div>
+                  <IoClose
+                    onClick={closeHandle}
+                    className="pointer"
+                    color="#000"
+                    fontSize={32}
+                  />
+                </div>
+                <div className="contact-second-title">Keep in Touch!</div>
+              </div>
+              <form onSubmit={onSubmit}>
                 <div className="input-container">
                   <div className="input-wrapper">
                     <input
                       type="text"
-                      placeholder="Enter your organization name*"
-                      value={form.customOrg}
-                      onChange={(e) => handleChange("customOrg", e.target.value)}
-                      className={`input-field ${errors.customOrg ? "invalid" : ""}`}
+                      placeholder="Name*"
+                      value={form.name}
+                      onChange={(e) => handleChange("name", e.target.value)}
+                      className={`input-field ${errors.name ? "invalid" : ""}`}
                     />
-                    {errors.customOrg && (
-                      <span className="error-message">{errors.customOrg}</span>
+                    {errors.name && (
+                      <span className="error-message">{errors.name}</span>
+                    )}
+                  </div>
+                  <div className="input-wrapper">
+                    <input
+                      type="email"
+                      placeholder="Enter Your Mail*"
+                      value={form.mail}
+                      onChange={(e) => handleChange("mail", e.target.value)}
+                      className={`input-field ${errors.mail ? "invalid" : ""}`}
+                    />
+                    {errors.mail && (
+                      <span className="error-message">{errors.mail}</span>
                     )}
                   </div>
                 </div>
-              )}
-              <div className="input-wrapper">
-                <textarea
-                  placeholder="Anything else you would like to tell us?"
-                  value={form.message}
-                  onChange={(e) => handleChange("message", e.target.value)}
-                  className="message-area"
-                ></textarea>
-              </div>
-              <div>
-                <button type="submit" className="submit-style">
-                  Keep in Touch
-                </button>
-              </div>
-            </form>
+                <div className="input-container">
+                  <div className="input-wrapper">
+                    <div
+                      className={`organization-container ${
+                        errors.organization ? "invalid" : ""
+                      }`}
+                      onClick={() => setShowOpt(!showOpt)}
+                    >
+                      <input
+                        type="text"
+                        placeholder="Select Your Organization*"
+                        value={form.organization}
+                        readOnly
+                        className="contact-org-inp"
+                      />
+                      <IoIosArrowDown />
+                      {showOpt && (
+                        <div className="org-options">
+                          {titles.map((title, idx) => (
+                            <p
+                              key={idx}
+                              onClick={() => {
+                                handleChange("organization", title);
+                                setShowOpt(false);
+                              }}
+                            >
+                              {title}
+                            </p>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    {errors.organization && (
+                      <span className="error-message">
+                        {errors.organization}
+                      </span>
+                    )}
+                  </div>
+                  <div className="input-wrapper">
+                    <div
+                      className={`mobile-container ${
+                        errors.phone ? "invalid" : ""
+                      }`}
+                    >
+                      <PhoneInput
+                        placeholder="Enter phone number*"
+                        value={form.phone}
+                        defaultCountry="IN"
+                        onChange={(value) => handleChange("phone", value || "")}
+                        className={`PhoneInput ${
+                          errors.phone ? "invalid" : ""
+                        }`}
+                      />
+                    </div>
+                    {errors.phone && (
+                      <span className="error-message">{errors.phone}</span>
+                    )}
+                  </div>
+                </div>
+                {form.organization === "Others" && (
+                  <div className="input-container">
+                    <div className="input-wrapper">
+                      <input
+                        type="text"
+                        placeholder="Enter your organization name*"
+                        value={form.customOrg}
+                        onChange={(e) =>
+                          handleChange("customOrg", e.target.value)
+                        }
+                        className={`input-field ${
+                          errors.customOrg ? "invalid" : ""
+                        }`}
+                      />
+                      {errors.customOrg && (
+                        <span className="error-message">
+                          {errors.customOrg}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+                <div className="input-wrapper">
+                  <textarea
+                    placeholder="Anything else you would like to tell us?"
+                    value={form.message}
+                    onChange={(e) => handleChange("message", e.target.value)}
+                    className="message-area"
+                  ></textarea>
+                </div>
+                <div>
+                  <button type="submit" className="submit-style">
+                    Keep in Touch
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
+        <ToastContainer
+          autoClose={1500}
+          position="top-center"
+          closeButton={false}
+          hideProgressBar={true}
+          icon={false}
+        />
       </div>
-      <ToastContainer
-        autoClose={1500}
-        position="top-center"
-        closeButton={false}
-        hideProgressBar={true}
-        icon={false}
-      />
-    </div>
     </div>
   );
 }

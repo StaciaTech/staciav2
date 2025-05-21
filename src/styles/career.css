@@ -132,7 +132,7 @@
   color: #6b6084;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
 }
 .life-at-stacia {
   margin: 0rem 6rem;
@@ -624,3 +624,133 @@ input:focus {
     font-size: 1rem;
   }
 }
+@media (min-width: 1025px) and (max-width: 1366px) {
+  /* Adjust hero section padding for slightly smaller screens */
+  .career-hero-section {
+    padding-block: 6rem;
+  }
+
+  /* Scale down title font size */
+  .career-title {
+    font-size: 6rem;
+  }
+
+  /* Adjust hero contents padding */
+  .career-hero-contents {
+    padding: 4rem 3rem;
+  }
+
+  /* Ensure hero info text remains readable */
+  .career-hero-info {
+    font-size: 0.9rem;
+    width: 500px;
+  }
+
+  /* Scale down headings */
+  .career-headings {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  /* Adjust opportunities container padding */
+  .opportunities-container {
+    padding: 0 3rem;
+  }
+
+  /* Scale down opportunity titles */
+  .opportunity-titles {
+    font-size: 1.2vw;
+  }
+
+  /* Adjust hiring process margin */
+  .career-hiring-process {
+    margin-left: 4rem;
+  }
+
+  /* Scale down hiring item elements */
+  .career-hiring-data-container > div {
+    min-width: 25vw;
+  }
+
+  .career-hiring-item-num {
+    font-size: 3rem;
+  }
+
+  .career-hiring-item-title {
+    font-size: 1.3rem;
+  }
+
+  .career-hiring-item-des {
+    font-size: 1.1rem;
+  }
+
+  /* Adjust life-at-stacia margin */
+  .life-at-stacia {
+    margin: 0 4rem;
+  }
+
+  /* Scale down culture titles and contents */
+  .culture-titles {
+    font-size: 32px;
+    margin: 40px 0;
+  }
+
+  .culture-contents {
+    width: 400px;
+    font-size: 1rem;
+    line-height: 2.2rem;
+  }
+
+  /* Adjust application overlay */
+  .application-box {
+    width: 50%;
+    height: 70%;
+    padding: 0 40px;
+  }
+
+  .application-job-title {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .application-question {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="radio"],
+  input[type="checkbox"],
+  input[type="date"] {
+    height: 40px;
+  }
+
+  .input-overlay {
+    height: 100px;
+  }
+
+  /* Adjust image layout container */
+  .image-layout-container {
+    gap: 0.8rem;
+  }
+
+  .Life-Img,
+  .Life-Img2,
+  .Life-Img3,
+  .Life-Img4 {
+    border-radius: 20px;
+  }
+  .career-hiring-data-container {
+    column-gap: 10px;
+  }
+
+  .career-hiring-data-container > div {
+    min-width: 10vw;
+  }
+}
+

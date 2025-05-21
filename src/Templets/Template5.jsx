@@ -7,6 +7,10 @@ import "../styles/Templet.css";
 import Star from "../components/Star";
 import Data from "../Data/ProjectData2.json";
 
+import SuggestionProjects from "../components/ReUsableComp/SuggestionProjects";
+import SuggestionProducts from "../components/ReUsableComp/SuggestionProducts";
+import SuggestionService from "../components/ReUsableComp/SuggestionService";
+
 const NavBar = React.lazy(() => import("../components/NavBar"));
 const SideBar = React.lazy(() => import("../components/SideBar"));
 const Footer = React.lazy(() => import("../components/Footer"));
@@ -396,6 +400,9 @@ function Template5() {
             )}
           </div>
         </div>
+           <SuggestionService />
+              <SuggestionProducts />
+              <SuggestionProjects />
         <div>
           <Footer />
           <MobileFooter />

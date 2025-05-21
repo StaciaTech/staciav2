@@ -601,9 +601,13 @@ function About() {
             passion for excellence, shaping the future of industries worldwide.
           </p>
           <div style={{ overflow: "auto" }} className="about-team-marquee-desk">
-            <Marquee pauseOnHover={true} speed={30}>
+            <Marquee pauseOnHover={true} speed={30} gradient={false}>
+              {/* Render the team data twice to ensure seamless looping */}
               {teamData?.map((eachMem, i) => (
-                <TeamCard key={i} eachMem={eachMem} />
+                <TeamCard key={`first-${i}`} eachMem={eachMem} />
+              ))}
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`second-${i}`} eachMem={eachMem} />
               ))}
             </Marquee>
           </div>

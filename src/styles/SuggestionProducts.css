@@ -99,8 +99,8 @@
   }
   .content-1 p a {
     display: inline;
-    text-decoration: underline;
-    color: rgb(63, 0, 14); /* Adjust color as needed */
+    gap: 0.5;
+    color: #0047ff; /* Adjust color as needed */
   }
   /* Card image styling */
   .suggestion-casestudy-card-1 img {
@@ -120,37 +120,54 @@
   
   /* Card title styling */
   .suggestion-casestudy-card-1 h3 {
-    font-size: 1rem; /* From Other Case Studies */
+    font-size: 1rem;
     font-weight: 600;
-    color: black; /* From Other Case Studies */
-    font-family: EuclidSemiBold; /* From Other Case Studies */
+    color: black;
+    font-family: EuclidSemiBold;
     margin: 0;
     line-height: 1.3;
+    padding: 0; /* Remove extra padding to control spacing */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: calc(1rem * 1.3 * 2);
+    padding: 1rem 14px;
   }
   
   /* Card description styling */
   .suggestion-casestudy-card-1 p {
-    font-size: 0.9rem; /* From Other Case Studies */
-    line-height: 1.5;
-    color: #4a4a4a; /* From Other Case Studies */
-    margin: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: calc(0.9rem * 1.5 * 3);
   }
   
   /* "Know more" link styling */
   .suggestion-casestudy-card-1 a {
-    color: #0047ff; /* From Other Case Studies */
-    font-size: 0.95rem; /* From Other Case Studies */
+    color: #0047ff;
+    font-size: 0.95rem;
     font-weight: 600;
-    transition: text-decoration 0.2s ease; /* From Other Case Studies */
-    display: inline-block;
-    margin-top: 0.5rem;
+    transition: text-decoration 0.2s ease;
+    margin-top: auto;
+    margin-top: auto; /* Push the button to the bottom */
+  align-self: flex-start;
+
+  }
+  .suggestion-casestudy-know-more-1{
+    margin-top: auto; 
+    padding: 0; 
   }
   
+
+ 
   /* Hover effect for "Know more" link */
   .suggestion-casestudy-card-1 a:hover {
     text-decoration: none; /* From Other Case Studies */
@@ -189,7 +206,7 @@
     color: #4b5563; /* Gray-600 */
     text-align: left;
     width: 100%;
-    padding: 0rem 0;
+    padding: 0rem 13px;
   }
   @media (max-width: 479px) {
     .suggestion-casestudys-container-1 {

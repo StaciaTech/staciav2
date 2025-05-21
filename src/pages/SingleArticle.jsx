@@ -9,6 +9,11 @@ import SideBar from "../components/SideBar";
 import ArticleAudio from '../components/Articles/ArticleAudio'
 import articlesData from "../Data/SingleArticle.json";
 
+import SuggestionCasestudys from "../components/ReUsableComp/SuggestionCasestudys";
+
+import SuggestionProducts from "../components/ReUsableComp/SuggestionProducts";
+import SuggestionService from "../components/ReUsableComp/SuggestionService";
+import SuggestionArticles from "../components/ReUsableComp/SuggestionArticles";
 
 function SingleArticle() {
   const { title } = useParams();
@@ -153,6 +158,10 @@ function SingleArticle() {
           </div>
         )}
       </div>
+      <SuggestionService/>
+      <SuggestionProducts/>
+      <SuggestionCasestudys/>
+      <SuggestionArticles/>
 
       <Footer />
       <MobileFooter />
