@@ -248,4 +248,27 @@
     display: none;
   }
 }
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .each-service-container{
+    padding: 2.25rem 4.5rem
+  }
+  .howWeDo-container{
+ 
+    font-size: 10px;
+    padding: auto;
+    margin: auto;
+    width: auto;
+  }
+  .faq-container{
+    padding-top: 100px;
+    height: auto;
+
+  }
+  .howWeDo-container {
+  
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+}
 

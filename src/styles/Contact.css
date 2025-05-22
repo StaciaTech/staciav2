@@ -83,7 +83,7 @@
   width: 100%;
   border: 1px solid #CADBEA;
   border-radius: 10px;
-  padding: 0rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   display: flex;
   align-items: center;
 }
@@ -444,6 +444,84 @@ body.no-scroll {
 
   .submit-style {
     width: auto;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .contact-form-container {
+    flex-direction: row;
+  }
+
+  .contact-form-image-container {
+    display: flex;
+    width: 35%; /* Slightly reduced width for better balance */
+    padding-right: 2rem; /* Adjusted padding for smaller screens */
+    padding-top: 2rem;
+  }
+
+  .contact-form-content-container {
+    width: 60%; /* Slightly increased to accommodate content */
+    padding: 2rem 1rem; /* Reduced padding for better fit */
+  }
+
+  .contact-content {
+    width: 90vw; /* Slightly less than full viewport width */
+    height: 90vh; /* Slightly less than full viewport height */
+    padding: 1rem;
+    max-width: 1200px; /* Cap width for better readability */
+  }
+
+  .contact-main-title {
+    font-size: 2rem; /* Slightly smaller for better fit */
+  }
+
+  .contact-second-title {
+    font-size: 1.25rem; /* Adjusted for proportionality */
+    padding: 0.75rem 0;
+  }
+
+  .input-container {
+    flex-direction: row;
+    column-gap: 1rem; /* Reduced gap for tighter layout */
+    margin: 1.25rem 0;
+  }
+
+  .input-field {
+    height: 2.75rem; /* Slightly smaller input fields */
+    padding: 0.75rem;
+    font-size: 0.95rem; /* Adjusted font size */
+  }
+
+  .mobile-container,
+  .organization-container {
+    height: 2.75rem; /* Match input field height */
+  }
+
+  .message-area {
+    height: 160px; /* Slightly smaller textarea */
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-style {
+    padding: 0.75rem 5rem; /* Adjusted button size */
+    font-size: 0.95rem;
+  }
+
+  .contact-socials {
+    column-gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .error-message {
+    font-size: 0.85rem; /* Slightly smaller error message */
   }
 
   body.no-scroll {

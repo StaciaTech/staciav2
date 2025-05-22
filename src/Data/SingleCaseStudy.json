@@ -100,19 +100,19 @@
             "description": "The global market for chilli is robust and expanding. Factors contributing to this demand include:",
             "issues": [
               {
-                "highlight": "CulinaryApplications",
+                "highlight": "Culinary Applications",
                 "text": "Chilli is a staple ingredient in diverse cuisines worldwide, imparting flavor, color, and pungency to a wide array of dishes."
               },
               {
-                "highlight": "FoodProcessingIndustry",
+                "highlight": "Food Processing Industry",
                 "text": "Chilli is extensively utilized in the production of sauces, seasonings, snacks, and ready-to-eat meals."
               },
               {
-                "highlight": "PharmaceuticalApplications",
+                "highlight": "Pharmaceutical Applications",
                 "text": "Capsaicin, a key component of chilli, possesses analgesic, anti-inflammatory, and other therapeutic properties."
               },
               {
-                "highlight": "CosmeticApplications",
+                "highlight": "Cosmetic Applications",
                 "text": "Chilli extracts are employed in certain cosmetic formulations."
               }
             ],
@@ -138,27 +138,27 @@
               "Description": "Mechanization offers a comprehensive solution to these challenges, enabling processors to:",
               "benefits": [
                 {
-                  "highlight": "EnhanceEfficiency",
+                  "highlight": "Enhance Efficiency",
                   "text": "Automated systems are capable of processing significantly larger volumes of chilli in a shorter time, thereby increasing throughput."
                 },
                 {
-                  "highlight": "ImproveProductQuality",
+                  "highlight": "Improve ProductQuality",
                   "text": "Mechanized processes ensure greater consistency in product quality, conforming to stringent international standards."
                 },
                 {
-                  "highlight": "ReduceLaborCosts",
+                  "highlight": "Reduce LaborCosts",
                   "text": "Automation diminishes the reliance on manual labor, thereby lowering operating expenses."
                 },
                 {
-                  "highlight": "MinimizeContamination",
+                  "highlight": "Minimize Contamination",
                   "text": "Closed-loop systems and automated handling mitigate the risk of contamination."
                 },
                 {
-                  "highlight": "IncreaseScalability",
+                  "highlight": "Increase Scalability",
                   "text": "Mechanization empowers processors to scale their operations to accommodate growing market demand."
                 },
                 {
-                  "highlight": "ReducePostHarvestLosses",
+                  "highlight": "Reduce PostHarvest Losses",
                   "text": "Controlled processing environments and precise handling minimize waste."
                 }
               ],
@@ -167,7 +167,7 @@
               "des9": "Furthermore, mechanization enables processors to scale their operations to accommodate the ever-increasing global demand for chilli products. Automated systems are capable of handling larger volumes of raw materials and processing them more rapidly, allowing processors to augment their production capacity without a proportional increase in labor costs. This scalability is essential for businesses seeking to expand their market share and capitalize on growth opportunities. Finally, mechanization aids in the reduction of postharvest losses. Automated handling systems and controlled processing environments minimize damage to the chillies during processing, reducing waste and maximizing the yield from the harvested crop. This reduction in waste not only improves profitability but also contributes to the sustainability of the chilli processing industry"
             },
             "KeyMechanizedProcesses": {
-              "title": "KeyMechanizedProcesses",
+              "title": "Key Mechanized Processes",
               "Description": "Here are some of the key mechanized processes in chilli processing, along with images for better understanding:",
               "Processes": [
                 {
@@ -249,27 +249,27 @@
             }
           },
           "EconomicImpact": {
-            "title": "EconomicImpact",
+            "title": "Economic Impact",
             "Description": "The economic impact of mechanization in the chilli processing industry is substantial. While the initial investment in automated systems can be significant, the return on investment (ROI) is typically realized through:",
             "Impacts": [
               {
-                "highlight": "IncreasedThroughput",
+                "highlight": "Increased Throughput",
                 "text": "Mechanization enables processors to handle larger volumes of chilli, leading to higher production output and increased revenue."
               },
               {
-                "highlight": "ReducedLaborCosts",
+                "highlight": "Reduced LaborCosts",
                 "text": "Automation lowers the reliance on manual labor, resulting in significant cost savings over time. In some regions, labor costs can account for 30-50% of total processing expenses, and mechanization can reduce these costs by up to 40%."
               },
               {
-                "highlight": "ImprovedProductQuality",
+                "highlight": "Improved Product Quality",
                 "text": "Mechanized processes ensure consistent quality, leading to higher market prices and enhanced competitiveness."
               },
               {
-                "highlight": "ReducedPostHarvestLosses",
+                "highlight": "Reduced PostHarvest Losses",
                 "text": "Automation minimizes waste, maximizing the yield from the harvested crop and improving profitability. Studies have shown that mechanization can decrease post-harvest losses by up to 20%."
               },
               {
-                "highlight": "EnhancedCompetitiveness",
+                "highlight": "Enhanced Competitiveness",
                 "text": "Companies that invest in mechanization gain a competitive edge by being able to offer higher-quality products at competitive prices. This can lead to increased market share and profitability."
               }
             ],
@@ -303,29 +303,29 @@
             "Description": "To overcome these barriers and promote the wider adoption of mechanization, the following strategies can be implemented:",
             "Strategies": [
               {
-                "strategy": "GovernmentSupport",
+                "strategy": "Government Support",
                 "description": "Governments can provide financial incentives such as subsidies or tax breaks to encourage investment in mechanization and fund research and development for affordable, context-specific technologies."
               },
               {
-                "strategy": "CapacityBuildingAndTraining",
+                "strategy": "Capacity Building And Training",
                 "description": "Training programs and technical assistance can equip farmers and processors with the skills to operate and maintain mechanized systems effectively."
               },
               {
-                "strategy": "PublicPrivatePartnerships",
+                "strategy": "Public Private Partnerships",
                 "description": "Collaboration between public and private sectors can accelerate the development and dissemination of mechanization technologies."
               },
               {
-                "strategy": "TechnologyAdaptationAndInnovation",
+                "strategy": "Technology Adaptation And Innovation",
                 "description": "Developing mechanization solutions tailored to regional and production scale needs, by adapting existing technologies or creating new ones."
               }
             ]
           },
           "FutureTrends": {
-            "title": "FutureTrends",
+            "title": "Future Trends",
             "Description": "The mechanization of chilli processing is an evolving field, with several emerging trends that promise to further transform the industry:",
             "Trends": [
               {
-                "technology": "ArtificialIntelligenceAndMachineLearning",
+                "technology": "Artificial Intelligence And MachineLearning",
                 "description": "AI-powered systems optimize processing parameters like drying time and temperature to improve efficiency and product quality, while machine learning predicts and prevents equipment failures, reducing downtime and maintenance costs."
               },
               {
@@ -333,17 +333,17 @@
                 "description": "Specialized and flexible robotic systems automate complex tasks such as sorting and packaging, handling delicate operations with precision and speed to minimize product damage."
               },
               {
-                "technology": "InternetOfThings",
+                "technology": "Internet Of Things (IoT)",
                 "description": "IoT sensors and devices enable real-time monitoring and control of the processing chain, tracking parameters like temperature, humidity, and product flow to optimize performance."
               },
               {
-                "technology": "SustainableMechanization",
+                "technology": "Sustainable Mechanization",
                 "description": "Environmentally sustainable and energy-efficient solutions, including renewable energy sources like solar and biomass, and systems designed to minimize waste and energy consumption."
               }
             ]
           },
           "ImpactOnEmployment": {
-            "title": "ImpactOnEmployment",
+            "title": "Impact On Employment",
             "Description": "Mechanization in the chilli processing industry has multifaceted effects on employment:",
             "JobDisplacement": [
               {
@@ -393,11 +393,11 @@
             ]
           },
           "RegionalVariations": {
-            "title": "RegionalVariations",
+            "title": "Regional Variations",
             "Description": "The adoption of mechanization in the chilli processing industry varies significantly across regions, influenced by factors like economic development, farm size, technology availability, government policies, and cultural factors.",
             "AdoptionFactors": [
               {
-                "factor": "EconomicDevelopment",
+                "factor": "Economic Development",
                 "description": "Developed economies with higher labor costs and greater access to capital tend to have higher rates of mechanization compared to developing economies."
               },
               {
@@ -405,15 +405,15 @@
                 "description": "Large-scale commercial farms are more likely to invest in mechanization than smallholder farms, as they can achieve economies of scale."
               },
               {
-                "factor": "AvailabilityOfTechnology",
+                "factor": "Availability Of Technology",
                 "description": "Access to appropriate and affordable mechanization technologies can vary significantly between regions."
               },
               {
-                "factor": "GovernmentPolicies",
+                "factor": "Government Policies",
                 "description": "Government support, such as subsidies and tax incentives, can play a significant role in promoting the adoption of mechanization."
               },
               {
-                "factor": "CulturalFactors",
+                "factor": "Cultural Factors",
                 "description": "In some regions, resistance to adopting new technologies may arise due to cultural traditions or concerns about disrupting existing social structures."
               }
             ]
@@ -448,45 +448,45 @@
             ]
           },
           "EnvironmentalImpact": {
-            "title": "EnvironmentalImpact",
+            "title": "Environmental Impact",
             "Description": "Mechanization can have both positive and negative environmental impacts:",
             "Impacts": [
               {
-                "impact": "ReducedGreenhouseGasEmissions",
+                "impact": "Reduced GreenhouseGas Emissions",
                 "description": "More efficient energy use in mechanized processes, such as modern drying technologies, can significantly reduce greenhouse gas emissions compared to traditional methods like open-air sun drying."
               },
               {
-                "impact": "ImpactOnWaterUsage",
+                "impact": "Impact On Water Usage",
                 "description": "Mechanization can improve water management through automated washing and cleaning systems designed to minimize water waste."
               },
               {
-                "impact": "WasteGeneration",
+                "impact": "Waste Generation",
                 "description": "Mechanization can increase waste if not managed properly, but automated systems can process chilli waste into valuable byproducts like compost or biofuel."
               },
               {
-                "impact": "SustainableFarmingPractices",
+                "impact": "Sustainable Farming Practices",
                 "description": "Mechanization enables precision agriculture techniques, such as targeted application of fertilizers and pesticides, reducing environmental impacts."
               }
             ]
           },
           "QualityAndSafety": {
-            "title": "QualityAndSafety",
+            "title": "Quality AndS afety",
             "Description": "Mechanization plays a crucial role in enhancing the quality and safety of chilli products:",
             "Improvements": [
               {
-                "process": "AutomatedSortingAndInspection",
+                "process": "Automated Sorting And Inspection",
                 "description": "Automated systems use sensors and imaging technology to remove defects, contaminants, and foreign materials, ensuring higher product quality and safety."
               },
               {
-                "process": "ControlledProcessingEnvironments",
+                "process": "Controlled Processing Environments",
                 "description": "Mechanized drying and packaging processes in controlled environments minimize contamination risk and preserve product quality."
               },
               {
-                "process": "ExtendedShelfLife",
+                "process": "Extended Shelf Life",
                 "description": "Mechanized packaging systems use advanced materials and techniques to extend the shelf life of chilli products, reducing waste and improving marketability."
               },
               {
-                "process": "ComplianceWithFoodSafetyRegulations",
+                "process": "Compliance With Food Safety Regulations",
                 "description": "Mechanization ensures consistent and hygienic processing practices, helping chilli processors comply with stringent food safety regulations."
               }
             ]
@@ -498,19 +498,19 @@
               "title": "Benefits of mechanization for farmers: ",
               "benifits": [
                 {
-                  "benefit": "ReducedLaborCosts",
+                  "benefit": "Reduced LaborCosts",
                   "description": "Mechanization significantly reduces the need for manual labor, a major expense for chilli farmers."
                 },
                 {
-                  "benefit": "IncreasedYields",
+                  "benefit": "Increased Yields",
                   "description": "Mechanization improves efficiency and productivity, leading to higher yields and increased income for farmers."
                 },
                 {
-                  "benefit": "ImprovedEfficiency",
+                  "benefit": "Improved Efficiency",
                   "description": "Automated systems perform tasks such as planting, harvesting, and sorting more quickly and efficiently, allowing farmers to manage larger areas of production."
                 },
                 {
-                  "benefit": "ReducedPostHarvestLosses",
+                  "benefit": "Reduced PostHarvest Losses",
                   "description": "Mechanized handling and processing minimize damage to the crop, reducing post-harvest losses and improving the quality of the final product."
                 }
               ]
@@ -519,19 +519,19 @@
               "title": "Challenges faced by farmers:",
               "challenges": [
                 {
-                  "challenge": "CostOfEquipment",
+                  "challenge": "Cost Of Equipment",
                   "description": "The high cost of mechanization equipment can be a major barrier for many farmers, particularly smallholder farmers with limited resources."
                 },
                 {
-                  "challenge": "AccessToCredit",
+                  "challenge": "Access To Credit",
                   "description": "Farmers may lack access to affordable credit to finance the purchase of mechanization equipment."
                 },
                 {
-                  "challenge": "LackOfTechnicalKnowledge",
+                  "challenge": "Lack Of TechnicalKnowledge",
                   "description": "Some farmers may lack the technical knowledge and skills needed to operate and maintain mechanized equipment."
                 },
                 {
-                  "challenge": "SuitabilityForSmallScaleFarms",
+                  "challenge": "Suitability For Small Scale Farms",
                   "description": "Existing mechanization technologies may not be suitable for the needs of small-scale farmers, who may require smaller, more affordable equipment."
                 }
               ]
@@ -540,19 +540,19 @@
               "title": "",
               "strategies": [
                 {
-                  "strategy": "SubsidiesAndFinancialAssistance",
+                  "strategy": "Subsidies And Financial Assistance",
                   "description": "Governments and organizations can provide subsidies or financial assistance to help smallholder farmers purchase mechanization equipment."
                 },
                 {
-                  "strategy": "EquipmentSharingPrograms",
+                  "strategy": "Equipment Sharing Programs",
                   "description": "Cooperative or community-based equipment sharing programs can make mechanization more accessible to smallholder farmers."
                 },
                 {
-                  "strategy": "TrainingAndExtensionServices",
+                  "strategy": "Training And Extension Services",
                   "description": "Providing training and extension services to farmers can help them acquire the knowledge and skills needed to use mechanization technologies effectively."
                 },
                 {
-                  "strategy": "DevelopmentOfAppropriateTechnology",
+                  "strategy": "Development Of Appropriate Technology",
                   "description": "Research and development efforts should focus on developing mechanization technologies specifically designed for the needs of smallholder farmers."
                 }
               ]

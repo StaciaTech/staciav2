@@ -1,355 +1,255 @@
-/* Container for the suggested case studies section */
 .suggestion-casestudys-container-1 {
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 8rem;
+  background: #fff;
+}
+
+.suggestion-casestudys-title-1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #dcd9e3;
+  font-family: EuclidSemiBold;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  text-align: left;
+}
+
+.header-with-arrows-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.carousel-arrow {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #6b6084;
+  background: transparent;
+  color: #6b6084;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-arrow:hover {
+  border-color: #000;
+  color: #000;
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: #6b6084;
+  color: #6b6084;
+}
+
+.suggestion-casestudys-scroll-wrapper-1 {
+  position: relative;
+}
+
+.suggestion-casestudys-scroll-1 {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.suggestion-casestudys-scroll-1::-webkit-scrollbar {
+  display: none;
+}
+
+.suggestion-casestudy-card-1 {
+  min-width: 209px;
+  height: 344px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background: #fff;
+}
+
+.suggestion-casestudy-card-1:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.suggestion-casestudy-card-1:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 10%;
+  height: 80%;
+  width: 2px;
+  background: #d1d5db;
+}
+
+.suggestion-casestudy-card-1 img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.suggestion-casestudy-card-1 .content-1 {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.suggestion-casestudy-card-1 h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  font-family: EuclidSemiBold, sans-serif;
+  margin: 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.suggestion-casestudy-card-1 p {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.suggestion-casestudy-know-more-1 {
+  font-size: 0.9rem;
+  color: #0047ff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: auto;
+  transition: color 0.3s ease;
+}
+
+.suggestion-casestudy-know-more-1:hover {
+  color: #002b99;
+}
+
+.suggestion-casestudys-empty-1 {
+  padding: 1rem;
+  color: #888;
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .suggestion-casestudys-container-1 {
     margin: 0 auto;
     position: relative;
-    padding: 2rem 8rem;
-    background: #fff; /* From Other Case Studies */
+    padding: 2rem 5rem; /* Adjusted from 8rem to fit the resolution */
+    background: #fff;
+    max-width: 1100px; /* Fits ~4-5 cards (4.5 * 209px + 4 * 24px + padding) */
   }
-  
-  /* Heading style */
-  .suggestion-casestudys-container-1 h2 {
+
+  .suggestion-casestudys-title-1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #dcd9e3; /* From Other Case Studies */
-    font-family: EuclidSemiBold; /* From Other Case Studies */
+    color: #dcd9e3;
+    font-family: EuclidSemiBold;
     margin-bottom: 2rem;
-    padding: 2rem 0;
+    padding: 1.75rem 0; /* Slightly reduced for balance */
     text-align: left;
   }
-  
-  /* Scrollable container wrapper for positioning arrows */
-  .suggestion-casestudys-scroll-wrapper-1 {
-    position: relative;
-  }
-  
-  /* Scrollable container for cards */
+
   .suggestion-casestudys-scroll-1 {
     display: flex;
-    flex-direction: row;
-    overflow-x: auto;
     gap: 1.5rem;
+    overflow-x: auto;
     padding-bottom: 1rem;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-    /* background-color: red; */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
-  
-  /* Hide scrollbar for Chrome, Safari, and Opera */
+
   .suggestion-casestudys-scroll-1::-webkit-scrollbar {
     display: none;
   }
-  
-  /* Individual card styling */
+
   .suggestion-casestudy-card-1 {
-    min-width: 209px;
-    height: 380px;
-  
-    border-radius: 12px; /* From Other Case Studies */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* From Other Case Studies */
+    min-width: 209px; /* Kept as is */
+    height: 344px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* From Other Case Studies */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    background: #fff;
   }
-  
-  /* Add vertical separator between cards, except for the last one */
+
   .suggestion-casestudy-card-1:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: -12px; /* Center in the 24px gap */
+    right: -12px;
     top: 10%;
     height: 80%;
-    width: 1px;
-    background: #e5e7eb; /* Gray-200 */
+    width: 2px;
+    background: #d1d5db;
   }
-  
-  .carousel-arrow {
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid #6b6084;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    background: transparent;
-    color: #6b6084;
-    font-size: 1.5rem;
-  }
-  .carousel-controls {
-    display: flex;
-    gap: 1rem;
-  }
-  .carousel-arrow:hover {
-    border-color: #000;
-    color: #000;
-  }
-  
-  .carousel-arrow:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    border-color: #6b6084;
-    color: #6b6084;
-  }
-  
-  /* Hover effect for cards */
-  .suggestion-casestudy-card-1:hover {
-    transform: translateY(-6px); /* From Other Case Studies */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* From Other Case Studies */
-  }
-  .content-1 p a {
-    display: inline;
-    gap: 0.5;
-    color: #0047ff; /* Adjust color as needed */
-  }
-  /* Card image styling */
+
   .suggestion-casestudy-card-1 img {
     width: 100%;
-    height: 170px;
+    height: 170px; /* Kept as is, suitable for this resolution */
     object-fit: cover;
-    border-radius: 12px 12px 0 0; /* From Other Case Studies */
+    border-radius: 12px 12px 0 0;
   }
-  
-  /* Card content styling */
-  .suggestion-casestudy-card-1 .content {
-    padding: 1.25rem; /* From Other Case Studies */
+
+  .suggestion-casestudy-card-1 .content-1 {
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* From Other Case Studies */
+    gap: 1.5rem;
   }
-  
-  /* Card title styling */
+
   .suggestion-casestudy-card-1 h3 {
     font-size: 1rem;
     font-weight: 600;
     color: black;
-    font-family: EuclidSemiBold;
-    margin: 0;
+    font-family: EuclidSemiBold, sans-serif;
     line-height: 1.3;
-    padding: 0; /* Remove extra padding to control spacing */
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
-    min-height: calc(1rem * 1.3 * 2);
-    padding: 1rem 14px;
   }
-  
-  /* Card description styling */
+
   .suggestion-casestudy-card-1 p {
+    font-size: 0.875rem;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  .suggestion-casestudy-know-more-1 {
     font-size: 0.9rem;
-  line-height: 1.5;
-  color: #4a4a4a;
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-height: calc(0.9rem * 1.5 * 3);
-  }
-  
-  /* "Know more" link styling */
-  .suggestion-casestudy-card-1 a {
     color: #0047ff;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: text-decoration 0.2s ease;
+    font-weight: 500;
+    text-decoration: none;
     margin-top: auto;
-    margin-top: auto; /* Push the button to the bottom */
-  align-self: flex-start;
+    transition: color 0.3s ease;
+  }
 
-  }
-  .suggestion-casestudy-know-more-1{
-    margin-top: auto; 
-    padding: 0; 
-  }
-  
-
- 
-  /* Hover effect for "Know more" link */
-  .suggestion-casestudy-card-1 a:hover {
-    text-decoration: none; /* From Other Case Studies */
-  }
-  /* Header section with title and arrows */
-  .header-with-arrows-1 {
+  .carousel-arrow {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #6b6084;
+    background: transparent;
+    color: #6b6084;
+    font-size: 1.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
   }
-  
-  /* Container for the arrows */
-  .arrow-controls {
-    display: flex;
-    gap: 10px;
-    /* Space between the arrows */
-  }
-  
-  /* Adjust arrow positioning for this layout */
-  .arrow {
-    position: relative; /* Override the absolute positioning used previously */
-    top: auto;
-    transform: none; /* Remove the translateY transform */
-  }
-  
-  /* Ensure arrows remain circular and styled as before */
-  .arrow-left,
-  .arrow-right {
-    left: auto;
-    right: auto;
-  }
-  /* No case studies message */
-  .suggestion-casestudys-scroll-1 p {
-    font-size: 0.8rem;
-    color: #4b5563; /* Gray-600 */
-    text-align: left;
-    width: 100%;
-    padding: 0rem 13px;
-  }
-  @media (max-width: 479px) {
-    .suggestion-casestudys-container-1 {
-      padding: 1rem 1rem;
-      width: 100%;
-      max-width: 320px;
-    }
-    .suggestion-casestudys-container-1 h2 {
-      font-size: 1.5rem;
-      padding: 0.75rem 0;
-    }
-    .suggestion-casestudy-card-1 {
-      min-width: 100%;
-    }
-    .suggestion-casestudy-card-1:not(:last-child)::after {
-      display: none;
-    }
-    .suggestion-casestudy-card-1 img {
-      height: 200px;
-    }
-    .arrow {
-      width: 36px;
-      height: 36px;
-      font-size: 1.2rem;
-      padding: 0.5rem;
-    }
-    .arrow-left {
-      left: -12px;
-    }
-    .arrow-right {
-      right: -12px;
-    }
-  }
-  
-  /* Medium mobile devices (480px and up) */
-  @media (min-width: 480px) and (max-width: 639px) {
-    .suggestion-casestudys-container-1 {
-      padding: 1rem 1.5rem;
-      max-width: 460px;
-    }
-    .suggestion-casestudys-container-1 h2 {
-      font-size: 1.75rem;
-      padding: 1rem 0;
-    }
-    .suggestion-casestudy-card-1 {
-      min-width: 100%;
-    }
-    .suggestion-casestudy-card-1:not(:last-child)::after {
-      display: none;
-    }
-    .suggestion-casestudy-card-1 img {
-      height: 250px;
-    }
-    .arrow {
-      width: 40px;
-      height: 40px;
-      font-size: 1.3rem;
-    }
-    .arrow-left {
-      left: -16px;
-    }
-    .arrow-right {
-      right: -16px;
-    }
-  }
-  
-  /* Phablets and small tablets (640px and up) */
-  @media (min-width: 640px) and (max-width: 767px) {
-    .suggestion-casestudys-container-1 {
-      padding: 1.5rem 2rem;
-      max-width: 600px;
-    }
-    .suggestion-casestudys-container-1 h2 {
-      font-size: 2rem;
-      padding: 1rem 0;
-    }
-    .suggestion-casestudy-card-1 {
-      min-width: 280px;
-    }
-    .suggestion-casestudy-card-1:not(:last-child)::after {
-      right: -12px;
-    }
-    .suggestion-casestudy-card-1 img {
-      height: 280px;
-    }
-    .arrow {
-      width: 44px;
-      height: 44px;
-      font-size: 1.4rem;
-    }
-  }
-  
-  /* Tablets (768px and up) */
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .suggestion-casestudys-container-1 {
-      padding: 1.5rem 3rem;
-      max-width: 740px; /* Fits ~2 cards (2 * 350px + 1 * 24px + padding) */
-    }
-    .suggestion-casestudys-container-1 h2 {
-      font-size: 2.25rem;
-      padding: 1.5rem 0;
-    }
-    .suggestion-casestudy-card-1 {
-      min-width: 350px;
-    }
-    .suggestion-casestudy-card-1 img {
-      height: 300px;
-    }
-  }
-  
-  /* Tablets and small laptops (1024px and up) */
-  @media (min-width: 1024px) and (max-width: 1279px) {
-    .suggestion-casestudys-container-1 {
-      padding: 2rem 4rem;
-      max-width: 980px; /* Fits ~2-3 cards (2 * 397px + 2 * 24px + padding) */
-    }
-    .suggestion-casestudys-container-1 h2 {
-      font-size: 2.5rem;
-      padding: 1.5rem 0;
-    }
-    .suggestion-casestudy-card-1 {
-      min-width: 397px;
-    }
-    .suggestion-casestudy-card-1 img {
-      height: 320px;
-    }
-  }
-  
-  /* Laptops and desktops (1280px and up) */
-  @media (min-width: 1280px) and (max-width: 1439px) {
-    .suggestion-casestudys-container-1 {
-      padding: 2rem 6rem;
-      max-width: 1220px; /* Fits ~3 cards (3 * 397px + 2 * 24px + padding) */
-    }
-    .suggestion-casestudys-container-1 h2 {
-      font-size: 2.5rem;
-      padding: 2rem 0;
-    }
-    .suggestion-casestudy-card-1 {
-      min-width: 397px;
-    }
-    .suggestion-casestudy-card-1 img {
-      height: 350px;
-    }
-  }
-  
+}

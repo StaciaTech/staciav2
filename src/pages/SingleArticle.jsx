@@ -160,7 +160,7 @@ function SingleArticle() {
       </div>
       <SuggestionService/>
       <SuggestionProducts/>
-      <SuggestionCasestudys/>
+    
       <SuggestionArticles/>
 
       <Footer />
