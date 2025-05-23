@@ -176,8 +176,9 @@
 @media screen and  (max-width: 768px) {
   /*change this */
   .each-service-hero-section {
-    height: 37rem;
+    height: 30rem;
   }
+
   .each-service-howWeDo-section {
     display: none;
   }
@@ -248,27 +249,49 @@
     display: none;
   }
 }
+
 @media (min-width: 1025px) and (max-width: 1366px) {
   .each-service-container{
     padding: 2.25rem 4.5rem
   }
-  .howWeDo-container{
- 
-    font-size: 10px;
-    padding: auto;
-    margin: auto;
-    width: auto;
-  }
+  
   .faq-container{
     padding-top: 100px;
     height: auto;
 
   }
-  .howWeDo-container {
-  
+  .howWeDo-container{    
+    overflow-x: auto; /* Ensures horizontal scrolling if content overflows */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 100vh; /* Maintain the height for consistency */
     width: 100%;
-    margin: 0;
-    overflow: hidden;
+    
+    position: sticky;
+    top: 10px;
+    margin-bottom:100px ;
+    overflow: auto;               
+    scrollbar-width: none;        
+    -ms-overflow-style: none;  
+    
   }
+  .howWeDo-container::-webkit-scrollbar {
+    display: none;
+  }
+ 
+ 
+  .each-service-howWeDo-step-container {
+    display: flex;
+    column-gap: 6rem;
+      
+  
+  }
+  .each-service-howWeDo-step-container > div {
+    width: 48%;
+    min-width: 27rem;
+   
+    
+  }
+  
 }
 

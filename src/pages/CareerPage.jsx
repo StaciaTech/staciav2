@@ -266,14 +266,37 @@ function CareerPage() {
     </Suspense>
   );
 }
-
 const HorizontalScrollContainer = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-35%"]);
+  const [xRange, setXRange] = useState(["1%", "-35%"]);
+
+  useEffect(() => {
+    const updateRange = () => {
+      const width = window.innerWidth;
+
+      if (width <= 768) {
+        setXRange(["1%", "-80%"]); // mobile
+      } else if (width <= 1024) {
+        setXRange(["1%", "-200%"]); // tablets/small laptops
+      } else if (width <= 1366) {
+        setXRange(["1%", "-160%"]); // mid laptops
+      } else {
+        setXRange(["1%", "-35%"]); // desktop
+      }
+    };
+
+    updateRange(); // Initial call
+    window.addEventListener("resize", updateRange);
+
+    return () => window.removeEventListener("resize", updateRange);
+  }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], xRange);
+
   return (
     <div ref={targetRef} style={{ height: "300vh", position: "relative" }}>
       <div
@@ -300,5 +323,6 @@ const HorizontalScrollContainer = () => {
     </div>
   );
 };
+
 
 export default CareerPage;

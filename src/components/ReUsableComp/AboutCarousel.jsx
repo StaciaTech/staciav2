@@ -26,7 +26,7 @@ function AboutCarousel() {
   const scrollContainerRef = useRef(null);
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      const scrollAmount = window.innerWidth * 0.6; // 60% of the viewport width
+      const scrollAmount = window.innerWidth * 1.1; // 60% of the viewport width
       scrollContainerRef.current.scrollBy({
         left: -scrollAmount,
         behavior: "smooth",
@@ -36,7 +36,7 @@ function AboutCarousel() {
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      const scrollAmount = window.innerWidth * 0.6; // 60% of the viewport width
+      const scrollAmount = window.innerWidth * 1.1; // 60% of the viewport width
       scrollContainerRef.current.scrollBy({
         left: scrollAmount,
         behavior: "smooth",
@@ -46,7 +46,7 @@ function AboutCarousel() {
 
   const mobscrollLeft = () => {
     if (scrollContainerRef.current) {
-      const scrollAmount = window.innerWidth * 1.1;
+      const scrollAmount = window.innerWidth * 0.9;
       scrollContainerRef.current.scrollBy({
         left: -scrollAmount,
         behavior: "smooth",
@@ -56,7 +56,7 @@ function AboutCarousel() {
 
   const mobscrollRight = () => {
     if (scrollContainerRef.current) {
-      const scrollAmount = window.innerWidth * 1.1;
+      const scrollAmount = window.innerWidth * 0.9;
       scrollContainerRef.current.scrollBy({
         left: scrollAmount,
         behavior: "smooth",

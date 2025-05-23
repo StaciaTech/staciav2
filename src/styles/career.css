@@ -752,5 +752,8 @@ input:focus {
   .career-hiring-data-container > div {
     min-width: 10vw;
   }
+  .career-hiring-item-des {
+    font-size: 0.7rem;
+}
 }
 

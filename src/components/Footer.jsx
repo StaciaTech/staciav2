@@ -38,11 +38,9 @@ function Footer() {
     },
   };
 
-
   const HandleClick = () => {
-    navigate("/Privacy-Policy")
-  }
-
+    navigate("/Privacy-Policy");
+  };
 
   return (
     <div className="footer-contaier">
@@ -203,7 +201,8 @@ function Footer() {
               rel="noreferrer"
             >
               <div className="footer-grey-tabs pointer test-seclection-blue">
-                Ground Floor, C-53, Guindy Industrial Estate,<br />
+                Ground Floor, C-53, Guindy Industrial Estate,
+                <br />
                 Guindy, Chennai - 32, Tamil Nadu
               </div>
               {/* <div
@@ -230,7 +229,12 @@ function Footer() {
             navigate("/sitemap");
             window.scrollTo(0, 0);
           }}
-          style={{ cursor: "pointer" }}
+          style={{
+            cursor: "pointer",
+            color: "black",
+            opacity: "0.6",
+            paddingLeft: "14rem",
+          }}
         >
           Sitemap
         </div>
@@ -242,14 +246,13 @@ function Footer() {
             width: "35%",
           }}
         >
-          
-
           {/* <a
             href=""
             target="_blank"
             rel="noopener noreferrer"
           > */}
           <div
+            className="termsofservice"
             style={{
               cursor: "pointer",
               color: "black",
@@ -260,7 +263,6 @@ function Footer() {
           {/* </a> */}
           <div
             style={{
-              width: "10px",
               height: "10px",
               backgroundColor: "#D9D9D9",
               borderRadius: "50%",
@@ -269,9 +271,13 @@ function Footer() {
             }}
           />
 
-
-          <div onClick={() => navigate("/Privacy-Policy")} style={{ cursor: "pointer", color: "black" }}>Privacy policy</div>
-
+          <div
+            className="privacypolicy"
+            onClick={() => navigate("/Privacy-Policy")}
+            style={{ cursor: "pointer", color: "black", }}
+          >
+            Privacy policy
+          </div>
         </div>
         <div className="footer-icons">
           <div>

@@ -9,6 +9,8 @@ import LinkedIcon from "../assets/LinkedIcon.svg";
 import { useNavigate } from "react-router-dom";
 import Contact from "./Contact";
 
+
+
 const footerAccordion = [
   {
     category: "Company",
@@ -40,6 +42,7 @@ function FooterAccordion({ data }) {
   const [accordion, setAccordion] = useState(0);
   const navigate = useNavigate();
   const [showContactForm, setShowContactForm] = useState(false);
+ 
   const closeForm = () => {
     setShowContactForm(false);
   };
@@ -81,6 +84,7 @@ function FooterAccordion({ data }) {
 
 export default function MobileFooter() {
   const [showContactForm, setShowContactForm] = useState(false);
+  const navigate = useNavigate();
   const closeForm = () => {
     setShowContactForm(false);
   };
@@ -176,7 +180,6 @@ export default function MobileFooter() {
         <div className="terms">Terms of service</div>
         <div className="dot"></div>
         <div className="terms">Privacy Policy</div>
-
       </div>
       <div
         style={{
@@ -187,8 +190,16 @@ export default function MobileFooter() {
         }}
       >
         {/* <div className="dot"> */}
-        <div className="terms">Sitemap</div>
+        <div
+          className="terms"
+          onClick={() => {
+            navigate("/sitemap");
+            window.scrollTo(0, 0);
+          }}
+        >
+          Sitemap
         </div>
+      </div>
       <div className="copy-rights">
         © Copyright StaciaCorp. All Rights Reserved
       </div>

@@ -44,8 +44,6 @@
 //         // Simulate fetching data from a local JSON file
 //         setServiceData(serviceData);
 //       }, []);
-  
-
 
 //   const ServiceCategory = ServiceData?.find(
 //     (eachServ) => eachServ.name === params.department.split("-").join(" ")
@@ -120,9 +118,6 @@
 //   );
 // }
 
-
-
-
 // import React, { useState, useEffect } from "react";
 // import { useParams } from "react-router-dom";
 // import NavBar from "../NavBar";
@@ -134,7 +129,6 @@
 // import SideBar from "../SideBar";
 // import Star from "../Star";
 // import serviceData from "../../Data/Services.json";
-
 
 // export default function SpecificService() {
 //   const params = useParams();
@@ -230,9 +224,7 @@
 //   );
 // }
 
-
-
-//lazy loading 
+//lazy loading
 
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
@@ -335,7 +327,7 @@ export default function SpecificService() {
             </p>
           )}
         </div>
-        <SuggestionService/>
+        {/* <SuggestionService/> */}
       </div>
       <Suspense fallback={<div>Loading Footer...</div>}>
         <Footer />

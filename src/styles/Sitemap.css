@@ -1,5 +1,5 @@
 .sitemap-page-container {
-  padding: 40px 20px;
+  padding: 40px 10px;
   background-color: #f5f5f5;
   min-height: 100vh;
   
@@ -151,4 +151,93 @@ right: 800px;
   bottom: 163px;
   gap: 80px;
   left: 200px;
+}
+
+@media (max-width: 1024px) {
+  .sitemap-page-container {
+    padding: 20px 5px; /* Reduce padding for smaller screens */
+  }
+
+  .sitemap-wrapper {
+    padding: 20px; /* Reduce padding inside the wrapper */
+    max-width: 100%; /* Ensure it fits within the viewport */
+  }
+
+  .sitemap-title {
+    font-size: 28px; /* Slightly smaller title */
+  }
+
+  .sitemap-content {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Smaller min-width for columns */
+    gap: 15px; /* Reduce gap between columns */
+  }
+
+  .sitemap-section {
+    min-width: 180px; /* Adjust min-width for smaller screens */
+  }
+
+  .sitemap-link {
+    font-size: 14px; /* Smaller font size for links */
+  }
+
+  .sitemap-search-input {
+    font-size: 14px; /* Adjust search input font size */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .competition-con {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 40px; /* Reduce gap between items */
+    left: 0; /* Reset left positioning */
+    bottom: 0; /* Reset bottom positioning */
+  }
+
+  .pk {
+    position: static; /* Remove absolute positioning for smaller screens */
+    top: 0;
+    right: 0;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .sitemap-page-container {
+    padding: 30px 8px; /* Slightly less padding than desktop */
+  }
+
+  .sitemap-wrapper {
+    max-width: 1000px; /* Adjust max-width for this range */
+    padding: 25px;
+  }
+
+  .sitemap-title {
+    font-size: 30px; /* Slightly smaller than full desktop */
+  }
+
+  .sitemap-content {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Slightly larger columns */
+    gap: 18px; /* Slightly smaller gap */
+  }
+
+  .sitemap-section {
+    min-width: 220px; /* Adjust min-width */
+  }
+
+  .sitemap-link {
+    font-size: 15px; /* Slightly smaller font size */
+  }
+
+  .sitemap-search-input {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .competition-con {
+    gap: 60px; /* Reduce gap slightly */
+    left: 150px; /* Adjust positioning */
+    bottom: 150px;
+  }
+
+  .pk {
+    top: 1200px; /* Adjust positioning for this range */
+    right: 600px;
+  }
 }

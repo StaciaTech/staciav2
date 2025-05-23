@@ -409,6 +409,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import servicesData from "../../Data/Services.json";
 
 import SuggestionService from "../ReUsableComp/SuggestionService";
+import LoadingStar from "../LoadingStar";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
@@ -435,20 +436,44 @@ function EachServicePage() {
     .find(service => service.title.toLowerCase() === productKey);
 
   return (
-    <Suspense fallback={<div>Loading Service Page...</div>}>
+    <Suspense
+      fallback={
+        <div>
+          <LoadingStar />
+        </div>
+      }
+    >
       <div>
         <div className="nav_style">
-          <Suspense fallback={<div>Loading Navigation...</div>}>
+          <Suspense
+            fallback={
+              <div>
+                <LoadingStar />
+              </div>
+            }
+          >
             <NavBar />
           </Suspense>
-          <Suspense fallback={<div>Loading Sidebar...</div>}>
+          <Suspense
+            fallback={
+              <div>
+                <LoadingStar />
+              </div>
+            }
+          >
             <SideBar />
           </Suspense>
         </div>
         <div className="each-service-hero-section">
           <div className="each-service-title">
             <span>{singleService?.title || "Service Not Found"}</span>
-            <Suspense fallback={<div>Loading Star...</div>}>
+            <Suspense
+              fallback={
+                <div>
+                  <LoadingStar />
+                </div>
+              }
+            >
               <Star />
             </Suspense>
           </div>
@@ -469,13 +494,17 @@ function EachServicePage() {
           </div>
           <div className="each-service-howWeDo-section">
             {singleService?.whatWeDo?.length ? (
-              <HorizontalScrollContainer singleServiceWhatweDo={singleService.whatWeDo} />
+              <HorizontalScrollContainer
+                singleServiceWhatweDo={singleService.whatWeDo}
+              />
             ) : (
               <div />
             )}
           </div>
           <div className="each-service-howWeDo-section-mob">
-            <HorizontalScrollMobile singleServiceWhatweDo={singleService?.whatWeDo || []} />
+            <HorizontalScrollMobile
+              singleServiceWhatweDo={singleService?.whatWeDo || []}
+            />
           </div>
           {/* Commented-out section with image, adding loading="lazy" for completeness */}
           {/* <div className="each-service-card-section">
@@ -492,7 +521,13 @@ function EachServicePage() {
               </div>
             ))}
           </div> */}
-          <Suspense fallback={<div>Loading FAQs...</div>}>
+          <Suspense
+            fallback={
+              <div>
+                <LoadingStar />
+              </div>
+            }
+          >
             <FAQComp />
           </Suspense>
         </div>
@@ -500,10 +535,22 @@ function EachServicePage() {
           <SuggestionService />
         </div>
         <div>
-          <Suspense fallback={<div>Loading Footer...</div>}>
+          <Suspense
+            fallback={
+              <div>
+                <LoadingStar />
+              </div>
+            }
+          >
             <Footer />
           </Suspense>
-          <Suspense fallback={<div>Loading Mobile Footer...</div>}>
+          <Suspense
+            fallback={
+              <div>
+                <LoadingStar />
+              </div>
+            }
+          >
             <MobileFooter />
           </Suspense>
         </div>
