@@ -587,10 +587,12 @@
   }
 
   100% {
-    transform: translateX(-250%);
+    transform: translateX(-100%);
   }
 }
-
+.about-team-marquee-desk {
+  overflow: hidden;
+}
 .about-team-img {
   width: 100%;
   transition: width 0.3s ease;
@@ -631,6 +633,7 @@
   height: 25rem;
   width: 20rem;
   position: relative;
+  border-radius: 0.5rem;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   /* animation: scroll 5s linear;
@@ -645,10 +648,12 @@
   /* transform: translateY(0); */
 }
 
+/* // here only problem ------------------------------------------------*/
+
 .about-team-card:hover {
   background-color: #f8faff;
   padding: 1rem;
-  width: 30rem;
+  width: 30rem; 
   border-radius: 0.5rem;
   box-sizing: border-box;
 }
@@ -685,8 +690,8 @@
 
   .about-team-card.about-team-card-active {
     background-color: #f8faff;
-    padding: 1rem;
-    min-width: 100%;
+    padding: 0.5rem;
+    min-width: 90%;
     border-radius: 0.5rem;
     box-sizing: border-box;
   }
@@ -697,7 +702,7 @@
   }
 
   .about-team-card-active .about-team-img>img {
-    width: 100%;
+    width: 63%;
     object-fit: cover;
     aspect-ratio: 185 / 220;
   }
@@ -707,6 +712,7 @@
     height: 25rem;
     min-width: 20rem;
     position: relative;
+    pad: 1rem;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     /* animation: scroll 5s linear;

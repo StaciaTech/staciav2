@@ -1230,8 +1230,6 @@
 
 // export default SingleCaseStudy;
 
-
-
 // import React, { useEffect, useState, useRef } from "react";
 // import { useParams, Link } from "react-router-dom";
 // import "../styles/SingleCaseStudy.css";
@@ -1663,7 +1661,6 @@
 //               {caseStudy.EconomicImpact.description2}
 //             </p>
 
-
 //             {/* ChallengesandBarriers */}
 //             <h2 className="single-casestudy-layout1-title test-selection-blue">
 //               {caseStudy.ChallengesandBarriers.title}
@@ -1763,7 +1760,6 @@
 //               ))}
 //             </ul>
 
-
 //             {/* Regional Variations Section */}
 //             <h2 className="single-casestudy-layout1-title test-selection-blue">
 //               {caseStudy.RegionalVariations.title}
@@ -1806,7 +1802,6 @@
 //             <p className="problem-statement-para1">
 //               {caseStudy.ChallengesInRegion.ChallengesDescription1}
 //             </p>
-
 
 //             {/* Environmental Impact */}
 //             <h2 className="single-casestudy-layout1-title test-selection-blue">
@@ -2040,8 +2035,6 @@
 
 // export default SingleCaseStudy;
 
-
-
 // import React, { useEffect, useState, useRef } from "react";
 // import { useParams, Link } from "react-router-dom";
 // import "../styles/SingleCaseStudy.css";
@@ -2052,8 +2045,7 @@
 // import CaseStudyAudio from "../components/CaseStudy/CaseStudyaudio";
 // import data from "../Data/SingleCaseStudy.json";
 // import loading from "../assets/loading.png";
-// import { IoMdClose } from "react-icons/io"; 
-
+// import { IoMdClose } from "react-icons/io";
 
 // import SuggestionCasestudys from "../components/ReUsableComp/SuggestionCasestudys";
 // import SuggestionProjects from "../components/ReUsableComp/SuggestionProjects";
@@ -2801,10 +2793,6 @@
 //             </div>
 //           </div>
 //         </div>
-      
-   
-    
-
 
 //         {/* Other Case Studies Section */}
 //        <SuggestionCasestudys/>
@@ -3829,6 +3817,8 @@ function SingleCaseStudy() {
         </div>
 
         {/* Other Case Studies Section */}
+        <SuggestionService />
+        <SuggestionProducts />
         <SuggestionCasestudys />
       </div>
 

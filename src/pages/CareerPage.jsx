@@ -266,6 +266,7 @@ function CareerPage() {
     </Suspense>
   );
 }
+
 const HorizontalScrollContainer = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -280,16 +281,14 @@ const HorizontalScrollContainer = () => {
 
       if (width <= 768) {
         setXRange(["1%", "-80%"]); // mobile
-      } else if (width <= 1024) {
-        setXRange(["1%", "-200%"]); // tablets/small laptops
       } else if (width <= 1366) {
-        setXRange(["1%", "-160%"]); // mid laptops
+        setXRange(["1%", "-100%"]); // small screen and big screen 
       } else {
-        setXRange(["1%", "-35%"]); // desktop
+        setXRange(["1%", "-35%"]); //1920
       }
     };
 
-    updateRange(); // Initial call
+    updateRange();  //Initial call
     window.addEventListener("resize", updateRange);
 
     return () => window.removeEventListener("resize", updateRange);
@@ -302,7 +301,7 @@ const HorizontalScrollContainer = () => {
       <div
         className="career-hiring-data-container"
         style={{
-          height: "100vh",
+          height: "92vh",
           position: "sticky",
           top: "80px",
         }}

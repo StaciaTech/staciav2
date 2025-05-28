@@ -600,7 +600,10 @@ function About() {
             transformative solutions with creativity, collaboration, and a
             passion for excellence, shaping the future of industries worldwide.
           </p>
-          <div style={{ overflow: "auto" }} className="about-team-marquee-desk">
+          <div
+            style={{ overflow: "visible" }}
+            className="about-team-marquee-desk"
+          >
             <Marquee pauseOnHover={true} speed={30} gradient={false}>
               {/* Render the team data twice to ensure seamless looping */}
               {teamData?.map((eachMem, i) => (

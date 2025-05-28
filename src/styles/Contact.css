@@ -318,6 +318,7 @@ body.no-scroll {
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .contact-overlay {
     top: 50px;
+    overflow: hidden;
   }
   .contact-form-container {
     flex-direction: column;
@@ -406,6 +407,7 @@ body.no-scroll {
 @media screen and (min-width: 1025px) {
   .contact-form-container {
     flex-direction: row;
+    overflow: hidden;
   }
 
   .contact-form-image-container {
@@ -457,6 +459,7 @@ body.no-scroll {
   .contact-form-container {
     flex-direction: row;
     padding: 10px;
+    overflow: hidden;
   }
 
   .contact-form-image-container {
@@ -535,6 +538,7 @@ body.no-scroll {
   .contact-form-container {
     flex-direction: row;
     padding: 8px;
+    overflow: hidden;
   }
 
   .contact-form-image-container {

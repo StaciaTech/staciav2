@@ -95,7 +95,7 @@ export default function FourCard({ data, path }) {
               <div className="leader-icon-container">
                 <FaLinkedinIn className="footer-linkedin-icon" />
               </div>
-              <div className="icon-name-1">LinkedIn</div>
+              <div className="icon-name">LinkedIn</div>
             </a>
           </div>
 

@@ -159,6 +159,7 @@ right: 14px;
   .four-grid {
     grid-template-columns: 1fr;
   }
+  
   .four-text {
     font-size: 28px;
     border-bottom: 1px solid rgba(107, 96, 132, 0.5);
@@ -177,9 +178,7 @@ right: 14px;
     bottom: 0.5%;
     gap: 1rem;
   }
-  .four-img:hover .founder-content {
-    display: flex;
-  }
+
   .icon-wrapper {
     display: flex;
     flex-direction: row;
@@ -191,6 +190,11 @@ right: 14px;
     opacity: 1 !important;
     transition: none !important;
   }
+  .four-img:hover .founder-content{
+    align-items: start;
+    justify-content: start;
+   
+   }
 }
 @media (max-width: 425px) {
   .four-text {
@@ -227,9 +231,15 @@ right: 14px;
     gap: 10px;
     width: auto;
   }
+  .four-img:hover .founder-content{
+   align-items: start;
+   justify-content: start;
+  
+  }
   .icon-name {
     font-size: 14px;
     opacity: 1 !important;
     transition: none !important;
   }
+  
 }

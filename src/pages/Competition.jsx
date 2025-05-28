@@ -57,6 +57,7 @@
 
 import React, { Suspense } from "react";
 import "../styles/competition.css";
+import LoadingStar from "../components/LoadingStar";
 // import { useNavigate, Link, Outlet, useLocation } from "react-router-dom";
 // Lazy load components
 const NavBar = React.lazy(() => import("../components/NavBar"));
@@ -78,7 +79,7 @@ const EventList = React.lazy(() =>
 // import evelivetag from "../assets/evelivetag.png";
 const CompetitionPage = () => {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div><LoadingStar/></div>}>
             <div>
                 <div className="nav_style">
                     <NavBar />

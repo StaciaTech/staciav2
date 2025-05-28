@@ -407,6 +407,7 @@ import { SlLike } from "react-icons/sl";
 import { useParams } from "react-router-dom";
 import { motion, useTransform, useScroll } from "framer-motion";
 import servicesData from "../../Data/Services.json";
+import { useState,useEffect } from "react";
 
 import SuggestionService from "../ReUsableComp/SuggestionService";
 import LoadingStar from "../LoadingStar";
@@ -558,14 +559,41 @@ function EachServicePage() {
     </Suspense>
   );
 }
-
 const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
   const targetRef = useRef(null);
+
+  // Use scroll progress to track when the section's bottom reaches the viewport bottom
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    offset: ["end", "start"], // Start when section top hits viewport bottom, end when section bottom hits viewport top
   });
 
-  const x = useTransform(scrollYProgress, [1, 0], ["5%", "-100%"]);
+  // Responsive xRange based on screen width
+  const [xRange, setXRange] = useState(["0%", "-100%"]);
+
+  useEffect(() => {
+    const updateRange = () => {
+      const width = window.innerWidth;
+
+      if (width <= 768) {
+        setXRange(["0%", "-80%"]); // Mobile
+      } else if (width <= 1366) {
+        setXRange(["0%", "-100%"]); // Small and big screens
+      } else {
+        setXRange(["0%", "-60%"]); // 1920px and above
+      }
+    };
+
+    updateRange(); // Initial call
+    window.addEventListener("resize", updateRange);
+
+    return () => window.removeEventListener("resize", updateRange);
+  }, []);
+
+  // Map scroll progress to the responsive xRange
+  const x = useTransform(scrollYProgress, [0, 0.5, 1], ["0%", "0%", xRange[1]]);
+
+  
   return (
     <div ref={targetRef} style={{ height: "50vh", position: "relative" }}>
       <div className="howWeDo-container">
@@ -582,9 +610,7 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
               <div className="each-service-howWeDo-step-title">
                 {eachItem?.title}
               </div>
-              <p className="each-service-howWeDo-step-des">
-                {eachItem?.des}
-              </p>
+              <p className="each-service-howWeDo-step-des">{eachItem?.des}</p>
             </div>
           ))}
         </motion.div>
