@@ -657,6 +657,10 @@
   border-radius: 0.5rem;
   box-sizing: border-box;
 }
+.rfm-marquee-container:hover div {
+  animation: scroll 5s linear;
+  
+}
 
 .about-team-card:hover .about-team-img {
   width: 8rem;

@@ -282,7 +282,7 @@ const HorizontalScrollContainer = () => {
       if (width <= 768) {
         setXRange(["1%", "-80%"]); // mobile
       } else if (width <= 1366) {
-        setXRange(["1%", "-100%"]); // small screen and big screen 
+        setXRange(["1%", "-90%"]); // small screen and big screen 
       } else {
         setXRange(["1%", "-35%"]); //1920
       }

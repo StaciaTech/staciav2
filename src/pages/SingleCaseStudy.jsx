@@ -3308,62 +3308,52 @@ function SingleCaseStudy() {
               {caseStudy.EconomicImpact?.description2 || ""}
             </p>
             {/* Challenges and Barriers */}
-            <h2 className="challenges-barriers-title test-selection-blue">
-              {" "}
-              {/* Changed from single-casestudy-layout1-title */}
-              {caseStudy.ChallengesandBarriers?.title ||
-                "Challenges and Barriers"}
-            </h2>
-            <p className="challenges-barriers-description">
-              {" "}
-              {/* Changed from problem-statement-para1 */}
-              {caseStudy.ChallengesandBarriers?.Description || ""}
-            </p>
-            <ul className="challenges-barriers-list">
-              {" "}
-              {/* Changed from problem-statement-para2 */}
-              {caseStudy.ChallengesandBarriers?.Impacts?.map(
-                (impact, index) => (
-                  <li key={index} className="challenges-barriers-list-item">
-                    {" "}
-                    {/* Changed from li-text */}
-                    <span className="highlight">{impact.highlight}:</span>{" "}
-                    {impact.text}
-                  </li>
-                )
-              ) || <li>No challenges listed.</li>}
-            </ul>
-            <p className="challenges-barriers-description-2">
-              {" "}
-              {/* Changed from problem-statement-para1 */}
-              {caseStudy.ChallengesandBarriers?.description2 || ""}
-            </p>
-            {/* Strategies to Overcome Barriers */}
-            <h2 className="strategies-overcome-title test-selection-blue">
-              {" "}
-              {/* Changed from single-casestudy-layout1-title */}
-              {caseStudy.StrategiesToOvercome?.title ||
-                "Strategies to Overcome"}
-            </h2>
-            <p className="strategies-overcome-description">
-              {" "}
-              {/* Changed from problem-statement-para1 */}
-              {caseStudy.StrategiesToOvercome?.Description || ""}
-            </p>
-            <ul className="strategies-overcome-list">
-              {" "}
-              {/* Changed from problem-statement-para2 */}
-              {caseStudy.StrategiesToOvercome?.Strategies?.map(
-                (strategy, index) => (
-                  <li key={index} className="strategies-overcome-list-item">
-                    {" "}
-                    {/* Changed from li-text */}
-                    <span className="highlight">{strategy.strategy}:</span>{" "}
-                    {strategy.description}
-                  </li>
-                )
-              ) || <li>No strategies listed.</li>}
-            </ul>
+            <div className="split">
+              {/* Challenges and Barriers Section */}
+              <div>
+                <h2 className="challenges-barriers-title test-selection-blue">
+                  {caseStudy.ChallengesandBarriers?.title ||
+                    "Challenges and Barriers"}
+                </h2>
+                <p className="challenges-barriers-description">
+                  {caseStudy.ChallengesandBarriers?.Description || ""}
+                </p>
+                <ul className="challenges-barriers-list">
+                  {caseStudy.ChallengesandBarriers?.Impacts?.map(
+                    (impact, index) => (
+                      <li key={index} className="challenges-barriers-list-item">
+                        <span className="highlight">{impact.highlight}:</span>{" "}
+                        {impact.text}
+                      </li>
+                    )
+                  ) || <li>No challenges listed.</li>}
+                </ul>
+                <p className="challenges-barriers-description-2">
+                  {caseStudy.ChallengesandBarriers?.description2 || ""}
+                </p>
+              </div>
+
+              {/* Strategies to Overcome Barriers Section */}
+              <div>
+                <h2 className="strategies-overcome-title test-selection-blue">
+                  {caseStudy.StrategiesToOvercome?.title ||
+                    "Strategies to Overcome"}
+                </h2>
+                <p className="strategies-overcome-description">
+                  {caseStudy.StrategiesToOvercome?.Description || ""}
+                </p>
+                <ul className="strategies-overcome-list">
+                  {caseStudy.StrategiesToOvercome?.Strategies?.map(
+                    (strategy, index) => (
+                      <li key={index} className="strategies-overcome-list-item">
+                        <span className="highlight">{strategy.strategy}:</span>{" "}
+                        {strategy.description}
+                      </li>
+                    )
+                  ) || <li>No strategies listed.</li>}
+                </ul>
+              </div>
+            </div>
             {/* Future Trends */}
             <h2 className="future-trends-title test-selection-blue">
               {" "}

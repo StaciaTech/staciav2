@@ -520,10 +520,25 @@
                 "Design a conveyor mechanism to transport the pulp for further processing.ResearchGate+1IJSTR+1"
               ],
               "Challenges": [
-                "Designing a pod breaking mechanism that minimizes noise without compromising efficiency.",
-                "Ensuring complete separation of husks from the pulp to maintain product purity.",
-                "Creating a conveyor system that handles the delicate pulp without causing damage.",
+                {
+                  "id": 1,
+                  "des": " Designing a pod breaking mechanism that minimizes noise without compromising efficiency."
+                },
+                {
+                  "id": 2,
+                  "des": "Ensuring complete separation of husks from the pulp to maintain product purity."
+                },
+                {
+                  "id": 3,
+                  "des":  "Creating a conveyor system that handles the delicate pulp without causing damage."
+                },
+                {
+                  "id": 4,
+                  "des":  
                 "Developing a compact and cost-effective design suitable for small to medium-scale operations."
+                }
+
+             
               ],
               "Solutions": [
                 {
@@ -755,13 +770,13 @@
           ]
         },
         {
-          "name": "Kitchen Appliances",
+          "name": "Kitchen-Appliances",
           "projects": [
             {
               "id": 6,
-              "title": "Butterfly 3-Burner Stove",
+              "title": "butterfly 3 burner stove",
               "mainDesc": "A 3-burner stove with toughened glass tops, high-efficiency brass burners, ergonomic knobs, and safety features like anti-skid feet, designed for modern kitchens",
-              "mainImageUrl": "/assets/ProjectPage/Chilli solar house.webp",
+              "mainImageUrl": "/assets/ProjectPage/Gas_Stove_butterfly.webp",
               "Executive-Summary": "The Butterfly 3-Burner Stove exemplifies the harmonious blend of modern aesthetics and advanced functionality, catering to contemporary kitchen needs. With features like toughened glass tops, high-efficiency brass burners, and ergonomic designs, it offers both style and performance. This Project delves into the product's development journey, highlighting the challenges faced, solutions implemented, and the resulting impact on users.",
               "Client-Overview": "Butterfly, a renowned Indian kitchen appliance brand, has consistently delivered innovative and reliable products. Collaborating with design experts, Butterfly aimed to create a stove that not only performs efficiently but also enhances kitchen aesthetics.",
               "Project-Objective": [
@@ -1069,11 +1084,33 @@
                 "Ensure portability with a 5000 mAh rechargeable battery lasting up to 2 days."
               ],
               "Challenges": [
-                "Developing an instant heating and cooling mechanism within a compact bottle design.",
-                "Achieving safe and sustainable thermal insulation that is both efficient and eco-friendly.",
-                "Designing an intuitive and non-intrusive user interface with multi-color LED feedback.",
-                "Ensuring long battery life without increasing the product’s weight or form factor.",
-                "Syncing hardware functionality with a robust mobile application for remote operation."
+                {
+                  "id": 1,
+                  "des": "Developing an instant heating and cooling mechanism within a compact bottle design."
+                },
+                {
+                  "id": 2,
+                  "des":  "Achieving safe and sustainable thermal insulation that is both efficient and eco-friendly."
+                },
+                {
+                  "id": 3,
+                  "des":     "Designing an intuitive and non-intrusive user interface with multi-color LED feedback."
+                },
+                {
+                  "id": 4,
+                  "des":  "Ensuring long battery life without increasing the product’s weight or form factor."
+              
+                },
+                {
+                  "id": 5,
+                  "des": "Syncing hardware functionality with a robust mobile application for remote operation."
+              
+                }
+                
+               
+             
+              
+                
               ],
               "Solutions": [
                 {

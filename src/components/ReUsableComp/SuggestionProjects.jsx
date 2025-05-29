@@ -10,13 +10,22 @@ const SuggestionProjects = ({ currentProjectId }) => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
+  // Function to format title for URL: replace spaces with hyphens
+  const formatTitleForUrl = (title) => {
+    return encodeURIComponent(title?.replace(/\s+/g, "-") || "");
+  };
+
   // Flatten the nested JSON structure to get all projects
   const allProjects = [];
   data.Departments.forEach((department) => {
     department.categories.forEach((category) => {
       category.projects.forEach((project) => {
         if (project.id !== currentProjectId) {
-          allProjects.push(project);
+          allProjects.push({
+            ...project, // Include all project properties (id, title, mainImageUrl, mainDesc)
+            departmentName: department.name,
+            categoryName: category.name,
+          });
         }
       });
     });
@@ -87,14 +96,20 @@ const SuggestionProjects = ({ currentProjectId }) => {
           {allProjects.length > 0 ? (
             allProjects.map((project, index) => (
               <div key={project.id} className="suggestion-casestudy-card">
-                <Link to={`/projects/${project.id}`}>
+                <Link
+                  to={`/project/${formatTitleForUrl(
+                    project.departmentName
+                  )}/${formatTitleForUrl(
+                    project.categoryName
+                  )}/${formatTitleForUrl(project.title)}`}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   <img
                     src={
                       project.mainImageUrl ||
                       "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
                     }
                     alt={project.title || "Project"}
-                    onClick={() => window.scrollTo(0, 0)}
                   />
                 </Link>
                 <div className="content">
@@ -105,8 +120,13 @@ const SuggestionProjects = ({ currentProjectId }) => {
                       : project.mainDesc || "No description available."}
                   </p>
                   <Link
-                    to={`/projects/${project.id}`}
+                    to={`/project/${formatTitleForUrl(
+                      project.departmentName
+                    )}/${formatTitleForUrl(
+                      project.categoryName
+                    )}/${formatTitleForUrl(project.title)}`}
                     onClick={() => window.scrollTo(0, 0)}
+                    className="know-more-link"
                   >
                     Know more →
                   </Link>

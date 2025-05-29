@@ -72,6 +72,7 @@ const PastEventCard = React.lazy(() =>
 const EventList = React.lazy(() =>
     import("../components/Competition/EventList")
 );
+
 // import back from "../assets/leftarrow.png";
 // import next from "../assets/rightarrow.png";
 // import vector from "../assets/vector1.png";

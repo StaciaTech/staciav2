@@ -20,6 +20,186 @@
   justify-content: center;
 }
 
+/* split */
+
+
+/* Development Process Section */
+.development-process-section {
+  padding: 2rem 0;
+}
+
+.development-process-title {
+  font-family: EuclidSemiBold;
+  font-size: 2rem;
+  line-height: 1.5;
+  padding: 20px 0;
+  color: #1e40af; /* Matches test-selection-blue */
+}
+
+/* Split Layout */
+.split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.split-column {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Stage Section */
+.stage-section {
+  margin-bottom: 2rem; /* Gap between sections like in the image */
+}
+
+/* Stage Titles */
+.temp5-sec4-title {
+  font-family: EuclidSemiBold;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 10px 0;
+  position: relative;
+  color: #1e40af; /* Matches test-selection-blue */
+}
+
+/* Blue vertical bar before the title (simulating the image) */
+.temp5-sec4-title::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #1e40af; /* Matches the blue bar in the image */
+}
+
+/* Gate Subheading */
+.temp5-sec4-subheading {
+  font-family: EuclidSemiBold;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 15px 0 5px 0;
+  color: #1e40af; /* Matches test-selection-blue */
+}
+
+/* Bullet Points */
+.sol {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.para-temp-styles.temp-margin {
+  font-size: 1.25rem;
+  color: #6b6084;
+  font-family: EuclidMedium;
+  line-height: 2rem;
+  padding: 5px 0; /* Consistent padding for bullet points */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .split {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .development-process-title {
+    font-size: 2rem;
+  }
+
+  .temp5-sec4-title {
+    font-size: 1.25rem;
+  }
+
+  .temp5-sec4-subheading {
+    font-size: 1rem;
+  }
+
+  .para-temp-styles.temp-margin {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .stage-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .split {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .development-process-title {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    padding: 1rem 0;
+  }
+
+  .temp5-sec4-title {
+    font-size: clamp(1.125rem, 3vw, 1.25rem);
+    padding: 8px 0;
+  }
+
+  .temp5-sec4-subheading {
+    font-size: 1rem;
+    padding: 10px 0 5px 0;
+  }
+
+  .para-temp-styles.temp-margin {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 3px 0;
+  }
+
+  .sol {
+    margin-left: 1.25rem;
+  }
+
+  .stage-section {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .split {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .development-process-title {
+    font-size: 1.25rem;
+    padding: 0.75rem 0;
+  }
+
+  .temp5-sec4-title {
+    font-size: 1rem;
+    padding: 5px 0;
+  }
+
+  .temp5-sec4-subheading {
+    font-size: 0.875rem;
+    padding: 8px 0 3px 0;
+  }
+
+  .para-temp-styles.temp-margin {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 2px 0;
+  }
+
+  .sol {
+    margin-left: 1rem;
+  }
+
+  .stage-section {
+    margin-bottom: 0.75rem;
+  }
+}
+
 .temp5-p-section {
   width: 100%;
   height: 100vh;
