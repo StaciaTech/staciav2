@@ -32,7 +32,7 @@
     /* justify-content: space-between; */
     flex-wrap: wrap;
     margin-bottom: 10px;
-    gap: 200px;
+    /* gap: 200px; */
   }
 
 
@@ -181,6 +181,7 @@
     .header-section {
       flex-direction: column;
       align-items: flex-start;
+      gap: 10px;
     }
 
     .icons {
@@ -229,6 +230,10 @@
     .publisher-section {
       flex-direction: row;
       align-items: center;
+    }
+    .topic span {
+      color: #0047FF;
+      font-size: 10px;
     }
 
     .header-section {

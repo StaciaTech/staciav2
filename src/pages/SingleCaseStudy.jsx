@@ -3845,6 +3845,7 @@ import SuggestionProjects from "../components/ReUsableComp/SuggestionProjects";
 import SuggestionProducts from "../components/ReUsableComp/SuggestionProducts";
 import SuggestionService from "../components/ReUsableComp/SuggestionService";
 import SuggestionArticles from "../components/ReUsableComp/SuggestionArticles";
+import LoadingStar from "../components/LoadingStar";
 
 // Helper function to render lists dynamically
 const renderList = (items, keyPrefix, listClass, itemClass, highlightClass = "highlight") => {
@@ -3997,7 +3998,7 @@ function SingleCaseStudy() {
   if (!caseStudy) {
     return (
       <div className="loading-container">
-        <p>Loading case study...</p>
+        <p><LoadingStar/></p>
       </div>
     );
   }

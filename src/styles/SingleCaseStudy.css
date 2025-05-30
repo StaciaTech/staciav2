@@ -679,164 +679,34 @@
   text-decoration: none;
 }
 
-/* Responsive Styles (max-width: 1024px) */
-@media screen and (max-width: 1024px) {
-  .case-study-title {
-    font-size: 2rem;
-    text-align: center;
+/* Media Query for 320px Screen Width */
+@media screen and (max-width: 320px) {
+  /* Main Section Styles */
+  .single-casestudy-section {
+    min-height: 80vh;
   }
 
-  .case-study-content {
-    padding: 1.5rem;
-  }
-
-  .overview-image-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .conclusion-content > *:nth-child(1),
-  .conclusion-content > *:nth-child(2),
-  .overview-image-content > div,
-  .overview-image-content > p {
-    width: 100%;
-  }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .gallery-grid > *:nth-child(4) {
-    grid-column: span 2;
-  }
-
-  .case-study-overview-title,
-  .problem-statement-title,
-  .case-analysis-title,
-  .challenges-title,
-  .proposed-solution-title,
-  .key-processes-title,
-  .statistics-title,
-  .economic-impact-title,
-  .challenges-barriers-title,
-  .strategies-overcome-title,
-  .future-trends-title,
-  .employment-impact-title,
-  .regional-variations-title,
-  .case-studies-title,
-  .regional-challenges-title,
-  .environmental-impact-title,
-  .quality-safety-title,
-  .stakeholder-perspectives-title,
-  .development-process-title,
-  .impact-benefits-title,
-  .conclusion-title {
-    font-size: 2rem;
-  }
-
-  /* Help Section */
-  .help-popup {
-    width: 100%;
-    padding: 1rem;
-    margin-top: 100px;
-    border-radius: 20px;
-    max-height: 70vh;
-    overflow-y: auto;
-    flex-direction: column;
-  }
-
-  .help-sidebar {
-    padding-right: 0;
-    margin-bottom: 1rem;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .help-sidebar h2 {
-    font-size: 20px;
-    left: 0;
-    bottom: 2px;
-    text-align: center;
-  }
-
-  .help-tabs {
-    justify-content: center;
-  }
-
-  .help-tabs button {
-    font-size: 12px;
-    padding: 6px 10px;
-    margin-bottom: 6px;
-  }
-
-  .help-links {
-    font-size: 14px;
-    width: 100%;
-  }
-
-  .help-links li {
-    padding: 12px 0;
-  }
-
-  .help-card {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .help-card img {
-    height: 150px;
-  }
-
-  .help-card h3 {
-    font-size: 16px;
-  }
-
-  .help-card p,
-  .help-card a {
-    font-size: 12px;
-  }
-
-  .help-close-button {
-    font-size: 24px;
-    top: 10px;
-    right: 15px;
-  }
-
-  /* Other Case Studies */
-  .other-case-studies {
-    padding: 1rem 1.5rem;
-  }
-
-  .other-case-studies h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  /* Main Section */
   .single-casestudy-section-overlay {
     width: 95%;
+    min-height: 80vh;
+  }
+
+  .case-study-title {
+    font-size: 5vw;
+    padding: 1rem;
   }
 
   .case-study-header {
-    width: 108%;
-  }
-
-  .case-study-title {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
-    padding: 1rem;
-    text-align: center;
+    min-height: 60vh;
   }
 
   /* Content Container */
   .case-study-content {
-    padding: clamp(0.75rem, 2vw, 1rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
   }
 
-  /* Titles */
   .case-study-overview-title,
   .problem-statement-title,
   .case-analysis-title,
@@ -857,12 +727,17 @@
   .stakeholder-perspectives-title,
   .development-process-title,
   .impact-benefits-title,
-  .conclusion-title {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
-    padding: 1rem 0;
+  .conclusion-title,
+  .background-title,
+  .development-process-section h2,
+  .challenges-faced-section h2,
+  .other-case-studies h2,
+  .impact-benefits-section h2 {
+    font-size: 1rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
-  /* Descriptions */
   .overview-description,
   .background-description-1,
   .background-description-2,
@@ -895,15 +770,49 @@
   .regional-challenges-description-2,
   .environmental-impact-description,
   .quality-safety-description,
-  .stakeholder-perspectives-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 0.5rem 0;
+  .stakeholder-perspectives-description,
+  .background-content,
+  .development-process-section p,
+  .challenges-faced-section p,
+  .problem-statement-list-item,
+  .challenges-list-item,
+  .benefit-list-item,
+  .process-list-item,
+  .statistics-list-item,
+  .economic-impact-list-item,
+  .challenges-barriers-list-item,
+  .strategies-overcome-list-item,
+  .future-trends-list-item,
+  .job-displacement-list-item,
+  .job-creation-list-item,
+  .transition-strategies-list-item,
+  .job-creation-sublist-item,
+  .transition-strategies-sublist-item,
+  .adoption-factors-list-item,
+  .case-studies-list-item,
+  .regional-challenges-list-item,
+  .environmental-impact-list-item,
+  .quality-safety-list-item,
+  .farmer-benefits-list-item,
+  .farmer-challenges-list-item,
+  .farmer-adoption-strategies-list-item,
+  .challenges-faced-list-item,
+  .impact-benefits-list-item,
+  .highlight {
+    font-size: 0.7rem;
+    line-height: 1.6rem;
+    padding: 5px 0;
+  }
+
+  .background-content:first-of-type::first-letter {
+    font-size: 2rem;
+    line-height: 0.7;
+    margin-right: 0.1rem;
   }
 
   .overview-image-content {
     flex-direction: column;
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
   }
 
   .overview-image-content > div,
@@ -911,26 +820,14 @@
     width: 100%;
   }
 
-  .background-content {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  .background-title {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
-    padding: 1.25rem 0;
-  }
-
   /* Gallery */
   .gallery-grid {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
   .gallery-grid > *:nth-child(4) {
-    grid-column: auto;
+    grid-column: span 1;
   }
 
   /* Conclusion */
@@ -946,11 +843,33 @@
 
   .conclusion-description {
     font-size: 1rem;
-    line-height: 1.6;
-    margin-top: 0.75rem;
+    line-height: 1.6rem;
+    margin-top: 0.5rem;
   }
 
-  /* Lists */
+  /* Development Process */
+  .development-process-section h3 {
+    font-size: 1.25rem;
+    padding: 15px 0;
+  }
+
+  /* Challenges Faced */
+  .challenges-faced-section li {
+    margin-left: 20px;
+    padding: 3px 0;
+  }
+
+  /* Impact and Benefits */
+  .impact-benefits-section {
+    padding: 5px;
+  }
+
+  .impact-benefits-section li {
+    margin-left: 20px;
+    padding: 3px 0;
+  }
+
+  /* List Items */
   .problem-statement-list,
   .challenges-list,
   .proposed-solution-benefits,
@@ -973,190 +892,87 @@
   .farmer-benefits-list,
   .farmer-challenges-list,
   .farmer-adoption-strategies-list {
-    font-size: 1rem;
+    margin-left: 20px;
     line-height: 1.6;
-    margin-left: 1.25rem;
-    padding: 0.5rem 0;
-  }
-
-  .problem-statement-list-item,
-  .challenges-list-item,
-  .benefit-list-item,
-  .process-list-item,
-  .statistics-list-item,
-  .economic-impact-list-item,
-  .challenges-barriers-list-item,
-  .strategies-overcome-list-item,
-  .future-trends-list-item,
-  .job-displacement-list-item,
-  .job-creation-list-item,
-  .transition-strategies-list-item,
-  .job-creation-sublist-item,
-  .transition-strategies-sublist-item,
-  .adoption-factors-list-item,
-  .case-studies-list-item,
-  .regional-challenges-list-item,
-  .environmental-impact-list-item,
-  .quality-safety-list-item,
-  .farmer-benefits-list-item,
-  .farmer-challenges-list-item,
-  .farmer-adoption-strategies-list-item,
-  .challenges-faced-list-item,
-  .impact-benefits-list-item {
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 0.25rem;
-  }
-
-  .highlight {
-    font-size: 1.125rem;
-  }
-
-  /* Development Process */
-  .development-process-section h2 {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
-  }
-
-  .development-process-section h3 {
-    font-size: 1.25rem;
-    padding: 1rem 0;
-  }
-
-  .development-process-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  /* Challenges Faced */
-  .challenges-faced-section h2 {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
-    padding: 1rem 0;
-  }
-
-  .challenges-faced-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 0.5rem;
-  }
-
-  .challenges-faced-section li {
-    font-size: 1rem;
-    margin-left: 1.25rem;
-    line-height: 1.6;
-    padding: 0.25rem 0;
-  }
-
-  /* Impact and Benefits */
-  .impact-benefits-section {
-    padding: 0.5rem;
-  }
-
-  .impact-benefits-section h2 {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
-    padding: 0.5rem;
-  }
-
-  .impact-benefits-section li {
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 0.5rem;
-    margin-left: 1.25rem;
   }
 
   /* Help Button */
   .help-button {
-    font-size: 1rem;
-    padding: 0.75rem 1rem;
-    gap: 0.5rem;
-    bottom: clamp(60px, 10vw, 70px);
+    bottom: 50px;
+    padding: 5px 14px;
+    font-size: 9px;
+    gap: 0px;
+    width: 41%;
   }
 
   /* Help Section */
   .help-popup {
-    padding: 0.75rem;
-    margin-top: clamp(60px, 10vw, 70px);
-    border-radius: 16px;
-    max-height: 70vh;
-    overflow-y: auto;
     flex-direction: column;
+    max-width: 90%;
+    padding: 1rem;
+    border-radius: 20px;
   }
 
   .help-sidebar {
     padding-right: 0;
-    margin-bottom: 0.75rem;
     border-right: none;
     border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
   }
 
   .help-sidebar h2 {
-    font-size: clamp(1rem, 3vw, 1.25rem);
-    left: 0;
-    bottom: 0;
-    text-align: center;
-  }
-
-  .help-tabs {
-    justify-content: center;
-    gap: 0.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
   }
 
   .help-tabs button {
-    font-size: clamp(0.75rem, 2vw, 0.875rem);
-    padding: 0.5rem 0.75rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .help-links {
-    font-size: 1rem;
+    padding: 6px 10px;
+    font-size: 12px;
   }
 
   .help-links li {
-    padding: 0.75rem 0;
+    padding: 10px 0;
+    font-size: 14px;
   }
 
   .help-card {
-    padding: 0.75rem;
+    padding: 1rem;
   }
 
   .help-card img {
-    height: clamp(100px, 20vw, 120px);
+    height: 150px;
   }
 
   .help-card h3 {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
-  .help-card p,
-  .help-card a {
-    font-size: clamp(0.75rem, 2vw, 0.875rem);
+  .help-card p {
+    font-size: 12px;
   }
 
   .help-close-button {
-    font-size: clamp(1rem, 3vw, 1.25rem);
-    top: 0.75rem;
-    right: 0.75rem;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
   }
 
   /* Other Case Studies */
   .other-case-studies {
-    padding: clamp(0.75rem, 2vw, 1rem);
+    padding: 1rem;
   }
 
   .other-case-studies h2 {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    font-size: 1.75rem;
     margin-bottom: 1rem;
   }
 
   .other-case-study-card {
-    width: clamp(260px, 80vw, 300px);
+    width: 280px;
   }
 
   .other-case-study-card img {
-    height: clamp(140px, 40vw, 160px);
-  }
-
-  .other-case-study-content {
-    padding: 0.75rem;
+    height: 150px;
   }
 
   .other-case-study-content h3 {
@@ -1164,35 +980,45 @@
   }
 
   .other-case-study-content p {
-    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    font-size: 0.8rem;
   }
 
   .know-more-link {
-    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    font-size: 0.85rem;
   }
 }
 
-/* Responsive Styles (max-width: 320px) */
-@media screen and (max-width: 320px) {
-  /* Main Section */
+/* Media Query for Screen Widths from 321px to 765px */
+@media screen and (min-width: 321px) and (max-width: 765px) {
+  /* Main Section Styles */
+  .single-casestudy-section {
+    min-height: 80vh;
+  }
+
   .single-casestudy-section-overlay {
-    width: 100%;
+    width: 92%;
+    min-height: 80vh;
   }
-  .case-study-header {
-    width: 112%;
-  }
+
   .case-study-title {
-    font-size: 1.25rem;
-    padding: 0.75rem;
-    text-align: center;
+    font-size: 6vw;
+    padding: 3rem;
+  }
+
+  .case-study-header {
+    min-height: 70vh;
+    width: 129%;
+    
   }
 
   /* Content Container */
   .case-study-content {
-    padding: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.75rem;
+    width: 129%;
   }
 
-  /* Titles */
   .case-study-overview-title,
   .problem-statement-title,
   .case-analysis-title,
@@ -1213,12 +1039,17 @@
   .stakeholder-perspectives-title,
   .development-process-title,
   .impact-benefits-title,
-  .conclusion-title {
-    font-size: 1.25rem;
-    padding: 0.75rem 0;
+  .conclusion-title,
+  .background-title,
+  .development-process-section h2,
+  .challenges-faced-section h2,
+  .other-case-studies h2,
+  .impact-benefits-section h2 {
+    font-size: 1.75rem;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 
-  /* Descriptions */
   .overview-description,
   .background-description-1,
   .background-description-2,
@@ -1251,90 +1082,10 @@
   .regional-challenges-description-2,
   .environmental-impact-description,
   .quality-safety-description,
-  .stakeholder-perspectives-description {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    padding: 0.5rem 0;
-  }
-
-  .overview-image-content {
-    flex-direction: column;
-    padding: 0.5rem 0;
-  }
-
-  .overview-image-content > div,
-  .overview-image-content > p {
-    width: 100%;
-  }
-
-  .background-content {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 0.75rem;
-  }
-
-  .background-title {
-    font-size: 1.25rem;
-    padding: 1rem 0;
-  }
-
-  /* Gallery */
-  .gallery-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .gallery-grid > *:nth-child(4) {
-    grid-column: auto;
-  }
-
-  /* Conclusion */
-  .conclusion-content {
-    flex-direction: column;
-    padding: 1rem 0;
-  }
-
-  .conclusion-content > *:nth-child(1),
-  .conclusion-content > *:nth-child(2) {
-    width: 100%;
-  }
-
-  .conclusion-description {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-top: 0.5rem;
-  }
-
-  /* Lists */
-  .problem-statement-list,
-  .challenges-list,
-  .proposed-solution-benefits,
-  .key-processes-list,
-  .statistics-list,
-  .economic-impact-list,
-  .challenges-barriers-list,
-  .strategies-overcome-list,
-  .future-trends-list,
-  .job-displacement-list,
-  .job-creation-list,
-  .transition-strategies-list,
-  .job-creation-sublist,
-  .transition-strategies-sublist,
-  .adoption-factors-list,
-  .case-studies-list,
-  .regional-challenges-list,
-  .environmental-impact-list,
-  .quality-safety-list,
-  .farmer-benefits-list,
-  .farmer-challenges-list,
-  .farmer-adoption-strategies-list {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-left: 1rem;
-    padding: 0.5rem 0;
-  }
-
+  .stakeholder-perspectives-description,
+  .background-content,
+  .development-process-section p,
+  .challenges-faced-section p,
   .problem-statement-list-item,
   .challenges-list-item,
   .benefit-list-item,
@@ -1358,406 +1109,504 @@
   .farmer-challenges-list-item,
   .farmer-adoption-strategies-list-item,
   .challenges-faced-list-item,
-  .impact-benefits-list-item {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    padding: 0.25rem;
+  .impact-benefits-list-item,
+  .highlight {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    padding: 6px 0;
   }
 
-  .highlight {
-    font-size: 1rem;
+  .background-content:first-of-type::first-letter {
+    font-size: 2.5rem;
+    line-height: 0.7;
+    margin-right: 0.15rem;
+  }
+
+  .overview-image-content {
+    flex-direction: column;
+    padding: 0.75rem 0;
+  }
+
+  .overview-image-content > div,
+  .overview-image-content > p {
+    width: 100%;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .gallery-grid > *:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  /* Conclusion */
+  .conclusion-content {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .conclusion-content > *:nth-child(1),
+  .conclusion-content > *:nth-child(2) {
+    width: 100%;
+  }
+
+  .conclusion-description {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    margin-top: 0.75rem;
   }
 
   /* Development Process */
-  .development-process-section h2 {
-    font-size: 1.25rem;
-  }
-
   .development-process-section h3 {
-    font-size: 1rem;
-    padding: 0.75rem 0;
-  }
-
-  .development-process-section p {
-    font-size: 0.875rem;
-    line-height: 1.5;
+    font-size: 1.35rem;
+    padding: 18px 0;
   }
 
   /* Challenges Faced */
-  .challenges-faced-section h2 {
-    font-size: 1.25rem;
-    padding: 0.75rem 0;
-  }
-
-  .challenges-faced-section p {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    padding: 0.5rem;
-  }
-
   .challenges-faced-section li {
-    font-size: 0.875rem;
-    margin-left: 1rem;
-    line-height: 1.5;
-    padding: 0.25rem 0;
+    margin-left: 30px;
+    padding: 5px 0;
   }
 
   /* Impact and Benefits */
   .impact-benefits-section {
-    padding: 0.5rem;
-  }
-
-  .impact-benefits-section h2 {
-    font-size: 1.25rem;
-    padding: 0.25rem;
+    padding: 8px;
   }
 
   .impact-benefits-section li {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    padding: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 30px;
+    padding: 5px 0;
+  }
+
+  /* List Items */
+  .problem-statement-list,
+  .challenges-list,
+  .proposed-solution-benefits,
+  .key-processes-list,
+  .statistics-list,
+  .economic-impact-list,
+  .challenges-barriers-list,
+  .strategies-overcome-list,
+  .future-trends-list,
+  .job-displacement-list,
+  .job-creation-list,
+  .transition-strategies-list,
+  .job-creation-sublist,
+  .transition-strategies-sublist,
+  .adoption-factors-list,
+  .case-studies-list,
+  .regional-challenges-list,
+  .environmental-impact-list,
+  .quality-safety-list,
+  .farmer-benefits-list,
+  .farmer-challenges-list,
+  .farmer-adoption-strategies-list {
+    margin-left: 30px;
+    line-height: 1.8;
   }
 
   /* Help Button */
   .help-button {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.75rem;
-    gap: 0.25rem;
-    bottom: 60px;
+    bottom: 70px;
+    padding: 10px 15px;
+    font-size: 15px;
+    gap: 8px;
   }
 
   /* Help Section */
   .help-popup {
-    padding: 0.5rem;
-    margin-top: 60px;
-    border-radius: 12px;
-    max-height: 60vh;
-    overflow-y: auto;
     flex-direction: column;
+    max-width: 95%;
+    padding: 1.5rem;
+    border-radius: 30px;
   }
 
   .help-sidebar {
     padding-right: 0;
-    margin-bottom: 0.5rem;
     border-right: none;
     border-bottom: 1px solid #ddd;
+    padding-bottom: 1.5rem;
   }
 
   .help-sidebar h2 {
-    font-size: 1rem;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-  }
-
-  .help-tabs {
-    justify-content: center;
-    gap: 0.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .help-tabs button {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .help-links {
-    font-size: 0.875rem;
+    padding: 7px 11px;
+    font-size: 13px;
   }
 
   .help-links li {
-    padding: 0.5rem 0;
+    padding: 15px 0;
+    font-size: 15px;
   }
 
   .help-card {
-    padding: 0.5rem;
+    padding: 1.25rem;
   }
 
   .help-card img {
-    height: 100px;
+    height: 180px;
   }
 
   .help-card h3 {
-    font-size: 0.875rem;
+    font-size: 17px;
   }
 
-  .help-card p,
-  .help-card a {
-    font-size: 0.75rem;
+  .help-card p {
+    font-size: 13px;
   }
 
   .help-close-button {
-    font-size: 1rem;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
   }
 
   /* Other Case Studies */
   .other-case-studies {
-    padding: 0.75rem;
-  }
-
-  .other-case-studies h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .other-case-study-card {
-    width: 260px;
-  }
-
-  .other-case-study-card img {
-    height: 140px;
-  }
-
-  .other-case-study-content {
-    padding: 0.5rem;
-  }
-
-  .other-case-study-content h3 {
-    font-size: 0.875rem;
-  }
-
-  .other-case-study-content p {
-    font-size: 0.75rem;
-  }
-
-  .know-more-link {
-    font-size: 0.75rem;
-  }
-}
-
-/* Media Queries for .other-case-study-card */
-
-/* Small mobile devices (320px–479px) */
-@media screen and (max-width: 479px) {
-  .other-case-studies {
-    padding: 1rem 1rem;
-  }
-  .other-case-studies h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  .other-case-study-card {
-    width: 280px;
-  }
-  .other-case-study-card img {
-    height: 150px;
-  }
-  .other-case-study-content {
-    padding: 0.75rem;
-  }
-  .other-case-study-content h3 {
-    font-size: 1rem;
-  }
-  .other-case-study-content p {
-    font-size: 0.8rem;
-  }
-  .know-more-link {
-    font-size: 0.85rem;
-  }
-}
-
-/* Medium mobile devices (480px–639px) */
-@media screen and (min-width: 480px) and (max-width: 639px) {
-  .other-case-studies {
-    padding: 1rem 1.5rem;
-  }
-  .other-case-studies h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
-  .other-case-study-card {
-    width: 320px;
-  }
-  .other-case-study-card img {
-    height: 170px;
-  }
-  .other-case-study-content {
-    padding: 1rem;
-  }
-  .other-case-study-content h3 {
-    font-size: 1.1rem;
-  }
-  .other-case-study-content p {
-    font-size: 0.85rem;
-  }
-  .know-more-link {
-    font-size: 0.9rem;
-  }
-}
-
-/* Phablets and small tablets (640px–767px) */
-@media screen and (min-width: 640px) and (max-width: 767px) {
-  .other-case-studies {
     padding: 1.5rem 2rem;
   }
+
   .other-case-studies h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
+
   .other-case-study-card {
-    width: 350px;
+    width: 320px;
   }
+
   .other-case-study-card img {
     height: 180px;
   }
-  .other-case-study-content {
-    padding: 1rem;
-  }
+
   .other-case-study-content h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
+
   .other-case-study-content p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
+
   .know-more-link {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 
-/* Tablets (768px–1023px) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* Media Query for Screen Widths from 766px to 1024px */
+@media screen and (min-width: 766px) and (max-width: 1024px) {
+  /* Main Section Styles */
+  .single-casestudy-section {
+    min-height: 90vh;
+  }
+
+  .single-casestudy-section-overlay {
+    width: 90%;
+    min-height: 90vh;
+  }
+
+  .case-study-title {
+    font-size: 4.5vw;
+    padding: 3.5rem;
+  }
+
+  .case-study-header {
+    min-height: 80vh;
+  }
+
+  /* Content Container */
+  .case-study-content {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
+  }
+
+  .case-study-overview-title,
+  .problem-statement-title,
+  .case-analysis-title,
+  .challenges-title,
+  .proposed-solution-title,
+  .key-processes-title,
+  .statistics-title,
+  .economic-impact-title,
+  .challenges-barriers-title,
+  .strategies-overcome-title,
+  .future-trends-title,
+  .employment-impact-title,
+  .regional-variations-title,
+  .case-studies-title,
+  .regional-challenges-title,
+  .environmental-impact-title,
+  .quality-safety-title,
+  .stakeholder-perspectives-title,
+  .development-process-title,
+  .impact-benefits-title,
+  .conclusion-title,
+  .background-title,
+  .development-process-section h2,
+  .challenges-faced-section h2,
+  .other-case-studies h2,
+  .impact-benefits-section h2 {
+    font-size: 1.9rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .overview-description,
+  .background-description-1,
+  .background-description-2,
+  .problem-statement-description,
+  .problem-statement-description-1,
+  .problem-statement-description-2,
+  .case-analysis-description-1,
+  .case-analysis-description-2,
+  .case-analysis-description-3,
+  .case-analysis-description-4,
+  .proposed-solution-description,
+  .proposed-solution-description-1,
+  .proposed-solution-description-2,
+  .proposed-solution-description-3,
+  .key-processes-description-1,
+  .key-processes-description-2,
+  .key-processes-description-3,
+  .key-processes-description-4,
+  .key-processes-description-5,
+  .statistics-description,
+  .economic-impact-description,
+  .economic-impact-description-2,
+  .challenges-barriers-description,
+  .challenges-barriers-description-2,
+  .strategies-overcome-description,
+  .future-trends-description,
+  .employment-impact-description,
+  .regional-variations-description,
+  .regional-challenges-description,
+  .regional-challenges-description-2,
+  .environmental-impact-description,
+  .quality-safety-description,
+  .stakeholder-perspectives-description,
+  .background-content,
+  .development-process-section p,
+  .challenges-faced-section p,
+  .problem-statement-list-item,
+  .challenges-list-item,
+  .benefit-list-item,
+  .process-list-item,
+  .statistics-list-item,
+  .economic-impact-list-item,
+  .challenges-barriers-list-item,
+  .strategies-overcome-list-item,
+  .future-trends-list-item,
+  .job-displacement-list-item,
+  .job-creation-list-item,
+  .transition-strategies-list-item,
+  .job-creation-sublist-item,
+  .transition-strategies-sublist-item,
+  .adoption-factors-list-item,
+  .case-studies-list-item,
+  .regional-challenges-list-item,
+  .environmental-impact-list-item,
+  .quality-safety-list-item,
+  .farmer-benefits-list-item,
+  .farmer-challenges-list-item,
+  .farmer-adoption-strategies-list-item,
+  .challenges-faced-list-item,
+  .impact-benefits-list-item,
+  .highlight {
+    font-size: 1.15rem;
+    line-height: 1.9rem;
+    padding: 8px 0;
+  }
+
+  .background-content:first-of-type::first-letter {
+    font-size: 2.8rem;
+    line-height: 0.7;
+    margin-right: 0.2rem;
+  }
+
+  .overview-image-content {
+    flex-direction: row;
+    padding: 1rem 0;
+    column-gap: 1.5rem;
+  }
+
+  .overview-image-content > div {
+    width: 65%;
+  }
+
+  .overview-image-content > p {
+    width: 35%;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .gallery-grid > *:nth-child(4) {
+    grid-column: span 3;
+  }
+
+  /* Conclusion */
+  .conclusion-content {
+    flex-direction: row;
+    padding: 2.5rem 0;
+    column-gap: 1.5rem;
+  }
+
+  .conclusion-content > *:nth-child(1) {
+    width: 65%;
+  }
+
+  .conclusion-content > *:nth-child(2) {
+    width: 35%;
+  }
+
+  .conclusion-description {
+    font-size: 1.15rem;
+    line-height: 1.9rem;
+    margin-top: 0.8rem;
+  }
+
+  /* Development Process */
+  .development-process-section h3 {
+    font-size: 1.4rem;
+    padding: 18px 0;
+  }
+
+  /* Challenges Faced */
+  .challenges-faced-section li {
+    margin-left: 35px;
+    padding: 6px 0;
+  }
+
+  /* Impact and Benefits */
+  .impact-benefits-section {
+    padding: 10px;
+  }
+
+  .impact-benefits-section li {
+    margin-left: 35px;
+    padding: 6px 0;
+  }
+
+  /* List Items */
+  .problem-statement-list,
+  .challenges-list,
+  .proposed-solution-benefits,
+  .key-processes-list,
+  .statistics-list,
+  .economic-impact-list,
+  .challenges-barriers-list,
+  .strategies-overcome-list,
+  .future-trends-list,
+  .job-displacement-list,
+  .job-creation-list,
+  .transition-strategies-list,
+  .job-creation-sublist,
+  .transition-strategies-sublist,
+  .adoption-factors-list,
+  .case-studies-list,
+  .regional-challenges-list,
+  .environmental-impact-list,
+  .quality-safety-list,
+  .farmer-benefits-list,
+  .farmer-challenges-list,
+  .farmer-adoption-strategies-list {
+    margin-left: 35px;
+    line-height: 1.9;
+  }
+
+  /* Help Button */
+  .help-button {
+    bottom: 80px;
+    padding: 11px 16px;
+    font-size: 16px;
+    gap: 9px;
+  }
+
+  /* Help Section */
+  .help-popup {
+    max-width: 900px;
+    padding: 1.8rem;
+    border-radius: 40px;
+  }
+
+  .help-sidebar {
+    padding-right: 1.5rem;
+  }
+
+  .help-sidebar h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .help-tabs button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .help-links li {
+    padding: 18px 0;
+    font-size: 15px;
+  }
+
+  .help-card {
+    padding: 1.4rem;
+  }
+
+  .help-card img {
+    height: 190px;
+  }
+
+  .help-card h3 {
+    font-size: 17px;
+  }
+
+  .help-card p {
+    font-size: 13px;
+  }
+
+  .help-close-button {
+    top: 18px;
+    right: 22px;
+    font-size: 26px;
+  }
+
+  /* Other Case Studies */
   .other-case-studies {
-    padding: 1.5rem 3rem;
+    padding: 1.8rem 4rem;
   }
+
   .other-case-studies h2 {
-    font-size: 2.25rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
   }
+
   .other-case-study-card {
-    width: 370px;
+    width: 350px;
   }
+
   .other-case-study-card img {
     height: 190px;
   }
-  .other-case-study-content {
-    padding: 1.25rem;
-  }
+
   .other-case-study-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
+
   .other-case-study-content p {
     font-size: 0.9rem;
   }
+
   .know-more-link {
     font-size: 0.95rem;
-  }
-}
-
-/* Tablets and small laptops (1024px–1279px) */
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .other-case-studies {
-    padding: 2rem 4rem;
-  }
-  .other-case-studies h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  .other-case-study-card {
-    width: 397px;
-  }
-  .other-case-study-card img {
-    height: 200px;
-  }
-  .other-case-study-content {
-    padding: 1.25rem;
-  }
-  .other-case-study-content h3 {
-    font-size: 1.2rem;
-  }
-  .other-case-study-content p {
-    font-size: 0.9rem;
-  }
-  .know-more-link {
-    font-size: 0.95rem;
-  }
-}
-
-/* Laptops and desktops (1280px–1439px) */
-@media screen and (min-width: 1280px) and (max-width: 1439px) {
-  .other-case-studies {
-    padding: 2rem 6rem;
-  }
-  .other-case-studies h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  .other-case-study-card {
-    width: 397px;
-  }
-  .other-case-study-card img {
-    height: 200px;
-  }
-  .other-case-study-content {
-    padding: 1.25rem;
-  }
-  .other-case-study-content h3 {
-    font-size: 1.2rem;
-  }
-  .other-case-study-content p {
-    font-size: 0.9rem;
-  }
-  .know-more-link {
-    font-size: 0.95rem;
-  }
-}
-
-/* Larger laptops and desktops (1440px–1919px) */
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .other-case-studies {
-    padding: 2rem 8rem;
-  }
-  .other-case-studies h2 {
-    font-size: 2.75rem;
-    margin-bottom: 2rem;
-  }
-  .other-case-study-card {
-    width: 397px;
-  }
-  .other-case-study-card img {
-    height: 200px;
-  }
-  .other-case-study-content {
-    padding: 1.25rem;
-  }
-  .other-case-study-content h3 {
-    font-size: 1.2rem;
-  }
-  .other-case-study-content p {
-    font-size: 0.9rem;
-  }
-  .know-more-link {
-    font-size: 0.95rem;
-  }
-}
-
-/* Full HD desktops and larger (1920px and up) */
-@media screen and (min-width: 1920px) {
-  .other-case-studies {
-    padding: 2rem 10rem;
-  }
-  .other-case-studies h2 {
-    font-size: 3rem;
-    margin-bottom: 2.5rem;
-  }
-  .other-case-study-card {
-    width: 420px;
-  }
-  .other-case-study-card img {
-    height: 220px;
-  }
-  .other-case-study-content {
-    padding: 1.5rem;
-  }
-  .other-case-study-content h3 {
-    font-size: 1.3rem;
-  }
-  .other-case-study-content p {
-    font-size: 1rem;
-  }
-  .know-more-link {
-    font-size: 1rem;
   }
 }

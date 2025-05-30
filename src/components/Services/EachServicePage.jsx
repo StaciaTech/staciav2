@@ -578,9 +578,9 @@ const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
       if (width <= 768) {
         setXRange(["0%", "-80%"]); // Mobile
       } else if (width <= 1366) {
-        setXRange(["0%", "-100%"]); // Small and big screens
+        setXRange(["0%", "-90%"]); // Small and big screens
       } else {
-        setXRange(["0%", "-60%"]); // 1920px and above
+        setXRange(["0%", "-5%"]); // 1920px and above
       }
     };
 
