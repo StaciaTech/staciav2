@@ -1204,13 +1204,7 @@
               "description": "EDIFAI represents a transformative solution for the Mandi system, enhancing transparency, efficiency, and farmer welfare. By integrating technology, it addresses longstanding challenges and paves the way for a modernized agricultural marketplace."
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "Case-Study-3",
-      "name": "Tech",
-      "data": [
+        },
         {
           "id": "Case-Study-3",
           "department": "E-commerce",
@@ -1766,6 +1760,7 @@
         }
       ]
     },
+    
     {
       "id": "Case-Study-4",
       "name": "Electronics",

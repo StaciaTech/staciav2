@@ -9,6 +9,7 @@ import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
 import ProjectsData from "../Data/ProjectData2.json";
+import LoadingStar from "../components/LoadingStar";
 
 function ProjectPage() {
   const navigate = useNavigate();
@@ -146,8 +147,9 @@ function ProjectPage() {
         <NavBar />
         <SideBar />
       </div>
-      {!projectsData.length ? (
-        <div>Loading...</div>
+      {!projectsData.length ? (<div>
+            <LoadingStar />
+          </div>
       ) : (
         <>
           <div className="project-page-hero-section">

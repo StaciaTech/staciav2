@@ -921,13 +921,13 @@
       {
         "name": "Embedded Hardware & Firmware",
         "description": "Design consultancy and audit services provide expert guidance to improve product design across functionality, manufacturability, and user experience. We advise on best practices, materials, and technology to drive innovation and efficiency. Our audits evaluate design quality, industry compliance, and safety standards. This helps identify enhancements, reduce costs, and boost performance. We support both new development and refinement of existing designs.",
-        "imageUrl": "/assets/Embedded-Systems-Development.webp",
+        "imageUrl": "/assets/Embedded-Hardware-and-Firmware.webp",
         "position": 1,
         "services": [
           {
             "title": "Embedded Hardware & Firmware",
             "description": "",
-            "imageUrl": "/assets/Embedded-hardware-design.webp",
+            "imageUrl": "/assets/Embedded-Hardware-and-Firmware.webp",
             "position": 1,
             "oneLine": "Custom microcontroller-based hardware and firmware solutions designed for performance, scalability, and real-time reliability",
             "whatWeDo": [
@@ -1010,7 +1010,7 @@
           {
             "title": "IoT Devices",
             "description": "",
-            "imageUrl": "/assets/IoT-Hardware-Development.webp",
+            "imageUrl": "/assets/IOT-Devices.webp",
             "position": 2,
             "oneLine": "Smart IoT solutions for connected products, remote monitoring, and automated control using cloud and wireless technology",
             "whatWeDo": [
@@ -1101,7 +1101,7 @@
           {
             "title": "PCB Design",
             "description": "",
-            "imageUrl": "/assets/PCB-Design-Service.webp",
+            "imageUrl": "/assets/PCB-Design.webp",
             "position": 1,
             "oneLine": "PCB Design transforms your ideas into precise, reliable, and manufacturable circuit boards for electronics applications.",
             "whatWeDo": [
@@ -1188,7 +1188,7 @@
           {
             "title": "PCB Development",
             "description": "",
-            "imageUrl": "/assets/PCB-Manufacturing.webp",
+            "imageUrl": "/assets/PCB-Development.webp",
             "position": 2,
             "oneLine": "PCB Development turns your design files into fully functional, tested circuit boards ready for integration and production.",
             "whatWeDo": [
