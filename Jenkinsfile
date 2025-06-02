@@ -90,34 +90,6 @@ pipeline {
             }
    }
 }
-post {
-    success {
-      script {
-        if (websiteUrl) {
-          slackSend (
-            channel: env.SLACK_CHANNEL,
-            color: 'good',
-            message: "Project: *${env.JOB_NAME}* -- Deployment complete! The Pipeline has successfully built the website at: *${websiteUrl}*"
-          )
-        } else {
-          slackSend (
-            channel: env.SLACK_CHANNEL,
-            color: 'warning',
-            message: "Project: *${env.JOB_NAME}* -- Deployment succeeded, but website URL could not be determined. Check logs."
-          )
-        }
-      }
-    }
-    failure {
-      script {
-        slackSend (
-          channel: env.SLACK_CHANNEL,
-          color: 'danger',
-          message: "Project: *${env.JOB_NAME}* -- *Deployment FAILED!* Check Jenkins logs for details."
-        )
- 	}
-      }
-    }
   post {
     success {
     script {
