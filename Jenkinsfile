@@ -90,20 +90,65 @@ pipeline {
             }
    }
 }
-
-  post {
+post {
     success {
-        script { 
-              echo "✅ Successfully built and deployed the ${env.BRANCH_NAME} branch"
-              if (env.BRANCH_NAME == 'main') {
-                  echo "cPanel Deployment URL: ${CPANEL_URL}"
-              } else if (env.BRANCH_NAME == 'release') {
-                  echo "S3 Deployment URL: http://${S3_BUCKET}.s3-website.${REGION}.amazonaws.com/"
-              }
-          }
+      script {
+        if (websiteUrl) {
+          slackSend (
+            channel: env.SLACK_CHANNEL,
+            color: 'good',
+            message: "Project: *${env.JOB_NAME}* -- Deployment complete! The Pipeline has successfully built the website at: *${websiteUrl}*"
+          )
+        } else {
+          slackSend (
+            channel: env.SLACK_CHANNEL,
+            color: 'warning',
+            message: "Project: *${env.JOB_NAME}* -- Deployment succeeded, but website URL could not be determined. Check logs."
+          )
+        }
+      }
     }
     failure {
-      echo "❌ Build or deployment failed for ${env.BRANCH_NAME}"
+      script {
+        slackSend (
+          channel: env.SLACK_CHANNEL,
+          color: 'danger',
+          message: "Project: *${env.JOB_NAME}* -- *Deployment FAILED!* Check Jenkins logs for details."
+        )
+ 	}
+      }
     }
+  post {
+    success {
+    script {
+      def message = "Project: *${env.JOB_NAME}* -- ✅ The CI/CD Pipeline has Successfully built and deployed the *${env.BRANCH_NAME}* branch.\n"
+
+      if (env.BRANCH_NAME == 'main') {
+        message += "🔗 cPanel Deployment URL: *${CPANEL_URL}*"
+      } else if (env.BRANCH_NAME == 'release') {
+        message += "🔗 S3 Deployment URL: *http://${S3_BUCKET}.s3-website.${REGION}.amazonaws.com/*"
+      } else if (websiteUrl) {
+        message += "🔗 Deployment URL: *${websiteUrl}*"
+      } else {
+        message += "_Website URL could not be determined. Check logs._"
+      }
+
+      slackSend (
+        channel: env.SLACK_CHANNEL,
+        color: 'good',
+        message: message
+      )
+    }
+  }
+
+  failure {
+    script {
+      slackSend (
+        channel: env.SLACK_CHANNEL,
+        color: 'danger',
+        message: "Project: *${env.JOB_NAME}* -- ❌ *Deployment FAILED!* on branch *${env.BRANCH_NAME}*. Check Jenkins logs for details."
+      )
+    }
+  }
   }
 }
