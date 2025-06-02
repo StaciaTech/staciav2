@@ -221,7 +221,7 @@ function About() {
                   <p className="test-seclection-blue">people</p>
                 </div>
                 <div className="about-section1-left-title-item">
-                  <div className="test-seclection-blue">150+</div>
+                  <div className="test-seclection-blue">200+</div>
                   <p className="test-seclection-blue">projects</p>
                 </div>
                 <div className="about-section1-left-title-item">
@@ -573,6 +573,7 @@ function About() {
         </div>
       </div>
       <div>
+       <div>
         <div className="about-section11-container" id="meet-our-team">
           <div className="about-section11-title test-seclection-blue">
             Meet Our Team
@@ -585,9 +586,13 @@ function About() {
             passion for excellence, shaping the future of industries worldwide.
           </p>
           <div style={{ overflow: "auto" }} className="about-team-marquee-desk">
-            <Marquee pauseOnHover={true} speed={30}>
+            <Marquee pauseOnHover={true} speed={30} gradient={false}>
+              {/* Render the team data twice to ensure seamless looping */}
               {teamData?.map((eachMem, i) => (
-                <TeamCard key={i} eachMem={eachMem} />
+                <TeamCard key={`first-${i}`} eachMem={eachMem} />
+              ))}
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`second-${i}`} eachMem={eachMem} />
               ))}
             </Marquee>
           </div>
@@ -597,6 +602,7 @@ function About() {
             ))}
           </div>
         </div>
+      </div>
       </div>
       <Footer />
       <MobileFooter />

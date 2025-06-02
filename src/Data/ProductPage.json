@@ -155,12 +155,7 @@
             }
           ]
         },
-        {
-          "id": "category-002",
-          "name": "Industrial Automation (SPM)",
-          "description": "Drive innovation in the automotive industry with our custom-built SPMs. Designed for precision and reliability, our machines cater to various applications, including assembly, testing, and component manufacturing. Leveraging cutting-edge technology, we ensure streamlined workflows and high-quality output. Partner with us for tailored solutions that meet the rigorous demands of the automotive sector, enhancing both efficiency and profitability",
-          "imageUrl": "/assets/ProductPage/Industrial automation.webp"
-        },
+        
         {
           "id": "category-003",
           "name": "Test Rig",
