@@ -70,10 +70,44 @@
   border: 2px solid #6B6084;
 }
 
+.carousel-content {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center the visible cards */
+
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  width: 300%; /* 3 cards visible, each taking 100% / 3 of the screen */
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: calc(100% / 3); /* Each card takes 1/3 of the carousel-content width */
+  /* opacity: 0.7; */
+  transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+}
+
+.carousel-card--active {
+  opacity: 1;
+  transform: scale(1.05);
+
+}
+
+.carousel-card--active .single-article-card-image {
+  border: 2px solid #6B6084;
+}
+
+
+
 .single-article-card-image {
   height: 45vh;
-  width: 90%;
-  max-width: 547px;
+  width: 100%;
+  max-width: 597px;
   border-radius: 30px;
   background-size: cover;
   background-position: center;
@@ -82,12 +116,13 @@
   justify-content: flex-end;
   color: white;
   font-family: "Euclid";
-  margin-left: 3rem;
+  margin-left: 1rem;
   margin-right: 1rem;
   align-self: flex-end;
   transition: all 0.3s ease;
   cursor: pointer;
   transform-origin: bottom;
+
 }
 
 .article-text-container {
@@ -155,11 +190,21 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+
 }
 
 .article-learn-more-link {
   color: #0047FF;
   user-select: none;
+
+}
+.article-learn-more-link>span{
+  color: white;
+  font-size: 1rem;
+  font-family: "EuclidMedium";
+  font-weight: 400;
+
+
 }
 
 .article-learn-more-link>span {
@@ -179,7 +224,7 @@
   margin-top: 15px;
   margin-bottom: 15px;
   margin-left: 5px;
-  color: #6b6084;
+  color: #6B6084;
 
 }
 
@@ -254,5 +299,184 @@
 @media screen and (min-width: 1024px) {
   .mobile-article {
     display: none;
+  }
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    .articles-container {
+      margin-bottom: 1rem;
+    }
+
+    .articles-header {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      justify-content: space-between;
+    }
+
+    .articles-title {
+      color: #6B6084;
+      font-size: 48px; /* Reduced from 60px for better fit */
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.2; /* Added for better spacing */
+      margin-top: 1rem;
+      margin-right: 1rem;
+      overflow: hidden; /* Prevent title overflow */
+      text-overflow: ellipsis;
+      white-space: nowrap; /* Ensure single-line title */
+    }
+
+    .carousel-controls {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .article-slider {
+      display: flex;
+      align-items: flex-end;
+      height: 50vh;
+      width: 100%;
+      padding: 0 20px; /* Reduced from 30px for more space */
+      position: relative;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .carousel-content {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease;
+      will-change: transform;
+      width: 300%; /* 3 cards visible */
+    }
+
+    .carousel-card {
+      flex: 0 0 auto;
+      width: calc(100% / 3);
+      transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+    }
+
+    .carousel-card--active {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .carousel-card--active .single-article-card-image {
+      border: 2px solid #6B6084;
+    }
+
+    .single-article-card-image {
+      height: 45vh;
+      width: 95%; /* Increased from 90% to use more space */
+      max-width: 450px; /* Reduced from 547px for smaller screens */
+      border-radius: 30px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: white;
+      font-family: "Euclid";
+      margin-left: 1.5rem; /* Reduced from 3rem */
+      margin-right: 0.5rem; /* Reduced from 1rem */
+      align-self: flex-end;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      transform-origin: bottom;
+    }
+
+    .article-text-container {
+      display: none;
+      padding: 0 0.8rem 1.5rem 0.8rem; /* Reduced padding for more text space */
+
+    }
+
+    .single-article-card-image:hover .article-text-container {
+      display: block;
+      transition: all 0.3s ease; /* Shortened transition for smoother hover */
+    }
+
+    .article-text-container:hover {
+      transition: all 0.3s ease;
+    }
+
+    .carousel-arrow {
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid #6B6084;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      cursor: pointer;
+      background: transparent;
+      color: #6B6084;
+      font-size: 1.5rem;
+    }
+
+    .carousel-arrow:hover {
+      border-color: #000;
+      color: #000;
+
+    }
+
+    .carousel-arrow:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      border-color: #6B6084;
+      color: #6B6084;
+    }
+
+    .article-author-name {
+      font-family: "EuclidMedium";
+      font-size: 0.9rem; /* Reduced from 1rem */
+      font-weight: 500;
+      margin: 0.4rem 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; /* Prevent wrapping */
+    }
+
+    .card-article-title {
+      font-size: 1.3rem; /* Reduced from 1.5rem */
+      font-weight: 600;
+      margin: 0.1rem 0;
+      padding: 0.4rem 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; /* Prevent wrapping */
+    }
+
+    .card-article-body {
+      font-size: 0.9rem; /* Reduced from 1rem */
+      font-family: "EuclidMedium";
+      font-weight: 400;
+      margin: 0.8rem 0;
+      line-height: 1.2rem; /* Reduced for better fit */
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .article-learn-more-link {
+      color: #0047FF;
+      user-select: none;
+    }
+
+    .article-learn-more-link > span {
+      color: white;
+      font-size: 0.9rem; /* Reduced from 1rem */
+      font-family: "EuclidMedium";
+      font-weight: 400;
+    }
   }
 }

@@ -20,7 +20,7 @@ import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { SlEnergy } from "react-icons/sl";
 import { VscChip } from "react-icons/vsc";
 
-
+import Loadingstar from "../components/LoadingStar"
 const AboutCarousel = React.lazy(()=>import("../components/ReUsableComp/AboutCarousel"));
 const ClientComponent = React.lazy(()=> import("./Client"));
 
@@ -221,7 +221,7 @@ function About() {
                   <p className="test-seclection-blue">people</p>
                 </div>
                 <div className="about-section1-left-title-item">
-                  <div className="test-seclection-blue">200+</div>
+                  <div className="test-seclection-blue">150+</div>
                   <p className="test-seclection-blue">projects</p>
                 </div>
                 <div className="about-section1-left-title-item">
@@ -531,7 +531,7 @@ function About() {
             />
           </div>
         </div>
-        <Suspense fallback={<div>Loading....</div>}>
+        <Suspense fallback={<div><Loadingstar/></div>}>
         <ClientComponent />
         </Suspense>
         <div className="about-section10-container" id="our-leadership">
@@ -573,7 +573,6 @@ function About() {
         </div>
       </div>
       <div>
-       <div>
         <div className="about-section11-container" id="meet-our-team">
           <div className="about-section11-title test-seclection-blue">
             Meet Our Team
@@ -586,13 +585,9 @@ function About() {
             passion for excellence, shaping the future of industries worldwide.
           </p>
           <div style={{ overflow: "auto" }} className="about-team-marquee-desk">
-            <Marquee pauseOnHover={true} speed={30} gradient={false}>
-              {/* Render the team data twice to ensure seamless looping */}
+            <Marquee pauseOnHover={true} speed={30}>
               {teamData?.map((eachMem, i) => (
-                <TeamCard key={`first-${i}`} eachMem={eachMem} />
-              ))}
-              {teamData?.map((eachMem, i) => (
-                <TeamCard key={`second-${i}`} eachMem={eachMem} />
+                <TeamCard key={i} eachMem={eachMem} />
               ))}
             </Marquee>
           </div>
@@ -602,7 +597,6 @@ function About() {
             ))}
           </div>
         </div>
-      </div>
       </div>
       <Footer />
       <MobileFooter />

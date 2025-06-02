@@ -130,6 +130,7 @@ import { useNavigate } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import eventsData from "../Data/Event.json";
 import "../styles/Eventspage.css";
+import LoadingStar from "../components/LoadingStar";
 
 // Lazy load components
 const NavBar = React.lazy(() => import("../components/NavBar"));
@@ -149,7 +150,7 @@ function EventsPage() {
   console.log(events);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<LoadingStar />}>
       <div>
         <div className="nav_style">
           <NavBar />

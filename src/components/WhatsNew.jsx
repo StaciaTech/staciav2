@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Star from "../assets/loadingStar.svg";
 import { useNavigate } from "react-router-dom";
 import whatsNewData from "../Data/Whatsnew.json"; // Adjust path as needed
 import "../styles/whatsNew.css"
