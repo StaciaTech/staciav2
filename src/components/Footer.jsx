@@ -244,6 +244,7 @@ function Footer() {
             alignItems: "center",
             opacity: "0.6",
             width: "35%",
+            className:"termm"
           }}
         >
           {/* <a

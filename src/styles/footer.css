@@ -270,7 +270,7 @@ height: 2rem;
 
   .footer-others {
     margin-top: 100px; /* Reduce top margin */
-    font-size: 16px; /* Smaller font size */
+    font-size: 12.5px; /* Smaller font size */
   }
 
   .footer-icon-container {
@@ -297,12 +297,13 @@ height: 2rem;
   }
 
   .sitemap {
-    font-size: 16px;
-    padding-right: 59px; /* Slightly smaller font size */
+    font-size: 12.5px;
+    padding-right: 50px; /* Slightly smaller font size */
   }
   .privacypolicy{
     padding-left: 0px;
   }
+
 }
 .mbfooter-links {
   color: #6B6084;

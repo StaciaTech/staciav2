@@ -638,6 +638,7 @@
 
 // export default NavBar;
 
+
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/navbar.css";
@@ -678,6 +679,7 @@ function NavBar() {
   };
 
   // Handle scroll for navbar hide/show
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -724,6 +726,7 @@ function NavBar() {
   };
 
   // eslint-disable-next-line no-unused-vars
+  
   const containerVariants = {
     visible: {
       transition: {

@@ -175,15 +175,24 @@
 
 // Dot container
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, Suspense } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/CaseStudy.css";
-import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
 import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
 import caseStudiesData from "../Data/SingleCaseStudy.json";
+import LoadingStar from "../components/LoadingStar";
+
+// Lazy load components
+const ReUsableArticle = React.lazy(() =>
+  import("../components/ReUsableComp/ReUsableArticle")
+);
+const LazyNavBar = React.lazy(() => import("../components/NavBar"));
+const LazySideBar = React.lazy(() => import("../components/SideBar"));
+const LazyFooter = React.lazy(() => import("../components/Footer"));
+const LazyMobileFooter = React.lazy(() => import("../components/MobileFooter"));
 
 function CaseStudy() {
   const [activeDepartment, setActiveDepartment] = useState("");
@@ -252,9 +261,9 @@ function CaseStudy() {
   };
 
   return (
-    <>
-      <NavBar />
-      <SideBar />
+    <Suspense fallback={<div className="loading"><LoadingStar/></div>}>
+      <LazyNavBar />
+      <LazySideBar />
       <div className="case-study-section1">
         <div className="case-study-section-overlay">
           <div className="case-study-title1">
@@ -298,15 +307,20 @@ function CaseStudy() {
               ref={(el) => (sectionsRef.current[category.name] = el)}
             >
               <div className="case-study-category-title">{category.name}</div>
-              <ReUsableArticle data={category.data} path={"single-caseStudy"} />
+              <Suspense fallback={<div className="loading">Loading...</div>}>
+                <ReUsableArticle
+                  data={category.data}
+                  path={"single-caseStudy"}
+                />
+              </Suspense>
             </div>
           ))}
         </div>
       </div>
 
-      <Footer />
-      <MobileFooter />
-    </>
+      <LazyFooter />
+      <LazyMobileFooter />
+    </Suspense>
   );
 }
 

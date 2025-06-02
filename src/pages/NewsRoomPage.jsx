@@ -271,8 +271,6 @@
 
 // export default NewsRoomPage;
 
-
-
 import React, { useEffect, useState, Suspense } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -280,6 +278,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import stacia from "../assets/newsroom.png";
 import newsRoom from "../Data/Newroom.json";
 import "../styles/NewsRoom.css";
+import LoadingStar from "../components/LoadingStar";
 
 // Lazy load components
 const NavBar = React.lazy(() => import("../components/NavBar"));
@@ -360,8 +359,41 @@ function NewsRoomPage() {
     };
   }, [lastScrollY]);
 
+  // Function to check if the URL is a YouTube link
+  const isYouTubeUrl = (url) => {
+    return url.includes("youtube.com") || url.includes("youtu.be");
+  };
+
+  // Function to get YouTube embed URL
+  const getYouTubeEmbedUrl = (url) => {
+    const videoId = url.split("v=")[1]?.split("&")[0] || url.split("/").pop();
+    return `https://www.youtube.com/embed/${videoId}`;
+  };
+
+  // Render media (image or video) based on the JSON data
+  const renderMedia = (item) => {
+    if (item.image?.videoUrl) {
+      if (isYouTubeUrl(item.image.videoUrl)) {
+        return (
+          <iframe
+            src={getYouTubeEmbedUrl(item.image.videoUrl)}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{ width: "100%", height: "350px" }}
+          ></iframe>
+        );
+      } else {
+        return <video src={item.image.videoUrl} controls />;
+      }
+    } else {
+      return <img src={item.image?.imageUrl} alt="" loading="lazy" />;
+    }
+  };
+
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div><LoadingStar/></div>}>
       <div>
         <div className="nav_style">
           <NavBar />
@@ -395,14 +427,16 @@ function NewsRoomPage() {
               })}
             </div>
             <div
-              className={`news-tab-container ${itemsPos ? "move-up" : "move-down"
-                }`}
+              className={`news-tab-container ${
+                itemsPos ? "move-up" : "move-down"
+              }`}
             >
               {newsArr.map((eachNews, i) => (
                 <div
                   key={i}
-                  className={`news-tab ${eachNews.key === selectedTab ? "news-tab-active" : ""
-                    }`}
+                  className={`news-tab ${
+                    eachNews.key === selectedTab ? "news-tab-active" : ""
+                  }`}
                   onClick={() => setSelectedTab(eachNews.key)}
                 >
                   {eachNews.name}
@@ -414,7 +448,7 @@ function NewsRoomPage() {
                 {newsData?.map((newsItem, i) => (
                   <div key={i}>
                     <div className="news-card-item-video">
-                      <video src={newsItem.video} alt="" controls />
+                      {renderMedia(newsItem)}
                     </div>
                     <div className="news-card-item-detail">
                       {newsItem.detail}
@@ -423,7 +457,7 @@ function NewsRoomPage() {
                     <div className="news-cards-container">
                       <div>
                         <div className="news-card-item-img">
-                          <img src={newsItem.image.imageUrl} alt="" />
+                          {renderMedia(newsItem)}
                         </div>
                         <div className="news-card-item-title">
                           {newsItem.title}
@@ -445,15 +479,16 @@ function NewsRoomPage() {
                         key={i}
                         onClick={() => {
                           navigate(
-                            `${selectedTab}/${newsItem.title.split(" ").join("-") ||
-                            newsItem.mainTitle.split(" ").join("-")
+                            `${selectedTab}/${
+                              newsItem.title.split(" ").join("-") ||
+                              newsItem.mainTitle.split(" ").join("-")
                             }`
                           );
                           window.scrollTo(0, 0);
                         }}
                       >
                         <div className="news-card-item-img">
-                          <img src={newsItem.image.imageUrl} alt="" loading="lazy" />
+                          {renderMedia(newsItem)}
                         </div>
                         <div className="news-card-item-title">
                           {newsItem.title}
@@ -474,7 +509,7 @@ function NewsRoomPage() {
                             <p>{newsItem.description}</p>
                           </div>
                           <div className="news-achive-img">
-                            <img src={newsItem.image.imageUrl} alt="" loading="lazy" />
+                            {renderMedia(newsItem)}
                           </div>
                         </div>
                       );

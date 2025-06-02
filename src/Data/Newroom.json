@@ -18,22 +18,41 @@
         "imageUrl": "/assets/article.webp"
       }
     },
+ 
     {
-      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "title": "Workshop on Goal Setting and Fund Utilization for Agri-Startup and Agripreneurs, Mr. Sarabesh Sriram",
       "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
-      "date": "2025-01-10",
+      "date": "2023-01-12",
       "category": "news",
       "image": {
-        "imageUrl": "/assets/breakingnews.webp"
+        "videoUrl": "https://www.youtube.com/watch?v=LUhRxFQtS9o"
       }
     },
     {
-      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "title": "MANAGE, E Launch - Agri Startups from Tamil Nadu - Mr. Sarabesh Sriram",
       "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
-      "date": "2025-01-12",
+      "date": "2022-04-7",
       "category": "news",
       "image": {
-        "imageUrl": "/assets/breakingnews.webp"
+        "videoUrl": "https://www.youtube.com/watch?v=V_YXHonkgds"
+      }
+    },
+    {
+      "title": "Stacia Corp registerd as a register paternship",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2019-10-1",
+      "category": "news",
+      "image": {
+        "videoUrl": "https://www.youtube.com/watch?v=PeevRLDxAXE"
+      }
+    },
+    {
+      "title": "OneDril is a manual, portable seed-sowing machine designed for precise and efficient planting.",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "date": "2019-10-1",
+      "category": "news",
+      "image": {
+        "videoUrl": "https://www.youtube.com/watch?v=9gBE7xWvEB4"
       }
     },
     {
@@ -59,7 +78,7 @@
       "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
       "date": "2025-01-15",
       "category": "featuring",
-      "detail" :"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "detail": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
       "video": "/assets/award.webp",
       "image": {
         "imageUrl": "/assets/award.webp"
