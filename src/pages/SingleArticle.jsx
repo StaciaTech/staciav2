@@ -7,6 +7,7 @@ import MobileFooter from "../components/MobileFooter";
 import SideBar from "../components/SideBar";
 import CaseStudyaudio from "../components/CaseStudy/CaseStudyaudio";
 import articlesData from "../Data/SingleArticle.json";
+import ArticleAudio from '../components/Articles/ArticleAudio';
 
 function SingleArticle() {
   const { title } = useParams();
@@ -66,7 +67,8 @@ function SingleArticle() {
       </div>
 
       <div className="single-article-content-card-container">
-        <CaseStudyaudio />
+        {/* <CaseStudyaudio /> */}
+        <ArticleAudio articleTitle={decodedTitle} />
 
         {singleArticle.sections.map((section, index) => (
           <div key={index}>
