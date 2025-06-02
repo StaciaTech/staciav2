@@ -401,6 +401,181 @@
 
 
 
+// import React, { useRef, lazy, Suspense } from "react";
+// import "../../styles/Services/EachService.css";
+// import { SlLike } from "react-icons/sl";
+// import { useParams } from "react-router-dom";
+// import { motion, useTransform, useScroll } from "framer-motion";
+// import servicesData from "../../Data/Services.json";
+
+// import SuggestionService from "../ReUsableComp/SuggestionService";
+
+// // Lazy load components
+// const NavBar = lazy(() => import("../NavBar"));
+// const SideBar = lazy(() => import("../SideBar"));
+// const Star = lazy(() => import("../Star"));
+// const Footer = lazy(() => import("../Footer"));
+// const MobileFooter = lazy(() => import("../MobileFooter"));
+// const FAQComp = lazy(() => import("../FAQComp"));
+
+// // Static card data
+// const cardsData = [
+//   { des: "lorem ipsum dolor sit amet, consectetur adip occum primis in faucibus et justo" },
+//   { des: "lorem ipsum dolor sit amet, consectetur adip occum primis in faucibus et justo" },
+//   { des: "lorem ipsum dolor sit amet, consectetur adip occum primis in faucibus et justo" },
+// ];
+
+// function EachServicePage() {
+//   const params = useParams();
+//   const productKey = params.title.split("-").join(" ").toLowerCase();
+
+//   // Find the matching service from the imported JSON data
+//   const singleService = servicesData
+//     .flatMap(department => department.categories.flatMap(category => category.services))
+//     .find(service => service.title.toLowerCase() === productKey);
+
+//   return (
+//     <Suspense fallback={<div>Loading Service Page...</div>}>
+//       <div>
+//         <div className="nav_style">
+//           <Suspense fallback={<div>Loading Navigation...</div>}>
+//             <NavBar />
+//           </Suspense>
+//           <Suspense fallback={<div>Loading Sidebar...</div>}>
+//             <SideBar />
+//           </Suspense>
+//         </div>
+//         <div className="each-service-hero-section">
+//           <div className="each-service-title">
+//             <span>{singleService?.title || "Service Not Found"}</span>
+//             <Suspense fallback={<div>Loading Star...</div>}>
+//               <Star />
+//             </Suspense>
+//           </div>
+//         </div>
+//         <div className="each-service-container">
+//           <div className="each-service-section1">
+//             <div className="each-service-section1-img">
+//               <img
+//                 src={singleService?.imageUrl || "No image available."}
+//                 alt={singleService?.title || "Service"}
+//                 loading="lazy"
+//               />
+//             </div>
+//             <div className="each-service-section1-content">
+//               <div>Overview</div>
+//               <p>{singleService?.oneLine || "No description available."}</p>
+//             </div>
+//           </div>
+//           <div className="each-service-howWeDo-section">
+//             {singleService?.whatWeDo?.length ? (
+//               <HorizontalScrollContainer singleServiceWhatweDo={singleService.whatWeDo} />
+//             ) : (
+//               <div />
+//             )}
+//           </div>
+//           <div className="each-service-howWeDo-section-mob">
+//             <HorizontalScrollMobile singleServiceWhatweDo={singleService?.whatWeDo || []} />
+//           </div>
+//           {/* Commented-out section with image, adding loading="lazy" for completeness */}
+//           {/* <div className="each-service-card-section">
+//             {cardsData.map((eachItem, i) => (
+//               <div key={i} className="each-service-card">
+//                 <div>
+//                   <img
+//                     src="https://media.istockphoto.com/id/1977348709/photo/laughing-young-businesswoman-talking-with-colleagues-in-an-office-hallway.webp?a=1&b=1&s=612x612&w=0&k=20&c=1QrGBVFBZyfg0zm_EETpeG49dbAjIPDEOxKRtf7L16Q="
+//                     alt="Card"
+//                     loading="lazy"
+//                   />
+//                 </div>
+//                 <p>{eachItem.des}</p>
+//               </div>
+//             ))}
+//           </div> */}
+//           <Suspense fallback={<div>Loading FAQs...</div>}>
+//             <FAQComp />
+//           </Suspense>
+//         </div>
+//         <div>
+//           <SuggestionService />
+//         </div>
+//         <div>
+//           <Suspense fallback={<div>Loading Footer...</div>}>
+//             <Footer />
+//           </Suspense>
+//           <Suspense fallback={<div>Loading Mobile Footer...</div>}>
+//             <MobileFooter />
+//           </Suspense>
+//         </div>
+//       </div>
+//     </Suspense>
+//   );
+// }
+
+// const HorizontalScrollContainer = ({ singleServiceWhatweDo }) => {
+//   const targetRef = useRef(null);
+//   const { scrollYProgress } = useScroll({
+//     target: targetRef,
+//   });
+
+//   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
+//   return (
+//     <div ref={targetRef} style={{ height: "50vh", position: "relative" }}>
+//       <div className="howWeDo-container">
+//         <div className="each-service-howWeDo-title">How We Do?</div>
+//         <p className="each-service-howWeDo-des">
+//           Problem Solved, Step by Step. Your Guide to a Smooth Solution.
+//         </p>
+//         <motion.div style={{ display: "flex", columnGap: "6rem", x }}>
+//           {singleServiceWhatweDo?.map((eachItem, i) => (
+//             <div key={i} className="each-service-howWeDo-step">
+//               <div className="each-service-howWeDo-step-icon">
+//                 <SlLike color="#fff" fontSize={28} />
+//               </div>
+//               <div className="each-service-howWeDo-step-title">
+//                 {eachItem?.title}
+//               </div>
+//               <p className="each-service-howWeDo-step-des">
+//                 {eachItem?.des}
+//               </p>
+//             </div>
+//           ))}
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// const HorizontalScrollMobile = ({ singleServiceWhatweDo }) => {
+//   return (
+//     <div>
+//       <div className="each-service-howWeDo-title">How We Do?</div>
+//       <p className="each-service-howWeDo-des">
+//         Problem Solved, Step by Step. Your Guide to a Smooth Solution.
+//       </p>
+//       <div style={{ display: "flex", columnGap: "3rem", overflowX: "auto" }}>
+//         {singleServiceWhatweDo.map((eachItem, i) => (
+//           <div key={i} className="each-service-howWeDo-step">
+//             <div className="each-service-howWeDo-step-icon">
+//               <SlLike color="#fff" fontSize={28} />
+//             </div>
+//             <div className="each-service-howWeDo-step-title">
+//               {eachItem.title}
+//             </div>
+//             <p className="each-service-howWeDo-step-des">{eachItem.des}</p>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default EachServicePage;
+
+
+
+//praveen
+
 import React, { useRef, lazy, Suspense } from "react";
 import "../../styles/Services/EachService.css";
 import { SlLike } from "react-icons/sl";
@@ -639,7 +814,6 @@ const HorizontalScrollMobile = ({ singleServiceWhatweDo }) => {
           </div>
         ))}
       </div>
-      
     </div>
   );
 };

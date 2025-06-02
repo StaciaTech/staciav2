@@ -210,7 +210,7 @@ function Footer() {
                 className="footer-grey-tabs pointer test-seclection-blue"
               >
                 Thiru Vi Ka Industrial Estate, SIDCO Industrial
-              </div> 
+              </div>
               <div className="footer-grey-tabs-child test-seclection-blue">
                 Guindy, Chennai - 32, Tamil Nadu
               </div> */}

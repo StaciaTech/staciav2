@@ -360,7 +360,7 @@
 .about-section8-main-des-container>p {
   width: 80%;
   font-size: 1.25rem;
-  color: #6b6084;
+  color: #6B6084;
   padding-top: 1rem;
   max-width: 70%;
 }
@@ -368,7 +368,7 @@
 
 .about-section8-container-title {
   font-family: EuclidSemibold;
-  color: #0d0225;
+  color: #0D0225;
   font-size: 2.25rem;
 }
 
@@ -412,13 +412,13 @@
 .about-section8-item-content>div {
   font-family: EuclidSemibold;
   font-size: 1.5rem;
-  color: #0d0225;
+  color: #0D0225;
 }
 
 .about-section8-item-content>p {
   /* font-family: EuclidSemibold; */
   font-size: 1.25rem;
-  color: #6b6084;
+  color: #6B6084;
 }
 
 .about-section8-btn-container {
@@ -431,7 +431,7 @@
 .about-section8-mob-btn-container>div {
   width: 3rem;
   height: 3rem;
-  border: 1px solid #6b6084;
+  border: 1px solid #6B6084;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,7 +442,6 @@
 .about-section8-mob-btn-container {
   display: none;
 }
-
 .about-section9-container {
   margin: 10rem 0rem;
 }
@@ -557,28 +556,33 @@
   text-align: center;
   font-family: EuclidSemibold;
   font-size: 2.25rem;
-  color: #0d0225;
+  color: #0D0225;
 }
 
 .about-section11-des {
   font-size: 1.25rem;
-  color: #6b6084;
+  color: #6B6084;
   text-align: center;
   width: 50%;
   margin: 1rem auto;
 }
 
-.about-team-marquee {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  /* overflow: hidden; */
-  white-space: nowrap;
-  animation: scroll 20s linear infinite;
+/* Ensure the marquee container has no extra padding or margins */
+.about-team-marquee-desk {
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  width: 100%;
 }
 
-.about-team-marquee:hover {
-  animation-play-state: paused;
+/* Style for the team card */
+.about-team-card {
+  margin: 0 0.5rem; /* Consistent gap on both sides */
+  height: 25rem;
+  width: 20rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  display: inline-block; /* Ensure cards stay inline for marquee */
+  box-sizing: border-box; /* Include padding/margin in width calculation */
 }
 
 @keyframes scroll {
@@ -598,7 +602,7 @@
   transition: width 0.3s ease;
 }
 
-.about-team-img>img {
+.about-team-img > img {
   object-fit: contain;
   width: 100%;
 }
@@ -611,12 +615,12 @@
 .about-team-role {
   font-family: EuclidSemibold;
   font-size: 1.5rem;
-  color: #0047ff;
+  color: #0047FF;
 }
 
 .about-team-des {
   font-size: 1rem;
-  color: #6b6084;
+  color: #6B6084;
 }
 
 .about-team-name,

@@ -20,7 +20,7 @@ import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { SlEnergy } from "react-icons/sl";
 import { VscChip } from "react-icons/vsc";
 
-
+import Loadingstar from "../components/LoadingStar"
 const AboutCarousel = React.lazy(()=>import("../components/ReUsableComp/AboutCarousel"));
 const ClientComponent = React.lazy(()=> import("./Client"));
 
@@ -547,8 +547,8 @@ function About() {
             />
           </div>
         </div>
-        <Suspense fallback={<div>Loading....</div>}>
-          <ClientComponent />
+        <Suspense fallback={<div><Loadingstar/></div>}>
+        <ClientComponent />
         </Suspense>
         <div className="about-section10-container" id="our-leadership">
           <div className="about-section-title test-seclection-blue">
