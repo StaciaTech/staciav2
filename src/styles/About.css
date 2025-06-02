@@ -353,18 +353,22 @@
 .about-section8-main-des-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .about-section8-main-des-container>p {
   width: 80%;
   font-size: 1.25rem;
-  color: #6b6084;
+  color: #6B6084;
   padding-top: 1rem;
+  max-width: 70%;
 }
+
 
 .about-section8-container-title {
   font-family: EuclidSemibold;
-  color: #0d0225;
+  color: #0D0225;
   font-size: 2.25rem;
 }
 
@@ -374,7 +378,8 @@
   column-gap: 5rem;
   overflow-x: auto;
   margin: 2rem 0rem;
-  
+  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+  scrollbar-width: none;
 }
 
 .about-section8-items-container::-webkit-scrollbar {
@@ -393,7 +398,9 @@
   min-width: 77vw;
   /* height: 400px; */
   /* background-color: red; */
-  background-color: #f8faff;
+  background-color: #F8FAFF;
+  flex: 0 0 100%; /* Each card takes full width of the container */
+  scroll-snap-align: start;
 }
 
 .about-section8-item-content {
@@ -405,13 +412,13 @@
 .about-section8-item-content>div {
   font-family: EuclidSemibold;
   font-size: 1.5rem;
-  color: #0d0225;
+  color: #0D0225;
 }
 
 .about-section8-item-content>p {
   /* font-family: EuclidSemibold; */
   font-size: 1.25rem;
-  color: #6b6084;
+  color: #6B6084;
 }
 
 .about-section8-btn-container {
@@ -424,7 +431,7 @@
 .about-section8-mob-btn-container>div {
   width: 3rem;
   height: 3rem;
-  border: 1px solid #6b6084;
+  border: 1px solid #6B6084;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -435,7 +442,6 @@
 .about-section8-mob-btn-container {
   display: none;
 }
-
 .about-section9-container {
   margin: 10rem 0rem;
 }
