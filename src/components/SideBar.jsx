@@ -1,5 +1,5 @@
 
-import { React, useState, useEffect, useRef } from "react";
+import { React, useState, useEffect, useRef, useDebugValue } from "react";
 import "../styles/sideBar.css";
 import { useNavigate } from "react-router-dom";
 import DarkLogo from "../assets/sideBarStaciaLogoLite.svg";
@@ -241,6 +241,18 @@ function SideBar() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  useEffect(() => {
+    if (showDropdown) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    // Cleanup on unmount to ensure no-scroll is removed
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [showDropdown]);
 
   const ModelStyles = {
     overlay: {

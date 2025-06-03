@@ -221,7 +221,7 @@
   }
 
   .project-item-tab {
-    font-size: 10px;
+    font-size: 7px;
     font-family: EuclidMedium;
     padding: 2px;
     background: #f5f5f5;
@@ -283,6 +283,14 @@
 
   }
 
+}
+
+@media screen and (max-width:302px) {
+  .project-page-hero-section{
+    background-color: red;
+    min-height: 37rem;
+  }
+  
 }
 
 

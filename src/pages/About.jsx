@@ -588,7 +588,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div>
+       <div>
         <div className="about-section11-container" id="meet-our-team">
           <div className="about-section11-title test-seclection-blue">
             Meet Our Team
@@ -600,19 +600,14 @@ function About() {
             transformative solutions with creativity, collaboration, and a
             passion for excellence, shaping the future of industries worldwide.
           </p>
-          <div
-            style={{ overflow: "visible" }}
-            className="about-team-marquee-desk"
-          >
-            <Marquee pauseOnHover={true} speed={30} gradient={false}>
-              {/* Render the team data twice to ensure seamless looping */}
+          <div style={{ overflow: "auto" }} className="about-team-marquee-desk">
+            <div className="about-team-marquee" pauseOnHover={true}>
+            <Marquee pauseOnHover={true} speed={30}>
               {teamData?.map((eachMem, i) => (
-                <TeamCard key={`first-${i}`} eachMem={eachMem} />
-              ))}
-              {teamData?.map((eachMem, i) => (
-                <TeamCard key={`second-${i}`} eachMem={eachMem} />
+                <TeamCard key={i} eachMem={eachMem} />
               ))}
             </Marquee>
+            </div>
           </div>
           <div className="about-team-marquee-mob">
             {teamData?.map((eachMem, i) => (
@@ -634,7 +629,8 @@ const TeamCard = ({ eachMem }) => {
 
   return (
     <div
-      className={`about-team-card ${showCardDetails ? "about-team-card-active" : ""}`}
+      className={`about-team-card ${showCardDetails ? "about-team-card-active" : ""
+        }`}
       onClick={() => setShowCardDetails(!showCardDetails)}
     >
       <div className="about-team-img">
@@ -650,5 +646,3 @@ const TeamCard = ({ eachMem }) => {
     </div>
   );
 };
-
-

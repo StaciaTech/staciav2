@@ -7,13 +7,23 @@
   position: fixed;
   top: 0;
   width: 100%;
-  
+  overflow-y: auto;
+
+
   box-sizing: border-box;
   background-color: white;
   /* width: 100%; */
 }
 .sidebar-container.hide {
   transform: translateY(-100%);
+}
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+  position: relative;
+}
+.side-bar-item-containers::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebar-container.show {
@@ -50,13 +60,12 @@
   }
 }
 
-@media screen and  (max-width: 475px) {
+@media screen and (max-width: 475px) {
   .nav-logo1 {
     width: 140px;
     height: 30px;
   }
-  .nav-logo-text1{
-    font-size:10px;
+  .nav-logo-text1 {
+    font-size: 10px;
   }
-  
 }

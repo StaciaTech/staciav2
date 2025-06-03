@@ -154,7 +154,7 @@ function ProjectPage() {
         <>
           <div className="project-page-hero-section">
             <div>
-              <span>Projects</span>
+              <span>Projecs</span>
               <Star />
             </div>
           </div>

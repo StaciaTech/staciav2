@@ -606,7 +606,7 @@ const renderDevelopmentStages = (stages, gates, developmentProcess) => {
                 </p>
                 <div className="sol">
                   <li className="para-temp-styles temp-margin">
-                    {stage.Line1 || ""}
+                    {stage.Line|| ""}
                   </li>
                   {stage.Line2 && (
                     <li className="para-temp-styles temp-margin">
