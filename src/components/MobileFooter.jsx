@@ -15,7 +15,7 @@ const footerAccordion = [
   {
     category: "Company",
     links: [
-      { name: "Company", path: "" },
+      { name: "About", path: "/about" },
       { name: "Careers", path: "/career" },
       { name: "Contact", path: "" },
     ],
@@ -31,9 +31,18 @@ const footerAccordion = [
   {
     category: "Resources",
     links: [
-      { name: "Community", path: "" },
-      { name: "Whats", path: "" },
-      { name: "Project", path: "/project" },
+      { name: "Case Study", path: "/case-study" },
+      { name: "Articles", path: "/article" },
+      // { name: "Whatsnew", path: "" },
+    ],
+  },
+  {
+    category: "Reach Us",
+    links: [
+      {
+        name: "Ground Floor, C-53, Guindy Industrial Estate,Guindy, Chennai - 32, Tamil Nadu",
+        path: "",
+      },
     ],
   },
 ];
