@@ -398,7 +398,7 @@
   min-width: 77vw;
   /* height: 400px; */
   /* background-color: red; */
-  background-color: #F8FAFF;
+  background-color: #f8faff;
   flex: 0 0 100%; /* Each card takes full width of the container */
   scroll-snap-align: start;
 }
@@ -546,6 +546,7 @@
   font-size: 1.25rem;
   width: 60%;
 }
+/* Container for the Meet Our Team section */
 
 .about-section11-container {
   padding-bottom: 5rem;
@@ -584,35 +585,18 @@
   box-sizing: border-box; /* Include padding/margin in width calculation */
 }
 
-/* Hover effect adjustments */
-.about-team-card:hover {
-  background-color: #F8FAFF;
-  padding: 1rem;
-  width: 30rem;
-  border-radius: 0.5rem;
-  transform: scale(0.5px);
-  box-sizing: border-box;
-  z-index: 10;
-}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
 
-.about-team-card:hover .about-team-name,
-.about-team-card:hover .about-team-role,
-.about-team-card:hover .about-team-des {
-  opacity: 1;
-  display: block;
+  100% {
+    transform: translateX(-100%);
+  }
 }
-
-.about-team-card:hover .about-team-img {
-  width: 8rem;
+.about-team-marquee-desk {
+  overflow: hidden;
 }
-
-.about-team-card:hover .about-team-img > img {
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 185 / 220;
-}
-
-/* Team card content styles */
 .about-team-img {
   width: 100%;
   transition: width 0.3s ease;
@@ -644,7 +628,54 @@
 .about-team-des {
   opacity: 0;
   display: none;
-  transition: opacity 0.3s ease;
+  /* transform: translateY(10px); */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.about-team-card {
+  margin: 0rem 0.5rem;
+  height: 25rem;
+  width: 20rem;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  /* animation: scroll 5s linear;
+  white-space: nowrap; */
+}
+
+.about-team-card:hover .about-team-name,
+.about-team-card:hover .about-team-role,
+.about-team-card:hover .about-team-des {
+  opacity: 1;
+  display: block;
+  /* transform: translateY(0); */
+}
+
+/* // here only problem ------------------------------------------------*/
+
+.about-team-card:hover {
+  background-color: #f8faff;
+  padding: 1rem;
+  width: 30rem; 
+ 
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+.rfm-marquee-container:hover div {
+  animation: scroll 5s linear;
+  
+}
+
+.about-team-card:hover .about-team-img {
+  width: 8rem;
+  /* Adjust this width as needed */
+}
+
+.about-team-card:hover .about-team-img>img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 185 / 220;
 }
 
 .about-team-marquee-mob {
@@ -668,8 +699,8 @@
 
   .about-team-card.about-team-card-active {
     background-color: #f8faff;
-    padding: 1rem;
-    min-width: 100%;
+    padding: 0.5rem;
+    min-width: 90%;
     border-radius: 0.5rem;
     box-sizing: border-box;
   }
@@ -680,7 +711,7 @@
   }
 
   .about-team-card-active .about-team-img>img {
-    width: 100%;
+    width: 63%;
     object-fit: cover;
     aspect-ratio: 185 / 220;
   }
@@ -690,6 +721,7 @@
     height: 25rem;
     min-width: 20rem;
     position: relative;
+    pad: 1rem;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     /* animation: scroll 5s linear;

@@ -106,6 +106,7 @@ export default function WhatsNew({ handleClose }) {
                   handleClose();
                 }}
               style={{
+                cursor:"pointer",
                 backgroundImage: `url(${
                   eachItem.imageUrl || eachItem.mainImageUrl
                 })`,

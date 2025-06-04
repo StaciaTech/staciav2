@@ -3,7 +3,7 @@
   margin: 0 auto;
   position: relative;
   padding: 2rem 8rem;
-  background: #fff; /* From Other Case Studies */
+  background: #ffffff; /* From Other Case Studies */
 }
 
 /* Heading style */
@@ -12,7 +12,7 @@
   font-weight: 600;
   color: #dcd9e3; /* From Other Case Studies */
   font-family: EuclidSemiBold; /* From Other Case Studies */
-  margin-bottom: 2rem;
+  margin-bottom: -2rem;
   padding: 2rem 0;
   text-align: left;
 }
@@ -191,15 +191,23 @@
   width: 100%;
   padding: 0rem 0;
 }
-@media (max-width: 479px) {
+@media (max-width:320px) {
+  .carousel-controls {
+    padding-top: 10%;
+  }
+}
+@media  (max-width: 479px) {
   .suggestion-casestudys-container {
     padding: 1rem 1rem;
     width: 100%;
     max-width: 320px;
+    
   }
   .suggestion-casestudys-container h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0.75rem 0;
+    /* padding-top: 37px; */
+    background-color: #ffffff;
   }
   .suggestion-casestudy-card {
     min-width: 100%;
@@ -223,6 +231,12 @@
     right: -12px;
   }
 }
+@media (min-width: 320px){
+  .suggestion-casestudys-container h2 {
+  margin-bottom: 1rem;
+  }
+}
+
 
 /* Medium mobile devices (480px and up) */
 @media (min-width: 480px) and (max-width: 639px) {

@@ -185,7 +185,7 @@ function Footer() {
           <div
             className="footer-grey-tabs"
             onClick={() => {
-              navigate("/whatsnew");
+              //navigate("/whatsnew");
               window.scrollTo(0, 0);
             }}
           >
