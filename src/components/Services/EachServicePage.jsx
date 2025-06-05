@@ -660,7 +660,10 @@ function EachServicePage() {
               <img
                 src={singleService?.imageUrl || "No image available."}
                 alt={singleService?.title || "Service"}
-                loading="lazy"
+                loading="lazy"style={{
+                  textAlign:'center',
+                  
+                }}
               />
             </div>
             <div className="each-service-section1-content">

@@ -546,57 +546,97 @@
   font-size: 1.25rem;
   width: 60%;
 }
+
 /* Container for the Meet Our Team section */
-
-.about-section11-container {
-  padding-bottom: 5rem;
-}
-
-.about-section11-title {
-  text-align: center;
-  font-family: EuclidSemibold;
-  font-size: 2.25rem;
-  color: #0D0225;
-}
-
-.about-section11-des {
-  font-size: 1.25rem;
-  color: #6B6084;
-  text-align: center;
-  width: 50%;
-  margin: 1rem auto;
-}
-
-/* Ensure the marquee container has no extra padding or margins */
+/* Container for the marquee */
 .about-team-marquee-desk {
   overflow: hidden; /* Hide overflow to prevent scrollbars */
   width: 100%;
+  white-space: nowrap; /* Ensure cards stay in a single line */
+  box-sizing: border-box;
 }
 
-/* Style for the team card */
-.about-team-card {
-  margin: 0 0.5rem; /* Consistent gap on both sides */
-  height: 25rem;
-  width: 20rem;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
-  display: inline-block; /* Ensure cards stay inline for marquee */
-  box-sizing: border-box; /* Include padding/margin in width calculation */
+/* Inner wrapper for team cards */
+.about-team-marquee {
+  display: inline-block;
+  animation: scroll 60s linear infinite; /* Adjust speed by changing duration */
 }
 
+/* Pause animation on hover */
+.about-team-marquee-desk:hover .about-team-marquee {
+  animation-play-state: paused;
+}
+
+/* Animation for left-to-right scrolling */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
-
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%); /* Move half the width for seamless looping */
   }
 }
-.about-team-marquee-desk {
-  overflow: hidden;
+
+/* Style for the team card */
+.about-team-card {
+  margin: 0 0.5rem;
+  /* min-height: 25rem; */
+  width: 20rem;
+  position: relative;
+  border-radius: 0.5rem;
+  /* overflow: hidden; */
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top; /* Prevent vertical misalignment */
+  min-height: 25rem;
+  height: auto; 
 }
+
+/* Hover effects for team card */
+.about-team-card:hover {
+  background-color: #f8faff;
+  padding: 1rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  z-index: 10; /* Ensure hovered card is above others */
+  overflow: auto;
+  height: auto;          /* 👈 allow content to expand */
+  overflow: visible;
+}
+
+/* Image adjustments on hover */
+.about-team-card:hover .about-team-img {
+  width: 8rem;
+}
+
+.about-team-card:hover .about-team-img > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 185 / 220;
+}
+
+/* Text display on hover */
+.about-team-card:hover .about-team-name,
+.about-team-card:hover .about-team-role,
+.about-team-card:hover .about-team-des {
+  opacity: 1;
+  
+  display: block;
+}
+.about-team-name,
+.about-team-role,
+.about-team-des {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.3s ease;
+  word-break: break-word; /* ✅ prevent overflow from long words */
+  white-space: normal;    /* ✅ allow line breaks */
+}
+
+
+/* Ensure team card content is properly positioned */
 .about-team-img {
   width: 100%;
   transition: width 0.3s ease;
@@ -628,58 +668,30 @@
 .about-team-des {
   opacity: 0;
   display: none;
-  /* transform: translateY(10px); */
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-.about-team-card {
-  margin: 0rem 0.5rem;
-  height: 25rem;
-  width: 20rem;
-  position: relative;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  /* animation: scroll 5s linear;
-  white-space: nowrap; */
-}
-
-.about-team-card:hover .about-team-name,
-.about-team-card:hover .about-team-role,
-.about-team-card:hover .about-team-des {
-  opacity: 1;
-  display: block;
-  /* transform: translateY(0); */
-}
-
-/* // here only problem ------------------------------------------------*/
-
-.about-team-card:hover {
-  background-color: #f8faff;
-  padding: 1rem;
-  width: 30rem; 
- 
-  border-radius: 0.5rem;
-  box-sizing: border-box;
-}
-.rfm-marquee-container:hover div {
-  animation: scroll 5s linear;
-  
-}
-
-.about-team-card:hover .about-team-img {
-  width: 8rem;
-  /* Adjust this width as needed */
-}
-
-.about-team-card:hover .about-team-img>img {
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 185 / 220;
-}
-
+/* Mobile view remains unchanged */
 .about-team-marquee-mob {
   display: none;
+}
+
+/* Ensure container padding */
+.about-section11-container {
+  padding-bottom: 5rem;
+}
+
+.about-section11-title {
+  text-align: center;
+  font-family: EuclidSemibold;
+  font-size: 2.25rem;
+  color: #0D0225;
+}
+
+.about-team-des {
+  max-height: 5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 1024px) {

@@ -547,8 +547,14 @@ function About() {
             />
           </div>
         </div>
-        <Suspense fallback={<div><Loadingstar/></div>}>
-        <ClientComponent />
+        <Suspense
+          fallback={
+            <div>
+              <Loadingstar />
+            </div>
+          }
+        >
+          <ClientComponent />
         </Suspense>
         <div className="about-section10-container" id="our-leadership">
           <div className="about-section-title test-seclection-blue">
@@ -588,32 +594,21 @@ function About() {
           </div>
         </div>
       </div>
-       <div>
-        <div className="about-section11-container" id="meet-our-team">
-          <div className="about-section11-title test-seclection-blue">
-            Meet Our Team
-          </div>
-          <p className="about-section11-des test-seclection-blue">
-            At Stacia Corp, our talented team, led by founders Mr. Sarabesh
-            Sriram and Mr. Lakshman PV, combines expertise in engineering,
-            software, and electronics. Together, we drive innovation, delivering
-            transformative solutions with creativity, collaboration, and a
-            passion for excellence, shaping the future of industries worldwide.
-          </p>
-          <div style={{ overflow: "auto" }} className="about-team-marquee-desk">
-            <div className="about-team-marquee" pauseOnHover={true}>
-            <Marquee pauseOnHover={true} speed={30}>
-              {teamData?.map((eachMem, i) => (
-                <TeamCard key={i} eachMem={eachMem} />
-              ))}
-            </Marquee>
-            </div>
-          </div>
-          <div className="about-team-marquee-mob">
-            {teamData?.map((eachMem, i) => (
-              <TeamCard key={i} eachMem={eachMem} />
-            ))}
-          </div>
+      <div className="about-team-marquee-desk">
+        <div className="about-team-marquee">
+          {/* Render teamData four times for seamless looping */}
+          {teamData?.map((eachMem, i) => (
+            <TeamCard key={`set1-${i}`} eachMem={eachMem} />
+          ))}
+          {teamData?.map((eachMem, i) => (
+            <TeamCard key={`set2-${i}`} eachMem={eachMem} />
+          ))}
+          {teamData?.map((eachMem, i) => (
+            <TeamCard key={`set3-${i}`} eachMem={eachMem} />
+          ))}
+          {teamData?.map((eachMem, i) => (
+            <TeamCard key={`set4-${i}`} eachMem={eachMem} />
+          ))}
         </div>
       </div>
       <Footer />
