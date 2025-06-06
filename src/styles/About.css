@@ -213,12 +213,6 @@
   width: 70%;
 }
 
-.about-section4-des {
-  font-size: 1.25rem;
-  color: #6b6084;
-  width: 80%;
-}
-
 .about-section5-container {
   display: flex;
   column-gap: 5rem;
@@ -548,135 +542,6 @@
 }
 
 /* Container for the Meet Our Team section */
-/* Container for the marquee */
-.about-team-marquee-desk {
-  overflow: hidden; /* Hide overflow to prevent scrollbars */
-  width: 100%;
-  white-space: nowrap; /* Ensure cards stay in a single line */
-  box-sizing: border-box;
-}
-
-/* Inner wrapper for team cards */
-.about-team-marquee {
-  display: inline-block;
-  animation: scroll 60s linear infinite; /* Adjust speed by changing duration */
-}
-
-/* Pause animation on hover */
-.about-team-marquee-desk:hover .about-team-marquee {
-  animation-play-state: paused;
-}
-
-/* Animation for left-to-right scrolling */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Move half the width for seamless looping */
-  }
-}
-
-/* Style for the team card */
-.about-team-card {
-  margin: 0 0.5rem;
-  /* min-height: 25rem; */
-  width: 20rem;
-  position: relative;
-  border-radius: 0.5rem;
-  /* overflow: hidden; */
-  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
-  display: inline-block;
-  box-sizing: border-box;
-  vertical-align: top; /* Prevent vertical misalignment */
-  min-height: 25rem;
-  height: auto; 
-}
-
-/* Hover effects for team card */
-.about-team-card:hover {
-  background-color: #f8faff;
-  padding: 1rem;
-  width: 30rem;
-  border-radius: 0.5rem;
-  box-sizing: border-box;
-  z-index: 10; /* Ensure hovered card is above others */
-  overflow: auto;
-  height: auto;          /* 👈 allow content to expand */
-  overflow: visible;
-}
-
-/* Image adjustments on hover */
-.about-team-card:hover .about-team-img {
-  width: 8rem;
-}
-
-.about-team-card:hover .about-team-img > img {
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 185 / 220;
-}
-
-/* Text display on hover */
-.about-team-card:hover .about-team-name,
-.about-team-card:hover .about-team-role,
-.about-team-card:hover .about-team-des {
-  opacity: 1;
-  
-  display: block;
-}
-.about-team-name,
-.about-team-role,
-.about-team-des {
-  opacity: 0;
-  display: none;
-  transition: opacity 0.3s ease;
-  word-break: break-word; /* ✅ prevent overflow from long words */
-  white-space: normal;    /* ✅ allow line breaks */
-}
-
-
-/* Ensure team card content is properly positioned */
-.about-team-img {
-  width: 100%;
-  transition: width 0.3s ease;
-}
-
-.about-team-img > img {
-  object-fit: contain;
-  width: 100%;
-}
-
-.about-team-name {
-  font-family: EuclidMedium;
-  font-size: 1.25rem;
-}
-
-.about-team-role {
-  font-family: EuclidSemibold;
-  font-size: 1.5rem;
-  color: #0047FF;
-}
-
-.about-team-des {
-  font-size: 1rem;
-  color: #6B6084;
-}
-
-.about-team-name,
-.about-team-role,
-.about-team-des {
-  opacity: 0;
-  display: none;
-  transition: opacity 0.3s ease;
-}
-
-/* Mobile view remains unchanged */
-.about-team-marquee-mob {
-  display: none;
-}
-
-/* Ensure container padding */
 .about-section11-container {
   padding-bottom: 5rem;
 }
@@ -685,15 +550,139 @@
   text-align: center;
   font-family: EuclidSemibold;
   font-size: 2.25rem;
-  color: #0D0225;
+  color: #0d0225;
+}
+
+.about-section11-des {
+  font-size: 1.25rem;
+  color: #6b6084;
+  text-align: center;
+  width: 50%;
+  margin: 0.5rem auto;
+}
+
+.about-section4-des {
+  font-size: 1.25rem;
+  color: #6b6084;
+  width: 100%;
+}
+
+.about-team-marquee-desk {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.about-team-marquee {
+  display: flex;
+  animation: scroll 15s linear infinite; /* Adjusted duration for smoother loop */
+  will-change: transform; /* Optimize rendering performance */
+}
+
+.marquee-content {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.about-team-marquee-desk:hover .about-team-marquee {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3)); /* Move by the width of one set */
+  }
+}
+
+/* Style for the team card */
+.about-team-card {
+  margin: 0 0.7rem;
+  width: 20rem;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  height: 25rem;
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effects for team card */
+.about-team-card:hover {
+  background-color: #f8faff;
+  padding: 1rem;
+  width: 30rem;
+  box-sizing: border-box;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Image adjustments */
+.about-team-img {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
+.about-team-img > img {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 185 / 220;
+}
+
+.about-team-card:hover .about-team-img {
+  width: 8rem;
+}
+
+/* Content styling */
+.about-team-name,
+.about-team-role,
+.about-team-des {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.about-team-card:hover .about-team-name,
+.about-team-card:hover .about-team-role,
+.about-team-card:hover .about-team-des {
+  opacity: 1;
+  visibility: visible;
+}
+
+.about-team-name {
+  font-family: EuclidMedium;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.about-team-role {
+  font-family: EuclidSemibold;
+  font-size: 1.5rem;
+  color: #0047ff;
+  margin-top: 0.3rem;
 }
 
 .about-team-des {
-  max-height: 5rem;
+  font-size: 0.9rem;
+  color: #6b6084;
+  margin-top: 0.5rem;
+  max-height: 9rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
 }
 
+/* Mobile view */
+.about-team-marquee-mob {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .about-team-marquee-desk {
     display: none;
@@ -734,6 +723,7 @@
     min-width: 20rem;
     position: relative;
     pad: 1rem;
+    border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     /* animation: scroll 5s linear;

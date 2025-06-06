@@ -594,20 +594,47 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="about-team-marquee-desk">
-        <div className="about-team-marquee">
-          {/* Render teamData four times for seamless looping */}
+      <div className="about-section11-container" id="meet-our-team">
+        {/* Title */}
+        <div className="about-section11-title test-seclection-blue">
+          Meet Our Team
+        </div>
+
+        {/* Description */}
+        <p className="about-section11-des test-seclection-blue">
+          At Stacia Corp, our talented team, led by founders Mr. Sarabesh Sriram
+          and Mr. Lakshman PV, combines expertise in engineering, software, and
+          electronics. Together, we drive innovation, delivering transformative
+          solutions with creativity, collaboration, and a passion for
+          excellence, shaping the future of industries worldwide.
+        </p>
+
+        {/* Desktop Card Marquee */}
+        <div className="about-team-marquee-desk">
+          <div className="about-team-marquee">
+            {/* Render teamData three times for smoother looping */}
+            <div className="marquee-content">
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`set1-${i}`} eachMem={eachMem} />
+              ))}
+            </div>
+            <div className="marquee-content">
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`set2-${i}`} eachMem={eachMem} />
+              ))}
+            </div>
+            <div className="marquee-content">
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`set3-${i}`} eachMem={eachMem} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Static Cards */}
+        <div className="about-team-marquee-mob">
           {teamData?.map((eachMem, i) => (
-            <TeamCard key={`set1-${i}`} eachMem={eachMem} />
-          ))}
-          {teamData?.map((eachMem, i) => (
-            <TeamCard key={`set2-${i}`} eachMem={eachMem} />
-          ))}
-          {teamData?.map((eachMem, i) => (
-            <TeamCard key={`set3-${i}`} eachMem={eachMem} />
-          ))}
-          {teamData?.map((eachMem, i) => (
-            <TeamCard key={`set4-${i}`} eachMem={eachMem} />
+            <TeamCard key={`mob-${i}`} eachMem={eachMem} />
           ))}
         </div>
       </div>
@@ -624,8 +651,9 @@ const TeamCard = ({ eachMem }) => {
 
   return (
     <div
-      className={`about-team-card ${showCardDetails ? "about-team-card-active" : ""
-        }`}
+      className={`about-team-card ${
+        showCardDetails ? "about-team-card-active" : ""
+      }`}
       onClick={() => setShowCardDetails(!showCardDetails)}
     >
       <div className="about-team-img">
