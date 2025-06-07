@@ -628,6 +628,16 @@ function About() {
                 <TeamCard key={`set3-${i}`} eachMem={eachMem} />
               ))}
             </div>
+            <div className="marquee-content">
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`set4-${i}`} eachMem={eachMem} />
+              ))}
+            </div>
+            <div className="marquee-content">
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`set5-${i}`} eachMem={eachMem} />
+              ))}
+            </div>
           </div>
         </div>
 
