@@ -2732,19 +2732,16 @@ function SingleCaseStudy() {
             </div>
           </div>
         </div>
-
-        <SuggestionProducts />
         <SuggestionService />
+        <SuggestionProducts />
    
     
 
 
         {/* Other Case Studies Section */}
         <div className="other-case-studies">
-          <h2 className="single-casestudy-layout1-title test-selection-blue">
-            Other Case Studies
-          </h2>
-          <div className="other-case-studies-grid">
+      
+          {/* <div className="other-case-studies-grid">
             {otherCaseStudies.map((study, index) => (
               <div className="other-case-study-card" key={index}>
                 <Link to={`/case-study/single-caseStudy/${study.id}`}>
@@ -2780,7 +2777,9 @@ function SingleCaseStudy() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+          <SuggestionCasestudys/>
+         
         </div>
       </div>
 

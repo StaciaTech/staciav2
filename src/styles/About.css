@@ -398,7 +398,7 @@
   min-width: 77vw;
   /* height: 400px; */
   /* background-color: red; */
-  background-color: #F8FAFF;
+  background-color: #f8faff;
   flex: 0 0 100%; /* Each card takes full width of the container */
   scroll-snap-align: start;
 }
@@ -546,7 +546,8 @@
   font-size: 1.25rem;
   width: 60%;
 }
-
+/* Container for the Meet Our Team section */
+/* Container for the Meet Our Team section */
 .about-section11-container {
   padding-bottom: 5rem;
 }
@@ -563,56 +564,73 @@
   color: #6B6084;
   text-align: center;
   width: 50%;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
 }
 
-/* Ensure the marquee container has no extra padding or margins */
-.about-team-marquee-desk {
-  overflow: hidden; /* Hide overflow to prevent scrollbars */
+.about-section4-des {
+  font-size: 1.25rem;
+  color: #6B6084;
   width: 100%;
+
 }
 
-/* Style for the team card */
+.about-team-marquee-desk {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.about-team-marquee {
+  display: flex;
+  width: 500%;
+  animation: scroll 150s linear infinite;
+  will-change: transform;
+}
+
+.marquee-content {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 0;
+}
+
+.about-team-marquee-desk:hover .about-team-marquee {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 5 * 4));
+  }
+}
+
+
+
 .about-team-card {
-  margin: 0 0.5rem; /* Consistent gap on both sides */
-  height: 25rem;
+  margin: 0 0.7rem;
   width: 20rem;
   position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
-  display: inline-block; /* Ensure cards stay inline for marquee */
-  box-sizing: border-box; /* Include padding/margin in width calculation */
+  flex-shrink: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  height: 25rem;
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Hover effect adjustments */
+
 .about-team-card:hover {
   background-color: #F8FAFF;
   padding: 1rem;
   width: 30rem;
-  border-radius: 0.5rem;
-  transform: scale(0.5px);
   box-sizing: border-box;
   z-index: 10;
+  overflow: hidden;
 }
 
-.about-team-card:hover .about-team-name,
-.about-team-card:hover .about-team-role,
-.about-team-card:hover .about-team-des {
-  opacity: 1;
-  display: block;
-}
 
-.about-team-card:hover .about-team-img {
-  width: 8rem;
-}
-
-.about-team-card:hover .about-team-img > img {
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 185 / 220;
-}
-
-/* Team card content styles */
 .about-team-img {
   width: 100%;
   transition: width 0.3s ease;
@@ -621,36 +639,60 @@
 .about-team-img > img {
   object-fit: contain;
   width: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 185 / 220;
+}
+
+.about-team-card:hover .about-team-img {
+  width: 8rem;
+}
+
+
+.about-team-name,
+.about-team-role,
+.about-team-des {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.about-team-card:hover .about-team-name,
+.about-team-card:hover .about-team-role,
+.about-team-card:hover .about-team-des {
+  opacity: 1;
+  visibility: visible;
 }
 
 .about-team-name {
   font-family: EuclidMedium;
   font-size: 1.25rem;
+  margin-top: 0.5rem;
 }
 
 .about-team-role {
   font-family: EuclidSemibold;
   font-size: 1.5rem;
   color: #0047FF;
+  margin-top: 0.3rem;
 }
 
 .about-team-des {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #6B6084;
+  margin-top: 0.5rem;
+  max-height: 9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
 }
 
-.about-team-name,
-.about-team-role,
-.about-team-des {
-  opacity: 0;
-  display: none;
-  transition: opacity 0.3s ease;
-}
 
 .about-team-marquee-mob {
   display: none;
 }
-
 @media screen and (max-width: 1024px) {
   .about-team-marquee-desk {
     display: none;
@@ -668,8 +710,8 @@
 
   .about-team-card.about-team-card-active {
     background-color: #f8faff;
-    padding: 1rem;
-    min-width: 100%;
+    padding: 0.5rem;
+    min-width: 90%;
     border-radius: 0.5rem;
     box-sizing: border-box;
   }
@@ -680,7 +722,7 @@
   }
 
   .about-team-card-active .about-team-img>img {
-    width: 100%;
+    width: 63%;
     object-fit: cover;
     aspect-ratio: 185 / 220;
   }
@@ -690,6 +732,7 @@
     height: 25rem;
     min-width: 20rem;
     position: relative;
+    pad: 1rem;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     /* animation: scroll 5s linear;

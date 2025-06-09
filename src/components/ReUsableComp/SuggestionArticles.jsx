@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../../Data/SingleArticle.json";
-import "../../styles/SuggestionCasestudys.css";
+import "../../styles/SuggestionArticles.css";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -59,13 +59,13 @@ const SuggestionArticles = ({ currentArticleHashtag }) => {
   };
 
   return (
-    <div className="suggestion-casestudys-container">
-      <div className="header-with-arrows">
+    <div className="suggestion-casestudys-container-4">
+      <div className="header-with-arrows-4">
         <h2>Suggested Articles</h2>
         {suggestedArticles.length > 1 && (
-          <div className="carousel-controls">
+          <div className="carousel-controls-4">
             <button
-              className="carousel-arrow carousel-arrow-left"
+              className="carousel-arrow carousel-arrow-left-4"
               onClick={() => scrollCard("left")}
               disabled={!canScrollLeft}
               aria-label="Scroll left"
@@ -73,7 +73,7 @@ const SuggestionArticles = ({ currentArticleHashtag }) => {
               <FaArrowLeft />
             </button>
             <button
-              className="carousel-arrow carousel-arrow-right"
+              className="carousel-arrow carousel-arrow-right-4"
               onClick={() => scrollCard("right")}
               disabled={!canScrollRight}
               aria-label="Scroll right"
@@ -83,8 +83,8 @@ const SuggestionArticles = ({ currentArticleHashtag }) => {
           </div>
         )}
       </div>
-      <div className="suggestion-casestudys-scroll-wrapper">
-        <div className="suggestion-casestudys-scroll" ref={scrollRef}>
+      <div className="suggestion-casestudys-scroll-wrapper-4">
+        <div className="suggestion-casestudys-scroll-4" ref={scrollRef}>
           {suggestedArticles.length > 0 ? (
             suggestedArticles.map((article, index) => {
               const description =
@@ -97,7 +97,7 @@ const SuggestionArticles = ({ currentArticleHashtag }) => {
                   key={`${
                     article.audioData.topics[0]?.hashtag || index
                   }-${index}`}
-                  className="suggestion-casestudy-card"
+                  className="suggestion-casestudy-card-4"
                 >
                   <Link
                     to={articleUrl}
@@ -116,7 +116,7 @@ const SuggestionArticles = ({ currentArticleHashtag }) => {
                       alt={article.title || "Article"}
                     />
                   </Link>
-                  <div className="content">
+                  <div className="content-4">
                     <h3>{article.title || "Untitled"}</h3>
                     <p>
                       {description.length > 80

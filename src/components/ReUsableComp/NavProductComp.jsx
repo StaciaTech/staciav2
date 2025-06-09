@@ -512,6 +512,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import data from "../../Data/ProductPage.json";
 import { FaLariSign } from "react-icons/fa6";
+import LoadingStar from "../LoadingStar";
 
 function NavProductComp({ handleClose }) {
   const navigate = useNavigate();
@@ -1139,7 +1140,7 @@ function NavProductComp({ handleClose }) {
           )}
         </div>
       ) : (
-        <div>Loading...</div>
+        <div><LoadingStar/></div>
       )}
     </div>
   );

@@ -72,7 +72,7 @@ const SuggestionProducts = ({ currentProductId }) => {
   return (
     <div className="suggestion-casestudys-container-1">
       <div className="header-with-arrows-1">
-        <h2>Suggested Products</h2>
+        <h2 className="suggestion-casestudys-title-1">Suggested Products</h2>
         {allProducts.length > 1 && (
           <div className="carousel-controls">
             <button
@@ -133,7 +133,7 @@ const SuggestionProducts = ({ currentProductId }) => {
                       ? `${product.description.substring(0, 80)}...`
                       : product.description || "No description available."}
                   </p>
-                  <Link
+                  <Link className="knowmore"
                     to={`/products/${formatTitleForUrl(
                       product.departmentName
                     )}/${formatTitleForUrl(
