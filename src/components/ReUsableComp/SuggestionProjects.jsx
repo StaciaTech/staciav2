@@ -130,7 +130,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../../Data/ProjectData2.json";
-import "../../styles/SuggestionCasestudys.css";
+import "../../styles/SuggestionProjects.css";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -196,13 +196,13 @@ const SuggestionProjects = ({ currentProjectId }) => {
   };
 
   return (
-    <div className="suggestion-casestudys-container">
+    <div className="suggestion-casestudys-container-3">
       <div className="header-with-arrows">
         <h2>Suggested Projects</h2>
         {allProjects.length > 1 && (
-          <div className="carousel-controls">
+          <div className="carousel-controls-3">
             <button
-              className="carousel-arrow carousel-arrow-left"
+              className="carousel-arrow carousel-arrow-left-3"
               onClick={() => scrollCard("left")}
               disabled={!canScrollLeft}
               aria-label="Scroll left"
@@ -210,7 +210,7 @@ const SuggestionProjects = ({ currentProjectId }) => {
               <FaArrowLeft />
             </button>
             <button
-              className="carousel-arrow carousel-arrow-right"
+              className="carousel-arrow carousel-arrow-right-3"
               onClick={() => scrollCard("right")}
               disabled={!canScrollRight}
               aria-label="Scroll right"
@@ -220,11 +220,11 @@ const SuggestionProjects = ({ currentProjectId }) => {
           </div>
         )}
       </div>
-      <div className="suggestion-casestudys-scroll-wrapper">
-        <div className="suggestion-casestudys-scroll" ref={scrollRef}>
+      <div className="suggestion-casestudys-scroll-wrapper-3">
+        <div className="suggestion-casestudys-scroll-3" ref={scrollRef}>
           {allProjects.length > 0 ? (
             allProjects.map((project, index) => (
-              <div key={project.id} className="suggestion-casestudy-card">
+              <div key={project.id} className="suggestion-casestudy-card-3">
                 <Link
                   to={`/project/${formatTitleForUrl(
                     project.departmentName
@@ -241,7 +241,7 @@ const SuggestionProjects = ({ currentProjectId }) => {
                     alt={project.title || "Project"}
                   />
                 </Link>
-                <div className="content">
+                <div className="content-3">
                   <h3>{project.title || "Untitled"}</h3>
                   <p>
                     {project.mainDesc?.length > 80
@@ -255,7 +255,7 @@ const SuggestionProjects = ({ currentProjectId }) => {
                       project.categoryName
                     )}/${formatTitleForUrl(project.title)}`}
                     onClick={() => window.scrollTo(0, 0)}
-                    className="know-more-link"
+                    className="know-more-link-3"
                   >
                     Know more →
                   </Link>

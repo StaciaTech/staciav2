@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import data from "../../Data/Services.json"; // Adjust path as needed
-import "../../styles/SuggestionCasestudys.css"; // Ensure this path is correct
+import data from "../../Data/Services.json"; // Adjust path as needed 
+import "../../styles/SuggestionServices.css";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -116,9 +116,9 @@ const SuggestionService = () => {
   };
 
   return (
-    <div className="suggestion-casestudys-container-1">
-      <div className="header-with-arrows-1">
-        <h2 className="suggestion-casestudys-title-1">Suggested Services</h2>
+    <div className="suggestion-casestudys-container-2">
+      <div className="header-with-arrows-2">
+        <h2 className="suggestion-casestudys-title-2">Suggested Services</h2>
 
         <div className="carousel-controls">
           <button
@@ -139,8 +139,8 @@ const SuggestionService = () => {
           </button>
         </div>
       </div>
-      <div className="suggestion-casestudys-scroll-wrapper-1">
-        <div className="suggestion-casestudys-scroll-1" ref={scrollRef}>
+      <div className="suggestion-casestudys-scroll-wrapper-2">
+        <div className="suggestion-casestudys-scroll-2" ref={scrollRef}>
           {allServices.length > 0 ? (
             allServices.map((service, index) => {
               const serviceUrl = `/services/${formatTitleForUrl(
@@ -151,11 +151,11 @@ const SuggestionService = () => {
               return (
                 <div
                   key={`${service.id}-${index}`}
-                  className="suggestion-casestudy-card-1"
+                  className="suggestion-casestudy-card-2"
                 >
                   <Link
                     to={serviceUrl}
-                    className="suggestion-casestudy-link-1"
+                    className="suggestion-casestudy-link-2"
                     onClick={() => {
                       window.scrollTo(0, 0);
                       console.log(
@@ -172,7 +172,7 @@ const SuggestionService = () => {
                       className="suggestion-casestudy-image-1"
                     />
                   </Link>
-                  <div className="content-1">
+                  <div className="content-2">
                     <h3>{service.title || "Untitled"}</h3>
                     <p>
                       {service.oneLine && service.oneLine.length > 80
@@ -183,7 +183,7 @@ const SuggestionService = () => {
                     </p>
                     <Link
                       to={serviceUrl}
-                      className="suggestion-casestudy-know-more-1"
+                      className="suggestion-casestudy-know-more-2"
                       onClick={() => {
                         window.scrollTo(0, 0);
                         console.log(
@@ -198,7 +198,7 @@ const SuggestionService = () => {
               );
             })
           ) : (
-            <p className="suggestion-casestudys-empty-1">
+            <p className="suggestion-casestudys-empty-2">
               No other services available.
             </p>
           )}

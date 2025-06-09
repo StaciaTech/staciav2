@@ -435,6 +435,8 @@ import next from "../../assets/next.png";
 import "../../styles/ProductDetails.css";
 import { useNavigate } from "react-router-dom";
 import data from "../../Data/ProductPage.json";
+import SuggestionProducts from "../ReUsableComp/SuggestionProducts";
+import SuggestionService from "../ReUsableComp/SuggestionService";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
@@ -720,6 +722,10 @@ export default function SingleProduct() {
           </div>
         </div>
       )}
+      <div>
+          <SuggestionService/>
+          <SuggestionProducts/>
+        </div>
       <Footer />
       <MobileFooter />
     </Suspense>

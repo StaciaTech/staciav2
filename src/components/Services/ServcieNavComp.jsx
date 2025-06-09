@@ -846,6 +846,7 @@ import {
 } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import Data from "../../Data/Services.json"; // Import the static JSON data
+import LoadingStar from "../LoadingStar";
 
 function ServcieNavComp({ handleClose }) {
   const navigate = useNavigate();
@@ -1437,7 +1438,7 @@ function ServcieNavComp({ handleClose }) {
           )}
         </div>
       ) : (
-        <div>Loading...</div>
+        <div><LoadingStar/></div>
       )}
     </div>
   );

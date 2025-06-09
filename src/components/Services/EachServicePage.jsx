@@ -583,6 +583,7 @@ import { useParams } from "react-router-dom";
 import { motion, useTransform, useScroll } from "framer-motion";
 import servicesData from "../../Data/Services.json";
 import { useState,useEffect } from "react";
+import SuggestionProducts from "../ReUsableComp/SuggestionProducts"
 
 import SuggestionService from "../ReUsableComp/SuggestionService";
 import LoadingStar from "../LoadingStar";
@@ -708,6 +709,7 @@ function EachServicePage() {
           </Suspense>
         </div>
         <div>
+          <SuggestionProducts/>
           <SuggestionService />
         </div>
         <div>

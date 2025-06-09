@@ -2732,9 +2732,8 @@ function SingleCaseStudy() {
             </div>
           </div>
         </div>
-
-        <SuggestionProducts />
         <SuggestionService />
+        <SuggestionProducts />
    
     
 
@@ -2780,7 +2779,7 @@ function SingleCaseStudy() {
             ))}
           </div> */}
           <SuggestionCasestudys/>
-          <SuggestionProjects/>
+         
         </div>
       </div>
 

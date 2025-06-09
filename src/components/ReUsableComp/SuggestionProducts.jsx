@@ -133,7 +133,7 @@ const SuggestionProducts = ({ currentProductId }) => {
                       ? `${product.description.substring(0, 80)}...`
                       : product.description || "No description available."}
                   </p>
-                  <Link
+                  <Link className="knowmore"
                     to={`/products/${formatTitleForUrl(
                       product.departmentName
                     )}/${formatTitleForUrl(
