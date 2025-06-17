@@ -158,14 +158,16 @@
 .dot {
   width: 10px;
   height: 10px;
-  background: #ccc;
+  /* background: #ccc; */
+  background-color: #666;
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .dot.active {
-  background: #333;
+  /* background: #333; */
+  background-color: #0047FF;
 }
 
 .dot:hover {
