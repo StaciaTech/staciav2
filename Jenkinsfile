@@ -118,7 +118,7 @@ pipeline {
       slackSend (
         channel: env.SLACK_CHANNEL,
         color: 'danger',
-        message: "Project: *${env.JOB_NAME}* -- ❌ *Deployment FAILED!* on branch *${env.BRANCH_NAME}*. Check Jenkins logs for details."
+        message: "Project: *${env.JOB_NAME}* -- ❌ *Deployment FAILED!!* on branch *${env.BRANCH_NAME}*. Check Jenkins logs for details."
       )
     }
   }
