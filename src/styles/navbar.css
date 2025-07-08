@@ -371,6 +371,76 @@ a {
   height: 100%;
   border-radius: 20px;
 }
+.advertisement {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  width: 100%;
+  /* height: 80px; */
+  background-color: #c7105E;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.ad-text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.view-details {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+.star {
+  font-size: 20px;
+}
+.close{
+  /* border: 2px solid white; */
+  height: 100%;
+  position: absolute;
+  right: -24.5%;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  height: 100%;
+  cursor: pointer;
+  /* border: 2px solid wheat; */
+}
+
+/* Optional: Add background SVG waves */
+.advertisement::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets//wave-line.svg');
+  background-color: #c7105E;
+  /* background: url('../assets/wave-line.svg') no-repeat center/cover; */
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.advertisement > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
 
 @media (max-width: 1024px) {
   .nav-container {

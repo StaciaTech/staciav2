@@ -8,7 +8,7 @@
 // import { NavLink, Link } from "react-router-dom";
 // import MobileNav from "../assets/MobileNav.png";
 // import WhatsNew from "./WhatsNew";
-// import Modal from "react-modal";  
+// import Modal from "react-modal";
 // import Contact from "./Contact";
 // import { useAnimation, motion } from "framer-motion";
 // import gsap from "gsap";
@@ -17,10 +17,6 @@
 // import AboutDropDown from "./AboutDropDown";
 // import ResourceDropDown from "./Resource/ResourceDropDown";
 // import ProjectDropdown from "./ProjectDropdown";
-
-
-
-
 
 // function NavBar() {
 //   const [openWhatsNew, setOpenWhatsNew] = useState(0);
@@ -470,7 +466,6 @@
 //                 Careers
 //               </NavLink>
 
-
 //               {/* competition */}
 //               <NavLink
 //                 to={"/competition"}
@@ -485,7 +480,6 @@
 //                 <Star />
 
 //               </NavLink>
-
 
 //               <NavLink
 //                 to={"/about"}
@@ -562,8 +556,7 @@
 //              {/* {showContact && <div className="form-container" >
 //               <Contact closeHandle={closeHandle} />
 //               </div> }  */}
-              
-            
+
 //             {/* )} */}
 //           </div>
 //         </div>
@@ -645,8 +638,6 @@
 
 // export default NavBar;
 
-
-
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/navbar.css";
@@ -667,7 +658,7 @@ import ServcieNavComp from "./Services/ServcieNavComp";
 import AboutDropDown from "./AboutDropDown";
 import ResourceDropDown from "./Resource/ResourceDropDown";
 import ProjectDropdown from "./ProjectDropdown";
-import Sitemap from '../components/Sitemap';
+import Sitemap from "../components/Sitemap";
 
 function NavBar() {
   const [openWhatsNew, setOpenWhatsNew] = useState(false);
@@ -681,7 +672,16 @@ function NavBar() {
   const [activeDropdown, setActiveDropdown] = useState(null); // Unified dropdown state
   const navAreaRef = useRef(null); // Ref for the entire nav area
   const [isOpenRes, setIsOpenRes] = useState(false); // For Resource click toggle
-  const dropdownRef = useRef(null); // For Resource click outside detection
+  const dropdownRef = useRef(null); // For Resource click outside detectionA
+  const [showAdd, setShowAdd] = useState(true);
+
+  const isHomepage = location.pathname === "/";
+  useEffect(() => {
+    if (isHomepage) {
+      setShowAdd(true);
+    }
+  }, []);
+
   const closeHandle = () => {
     setShowContact(false);
   };
@@ -876,7 +876,6 @@ function NavBar() {
       borderRadius: "1rem",
       padding: "3rem 5rem",
       boxSizing: "border-box",
-    
     },
   };
 
@@ -1068,6 +1067,24 @@ function NavBar() {
           </div>
         )}
       </div>
+      {isHomepage && showAdd && (
+        <div class="advertisement">
+          <Star />
+          <p class="ad-text">
+            Coding thrill awaits! 🚀 Hackathon on [Date] at [Venue]. Dive into
+            innovation with us!
+            <a href="#" class="view-details">
+              View Details
+            </a>
+          </p>
+          <Star />
+          <div className="close">
+            <button class="close-btn" onClick={() => setShowAdd(false)}>
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
       {activeDropdown === "services" && (
         <div
           className="nav-service-comp"

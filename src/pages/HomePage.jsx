@@ -222,13 +222,14 @@ function HomePage() {
         <div className="nav_style">
           <NavBar />
           <SideBar />
-        </div>
+        </div>        
         {/* Hero Section */}
         <div className="home">
           <div className="homeSection">
+            
             <div className="texts">
               <div className="heroText">
-                <span>Stacia Corp Redefining</span> <Star />
+                <span>Stacia Corp Redefining </span> <Star />
               </div>
               <div className="changingText">
                 {isMounted && (
