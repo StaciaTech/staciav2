@@ -20,7 +20,7 @@ import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { SlEnergy } from "react-icons/sl";
 import { VscChip } from "react-icons/vsc";
 
-
+import Loadingstar from "../components/LoadingStar"
 const AboutCarousel = React.lazy(()=>import("../components/ReUsableComp/AboutCarousel"));
 const ClientComponent = React.lazy(()=> import("./Client"));
 
@@ -38,7 +38,7 @@ const Industries = [
   },
   {
     id: 3,
-    title: "Enrgy",
+    title: "Energy",
     img: <SlEnergy />,
   },
   {
@@ -267,15 +267,7 @@ function About() {
               A Story of Passion, creativity and innovation
             </div>
             <p className="about-section2-text test-seclection-blue">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              consequat justo id mauris ultrices, vel placerat libero tincidunt.
-              Phasellus pretium velit ac odio pulvinar, ac mollis tortor
-              laoreet. Duis vel mauris nec libero molestie laoreet. Nunc commodo
-              velit quis nunc volutpat, at suscipit quam finibus. Sed interdum
-              euismod nisl, nec finibus orci finibus vel. Proin ultricies sem
-              nec fermentum accumsan. Vivamus eget eros eu risus fermentum
-              placerat. Sed at ligula sapien. Suspendisse quis risus nec turpis
-              bibendum ullamcorper.
+              Stacia Corp is a MSME, and Government of India recognised Start-up created as a R&D centre aimed to solve engineering problems for industries of various genres. Stacia Corp provides efficient and effective solutions in the form of engineering design or innovative ideas. We also specialise in providing niche, customizable solutions to client. Stacia has successfully executed a variety of projects in different verticals. We have often served as a client's one- stop-shop throughout the life cycle of product design & development. This approach helps the client engage with Stacia Corp's expertise from plan to production. Through this approach Stacia collaborates and handholds the client in identifying and solving roadblocks in the business process. We have demonstrated cutting-edge expertise in providing solutions in launching new products. In a short span we have forayed into several such product development for our clients.
             </p>
           </div>
           <div className="about-section2-img-container">
@@ -539,7 +531,7 @@ function About() {
             />
           </div>
         </div>
-        <Suspense fallback={<div>Loading....</div>}>
+        <Suspense fallback={<div><Loadingstar/></div>}>
         <ClientComponent />
         </Suspense>
         <div className="about-section10-container" id="our-leadership">
@@ -581,30 +573,60 @@ function About() {
         </div>
       </div>
       <div>
-        <div className="about-section11-container" id="meet-our-team">
-          <div className="about-section11-title test-seclection-blue">
-            Meet Our Team
-          </div>
-          <p className="about-section11-des test-seclection-blue">
-            At Stacia Corp, our talented team, led by founders Mr. Sarabesh
-            Sriram and Mr. Lakshman PV, combines expertise in engineering,
-            software, and electronics. Together, we drive innovation, delivering
-            transformative solutions with creativity, collaboration, and a
-            passion for excellence, shaping the future of industries worldwide.
-          </p>
-          <div style={{ overflow: "auto" }} className="about-team-marquee-desk">
-            <Marquee pauseOnHover={true} speed={30}>
+       <div className="about-section11-container" id="meet-our-team">
+        {/* Title */}
+        <div className="about-section11-title test-seclection-blue">
+          Meet Our Team
+        </div>
+
+        {/* Description */}
+        <p className="about-section11-des test-seclection-blue">
+          At Stacia Corp, our talented team, led by founders Mr. Sarabesh Sriram
+          and Mr. Lakshman PV, combines expertise in engineering, software, and
+          electronics. Together, we drive innovation, delivering transformative
+          solutions with creativity, collaboration, and a passion for
+          excellence, shaping the future of industries worldwide.
+        </p>
+
+        {/* Desktop Card Marquee */}
+        <div className="about-team-marquee-desk">
+          <div className="about-team-marquee">
+            {/* Render teamData three times for smoother looping */}
+            <div className="marquee-content">
               {teamData?.map((eachMem, i) => (
-                <TeamCard key={i} eachMem={eachMem} />
+                <TeamCard key={`set1-${i}`} eachMem={eachMem} />
               ))}
-            </Marquee>
-          </div>
-          <div className="about-team-marquee-mob">
-            {teamData?.map((eachMem, i) => (
-              <TeamCard key={i} eachMem={eachMem} />
-            ))}
+            </div>
+            <div className="marquee-content">
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`set2-${i}`} eachMem={eachMem} />
+              ))}
+            </div>
+            <div className="marquee-content">
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`set3-${i}`} eachMem={eachMem} />
+              ))}
+            </div>
+            <div className="marquee-content">
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`set4-${i}`} eachMem={eachMem} />
+              ))}
+            </div>
+            <div className="marquee-content">
+              {teamData?.map((eachMem, i) => (
+                <TeamCard key={`set5-${i}`} eachMem={eachMem} />
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Mobile Static Cards */}
+        <div className="about-team-marquee-mob">
+          {teamData?.map((eachMem, i) => (
+            <TeamCard key={`mob-${i}`} eachMem={eachMem} />
+          ))}
+        </div>
+      </div>
       </div>
       <Footer />
       <MobileFooter />

@@ -353,18 +353,22 @@
 .about-section8-main-des-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .about-section8-main-des-container>p {
   width: 80%;
   font-size: 1.25rem;
-  color: #6b6084;
+  color: #6B6084;
   padding-top: 1rem;
+  max-width: 70%;
 }
+
 
 .about-section8-container-title {
   font-family: EuclidSemibold;
-  color: #0d0225;
+  color: #0D0225;
   font-size: 2.25rem;
 }
 
@@ -374,6 +378,8 @@
   column-gap: 5rem;
   overflow-x: auto;
   margin: 2rem 0rem;
+  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+  scrollbar-width: none;
 }
 
 .about-section8-items-container::-webkit-scrollbar {
@@ -389,8 +395,12 @@
 .about-section8-item-card {
   display: flex;
   align-items: center;
-  min-width: 60vw;
+  min-width: 77vw;
+  /* height: 400px; */
+  /* background-color: red; */
   background-color: #f8faff;
+  flex: 0 0 100%; /* Each card takes full width of the container */
+  scroll-snap-align: start;
 }
 
 .about-section8-item-content {
@@ -402,13 +412,13 @@
 .about-section8-item-content>div {
   font-family: EuclidSemibold;
   font-size: 1.5rem;
-  color: #0d0225;
+  color: #0D0225;
 }
 
 .about-section8-item-content>p {
   /* font-family: EuclidSemibold; */
   font-size: 1.25rem;
-  color: #6b6084;
+  color: #6B6084;
 }
 
 .about-section8-btn-container {
@@ -421,7 +431,7 @@
 .about-section8-mob-btn-container>div {
   width: 3rem;
   height: 3rem;
-  border: 1px solid #6b6084;
+  border: 1px solid #6B6084;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -432,7 +442,6 @@
 .about-section8-mob-btn-container {
   display: none;
 }
-
 .about-section9-container {
   margin: 10rem 0rem;
 }
@@ -537,7 +546,8 @@
   font-size: 1.25rem;
   width: 60%;
 }
-
+/* Container for the Meet Our Team section */
+/* Container for the Meet Our Team section */
 .about-section11-container {
   padding-bottom: 5rem;
 }
@@ -546,117 +556,143 @@
   text-align: center;
   font-family: EuclidSemibold;
   font-size: 2.25rem;
-  color: #0d0225;
+  color: #0D0225;
 }
 
 .about-section11-des {
   font-size: 1.25rem;
-  color: #6b6084;
+  color: #6B6084;
   text-align: center;
   width: 50%;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
+}
+
+.about-section4-des {
+  font-size: 1.25rem;
+  color: #6B6084;
+  width: 100%;
+
+}
+
+.about-team-marquee-desk {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .about-team-marquee {
   display: flex;
-  flex-grow: 1;
-  align-items: center;
-  /* overflow: hidden; */
-  white-space: nowrap;
-  animation: scroll 20s linear infinite;
+  width: 500%;
+  animation: scroll 150s linear infinite;
+  will-change: transform;
 }
 
-.about-team-marquee:hover {
+.marquee-content {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 0;
+}
+
+.about-team-marquee-desk:hover .about-team-marquee {
   animation-play-state: paused;
 }
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
-
   100% {
-    transform: translateX(-250%);
+    transform: translateX(calc(-100% / 5 * 4));
   }
 }
+
+
+
+.about-team-card {
+  margin: 0 0.7rem;
+  width: 20rem;
+  position: relative;
+  flex-shrink: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  height: 25rem;
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+.about-team-card:hover {
+  background-color: #F8FAFF;
+  padding: 1rem;
+  width: 30rem;
+  box-sizing: border-box;
+  z-index: 10;
+  overflow: hidden;
+}
+
 
 .about-team-img {
   width: 100%;
   transition: width 0.3s ease;
 }
 
-.about-team-img>img {
+.about-team-img > img {
   object-fit: contain;
   width: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 185 / 220;
 }
 
-.about-team-name {
-  font-family: EuclidMedium;
-  font-size: 1.25rem;
+.about-team-card:hover .about-team-img {
+  width: 8rem;
 }
 
-.about-team-role {
-  font-family: EuclidSemibold;
-  font-size: 1.5rem;
-  color: #0047ff;
-}
-
-.about-team-des {
-  font-size: 1rem;
-  color: #6b6084;
-}
 
 .about-team-name,
 .about-team-role,
 .about-team-des {
   opacity: 0;
-  display: none;
-  /* transform: translateY(10px); */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.about-team-card {
-  margin: 0rem 0.5rem;
-  height: 25rem;
-  width: 20rem;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  /* animation: scroll 5s linear;
-  white-space: nowrap; */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .about-team-card:hover .about-team-name,
 .about-team-card:hover .about-team-role,
 .about-team-card:hover .about-team-des {
   opacity: 1;
-  display: block;
-  /* transform: translateY(0); */
+  visibility: visible;
 }
 
-.about-team-card:hover {
-  background-color: #f8faff;
-  padding: 1rem;
-  width: 30rem;
-  border-radius: 0.5rem;
-  box-sizing: border-box;
+.about-team-name {
+  font-family: EuclidMedium;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
 }
 
-.about-team-card:hover .about-team-img {
-  width: 8rem;
-  /* Adjust this width as needed */
+.about-team-role {
+  font-family: EuclidSemibold;
+  font-size: 1.5rem;
+  color: #0047FF;
+  margin-top: 0.3rem;
 }
 
-.about-team-card:hover .about-team-img>img {
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 185 / 220;
+.about-team-des {
+  font-size: 0.9rem;
+  color: #6B6084;
+  margin-top: 0.5rem;
+  max-height: 9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
 }
+
 
 .about-team-marquee-mob {
   display: none;
 }
-
 @media screen and (max-width: 1024px) {
   .about-team-marquee-desk {
     display: none;
@@ -674,8 +710,8 @@
 
   .about-team-card.about-team-card-active {
     background-color: #f8faff;
-    padding: 1rem;
-    min-width: 100%;
+    padding: 0.5rem;
+    min-width: 90%;
     border-radius: 0.5rem;
     box-sizing: border-box;
   }
@@ -686,7 +722,7 @@
   }
 
   .about-team-card-active .about-team-img>img {
-    width: 100%;
+    width: 63%;
     object-fit: cover;
     aspect-ratio: 185 / 220;
   }
@@ -696,6 +732,7 @@
     height: 25rem;
     min-width: 20rem;
     position: relative;
+    pad: 1rem;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     /* animation: scroll 5s linear;

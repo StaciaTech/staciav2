@@ -86,7 +86,8 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #000;
+  /* color: #000; */
+  color: #dcd9e3;
   border-bottom: 2px solid lightgrey;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -133,6 +134,7 @@
   .mobile-navigation-tabs {
     display: block;
     position: sticky;
+    top: 60px;
   }
   /* .mobile-navigation-tabs {
     display: flex  ;

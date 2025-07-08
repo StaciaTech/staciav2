@@ -152,7 +152,8 @@
 // export default ArticlesPage;
 
 
-// Dot container
+
+
 
 import React, { useEffect, useState, useRef } from "react";
 import NavBar from "../components/NavBar";
@@ -164,7 +165,6 @@ import SideBar from "../components/SideBar";
 import Star from "../components/Star";
 import { useParams } from "react-router-dom";
 import articlesData from "../Data/SingleArticle.json"; // JSON data
-
 function ArticlesPage() {
   const params = useParams();
   const [articleData, setArticleData] = useState(articlesData.articles);
@@ -172,7 +172,6 @@ function ArticlesPage() {
   const [isDotClickScroll, setIsDotClickScroll] = useState(false); // Tracks dot-initiated scrolls
   const sectionsRef = useRef({});
   const scrollTimeoutRef = useRef(null); // To manage scroll timeout
-
   useEffect(() => {
     if (params.department) {
       setActiveDepartment(params.department);
@@ -180,7 +179,9 @@ function ArticlesPage() {
       setActiveDepartment(articleData[0].department);
     }
   }, [articleData, params]);
-
+  // useEffect(() => {
+  //   setArticleData(articlesData.articles)
+  // }, [])
   // Scroll to active department on mount or when changed (not during dot-click scroll)
   useEffect(() => {
     if (articleData.length && activeDepartment && !isDotClickScroll) {
@@ -192,7 +193,6 @@ function ArticlesPage() {
       }
     }
   }, [activeDepartment, articleData, isDotClickScroll]);
-
   // Intersection Observer for updating active department during scrolling
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -210,44 +210,36 @@ function ArticlesPage() {
         threshold: 0.3, // Trigger when 30% of the section is in view
       }
     );
-
     articleData.forEach((item) => {
       const section = sectionsRef.current[item.department];
       if (section) observer.observe(section);
     });
-
     return () => observer.disconnect();
   }, [articleData, isDotClickScroll]);
-
   // Handle dot click
   const handleDotClick = (departmentName) => {
     if (scrollTimeoutRef.current) {
       clearTimeout(scrollTimeoutRef.current); // Clear existing timeout
     }
-
     setIsDotClickScroll(true); // Disable observer updates for dot clicks
     setActiveDepartment(departmentName); // Set target department
-
     const section = document.getElementById(departmentName);
     if (section) {
       const yOffset = -80;
       const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
-
       // Reset dot-click scroll after animation
       scrollTimeoutRef.current = setTimeout(() => {
         setIsDotClickScroll(false);
       }, 1200); // Duration for scroll animation
     }
   };
-
   return (
     <div>
       <div className="nav_style">
         <NavBar />
         <SideBar />
       </div>
-
       {/* Articles Intro */}
       <div className="article-section1">
         <div className="article-section-overlay">
@@ -257,22 +249,19 @@ function ArticlesPage() {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation Tabs */}
       <div className="mobile-navigation-tabs">
         {articleData?.map((item, i) => (
           <div
             key={i}
-            className={`article-item-tab ${
-              item.department === activeDepartment ? "active-service-mob-tab" : ""
-            }`}
+            className={`article-item-tab ${item.department === activeDepartment ? "active-service-mob-tab" : ""
+              }`}
             onClick={() => handleDotClick(item.department)}
           >
             {item.department}
           </div>
         ))}
       </div>
-
       {/* Article Content with Dot Navigation */}
       <div className="article-page-content-container">
         <div className="article-page-main-dots-container">
@@ -299,16 +288,13 @@ function ArticlesPage() {
           ))}
         </div>
       </div>
-
       <Footer />
       <MobileFooter />
     </div>
   );
 }
-
 const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
   const [showDept, setShowDept] = useState(false);
-
   useEffect(() => {
     if (eachItem.department === activeDepartment) {
       setShowDept(true);
@@ -320,13 +306,11 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
       setShowDept(false);
     }
   }, [activeDepartment, eachItem.department]);
-
   return (
     <div className="article-page-dept-container">
       <div
-        className={`article-page-main-dots ${
-          eachItem.department === activeDepartment ? "article-page-main-dots-active" : ""
-        }`}
+        className={`article-page-main-dots ${eachItem.department === activeDepartment ? "article-page-main-dots-active" : ""
+          }`}
         onClick={() => setActiveDepartment(eachItem.department)}
         onMouseOver={() => setShowDept(true)}
         onMouseOut={() => setShowDept(false)}
@@ -337,5 +321,4 @@ const DepartmentDot = ({ eachItem, activeDepartment, setActiveDepartment }) => {
     </div>
   );
 };
-
 export default ArticlesPage;

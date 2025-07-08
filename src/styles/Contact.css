@@ -1,293 +1,206 @@
 /* Base styles for the contact form */
-/* .contact-form {
-  position: fixed;
-  top: 0;
-  left: 0;
+.contact-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1000;
+  height: 100vh;
   background-color: rgb(13, 2, 37, 0.6);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 9999;
-  width: "70%";
-  min-height: "80%";
-  inset: 0;
-  margin: "auto";
-  position: "relative";
-  border-radius: "1rem";
-  padding: "3rem 5rem";
-  box-sizing: "border-box";
-} */
-
+  align-items: center;
+}
+.contact-content {
+  background-color: #fff;
+  padding: 3rem 5rem;
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 95%;
+  border-radius: 2rem;
+  min-height: 70%;
+  max-height: 90%;
+  overflow-y: auto;
+}
 .contact-form-container {
   display: flex;
-  align-items: stretch;
-  min-height: 100%;
+  align-items: center;
 }
-
 .contact-form-image-container {
   width: 40%;
   display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f5f7fa;
-  padding: 2rem;
+  /* justify-content: center; */
 }
-
 .contact-form-content-container {
   width: 60%;
-  padding: 2rem;
-  background-color: #fff;
+  overflow-y: auto;
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for IE/Edge */
+  -ms-overflow-style: none;
 }
-
 .contact-socials {
   display: flex;
   column-gap: 1.5rem;
   margin-top: 2rem;
+  /* justify-content: center; */
 }
-
 .contact-second-title {
-  font-family: EuclidSemiBold, sans-serif;
+  font-family: EuclidSemiBold;
   font-size: 1.5rem;
-  color: #0047ff;
-  padding: 0.5rem 0;
+  color: #0047FF;
+  padding: 1rem 0rem;
 }
-
 .contact-main-title {
-  font-family: EuclidSemiBold, sans-serif;
+  font-family: EuclidSemiBold;
   font-size: 2.5rem;
   color: #000;
 }
-
+.contact-content::-webkit-scrollbar {
+  display: none;
+}
 .input-container {
+  /* width: 100%; */
   display: flex;
   column-gap: 1rem;
-  margin: 1rem 0;
+  margin: 1rem 0rem;
 }
-
 .PhoneInputInput {
   border: none;
-  font-family: EuclidMedium, sans-serif;
-  font-size: 1rem;
-  width: 100%;
+  font-family: EuclidMedium;
 }
-
 .PhoneInputInput::placeholder {
-  font-family: EuclidMedium, sans-serif;
-  color: #c8c8c9;
+  font-family: EuclidMedium;
+  color: #C8C8C9;
+  /* font-size: 1rem; */
 }
-
 .mobile-container {
   width: 100%;
-  border: 1px solid #cadbea;
+  border: 1px solid #CADBEA;
   border-radius: 10px;
-  padding: 0 0.5rem;
+  padding: 0.3rem 0.5rem;
   display: flex;
   align-items: center;
-  height: 3rem;
 }
-
 .organization-container {
   width: 100%;
   height: 3rem;
-  border: 1px solid #cadbea;
+  border: 1px solid #CADBEA;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0.5rem;
+  padding: 0rem 0.5rem;
   position: relative;
 }
-
 .org-text {
-  font-family: EuclidMedium, sans-serif;
-  color: #c8c8c9;
+  font-family: EuclidMedium;
+  color: #C8C8C9;
 }
-
 .org-options {
   position: absolute;
-  top: 110%;
+  top: 120%;
   left: 0;
   background-color: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #E5E5E5;
   width: 100%;
   border-radius: 10px;
   z-index: 999;
-  max-height: 200px;
-  overflow-y: auto;
 }
-
 .contact-org-inp {
-  font-family: EuclidMedium, sans-serif;
+  font-family: EuclidMedium;
   outline: none;
   box-sizing: border-box;
   width: 100%;
   border: none;
-  background: transparent;
-  font-size: 1rem;
 }
-
 .org-options > p {
   padding: 0.5rem;
-  margin: 0;
-  cursor: pointer;
+  /* border-bottom: 1px solid #E5E5E5; */
 }
-
 .org-options > p:hover {
-  border-left: 3px solid #0047ff;
+  border-left: 3px solid #0047FF;
   margin-left: 0.5rem;
   padding-left: 0.5rem;
   transition: 0.2s ease-in;
 }
-
+.input-container > input {
+  min-width: 50%;
+}
 .input-container > div {
   width: 50%;
 }
-
 .input-field {
   width: 100%;
-  border: 1px solid #cadbea;
-  padding: 0.75rem 1rem;
-  font-family: EuclidMedium, sans-serif;
+  border: 1px solid #CADBEA;
+  padding: 1.5rem 1rem;
+  font-family: EuclidMedium;
   outline: none;
   box-sizing: border-box;
-  border-radius: 10px;
-  font-size: 1rem;
-  height: 3rem;
 }
-
 .org-text-selected {
-  font-family: EuclidMedium, sans-serif;
+  font-family: EuclidMedium;
   color: #000;
 }
-
 .PhoneInput {
   border: none;
   outline: none;
-  padding: 0;
-  font-size: 1rem;
-  width: 100%;
-  height: 100%;
+  padding: 10px;
+  font-size: 16px;
 }
-
 .PhoneInput::placeholder,
 .input-field::placeholder,
 .message-area::placeholder,
-.contact-org-inp::placeholder {
-  font-family: EuclidMedium, sans-serif;
-  color: #c8c8c9;
-  font-size: 1rem;
+.contact-org-inp::placeholder,
+.job-org-inp::placeholder {
+  font-family: EuclidMedium;
+  color: #C8C8C9;
+  font-size: 1remn;
+  background-color: transparent;
+}
+.contact-org-inp {
+  background-color: transparent !important;
+  background: transparent !important;
+  outline: none !important;
+  border: none !important;
 }
 
 .message-area {
   margin-bottom: 1rem;
-  height: 150px;
-  border: 1px solid #cadbea;
+  height: 30vh;
+  border: 1px solid #CADBEA;
   padding: 1rem;
   width: 100%;
   resize: none;
   outline: none;
   border-radius: 10px;
   box-sizing: border-box;
-  font-family: EuclidMedium, sans-serif;
-  font-size: 1rem;
+  font-family: EuclidMedium;
 }
-
+body.no-scroll {
+  overflow: auto;
+  height: auto;
+  position: static;
+}
 .submit-style {
-  padding: 0.75rem 2rem;
-  background-color: #0047ff;
+  padding: 1rem 7rem;
+  background-color: #0047FF;
   color: #fff;
   border: none;
-  border-radius: 5px;
-  font-family: EuclidMedium, sans-serif;
+  border-radius: 8px;
+  font-family: EuclidMedium;
   cursor: pointer;
-  font-size: 1rem;
 }
-
-.submit-style:hover {
-  background-color: #0033cc;
-  transition: background-color 0.2s ease-in;
-}
-
-/* Validation styles */
-.input-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.input-field.invalid,
-.mobile-container.invalid,
-.organization-container.invalid {
-  border-color: red;
-}
-
 .error-message {
-  display: flex;
   color: red;
-  font-size: 0.875rem;
-  font-family: EuclidMedium, sans-serif;
-  position: absolute;
-  bottom: -1.5rem;
-  left: 0;
-  width: 100%;
-  justify-content: flex-start;
 }
 
-/* Contact overlay and content */
-.contact-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  opacity: 2;
-}
-
-.contact-content {
-  /* background: #fff; */
-  border-radius: 10px;
-  max-width: 900px;
-  width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-}
-
-/* Social icons */
-.footer-icon-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #f0f2f5;
-  transition: background-color 0.2s ease-in;
-}
-
-.footer-icon-container:hover {
-  background-color: #e0e2e5;
-}
-
-.footer-facebook-icon,
-.footer-linkedin-icon,
-.footer-twitter-icon,
-.footer-insta-icon {
-  font-size: 1.25rem;
-  color: #0047ff;
-}
-
-/* ✅ Mobile View (320px to 480px) */
+/* :white_check_mark: Mobile View (320px to 480px) */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   /* Layout Adjustments */
   .contact-form-container {
@@ -329,27 +242,17 @@
   }
 
   /* Input Layout */
-  /* .input-container {
-    flex-direction: column;
-    row-gap: 1.5rem;
-    margin: 0.5rem 0;
-  }
-
-  .input-container > div {
-    width: 100%;
-    height: 2.5rem;
-  } */
   .input-container {
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem; /* Gap between each input group */
+    row-gap: 1.5rem;
     margin: 1rem 0;
   }
 
   .input-container > div {
     display: flex;
     flex-direction: column;
-    row-gap: 0.25rem; /* Gap between input and error message */
+    row-gap: 0.25rem;
     width: 100%;
   }
 
@@ -396,11 +299,11 @@
   }
 
   .error-message {
-    position: static; /* Ensures it flows normally in the document */
+    position: static;
     font-size: 0.75rem;
-    color: red; /* (Optional) common for errors */
-    margin-top: 0.25rem; /* Space between input and error */
-    padding-left: 0.25rem; /* Space from left edge */
+    color: red;
+    margin-top: 0.25rem;
+    padding-left: 0.25rem;
   }
 
   /* Prevent body from being locked during scroll */
@@ -415,6 +318,7 @@
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .contact-overlay {
     top: 50px;
+    overflow: hidden;
   }
   .contact-form-container {
     flex-direction: column;
@@ -499,23 +403,28 @@
 }
 
 /* Laptop view (1024px and up) */
+
 @media screen and (min-width: 1025px) {
   .contact-form-container {
     flex-direction: row;
+    overflow: hidden;
   }
 
   .contact-form-image-container {
     display: flex;
     width: 40%;
+    padding-right: 60px;
+    padding-top: 50px;
   }
 
   .contact-form-content-container {
-    width: 60%;
-    padding: 2rem;
+    width: 57%;
+    padding: 4rem 0rem;
   }
 
   .contact-content {
-    max-width: 900px;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
     padding: 0;
   }
 
@@ -537,6 +446,165 @@
 
   .submit-style {
     width: auto;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .contact-form-container {
+    flex-direction: row;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .contact-form-image-container {
+    display: flex;
+    width: 35%;
+    padding-right: 2rem;
+    padding-top: 2rem;
+  }
+
+  .contact-form-content-container {
+    width: 65%; /* Slightly increased to accommodate content */
+    padding: 3rem 1rem; /* Reduced padding for better fit */
+  }
+
+  .contact-content {
+    width: 90vw; /* Slightly less than full viewport width */
+    height: 90vh; /* Slightly less than full viewport height */
+    padding: 1rem;
+    max-width: 1200px; /* Cap width for better readability */
+  }
+
+  .contact-main-title {
+    font-size: 2rem; /* Slightly smaller for better fit */
+  }
+
+  .contact-second-title {
+    font-size: 1.25rem; /* Adjusted for proportionality */
+    padding: 0.75rem 0;
+  }
+
+  .input-container {
+    flex-direction: row;
+    column-gap: 1rem; /* Reduced gap for tighter layout */
+    margin: 1.25rem 0;
+  }
+
+  .input-field {
+    height: 2.75rem; /* Slightly smaller input fields */
+    padding: 0.75rem;
+    font-size: 0.95rem; /* Adjusted font size */
+  }
+
+  .mobile-container,
+  .organization-container {
+    height: 2.75rem; /* Match input field height */
+  }
+
+  .message-area {
+    height: 160px; /* Slightly smaller textarea */
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-style {
+    padding: 0.75rem 5rem; /* Adjusted button size */
+    font-size: 0.95rem;
+  }
+
+  .contact-socials {
+    column-gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .error-message {
+    font-size: 0.85rem; /* Slightly smaller error message */
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .contact-form-container {
+    flex-direction: row;
+    padding: 8px;
+    overflow: hidden;
+  }
+
+  .contact-form-image-container {
+    display: flex;
+    width: 32%;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .contact-form-content-container {
+    width: 68%;
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-content {
+    width: 95vw;
+    height: 88vh;
+    padding: 1rem;
+    max-width: 1100px;
+  }
+
+  .contact-main-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-second-title {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+
+  .input-container {
+    flex-direction: row;
+    column-gap: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  .input-field {
+    height: 2.5rem;
+    padding: 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  .mobile-container,
+  .organization-container {
+    height: 2.5rem;
+  }
+
+  .message-area {
+    height: 140px;
+    padding: 0.85rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-style {
+    padding: 0.65rem 4rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-socials {
+    column-gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .error-message {
+    font-size: 0.8rem;
   }
 
   body.no-scroll {

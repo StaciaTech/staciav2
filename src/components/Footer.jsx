@@ -38,11 +38,9 @@ function Footer() {
     },
   };
 
-
   const HandleClick = () => {
-    navigate("/Privacy-Policy")
-  }
-
+    navigate("/Privacy-Policy");
+  };
 
   return (
     <div className="footer-contaier">
@@ -187,7 +185,7 @@ function Footer() {
           <div
             className="footer-grey-tabs"
             onClick={() => {
-              navigate("/whatsnew");
+              //navigate("/whatsnew");
               window.scrollTo(0, 0);
             }}
           >
@@ -203,7 +201,8 @@ function Footer() {
               rel="noreferrer"
             >
               <div className="footer-grey-tabs pointer test-seclection-blue">
-                Ground Floor, C-53, Guindy Industrial Estate,<br />
+                Ground Floor, C-53, Guindy Industrial Estate,
+                <br />
                 Guindy, Chennai - 32, Tamil Nadu
               </div>
               {/* <div
@@ -211,7 +210,7 @@ function Footer() {
                 className="footer-grey-tabs pointer test-seclection-blue"
               >
                 Thiru Vi Ka Industrial Estate, SIDCO Industrial
-              </div> 
+              </div>
               <div className="footer-grey-tabs-child test-seclection-blue">
                 Guindy, Chennai - 32, Tamil Nadu
               </div> */}
@@ -230,7 +229,12 @@ function Footer() {
             navigate("/sitemap");
             window.scrollTo(0, 0);
           }}
-          style={{ cursor: "pointer" }}
+          style={{
+            cursor: "pointer",
+            color: "black",
+            opacity: "0.6",
+            paddingLeft: "14rem",
+          }}
         >
           Sitemap
         </div>
@@ -240,16 +244,16 @@ function Footer() {
             alignItems: "center",
             opacity: "0.6",
             width: "35%",
+            className:"termm"
           }}
         >
-          
-
           {/* <a
             href=""
             target="_blank"
             rel="noopener noreferrer"
           > */}
           <div
+            className="termsofservice"
             style={{
               cursor: "pointer",
               color: "black",
@@ -260,7 +264,6 @@ function Footer() {
           {/* </a> */}
           <div
             style={{
-              width: "10px",
               height: "10px",
               backgroundColor: "#D9D9D9",
               borderRadius: "50%",
@@ -269,9 +272,13 @@ function Footer() {
             }}
           />
 
-
-          <div onClick={() => navigate("/Privacy-Policy")} style={{ cursor: "pointer", color: "black" }}>Privacy policy</div>
-
+          <div
+            className="privacypolicy"
+            onClick={() => navigate("/Privacy-Policy")}
+            style={{ cursor: "pointer", color: "black", }}
+          >
+            Privacy policy
+          </div>
         </div>
         <div className="footer-icons">
           <div>

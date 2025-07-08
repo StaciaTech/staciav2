@@ -5,8 +5,36 @@
       "author": "Stacia Power Solutions",
       "publication_date": "2023-10-01",
       "platform": "LinkedIn Pulse",
-      "department": "Mechanical",
+      "department": "Electronics",
       "mainImageUrl": "/assets/Article/nanostructured.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-1"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "What Are Nanostructured Photovoltaic Cells?",
@@ -36,7 +64,7 @@
         },
         {
           "section_title": "Development of nanostructured photovoltaic cells",
-          "imageUrl": "nano3.webp",
+          "imageUrl": "/assets/Article/nano3.webp",
           "content": "Nanostructured photovoltaic cells are a type of photovoltaic cell that uses nanoscale structures to increase solar cell efficiency. Nanostructured photovoltaic cells are made up of many small solar cells that are combined to form a larger cell. Nanostructured photovoltaic cells have the potential to be more efficient than traditional solar cells because they can capture more light.",
           "content1": "There are several ways to create nanostructured photovoltaic cells. One way is to use nanoscale materials to create a photovoltaic cell. Nanoscale materials are small enough that they can be used to create small solar cells. This method is used to create solar cells that are smaller than"
         },
@@ -57,6 +85,34 @@
       "platform": "LinkedIn Pulse",
       "department": "AI",
       "mainImageUrl": "/assets/Article/ascendent.webp",
+      "audioData": {
+        "audioURL": "/assets/audio/case-study-2.mp3",
+        "publisher": {
+          "name": "Stacia Corp.'s Strategic",
+          "subtitle": "Outlook",
+          "logo": "/assets/CaseStudy/ElectronicBackground.webp"
+        },
+        "topics": [
+          {
+            "name": "Mandi System",
+            "link": "/topics/mandi-system",
+            "hashtag": "#Article-2"
+          },
+          {
+            "name": "Technology",
+            "link": "/topics/technology",
+            "hashtag": "#technology"
+          },
+          {
+            "name": "Procurement",
+            "link": "/topics/procurement",
+            "hashtag": "#procurement"
+          }
+        ],
+        "duration": "1m 20s",
+        "publishDate": "10 Oct, 2025",
+        "type": "Podcast"
+      },
       "sections": [
         {
           "section_title": "",
@@ -66,7 +122,7 @@
         {
           "section_title": "AI’s Predictive Power: Optimizing Operations",
           "content": "Chennai’s monsoon season disrupts logistics. Yet, local businesses use AI to predict and mitigate these challenges. By analyzing weather patterns, traffic data, and delivery times, AI systems map optimal routes, ensuring timely operations. This predictive capability is transforming industries across Tamil Nadu.",
-          "imageUrl":"/assets/Article/ascendant1.webp",
+          "imageUrl": "/assets/Article/ascendant1.webp",
           "slogan": "As an engineer, I view AI as the ultimate optimization tool. It combines data-driven insights with human intuition, enabling businesses to anticipate challenges and prepare proactively."
         },
         {
@@ -125,7 +181,7 @@
         {
           "section_title": "Embracing the Intelligent Future",
           "content": "I look out at Chennai’s skyline—a canvas of opportunity. At Stacia Corp, we’re shaping the future by integrating AI into our engineering and digital solutions. To me, AI is like the threads of a Kanchipuram Saree—interweaving efficiency, creativity, and human connection into something remarkable.",
-          "imageUrl":"/assets/Article/ascendant2.webp",
+          "imageUrl": "/assets/Article/ascendant2.webp",
           "content1": "To fellow managers across Tamil Nadu and beyond, I say this: AI is your strategic partner. It sharpens your decisions, amplifies your strengths, and empowers you to lead with purpose. The future of management in India is intelligent, inclusive, and inspiring—and it begins here, in the heart of Chennai."
         }
       ],

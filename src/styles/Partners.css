@@ -28,14 +28,20 @@
 .partner-heading {
   font-family: EuclidSemibold;
   font-size: 2rem;
-  width: 30%;
+  width: 70%;
 }
 .partner-des {
   color: #6b6084;
-  width: 40%;
+  width: 70%;
   font-size: 1.25rem;
   margin-top: 1rem;
 }
+/* .partners-detail-container{
+   display: flex;
+  row-gap: 5rem;
+  overflow-x: auto;
+  margin: 5rem 0rem;
+} */
 .partners-img-container {
   display: flex;
   column-gap: 5rem;
@@ -43,7 +49,7 @@
   margin: 5rem 0rem;
 }
 .partners-img-container > div {
-  width: 23rem;
+  width: 32%;
 }
 .partners-img-container > div > img {
   width: 100%;
@@ -61,15 +67,17 @@
   font-size: 36px;
 }
 .partner-data-card-content > p {
-  width: 50%;
+  width: 80%;
   color: #6b6084;
   font-size: 20px ;
+  margin: 1.2rem 0;
+  /* padding: 1rem; */
 }
-/* .partner-data-card-img {
-  width: 50rem;
-} */
+.partner-data-card-img {
+  width: 35%;
+}
 .partner-data-card-img > img {
-  width: 80%;
+  width: 100%;
   object-fit: cover;
 }
 

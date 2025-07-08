@@ -120,7 +120,7 @@ function ReUsableArticlePage({ data, path }) {
                 {eachItem.sections?.[0]?.content.slice(0, 100)}...
               </p>
               <div
-                className="all-know-more"
+                className="know-more"
                 onClick={() => {
                   navigate(`${path}/${eachItem.title.split(" ").join("-")}`);
                   window.scrollTo(0, 0);

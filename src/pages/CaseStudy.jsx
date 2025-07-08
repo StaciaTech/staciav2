@@ -177,17 +177,24 @@
 
 
 // Dot container
-
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, Suspense } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/CaseStudy.css";
-import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
 import SideBar from "../components/SideBar";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
-// import caseStudiesData from "../Data/SingleCaseStudy.json";
-import caseStudiesData from "../Data/SingleCaseStudy2.json"
+import caseStudiesData from "../Data/SingleCaseStudy.json";
+import LoadingStar from "../components/LoadingStar";
+
+// Lazy load components
+const ReUsableArticle = React.lazy(() =>
+  import("../components/ReUsableComp/ReUsableArticle")
+);
+const LazyNavBar = React.lazy(() => import("../components/NavBar"));
+const LazySideBar = React.lazy(() => import("../components/SideBar"));
+const LazyFooter = React.lazy(() => import("../components/Footer"));
+const LazyMobileFooter = React.lazy(() => import("../components/MobileFooter"));
 
 function CaseStudy() {
   const [activeDepartment, setActiveDepartment] = useState("");
@@ -245,7 +252,8 @@ function CaseStudy() {
     const section = document.getElementById(category);
     if (section) {
       const yOffset = -80;
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
 
       scrollTimeoutRef.current = setTimeout(() => {
@@ -255,9 +263,9 @@ function CaseStudy() {
   };
 
   return (
-    <>
-      <NavBar />
-      <SideBar />
+    <Suspense fallback={<div className="loading"><LoadingStar/></div>}>
+      <LazyNavBar />
+      <LazySideBar />
       <div className="case-study-section1">
         <div className="case-study-section-overlay">
           <div className="case-study-title1">
@@ -301,15 +309,20 @@ function CaseStudy() {
               ref={(el) => (sectionsRef.current[category.name] = el)}
             >
               <div className="case-study-category-title">{category.name}</div>
-              <ReUsableArticle data={category.data} path={"single-caseStudy"} />
+              <Suspense fallback={<div className="loading">Loading...</div>}>
+                <ReUsableArticle
+                  data={category.data}
+                  path={"single-caseStudy"}
+                />
+              </Suspense>
             </div>
           ))}
         </div>
       </div>
 
-      <Footer />
-      <MobileFooter />
-    </>
+      <LazyFooter />
+      <LazyMobileFooter />
+    </Suspense>
   );
 }
 
@@ -338,213 +351,9 @@ const CategoryDot = ({ category, activeDepartment, setActiveDepartment }) => {
         onMouseOver={() => setShowCategory(true)}
         onMouseOut={() => setShowCategory(false)}
       ></div>
-      {showCategory && (
-        <div className="case-study-dept-name">{category}</div>
-      )}
+      {showCategory && <div className="case-study-dept-name">{category}</div>}
     </div>
   );
 };
 
 export default CaseStudy;
-
-
-// import React, { useEffect, useState, useRef } from "react";
-// import NavBar from "../components/NavBar";
-// import Footer from "../components/Footer";
-// import "../styles/CaseStudy.css";
-// import ReUsableArticle from "../components/ReUsableComp/ReUsableArticle";
-// import SideBar from "../components/SideBar";
-// import MobileFooter from "../components/MobileFooter";
-// import Star from "../components/Star";
-// import caseStudiesData from "../Data/SingleCaseStudy2.json";
-
-// function CaseStudy() {
-//   const [activeDepartment, setActiveDepartment] = useState("");
-//   const [isDotClickScroll, setIsDotClickScroll] = useState(false);
-//   const sectionsRef = useRef({});
-//   const scrollTimeoutRef = useRef(null);
-//   const debounceTimeoutRef = useRef(null);
-
-//   // Extract unique categories from JSON data with defensive check
-//   const uniqueCategories = caseStudiesData.singlecasestudy?.length
-//     ? [...new Set(caseStudiesData.singlecasestudy.map((item) => item.name))]
-//     : [];
-
-//   // Set initial active department
-//   useEffect(() => {
-//     if (uniqueCategories.length > 0) {
-//       setActiveDepartment(uniqueCategories[0]);
-//     }
-//   }, [uniqueCategories]);
-
-//   // Scroll to department from URL or dot click
-//   useEffect(() => {
-//     if (uniqueCategories.length && activeDepartment && !isDotClickScroll) {
-//       const section = document.getElementById(activeDepartment);
-//       if (section) {
-//         const yOffset = -80; // Adjust for navbar
-//         const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-//         window.scrollTo({ top: y, behavior: "smooth" });
-//       }
-//     }
-//   }, [activeDepartment, uniqueCategories, isDotClickScroll]);
-
-//   // Intersection Observer for updating active department during scrolling
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         if (!isDotClickScroll) {
-//           entries.forEach((entry) => {
-//             if (entry.isIntersecting) {
-//               // Debounce the state update
-//               if (debounceTimeoutRef.current) {
-//                 clearTimeout(debounceTimeoutRef.current);
-//               }
-//               debounceTimeoutRef.current = setTimeout(() => {
-//                 setActiveDepartment(entry.target.id);
-//               }, 100); // Adjust debounce delay as needed
-//             }
-//           });
-//         }
-//       },
-//       {
-//         root: null,
-//         threshold: 0.1, // Lower threshold to reduce overlap
-//         rootMargin: "-20% 0px -20% 0px", // Reduce intersection area
-//       }
-//     );
-
-//     uniqueCategories.forEach((category) => {
-//       const section = sectionsRef.current[category];
-//       if (section) observer.observe(section);
-//     });
-
-//     return () => {
-//       observer.disconnect();
-//       if (debounceTimeoutRef.current) {
-//         clearTimeout(debounceTimeoutRef.current);
-//       }
-//     };
-//   }, [uniqueCategories, isDotClickScroll]);
-
-//   // Handle dot or tab click
-//   const handleDotClick = (category) => {
-//     if (scrollTimeoutRef.current) {
-//       clearTimeout(scrollTimeoutRef.current);
-//     }
-
-//     setIsDotClickScroll(true);
-//     setActiveDepartment(category);
-
-//     const section = document.getElementById(category);
-//     if (section) {
-//       const yOffset = -80;
-//       const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-//       window.scrollTo({ top: y, behavior: "smooth" });
-
-//       scrollTimeoutRef.current = setTimeout(() => {
-//         setIsDotClickScroll(false);
-//       }, 1200);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <div className="nav_style">
-//         <NavBar />
-//         <SideBar />
-//       </div>
-//       <div className="case-study-section1">
-//         <div className="case-study-section-overlay">
-//           <div className="case-study-title1">
-//             <span style={{ userSelect: "none" }}>Case Study</span>
-//             <Star />
-//           </div>
-//         </div>
-//       </div>
-//       {!uniqueCategories.length ? (
-//         <div>Loading...</div>
-//       ) : (
-//         <div className="case-study-content-container">
-//           <div className="mobile-navigation-tabs">
-//             {uniqueCategories.map((category, i) => (
-//               <div
-//                 key={i}
-//                 onClick={() => handleDotClick(category)}
-//                 className={
-//                   activeDepartment === category ? "active-service-mob-tab" : ""
-//                 }
-//               >
-//                 {category}
-//               </div>
-//             ))}
-//           </div>
-//           <div className="case-study-main-dots-container">
-//             {uniqueCategories.map((category, i) => (
-//               <CategoryDot
-//                 key={i}
-//                 category={category}
-//                 activeDepartment={activeDepartment}
-//                 setActiveDepartment={handleDotClick}
-//               />
-//             ))}
-//           </div>
-//           <div>
-//             {caseStudiesData.singlecasestudy?.map((category, i) => (
-//               <div
-//                 className="case-study-section"
-//                 key={i}
-//                 id={category.name}
-//                 ref={(el) => (sectionsRef.current[category.name] = el)}
-//                 style={{ minHeight: "100vh" }} // Ensure sections are tall enough
-//               >
-//                 <div className="case-study-category-title">{category.name}</div>
-//                 <ReUsableArticle
-//                   data={category.data?.map((item) => ({
-//                     ...item,
-//                     image: { ...item.image, imageUrl: item.image?.imageUrl || "" },
-//                   })) || []}
-//                   path={"single-caseStudy"}
-//                 />
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       )}
-//       <Footer />
-//       <MobileFooter />
-//     </div>
-//   );
-// }
-
-// const CategoryDot = ({ category, activeDepartment, setActiveDepartment }) => {
-//   const [showCategory, setShowCategory] = useState(false);
-
-//   useEffect(() => {
-//     if (category === activeDepartment) {
-//       setShowCategory(true);
-//       const timeoutId = setTimeout(() => {
-//         setShowCategory(false);
-//       }, 3000);
-//       return () => clearTimeout(timeoutId);
-//     } else {
-//       setShowCategory(false);
-//     }
-//   }, [activeDepartment, category]);
-
-//   return (
-//     <div className="case-study-dept-container">
-//       <div
-//         className={`case-study-main-dots ${
-//           category === activeDepartment ? "case-study-main-dots-active" : ""
-//         }`}
-//         onClick={() => setActiveDepartment(category)}
-//         onMouseOver={() => setShowCategory(true)}
-//         onMouseOut={() => setShowCategory(false)}
-//       ></div>
-//       {showCategory && <div className="case-study-dept-name">{category}</div>}
-//     </div>
-//   );
-// };
-
-// export default CaseStudy;

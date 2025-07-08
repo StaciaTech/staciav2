@@ -7,6 +7,10 @@ import MobileFooter from "../components/MobileFooter";
 import SideBar from "../components/SideBar";
 import CaseStudyaudio from "../components/CaseStudy/CaseStudyaudio";
 import articlesData from "../Data/SingleArticle.json";
+import ArticleAudio from '../components/Articles/ArticleAudio';
+import SuggestionProducts from "../components/ReUsableComp/SuggestionProducts";
+import SuggestionService from "../components/ReUsableComp/SuggestionService";
+import SuggestionArticles from "../components/ReUsableComp/SuggestionArticles";
 
 function SingleArticle() {
   const { title } = useParams();
@@ -44,13 +48,13 @@ function SingleArticle() {
       <NavBar />
       <SideBar />
 
-      <div className="single-article-section">
+      {/* <div className="single-article-section">
         <div className="single-article-section-overlay">
           <div className="single-article-title test-seclection-white">
             {singleArticle.title}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         className="single-article-heading-card-container"
@@ -59,12 +63,15 @@ function SingleArticle() {
         }}
       >
         <div className="single-article-heading test-seclection-white">
-          {getFirstTwoWords(singleArticle.title)}
+          {/* {getFirstTwoWords(singleArticle.title)} */}
+
+          {singleArticle.title}
         </div>
       </div>
 
       <div className="single-article-content-card-container">
-        <CaseStudyaudio />
+        {/* <CaseStudyaudio /> */}
+        <ArticleAudio articleTitle={decodedTitle} />
 
         {singleArticle.sections.map((section, index) => (
           <div key={index}>
@@ -79,7 +86,7 @@ function SingleArticle() {
                   alt=""
                   style={{
                     width: "100%",
-                    height: "100%",
+                    height: "20%",
                     objectFit: "cover",
                     userSelect: "none",
                     marginTop: "2rem",
@@ -135,7 +142,9 @@ function SingleArticle() {
           </div>
         )}
       </div>
-
+        <SuggestionService/>
+        <SuggestionProducts/>
+        <SuggestionArticles/>
       <Footer />
       <MobileFooter />
     </>

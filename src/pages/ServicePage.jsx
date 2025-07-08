@@ -567,6 +567,7 @@ import serviceData from "../Data/Services.json";
 import "../styles/services.css";
 import "../styles/ServiceCard.css";
 import "../styles/SingleService.css";
+import LoadingStar from "../components/LoadingStar";
 
 // Lazy load components
 const NavBar = lazy(() => import("../components/NavBar"));
@@ -666,7 +667,7 @@ function ServicePage() {
 
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingStar/>}>
         <div className="nav_style">
           <NavBar />
           <SideBar />
