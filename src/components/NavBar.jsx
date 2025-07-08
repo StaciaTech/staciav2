@@ -1069,15 +1069,21 @@ function NavBar() {
       </div>
       {isHomepage && showAdd && (
         <div class="advertisement">
-          <Star />
-          <p class="ad-text">
-            Coding thrill awaits! 🚀 Hackathon on [Date] at [Venue]. Dive into
-            innovation with us!
-            <a href="#" class="view-details">
-              View Details
-            </a>
-          </p>
-          <Star />
+          <div className="ad-content">
+            <div className="star">
+              <Star/>
+            </div>
+            <div class="ad-text">
+              Coding thrill awaits! 🚀 Hackathon on [Date] at [Venue]. Dive into
+              innovation with us!
+              <a href="#" class="view-details">
+                View Details
+              </a>
+            </div>
+            <div className="star">
+              <Star/>
+            </div>
+          </div>
           <div className="close">
             <button class="close-btn" onClick={() => setShowAdd(false)}>
               &times;
