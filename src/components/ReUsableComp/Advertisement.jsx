@@ -10,22 +10,10 @@ const Advertisement = ({ setShowAdd }) => {
   const sliderRef = useRef(null);
 
   const advertisements = [
-    {name:"🚀 Visit our technolgy partner StaciaTech",link:"https://staciatech.com"},
-    {name:"🔥 Traditional Food in your hand! check out Sharadha Stores",link:"https://play.google.com/store/apps/details?id=com.saradhastores"},
-    {name:"💡 Farmers or Food business this is one app to go checkout TNAPEx!"
-    ,link:"https://play.google.com/store/apps/details?id=com.vikram1201.TNAPEx"
-    },
+    { name: "🚀 Visit our technology partner StaciaTech", link: "https://staciatech.com" },
+    { name: "🔥 Traditional Food in your hand! check out Sharadha Stores", link: "https://play.google.com/store/apps/details?id=com.saradhastores" },
+    { name: "💡 Farmers or Food business this is one app to go checkout TNAPEx!", link: "https://play.google.com/store/apps/details?id=com.vikram1201.TNAPEx" },
   ];
-
-  const ribbonClick=(key)=>{
-    if (key=="🚀 Visit our technolgy partner StaciaTech") {
-      
-    }else if (key=="🔥 Traditional Food in your hand! check out Sharadha Stores") {
-      
-    }else if (key=="💡 Farmers or Food business this is one app to go checkout TNAPEx!") {
-      
-    }
-  }
 
   // Add the first slide again at the end
   const slides = [...advertisements, advertisements[0]];
@@ -57,7 +45,6 @@ const Advertisement = ({ setShowAdd }) => {
   return (
     <div className="advertisement">
       <div className="ad-content">
-
         <div className="ad-carousel">
           <div
             className="ad-slider"
@@ -69,9 +56,22 @@ const Advertisement = ({ setShowAdd }) => {
             onTransitionEnd={handleTransitionEnd}
           >
             {slides.map((text, index) => (
-              <a href={text?.link} target="_blank" className="ad-slide" key={index}>
-                <div className="star"><Star /></div>{text?.name}
-                <h4 onClick={() => navigate("/")} className="view-details">
+              <a
+                href={text?.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ad-slide"
+                key={index}
+              >
+                <div className="star"><Star /></div>
+                {text?.name}
+                <h4
+                  className="view-details"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevent link
+                    navigate("/");
+                  }}
+                >
                   View Details
                 </h4>
                 <div className="star"><Star /></div>
@@ -79,7 +79,6 @@ const Advertisement = ({ setShowAdd }) => {
             ))}
           </div>
         </div>
-
       </div>
 
       <div className="close">
