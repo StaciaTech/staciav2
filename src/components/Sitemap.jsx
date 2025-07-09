@@ -4,7 +4,8 @@ import "../styles/Sitemap.css";
 import ServiceData from "../Data/Services.json";
 import ProductData from "../Data/ProductPage.json";
 import ProjectsData from "../Data/ProjectsData.json";
-import casedoc from "../Data/SingleCaseStudy.json";
+// import casedoc from "../Data/SingleCaseStudy.json";
+import casedoc from "../Data/SingleCaseStudy2.json"
 import article from "../Data/Articles.json";
 
 function Sitemap() {

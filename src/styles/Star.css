@@ -1,9 +1,4 @@
-.star-container {
-  position: absolute;
-  right: 0;
-  bottom: 70%;
-  user-select: none;
-}
+
 @keyframes blink-star {
   0% {
     transform: scale(0); /* Start at scale 0 */
