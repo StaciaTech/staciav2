@@ -433,11 +433,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/NavProductComp.css";
 import Star from "../assets/loadingStar.svg";
-import {
-  IoIosArrowDown,
-  IoIosArrowUp,
-  IoIosArrowForward,
-} from "react-icons/io";
+import {IoIosArrowDown,IoIosArrowUp,IoIosArrowForward} from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 // import ProjectsData from "../Data/ProjectsData2.json";
 
@@ -528,6 +524,8 @@ function ProjectDropdown({ handleClose }) {
   const HandleDeptHover = (DeptName) => {
     setDeptName(DeptName);
     const MainCatArrObj = projectData?.find((item) => item.name === DeptName);
+    console.log(MainCatArrObj,"MainCatObjjProjectPage");
+
     if (MainCatArrObj) {
       const categories = MainCatArrObj.categories || [];
       const firstCategory = categories[0];
@@ -563,6 +561,8 @@ function ProjectDropdown({ handleClose }) {
       const projectTitles =
         subCatObj.projects.map((eachSubCat) => eachSubCat.title) || [];
       setSubCatsArr(projectTitles);
+
+      // Set default first project
       const firstProject = subCatObj.projects?.[0];
       if (firstProject) {
         setSubCatName(firstProject.title);
@@ -666,7 +666,7 @@ function ProjectDropdown({ handleClose }) {
         }
       }
     }
-    return null;
+    return null; // If project is not found
   }
 
   function findCategoryPath(projectData, projectCategory) {
@@ -677,7 +677,7 @@ function ProjectDropdown({ handleClose }) {
         }
       }
     }
-    return null;
+    return null; // If category is not found
   }
 
   const projectCategoryNavigator = (categoryTitle) => {
@@ -703,6 +703,8 @@ function ProjectDropdown({ handleClose }) {
           .join("-")}/${projectTitle.split(" ").join("-")}`
       );
       handleClose();
+    }else{
+      console.log("Project not found")
     }
   };
 
@@ -797,6 +799,7 @@ function ProjectDropdown({ handleClose }) {
                     onClick={() => {
                       window.scrollTo(0, 0);
                       projectCategoryNavigator(eachCat);
+                      handleClose()
                     }}
                     className="pointer"
                   >
@@ -861,6 +864,7 @@ function ProjectDropdown({ handleClose }) {
                     onClick={() => {
                       window.scrollTo(0, 0);
                       singleProjectNavigator(eachItem);
+                      handleClose()
                     }}
                     className="pointer"
                   >
@@ -885,6 +889,7 @@ function ProjectDropdown({ handleClose }) {
                   onClick={() => {
                     window.scrollTo(0, 0);
                     singleProjectNavigator(displayProject.title);
+                    handleClose();
                   }}
                   style={{ cursor: "pointer" }}
                 >
@@ -908,6 +913,7 @@ function ProjectDropdown({ handleClose }) {
               onClick={() => {
                 window.scrollTo(0, 0);
                 singleProjectNavigator(displayProject.title);
+                handleClose()
               }}
             >
               <span>See More</span>

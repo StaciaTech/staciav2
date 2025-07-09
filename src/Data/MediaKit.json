@@ -84,6 +84,43 @@
       "file": {
         "fileUrl": "/assets/5th-year-celebration-Poster.pdf"
       }
+    },
+    {
+      "display": {
+        "displayUrl": "./assets/mediakit/Stacia-Corp.webp"
+      },
+      "name": "5th year celebration Poster",
+      "file": {
+        "fileUrl": "/assets/mediakit/Stacia-Corp.pdf"
+      }
+    },
+    {
+      "display": {
+        "displayUrl": "./assets/mediakit/Sastem-Global.webp"
+      },
+      "name": "5th year celebration Poster",
+      "file": {
+        "fileUrl": "/assets/mediakit/Sastem-Global.pdf"
+      }
+    },
+     {
+      "display": {
+        "displayUrl": "./assets/mediakit/Stacia-Group.webp"
+      },
+      "name": "5th year celebration Poster",
+      "file": {
+        "fileUrl": "/assets/mediakit/Stacia-Group.pdf"
+      }
+    },
+     {
+      "display": {
+        "displayUrl": "./assets/mediakit/Stacia-Tech.webp"
+      },
+      "name": "5th year celebration Poster",
+      "file": {
+        "fileUrl": "/assets/mediakit/Stacia-Tech.pdf"
+      }
     }
+
   ]
 }

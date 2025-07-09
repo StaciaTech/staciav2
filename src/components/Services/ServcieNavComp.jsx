@@ -992,6 +992,7 @@ function ServcieNavComp({ handleClose }) {
     const subCatObj = MainCatArrObj?.categories?.find(
       (item) => item.name === MainCat
     );
+
     setFinalServiceArr(subCatObj?.services);
     if (subCatObj) {
       const serviceTitles =
@@ -1183,7 +1184,7 @@ function ServcieNavComp({ handleClose }) {
       );
       handleClose();
     } else {
-      console.log("Product not found");
+      console.log("Service not found");
     }
   };
 
@@ -1445,3 +1446,4 @@ function ServcieNavComp({ handleClose }) {
 }
 
 export default ServcieNavComp;
+  
