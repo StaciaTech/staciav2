@@ -72,16 +72,17 @@ function Popup() {
                 </div>
               </div>
             </div>
-            <div className="col2" onClick={()=>navigate('/products/Mechanical/Agri-and-Food-Processing-SPM')}  style={{cursor:'pointer'}}>
+            <div className="col2" style={{position:"relative"}} onClick={()=>navigate('/products/Mechanical/Agri-and-Food-Processing-SPM')}  style={{cursor:'pointer'}}>
               <div className="box3" ></div>
               <h3>Products</h3>
               <div className="description">
                 <p>Agri-and-Food-Processing-SPM</p>
                 <a href="#" style={{ color: "black", marginLeft: "5px" }}>Learn more</a>
               </div>
+              {/* <div style={{position:"absolute",inset:0,borderRadius:"1rem" ,backgroundImage:"liner"}}></div> */}
             </div>
             <div className="col3">
-              <div className="box4">
+              <div className="box4" onClick={()=>navigate('/case-study/single-caseStudy/Case-Study-1')}>
                 <h3>Acheivements</h3>
                 <div className="description">
                   <p>Brief one liner</p>

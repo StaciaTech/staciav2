@@ -229,10 +229,10 @@ function HomePage() {
           <div className="homeSection">
             
             <div className="texts">
-              <div className="heroText">
+              <div className="heroText" style={{display:"flex"}}>
                 <span>Stacia Corp Redefining </span> <Star />
               </div>
-        <Popup/>
+        {/* <Popup/> */}
 
               <div className="changingText">
                 {isMounted && (
