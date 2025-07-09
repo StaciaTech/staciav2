@@ -1,0 +1,360 @@
+{
+  "services": [
+    {
+      "title": "Industrial Automation",
+      "description": "Design and implementation of automated industrial processes including SPM, test rigs, pick‑and‑place, vision systems and end‑of‑line automation."
+    },
+    {
+      "title": "SPM",
+      "description": "Custom special‑purpose machine development for specific manufacturing tasks."
+    },
+    {
+      "title": "Test Rigs",
+      "description": "Custom-built test rigs including air & vacuum leak testers, vision‑based inspection rigs, end‑of‑line, endurance, durability and performance test rigs, and various reciprocators."
+    },
+    {
+      "title": "Pick and Place",
+      "description": "Automation systems for precise picking and placement of components."
+    },
+    {
+      "title": "Vision System",
+      "description": "Machine vision integration for inspection and process control."
+    },
+    {
+      "title": "End of Line Automation",
+      "description": "Final-stage automation solutions for packaging, testing and product readiness."
+    },
+    {
+      "title": "CAD Engineering",
+      "description": "Computer Aided Design services including new engineering and conversion of legacy models."
+    },
+    {
+      "title": "CAD Conversion",
+      "description": "Conversion of drawings and models from one CAD format to another."
+    },
+    {
+      "title": "Product or Industrial Design",
+      "description": "Design services for product form, function and manufacturability."
+    },
+    {
+      "title": "Reverse Engineering",
+      "description": "Reconstructing existing products/systems via reverse-engineering techniques."
+    },
+    {
+      "title": "3D Rendering",
+      "description": "High-quality visual renderings of mechanical and industrial designs."
+    },
+    {
+      "title": "Design Consultancy and Audit",
+      "description": "Consultation services focused on evaluating product and design quality."
+    },
+    {
+      "title": "Industry Consultancy and Audit",
+      "description": "Advisory services on industrial design and processes."
+    },
+    {
+      "title": "Embedded Hardware & Firmware",
+      "description": "Development of embedded systems hardware and firmware."
+    },
+    {
+      "title": "IoT Devices",
+      "description": "Design and development of connected Internet of Things devices."
+    },
+    {
+      "title": "PCB Design",
+      "description": "Printed circuit board design services for electronic devices."
+    },
+    {
+      "title": "PCB Development",
+      "description": "Fabrication and testing of PCB boards for product integration."
+    },
+    {
+      "title": "Product Engineering",
+      "description": "Engineering support for electronics product development from prototype to production."
+    },
+    {
+      "title": "Prototype Development",
+      "description": "Rapid prototyping of electronics and hardware products."
+    },
+    {
+      "title": "Product Development",
+      "description": "Complete product engineering services from concept through launch."
+    },
+    {
+      "title": "Design & Product Review Consultancy",
+      "description": "Reviews and audits for design, product quality and improvements."
+    },
+    {
+      "title": "Compliance and Certification Consultancy",
+      "description": "Support in meeting industry standards and certification requirements."
+    },
+    {
+      "title": "Manufacturing, Reliability & Process Audit",
+      "description": "Assessment of reliability, process consistency, and manufacturing quality."
+    },
+    {
+      "title": "UI and UX Design",
+      "description": "User interface and user experience design services."
+    },
+    {
+      "title": "Graphic Design",
+      "description": "Visual design for digital and print media."
+    },
+    {
+      "title": "Wireframing and Prototyping",
+      "description": "Design mockups and prototypes for software products."
+    },
+    {
+      "title": "Web Development (Frontend & Backend)",
+      "description": "Complete web development services using modern frameworks."
+    },
+    {
+      "title": "Mobile App Development",
+      "description": "iOS and Android mobile application development."
+    },
+    {
+      "title": "Custom Software Development",
+      "description": "Tailor-made software solutions for businesses and startups."
+    },
+    {
+      "title": "API Development & Integration",
+      "description": "Custom API creation and third-party integration services."
+    },
+    {
+      "title": "Cloud Application Development",
+      "description": "Development of scalable applications hosted on cloud platforms."
+    },
+    {
+      "title": "Cross Platform App Development",
+      "description": "Apps that run on multiple platforms using shared codebases."
+    },
+    {
+      "title": "Infrastructure as Code (IaC)",
+      "description": "Automated infrastructure setup using code-based tools."
+    },
+    {
+      "title": "Microservices Architecture",
+      "description": "Design and development of scalable microservices-based systems."
+    },
+    {
+      "title": "Containerization",
+      "description": "Docker and Kubernetes-based container solutions."
+    },
+    {
+      "title": "Web Server Management",
+      "description": "Configuration and optimization of web servers."
+    },
+    {
+      "title": "Continuous Integration and Deployment (CI or CD)",
+      "description": "Automated code build, test and deployment pipelines."
+    },
+    {
+      "title": "Server Configuration and Management",
+      "description": "Setup, monitoring and optimization of server environments."
+    },
+    {
+      "title": "Cloud Infrastructure Management",
+      "description": "End-to-end management of cloud services and infrastructure."
+    },
+    {
+      "title": "Database Management",
+      "description": "Setup and maintenance of structured and unstructured databases."
+    },
+    {
+      "title": "Data Visualization",
+      "description": "Interactive dashboards and visualization tools."
+    },
+    {
+      "title": "Business Intelligence (BI) Tools",
+      "description": "Implementation of BI platforms for data-driven decisions."
+    },
+    {
+      "title": "Application Support",
+      "description": "Ongoing maintenance and troubleshooting of applications."
+    },
+    {
+      "title": "Bug Fixes and Updates",
+      "description": "Patching and enhancement of existing systems."
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Improving load speed, responsiveness and resource usage."
+    },
+    {
+      "title": "Server Monitoring and Maintenance",
+      "description": "Health checks and uptime monitoring for servers."
+    },
+    {
+      "title": "Functional Testing",
+      "description": "Ensuring application features work as expected."
+    },
+    {
+      "title": "Automation Testing",
+      "description": "Scripted testing using automation tools."
+    },
+    {
+      "title": "Performance Testing",
+      "description": "Assessing system performance under load."
+    },
+    {
+      "title": "Security Testing",
+      "description": "Evaluating vulnerabilities and data safety."
+    },
+    {
+      "title": "IT Strategy Consulting",
+      "description": "Planning and implementing scalable IT strategies."
+    },
+    {
+      "title": "Digital Transformation Consulting",
+      "description": "Helping organizations modernize their technology stack."
+    }
+  ],
+  "products": [
+    {
+      "title": "Agri and Food Processing SPM",
+      "description": "Custom special‑purpose machines for agriculture and food processing."
+    },
+    {
+      "title": "Onedril (SSM)",
+      "description": "A special‑purpose machine named Onedril, likely for drilling or similar."
+    },
+    {
+      "title": "Chilli Ladling Machine",
+      "description": "Automated machine for ladling chilli products."
+    },
+    {
+      "title": "Precision Slicing Machine",
+      "description": "High-precision slicer for food or industrial materials."
+    },
+    {
+      "title": "Tamarind Breaking Machine",
+      "description": "Machine for breaking tamarind pods efficiently."
+    },
+    {
+      "title": "Bailing Machine",
+      "description": "Machine designed for baling materials."
+    },
+    {
+      "title": "Spinach Cleaning Machine",
+      "description": "Automated cleaning machine for spinach or leafy greens."
+    },
+    {
+      "title": "Air and Vacuum Leak Test Rigs",
+      "description": "Test rigs for leak detection using air or vacuum methods."
+    },
+    {
+      "title": "Vision based Inspection Test Rigs",
+      "description": "Inspection test rigs using machine vision."
+    },
+    {
+      "title": "Endurance Test Rigs",
+      "description": "Machines for testing long-term durability of components."
+    },
+    {
+      "title": "Durability Test Rigs",
+      "description": "Test systems for simulating wear and tear."
+    },
+    {
+      "title": "Performance Test Rigs",
+      "description": "Machines used to validate operational performance."
+    },
+    {
+      "title": "Reciprocating Arm",
+      "description": "Device for repeated linear movement — vertical, horizontal or synchronized."
+    },
+    {
+      "title": "Electrical Actuator",
+      "description": "Motor-driven actuator for automated motion control."
+    },
+    {
+      "title": "Hydration Tracking (G-sensor)",
+      "description": "Smart device for monitoring water intake."
+    },
+    {
+      "title": "Portable Heating & Cooling Device",
+      "description": "Wearable temperature control using semiconductor technology."
+    },
+    {
+      "title": "LoRa Mesh System with Encryption",
+      "description": "Secure wireless communication for IoT using LoRa mesh."
+    },
+    {
+      "title": "Hydrogen (Smart-water-bottle)",
+      "description": "Water bottle with hydrogen generation features."
+    },
+    {
+      "title": "RFID Child Tracking Device",
+      "description": "Wearable device to track children using RFID tech."
+    },
+    {
+      "title": "Smart Furniture",
+      "description": "Furniture integrated with electronics for smart features."
+    },
+    {
+      "title": "S Connect (Smart Speaker)",
+      "description": "Smart voice assistant and speaker device."
+    },
+    {
+      "title": "Stellar Labs",
+      "description": "R&D brand or division focused on innovative projects."
+    },
+    {
+      "title": "Stello",
+      "description": "A digital tool or app — further details unknown."
+    },
+    {
+      "title": "The AiGentcy",
+      "description": "AI-based solutions and services platform."
+    },
+    {
+      "title": "Edifai",
+      "description": "Business automation and productivity suite."
+    },
+    {
+      "title": "Stacia Calendar",
+      "description": "Custom digital calendar for scheduling and productivity."
+    },
+    {
+      "title": "Stacia Forms",
+      "description": "Dynamic form builder for business and data collection."
+    },
+    {
+      "title": "Stacia Reimbursement",
+      "description": "Application to track and process reimbursements."
+    }
+  ],
+  "projects": [
+    {
+      "title": "One Drill",
+      "description": "Mechanical project focused on a drilling solution."
+    },
+    {
+      "title": "ismart",
+      "description": "Industrial-smart mechanical project."
+    },
+    {
+      "title": "Chilli Solar House",
+      "description": "Project integrating solar energy in chilli-processing or agritech context."
+    },
+    {
+      "title": "Hydrogen Bottle",
+      "description": "Prototype or project for a hydrogen smart water bottle."
+    },
+    {
+      "title": "Smart Implementation",
+      "description": "Project aimed at implementing smart systems in electronics."
+    },
+    {
+      "title": "Reverse Kettle",
+      "description": "Electronic/mechanical project involving a kettle reversal mechanism."
+    },
+    {
+      "title": "AI Chatbot",
+      "description": "Artificial intelligence conversational agent project."
+    },
+    {
+      "title": "AI Chatbot Version",
+      "description": "Another version or iteration of an AI chatbot project."
+    }
+  ]
+}

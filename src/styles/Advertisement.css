@@ -1,0 +1,109 @@
+.advertisement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  height: 70px;
+  background-color: #c7105e;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.star {
+  padding: 10px;
+}
+
+.ad-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.ad-carousel {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  height: 100%;
+}
+
+.ad-slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.view-details {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+.view-details:hover {
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  height: 100%;
+  width: 50px; /* Optional: define width to avoid layout shift */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; /* Ensure it stays above the content */
+}
+
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Optional: Add background SVG waves */
+.advertisement::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/wave-line.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #c7105e;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.advertisement > * {
+  position: relative;
+  z-index: 1;
+}

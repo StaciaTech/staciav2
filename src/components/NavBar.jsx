@@ -639,7 +639,7 @@
 // export default NavBar;
 
 import React, { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
 import Star from "../components/Star";
 import StaciaLogo from "../assets/Stacia Monogram.svg";
@@ -659,6 +659,7 @@ import AboutDropDown from "./AboutDropDown";
 import ResourceDropDown from "./Resource/ResourceDropDown";
 import ProjectDropdown from "./ProjectDropdown";
 import Sitemap from "../components/Sitemap";
+import Advertisement from "./ReUsableComp/Advertisement";
 
 function NavBar() {
   const [openWhatsNew, setOpenWhatsNew] = useState(false);
@@ -886,6 +887,8 @@ function NavBar() {
 
   return (
     <div className={`navbar ${showNavbar ? "show" : "hide"}`}>
+      {/* Advertisement */}
+      {showAdd && <Advertisement setShowAdd={setShowAdd}/>}
       <div className="nav-container">
         <div className="nav-items-container">
           <div className="nav-left">
@@ -939,6 +942,7 @@ function NavBar() {
               ref={navAreaRef}
               onMouseLeave={() => setActiveDropdown(null)} // Close dropdowns when leaving nav area
             >
+              <Star />
               <NavLink
                 to={"/services"}
                 onClick={() => {
@@ -1009,7 +1013,6 @@ function NavBar() {
                 onMouseEnter={() => setActiveDropdown(null)} // No dropdown for Competition
               >
                 Competition
-                <Star />
               </NavLink>
               <NavLink
                 to={"/about"}
@@ -1067,30 +1070,10 @@ function NavBar() {
           </div>
         )}
       </div>
-      {isHomepage && showAdd && (
-        <div class="advertisement">
-          <div className="ad-content">
-            <div className="star">
-              <Star/>
-            </div>
-            <div class="ad-text">
-              Coding thrill awaits! 🚀 Hackathon on [Date] at [Venue]. Dive into
-              innovation with us!
-              <a href="#" class="view-details">
-                View Details
-              </a>
-            </div>
-            <div className="star">
-              <Star/>
-            </div>
-          </div>
-          <div className="close">
-            <button class="close-btn" onClick={() => setShowAdd(false)}>
-              &times;
-            </button>
-          </div>
-        </div>
-      )}
+
+      
+
+
       {activeDropdown === "services" && (
         <div
           className="nav-service-comp"

@@ -168,6 +168,7 @@ import { motion } from "framer-motion";
 import LoadingStar from "../components/LoadingStar";
 import Star from "../components/Star";
 import "../styles/Home.css"; // Inline critical CSS and minify this file
+import Popup from "../components/Popup";
 // Lazy-loaded components
 const NavBar = lazy(() => import("../components/NavBar"));
 const Footer = lazy(() => import("../components/Footer"));
@@ -231,6 +232,8 @@ function HomePage() {
               <div className="heroText">
                 <span>Stacia Corp Redefining </span> <Star />
               </div>
+        <Popup/>
+
               <div className="changingText">
                 {isMounted && (
                   <motion.div
