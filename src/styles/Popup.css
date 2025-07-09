@@ -339,7 +339,7 @@ body.no-scroll {
 .box1 {
   height: 51%;
   width: 100%;
-  background-image: url("../assets/popup/pic-1.png");
+  /* background-image: url("../assets/pro"); */
   background-size: cover;
   background-position: center;
 }
