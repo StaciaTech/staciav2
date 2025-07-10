@@ -232,7 +232,7 @@ function HomePage() {
               <div className="heroText" style={{display:"flex"}}>
                 <span>Stacia Corp Redefining </span> <Star />
               </div>
-        {/* <Popup/> */}
+        <Popup/>
 
               <div className="changingText">
                 {isMounted && (

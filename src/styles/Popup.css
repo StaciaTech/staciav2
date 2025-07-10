@@ -462,7 +462,7 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Match box5-content width */
+  width: 95%; /* Match box5-content width */
   height: 80%; /* Adjusted to fit within box5-content */
   position: relative;
   overflow: hidden; /* Contain the slide */
@@ -487,8 +487,10 @@ body.no-scroll {
   font-size: 1.5rem;
   color: white;
   padding: 8px;
-  width: 32%;
-  /* border: 2px solid white; */
+  width: 34%;
+  height: 52%;
+  text-wrap: wrap;
+  /* border: 2px solid white;  */
 }
 
 .typewriter  {
