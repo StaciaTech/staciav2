@@ -8,7 +8,7 @@
           "projects": [
             {
               "id":1,
-              "title": "Custom Chili Ladling Machine for Aachi Group",
+              "title": "Chili Ladling Machine for Aachi Group",
               "mainDesc": "A battery-powered, portable chili ladling machine with a cleated belt conveyor, IP69K-rated components, and PLC/SCADA controls for automated chili handling.",
               "mainImageUrl": "/assets/ProjectPage/chilli-lading-machine.webp",
               "Executive-Summary": "The Stacia Corp Custom Chili Ladling Machine—delivered for Aachi Group—automates chili handling end-to-end, reducing manual labor by 70% and boosting throughput by 50% while ensuring uniform product quality and stringent hygiene compliance. Its battery-powered portability, lightweight modular frame, and IP69K-rated components enable flexible deployment and rapid, high-temperature washdowns, cutting sanitation time by 60%. Integrated PLC/SCADA controls with remote HMI support real-time monitoring and data logging, yielding a six-month payback through combined labor and energy savings.",
@@ -260,7 +260,7 @@
             },
             {
               "id":2,
-              "title": "Stacia Precision Slicing Machine for Pumkin Tales",
+              "title": "Precision Slicing Machine",
               "mainDesc": "A compact, IP69K-rated machine for slicing up to five artisan bread loaves simultaneously with ultra-fine thickness control (3 mm upward).",
               "mainImageUrl": "/assets/ProductPage/Precision Slicing Machine.webp",
               "Executive-Summary": "Stacia Corp partnered with Pumpkin Tales to deliver a custom, high-performance Precision Slicing Machine capable of slicing up to five loaves (bread) simultaneously into ultra-uniform slices from 3 mm upward, all within a compact, IP69K-rated hygienic frame. This turnkey solution drove a 60 % increase in throughput, slashed waste by 40 %, cut cleaning time by 50 %, and paid back within eight months—while preserving artisanal quality at industrial scale",
