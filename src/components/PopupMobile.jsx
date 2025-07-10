@@ -1,13 +1,13 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useRef, useState } from "react";
-import "../styles/Popup.css";
+import "../styles/PopupMobile.css";
 import { GoArrowRight } from "react-icons/go";
 import { IoCloseSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import { motion, AnimatePresence } from "framer-motion";
-import PopupMobile from "./PopupMobile";
 
-function Popup() {
+const PopupMobile = () => {
   const [show, setShow] = useState(true);
   const popupContentRef = useRef(null);
   const navigate = useNavigate();
@@ -18,10 +18,9 @@ function Popup() {
   const [achievementIndex, setAchievementIndex] = useState(0);
   const [horizontalIndex, setHorizontalIndex] = useState(0);
   const [showContent2Box5, setShowContent2Box5] = useState(false);
-  const breakpoint = 768
-   const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
+  const breakpoint = 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
 
-  
   const carouselData = [
     {
       content1: "Meet Our Latest Product",
@@ -169,21 +168,21 @@ function Popup() {
   useEffect(() => {
     const interval = setInterval(() => {
       setServiceIndex((prev) => prev + 1);
-    }, 3000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setAchievementIndex((prev) => prev + 1);
-    }, 5000);
+    }, 5500);
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setHorizontalIndex((prev) => (prev + 1) % horizontalSlides.length);
-    }, 6000);
+    }, 6500);
     return () => clearInterval(interval);
   }, []);
 
@@ -191,9 +190,8 @@ function Popup() {
   const {link} = carouselData[currentIndex]
 
   useEffect(() => {
-  setShowContent2Box5(false);
-}, [currentIndex]);
-
+    setShowContent2Box5(false);
+  }, [currentIndex]);
 
   const handleClickOutside = (e) => {
     if (
@@ -203,188 +201,112 @@ function Popup() {
       setShow(false);
     }
   };
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < breakpoint);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Initial check (for SSR safety)
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, [breakpoint]);
-
-
   return (
-    <>
-    {isMobile ?(
-      <PopupMobile/>
-    ):(
-      (
-      show && (
-      <div className="popup" onClick={handleClickOutside}>
-        <div className="popup-content" ref={popupContentRef}>
-          <div className="top-container">
-            <div className="heading">Featured</div>
-            <button className="close-btn" onClick={() => setShow(false)}>
+    show && (
+      <div className="mobile-popup" onClick={handleClickOutside}>
+        <div className="mobile-popup-content-1" ref={popupContentRef}>
+          <div className="mobile-top-container">
+            <div className="mobile-heading">Featured</div>
+            <button className="mobile-close-btn" onClick={() => setShow(false)}>
               <IoCloseSharp />
             </button>
           </div>
 
-          <div className="boxes">
-            <div className="col1">
-              <div
-                className="box1"
-                style={{ cursor: "pointer" }}
-                onClick={() =>
-                  navigate(
-                    "/project/Mechanical/Food-Processing/Custom-Chili-Ladling-Machine-for-Aachi-Group"
-                  )
-                }
-              >
-                <div className="project-carousel-container">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={projectIndex}
-                      className="project-slide"
-                      initial={{ y: "100%", opacity: 0 }}
-                      animate={{ y: "0%", opacity: 1 }}
-                      exit={{ y: "-100%", opacity: 0 }}
-                      transition={{ duration: 0.6, ease: "easeInOut" }}
-                    >
-                      <img
-                        src={
-                          projectSlides[projectIndex % projectSlides.length]
-                            .image
-                        }
-                        className="project-img"
-                        alt={
-                          projectSlides[projectIndex % projectSlides.length]
-                            .title
-                        }
-                        onClick={()=>navigate(`/project/Mechanical/Food-Processing/${projectSlides[projectIndex % projectSlides.length].title.split(" ").join('-')}`)}
-                      />
-                      <div className="project-details">
-                        <h3>Projects</h3>
-                        <p className="project-title"
-                        onClick={()=>navigate(`/project/Mechanical/Food-Processing/${projectSlides[projectIndex % projectSlides.length].title.split(" ").join('-')}`)}>
-                          {
-                            projectSlides[projectIndex % projectSlides.length]
-                              .title
-                          }....Learn more
-                          
-                        </p>
-                        <p className="project-description">
-                          {
-                            projectSlides[projectIndex % projectSlides.length]
-                              .description
-                          }
-                        </p>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-              </div>
+          <div className="mobile-boxes">
+            <div className="mobile-col1">
 
-              <div
-                className="box2"
-                style={{ cursor: "pointer" }}
-                onClick={() =>
-                  navigate("/services/Mechanical/Industrial-Automation")
-                }
-              >
-                <div className="project-carousel-container">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={serviceIndex}
-                      className="project-slide"
-                      initial={{ y: "100%", opacity: 0 }}
-                      animate={{ y: "0%", opacity: 1 }}
-                      exit={{ y: "-100%", opacity: 0 }}
-                      transition={{ duration: 0.6, ease: "easeInOut" }}
-                    >
-                      <img
-                        src={
-                          serviceSlides[serviceIndex % serviceSlides.length]
-                            .image
-                        }
-                        className="project-img"
-                        alt={
-                          serviceSlides[serviceIndex % serviceSlides.length]
-                            .title
-                        }
-                        onClick={()=>navigate(`/services/Mechanical/Industrial-Automation/${serviceSlides[serviceIndex % serviceSlides.length].title?.split(' ').join("-")}`)}  
-                      />
-                      <div className="project-details">
-                        <h3>Services</h3>
-                        <p className="project-title">
-                          {
-                            serviceSlides[serviceIndex % serviceSlides.length]
-                              .title
+              {/* projects */}
+                <div className="mobile-projects"
+                  style={{ cursor: "pointer" }}
+                  
+                >
+                  <div className="mobile-project-carousel-container">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={projectIndex}
+                        className="mobile-project-slide"
+                        initial={{ y: "100%", opacity: 0 }}
+                        animate={{ y: "0%", opacity: 1 }}
+                        exit={{ y: "-100%", opacity: 0 }}
+                        transition={{ duration: 0.6, ease: "easeInOut" }}
+                      >
+                        <img
+                          src={
+                            projectSlides[projectIndex % projectSlides.length]
+                              .image
                           }
-                        </p>
-                        <p className="project-description">
-                          {
-                            serviceSlides[serviceIndex % serviceSlides.length]
-                              .description
-                          }
-                        </p>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
+                          className="mobile-project-img"
+                          onClick={()=>navigate(`/project/Mechanical/Food-Processing/${projectSlides[projectIndex % projectSlides.length].title.split(" ").join('-')}`)}
+                        />
+                        <div className="mobile-project-details">
+                          <p>Projects</p>
+                          <p className="mobile-project-title"
+                          onClick={()=>navigate(`/project/Mechanical/Food-Processing/${projectSlides[projectIndex % projectSlides.length].title.split(" ").join('-')}`)}
+                          >
+                            {
+                              projectSlides[projectIndex % projectSlides.length]
+                                .title
+                            }....Learn more
+                          </p>
+                          {/* <p className="mobile-project-description">
+                            {
+                              projectSlides[projectIndex % projectSlides.length]
+                                .description
+                            }
+                          </p> */}
+                        </div>
+                      </motion.div>
+                    </AnimatePresence>
+                  </div>
+                </div>              
+
+              {/* products */}
+               <div className="mobile-products">
+                  <div className="mobile-horizontal-carousel-container">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={horizontalIndex}
+                        className="mobile-horizontal-slide"
+                        initial={{ x: "100%", opacity: 0 }}
+                        animate={{ x: "0%", opacity: 1 }}
+                        exit={{ x: "-100%", opacity: 0 }}
+                        transition={{ duration: 0.6, ease: "easeInOut" }}
+                      >
+                        <img
+                          src={horizontalSlides[horizontalIndex].image}
+                          className="mobile-horizontal-img"
+                          alt={horizontalSlides[horizontalIndex].title}
+                          onClick={()=>navigate(`/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[horizontalIndex].title?.split(' ').join("-")}`)}
+                        />
+                        <div className="mobile-horizontal-details">
+                          <p>Products</p>
+                          <p className="mobile-horizontal-title" 
+                          onClick={()=>navigate(`/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[horizontalIndex].title?.split(' ').join("-")}`)}
+                          >
+                            {horizontalSlides[horizontalIndex].title}...Learn more
+                          </p>
+                          {/* <p className="mobile-horizontal-description">
+                            {horizontalSlides[horizontalIndex].description}
+                          </p> */}
+                        </div>
+                      </motion.div>
+                    </AnimatePresence>
+                  </div>
                 </div>
-              </div>
             </div>
 
-            <div className="col2">
-              <div className="box3">
-                <div className="horizontal-carousel-container">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={horizontalIndex}
-                      className="horizontal-slide"
-                      initial={{ x: "100%", opacity: 0 }}
-                      animate={{ x: "0%", opacity: 1 }}
-                      exit={{ x: "-100%", opacity: 0 }}
-                      transition={{ duration: 0.6, ease: "easeInOut" }}
-                    >
-                      <img
-                        src={horizontalSlides[horizontalIndex].image}
-                        className="horizontal-img"
-                        alt={horizontalSlides[horizontalIndex].title}
-                        onClick={()=>navigate(`/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[horizontalIndex].title?.split(' ').join("-")}`)}
-                      />
-                      <div className="horizontal-details">
-                        <h3>Products</h3>
-                        <p className="horizontal-title"
-                        onClick={()=>navigate(`/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[horizontalIndex].title?.split(' ').join("-")}`)}>
-                          {horizontalSlides[horizontalIndex].title}....Learn more
-                        </p>
-                        <p className="horizontal-description">
-                          {horizontalSlides[horizontalIndex].description}
-                        </p>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-              </div>
-            </div>
-
-            <div className="col3">
-              <div
-                className="box4"
+            <div className="mobile-col2">
+              {/* acheivements */}
+              <div  className="mobile-achievements"
                 onClick={() =>
                   navigate("/case-study/single-caseStudy/Case-Study-1")
                 }
               >
-                <div className="acheivements-carousel-container">
+                <div className="mobile-acheivements-carousel-container">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={achievementIndex}
-                      className="acheivements-slide"
+                      className="mobile-acheivements-slide"
                       initial={{ y: "100%", opacity: 0 }}
                       animate={{ y: "0%", opacity: 1 }}
                       exit={{ y: "-100%", opacity: 0 }}
@@ -396,41 +318,37 @@ function Popup() {
                             achievementIndex % achievementSlides.length
                           ].image
                         }
-                        className="project-img"
-                        alt={
-                          achievementSlides[
-                            achievementIndex % achievementSlides.length
-                          ].title
-                        }
+                        className="mobile-project-img"                       
                       />
-                      <div className="acheivements-details">
-                        <h3>Achievements</h3>
-                        <p className="acheivements-title">
+                      <div className="mobile-acheivements-details">
+                        <p>Achievements</p>
+                        <p className="mobile-acheivements-title">
                           {
                             achievementSlides[
                               achievementIndex % achievementSlides.length
                             ].title
-                          }
+                          } ....Learn more
                         </p>
-                        <p className="acheivements-description">
+                        {/* <p className="mobile-acheivements-description">
                           {
                             achievementSlides[
                               achievementIndex % achievementSlides.length
                             ].description
                           }
-                        </p>
+                        </p> */}
                       </div>
                     </motion.div>
                   </AnimatePresence>
                 </div>
               </div>
 
-              <div className="box5">
-                <div className="box5-content">
-                  <p className="box">News</p>
-                  <div className="carousel-container">
-                    <div className="carousel-slide">
-                      <div className="box5-content1">
+              {/* news */}
+              <div className="mobile-news">
+                <div className="mobile-news-content">
+                  <p className="mobile-box" style={{fontSize:"10px"}}>News</p>
+                  <div className="mobile-carousel-container">
+                    <div className="mobile-carousel-slide">
+                      <div className="mobile-news-content1" style={{fontSize:"15px"}}>
                         <Typewriter
                           key={content1 + currentIndex}
                           options={{ delay: 40, autoStart: true }}
@@ -443,11 +361,12 @@ function Popup() {
                               })
                               .start();
                           }}
+                          
                         />
                       </div>
 
                       {showContent2Box5 && (
-                        <div className="box5-content2">
+                        <div className="mobile-news-content2" style={{fontSize:'15px'}}>
                           <Typewriter
                             key={content2 + currentIndex}
                             options={{ delay: 40, autoStart: true }}
@@ -456,55 +375,81 @@ function Popup() {
                             }}
                           />
                         </div>
-                      )}
-
-                      {/* <div className="box5-content2">
-                        <Typewriter
-                          key={content2 + currentIndex}
-                          options={{ delay: 40, autoStart: true }}
-                          onInit={(typewriter) => {
-                            typewriter.typeString(content2).start();
-                          }}
-                        />
-                      </div> */}
+                      )}                     
                     </div>
                   </div>
-                  <div className="go-button">
+                  <div className="mobile-go-button" style={{cursor:'pointer'}}>
                     <a href={`${link}`} target="__blank"><GoArrowRight style={{ color: "#565656" }} size={18}/></a>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* services */}
+            <div  className="mobile-services"
+              style={{ cursor: "pointer" }}              
+            >
+              <div className="mobile-project-carousel-container">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={serviceIndex}
+                    className="mobile-project-slide"
+                    initial={{ y: "100%", opacity: 0 }}
+                    animate={{ y: "0%", opacity: 1 }}
+                    exit={{ y: "-100%", opacity: 0 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                  >
+                    <img
+                      src={
+                        serviceSlides[serviceIndex % serviceSlides.length].image
+                      }
+                      className="mobile-project-img"       
+                      onClick={()=>navigate(`/services/Mechanical/Industrial-Automation/${serviceSlides[serviceIndex % serviceSlides.length].title?.split(' ').join("-")}`)}               
+                    />
+                    <div className="mobile-project-details">
+                      <p>Services</p>
+                      <p className="mobile-project-title"
+                      onClick={()=>navigate(`/services/Mechanical/Industrial-Automation/${serviceSlides[serviceIndex % serviceSlides.length].title?.split(' ').join("-")}`)}  >
+                        {
+                          serviceSlides[serviceIndex % serviceSlides.length]
+                            .title
+                        }....Learn more
+                      </p>
+
+                      {/* <p className="mobile-project-description">
+                        {
+                          serviceSlides[serviceIndex % serviceSlides.length]
+                            .description
+                        }
+                      </p> */}
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
           </div>
 
-          <div className="buttons">
-            <div
-              className="button1"
-              onClick={() => {
+
+
+
+        <div className="mobile-buttons">
+                <div className="mobile-button1" onClick={() => {
                 navigate("/");
                 setShow(false);
-              }}
-            >
-              Stay in Stacia Corp
-            </div>
-            <div className="button2">
-              <a
+              }}>Stay in Stacia Corp</div>
+
+                <div className="mobile-button2"> <a
                 href="https://staciatech.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Switch to Stacia Tech
-              </a>
-            </div>
-          </div>
+              </a></div>
+        </div>       
         </div>
       </div>
     )
-    )
-    )}
-    
-    </>
   );
-}
+};
 
-export default Popup;
+export default PopupMobile;
