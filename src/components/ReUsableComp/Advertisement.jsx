@@ -8,9 +8,9 @@ const Advertisement = ({ setShowAdd }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
   const sliderRef = useRef(null);
-  const animationRef = useRef(null);
-  const lastTimeRef = useRef(0);
-  const isVisibleRef = useRef(true);
+  // const animationRef = useRef(null);
+  // const lastTimeRef = useRef(0);
+  // const isVisibleRef = useRef(true);
 
   const advertisements = [
     { name: "🚀 Visit our technology partner StaciaTech", link: "https://staciatech.com" },
