@@ -97,19 +97,19 @@ function Popup() {
 
   const achievementSlides = [
     {
-      title: "Tech Winner",
-      image: "../assets/ProjectPage/AI chatbot version.webp",
+      title: "Promising Young Alumni Award 2025 – SVCE",
+      image: "/assets/LeaderPage/Promising Young Alumni Award 2025.webp",
       description: "Secured 1st place....",
-    },
+    },    
     {
-      title: "Top 10 Startup",
-      image: "../assets/ProjectPage/AI chatbot version.webp",
-      description: "Recognized by TN ....",
-    },
-    {
-      title: "Best Case Study",
-      image: "../assets/ProjectPage/AI chatbot version.webp",
+      title: "HYDRATION & HYDROGEN",
+      image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
       description: "Published in national ....",
+    },
+    {
+      title: "Entrepreneur of the Year 2024",
+      image: "/assets/LeaderPage/Award-3.webp",
+      description: "Recognized by TN ....",
     },
   ];
 
@@ -461,7 +461,7 @@ function Popup() {
                               className="achievements-title"
                               onClick={() =>
                                 navigate(
-                                  "/case-study/single-caseStudy/Case-Study-1"
+                                  "/news"
                                 )
                               }
                               style={{ cursor: "pointer" }}
