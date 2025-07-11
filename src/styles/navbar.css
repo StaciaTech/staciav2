@@ -122,6 +122,13 @@ a {
   align-items: center;
   margin: 0px 10px;
 }
+.nav-whatsnew-comp {
+  position: absolute;
+  top: 80px; /* Already defined in .whats-new */
+  width: 100%;
+  z-index: 1000; /* Higher than navbar's z-index: 999 */
+}
+
 
 .dropdown {
   position: relative;

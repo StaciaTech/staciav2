@@ -47,10 +47,7 @@
   /* border: 2px solid yellow; */
   margin-bottom: 5px;
 }
-.mobile-project-img {
-  position: absolute;
-  object-fit: cover;
-}
+
 
 /* products */
 .mobile-products {
@@ -241,7 +238,7 @@ body.no-scroll {
 }
 .mobile-buttons {
   width: 100%;
-  height: 20%;
+  height: 18%;
   display: flex;
   flex-direction: column;
   justify-content: center;

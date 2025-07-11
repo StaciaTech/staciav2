@@ -101,7 +101,7 @@
   border-radius: 15px;
 }
 .projects {
-  height: 51%;
+  height: 52%;
   width: 100%;  
 }
 .project-img {
@@ -111,7 +111,7 @@
 }
 
 .services {
-  height: 50%;
+  height: 48%;
   width: 100%;
 }
 .products {
@@ -228,7 +228,7 @@ body.no-scroll {
 }
 
 div.Typewriter{
-  width: 40%;
+  width: 42%;
   /* background-color: red; */
 }
 
@@ -248,7 +248,7 @@ div.Typewriter{
 .news-content > div {
   font-size: 1.5rem;
   color: white;
-  padding: 15px;
+  padding: 10px;
 }
 body.no-scroll {
   overflow: hidden;
@@ -270,7 +270,16 @@ body.no-scroll {
   /* border: 2px solid red; */
 }
 
-.news-content1,
+.news-content1{
+   font-size: 1.5rem;
+  color: white;
+  padding: 4px;
+  width: 80%;
+  height: 40%;
+  text-wrap: wrap;
+  /* border: 2px solid white;  */
+
+}
 .news-content2 {
   font-size: 1.5rem;
   color: white;
@@ -318,7 +327,6 @@ body.no-scroll {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
-  margin-top: 10px;
 }
 
 .project-slide {
@@ -366,7 +374,7 @@ body.no-scroll {
 }
 
 
-.horizontal-carousel-container {
+.products-carousel-container {
   position: relative;
   height: 100%;
   width: 100%;
@@ -379,7 +387,7 @@ body.no-scroll {
   /* border: 2px solid blue; */
 }
 
-.horizontal-slide {
+.products-slide {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -391,7 +399,7 @@ body.no-scroll {
   /* border: 2px solid red; */
 }
 
-.horizontal-img {
+.products-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -402,7 +410,7 @@ body.no-scroll {
   z-index: 1;
 }
 
-.horizontal-details {
+.products-details {
   padding: 15px;
   height: auto;
   width: 100%;
@@ -414,7 +422,7 @@ body.no-scroll {
   background: linear-gradient(180deg, rgba(13, 2, 37, 0) 63.96%, #0d0225 100%);
 }
 
-.horizontal-title {
+.products-title {
   font-weight: bold;
   font-size: 0.6rem;
   margin: 0;
@@ -427,7 +435,6 @@ body.no-scroll {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
-  margin-top: 10px;
   /* border: 2px solid red; */
 }
 
@@ -476,6 +483,12 @@ body.no-scroll {
 
 @media (min-width: 1536px) and (max-width:1920px) {
   div.Typewriter{
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width:1535px) {
+  div.Typewriter{
+    font-size: 1.2rem;
   }
 }

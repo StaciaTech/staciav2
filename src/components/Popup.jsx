@@ -16,7 +16,7 @@ function Popup() {
   const [projectIndex, setProjectIndex] = useState(0);
   const [serviceIndex, setServiceIndex] = useState(0);
   const [achievementIndex, setAchievementIndex] = useState(0);
-  const [horizontalIndex, setHorizontalIndex] = useState(0);
+  const [productIndex, setProductIndex] = useState(0);
   const [showContent2Box5, setShowContent2Box5] = useState(false);
   const breakpoint = 768;
   const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
@@ -101,19 +101,19 @@ function Popup() {
       image: "/assets/LeaderPage/Promising Young Alumni Award 2025.webp",
       description: "Secured 1st place....",
     },    
-    {
-      title: "HYDRATION & HYDROGEN",
-      image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
-      description: "Published in national ....",
-    },
+    // {
+    //   title: "HYDRATION & HYDROGEN",
+    //   image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
+    //   description: "Published in national ....",
+    // },
     {
       title: "Entrepreneur of the Year 2024",
-      image: "/assets/LeaderPage/Award-3.webp",
+      image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
       description: "Recognized by TN ....",
-    },
+    }
   ];
 
-  const horizontalSlides = [
+  const productSlides = [
     {
       title: "Bailing Machine",
       image: "../assets/ProductPage/BailingMachine.webp",
@@ -177,7 +177,7 @@ function Popup() {
   useEffect(() => {
     const interval = setInterval(() => {
       setServiceIndex((prev) => prev + 1);
-    }, 3000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
@@ -190,8 +190,8 @@ function Popup() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHorizontalIndex((prev) => (prev + 1) % horizontalSlides.length);
-    }, 6000);
+      setProductIndex((prev) => (prev + 1) % productSlides.length);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -234,9 +234,7 @@ function Popup() {
             <div className="popup-content" ref={popupContentRef}>
               <div className="top-container">
                 <div className="heading">Featured</div>
-                <button className="close-btn" onClick={() => setShow(false)}>
-                  <IoCloseSharp />
-                </button>
+                  <IoCloseSharp onClick={()=> setShow(false)} />
               </div>
 
               <div className="boxes">
@@ -373,38 +371,38 @@ function Popup() {
 
                 <div className="col2">
                   <div className="products">
-                    <div className="horizontal-carousel-container">
+                    <div className="products-carousel-container">
                       <AnimatePresence mode="wait">
                         <motion.div
-                          key={horizontalIndex}
-                          className="horizontal-slide"
+                          key={productIndex}
+                          className="products-slide"
                           initial={{ x: "100%", opacity: 0 }}
                           animate={{ x: "0%", opacity: 1 }}
                           exit={{ x: "-100%", opacity: 0 }}
                           transition={{ duration: 0.6, ease: "easeInOut" }}
                         >
                           <img
-                            src={horizontalSlides[horizontalIndex].image}
-                            className="horizontal-img"
-                            alt={horizontalSlides[horizontalIndex].title}
+                            src={productSlides[productIndex].image}
+                            className="products-img"
+                            alt={productSlides[productIndex].title}
                             onClick={() =>
                               navigate(
-                                `/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[
-                                  horizontalIndex
+                                `/products/Mechanical/Agri-and-Food-Processing-SPM/${productSlides[
+                                  productIndex
                                 ].title
                                   ?.split(" ")
                                   .join("-")}`
                               )
                             }
                           />
-                          <div className="horizontal-details">
+                          <div className="products-details">
                             <p className="box-heading">Products</p>
                             <p
-                              className="horizontal-title"
+                              className="products-title"
                               onClick={() =>
                                 navigate(
-                                  `/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[
-                                    horizontalIndex
+                                  `/products/Mechanical/Agri-and-Food-Processing-SPM/${productSlides[
+                                    productIndex
                                   ].title
                                     ?.split(" ")
                                     .join("-")}`
@@ -412,11 +410,11 @@ function Popup() {
                               }
                               style={{ cursor: "pointer" }}
                             >
-                              {horizontalSlides[horizontalIndex].title}....Learn
+                              {productSlides[productIndex].title}....Learn
                               more
                             </p>
                             {/* <p className="horizontal-description">
-                          {horizontalSlides[horizontalIndex].description}
+                          {productSlides[productIndex].description}
                         </p> */}
                           </div>
                         </motion.div>
