@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Star from "../Star";
 import "../../styles/Advertisement.css";
+import Star1 from "../Star1";
 
 const Advertisement = ({ setShowAdd }) => {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ const Advertisement = ({ setShowAdd }) => {
                 className="ad-slide"
                 key={index}
               >
-                <div className="star"><Star /></div>
+                <div className="star"><Star1 /></div>
                 {text?.name}
                 <h4
                   className="view-details"
@@ -74,7 +75,7 @@ const Advertisement = ({ setShowAdd }) => {
                 >
                   View Details
                 </h4>
-                <div className="star"><Star /></div>
+                <div className="star"><Star1 /></div>
               </a>
             ))}
           </div>
