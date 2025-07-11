@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Star from "../Star";
 import "../../styles/Advertisement.css";
 import Star1 from "../Star1";
 
@@ -9,6 +8,9 @@ const Advertisement = ({ setShowAdd }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
   const sliderRef = useRef(null);
+  const animationRef = useRef(null);
+  const lastTimeRef = useRef(0);
+  const isVisibleRef = useRef(true);
 
   const advertisements = [
     { name: "🚀 Visit our technology partner StaciaTech", link: "https://staciatech.com" },
@@ -19,12 +21,55 @@ const Advertisement = ({ setShowAdd }) => {
   // Add the first slide again at the end
   const slides = [...advertisements, advertisements[0]];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => prev + 1);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+  const animate = (timestamp) =>{
+    if(!lastTimeRef.current) lastTimeRef.current = timestamp;
+    const elapsed = timestamp -lastTimeRef.current;
+
+    if(elapsed >=400 && isVisibleRef.current){
+      setCurrentIndex((prev)=> isVisibleRef.current);
+      lastTimeRef.current = timestamp;
+    }
+
+    if(isVisibleRef.current){
+      animationRef.current = requestAnimationFrame(animate)
+    }
+  }
+
+  useEffect(()=> {
+    const handleVisibilityChange = () =>{
+      isVisibleRef.current = !document.hidden;
+      if(isVisibleRef.current){
+        // Resume animation
+        lastTimeRef.current = performance.now();
+        animationRef.current = requestAnimationFrame(animate);
+      }else{
+        // Pause animation
+        cancelAnimationFrame(animationRef.current);
+      }
+    }
+
+    // Start animation
+      // Start animation
+   isVisibleRef.current = !document.hidden;
+   animationRef.current = requestAnimationFrame(animate);
+
+   // Listen for visibility changes
+   document.addEventListener('visibilitychange',handleVisibilityChange);
+
+   return ()=>{
+    cancelAnimationFrame(animationRef.current);
+    document.removeEventListener('visibilitychange',handleVisibilityChange)
+   }
+  })
+
+
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prev) => prev + 1);
+  //   }, 4000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const handleTransitionEnd = () => {
     if (currentIndex === slides.length - 1) {

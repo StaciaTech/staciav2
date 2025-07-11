@@ -16,7 +16,7 @@ function Popup() {
   const [projectIndex, setProjectIndex] = useState(0);
   const [serviceIndex, setServiceIndex] = useState(0);
   const [achievementIndex, setAchievementIndex] = useState(0);
-  const [horizontalIndex, setHorizontalIndex] = useState(0);
+  const [productIndex, setProductIndex] = useState(0);
   const [showContent2Box5, setShowContent2Box5] = useState(false);
   const breakpoint = 768;
   const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
@@ -113,7 +113,7 @@ function Popup() {
     },
   ];
 
-  const horizontalSlides = [
+  const productSlides = [
     {
       title: "Bailing Machine",
       image: "../assets/ProductPage/BailingMachine.webp",
@@ -177,7 +177,7 @@ function Popup() {
   useEffect(() => {
     const interval = setInterval(() => {
       setServiceIndex((prev) => prev + 1);
-    }, 3000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
@@ -190,7 +190,7 @@ function Popup() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHorizontalIndex((prev) => (prev + 1) % horizontalSlides.length);
+      setProductIndex((prev) => (prev + 1) % productSlides.length);
     }, 6000);
     return () => clearInterval(interval);
   }, []);
@@ -373,38 +373,38 @@ function Popup() {
 
                 <div className="col2">
                   <div className="products">
-                    <div className="horizontal-carousel-container">
+                    <div className="products-carousel-container">
                       <AnimatePresence mode="wait">
                         <motion.div
-                          key={horizontalIndex}
-                          className="horizontal-slide"
+                          key={productIndex}
+                          className="products-slide"
                           initial={{ x: "100%", opacity: 0 }}
                           animate={{ x: "0%", opacity: 1 }}
                           exit={{ x: "-100%", opacity: 0 }}
                           transition={{ duration: 0.6, ease: "easeInOut" }}
                         >
                           <img
-                            src={horizontalSlides[horizontalIndex].image}
-                            className="horizontal-img"
-                            alt={horizontalSlides[horizontalIndex].title}
+                            src={productSlides[productIndex].image}
+                            className="products-img"
+                            alt={productSlides[productIndex].title}
                             onClick={() =>
                               navigate(
-                                `/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[
-                                  horizontalIndex
+                                `/products/Mechanical/Agri-and-Food-Processing-SPM/${productSlides[
+                                  productIndex
                                 ].title
                                   ?.split(" ")
                                   .join("-")}`
                               )
                             }
                           />
-                          <div className="horizontal-details">
+                          <div className="products-details">
                             <p className="box-heading">Products</p>
                             <p
-                              className="horizontal-title"
+                              className="products-title"
                               onClick={() =>
                                 navigate(
-                                  `/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[
-                                    horizontalIndex
+                                  `/products/Mechanical/Agri-and-Food-Processing-SPM/${productSlides[
+                                    productIndex
                                   ].title
                                     ?.split(" ")
                                     .join("-")}`
@@ -412,11 +412,11 @@ function Popup() {
                               }
                               style={{ cursor: "pointer" }}
                             >
-                              {horizontalSlides[horizontalIndex].title}....Learn
+                              {productSlides[productIndex].title}....Learn
                               more
                             </p>
                             {/* <p className="horizontal-description">
-                          {horizontalSlides[horizontalIndex].description}
+                          {productSlides[productIndex].description}
                         </p> */}
                           </div>
                         </motion.div>
