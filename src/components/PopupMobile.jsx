@@ -46,13 +46,13 @@ const PopupMobile = () => {
     //   description: "Another version or iteration of an AI chatbot project.",
     // },
     {
-      title: "Chili Ladling Machine for Aachi Group",
-      image: "../assets/ProjectPage/chilli-lading-machine.webp",
+      title: "Spinach cleaning Machine",
+      image: "/assets/ProjectPage/spinach_cleaning_with_frames1_720 1.webp",
       description: "Artificial intelligence conversational agent project.",
     },
     {
-      title: "Precision Slicing Machine",
-      image: "../assets/ProjectPage/Precision Slicing Machine.webp",
+      title: "Tamarind Pod Breaking Machine",
+      image: "/assets/ProductPage/tamarind conveyor.webp",
       description: "Industrial-smart mechanical project.",
     },
     // {
@@ -67,19 +67,29 @@ const PopupMobile = () => {
     // },
   ];
 
-  const serviceSlides = [
+   const serviceSlides = [
     {
-      title: "Industrial Automation",
-      image: "../assets/ProjectPage/Hydrogen Bottle.webp",
+      title: "SPM",
+      image: "/assets/Automobile-or-Automotive-SPM.webp",
       description: "Smart machines and robotics for manufacturing efficiency.",
     },
     {
-      title: "CAD Engineering",
-      image: "../assets/ProjectPage/Hydrogen Bottle.webp",
+      title: "Test Rigs",
+      image: "/assets/test rig.webp",
       description: "Automated inspection and quality control using cameras.",
     },
     {
-      title: "Consultancy and Audit",
+      title: "Pick and Place",
+      image: "/assets/Machine Drawing.webp",
+      description: "Customized testing systems for R&D and QA processes.",
+    },
+    {
+      title: "Vision System",
+      image: "/assets/Machine Assembly visualization.webp",
+      description: "Customized testing systems for R&D and QA processes.",
+    },
+     {
+      title: "End of Line Automation",
       image: "../assets/ProjectPage/Hydrogen Bottle.webp",
       description: "Customized testing systems for R&D and QA processes.",
     },
@@ -125,11 +135,11 @@ const PopupMobile = () => {
     //   image: "../assets/ProductPage/spinach_cleaning_Machine.webp",
     //   description: "Smart vacuum-based material handling.",
     // },
-    {
-      title: "Tamarind Breaking machine",
-      image: "../assets/ProductPage/Tamarind Breaking machine.webp",
-      description: "This Tamarind Breaking....",
-    },
+    // {
+    //   title: "Tamarind Breaking machine",
+    //   image: "../assets/ProductPage/Tamarind Breaking machine.webp",
+    //   description: "This Tamarind Breaking....",
+    // },
   ];
 
   useEffect(() => {

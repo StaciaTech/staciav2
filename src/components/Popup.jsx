@@ -18,25 +18,24 @@ function Popup() {
   const [achievementIndex, setAchievementIndex] = useState(0);
   const [horizontalIndex, setHorizontalIndex] = useState(0);
   const [showContent2Box5, setShowContent2Box5] = useState(false);
-  const breakpoint = 768
-   const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
+  const breakpoint = 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
 
-  
   const carouselData = [
     {
       content1: "Meet Our Latest Product",
       content2: "EDIFAI - Your Personalized learning model",
-      link:'https://edifai.in/'
+      link: "https://edifai.in/",
     },
     {
       content1: "Join To Innovate",
       content2: "Join Our Tech Team as a MERN Developer",
-      link:'https://staciacorp.com/career'
+      link: "https://staciacorp.com/career",
     },
     {
       content1: "Hackathon",
-      content2: "Tech Summit 2025",      
-      link:'https://staciacorp.com/competition'
+      content2: "Tech Summit 2025",
+      link: "https://staciacorp.com/competition",
     },
   ];
 
@@ -70,17 +69,27 @@ function Popup() {
 
   const serviceSlides = [
     {
-      title: "Industrial Automation",
-      image: "../assets/ProjectPage/Hydrogen Bottle.webp",
+      title: "SPM",
+      image: "/assets/Automobile-or-Automotive-SPM.webp",
       description: "Smart machines and robotics for manufacturing efficiency.",
     },
     {
-      title: "CAD Engineering",
-      image: "../assets/ProjectPage/Hydrogen Bottle.webp",
+      title: "Test Rigs",
+      image: "/assets/test rig.webp",
       description: "Automated inspection and quality control using cameras.",
     },
     {
-      title: "Consultancy and Audit",
+      title: "Pick and Place",
+      image: "/assets/Machine Drawing.webp",
+      description: "Customized testing systems for R&D and QA processes.",
+    },
+    {
+      title: "Vision System",
+      image: "/assets/Machine Assembly visualization.webp",
+      description: "Customized testing systems for R&D and QA processes.",
+    },
+     {
+      title: "End of Line Automation",
       image: "../assets/ProjectPage/Hydrogen Bottle.webp",
       description: "Customized testing systems for R&D and QA processes.",
     },
@@ -100,8 +109,7 @@ function Popup() {
     {
       title: "Best Case Study",
       image: "../assets/ProjectPage/AI chatbot version.webp",
-      description:
-        "Published in national ....",
+      description: "Published in national ....",
     },
   ];
 
@@ -188,12 +196,11 @@ function Popup() {
   }, []);
 
   const { content1, content2 } = carouselData[currentIndex];
-  const {link} = carouselData[currentIndex]
+  const { link } = carouselData[currentIndex];
 
   useEffect(() => {
-  setShowContent2Box5(false);
-}, [currentIndex]);
-
+    setShowContent2Box5(false);
+  }, [currentIndex]);
 
   const handleClickOutside = (e) => {
     if (
@@ -217,248 +224,302 @@ function Popup() {
     return () => window.removeEventListener("resize", handleResize);
   }, [breakpoint]);
 
-
   return (
     <>
-    {isMobile ?(
-      <PopupMobile/>
-    ):(
-      (
-      show && (
-      <div className="popup" onClick={handleClickOutside}>
-        <div className="popup-content" ref={popupContentRef}>
-          <div className="top-container">
-            <div className="heading">Featured</div>
-            <button className="close-btn" onClick={() => setShow(false)}>
-              <IoCloseSharp />
-            </button>
-          </div>
+      {isMobile ? (
+        <PopupMobile />
+      ) : (
+        show && (
+          <div className="popup" onClick={handleClickOutside}>
+            <div className="popup-content" ref={popupContentRef}>
+              <div className="top-container">
+                <div className="heading">Featured</div>
+                <button className="close-btn" onClick={() => setShow(false)}>
+                  <IoCloseSharp />
+                </button>
+              </div>
 
-          <div className="boxes">
-            <div className="col1">
-              <div
-                className="box1"
-                style={{ cursor: "pointer" }}
-                onClick={() =>
-                  navigate(
-                    "/project/Mechanical/Food-Processing/Custom-Chili-Ladling-Machine-for-Aachi-Group"
-                  )
-                }
-              >
-                <div className="project-carousel-container">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={projectIndex}
-                      className="project-slide"
-                      initial={{ y: "100%", opacity: 0 }}
-                      animate={{ y: "0%", opacity: 1 }}
-                      exit={{ y: "-100%", opacity: 0 }}
-                      transition={{ duration: 0.6, ease: "easeInOut" }}
-                    >
-                      <img
-                        src={
-                          projectSlides[projectIndex % projectSlides.length]
-                            .image
-                        }
-                        className="project-img"
-                        alt={
-                          projectSlides[projectIndex % projectSlides.length]
-                            .title
-                        }
-                        onClick={()=>navigate(`/project/Mechanical/Food-Processing/${projectSlides[projectIndex % projectSlides.length].title.split(" ").join('-')}`)}
-                      />
-                      <div className="project-details">
-                        <h3>Projects</h3>
-                        <p className="project-title"
-                        onClick={()=>navigate(`/project/Mechanical/Food-Processing/${projectSlides[projectIndex % projectSlides.length].title.split(" ").join('-')}`)}>
-                          {
-                            projectSlides[projectIndex % projectSlides.length]
-                              .title
-                          }....Learn more
-                          
-                        </p>
-                        <p className="project-description">
+              <div className="boxes">
+                <div className="col1">
+                  <div className="projects">
+                    <div className="project-carousel-container">
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={projectIndex}
+                          className="project-slide"
+                          initial={{ y: "100%", opacity: 0 }}
+                          animate={{ y: "0%", opacity: 1 }}
+                          exit={{ y: "-100%", opacity: 0 }}
+                          transition={{ duration: 0.6, ease: "easeInOut" }}
+                        >
+                          <img
+                            src={
+                              projectSlides[projectIndex % projectSlides.length]
+                                .image
+                            }
+                            className="project-img"
+                            alt={
+                              projectSlides[projectIndex % projectSlides.length]
+                                .title
+                            }
+                            onClick={() =>
+                              navigate(
+                                `/project/Mechanical/Food-Processing/${projectSlides[
+                                  projectIndex % projectSlides.length
+                                ].title
+                                  .split(" ")
+                                  .join("-")}`
+                              )
+                            }
+                          />
+                          <div className="project-details">
+                            <p className="box-heading">Projects</p>
+                            <p
+                              className="project-title"
+                              onClick={() =>
+                                navigate(
+                                  `/project/Mechanical/Food-Processing/${projectSlides[
+                                    projectIndex % projectSlides.length
+                                  ].title
+                                    .split(" ")
+                                    .join("-")}`
+                                )
+                              }
+                            >
+                              {
+                                projectSlides[
+                                  projectIndex % projectSlides.length
+                                ].title
+                              }
+                              ....Learn more
+                            </p>
+                            {/* <p className="project-description">
                           {
                             projectSlides[projectIndex % projectSlides.length]
                               .description
                           }
-                        </p>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-              </div>
+                        </p> */}
+                          </div>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  </div>
 
-              <div
-                className="box2"
-                style={{ cursor: "pointer" }}
-                onClick={() =>
-                  navigate("/services/Mechanical/Industrial-Automation")
-                }
-              >
-                <div className="project-carousel-container">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={serviceIndex}
-                      className="project-slide"
-                      initial={{ y: "100%", opacity: 0 }}
-                      animate={{ y: "0%", opacity: 1 }}
-                      exit={{ y: "-100%", opacity: 0 }}
-                      transition={{ duration: 0.6, ease: "easeInOut" }}
-                    >
-                      <img
-                        src={
-                          serviceSlides[serviceIndex % serviceSlides.length]
-                            .image
-                        }
-                        className="project-img"
-                        alt={
-                          serviceSlides[serviceIndex % serviceSlides.length]
-                            .title
-                        }
-                        onClick={()=>navigate(`/services/Mechanical/Industrial-Automation/${serviceSlides[serviceIndex % serviceSlides.length].title?.split(' ').join("-")}`)}  
-                      />
-                      <div className="project-details">
-                        <h3>Services</h3>
-                        <p className="project-title">
-                          {
-                            serviceSlides[serviceIndex % serviceSlides.length]
-                              .title
-                          }
-                        </p>
-                        <p className="project-description">
+                  <div className="services">
+                    <div className="project-carousel-container">
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={serviceIndex}
+                          className="project-slide"
+                          initial={{ y: "100%", opacity: 0 }}
+                          animate={{ y: "0%", opacity: 1 }}
+                          exit={{ y: "-100%", opacity: 0 }}
+                          transition={{ duration: 0.6, ease: "easeInOut" }}
+                        >
+                          <img
+                            src={
+                              serviceSlides[serviceIndex % serviceSlides.length]
+                                .image
+                            }
+                            className="project-img"
+                            alt={
+                              serviceSlides[serviceIndex % serviceSlides.length]
+                                .title
+                            }
+                            onClick={() =>
+                              navigate(
+                                `/services/Mechanical/Industrial-Automation/${serviceSlides[
+                                  serviceIndex % serviceSlides.length
+                                ].title
+                                  ?.split(" ")
+                                  .join("-")}`
+                              )
+                            }
+                            style={{ cursor: "pointer" }}
+                          />
+                          <div className="project-details">
+                            <p className="box-heading">Services</p>
+                            <p
+                              className="project-title"
+                              onClick={() =>
+                                navigate(
+                                  `/services/Mechanical/Industrial-Automation/${serviceSlides[
+                                    serviceIndex % serviceSlides.length
+                                  ].title
+                                    ?.split(" ")
+                                    .join("-")}`
+                                )
+                              }
+                              style={{ cursor: "pointer" }}
+                            >
+                              {
+                                serviceSlides[
+                                  serviceIndex % serviceSlides.length
+                                ].title
+                              }...Learn More
+                            </p>
+                            {/* <p className="project-description">
                           {
                             serviceSlides[serviceIndex % serviceSlides.length]
                               .description
                           }
-                        </p>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
+                        </p> */}
+                          </div>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="col2">
-              <div className="box3">
-                <div className="horizontal-carousel-container">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={horizontalIndex}
-                      className="horizontal-slide"
-                      initial={{ x: "100%", opacity: 0 }}
-                      animate={{ x: "0%", opacity: 1 }}
-                      exit={{ x: "-100%", opacity: 0 }}
-                      transition={{ duration: 0.6, ease: "easeInOut" }}
-                    >
-                      <img
-                        src={horizontalSlides[horizontalIndex].image}
-                        className="horizontal-img"
-                        alt={horizontalSlides[horizontalIndex].title}
-                        onClick={()=>navigate(`/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[horizontalIndex].title?.split(' ').join("-")}`)}
-                      />
-                      <div className="horizontal-details">
-                        <h3>Products</h3>
-                        <p className="horizontal-title"
-                        onClick={()=>navigate(`/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[horizontalIndex].title?.split(' ').join("-")}`)}>
-                          {horizontalSlides[horizontalIndex].title}....Learn more
-                        </p>
-                        <p className="horizontal-description">
+                <div className="col2">
+                  <div className="products">
+                    <div className="horizontal-carousel-container">
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={horizontalIndex}
+                          className="horizontal-slide"
+                          initial={{ x: "100%", opacity: 0 }}
+                          animate={{ x: "0%", opacity: 1 }}
+                          exit={{ x: "-100%", opacity: 0 }}
+                          transition={{ duration: 0.6, ease: "easeInOut" }}
+                        >
+                          <img
+                            src={horizontalSlides[horizontalIndex].image}
+                            className="horizontal-img"
+                            alt={horizontalSlides[horizontalIndex].title}
+                            onClick={() =>
+                              navigate(
+                                `/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[
+                                  horizontalIndex
+                                ].title
+                                  ?.split(" ")
+                                  .join("-")}`
+                              )
+                            }
+                          />
+                          <div className="horizontal-details">
+                            <p className="box-heading">Products</p>
+                            <p
+                              className="horizontal-title"
+                              onClick={() =>
+                                navigate(
+                                  `/products/Mechanical/Agri-and-Food-Processing-SPM/${horizontalSlides[
+                                    horizontalIndex
+                                  ].title
+                                    ?.split(" ")
+                                    .join("-")}`
+                                )
+                              }
+                              style={{ cursor: "pointer" }}
+                            >
+                              {horizontalSlides[horizontalIndex].title}....Learn
+                              more
+                            </p>
+                            {/* <p className="horizontal-description">
                           {horizontalSlides[horizontalIndex].description}
-                        </p>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
+                        </p> */}
+                          </div>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="col3">
-              <div
-                className="box4"
-                onClick={() =>
-                  navigate("/case-study/single-caseStudy/Case-Study-1")
-                }
-              >
-                <div className="acheivements-carousel-container">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={achievementIndex}
-                      className="acheivements-slide"
-                      initial={{ y: "100%", opacity: 0 }}
-                      animate={{ y: "0%", opacity: 1 }}
-                      exit={{ y: "-100%", opacity: 0 }}
-                      transition={{ duration: 0.6, ease: "easeInOut" }}
-                    >
-                      <img
-                        src={
-                          achievementSlides[
-                            achievementIndex % achievementSlides.length
-                          ].image
-                        }
-                        className="project-img"
-                        alt={
-                          achievementSlides[
-                            achievementIndex % achievementSlides.length
-                          ].title
-                        }
-                      />
-                      <div className="acheivements-details">
-                        <h3>Achievements</h3>
-                        <p className="acheivements-title">
-                          {
-                            achievementSlides[
-                              achievementIndex % achievementSlides.length
-                            ].title
-                          }
-                        </p>
-                        <p className="acheivements-description">
+                <div className="col3">
+                  <div
+                    className="achievements"
+                    onClick={() =>
+                      navigate("/case-study/single-caseStudy/Case-Study-1")
+                    }
+                  >
+                    <div className="achievements-carousel-container">
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={achievementIndex}
+                          className="achievements-slide"
+                          initial={{ y: "100%", opacity: 0 }}
+                          animate={{ y: "0%", opacity: 1 }}
+                          exit={{ y: "-100%", opacity: 0 }}
+                          transition={{ duration: 0.6, ease: "easeInOut" }}
+                        >
+                          <img
+                            src={
+                              achievementSlides[
+                                achievementIndex % achievementSlides.length
+                              ].image
+                            }
+                            className="project-img"
+                            alt={
+                              achievementSlides[
+                                achievementIndex % achievementSlides.length
+                              ].title
+                            }
+                          />
+                          <div className="achievements-details">
+                            <p className="box-heading">Achievements</p>
+                            <p
+                              className="achievements-title"
+                              onClick={() =>
+                                navigate(
+                                  "/case-study/single-caseStudy/Case-Study-1"
+                                )
+                              }
+                              style={{ cursor: "pointer" }}
+                            >
+                              {
+                                achievementSlides[
+                                  achievementIndex % achievementSlides.length
+                                ].title
+                              }
+                              ...Learn More
+                            </p>
+                            {/* <p className="achievements-description">
                           {
                             achievementSlides[
                               achievementIndex % achievementSlides.length
                             ].description
                           }
-                        </p>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-              </div>
+                        </p> */}
+                          </div>
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  </div>
 
-              <div className="box5">
-                <div className="box5-content">
-                  <p className="box">News</p>
-                  <div className="carousel-container">
-                    <div className="carousel-slide">
-                      <div className="box5-content1">
-                        <Typewriter
-                          key={content1 + currentIndex}
-                          options={{ delay: 40, autoStart: true }}
-                          onInit={(typewriter) => {
-                            setShowContent2Box5(false); // Reset on init
-                            typewriter
-                              .typeString(content1)
-                              .callFunction(() => {
-                                setShowContent2Box5(true); // Show content2 after content1 finishes
-                              })
-                              .start();
-                          }}
-                        />
-                      </div>
+                  <div className="news">
+                    <div className="news-content">
+                      <p className="box-heading">News</p>
+                      <div className="news-carousel-container">
+                        <div className="carousel-slide">
+                          <div className="news-content1">
+                            <Typewriter
+                              key={content1 + currentIndex}
+                              options={{ delay: 40, autoStart: true }}
+                              onInit={(typewriter) => {
+                                setShowContent2Box5(false); // Reset on init
+                                typewriter
+                                  .typeString(content1)
+                                  .callFunction(() => {
+                                    setShowContent2Box5(true); // Show content2 after content1 finishes
+                                  })
+                                  .start();
+                              }}
+                            />
+                          </div>
 
-                      {showContent2Box5 && (
-                        <div className="box5-content2">
-                          <Typewriter
-                            key={content2 + currentIndex}
-                            options={{ delay: 40, autoStart: true }}
-                            onInit={(typewriter) => {
-                              typewriter.typeString(content2).start();
-                            }}
-                          />
-                        </div>
-                      )}
+                          {showContent2Box5 && (
+                            <div className="news-content2">
+                              <Typewriter                                
+                                key={content2 + currentIndex}
+                                options={{ delay: 40, autoStart: true }}
+                                onInit={(typewriter) => {
+                                  typewriter.typeString(content2).start();
+                                }}
+                              />
+                            </div>
+                          )}
 
-                      {/* <div className="box5-content2">
+                          {/* <div className="box5-content2">
                         <Typewriter
                           key={content2 + currentIndex}
                           options={{ delay: 40, autoStart: true }}
@@ -467,42 +528,45 @@ function Popup() {
                           }}
                         />
                       </div> */}
+                        </div>
+                      </div>
+                      <div className="go-button" >
+                        <a href={`${link}`} target="__blank" >
+                          <GoArrowRight
+                            style={{ color: "#565656"}}
+                            size={25}
+                          />
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <div className="go-button">
-                    <a href={`${link}`} target="__blank"><GoArrowRight style={{ color: "#565656" }} size={18}/></a>
-                  </div>
+                </div>
+              </div>
+
+              <div className="buttons">
+                <div
+                  className="button1"
+                  onClick={() => {
+                    navigate("/");
+                    setShow(false);
+                  }}
+                >
+                  Stay in Stacia Corp
+                </div>
+                <div className="button2">
+                  <a
+                    href="https://staciatech.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Switch to Stacia Tech
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-
-          <div className="buttons">
-            <div
-              className="button1"
-              onClick={() => {
-                navigate("/");
-                setShow(false);
-              }}
-            >
-              Stay in Stacia Corp
-            </div>
-            <div className="button2">
-              <a
-                href="https://staciatech.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Switch to Stacia Tech
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-    )
-    )}
-    
+        )
+      )}
     </>
   );
 }
