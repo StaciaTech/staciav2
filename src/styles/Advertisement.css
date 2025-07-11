@@ -12,6 +12,7 @@
   text-align: center;
   overflow: hidden;
   position: relative;
+  /* border: 2px solid white; */
 }
 
 .star {
@@ -25,6 +26,7 @@
   width: 100%;
   height: 100%;
   position: relative;
+  /* border: 2px solid red; */
 }
 
 .ad-carousel {
@@ -36,12 +38,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* border: 2px solid white; */
 }
 
 .ad-slider {
   display: flex;
   transition: transform 0.6s ease-in-out;
   height: 100%;
+  /* border: 2px solid black; */
+  width: 100%;
 }
 
 .ad-slide {
@@ -106,4 +111,24 @@
 .advertisement > * {
   position: relative;
   z-index: 1;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .advertisement {
+    /* border: 2px solid blue; */
+    width: 100%;
+  }
+  .ad-slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: 10px;
+  text-wrap: wrap;
+}
 }
