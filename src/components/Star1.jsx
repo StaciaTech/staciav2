@@ -4,7 +4,7 @@ import StarLogo from "../assets/Star.svg";
 
 function Star1() {
   return (
-    <div >
+    <div className="Star-container-1" >
       <img src={StarLogo} alt="" />
     </div>
   );

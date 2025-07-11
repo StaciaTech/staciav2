@@ -24,3 +24,7 @@
   animation: blink-star 3s ease-in-out infinite; /* Animation duration and loop */
   transform-origin: center center; /* Ensure the scaling happens from the center */
 }
+.Star-container-1 img {
+  animation: blink-star 3s ease-in-out infinite; /* Animation duration and loop */
+  transform-origin: center center; /* Ensure the scaling happens from the center */
+}

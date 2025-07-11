@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "../../styles/Advertisement.css";
 import Star1 from "../Star1";
 
 const Advertisement = ({ setShowAdd }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
   const sliderRef = useRef(null);
