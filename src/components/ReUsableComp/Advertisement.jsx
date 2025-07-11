@@ -21,55 +21,55 @@ const Advertisement = ({ setShowAdd }) => {
   // Add the first slide again at the end
   const slides = [...advertisements, advertisements[0]];
 
-  const animate = (timestamp) =>{
-    if(!lastTimeRef.current) lastTimeRef.current = timestamp;
-    const elapsed = timestamp -lastTimeRef.current;
+  // const animate = (timestamp) =>{
+  //   if(!lastTimeRef.current) lastTimeRef.current = timestamp;
+  //   const elapsed = timestamp -lastTimeRef.current;
 
-    if(elapsed >=400 && isVisibleRef.current){
-      setCurrentIndex((prev)=> isVisibleRef.current);
-      lastTimeRef.current = timestamp;
-    }
+  //   if(elapsed >=400 && isVisibleRef.current){
+  //     setCurrentIndex((prev)=> isVisibleRef.current);
+  //     lastTimeRef.current = timestamp;
+  //   }
 
-    if(isVisibleRef.current){
-      animationRef.current = requestAnimationFrame(animate)
-    }
-  }
+  //   if(isVisibleRef.current){
+  //     animationRef.current = requestAnimationFrame(animate)
+  //   }
+  // }
 
-  useEffect(()=> {
-    const handleVisibilityChange = () =>{
-      isVisibleRef.current = !document.hidden;
-      if(isVisibleRef.current){
-        // Resume animation
-        lastTimeRef.current = performance.now();
-        animationRef.current = requestAnimationFrame(animate);
-      }else{
-        // Pause animation
-        cancelAnimationFrame(animationRef.current);
-      }
-    }
+  // useEffect(()=> {
+  //   const handleVisibilityChange = () =>{
+  //     isVisibleRef.current = !document.hidden;
+  //     if(isVisibleRef.current){
+  //       // Resume animation
+  //       lastTimeRef.current = performance.now();
+  //       animationRef.current = requestAnimationFrame(animate);
+  //     }else{
+  //       // Pause animation
+  //       cancelAnimationFrame(animationRef.current);
+  //     }
+  //   }
 
-    // Start animation
-      // Start animation
-   isVisibleRef.current = !document.hidden;
-   animationRef.current = requestAnimationFrame(animate);
+  //   // Start animation
+  //     // Start animation
+  //  isVisibleRef.current = !document.hidden;
+  //  animationRef.current = requestAnimationFrame(animate);
 
-   // Listen for visibility changes
-   document.addEventListener('visibilitychange',handleVisibilityChange);
+  //  // Listen for visibility changes
+  //  document.addEventListener('visibilitychange',handleVisibilityChange);
 
-   return ()=>{
-    cancelAnimationFrame(animationRef.current);
-    document.removeEventListener('visibilitychange',handleVisibilityChange)
-   }
-  })
+  //  return ()=>{
+  //   cancelAnimationFrame(animationRef.current);
+  //   document.removeEventListener('visibilitychange',handleVisibilityChange)
+  //  }
+  // })
 
 
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentIndex((prev) => prev + 1);
-  //   }, 4000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => prev + 1);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleTransitionEnd = () => {
     if (currentIndex === slides.length - 1) {
@@ -113,10 +113,6 @@ const Advertisement = ({ setShowAdd }) => {
                 {text?.name}
                 <h4
                   className="view-details"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevent link
-                    navigate("/");
-                  }}
                 >
                   View Details
                 </h4>

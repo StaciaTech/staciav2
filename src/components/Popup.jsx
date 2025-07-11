@@ -101,16 +101,16 @@ function Popup() {
       image: "/assets/LeaderPage/Promising Young Alumni Award 2025.webp",
       description: "Secured 1st place....",
     },    
-    {
-      title: "HYDRATION & HYDROGEN",
-      image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
-      description: "Published in national ....",
-    },
+    // {
+    //   title: "HYDRATION & HYDROGEN",
+    //   image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
+    //   description: "Published in national ....",
+    // },
     {
       title: "Entrepreneur of the Year 2024",
-      image: "/assets/LeaderPage/Award-3.webp",
+      image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
       description: "Recognized by TN ....",
-    },
+    }
   ];
 
   const productSlides = [
@@ -191,7 +191,7 @@ function Popup() {
   useEffect(() => {
     const interval = setInterval(() => {
       setProductIndex((prev) => (prev + 1) % productSlides.length);
-    }, 6000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -234,9 +234,7 @@ function Popup() {
             <div className="popup-content" ref={popupContentRef}>
               <div className="top-container">
                 <div className="heading">Featured</div>
-                <button className="close-btn" onClick={() => setShow(false)}>
-                  <IoCloseSharp />
-                </button>
+                  <IoCloseSharp onClick={()=> setShow(false)} />
               </div>
 
               <div className="boxes">

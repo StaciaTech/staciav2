@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles/PopupMobile.css";
 import { GoArrowRight } from "react-icons/go";
 import { IoCloseSharp } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
+
 import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import { motion, AnimatePresence } from "framer-motion";
@@ -52,7 +54,7 @@ const PopupMobile = () => {
     },
     {
       title: "Tamarind Pod Breaking Machine",
-      image: "/assets/ProductPage/tamarind conveyor.webp",
+      image: "/assets/ProjectPage/tamarind_breaking_machine_720 1.webp",
       description: "Industrial-smart mechanical project.",
     },
     // {
@@ -96,38 +98,37 @@ const PopupMobile = () => {
   ];
 
   const achievementSlides = [
-    {
-      title: "Tech Winner",
-      image: "../assets/ProjectPage/AI chatbot version.webp",
+   {
+      title: "Promising Young Alumni Award 2025 – SVCE",
+      image: "/assets/LeaderPage/Promising Young Alumni Award 2025.webp",
       description: "Secured 1st place....",
-    },
+    },    
+    // {
+    //   title: "HYDRATION & HYDROGEN",
+    //   image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
+    //   description: "Published in national ....",
+    // },
     {
-      title: "Top 10 Startup",
-      image: "../assets/ProjectPage/AI chatbot version.webp",
+      title: "Entrepreneur of the Year 2024",
+      image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
       description: "Recognized by TN ....",
-    },
-    {
-      title: "Best Case Study",
-      image: "../assets/ProjectPage/AI chatbot version.webp",
-      description:
-        "Published in national ....",
-    },
+    }
   ];
 
   const horizontalSlides = [
     {
       title: "Bailing Machine",
-      image: "../assets/ProductPage/BailingMachine.webp",
+      image: "../assets/ProductPage/bailingmachine_480 1.webp",
       description: "A cost-effective ....",
     },
     {
       title: "Chilli Ladling Machine",
-      image: "../assets/ProductPage/chilli-lading-machine.webp",
+      image: "/assets/ProductPage/chilli-lading-machine_720 1.webp",
       description: "This remote-operated ....",
     },
     {
       title: "Precision Slicing Machine",
-      image: "../assets/ProductPage/Precision Slicing Machine.webp",
+      image: "/assets/ProductPage/Precision Slicing Machine-1.webp",
       description: "The Precision Slicing ....",
     },
     // {
@@ -217,9 +218,9 @@ const PopupMobile = () => {
         <div className="mobile-popup-content-1" ref={popupContentRef}>
           <div className="mobile-top-container">
             <div className="mobile-heading">Featured</div>
-            <button className="mobile-close-btn" onClick={() => setShow(false)}>
-              <IoCloseSharp />
-            </button>
+            {/* <button  onClick={() => setShow(false)}> */}
+              <IoMdClose onClick={() => setShow(false)} style={{color:'white',fontWeight:'bold'}}/>
+            {/* </button> */}
           </div>
 
           <div className="mobile-boxes">
@@ -309,7 +310,7 @@ const PopupMobile = () => {
               {/* acheivements */}
               <div  className="mobile-achievements"
                 onClick={() =>
-                  navigate("/case-study/single-caseStudy/Case-Study-1")
+                  navigate("/competition")
                 }
               >
                 <div className="mobile-acheivements-carousel-container">
@@ -377,13 +378,13 @@ const PopupMobile = () => {
 
                       {showContent2Box5 && (
                         <div className="mobile-news-content2" style={{fontSize:'15px'}}>
-                          <Typewriter
+                          <a href={`${link}`} target="__blank" style={{cursor:'pointer'}}><Typewriter
                             key={content2 + currentIndex}
                             options={{ delay: 40, autoStart: true }}
                             onInit={(typewriter) => {
                               typewriter.typeString(content2).start();
                             }}
-                          />
+                          /></a>
                         </div>
                       )}                     
                     </div>
