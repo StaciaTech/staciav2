@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/PopupMobile.css";
 import { GoArrowRight } from "react-icons/go";
-import { IoCloseSharp } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 
 import { useNavigate } from "react-router-dom";
@@ -21,7 +20,6 @@ const PopupMobile = () => {
   const [horizontalIndex, setHorizontalIndex] = useState(0);
   const [showContent2Box5, setShowContent2Box5] = useState(false);
   const breakpoint = 768;
-  const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
 
   const carouselData = [
     {

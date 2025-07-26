@@ -122,6 +122,15 @@
   width: 100%;
   height: 100%; 
 }
+
+.close-btn1 {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  height: 100%;
+  cursor: pointer;
+}
 .achievements {
   height: 39%;
   width: 100%;

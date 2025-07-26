@@ -124,7 +124,7 @@ a {
 }
 .nav-whatsnew-comp {
   position: absolute;
-  top: 80px; /* Already defined in .whats-new */
+  top: 68px; /* Already defined in .whats-new */
   width: 100%;
   z-index: 1000; /* Higher than navbar's z-index: 999 */
 }
