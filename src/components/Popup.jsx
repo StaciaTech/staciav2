@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/Popup.css";
 import { GoArrowRight } from "react-icons/go";
-import { IoCloseSharp } from "react-icons/io5";
+// import { IoCloseSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import { motion, AnimatePresence } from "framer-motion";
@@ -88,7 +88,7 @@ function Popup() {
       image: "/assets/Machine Assembly visualization.webp",
       description: "Customized testing systems for R&D and QA processes.",
     },
-     {
+    {
       title: "End of Line Automation",
       image: "../assets/ProjectPage/Hydrogen Bottle.webp",
       description: "Customized testing systems for R&D and QA processes.",
@@ -100,7 +100,7 @@ function Popup() {
       title: "Promising Young Alumni Award 2025 – SVCE",
       image: "/assets/LeaderPage/Promising Young Alumni Award 2025.webp",
       description: "Secured 1st place....",
-    },    
+    },
     // {
     //   title: "HYDRATION & HYDROGEN",
     //   image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
@@ -110,7 +110,7 @@ function Popup() {
       title: "Entrepreneur of the Year 2024",
       image: "/assets/LeaderPage/Hydration-Hydrogen.webp",
       description: "Recognized by TN ....",
-    }
+    },
   ];
 
   const productSlides = [
@@ -165,7 +165,7 @@ function Popup() {
       }, 5000);
     }
     return () => clearTimeout(timeout);
-  }, [showContent2]);
+  }, [showContent2,carouselData.length]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -193,7 +193,7 @@ function Popup() {
       setProductIndex((prev) => (prev + 1) % productSlides.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [productSlides.length]);
 
   const { content1, content2 } = carouselData[currentIndex];
   const { link } = carouselData[currentIndex];
@@ -234,7 +234,12 @@ function Popup() {
             <div className="popup-content" ref={popupContentRef}>
               <div className="top-container">
                 <div className="heading">Featured</div>
-                  <IoCloseSharp onClick={()=> setShow(false)} />
+                {/* <IoCloseSharp onClick={()=> setShow(false)} /> */}
+                {/* <div className="close"> */}
+                  <button className="close-btn1" onClick={() => setShow(false)}>
+                    &times;
+                  </button>
+                {/* </div> */}
               </div>
 
               <div className="boxes">
@@ -354,7 +359,8 @@ function Popup() {
                                 serviceSlides[
                                   serviceIndex % serviceSlides.length
                                 ].title
-                              }...Learn More
+                              }
+                              ...Learn More
                             </p>
                             {/* <p className="project-description">
                           {
@@ -410,8 +416,7 @@ function Popup() {
                               }
                               style={{ cursor: "pointer" }}
                             >
-                              {productSlides[productIndex].title}....Learn
-                              more
+                              {productSlides[productIndex].title}....Learn more
                             </p>
                             {/* <p className="horizontal-description">
                           {productSlides[productIndex].description}
@@ -457,11 +462,7 @@ function Popup() {
                             <p className="box-heading">Achievements</p>
                             <p
                               className="achievements-title"
-                              onClick={() =>
-                                navigate(
-                                  "/news"
-                                )
-                              }
+                              onClick={() => navigate("/news")}
                               style={{ cursor: "pointer" }}
                             >
                               {
@@ -507,7 +508,7 @@ function Popup() {
 
                           {showContent2Box5 && (
                             <div className="news-content2">
-                              <Typewriter                                
+                              <Typewriter
                                 key={content2 + currentIndex}
                                 options={{ delay: 40, autoStart: true }}
                                 onInit={(typewriter) => {
@@ -528,10 +529,10 @@ function Popup() {
                       </div> */}
                         </div>
                       </div>
-                      <div className="go-button" >
-                        <a href={`${link}`} target="__blank" >
+                      <div className="go-button">
+                        <a href={`${link}`} target="__blank">
                           <GoArrowRight
-                            style={{ color: "#565656"}}
+                            style={{ color: "#565656" }}
                             size={25}
                           />
                         </a>

@@ -13,9 +13,21 @@ const Advertisement = ({ setShowAdd }) => {
   // const isVisibleRef = useRef(true);
 
   const advertisements = [
-    { name: "🚀 Visit our technology partner StaciaTech", link: "https://staciatech.com" },
-    { name: "🔥 Traditional Food in your hand! check out Sharadha Stores", link: "https://play.google.com/store/apps/details?id=com.saradhastores" },
-    { name: "💡 Farmers or Food business this is one app to go checkout TNAPEx!", link: "https://play.google.com/store/apps/details?id=com.vikram1201.TNAPEx" },
+    {
+      name: "🚀 Visit our technology partner StaciaTech",
+      link: "https://staciatech.com",
+    },
+    {
+      name: "🔥 Traditional Food in your hand! check out Sharadha Stores",
+      link: "https://play.google.com/store/apps/details?id=com.saradhastores",
+    },
+    {
+      name: "💡 Farmers or Food business this is one app to go checkout TNAPEx!",
+      link: "https://play.google.com/store/apps/details?id=com.vikram1201.TNAPEx",
+    },
+    { name: "On click go to vencorp website",
+      link:"https://www.vencorp.staciacorp.com/"
+     },
   ];
 
   // Add the first slide again at the end
@@ -62,8 +74,6 @@ const Advertisement = ({ setShowAdd }) => {
   //  }
   // })
 
-
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => prev + 1);
@@ -109,14 +119,14 @@ const Advertisement = ({ setShowAdd }) => {
                 className="ad-slide"
                 key={index}
               >
-                <div className="star"><Star1 /></div>
+                <div className="star">
+                  <Star1 />
+                </div>
                 {text?.name}
-                <h4
-                  className="view-details"
-                >
-                  View Details
-                </h4>
-                <div className="star"><Star1 /></div>
+                <h4 className="view-details">View Details</h4>
+                <div className="star">
+                  <Star1 />
+                </div>
               </a>
             ))}
           </div>
