@@ -248,7 +248,7 @@ function NavBar() {
   return (
     <div className={`navbar ${showNavbar ? "show" : "hide"}`}>
       {/* Advertisement */}
-      {showAdd && <Advertisement setShowAdd={setShowAdd}/>}
+      {showAdd && <Advertisement setShowAdd={setShowAdd} />}
       <div className="nav-container">
         <div className="nav-items-container">
           <div className="nav-left">
@@ -388,7 +388,7 @@ function NavBar() {
                 About
               </NavLink>
               <div
-                className={`nav-whats-new-item pointer ${
+                className={`nav-whats-new-item  pointer ${
                   openWhatsNew ? "nav-item-active" : ""
                 }`}
                 onMouseEnter={() => {
@@ -423,7 +423,7 @@ function NavBar() {
         </div>
         {openWhatsNew && (
           <div
-            className="nav-whatsnew-comp"
+            className={`nav-whatsnew-comp ${showAdd ? "nav-whatsnew-comp-style0" : "nav-whatsnew-comp-style1"}`}
             onMouseEnter={() => setOpenWhatsNew(true)}
             onMouseLeave={() => setOpenWhatsNew(false)}
           >
@@ -431,9 +431,6 @@ function NavBar() {
           </div>
         )}
       </div>
-
-      
-
 
       {activeDropdown === "services" && (
         <div

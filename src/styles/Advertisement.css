@@ -14,7 +14,8 @@
   position: relative;
   z-index: 998; /* Lower than dropdowns (1000) but below navbar (999) */
   outline: none;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
 } 
