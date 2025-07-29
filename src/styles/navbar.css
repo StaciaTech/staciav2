@@ -124,11 +124,18 @@ a {
 }
 .nav-whatsnew-comp {
   position: absolute;
-  top: 68px; /* Already defined in .whats-new */
   width: 100%;
-  z-index: 1000; /* Higher than navbar's z-index: 999 */
+  z-index: 1000;
+  /* transition: top 0.3s ease; */
 }
 
+.nav-whatsnew-comp-style0 {
+  top: 46%;
+}
+
+.nav-whatsnew-comp-style1 {
+  top: 0;
+}
 
 .dropdown {
   position: relative;
