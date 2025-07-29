@@ -156,9 +156,15 @@ function NewsRoomPage() {
               </div>
               <div className="news-container-top1">
                 <div className="news-container-top2">
-                  <h1>Lorem ipsum dolor sit amet, consectetur elit.</h1>
+                  <h1>Stacia Corp Innovation</h1>
                 </div>
-                <div className="news-container-top3">
+                <div className="news-container-top3" onClick={()=>{
+                  navigate('/products')
+                  window.scrollTo(0,0)
+                }
+                }
+                style={{cursor:'pointer'}}
+                  >
                   Read More <IoIosArrowForward />
                 </div>
               </div>
