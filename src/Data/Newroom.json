@@ -1,21 +1,21 @@
 {
   "news": [
     {
-      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
-      "date": "2025-01-02",
+      "title": "Nanostructured Photovoltaic Cells Have the Potential to Revolutionize Solar Energy",
+      "description": "Nanostructured Photovoltaics is a new type of solar technology that uses nanometer-sized structures to harvest sunlight. Nanostructured photovoltaic cells (NPsVCs) have the potential to revolutionize solar energy generation because they can be made to be much more efficient than traditional solar cells.",
+      "date": "2023-10-01",
       "category": "articles",
       "image": {
-        "imageUrl": "/assets/article.webp"
+        "imageUrl": "/assets/Article/nanostructured.webp"
       }
     },
     {
-      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
-      "date": "2025-01-05",
+      "title": "Ascendant Intelligence: AI’s Transformative Role in the Future",
+      "description": "In Chennai, where tradition meets technology, a silent revolution is underway. AI is not just transforming businesses; it's redefining leadership. As the CEO and founder partner of Stacia Corp , a Government of India-recognized start-up, I've witnessed this firsthand. Our company specializes in Research & Development in Mechanical, Electronics, Software, we also create AI-based solutions. In a city known for its rich cultural heritage and technological advancements, AI serves as a bridge between tradition and progress, enabling businesses to navigate the complexities of the modern world with unprecedented precision and foresight.",
+      "date": "2024-08-15",
       "category": "articles",
       "image": {
-        "imageUrl": "/assets/article.webp"
+        "imageUrl": "/assets/Article/ascendent.webp"
       }
     },
 
@@ -55,9 +55,10 @@
         "videoUrl": "https://www.youtube.com/watch?v=9gBE7xWvEB4"
       }
     },
+
     {
-      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "title": "Best Entrepreneur Award",
+      "description": "Honored by Nitin Gadkari for outstanding contributions to innovation and entrepreneurship, particularly in the fields of thermal technology, hydration tracking, and automation.",
       "date": "2025-01-15",
       "category": "awards",
       "image": {
@@ -65,30 +66,60 @@
       }
     },
     {
-      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
+      "title": "Top 10 Innovation – RKVY-RAFTAAR Program",
+      "description": "Recognized for developing a Micro Seed Sowing Machine based on line sowing principles, enhancing agricultural efficiency and precision.",
+      "date": "2025-01-15",
+      "category": "awards",
+      "image": {
+        "imageUrl": "/assets/award.webp"
+      }
+    },
+
+    {
+      "title": "Published Research Paper – IJSIET",
+      "description": "Published 'Optimization of Fuel in Diesel Engines' in the International Journal of Science and Innovative Engineering & Technology (IJSIET), May 2018 (ISBN No. 978-81-923607-3-7).",
+      "date": "2025-01-15",
+      "category": "awards",
+      "image": {
+        "imageUrl": "/assets/award.webp"
+      }
+    },
+    {
+      "title": "Published Research Paper – FSW in Al 6061",
+      "description": "Conducted research on Friction Stir Welding in Aluminum 6061, contributing to advancements in welding technology.",
+      "date": "2025-01-15",
+      "category": "awards",
+      "image": {
+        "imageUrl": "/assets/award.webp"
+      }
+    },
+    {
+      "title": "2nd Place – FMEA Competition",
+      "description": "Secured 2nd place in Failure Modes and Effects Analysis (FMEA) for identifying and analyzing potential failures in engine inspection systems",
+      "date": "2025-01-15",
+      "category": "awards",
+      "image": {
+        "imageUrl": "/assets/award.webp"
+      }
+    },
+
+  {
+      "title": "2nd Place – FMEA Competition",
+      "description": "Secured 2nd place in Failure Modes and Effects Analysis (FMEA) for identifying and analyzing potential failures in engine inspection systems",
       "date": "2025-01-15",
       "category": "achievements",
       "image": {
         "imageUrl": "/assets/award.webp"
       }
     },
+
     {
-      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "title": "printing and typesetting industry.",
       "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
       "date": "2025-01-15",
       "category": "featuring",
       "detail": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
       "video": "/assets/award.webp",
-      "image": {
-        "imageUrl": "/assets/award.webp"
-      }
-    },
-    {
-      "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable...",
-      "date": "2025-01-20",
-      "category": "awards",
       "image": {
         "imageUrl": "/assets/award.webp"
       }

@@ -1,26 +1,37 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Star from "../Star";
 import "../../styles/Advertisement.css";
+import Star1 from "../Star1";
 
 const Advertisement = ({ setShowAdd }) => {
-  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
   const sliderRef = useRef(null);
 
   const advertisements = [
-    { name: "🚀 Visit our technology partner StaciaTech", link: "https://staciatech.com" },
-    { name: "🔥 Traditional Food in your hand! check out Sharadha Stores", link: "https://play.google.com/store/apps/details?id=com.saradhastores" },
-    { name: "💡 Farmers or Food business this is one app to go checkout TNAPEx!", link: "https://play.google.com/store/apps/details?id=com.vikram1201.TNAPEx" },
+    {
+      name: "🚀 Visit our technology partner StaciaTech",
+      link: "https://staciatech.com",
+    },
+    {
+      name: "🔥 Traditional Food in your hand! check out Sharadha Stores",
+      link: "https://play.google.com/store/apps/details?id=com.saradhastores",
+    },
+    {
+      name: "💡 Farmers or Food business this is one app to go checkout TNAPEx!",
+      link: "https://play.google.com/store/apps/details?id=com.vikram1201.TNAPEx",
+    },
+    { name: "On click go to vencorp website",
+      link:"https://www.vencorp.staciacorp.com/"
+     },
   ];
 
-  // Add the first slide again at the end
+  // Add duplicate of the first slide to the end
   const slides = [...advertisements, advertisements[0]];
 
+  // ⏱ Auto slide every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => prev + 1);
+      setCurrentIndex((prev) => prev === advertisements.length ? 1: prev + 1);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
@@ -41,6 +52,7 @@ const Advertisement = ({ setShowAdd }) => {
       });
     }
   }, [isAnimating]);
+
 
   return (
     <div className="advertisement">
@@ -63,18 +75,14 @@ const Advertisement = ({ setShowAdd }) => {
                 className="ad-slide"
                 key={index}
               >
-                <div className="star"><Star /></div>
+                <div className="star">
+                  <Star1 />
+                </div>
                 {text?.name}
-                <h4
-                  className="view-details"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevent link
-                    navigate("/");
-                  }}
-                >
-                  View Details
-                </h4>
-                <div className="star"><Star /></div>
+                <h4 className="view-details">View Details</h4>
+                <div className="star">
+                  <Star1 />
+                </div>
               </a>
             ))}
           </div>

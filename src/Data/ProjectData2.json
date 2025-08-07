@@ -8,7 +8,7 @@
           "projects": [
             {
               "id":1,
-              "title": "Custom Chili Ladling Machine for Aachi Group",
+              "title": "Chili Ladling Machine for Aachi Group",
               "mainDesc": "A battery-powered, portable chili ladling machine with a cleated belt conveyor, IP69K-rated components, and PLC/SCADA controls for automated chili handling.",
               "mainImageUrl": "/assets/ProjectPage/chilli-lading-machine.webp",
               "Executive-Summary": "The Stacia Corp Custom Chili Ladling Machine—delivered for Aachi Group—automates chili handling end-to-end, reducing manual labor by 70% and boosting throughput by 50% while ensuring uniform product quality and stringent hygiene compliance. Its battery-powered portability, lightweight modular frame, and IP69K-rated components enable flexible deployment and rapid, high-temperature washdowns, cutting sanitation time by 60%. Integrated PLC/SCADA controls with remote HMI support real-time monitoring and data logging, yielding a six-month payback through combined labor and energy savings.",
@@ -260,7 +260,7 @@
             },
             {
               "id":2,
-              "title": "Stacia Precision Slicing Machine for Pumkin Tales",
+              "title": "Precision Slicing Machine",
               "mainDesc": "A compact, IP69K-rated machine for slicing up to five artisan bread loaves simultaneously with ultra-fine thickness control (3 mm upward).",
               "mainImageUrl": "/assets/ProductPage/Precision Slicing Machine.webp",
               "Executive-Summary": "Stacia Corp partnered with Pumpkin Tales to deliver a custom, high-performance Precision Slicing Machine capable of slicing up to five loaves (bread) simultaneously into ultra-uniform slices from 3 mm upward, all within a compact, IP69K-rated hygienic frame. This turnkey solution drove a 60 % increase in throughput, slashed waste by 40 %, cut cleaning time by 50 %, and paid back within eight months—while preserving artisanal quality at industrial scale",
@@ -390,7 +390,7 @@
           "projects": [
             {
               "id": 3,
-              "title": "Engineering a Custom Stacia Spinach cleaning Machine for Nallakeerai",
+              "title": "Spinach cleaning Machine",
               "mainDesc": "A portable, battery-powered machine for washing and drying 25 kg of spinach per cycle, with a recirculating water bath and IP69K-rated components",
               "mainImageUrl": "/assets/ProjectPage/spinach cleaning with Frames1.webp",
               "Executive-Summary": "The Stacia Spinach Cleaning Machine automates washing and drying of up to 25 kg of field-grown spinach per cycle, cutting manual labor by over 70 % and reducing process time by 60 % thanks to its battery-powered portability and optimized lightweight materials Kiron Food Processing Technologies. Its compact footprint (<1 m²) and IP69K-rated components enable high-temperature washdowns without equipment damage, ensuring hygienic output ready for consumption or further processing ResearchGate. By integrating a recirculating water bath, gentle perforated-screen agitation, and high-speed spin-drying, the machine minimizes water use by up to 50 % compared to batch rinsing systems EPA Neris. A hybrid Stage-Gate + Agile development process guided the project from concept through pilot deployment, culminating in full production rollout with a six-month payback Designorate",
@@ -508,7 +508,7 @@
            
             {
               "id": 4,
-              "title": "Tamarind Pod Breaking Machine: Enhancing Efficiency in Tamarind Processing ",
+              "title": "Tamarind Pod Breaking Machine",
               "mainDesc": "",
               "mainImageUrl": "/assets/ProductPage/tamarind conveyor.webp",
               "Executive-Summary": "The Tamarind Pod Breaking Machine is an innovative solution designed to automate the labor-intensive process of breaking tamarind pods. By integrating a silent pod breaker, an efficient fan system to separate husks, and a conveyor belt to transport the pulp, this machine streamlines tamarind processing, improving productivity and reducing manual effort. This Project explores the development, implementation, and benefits of the Tamarind Pod Breaking Machine.Performance Foodservice",

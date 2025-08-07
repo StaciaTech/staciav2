@@ -12,6 +12,7 @@
 
   box-sizing: border-box;
   background-color: white;
+  z-index: 1;
   /* width: 100%; */
 }
 .sidebar-container.hide {

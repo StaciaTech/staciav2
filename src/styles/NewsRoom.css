@@ -19,6 +19,13 @@
   font-size: 7vw;
   font-weight: 600;
 }
+.videoLink{
+  color: black;
+}
+.videoLink:hover{
+  cursor: pointer;
+  color: #0047ff;
+}
 
 .news-container {
   padding: 5rem;

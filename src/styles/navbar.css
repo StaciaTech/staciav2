@@ -122,6 +122,20 @@ a {
   align-items: center;
   margin: 0px 10px;
 }
+.nav-whatsnew-comp {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  /* transition: top 0.3s ease; */
+}
+
+.nav-whatsnew-comp-style0 {
+  top: 46%;
+}
+
+.nav-whatsnew-comp-style1 {
+  top: 0;
+}
 
 .dropdown {
   position: relative;
