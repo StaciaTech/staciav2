@@ -366,18 +366,18 @@ function Articles() {
       <div className="carousel-divider"></div>
       <div className="article-slider">
         <div className="carousel-content">
-          <div
+          {/* <div
             className="carousel-slide"
             style={{
               transform: `translateX(calc(-${currentIndex} * (100% / ${visibleCards})))`,
             }}
-          >
+          > */}
             {articlesData.articles.map((article, index) => (
               <div key={index} className="carousel-card">
                 <SingleArticleCard article={article} />
               </div>
             ))}
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </div>

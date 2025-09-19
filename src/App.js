@@ -38,6 +38,9 @@ import EventDetails from "./components/Competition/Event-Detail";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Sitemap from "./components/Sitemap";
 
+import IndustriesPage from "./pages/IndustriesPage";
+import ClientVisit from "./pages/ClientVisit";
+
 function App() {
   return (
     <div className="App">
@@ -160,6 +163,9 @@ function App() {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:title" element={<SpecificEvent />} />
         <Route path="*" element={<PageNotFound />} />
+
+        <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="/client-visit" element={<ClientVisit />} />
       </Routes>
       <ScrollArrow />
     </div>

@@ -41,17 +41,11 @@
   width: 100%;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   /* Center the visible cards */
 }
 
-.carousel-slide {
-  display: flex;
-  transition: transform 0.5s ease;
-  will-change: transform;
-  width: 300%;
-  /* 3 cards visible, each taking 100% / 3 of the screen */
-}
+
 
 .carousel-card {
   flex: 0 0 auto;
@@ -70,20 +64,15 @@
   border: 2px solid #6B6084;
 }
 
-.carousel-content {
+/* .carousel-content {
   width: 100%;
   overflow: hidden;
   display: flex;
-  justify-content: center; /* Center the visible cards */
+  justify-content: center;
 
-}
+} */
 
-.carousel-slide {
-  display: flex;
-  transition: transform 0.5s ease;
-  will-change: transform;
-  width: 300%; /* 3 cards visible, each taking 100% / 3 of the screen */
-}
+
 
 .carousel-card {
   flex: 0 0 auto;

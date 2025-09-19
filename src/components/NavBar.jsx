@@ -375,6 +375,28 @@ function NavBar() {
                 Competition
               </NavLink>
               <NavLink
+                to={"/industries"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+                className="nav-items"
+                style={{ position: "relative" }}
+                onMouseEnter={() => setActiveDropdown(null)} // No dropdown for Competition
+              >
+                Industries
+              </NavLink>
+              <NavLink
+                to={"/client-visit"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+                className="nav-items"
+                style={{ position: "relative" }}
+                onMouseEnter={() => setActiveDropdown(null)} // No dropdown for Competition
+              >
+                Client Visit
+              </NavLink>
+              <NavLink
                 to={"/about"}
                 onClick={() => {
                   window.scrollTo(0, 0);
