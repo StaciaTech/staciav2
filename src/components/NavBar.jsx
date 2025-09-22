@@ -302,7 +302,7 @@ function NavBar() {
               ref={navAreaRef}
               onMouseLeave={() => setActiveDropdown(null)} // Close dropdowns when leaving nav area
             >
-              <Star />
+              {/* <Star /> */}
               <NavLink
                 to={"/services"}
                 onClick={() => {

@@ -112,7 +112,7 @@
 //         <MobileStackScroll />
 //       </React.Suspense>
 //       {/* client */}
-      
+
 //       <ClientComponent />
 //       {/* our services */}
 //       <div>
@@ -120,7 +120,7 @@
 //           <ServiceDisplay />
 //         </React.Suspense>
 //       </div>
-     
+
 
 
 //       {/* Events */}
@@ -167,11 +167,13 @@ import React, { useEffect, useState, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import LoadingStar from "../components/LoadingStar";
 import Star from "../components/Star";
-import "../styles/Home.css"; // Inline critical CSS and minify this file
+import "../styles/Home.css";
 import Popup from "../components/Popup";
+
 // Lazy-loaded components
 const NavBar = lazy(() => import("../components/NavBar"));
 const Footer = lazy(() => import("../components/Footer"));
+const ToggleButton = lazy(() => import("../components/Home/ToggleButton"));
 const StackScroll = lazy(() => import("./StackScroll"));
 const EventsHosted = lazy(() => import("../components/Home/EventsHosted"));
 const OurProjects = lazy(() => import("../components/Home/OurProjects"));
@@ -187,8 +189,8 @@ const SideBar = lazy(() => import("../components/SideBar"));
 const MobileArticle = lazy(() => import("../components/Home/MobileArticle"));
 const HomeCaseStudy = lazy(() => import("../components/Home/HomeCaseStudy"));
 const ClientComponent = lazy(() => import("./Client"));
-// Uncomment if reverse.png is used in the critical path
-// import reverse from "../assets/reverse.png";
+const WhatsNewSection = lazy(() => import("../components/Home/WhatsNewSection"));
+
 const words = [
   "Innovation",
   "Growth",
@@ -201,21 +203,33 @@ const words = [
   "Sustainability",
   "Scalability",
 ];
+
 function HomePage() {
+  // State management
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
+  const [selectedToggle, setSelectedToggle] = useState("products");
+
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  // Word-changing animation state
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [isMounted, setIsMounted] = useState(false);
+
+  // Word-changing animation effect
   useEffect(() => {
-    setIsMounted(true); // Delay animation until after initial render
+    setIsMounted(true);
     const interval = setInterval(() => {
       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 3000); // Change word every 3 seconds
-    return () => clearInterval(interval); // Cleanup on unmount
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
+
+  // Handle toggle button selection
+  const handleToggleChange = (selection) => {
+    setSelectedToggle(selection);
+    console.log("Selected:", selection);
+  };
+
   return (
     <React.Suspense fallback={<LoadingStar />}>
       <div>
@@ -223,16 +237,16 @@ function HomePage() {
         <div className="nav_style">
           <NavBar />
           <SideBar />
-        </div>        
+        </div>
+
         {/* Hero Section */}
         <div className="home">
           <div className="homeSection">
-            
             <div className="texts">
-              <div className="heroText" style={{display:"flex"}}>
+              <div className="heroText" style={{ display: "flex" }}>
                 <span>Stacia Corp Redefining </span> <Star />
               </div>
-        <Popup/>
+              <Popup />
 
               <div className="changingText">
                 {isMounted && (
@@ -251,14 +265,26 @@ function HomePage() {
             </div>
           </div>
         </div>
-        {/* Stack Scroll Section */}
+
+        {/* Stack Scroll Section with Toggle */}
         <div className="stack-scroll-container">
-          <StackScroll />
+          <div style={{ 
+            display: "flex", 
+            margin: "1rem", 
+            paddingBottom: "1rem",
+            justifyContent: "flex-end", 
+            alignItems: "center" 
+          }}>
+            <ToggleButton onToggle={handleToggleChange} />
+          </div>
+          <StackScroll onToggle={selectedToggle} />
         </div>
+
         {/* Other Sections */}
-        <MobileStackScroll />
+        <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
-        <ServiceDisplay />
+        {/* <ServiceDisplay /> */}
+        <WhatsNewSection />
         <EventsHosted />
         <HomeCaseStudy />
         <OurProjects />
@@ -272,4 +298,5 @@ function HomePage() {
     </React.Suspense>
   );
 }
+
 export default HomePage;

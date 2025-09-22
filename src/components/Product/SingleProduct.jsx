@@ -437,6 +437,7 @@ import { useNavigate } from "react-router-dom";
 import data from "../../Data/ProductPage.json";
 import SuggestionProducts from "../ReUsableComp/SuggestionProducts";
 import SuggestionService from "../ReUsableComp/SuggestionService";
+import KnowMoreSection from "./KnowMoreSection";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
@@ -665,6 +666,9 @@ export default function SingleProduct() {
                 {SelectedProduct?.briefDetails}
               </div>
             </div>
+            
+            {/* Know More About Product Section */}
+            <KnowMoreSection productData={SelectedProduct} />
           </div>
           <div className="remaining-products-card-container-holder">
             <div className="single-other-service-title">Other Products</div>

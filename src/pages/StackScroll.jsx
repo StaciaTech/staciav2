@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../redux/slice/productSlice";
+import { fetchServices } from "../redux/slice/serviceSlice";
 // import Skeleton from "react-loading-skeleton";
 import StackCard from "../components/Home/StackCard";
 import { useScroll } from "framer-motion";
-const StackScroll = () => {
+const StackScroll = ({ onToggle }) => {
   const proDetails = [
     {
       id: 1,
@@ -64,36 +65,61 @@ const StackScroll = () => {
   ];
   const dispatch = useDispatch();
   const homeData = useSelector((state) => state.product);
+  const homeServData = useSelector((state) => state.service);
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchServices());
+  }, [dispatch]);
   // const homeProductData = homeData?.data?.productPSPosition || [];
   const homeProductData = homeData?.data || [];
+  const homeServiceData = homeServData?.data || [];
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
   console.log(homeProductData);
+  console.log(homeServiceData);
+  console.log(onToggle, "onToggle");
 
   return (
     <div ref={containerRef} className="stack-scroll-container">
       <div className="stack-scroll">
         <ul id="cards">
-          {homeProductData.map((eachHomeProduct, i) => {
-            const targetScale = 1 - (homeProductData.length - i) * 0.05;
-            return (
-              <StackCard
-                key={eachHomeProduct.id}
-                eachHomeProduct={eachHomeProduct}
-                i={i}
-                proDetails={proDetails}
-                range={[i * 0.16, 1]}
-                targetScale={targetScale}
-                progress={scrollYProgress}
-              />
-            );
-          })}
+          {onToggle === "products" && 
+            homeProductData.map((eachHomeProduct, i) => {
+              const targetScale = 1 - (homeProductData.length - i) * 0.05;
+              return (
+                <StackCard
+                  key={eachHomeProduct.id}
+                  eachHomeProduct={eachHomeProduct}
+                  i={i}
+                  proDetails={proDetails}
+                  range={[i * 0.16, 1]}
+                  targetScale={targetScale}
+                  progress={scrollYProgress}
+                />
+              );
+            })
+          }
+          {onToggle === "services" && 
+            homeServiceData.map((eachHomeService, i) => {
+              const targetScale = 1 - (homeServiceData.length - i) * 0.05;
+              return (
+                <StackCard
+                  key={eachHomeService.id}
+                  eachHomeService={eachHomeService}
+                  i={i}
+                  proDetails={proDetails}
+                  range={[i * 0.16, 1]}
+                  targetScale={targetScale}
+                  progress={scrollYProgress}
+                />
+              );
+            })
+          }
           {/* dont remove below code */}
           <div
             style={{

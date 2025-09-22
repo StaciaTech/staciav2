@@ -1,15 +1,749 @@
-import React from 'react';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+// import React, { useState, useEffect , useTransition } from 'react';
+// import { motion } from 'framer-motion';
+// import { lazy, Suspense, startTransition } from 'react';
+// import '../styles/ClientVisit.css';
+
+// // Import inquiry modal
+// import ClientInquiryModal from '../components/Client/ClientInquiryModal';
+
+// // Import department data
+// import { departments, roadmapStepsData } from '../Data/departmentData.js';
+
+// // Lazy load components
+// const NavBar = lazy(() => import('../components/NavBar'));
+// const Footer = lazy(() => import('../components/Footer'));
+// const MobileFooter = lazy(() => import('../components/MobileFooter'));
+// const SideBar = lazy(() => import('../components/SideBar'));
+// const LoadingStar = lazy(() => import('../components/LoadingStar'));
+
+
+
+// const ClientVisit = () => {
+//     const [isVisible, setIsVisible] = useState(false);
+//     const [isModalOpen, setIsModalOpen] = useState(false);
+//     const [currentStep, setCurrentStep] = useState(0);
+//     const [selectedDepartment, setSelectedDepartment] = useState('web-development');
+
+//     // Get roadmap steps based on selected department
+//     const roadmapSteps = roadmapStepsData[selectedDepartment] || roadmapStepsData['web-development'];
+
+//     // Intersection Observer for animations
+//     useEffect(() => {
+//         const observer = new IntersectionObserver(
+//             ([entry]) => {
+//                 if (entry.isIntersecting) {
+//                     setIsVisible(true);
+//                 }
+//             },
+//             { threshold: 0.1 }
+//         );
+
+//         const elements = document.querySelectorAll('.animate-on-scroll');
+//         elements.forEach(element => observer.observe(element));
+
+//         return () => {
+//             elements.forEach(element => observer.unobserve(element));
+//         };
+//     }, []);
+
+//     // Auto-advance roadmap animation
+//     useEffect(() => {
+//         const interval = setInterval(() => {
+//             setCurrentStep(prev => (prev + 1) % roadmapSteps.length);
+//         }, 3000);
+
+//         return () => clearInterval(interval);
+//     }, []);
+
+//     const handleInquiryClick = () => {
+//         setIsModalOpen(true);
+//     };
+
+//     const handleModalClose = () => {
+//         setIsModalOpen(false);
+//     };
+
+//     return (
+//         <Suspense fallback={<LoadingStar />}>
+//             <div className="client-visit-page">
+//                 {/* Navigation */}
+//                 <div className="nav_style">
+//                     <NavBar />
+//                     <SideBar />
+//                 </div>
+
+//                 {/* Welcome Section */}
+//                 <section className="welcome-section">
+//                     <div className="welcome-container">
+//                         <motion.div
+//                             className="welcome-content"
+//                             initial={{ opacity: 0, y: 50 }}
+//                             animate={{ opacity: 1, y: 0 }}
+//                             transition={{ duration: 0.8 }}
+//                         >
+//                             <div className="welcome-text">
+//                                 <motion.h1
+//                                     className="welcome-title"
+//                                     initial={{ opacity: 0, y: 30 }}
+//                                     animate={{ opacity: 1, y: 0 }}
+//                                     transition={{ duration: 0.6, delay: 0.2 }}
+//                                 >
+//                                     Welcome to Stacia Corp
+//                                 </motion.h1>
+//                                 <motion.p
+//                                     className="welcome-subtitle"
+//                                     initial={{ opacity: 0, y: 30 }}
+//                                     animate={{ opacity: 1, y: 0 }}
+//                                     transition={{ duration: 0.6, delay: 0.4 }}
+//                                 >
+//                                     Your trusted partner in digital transformation and innovation
+//                                 </motion.p>
+//                                 <motion.p
+//                                     className="welcome-description"
+//                                     initial={{ opacity: 0, y: 30 }}
+//                                     animate={{ opacity: 1, y: 0 }}
+//                                     transition={{ duration: 0.6, delay: 0.6 }}
+//                                 >
+//                                     We're excited to work with you and help bring your vision to life.
+//                                     Our team of experts is ready to provide you with cutting-edge solutions
+//                                     tailored to your specific needs.
+//                                 </motion.p>
+//                             </div>
+
+//                             <motion.div
+//                                 className="welcome-actions"
+//                                 initial={{ opacity: 0, y: 30 }}
+//                                 animate={{ opacity: 1, y: 0 }}
+//                                 transition={{ duration: 0.6, delay: 0.8 }}
+//                             >
+//                                 <motion.button
+//                                     className="welcome-btn primary"
+//                                     onClick={handleInquiryClick}
+//                                     whileHover={{ scale: 1.05, y: -2 }}
+//                                     whileTap={{ scale: 0.95 }}
+//                                 >
+//                                     <span className="btn-icon">💬</span>
+//                                     <span className="btn-text">Start Your Project</span>
+//                                     <span className="btn-arrow">→</span>
+//                                 </motion.button>
+
+//                                 <motion.button
+//                                     className="welcome-btn secondary"
+//                                     onClick={handleInquiryClick}
+//                                     whileHover={{ scale: 1.05, y: -2 }}
+//                                     whileTap={{ scale: 0.95 }}
+//                                 >
+//                                     <span className="btn-icon">📞</span>
+//                                     <span className="btn-text">Schedule Call</span>
+//                                     <span className="btn-arrow">→</span>
+//                                 </motion.button>
+//                             </motion.div>
+//                         </motion.div>
+
+//                         <motion.div
+//                             className="welcome-visual"
+//                             initial={{ opacity: 0, x: 50 }}
+//                             animate={{ opacity: 1, x: 0 }}
+//                             transition={{ duration: 0.8, delay: 0.4 }}
+//                         >
+//                             <div className="visual-container">
+//                                 <div className="floating-cards">
+//                                     <div className="floating-card card-1">
+//                                         <span className="card-icon">🚀</span>
+//                                         <span className="card-text">Innovation</span>
+//                                     </div>
+//                                     <div className="floating-card card-2">
+//                                         <span className="card-icon">⚡</span>
+//                                         <span className="card-text">Speed</span>
+//                                     </div>
+//                                     <div className="floating-card card-3">
+//                                         <span className="card-icon">🎯</span>
+//                                         <span className="card-text">Precision</span>
+//                                     </div>
+//                                     <div className="floating-card card-4">
+//                                         <span className="card-icon">🤝</span>
+//                                         <span className="card-text">Partnership</span>
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                         </motion.div>
+//                     </div>
+//                 </section>
+
+//                 {/* Roadmap Section */}
+//                 <section className="roadmap-section">
+//                     <div className="roadmap-container">
+//                         <motion.div
+//                             className="roadmap-header"
+//                             initial={{ opacity: 0, y: 30 }}
+//                             whileInView={{ opacity: 1, y: 0 }}
+//                             transition={{ duration: 0.6 }}
+//                             viewport={{ once: true }}
+//                         >
+//                             <h2 className="roadmap-title">Our Process</h2>
+//                             <p className="roadmap-subtitle">
+//                                 Choose your department to see our specialized process
+//                             </p>
+
+//                             {/* Department Selector */}
+//                             <div className="department-selector">
+//                                 {departments.map((dept) => (
+//                                     <motion.button
+//                                         key={dept.id}
+//                                         className={`dept-btn ${selectedDepartment === dept.id ? 'active' : ''}`}
+//                                         onClick={() => setSelectedDepartment(dept.id)}
+//                                         whileHover={{ scale: 1.05, y: -2 }}
+//                                         whileTap={{ scale: 0.95 }}
+//                                         style={{ '--dept-color': dept.color }}
+//                                     >
+//                                         <span className="dept-icon">{dept.icon}</span>
+//                                         <span className="dept-name">{dept.name}</span>
+//                                     </motion.button>
+//                                 ))}
+//                             </div>
+//                         </motion.div>
+
+//                         <div className="roadmap-timeline">
+//                             {roadmapSteps.map((step, index) => (
+//                                 <motion.div
+//                                     key={step.id}
+//                                     className={`roadmap-step ${currentStep === index ? 'active' : ''} ${index < currentStep ? 'completed' : ''}`}
+//                                     initial={{ opacity: 0, x: -50 }}
+//                                     whileInView={{ opacity: 1, x: 0 }}
+//                                     transition={{ duration: 0.6, delay: index * 0.1 }}
+//                                     viewport={{ once: true }}
+//                                     whileHover={{ scale: 1.05, y: -5 }}
+//                                 >
+//                                     <div className="step-number">
+//                                         <span className="number">{step.id}</span>
+//                                         <div className="step-line"></div>
+//                                     </div>
+
+//                                     <div className="step-content">
+//                                         <div className="step-icon">{step.icon}</div>
+//                                         <h3 className="step-title">{step.title}</h3>
+//                                         <p className="step-description">{step.description}</p>
+//                                         <div className="step-duration">{step.duration}</div>
+
+//                                         <div className="step-details">
+//                                             {step.details.map((detail, idx) => (
+//                                                 <span key={idx} className="detail-item">
+//                                                     {detail}
+//                                                 </span>
+//                                             ))}
+//                                         </div>
+//                                     </div>
+//                                 </motion.div>
+//                             ))}
+//                         </div>
+//                     </div>
+//                 </section>
+
+//                 {/* Why Choose Us Section */}
+//                 <section className="why-choose-section">
+//                     <div className="why-choose-container">
+//                         <motion.div
+//                             className="why-choose-header"
+//                             initial={{ opacity: 0, y: 30 }}
+//                             whileInView={{ opacity: 1, y: 0 }}
+//                             transition={{ duration: 0.6 }}
+//                             viewport={{ once: true }}
+//                         >
+//                             <h2 className="why-choose-title">Why Choose Stacia Corp?</h2>
+//                             <p className="why-choose-subtitle">
+//                                 We bring expertise, innovation, and dedication to every project
+//                             </p>
+//                         </motion.div>
+
+//                         <div className="why-choose-grid">
+//                             {[
+//                                 {
+//                                     icon: "🎯",
+//                                     title: "Expert Team",
+//                                     description: "Experienced professionals with deep industry knowledge"
+//                                 },
+//                                 {
+//                                     icon: "⚡",
+//                                     title: "Fast Delivery",
+//                                     description: "Quick turnaround times without compromising quality"
+//                                 },
+//                                 {
+//                                     icon: "🔒",
+//                                     title: "Secure & Reliable",
+//                                     description: "Enterprise-grade security and 99.9% uptime guarantee"
+//                                 },
+//                                 {
+//                                     icon: "💰",
+//                                     title: "Cost Effective",
+//                                     description: "Competitive pricing with transparent billing"
+//                                 },
+//                                 {
+//                                     icon: "🛠️",
+//                                     title: "Custom Solutions",
+//                                     description: "Tailored solutions that fit your specific needs"
+//                                 },
+//                                 {
+//                                     icon: "📞",
+//                                     title: "24/7 Support",
+//                                     description: "Round-the-clock support and maintenance"
+//                                 }
+//                             ].map((item, index) => (
+//                                 <motion.div
+//                                     key={index}
+//                                     className="why-choose-card"
+//                                     initial={{ opacity: 0, y: 30 }}
+//                                     whileInView={{ opacity: 1, y: 0 }}
+//                                     transition={{ duration: 0.6, delay: index * 0.1 }}
+//                                     viewport={{ once: true }}
+//                                     whileHover={{ y: -5, scale: 1.02 }}
+//                                 >
+//                                     <div className="card-icon">{item.icon}</div>
+//                                     <h3 className="card-title">{item.title}</h3>
+//                                     <p className="card-description">{item.description}</p>
+//                                 </motion.div>
+//                             ))}
+//                         </div>
+//                     </div>
+//                 </section>
+
+//                 {/* CTA Section */}
+//                 <section className="cta-section">
+//                     <div className="cta-container">
+//                         <motion.div
+//                             className="cta-content"
+//                             initial={{ opacity: 0, y: 30 }}
+//                             whileInView={{ opacity: 1, y: 0 }}
+//                             transition={{ duration: 0.6 }}
+//                             viewport={{ once: true }}
+//                         >
+//                             <h2 className="cta-title">Ready to Get Started?</h2>
+//                             <p className="cta-description">
+//                                 Let's discuss your project and see how we can help you achieve your goals
+//                             </p>
+//                             <motion.button
+//                                 className="cta-button"
+//                                 onClick={handleInquiryClick}
+//                                 whileHover={{ scale: 1.05, y: -2 }}
+//                                 whileTap={{ scale: 0.95 }}
+//                             >
+//                                 <span className="btn-icon">🚀</span>
+//                                 <span className="btn-text">Start Your Project Today</span>
+//                                 <span className="btn-arrow">→</span>
+//                             </motion.button>
+//                         </motion.div>
+//                     </div>
+//                 </section>
+
+//                 {/* Client Inquiry Modal */}
+//                 <ClientInquiryModal
+//                     isOpen={isModalOpen}
+//                     onClose={handleModalClose}
+//                 />
+
+//                 {/* Footer */}
+//                 <Footer />
+//                 <MobileFooter />
+//             </div>
+//         </Suspense>
+//     );
+// };
+
+// export default ClientVisit;
+
+
+
+
+import React, { useState, useEffect, useTransition } from 'react';
+import { motion } from 'framer-motion';
+import { lazy, Suspense } from 'react';
+import '../styles/ClientVisit.css';
+import ClientInquiryModal from '../components/Client/ClientInquiryModal';
+import { departments, roadmapStepsData } from '../Data/departmentData.js';
+import { GoArrowDownRight } from 'react-icons/go';
+
+
+
+import { BiMessageDetail, BiSolidDetail } from "react-icons/bi";
+import { IoPricetags } from 'react-icons/io5';
+import { GrPersonalComputer, GrUserExpert } from "react-icons/gr";
+import { FaPhoneVolume } from 'react-icons/fa6';
+
+import CompanyImage from "../assets/StaciaFavicon.svg"
+
+
+// Lazy load components
+const NavBar = lazy(() => import('../components/NavBar'));
+const Footer = lazy(() => import('../components/Footer'));
+const MobileFooter = lazy(() => import('../components/MobileFooter'));
+const SideBar = lazy(() => import('../components/SideBar'));
+const LoadingStar = lazy(() => import('../components/LoadingStar'));
 
 const ClientVisit = () => {
-    return (
-        <div>
-            <NavBar />
-            <h1>client visit page</h1>
+    const [isPending, startTransition] = useTransition();
+    const [isVisible, setIsVisible] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentStep, setCurrentStep] = useState(0);
+    const [selectedDepartment, setSelectedDepartment] = useState('web-development');
 
-            <Footer />
-        </div>
+    const roadmapSteps = roadmapStepsData[selectedDepartment] || roadmapStepsData['web-development'];
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(element => observer.observe(element));
+
+        return () => {
+            elements.forEach(element => observer.unobserve(element));
+        };
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            startTransition(() => {
+                setCurrentStep(prev => (prev + 1) % roadmapSteps.length);
+            });
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [roadmapSteps.length]);
+
+    const handleInquiryClick = () => {
+        startTransition(() => {
+            setIsModalOpen(true);
+        });
+    };
+
+    const handleModalClose = () => {
+        startTransition(() => {
+            setIsModalOpen(false);
+        });
+    };
+
+    const handleDepartmentChange = (deptId) => {
+        startTransition(() => {
+            setSelectedDepartment(deptId);
+        });
+    };
+
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <div className="client-visit-page">
+                <div className="nav_style">
+                    <NavBar />
+                    <SideBar />
+                </div>
+
+                <section className="welcome-section">
+                    <div className="welcome-container">
+                        <motion.div
+                            className="welcome-content"
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <div className="welcome-text">
+                                <motion.h1
+                                    className="welcome-title"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.2 }}
+                                >
+                                    Welcome to Stacia Corp
+                                </motion.h1>
+                                <motion.p
+                                    className="welcome-subtitle"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.4 }}
+                                >
+                                    Your trusted partner in digital transformation and innovation
+                                </motion.p>
+                                <motion.p
+                                    className="welcome-description"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.6 }}
+                                >
+                                    We're excited to work with you and help bring your vision to life.
+                                    Our team of experts is ready to provide you with cutting-edge solutions
+                                    tailored to your specific needs.
+                                </motion.p>
+                            </div>
+
+                            <motion.div
+                                className="welcome-actions"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.8 }}
+                            >
+                                <motion.button
+                                    className="welcome-btn primary"
+                                    onClick={handleInquiryClick}
+                                    whileHover={{ scale: 1.05, y: -10 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <span className="btn-icon"><BiMessageDetail /></span>
+                                    <span className="btn-text">Start Your Project</span>
+                                    <span className="btn-arrow"><GoArrowDownRight /></span>
+                                </motion.button>
+
+                                <motion.button
+                                    className="welcome-btn secondary"
+                                    onClick={handleInquiryClick}
+                                    whileHover={{ scale: 1.05, y: -2 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <span className="btn-icon"><FaPhoneVolume /></span>
+                                    <span className="btn-text">Schedule Call</span>
+                                    <span className="btn-arrow"><GoArrowDownRight /></span>
+                                </motion.button>
+                            </motion.div>
+                        </motion.div>
+
+                        <motion.div
+                            className="welcome-visual"
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                        >
+                            {/* <div className="visual-container">
+                                <div className="floating-cards">
+                                    <div className="floating-card card-1">
+                                        <span className="card-icon">🚀</span>
+                                        <span className="card-text">Innovation</span>
+                                    </div>
+                                    <div className="floating-card card-2">
+                                        <span className="card-icon">⚡</span>
+                                        <span className="card-text">Speed</span>
+                                    </div>
+                                    <div className="floating-card card-3">
+                                        <span className="card-icon">🎯</span>
+                                        <span className="card-text">Precision</span>
+                                    </div>
+                                    <div className="floating-card card-4">
+                                        <span className="card-icon">🤝</span>
+                                        <span className="card-text">Partnership</span>
+                                    </div>
+                                </div>
+                            </div> */}
+
+                            <div className="visual-container">
+                                <div className="product-preview"
+                                style={{backgroundColor: "#f5f5f5"}}>
+                                    <img
+                                        src={CompanyImage}
+                                        // alt={productData?.title || 'Product Preview'}
+                                        className="product-image"
+                                        loading="lazy"
+                                    />
+                                    <div className="product-overlay">
+                                        <div className="overlay-content">
+                                            {/* <h3>{productData?.title || 'Product Name'}</h3> */}
+                                            {/* <p>{productData?.domainName || 'Category'}</p> */}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="floating-elements">
+                                    <div className="floating-element element-1">
+                                        <span>📊</span>
+                                        <span>Analytics</span>
+                                    </div>
+                                    <div className="floating-element element-2">
+                                        <span>⚡</span>
+                                        <span>Performance</span>
+                                    </div>
+                                    <div className="floating-element element-3">
+                                        <span>🔧</span>
+                                        <span>Customization</span>
+                                    </div>
+                                    <div className="floating-element element-4">
+                                        <span>🛡️</span>
+                                        <span>Security</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </section>
+
+                <section className="roadmap-section">
+                    <div className="roadmap-container">
+                        <motion.div
+                            className="roadmap-header"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="roadmap-title">Our Process</h2>
+                            <p className="roadmap-subtitle">
+                                Choose your department to see our specialized process
+                            </p>
+
+                            <div className="department-selector">
+                                {departments.map((dept) => (
+                                    <motion.button
+                                        key={dept.id}
+                                        className={`dept-btn ${selectedDepartment === dept.id ? 'active' : ''}`}
+                                        onClick={() => handleDepartmentChange(dept.id)}
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        style={{ '--dept-color': dept.color }}
+                                    >
+                                        <span className="dept-icon">{dept.icon}</span>
+                                        <span className="dept-name">{dept.name}</span>
+                                    </motion.button>
+                                ))}
+                            </div>
+                        </motion.div>
+
+                        <div className="roadmap-timeline">
+                            {roadmapSteps.map((step, index) => (
+                                <motion.div
+                                    key={step.id}
+                                    className={`roadmap-step ${currentStep === index ? 'active' : ''} ${index < currentStep ? 'completed' : ''}`}
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    whileHover={{ scale: 1.05, y: -5 }}
+                                >
+                                    <div className="step-number">
+                                        <span className="number">{step.id}</span>
+                                        <div className="step-line"></div>
+                                    </div>
+
+                                    <div className="step-content">
+                                        <div className="step-icon">{step.icon}</div>
+                                        <h3 className="step-title">{step.title}</h3>
+                                        <p className="step-description">{step.description}</p>
+                                        <div className="step-duration">{step.duration}</div>
+
+                                        <div className="step-details">
+                                            {step.details.map((detail, idx) => (
+                                                <span key={idx} className="detail-item">
+                                                    {detail}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <section className="why-choose-section">
+                    <div className="why-choose-container">
+                        <motion.div
+                            className="why-choose-header"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="why-choose-title">Why Choose Stacia Corp?</h2>
+                            <p className="why-choose-subtitle">
+                                We bring expertise, innovation, and dedication to every project
+                            </p>
+                        </motion.div>
+
+                        <div className="why-choose-grid">
+                            {[
+                                {
+                                    icon: "🎯",
+                                    title: "Expert Team",
+                                    description: "Experienced professionals with deep industry knowledge"
+                                },
+                                {
+                                    icon: "⚡",
+                                    title: "Fast Delivery",
+                                    description: "Quick turnaround times without compromising quality"
+                                },
+                                {
+                                    icon: "🔒",
+                                    title: "Secure & Reliable",
+                                    description: "Enterprise-grade security and 99.9% uptime guarantee"
+                                },
+                                {
+                                    icon: "💰",
+                                    title: "Cost Effective",
+                                    description: "Competitive pricing with transparent billing"
+                                },
+                                {
+                                    icon: "🛠️",
+                                    title: "Custom Solutions",
+                                    description: "Tailored solutions that fit your specific needs"
+                                },
+                                {
+                                    icon: "📞",
+                                    title: "24/7 Support",
+                                    description: "Round-the-clock support and maintenance"
+                                }
+                            ].map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="why-choose-card"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    whileHover={{ y: -5, scale: 1.02 }}
+                                >
+                                    <div className="card-icon">{item.icon}</div>
+                                    <h3 className="card-title">{item.title}</h3>
+                                    <p className="card-description">{item.description}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <section className="cta-section">
+                    <div className="cta-container">
+                        <motion.div
+                            className="cta-content"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="cta-title">Ready to Get Started?</h2>
+                            <p className="cta-description">
+                                Let's discuss your project and see how we can help you achieve your goals
+                            </p>
+                            <motion.button
+                                className="cta-button"
+                                onClick={handleInquiryClick}
+                                whileHover={{ scale: 1.05, y: -2 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <span className="btn-icon">🚀</span>
+                                <span className="btn-text">Start Your Project Today</span>
+                                <span className="btn-arrow"><GoArrowDownRight /></span>
+                            </motion.button>
+                        </motion.div>
+                    </div>
+                </section>
+
+                <ClientInquiryModal
+                    isOpen={isModalOpen}
+                    onClose={handleModalClose}
+                />
+
+                <Footer />
+                <MobileFooter />
+            </div>
+        </Suspense>
     );
 };
 
