@@ -38,7 +38,8 @@
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background: #6b6084;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -102,7 +103,7 @@
 }
 
 .tab-button.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background:linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
   color: #ffffff;
   border-color: #667eea;
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
@@ -254,7 +255,7 @@
 }
 
 .feature-tag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
   color: #ffffff;
   padding: 6px 12px;
   border-radius: 15px;
@@ -267,7 +268,10 @@
 /* Call to Action */
 .whats-new-cta {
   text-align: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
+
+  /* background: linear-gradient(0deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%); */
+  /* background: #0d0225; */
   padding: 50px 30px;
   border-radius: 20px;
   color: #ffffff;
@@ -342,7 +346,8 @@
 
 .cta-button.primary {
   background: #ffffff;
-  color: #667eea;
+  color: #0047ff;
+  /* color: #667eea; */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -371,28 +376,28 @@
     max-width: 1600px;
     padding: 0 40px;
   }
-  
+
   .whats-new-title {
     font-size: 4rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 1.4rem;
   }
-  
+
   .content-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
-  
+
   .whats-new-card {
     border-radius: 25px;
   }
-  
+
   .card-content {
     padding: 30px;
   }
-  
+
   .card-title {
     font-size: 1.5rem;
   }
@@ -404,11 +409,11 @@
     max-width: 1200px;
     padding: 0 30px;
   }
-  
+
   .whats-new-title {
     font-size: 3.5rem;
   }
-  
+
   .content-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
@@ -420,24 +425,24 @@
   .whats-new-section {
     padding: 70px 0;
   }
-  
+
   .whats-new-container {
     padding: 0 25px;
   }
-  
+
   .whats-new-title {
     font-size: 3rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 1.1rem;
   }
-  
+
   .content-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  
+
   .tab-button {
     padding: 12px 25px;
     font-size: 0.95rem;
@@ -449,41 +454,41 @@
   .whats-new-section {
     padding: 60px 0;
   }
-  
+
   .whats-new-container {
     padding: 0 20px;
   }
-  
+
   .whats-new-title {
     font-size: 2.5rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 1rem;
   }
-  
+
   .content-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
-  
+
   .whats-new-tabs {
     gap: 15px;
   }
-  
+
   .tab-button {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-  
+
   .card-image-container {
     height: 220px;
   }
-  
+
   .card-content {
     padding: 20px;
   }
-  
+
   .card-title {
     font-size: 1.3rem;
   }
@@ -494,66 +499,66 @@
   .whats-new-section {
     padding: 50px 0;
   }
-  
+
   .whats-new-container {
     padding: 0 15px;
   }
-  
+
   .whats-new-title {
     font-size: 2.2rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 0.95rem;
   }
-  
+
   .content-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .whats-new-tabs {
     gap: 10px;
     margin-bottom: 40px;
   }
-  
+
   .tab-button {
     padding: 8px 16px;
     font-size: 0.85rem;
   }
-  
+
   .tab-text {
     display: none;
   }
-  
+
   .card-image-container {
     height: 200px;
   }
-  
+
   .card-content {
     padding: 18px;
   }
-  
+
   .card-title {
     font-size: 1.2rem;
   }
-  
+
   .whats-new-cta {
     padding: 40px 20px;
   }
-  
+
   .whats-new-cta h3 {
     font-size: 2rem;
   }
-  
+
   .whats-new-cta p {
     font-size: 1rem;
   }
-  
+
   .cta-buttons {
     gap: 15px;
   }
-  
+
   .cta-button {
     padding: 12px 25px;
     font-size: 0.9rem;
@@ -565,77 +570,77 @@
   .whats-new-section {
     padding: 40px 0;
   }
-  
+
   .whats-new-container {
     padding: 0 12px;
   }
-  
+
   .whats-new-title {
     font-size: 1.8rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 0.9rem;
   }
-  
+
   .whats-new-header {
     margin-bottom: 40px;
   }
-  
+
   .content-grid {
     grid-template-columns: 1fr;
     gap: 18px;
     padding: 0 5px;
   }
-  
+
   .whats-new-tabs {
     gap: 8px;
     margin-bottom: 30px;
   }
-  
+
   .tab-button {
     padding: 6px 12px;
     font-size: 0.8rem;
   }
-  
+
   .tab-icon {
     font-size: 1rem;
   }
-  
+
   .card-image-container {
     height: 180px;
   }
-  
+
   .card-content {
     padding: 15px;
   }
-  
+
   .card-title {
     font-size: 1.1rem;
   }
-  
+
   .card-description {
     font-size: 0.9rem;
   }
-  
+
   .whats-new-cta {
     padding: 30px 15px;
   }
-  
+
   .whats-new-cta h3 {
     font-size: 1.6rem;
   }
-  
+
   .whats-new-cta p {
     font-size: 0.9rem;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
     gap: 12px;
   }
-  
+
   .cta-button {
     padding: 10px 20px;
     font-size: 0.85rem;
@@ -648,54 +653,54 @@
   .whats-new-section {
     padding: 35px 0;
   }
-  
+
   .whats-new-container {
     padding: 0 10px;
   }
-  
+
   .whats-new-title {
     font-size: 1.6rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 0.85rem;
   }
-  
+
   .content-grid {
     gap: 15px;
     padding: 0;
   }
-  
+
   .whats-new-tabs {
     gap: 6px;
     margin-bottom: 25px;
   }
-  
+
   .tab-button {
     padding: 5px 10px;
     font-size: 0.75rem;
   }
-  
+
   .card-image-container {
     height: 160px;
   }
-  
+
   .card-content {
     padding: 12px;
   }
-  
+
   .card-title {
     font-size: 1rem;
   }
-  
+
   .card-description {
     font-size: 0.85rem;
   }
-  
+
   .card-meta {
     gap: 6px;
   }
-  
+
   .card-date,
   .card-pricing,
   .card-client,
@@ -703,24 +708,24 @@
     font-size: 0.75rem;
     padding: 3px 6px;
   }
-  
+
   .feature-tag {
     font-size: 0.7rem;
     padding: 4px 8px;
   }
-  
+
   .whats-new-cta {
     padding: 25px 12px;
   }
-  
+
   .whats-new-cta h3 {
     font-size: 1.4rem;
   }
-  
+
   .whats-new-cta p {
     font-size: 0.85rem;
   }
-  
+
   .cta-button {
     padding: 8px 16px;
     font-size: 0.8rem;
@@ -733,61 +738,61 @@
   .whats-new-section {
     padding: 30px 0;
   }
-  
+
   .whats-new-container {
     padding: 0 8px;
   }
-  
+
   .whats-new-title {
     font-size: 1.4rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 0.8rem;
   }
-  
+
   .content-grid {
     gap: 12px;
   }
-  
+
   .whats-new-tabs {
     gap: 4px;
     margin-bottom: 20px;
   }
-  
+
   .tab-button {
     padding: 4px 8px;
     font-size: 0.7rem;
   }
-  
+
   .card-image-container {
     height: 140px;
   }
-  
+
   .card-content {
     padding: 10px;
   }
-  
+
   .card-title {
     font-size: 0.95rem;
   }
-  
+
   .card-description {
     font-size: 0.8rem;
   }
-  
+
   .whats-new-cta {
     padding: 20px 10px;
   }
-  
+
   .whats-new-cta h3 {
     font-size: 1.2rem;
   }
-  
+
   .whats-new-cta p {
     font-size: 0.8rem;
   }
-  
+
   .cta-button {
     padding: 6px 12px;
     font-size: 0.75rem;
@@ -800,61 +805,61 @@
   .whats-new-section {
     padding: 25px 0;
   }
-  
+
   .whats-new-container {
     padding: 0 6px;
   }
-  
+
   .whats-new-title {
     font-size: 1.2rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 0.75rem;
   }
-  
+
   .content-grid {
     gap: 10px;
   }
-  
+
   .whats-new-tabs {
     gap: 3px;
     margin-bottom: 15px;
   }
-  
+
   .tab-button {
     padding: 3px 6px;
     font-size: 0.65rem;
   }
-  
+
   .card-image-container {
     height: 120px;
   }
-  
+
   .card-content {
     padding: 8px;
   }
-  
+
   .card-title {
     font-size: 0.9rem;
   }
-  
+
   .card-description {
     font-size: 0.75rem;
   }
-  
+
   .whats-new-cta {
     padding: 15px 8px;
   }
-  
+
   .whats-new-cta h3 {
     font-size: 1rem;
   }
-  
+
   .whats-new-cta p {
     font-size: 0.75rem;
   }
-  
+
   .cta-button {
     padding: 5px 10px;
     font-size: 0.7rem;
@@ -867,61 +872,61 @@
   .whats-new-section {
     padding: 20px 0;
   }
-  
+
   .whats-new-container {
     padding: 0 4px;
   }
-  
+
   .whats-new-title {
     font-size: 1rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 0.7rem;
   }
-  
+
   .content-grid {
     gap: 8px;
   }
-  
+
   .whats-new-tabs {
     gap: 2px;
     margin-bottom: 10px;
   }
-  
+
   .tab-button {
     padding: 2px 4px;
     font-size: 0.6rem;
   }
-  
+
   .card-image-container {
     height: 100px;
   }
-  
+
   .card-content {
     padding: 6px;
   }
-  
+
   .card-title {
     font-size: 0.8rem;
   }
-  
+
   .card-description {
     font-size: 0.7rem;
   }
-  
+
   .whats-new-cta {
     padding: 10px 6px;
   }
-  
+
   .whats-new-cta h3 {
     font-size: 0.9rem;
   }
-  
+
   .whats-new-cta p {
     font-size: 0.7rem;
   }
-  
+
   .cta-button {
     padding: 4px 8px;
     font-size: 0.65rem;
@@ -934,34 +939,35 @@
   .whats-new-section {
     padding: 30px 0;
   }
-  
+
   .whats-new-header {
     margin-bottom: 30px;
   }
-  
+
   .whats-new-title {
     font-size: 2rem;
   }
-  
+
   .whats-new-subtitle {
     font-size: 0.9rem;
   }
-  
+
   .card-image-container {
     height: 150px;
   }
-  
+
   .whats-new-cta {
     padding: 20px 15px;
   }
-  
+
   .whats-new-cta h3 {
     font-size: 1.5rem;
   }
 }
 
 /* High DPI Displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
   .card-image {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
@@ -973,34 +979,34 @@
   .whats-new-section {
     /* background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); */
   }
-  
+
   .whats-new-title {
     color: #ffffff;
   }
-  
+
   .whats-new-subtitle {
     color: #b0b0b0;
   }
-  
+
   .whats-new-card {
     /* background: #2d2d2d; */
     border-color: #404040;
   }
-  
+
   .card-title {
     /* color: #ffffff; */
   }
-  
+
   .card-description {
     color: #b0b0b0;
   }
-  
+
   .tab-button {
     /* background: #2c3e50; */
     border-color: #404040;
     /* color: #ffffff; */
   }
-  
+
   .tab-button.active {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
@@ -1008,20 +1014,21 @@
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
+
   .whats-new-card,
   .tab-button,
   .cta-button {
     transition: none;
   }
-  
+
   .whats-new-card:hover {
     transform: none;
   }
-  
+
   .tab-button:hover {
     transform: none;
   }
-  
+
   .cta-button:hover {
     transform: none;
   }
@@ -1039,11 +1046,11 @@
   .whats-new-card {
     border: 2px solid #000;
   }
-  
+
   .tab-button {
     border: 2px solid #000;
   }
-  
+
   .card-title,
   .whats-new-title {
     font-weight: 900;
@@ -1062,23 +1069,23 @@
   .whats-new-card:hover {
     transform: none;
   }
-  
+
   .tab-button:hover {
     transform: none;
   }
-  
+
   .cta-button:hover {
     transform: none;
   }
-  
+
   .whats-new-card:active {
     transform: scale(0.98);
   }
-  
+
   .tab-button:active {
     transform: scale(0.95);
   }
-  
+
   .cta-button:active {
     transform: scale(0.95);
   }

@@ -360,16 +360,37 @@ import '../styles/ClientVisit.css';
 import ClientInquiryModal from '../components/Client/ClientInquiryModal';
 import { departments, roadmapStepsData } from '../Data/departmentData.js';
 import { GoArrowDownRight } from 'react-icons/go';
-
-
-
-import { BiMessageDetail, BiSolidDetail } from "react-icons/bi";
-import { IoPricetags } from 'react-icons/io5';
-import { GrPersonalComputer, GrUserExpert } from "react-icons/gr";
-import { FaPhoneVolume } from 'react-icons/fa6';
-
-import CompanyImage from "../assets/StaciaFavicon.svg"
-
+import { BiMessageDetail } from "react-icons/bi";
+import { FaPhoneVolume } from 'react-icons/fa';
+import CompanyImage from "../assets/StaciaFavicon.svg";
+import BusinessStartupGuide from './Bussiness.jsx'; // Verify this path matches the file location
+import {
+    FaClipboard,
+    FaLightbulb,
+    FaSearchDollar,
+    FaRocket,
+    FaBinoculars,
+    FaBook,
+    FaPhone,
+    FaPaintBrush,
+    FaLaptopCode,
+    FaFlask,
+    FaUpload,
+    FaWrench,
+    FaListAlt,
+    FaSearch,
+    FaBrain,
+    FaCheckCircle,
+    FaLink,
+    FaChartLine,
+    FaSyncAlt,
+    FaShoppingCart,
+    FaLock,
+    FaFileContract,
+    FaNetworkWired,
+} from "react-icons/fa";
+import { GrCurrency, GrDocumentPerformance, GrShieldSecurity } from 'react-icons/gr';
+import { AiOutlineSolution } from 'react-icons/ai';
 
 // Lazy load components
 const NavBar = lazy(() => import('../components/NavBar'));
@@ -514,59 +535,35 @@ const ClientVisit = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                         >
-                            {/* <div className="visual-container">
-                                <div className="floating-cards">
-                                    <div className="floating-card card-1">
-                                        <span className="card-icon">🚀</span>
-                                        <span className="card-text">Innovation</span>
-                                    </div>
-                                    <div className="floating-card card-2">
-                                        <span className="card-icon">⚡</span>
-                                        <span className="card-text">Speed</span>
-                                    </div>
-                                    <div className="floating-card card-3">
-                                        <span className="card-icon">🎯</span>
-                                        <span className="card-text">Precision</span>
-                                    </div>
-                                    <div className="floating-card card-4">
-                                        <span className="card-icon">🤝</span>
-                                        <span className="card-text">Partnership</span>
-                                    </div>
-                                </div>
-                            </div> */}
-
                             <div className="visual-container">
                                 <div className="product-preview"
-                                style={{backgroundColor: "#f5f5f5"}}>
+                                    style={{ backgroundColor: "#f5f5f5" }}>
                                     <img
                                         src={CompanyImage}
-                                        // alt={productData?.title || 'Product Preview'}
                                         className="product-image"
                                         loading="lazy"
                                     />
                                     <div className="product-overlay">
                                         <div className="overlay-content">
-                                            {/* <h3>{productData?.title || 'Product Name'}</h3> */}
-                                            {/* <p>{productData?.domainName || 'Category'}</p> */}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="floating-elements">
-                                    <div className="floating-element element-1">
-                                        <span>📊</span>
+                                    <div className="floating-element element-1" style={{ color: "#ffffff" }}>
+                                        <span><FaChartLine /></span>
                                         <span>Analytics</span>
                                     </div>
-                                    <div className="floating-element element-2">
-                                        <span>⚡</span>
+                                    <div className="floating-element element-2"  style={{ color: "#ffffff" }}>
+                                        <span><GrDocumentPerformance /></span>
                                         <span>Performance</span>
                                     </div>
-                                    <div className="floating-element element-3">
-                                        <span>🔧</span>
+                                    <div className="floating-element element-3"  style={{ color: "#ffffff" }}>
+                                        <span><FaWrench /></span>
                                         <span>Customization</span>
                                     </div>
-                                    <div className="floating-element element-4">
-                                        <span>🛡️</span>
+                                    <div className="floating-element element-4" style={{ color: "#ffffff" }}>
+                                        <span><GrShieldSecurity /></span>
                                         <span>Security</span>
                                     </div>
                                 </div>
@@ -599,48 +596,15 @@ const ClientVisit = () => {
                                         whileTap={{ scale: 0.95 }}
                                         style={{ '--dept-color': dept.color }}
                                     >
-                                        <span className="dept-icon">{dept.icon}</span>
                                         <span className="dept-name">{dept.name}</span>
                                     </motion.button>
                                 ))}
                             </div>
                         </motion.div>
-
-                        <div className="roadmap-timeline">
-                            {roadmapSteps.map((step, index) => (
-                                <motion.div
-                                    key={step.id}
-                                    className={`roadmap-step ${currentStep === index ? 'active' : ''} ${index < currentStep ? 'completed' : ''}`}
-                                    initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                                    viewport={{ once: true }}
-                                    whileHover={{ scale: 1.05, y: -5 }}
-                                >
-                                    <div className="step-number">
-                                        <span className="number">{step.id}</span>
-                                        <div className="step-line"></div>
-                                    </div>
-
-                                    <div className="step-content">
-                                        <div className="step-icon">{step.icon}</div>
-                                        <h3 className="step-title">{step.title}</h3>
-                                        <p className="step-description">{step.description}</p>
-                                        <div className="step-duration">{step.duration}</div>
-
-                                        <div className="step-details">
-                                            {step.details.map((detail, idx) => (
-                                                <span key={idx} className="detail-item">
-                                                    {detail}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
                     </div>
                 </section>
+
+                <BusinessStartupGuide dept={selectedDepartment} />
 
                 <section className="why-choose-section">
                     <div className="why-choose-container">
@@ -660,32 +624,32 @@ const ClientVisit = () => {
                         <div className="why-choose-grid">
                             {[
                                 {
-                                    icon: "🎯",
+                                    icon: <FaRocket />,
                                     title: "Expert Team",
                                     description: "Experienced professionals with deep industry knowledge"
                                 },
                                 {
-                                    icon: "⚡",
+                                    icon: <GrDocumentPerformance />,
                                     title: "Fast Delivery",
                                     description: "Quick turnaround times without compromising quality"
                                 },
                                 {
-                                    icon: "🔒",
+                                    icon:<FaLock />,
                                     title: "Secure & Reliable",
                                     description: "Enterprise-grade security and 99.9% uptime guarantee"
                                 },
                                 {
-                                    icon: "💰",
+                                    icon: <GrCurrency />,
                                     title: "Cost Effective",
                                     description: "Competitive pricing with transparent billing"
                                 },
                                 {
-                                    icon: "🛠️",
+                                    icon: <AiOutlineSolution />,
                                     title: "Custom Solutions",
                                     description: "Tailored solutions that fit your specific needs"
                                 },
                                 {
-                                    icon: "📞",
+                                    icon: <FaPhone />,
                                     title: "24/7 Support",
                                     description: "Round-the-clock support and maintenance"
                                 }
@@ -727,7 +691,7 @@ const ClientVisit = () => {
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <span className="btn-icon">🚀</span>
+                                <span className="btn-icon"><FaRocket /></span>
                                 <span className="btn-text">Start Your Project Today</span>
                                 <span className="btn-arrow"><GoArrowDownRight /></span>
                             </motion.button>

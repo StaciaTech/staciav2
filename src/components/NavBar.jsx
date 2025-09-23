@@ -394,7 +394,7 @@ function NavBar() {
                 style={{ position: "relative" }}
                 onMouseEnter={() => setActiveDropdown(null)} // No dropdown for Competition
               >
-                Client Visit
+                Client
               </NavLink>
               <NavLink
                 to={"/about"}
