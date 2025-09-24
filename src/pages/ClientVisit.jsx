@@ -513,7 +513,7 @@ const ClientVisit = () => {
                                 >
                                     <span className="btn-icon"><BiMessageDetail /></span>
                                     <span className="btn-text">Start Your Project</span>
-                                    <span className="btn-arrow"><GoArrowDownRight /></span>
+                                    <span className="btn-arrow-clt"><GoArrowDownRight /></span>
                                 </motion.button>
 
                                 <motion.button
@@ -524,7 +524,7 @@ const ClientVisit = () => {
                                 >
                                     <span className="btn-icon"><FaPhoneVolume /></span>
                                     <span className="btn-text">Schedule Call</span>
-                                    <span className="btn-arrow"><GoArrowDownRight /></span>
+                                    <span className="btn-arrow-clt"><GoArrowDownRight /></span>
                                 </motion.button>
                             </motion.div>
                         </motion.div>
@@ -543,10 +543,10 @@ const ClientVisit = () => {
                                         className="product-image"
                                         loading="lazy"
                                     />
-                                    <div className="product-overlay">
+                                    {/* <div className="product-overlay">
                                         <div className="overlay-content">
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
 
                                 <div className="floating-elements">
@@ -554,7 +554,7 @@ const ClientVisit = () => {
                                         <span><FaChartLine /></span>
                                         <span>Analytics</span>
                                     </div>
-                                    <div className="floating-element element-2"  style={{ color: "#ffffff" }}>
+                                    <div className="floating-element element-5"  style={{ color: "#ffffff" }}>
                                         <span><GrDocumentPerformance /></span>
                                         <span>Performance</span>
                                     </div>
@@ -583,7 +583,7 @@ const ClientVisit = () => {
                         >
                             <h2 className="roadmap-title">Our Process</h2>
                             <p className="roadmap-subtitle">
-                                Choose your department to see our specialized process
+                                At Stacia Corp, our process is designed to deliver exceptional results by combining expertise, collaboration, and innovation. We understand that every project is unique, so we’ve developed a streamlined, adaptable approach that ensures success across all departments—whether you’re seeking cutting-edge design, robust development, impactful marketing, or strategic consulting. Our process is built on transparency, communication, and a commitment to turning your vision into reality. Below is an overview of how we work, tailored to meet your needs at every step.
                             </p>
 
                             <div className="department-selector">
@@ -594,7 +594,8 @@ const ClientVisit = () => {
                                         onClick={() => handleDepartmentChange(dept.id)}
                                         whileHover={{ scale: 1.05, y: -2 }}
                                         whileTap={{ scale: 0.95 }}
-                                        style={{ '--dept-color': dept.color }}
+                                        style={{ '--dept-color': "#31088b" }}
+                                        // style={{ '--dept-color': dept.color }}
                                     >
                                         <span className="dept-name">{dept.name}</span>
                                     </motion.button>

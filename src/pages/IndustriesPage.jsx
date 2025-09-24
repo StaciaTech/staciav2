@@ -13,16 +13,64 @@ import { SlEnergy } from "react-icons/sl";
 import { VscChip } from "react-icons/vsc";
 import { GoArrowRight } from 'react-icons/go';
 import '../styles/Industries.css';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
+import tech from "../assets/TEchnology.lottie";
+import mech from"../assets/Engineer Gears.lottie";
+import elec from"../assets/Circuit Board.lottie";
+
+
+
+
+// const industries = [
+//   { id: 1, title: 'Food-Processing', icon: <MdOutlineFoodBank /> },
+//   { id: 2, title: 'Agriculture', icon: <GiPlantRoots /> },
+//   { id: 3, title: 'Energy', icon: <SlEnergy /> },
+//   { id: 4, title: 'Manufacturing', icon: <MdOutlinePrecisionManufacturing /> },
+//   { id: 5, title: 'Consumer Electronic', icon: <VscChip /> },
+//   { id: 6, title: 'Automotive', icon: <FaCarSide /> },
+// ];
 
 
 const industries = [
-  { id: 1, title: 'Food-Processing', icon: <MdOutlineFoodBank /> },
-  { id: 2, title: 'Agriculture', icon: <GiPlantRoots /> },
-  { id: 3, title: 'Energy', icon: <SlEnergy /> },
-  { id: 4, title: 'Manufacturing', icon: <MdOutlinePrecisionManufacturing /> },
-  { id: 5, title: 'Consumer Electronic', icon: <VscChip /> },
-  { id: 6, title: 'Automotive', icon: <FaCarSide /> },
+  {
+    id: 1,
+    title: 'Food-Processing',
+    description: 'Stacia Corp specializes in innovative engineering solutions for the food processing industry, including custom machinery design, automation systems, and prototyping to enhance efficiency, safety, and compliance in food production and handling.',
+    icon: <MdOutlineFoodBank />
+  },
+  {
+    id: 2,
+    title: 'Agriculture',
+    description: 'In the agriculture sector, Stacia provides advanced CAD engineering and product development services, focusing on equipment design, precision farming tools, and sustainable solutions to optimize crop yields and resource management.',
+    icon: <GiPlantRoots />
+  },
+  {
+    id: 3,
+    title: 'Energy',
+    description: 'Stacia supports the energy industry with cutting-edge design and manufacturing services, including renewable energy components, efficient systems engineering, and prototypes for solar, wind, and other sustainable energy technologies.',
+    icon: <SlEnergy />
+  },
+  {
+    id: 4,
+    title: 'Manufacturing',
+    description: 'For manufacturing, Stacia offers comprehensive services in product design, CAD modeling, and custom fabrication, helping companies streamline production processes, reduce costs, and bring innovative products to market faster.',
+    icon: <MdOutlinePrecisionManufacturing />
+  },
+  {
+    id: 5,
+    title: 'Consumer Electronic',
+    description: 'Stacia excels in consumer electronics by providing electronic system design, PCB development, and integrated tech solutions, ensuring high-quality, user-friendly devices with a focus on innovation and rapid prototyping.',
+    icon: <VscChip />
+  },
+  {
+    id: 6,
+    title: 'Automotive',
+    description: 'In the automotive industry, Stacia delivers mechanical and electronic engineering expertise for vehicle components, design optimization, and manufacturing support, contributing to safer, more efficient, and advanced automotive products.',
+    icon: <FaCarSide />
+  },
 ];
+
 
 const departmentKeyByIndustry = {
   'Food-Processing': 'e-commerce',
@@ -32,6 +80,12 @@ const departmentKeyByIndustry = {
   'Consumer Electronic': 'mobile-app',
   'Automotive': 'consulting',
 };
+
+const stats = [
+  { k: 'Apps Created', v: '5600+' },
+  { k: 'Forge CLI Downloads', v: '73,000+' },
+  { k: 'Active Dev Community Members', v: '13,000+' },
+];
 
 const IndustriesPage = () => {
   const navigate = useNavigate();
@@ -87,7 +141,8 @@ const IndustriesPage = () => {
                 <div className="industry-title">{ind.title}</div>
               </div>
               <p className="industry-desc">
-                Tailored solutions for {ind.title} companies leveraging our multi-disciplinary expertise in product engineering, automation, and digital platforms.
+                {/* Tailored solutions for {ind.title} companies leveraging our multi-disciplinary expertise in product engineering, automation, and digital platforms. */}
+                {ind.description}
               </p>
               <div className="industry-actions">
                 <button className="btn-link" onClick={() => navigate(`/services/${departmentKeyByIndustry[ind.title] || 'web-development'}`)}>
@@ -106,37 +161,146 @@ const IndustriesPage = () => {
       </section>
 
       {/* Horizontal roadmap per department */}
-      <section className="industries-roadmap">
+      {/* <section className="industries-roadmap">
         <div className="industries-roadmap-inner">
           <motion.h2 className="roadmap-heading" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>How We Deliver for {activeIndustry}</motion.h2>
           <IndustryRoadmap activeIndustry={activeIndustry} />
         </div>
-      </section>
+      </section> */}
+
+      <div className="indus-bld-container">
+        {/* Section Title */}
+        <div className="indus-bld-header">
+          <p className="small-text">Why indus-bld?</p>
+          <h2>Stacia helps you focus more on innovation and less on infrastructure.</h2>
+        </div>
+
+        {/* We host, you build */}
+        <div className="indus-bld-section">
+          <div className="indus-bld-text">
+            <h3>Mechanical Department</h3>
+            <p>
+              Stacia's Mechanical Department specializes in CAD engineering and product design. We handle the intricate details of mechanical components, allowing you to concentrate on your core ideas.
+            </p>
+            <p>
+              Our team uses advanced tools to create precise models and prototypes, ensuring efficiency, security, and cost savings in your projects.
+            </p>
+          </div>
+          <div className="indus-bld-image">
+             <DotLottieReact
+              src={mech}
+              style={{ width: '100%', height: '100%' }}
+              loop
+              autoplay
+            />
+          </div>
+        </div>
+
+        {/* Secure by design */}
+        <div className="indus-bld-section reverse">
+          <div className="indus-bld-text">
+            <h3>Electronic Department</h3>
+            <p>
+              In the Electronic Department, we focus on designing and developing electronic systems and components. You're in control of your innovations while we manage the technical complexities.
+            </p>
+            <p>
+              Our approach ensures isolation of processes and restriction of unnecessary integrations, adhering to a shared responsibility model for optimal results.
+            </p>
+          </div>
+          <div className="indus-bld-image">
+            {/* <img src={""} alt="Lock illustration" /> */}
+            <DotLottieReact
+              src={elec}
+              style={{ width: '100%', height: '100%' }}
+              loop
+              autoplay
+            />
+          </div>
+        </div>
+
+        {/* UI your way */}
+        <div className="indus-bld-section">
+          <div className="indus-bld-text">
+            <h3>Tech Department</h3>
+            <p>
+              The Tech Department at Stacia provides cutting-edge software and technology solutions using pre-built frameworks and components for quick development.
+            </p>
+            <p>
+              For advanced needs, we offer custom tech integrations using various programming languages and tools to suit your specific requirements.
+            </p>
+            <a href="#">See UI Kit →</a>
+          </div>
+          <div className="indus-bld-image">
+           <DotLottieReact
+              src={tech}
+              style={{ width: '100%', height: '100%' }}
+              loop
+              autoplay
+            />
+          </div>
+        </div>
+
+        {/* Testimonial */}
+        <div className="indus-bld-quote">
+          <blockquote>
+            With Stacia's integrated departments, we can develop products with minimal infrastructure concerns
+            <br />
+            making operations efficient , cost-effective , and secure.
+          </blockquote>
+          <p>- <b> Stacia Corp </b></p>
+        </div>
+
+        {/* Example apps */}
+        <div className="indus-bld-examples">
+          <h2>See what’s possible</h2>
+          <h3>Example Projects</h3>
+          <p>
+            Dive into our portfolio. Get inspired by our open-source examples and real-world applications developed by Stacia.
+          </p>
+          <a href="#">See more examples →</a>
+
+          <div className="indus-bld-section">
+            <div className="indus-bld-text">
+              <h3>Product Design Project for Manufacturing</h3>
+              <p>
+                Collaborate across departments to design and manufacture innovative products. This project integrates mechanical, electronic, and tech elements to create a comprehensive solution.
+              </p>
+              {/* <a href="#">Learn More →</a> */}
+            </div>
+
+            <div className="indus-bld-image">
+              <img src={""} alt="Jira example" />
+            </div>
+          </div>
+
+          <div className="industries-actions-inner">
+            <button className="action-btn" onClick={() => navigate('/services')}>
+              <span className="action-title">Explore Services</span>
+              <GoArrowRight />
+            </button>
+            <button className="action-btn" onClick={() => navigate('/project')}>
+              <span className="action-title">Browse Projects</span>
+              <GoArrowRight />
+            </button>
+            <button className="action-btn" onClick={() => navigate('/case-study')}>
+              <span className="action-title">See Case Studies</span>
+              <GoArrowRight />
+            </button>
+            <button className="action-btn primary" onClick={() => navigate('/client-visit')}>
+              <span className="action-title">Start Your Project</span>
+              <GoArrowRight />
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Quick actions */}
       <section className="industries-actions">
-        <div className="industries-actions-inner">
-          <button className="action-btn" onClick={() => navigate('/services')}>
-            <span className="action-title">Explore Services</span>
-            <GoArrowRight />
-          </button>
-          <button className="action-btn" onClick={() => navigate('/project')}>
-            <span className="action-title">Browse Projects</span>
-            <GoArrowRight />
-          </button>
-          <button className="action-btn" onClick={() => navigate('/case-study')}>
-            <span className="action-title">See Case Studies</span>
-            <GoArrowRight />
-          </button>
-          <button className="action-btn primary" onClick={() => navigate('/client-visit')}>
-            <span className="action-title">Start Your Project</span>
-            <GoArrowRight />
-          </button>
-        </div>
+
       </section>
 
       {/* Stats strip */}
-      <section className="industries-stats">
+      {/* <section className="industries-stats">
         <div className="industries-stats-inner">
           {[
             { k: 'Projects Delivered', v: '200+' },
@@ -145,6 +309,24 @@ const IndustriesPage = () => {
             { k: 'Uptime on SLAs', v: '99.2%' }
           ].map((s, i) => (
             <motion.div key={i} className="stat-card" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
+              <div className="stat-value">{s.v}</div>
+              <div className="stat-key">{s.k}</div>
+            </motion.div>
+          ))}
+        </div>
+      </section> */}
+
+      <section className="industries-stats">
+        <div className="industries-stats-inner">
+          {stats.map((s, i) => (
+            <motion.div
+              key={i}
+              className="stat-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+            >
               <div className="stat-value">{s.v}</div>
               <div className="stat-key">{s.k}</div>
             </motion.div>
@@ -169,7 +351,7 @@ const IndustriesPage = () => {
             <a href="/client-visit" className="cta-button">
               <span className="btn-icon"><FaRocket /></span>
               <span className="btn-text">Explore Our Process</span>
-              <span className="btn-arrow"><GoArrowRight /></span>
+              <span className="btn-arrow-idt"><GoArrowRight /></span>
             </a>
           </div>
         </div>

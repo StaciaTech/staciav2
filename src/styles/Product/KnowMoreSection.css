@@ -304,6 +304,11 @@
   right: 10%;
   animation-delay: 1.5s;
 }
+.element-5 {
+  top: 20%;
+  right: 6%;
+  animation-delay: 0.5s;
+}
 
 @keyframes float {
   0%, 100% {

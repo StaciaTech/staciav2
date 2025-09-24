@@ -177,7 +177,7 @@ const WhatsNewSection = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="whats-new-title">What's New at Stacia Corp</h2>
+          <h2 className="events-hosted-title">What's New at Stacia Corp</h2>
           <p className="whats-new-subtitle">
             Discover our latest innovations, groundbreaking projects, and cutting-edge services
           </p>

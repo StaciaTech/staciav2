@@ -63,7 +63,7 @@
 
 .industries-grid-section {
   padding: 50px 20px;
-  background: #f7f8fb;
+  /* background: #f7f8fb; */
 }
 
 .industries-grid {
@@ -89,7 +89,7 @@
 }
 
 .industry-card.selected {
-  border-color: #6b21a8;
+  /* border-color: #6b21a8; */
   box-shadow: 0 14px 26px rgba(107, 33, 168, 0.18);
 }
 
@@ -106,7 +106,7 @@
   background: #31088b;
   color: #ffffff;
   border-radius: 30%;
-  
+
 }
 
 .industry-title {
@@ -134,7 +134,7 @@
   padding: 8px 12px;
   border-radius: 10px;
   background: #f4f6fb;
-  color: #2b2b6d;
+  color: #0047ff;
   border: 1px solid #e4e8f3;
   cursor: pointer;
   font-weight: 600;
@@ -145,7 +145,7 @@
   border-color: #d7e1ff;
 }
 
-.industries-roadmap {
+/* .industries-roadmap {
   background: #ffffff;
   padding: 50px 20px;
 }
@@ -203,7 +203,7 @@
   top: 5px;
   left: 16px;
   background: #31088b;
-  /* background: #6b21a8; */
+  
   color: #ffffff;
   width: 28px;
   height: 28px;
@@ -231,7 +231,61 @@
   color: #4b5563;
   font-size: 14px;
   margin: 6px 0 0 0;
+} */
+
+.industries-roadmap {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
 }
+
+.roadmap-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.industry-roadmap-scroll {
+  overflow-x: auto;
+}
+
+.industry-roadmap {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.industry-step {
+  min-width: 200px;
+  text-align: center;
+}
+
+.step-badge {
+  background-color: #0052cc;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.step-body .step-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.forge-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
 
 /* Actions */
 .industries-actions {
@@ -258,7 +312,7 @@
   border-radius: 12px;
   border: 1px solid #e9ecf2;
   background: #f6f8ff;
-  color: #2b2b6d;
+  color: #0047ff;
   font-weight: 700;
   cursor: pointer;
 }
@@ -280,6 +334,39 @@
 }
 
 /* Stats */
+/* .industries-stats {
+  background: #f7f8fb;
+  padding: 26px 20px;
+}
+
+.industries-stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e9ecf2;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+.stat-key {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #4b5563;
+} */
+
 .industries-stats {
   background: #f7f8fb;
   padding: 26px 20px;
@@ -398,4 +485,98 @@
   .industry-roadmap {
     grid-auto-columns: 90%;
   }
+}
+
+
+.indus-bld-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  color: #172b4d;
+}
+
+.indus-bld-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.indus-bld-header .small-text {
+  color: #0052cc;
+  font-weight: 500;
+}
+
+.indus-bld-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.indus-bld-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  gap: 40px;
+}
+
+.indus-bld-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.indus-bld-text {
+  flex: 1;
+}
+
+.indus-bld-text h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.indus-bld-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.indus-bld-text a {
+  color: #0052cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.indus-bld-image {
+  flex: 1;
+  text-align: center;
+}
+
+.indus-bld-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.indus-bld-quote {
+  background: #253858;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.indus-bld-quote blockquote {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.indus-bld-examples h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.indus-bld-examples h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
