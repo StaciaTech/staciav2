@@ -104,7 +104,7 @@
 }
 
 .tab-button.active {
-  background:linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
+  background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
   color: #ffffff;
   border-color: #667eea;
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
@@ -256,7 +256,8 @@
 }
 
 .feature-tag {
-  background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
+  /* background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%); */
+  background: #31088b;
   color: #ffffff;
   padding: 6px 12px;
   border-radius: 15px;
@@ -280,7 +281,7 @@
   overflow: hidden;
 }
 
-.whats-new-cta::before {
+/* .whats-new-cta::before {
   content: '';
   position: absolute;
   top: 0;
@@ -289,7 +290,7 @@
   bottom: 0;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
   pointer-events: none;
-}
+} */
 
 .whats-new-cta h3 {
   font-size: 2.5rem;
@@ -1009,7 +1010,8 @@
   }
 
   .tab-button.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    background: #31088b;
   }
 }
 

@@ -16,8 +16,8 @@ import '../styles/Industries.css';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import tech from "../assets/TEchnology.lottie";
-import mech from"../assets/Engineer Gears.lottie";
-import elec from"../assets/Circuit Board.lottie";
+import mech from "../assets/Engineer Gears.lottie";
+import elec from "../assets/Circuit Board.lottie";
 
 
 
@@ -105,7 +105,7 @@ const IndustriesPage = () => {
       {/* Hero */}
       <section className="industries-hero">
         <div className="industries-hero-inner">
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>Industries We Serve</motion.h1>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}className='clt-title-section'>Industries We Serve</motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
             We build domain-specific solutions across key sectors, combining hardware, software, and AI to deliver measurable outcomes.
           </motion.p>
@@ -123,6 +123,135 @@ const IndustriesPage = () => {
           </motion.div>
         </div>
       </section>
+
+
+      {/*Department Information */}
+
+      <div className="indus-bld-container">
+        {/* Section Title */}
+        <div className="indus-bld-header">
+          {/* <p className="small-text">Why indus-bld?</p> */}
+          <h2>Stacia helps you focus more on innovation and less on infrastructure.</h2>
+        </div>
+
+        {/* We host, you build */}
+        <div className="indus-bld-section">
+          <div className="indus-bld-text">
+            <h3>Mechanical Department</h3>
+            <p>
+              Stacia's Mechanical Department specializes in CAD engineering and product design. We handle the intricate details of mechanical components, allowing you to concentrate on your core ideas.
+            </p>
+            <p>
+              Our team uses advanced tools to create precise models and prototypes, ensuring efficiency, security, and cost savings in your projects.
+            </p>
+          </div>
+          <div className="indus-bld-image">
+            <DotLottieReact
+              src={mech}
+              style={{ width: '100%', height: '100%' }}
+              loop
+              autoplay
+            />
+          </div>
+        </div>
+
+        {/* Secure by design */}
+        <div className="indus-bld-section reverse">
+          <div className="indus-bld-text">
+            <h3>Electronic Department</h3>
+            <p>
+              In the Electronic Department, we focus on designing and developing electronic systems and components. You're in control of your innovations while we manage the technical complexities.
+            </p>
+            <p>
+              Our approach ensures isolation of processes and restriction of unnecessary integrations, adhering to a shared responsibility model for optimal results.
+            </p>
+          </div>
+          <div className="indus-bld-image">
+            {/* <img src={""} alt="Lock illustration" /> */}
+            <DotLottieReact
+              src={elec}
+              style={{ width: '100%', height: '100%' }}
+              loop
+              autoplay
+            />
+          </div>
+        </div>
+
+        {/* UI your way */}
+        <div className="indus-bld-section">
+          <div className="indus-bld-text">
+            <h3>Tech Department</h3>
+            <p>
+              The Tech Department at Stacia provides cutting-edge software and technology solutions using pre-built frameworks and components for quick development.
+            </p>
+            <p>
+              For advanced needs, we offer custom tech integrations using various programming languages and tools to suit your specific requirements.
+            </p>
+            {/* <a href="#">See UI Kit →</a> */}
+          </div>
+          <div className="indus-bld-image">
+            <DotLottieReact
+              src={tech}
+              style={{ width: '100%', height: '100%' }}
+              loop
+              autoplay
+            />
+          </div>
+        </div>
+
+        {/* Testimonial */}
+        <div className="indus-bld-quote">
+          <blockquote>
+            With Stacia's integrated departments, we can develop products with minimal infrastructure concerns
+            <br />
+            making operations efficient , cost-effective , and secure.
+          </blockquote>
+          <p>- <b> Stacia Corp </b></p>
+        </div>
+
+        {/* Example apps */}
+        <div className="indus-bld-examples">
+          <h2>See what’s possible</h2>
+          <h3>Example Projects</h3>
+          <p>
+            Dive into our portfolio. Get inspired by our open-source examples and real-world applications developed by Stacia.
+          </p>
+          {/* <a href="#">See more examples →</a> */}
+
+          <div className="indus-bld-section">
+            <div className="indus-bld-text">
+              <h3>Product Design Project for Manufacturing</h3>
+              <p>
+                Collaborate across departments to design and manufacture innovative products. This project integrates mechanical, electronic, and tech elements to create a comprehensive solution.
+              </p>
+              {/* <a href="#">Learn More →</a> */}
+            </div>
+
+            <div className="indus-bld-image">
+              <img src={""} alt="Jira example" />
+            </div>
+          </div>
+
+          <div className="industries-actions-inner">
+            <button className="action-btn" onClick={() => navigate('/services')}>
+              <span className="action-title">Explore Services</span>
+              <GoArrowRight />
+            </button>
+            <button className="action-btn" onClick={() => navigate('/project')}>
+              <span className="action-title">Browse Projects</span>
+              <GoArrowRight />
+            </button>
+            <button className="action-btn" onClick={() => navigate('/case-study')}>
+              <span className="action-title">See Case Studies</span>
+              <GoArrowRight />
+            </button>
+            <button className="action-btn primary" onClick={() => navigate('/client-visit')}>
+              <span className="action-title">Start Your Project</span>
+              <GoArrowRight />
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Industry cards */}
       <section className="industries-grid-section">
@@ -170,13 +299,13 @@ const IndustriesPage = () => {
 
       <div className="indus-bld-container">
         {/* Section Title */}
-        <div className="indus-bld-header">
+        {/* <div className="indus-bld-header">
           <p className="small-text">Why indus-bld?</p>
           <h2>Stacia helps you focus more on innovation and less on infrastructure.</h2>
-        </div>
+        </div> */}
 
         {/* We host, you build */}
-        <div className="indus-bld-section">
+        {/* <div className="indus-bld-section">
           <div className="indus-bld-text">
             <h3>Mechanical Department</h3>
             <p>
@@ -187,17 +316,17 @@ const IndustriesPage = () => {
             </p>
           </div>
           <div className="indus-bld-image">
-             <DotLottieReact
+            <DotLottieReact
               src={mech}
               style={{ width: '100%', height: '100%' }}
               loop
               autoplay
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Secure by design */}
-        <div className="indus-bld-section reverse">
+        {/* <div className="indus-bld-section reverse">
           <div className="indus-bld-text">
             <h3>Electronic Department</h3>
             <p>
@@ -208,7 +337,7 @@ const IndustriesPage = () => {
             </p>
           </div>
           <div className="indus-bld-image">
-            {/* <img src={""} alt="Lock illustration" /> */}
+           
             <DotLottieReact
               src={elec}
               style={{ width: '100%', height: '100%' }}
@@ -216,10 +345,10 @@ const IndustriesPage = () => {
               autoplay
             />
           </div>
-        </div>
+        </div> */}
 
         {/* UI your way */}
-        <div className="indus-bld-section">
+        {/* <div className="indus-bld-section">
           <div className="indus-bld-text">
             <h3>Tech Department</h3>
             <p>
@@ -228,30 +357,30 @@ const IndustriesPage = () => {
             <p>
               For advanced needs, we offer custom tech integrations using various programming languages and tools to suit your specific requirements.
             </p>
-            <a href="#">See UI Kit →</a>
+            
           </div>
           <div className="indus-bld-image">
-           <DotLottieReact
+            <DotLottieReact
               src={tech}
               style={{ width: '100%', height: '100%' }}
               loop
               autoplay
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Testimonial */}
-        <div className="indus-bld-quote">
+        {/* <div className="indus-bld-quote">
           <blockquote>
             With Stacia's integrated departments, we can develop products with minimal infrastructure concerns
             <br />
             making operations efficient , cost-effective , and secure.
           </blockquote>
           <p>- <b> Stacia Corp </b></p>
-        </div>
+        </div> */}
 
         {/* Example apps */}
-        <div className="indus-bld-examples">
+        {/* <div className="indus-bld-examples">
           <h2>See what’s possible</h2>
           <h3>Example Projects</h3>
           <p>
@@ -265,7 +394,7 @@ const IndustriesPage = () => {
               <p>
                 Collaborate across departments to design and manufacture innovative products. This project integrates mechanical, electronic, and tech elements to create a comprehensive solution.
               </p>
-              {/* <a href="#">Learn More →</a> */}
+             
             </div>
 
             <div className="indus-bld-image">
@@ -291,13 +420,13 @@ const IndustriesPage = () => {
               <GoArrowRight />
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Quick actions */}
-      <section className="industries-actions">
+      {/* <section className="industries-actions">
 
-      </section>
+      </section> */}
 
       {/* Stats strip */}
       {/* <section className="industries-stats">

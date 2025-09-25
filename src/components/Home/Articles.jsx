@@ -260,6 +260,7 @@ import React, { useState } from "react";
 import "../../styles/Home/Articles.css";
 import { useNavigate } from "react-router-dom";
 import articlesData from "../../Data/SingleArticle.json";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 function SingleArticleCard({ article }) {
   const navigate = useNavigate();
@@ -351,15 +352,17 @@ function Articles() {
             className="carousel-arrow carousel-arrow-left"
             onClick={handlePrev}
             disabled={currentIndex === 0}
+           hidden={totalArticles > 3 ? false : true}
           >
-            ←
+            <GoArrowLeft />
           </button>
           <button
             className="carousel-arrow carousel-arrow-right"
             onClick={handleNext}
             disabled={currentIndex >= maxIndex}
+            hidden={currentIndex >= 2 ? false : true}
           >
-            →
+            <GoArrowRight />
           </button>
         </div>
       </div>

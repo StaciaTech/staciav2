@@ -22,6 +22,7 @@ const Advertisement = ({ setShowAdd }) => {
     },
     { name: "On click go to vencorp website",
       link:"https://www.vencorp.staciacorp.com/"
+      // link:"https://thevencorp.com/"
      },
   ];
 

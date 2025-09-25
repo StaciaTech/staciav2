@@ -207,87 +207,216 @@ p {
   margin: 0;
 }
    */
-.steps-container-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background: #0d0225; */
-    background: white;
-    /* background: #f8f9fa; */
-    min-height: 70vh;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+.steps-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #0d0225; */
+  background: white;
+  /* background: #f8f9fa; */
+  min-height: 70vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
+
 .steps-container {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #1e3a8a, #6d28d9, #a21caf);
-    /* background: #f8f9fa; */
-    color: white;
-    padding: 40px 20px;
-    height: 70vh;
-    width: 60%;
-    text-align: center;
-    border-radius: 5%;
-    overflow: scroll;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(0deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
+  /* background: linear-gradient(to bottom, #1e3a8a, #6d28d9, #a21caf); */
+  /* background: #f8f9fa; */
+  color: white;
+  padding: 40px 20px;
+  height: 70vh;
+  width: 60%;
+  text-align: center;
+  border-radius: 5%;
+  overflow: auto;
+  /* Hide scrollbar (cross-browser) */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE & Edge */
 }
-.steps-container2{
-    font-family: Arial, sans-serif;
-    /* background: linear-gradient(to bottom, #1e3a8a, #6d28d9, #a21caf); */
-    /* background: #f8f9fa; */
-    /* color: white; */
-    padding: 40px 20px;
-    min-height: 100vh;
-    width: 35%;
-    text-align: center;
-    border-radius: 2%;
+
+.steps-container::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+.steps-container2 {
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(to bottom, #1e3a8a, #6d28d9, #a21caf); */
+  /* background: #f8f9fa; */
+  /* color: white; */
+  padding: 40px 20px;
+  min-height: 100vh;
+  width: 35%;
+  text-align: center;
+  border-radius: 2%;
+  gap: 20px;
 }
 
 /* Department side panel */
-.dept-panel{background:#ffffff;border:1px solid #e9ecf2;border-radius:16px;padding:20px;box-shadow:0 8px 20px rgba(17,24,39,0.06);text-align:left}
-.dept-chip{display:inline-flex;align-items:center;gap:8px;background:#f6f8ff;border:1px solid #e3e7ff;color:#2b2b6d;border-radius:999px;padding:6px 10px;font-weight:700}
-.dept-chip .dot{width:8px;height:8px;border-radius:50%;background:#34d399;display:inline-block}
-.dept-name{font-size:12px}
-.dept-heading{margin:14px 0 6px 0;color:#111827;font-size:18px}
-.dept-desc{color:#4b5563;font-size:14px;margin:0 0 14px 0}
+.dept-panel {
+  background: #ffffff;
+  border: 1px solid #e9ecf2;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.06);
+  text-align: left
+}
 
-.dept-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
-.meta-item{background:#f8fafc;border:1px solid #eef2f7;border-radius:12px;padding:10px 12px;display:flex;flex-direction:column}
-.meta-label{font-size:11px;color:#6b7280}
-.meta-value{font-size:16px;font-weight:800;color:#111827}
+.dept-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f6f8ff;
+  border: 1px solid #e3e7ff;
+  color: #2b2b6d;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700
+}
 
-.roles-title{margin:8px 0;color:#111827;font-size:16px}
-.roles-grid{display:flex;flex-wrap:wrap;gap:8px}
-.role-pill{display:inline-flex;align-items:center;gap:6px;background:#ecfeff;border:1px solid #bae6fd;color:#0c4a6e;border-radius:999px;padding:8px 12px;font-weight:700}
-.role-icon{color:#06b6d4}
+.dept-chip .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #31088F;
+  /* background: #34d399; */
+  display: inline-block
+}
 
-@media (max-width: 991px){
-  .steps-container-wrapper{flex-direction:column;align-items:stretch}
-  .steps-container{width:100%;height:auto;border-radius:16px}
-  .steps-container2{width:100%;min-height:auto;padding-top:24px}
+.dept-name {
+  font-size: 12px
+}
+
+.dept-heading {
+  margin: 14px 0 6px 0;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.dept-desc {
+  color: #4b5563;
+  font-size: 14px;
+  margin: 0 0 14px 0
+}
+
+.dept-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 14px
+}
+
+.meta-item {
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column
+}
+
+.meta-label {
+  font-size: 11px;
+  color: #6b7280
+}
+
+.meta-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827
+}
+
+.roles-title {
+  margin: 8px 0;
+  color: #111827;
+  font-size: 16px
+}
+
+/* Grid layout for roles */
+.roles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Base styles for role-pill */
+.role-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f0f0;
+  color: #333;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer; /* Indicates clickability */
+  transition: all 0.3s ease; /* Smooth transition for hover and active states */
+}
+
+/* Hover state */
+.role-pill:hover {
+  background-color: #e0e0e0; /* Slightly darker gray for hover */
+  color: #333; /* Maintain text color */
+}
+
+/* Active (selected) state */
+.role-pill.active {
+  background-color: #007bff; /* Primary color for active state (e.g., blue) */
+  color: #fff; /* White text for contrast */
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3); /* Subtle shadow for emphasis */
+}
+
+
+.role-icon {
+  color: #06b6d4
+}
+
+@media (max-width: 991px) {
+  .steps-container-wrapper {
+    flex-direction: column;
+    align-items: stretch
+  }
+
+  .steps-container {
+    width: 100%;
+    height: auto;
+    border-radius: 16px
+  }
+
+  .steps-container2 {
+    width: 100%;
+    min-height: auto;
+    padding-top: 24px
+  }
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 0;
+  font-size: 2.5em;
+  margin-bottom: 0;
 }
 
 h2 {
-    font-size: 1.5em;
-    margin-top: 0;
-    margin-bottom: 40px;
-    font-style: italic;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-style: italic;
 }
 
 .steps {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 /* dotted line connector */
-/* .steps::before {
+.steps::before {
     content: "";
     position: absolute;
     width: 2px;
@@ -298,80 +427,129 @@ h2 {
     top: 0;
     transform: translateX(-50%);
     z-index: 0;
-} */
+}
 
 .step-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 700px;
-    margin: 40px 0;
-    position: relative;
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.6s ease-out;
-    z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 700px;
+  margin: 40px 0;
+  position: relative;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.6s ease-out;
+  z-index: 1;
 }
 
 .step-card.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .step-card.left {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .step-card.right {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .step-icon {
-    /* background: #34d399; */
-    background: #a2dfd9;
-    color: white;
-    font-size: 2.5rem;
-    border-radius: 50%;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 20px;
-    z-index: 2;
+  /* background: #34d399; */
+  background: #A2DCEA;
+  /* background: #a2dfd9; */
+  color: white;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  z-index: 2;
 }
 
 .step-content {
-    background: #4c1d95;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: left;
-    position: relative;
-    flex: 1;
+  /* background: #4c1d95; */
+  background: #4C18A5;
+
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  position: relative;
+  flex: 1;
 }
 
 .step-number {
-    background: #fbbf24;
-    color: black;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    position: absolute;
-    top: -15px;
-    left: -15px;
+  background: #fbbf24;
+  color: black;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  top: -15px;
+  left: -15px;
 }
 
 h3 {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
 }
 
 p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.5;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.spacer-desc {
+  flex: 1;
+  margin-top: 30px;
+  padding: 8%;
+ 
+  color: #6c757d;
+  background-color: #f9f9f9;
+  /* Light background to contrast with the left panel */
+  border: 1px solid #e0e0e0;
+  /* Subtle divider line */
+  overflow-y: auto;
+  /* Scroll if content overflows */
+  max-height: calc(100vh - 40px);
+  /* Adjust based on viewport height */
+  border-radius: 8px;
+}
+
+.role-description {
+  /* list-style-type: disc; */
+  /* Bullet points for list items */
+  padding-left: 20px;
+  /* Indent for bullet points */
+  margin: 0;
+  /* Remove default margin */
+  color: #333;
+  /* Dark text for readability */
+  font-size: 1.3rem;
+  font-weight: 500;
+  /* font-family: EulicMedium; */
+  /* Consistent font size */
+  line-height: 1.5;
+  /* Improved readability */
+}
+
+.role-description li {
+  margin-bottom: 10px;
+  /* Space between list items */
+  word-wrap: break-word;
+  /* Ensure long text wraps */
+}
+
+.role-description li:last-child {
+  margin-bottom: 0;
+  /* Remove margin from the last item */
 }

@@ -268,13 +268,17 @@ function HomePage() {
 
         {/* Stack Scroll Section with Toggle */}
         <div className="stack-scroll-container">
-          <div style={{ 
+          <div 
+          style={{ 
             display: "flex", 
             margin: "1rem", 
             paddingBottom: "1rem",
             justifyContent: "flex-end", 
-            alignItems: "center" 
-          }}>
+            alignItems: "center", 
+            
+          }}
+          // className="toggle-container1"
+          >
             <ToggleButton onToggle={handleToggleChange} />
           </div>
           <StackScroll onToggle={selectedToggle} />
