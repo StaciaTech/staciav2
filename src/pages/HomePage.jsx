@@ -170,6 +170,7 @@ import Star from "../components/Star";
 import "../styles/Home.css";
 import Popup from "../components/Popup";
 
+
 // Lazy-loaded components
 const NavBar = lazy(() => import("../components/NavBar"));
 const Footer = lazy(() => import("../components/Footer"));
@@ -190,6 +191,7 @@ const MobileArticle = lazy(() => import("../components/Home/MobileArticle"));
 const HomeCaseStudy = lazy(() => import("../components/Home/HomeCaseStudy"));
 const ClientComponent = lazy(() => import("./Client"));
 const WhatsNewSection = lazy(() => import("../components/Home/WhatsNewSection"));
+const OurHistoryTimeline = lazy(() => import("../components/Home/OurHistory"));
 
 const words = [
   "Innovation",
@@ -289,6 +291,7 @@ function HomePage() {
         <ClientComponent />
         {/* <ServiceDisplay /> */}
         <WhatsNewSection />
+        {/* <OurHistoryTimeline /> */}
         <EventsHosted />
         <HomeCaseStudy />
         <OurProjects />
