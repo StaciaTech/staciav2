@@ -105,7 +105,7 @@ const IndustriesPage = () => {
       {/* Hero */}
       <section className="industries-hero">
         <div className="industries-hero-inner">
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}className='clt-title-section'>Industries We Serve</motion.h1>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className='clt-title-section'>Industries We Serve</motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
             We build domain-specific solutions across key sectors, combining hardware, software, and AI to deliver measurable outcomes.
           </motion.p>
@@ -156,16 +156,8 @@ const IndustriesPage = () => {
         </div>
 
         {/* Secure by design */}
-        <div className="indus-bld-section reverse">
-          <div className="indus-bld-text">
-            <h3>Electronic Department</h3>
-            <p>
-              In the Electronic Department, we focus on designing and developing electronic systems and components. You're in control of your innovations while we manage the technical complexities.
-            </p>
-            <p>
-              Our approach ensures isolation of processes and restriction of unnecessary integrations, adhering to a shared responsibility model for optimal results.
-            </p>
-          </div>
+        <div className="indus-bld-section ">
+
           <div className="indus-bld-image">
             {/* <img src={""} alt="Lock illustration" /> */}
             <DotLottieReact
@@ -174,6 +166,15 @@ const IndustriesPage = () => {
               loop
               autoplay
             />
+          </div>
+          <div className="indus-bld-text">
+            <h3>Electronic Department</h3>
+            <p>
+              In the Electronic Department, we focus on designing and developing electronic systems and components. You're in control of your innovations while we manage the technical complexities.
+            </p>
+            <p>
+              Our approach ensures isolation of processes and restriction of unnecessary integrations, adhering to a shared responsibility model for optimal results.
+            </p>
           </div>
         </div>
 

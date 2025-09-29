@@ -391,6 +391,7 @@ import {
 } from "react-icons/fa";
 import { GrCurrency, GrDocumentPerformance, GrShieldSecurity } from 'react-icons/gr';
 import { AiOutlineSolution } from 'react-icons/ai';
+import { IoMdMail } from 'react-icons/io';
 
 // Lazy load components
 const NavBar = lazy(() => import('../components/NavBar'));
@@ -436,11 +437,11 @@ const ClientVisit = () => {
         return () => clearInterval(interval);
     }, [roadmapSteps.length]);
 
-    const handleInquiryClick = () => {
-        startTransition(() => {
-            setIsModalOpen(true);
-        });
-    };
+    // const handleInquiryClick = () => {
+    //     startTransition(() => {
+    //         setIsModalOpen(true);
+    //     });
+    // };
 
     const handleModalClose = () => {
         startTransition(() => {
@@ -454,6 +455,80 @@ const ClientVisit = () => {
         });
     };
 
+    const [isFormVisible, setIsFormVisible] = useState(false); // Form for "Start Your Project Today"
+    const [isFormVisible1, setIsFormVisible1] = useState(false); // Form for "Start Your Project"
+    const [isFormVisibleCall, setIsFormVisibleCall] = useState(false); // Form for "Schedule Call"
+    const [email, setEmail] = useState('');
+    const [result, setResult] = useState('');
+    // Handle button click to show/hide forms and close others
+    const handleInquiryClick = () => {
+        setIsFormVisible(!isFormVisible);
+        setIsFormVisible1(false); // Close other forms
+        setIsFormVisibleCall(false); // Close other forms
+        setResult(''); // Reset result message
+        setEmail(''); // Reset email input
+    };
+    const handleInquiryClick1 = () => {
+        setIsFormVisible1(!isFormVisible1);
+        setIsFormVisible(false); // Close other forms
+        setIsFormVisibleCall(false); // Close other forms
+        setResult(''); // Reset result message
+        setEmail(''); // Reset email input
+    };
+    const handleInquiryClick2 = () => {
+        setIsFormVisibleCall(!isFormVisibleCall);
+        setIsFormVisible(false); // Close other forms
+        setIsFormVisible1(false); // Close other forms
+        setResult(''); // Reset result message
+        setEmail(''); // Reset email input
+    };
+    // Basic email validation regex
+    const validateEmail = (email) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    };
+    // Handle form submission with Web3Forms
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult('Sending....');
+        // Validate email
+        if (!validateEmail(email)) {
+            setResult('Please enter a valid email address.');
+            return;
+        }
+        // Create FormData
+        const formData = new FormData();
+        formData.append('email', email);
+        formData.append("access_key", "f05920d0-3b2a-427b-bd0e-de098dfadd58");
+        formData.append("subject", "New enquiries Stacia Corp Client Visit Page");
+        formData.append("from_name", "Stacia Corp Website"); // Replace with your Web3Forms Access Key
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData,
+            });
+            const data = await response.json();
+            if (data.success) {
+                setResult('Email sent successfully to admin!');
+                setEmail(''); // Clear input
+                setIsFormVisible(false); // Hide form
+            } else {
+                console.error('Web3Forms Error:', data);
+                setResult(data.message || 'Failed to send email. Please try again.');
+            }
+        } catch (error) {
+            console.error('Submission Error:', error);
+            setResult('Failed to send email. Please try again later.');
+        }
+    };
+    useEffect(() => {
+        if (result) {
+            const timer = setTimeout(() => {
+                setResult('');
+            }, 3000); // 3000 milliseconds = 3 seconds
+            return () => clearTimeout(timer); // Cleanup timer on unmount or result change
+        }
+    }, [result]);
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <div className="client-visit-page">
@@ -499,7 +574,7 @@ const ClientVisit = () => {
                                 </motion.p>
                             </div>
 
-                            <motion.div
+                            {/* <motion.div
                                 className="welcome-actions"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -526,8 +601,161 @@ const ClientVisit = () => {
                                     <span className="btn-text">Schedule Call</span>
                                     <span className="btn-arrow-clt"><GoArrowDownRight /></span>
                                 </motion.button>
+                            </motion.div> */}
+                            <motion.div
+                                className="welcome-actions"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.8 }}
+                            >
+                                {!isFormVisible1 && (<motion.button
+                                    className="welcome-btn primary"
+                                    onClick={handleInquiryClick1}
+                                    whileHover={{ scale: 1.05, y: -10 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <span className="btn-icon"><BiMessageDetail /></span>
+                                    <span className="btn-text">Start Your Project</span>
+                                    <span className="btn-arrow"><GoArrowDownRight /></span>
+                                </motion.button>
+                                )}
+                                {!isFormVisibleCall && (<motion.button
+                                    className="welcome-btn secondary"
+                                    onClick={handleInquiryClick2}
+                                    whileHover={{ scale: 1.05, y: -2 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <span className="btn-icon"><FaPhoneVolume /></span>
+                                    <span className="btn-text">Schedule Call</span>
+                                    <span className="btn-arrow"><GoArrowDownRight /></span>
+                                </motion.button>)}
+
                             </motion.div>
+                            {isFormVisible1 && (
+                                <form
+                                    className="email-form"
+                                    onSubmit={onSubmit}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '10px',
+                                        padding: '10px',
+                                        backgroundColor: '#F0F0F0',
+                                        borderRadius: '25px',
+                                        maxWidth: '400px',
+                                        margin: '1rem auto',
+                                    }}
+                                >
+                                    <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+                                        <span style={{ marginRight: '8px', color: '#8E6FFF' }}><IoMdMail /></span>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            placeholder="Your email address"
+                                            required
+                                            style={{
+                                                flexGrow: 1,
+                                                border: 'none',
+                                                background: 'transparent',
+                                                outline: 'none',
+                                                fontSize: '16px',
+                                                color: '#333',
+                                            }}
+                                        />
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        style={{
+                                            backgroundColor: '#8E6FFF',
+                                            color: 'white',
+                                            border: 'none',
+                                            borderRadius: '20px',
+                                            padding: '10px 20px',
+                                            cursor: 'pointer',
+                                            fontSize: '16px',
+                                            transition: 'background-color 0.3s',
+                                        }}
+                                        onMouseOver={(e) => (e.target.style.backgroundColor = '#7B5EF8')}
+                                        onMouseOut={(e) => (e.target.style.backgroundColor = '#8E6FFF')}
+                                    >
+                                        Submit
+                                    </button>
+                                </form>
+                            )}
+                            {/* Form for "Schedule Call" (can be customized differently if needed) */}
+                            {isFormVisibleCall && (
+                                <form
+                                    className="email-form"
+                                    onSubmit={onSubmit}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '10px',
+                                        padding: '10px',
+                                        backgroundColor: '#F0F0F0',
+                                        borderRadius: '25px',
+                                        maxWidth: '400px',
+                                        margin: '1rem auto',
+                                    }}
+                                >
+                                    <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+                                        <span style={{ marginRight: '8px', color: '#8E6FFF' }}><IoMdMail /> </span>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            placeholder="Your email address"
+                                            required
+                                            style={{
+                                                flexGrow: 1,
+                                                border: 'none',
+                                                background: 'transparent',
+                                                outline: 'none',
+                                                fontSize: '16px',
+                                                color: '#333',
+                                            }}
+                                        />
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        style={{
+                                            backgroundColor: '#8E6FFF',
+                                            color: 'white',
+                                            border: 'none',
+                                            borderRadius: '20px',
+                                            padding: '10px 20px',
+                                            cursor: 'pointer',
+                                            fontSize: '16px',
+                                            transition: 'background-color 0.3s',
+                                        }}
+                                        onMouseOver={(e) => (e.target.style.backgroundColor = '#7B5EF8')}
+                                        onMouseOut={(e) => (e.target.style.backgroundColor = '#8E6FFF')}
+                                    >
+                                        Submit
+                                    </button>
+                                </form>
+                            )}
+                            {result && (
+                                <p
+                                    className={result.includes('Failed') ? 'error-message' : 'success-message'}
+                                    style={{ textAlign: 'center', marginTop: '10px' }}
+                                >
+                                    {result}
+                                </p>
+                            )}
+
+
+
+
+
+
                         </motion.div>
+
 
                         <motion.div
                             className="welcome-visual"
@@ -554,11 +782,11 @@ const ClientVisit = () => {
                                         <span><FaChartLine /></span>
                                         <span>Analytics</span>
                                     </div>
-                                    <div className="floating-element element-5"  style={{ color: "#ffffff" }}>
+                                    <div className="floating-element element-5" style={{ color: "#ffffff" }}>
                                         <span><GrDocumentPerformance /></span>
                                         <span>Performance</span>
                                     </div>
-                                    <div className="floating-element element-3"  style={{ color: "#ffffff" }}>
+                                    <div className="floating-element element-3" style={{ color: "#ffffff" }}>
                                         <span><FaWrench /></span>
                                         <span>Customization</span>
                                     </div>
@@ -569,6 +797,7 @@ const ClientVisit = () => {
                                 </div>
                             </div>
                         </motion.div>
+
                     </div>
                 </section>
 
@@ -595,7 +824,7 @@ const ClientVisit = () => {
                                         whileHover={{ scale: 1.05, y: -2 }}
                                         whileTap={{ scale: 0.95 }}
                                         style={{ '--dept-color': "#31088b" }}
-                                        // style={{ '--dept-color': dept.color }}
+                                    // style={{ '--dept-color': dept.color }}
                                     >
                                         <span className="dept-name">{dept.name}</span>
                                     </motion.button>
@@ -635,7 +864,7 @@ const ClientVisit = () => {
                                     description: "Quick turnaround times without compromising quality"
                                 },
                                 {
-                                    icon:<FaLock />,
+                                    icon: <FaLock />,
                                     title: "Secure & Reliable",
                                     description: "Enterprise-grade security and 99.9% uptime guarantee"
                                 },
@@ -686,16 +915,84 @@ const ClientVisit = () => {
                             <p className="cta-description">
                                 Let's discuss your project and see how we can help you achieve your goals
                             </p>
-                            <motion.button
-                                className="cta-button"
-                                onClick={handleInquiryClick}
-                                whileHover={{ scale: 1.05, y: -2 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                <span className="btn-icon"><FaRocket /></span>
-                                <span className="btn-text">Start Your Project Today</span>
-                                <span className="btn-arrow"><GoArrowDownRight /></span>
-                            </motion.button>
+                            <div className='inquiry-container'>
+                                {!isFormVisible && (
+                                    <motion.button
+                                        className="cta-button"
+                                        onClick={handleInquiryClick}
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                        whileTap={{ scale: 0.95 }}
+                                    >
+                                        <span className="btn-icon"><FaRocket /></span>
+                                        <span className="btn-text">Start Your Project Today</span>
+                                        <span className="btn-arrow"><GoArrowDownRight /></span>
+                                    </motion.button>
+                                )}
+
+                                {isFormVisible && (
+                                    <form
+                                        className="email-form"
+                                        onSubmit={onSubmit}
+                                        style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '10px',
+                                            padding: '10px',
+                                            backgroundColor: '#F0F0F0',
+                                            borderRadius: '25px',
+                                            maxWidth: '400px',
+                                            margin: '1rem auto',
+                                        }}
+                                    >
+                                        <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+                                            <span style={{ marginRight: '8px', color: '#8E6FFF' }}><IoMdMail /></span>
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                name="email"
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                                placeholder="Your email address"
+                                                required
+                                                style={{
+                                                    flexGrow: 1,
+                                                    border: 'none',
+                                                    background: 'transparent',
+                                                    outline: 'none',
+                                                    fontSize: '16px',
+                                                    color: '#333',
+                                                }}
+                                            />
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            style={{
+                                                backgroundColor: '#8E6FFF',
+                                                color: 'white',
+                                                border: 'none',
+                                                borderRadius: '20px',
+                                                padding: '10px 20px',
+                                                cursor: 'pointer',
+                                                fontSize: '16px',
+                                                transition: 'background-color 0.3s',
+                                            }}
+                                            onMouseOver={(e) => (e.target.style.backgroundColor = '#7B5EF8')}
+                                            onMouseOut={(e) => (e.target.style.backgroundColor = '#8E6FFF')}
+                                        >
+                                            submit
+                                        </button>
+                                    </form>
+                                )}
+                                {result && (
+                                    <p
+                                        className={result.includes('Failed') ? 'error-message' : 'success-message'}
+                                        style={{ textAlign: 'center', marginTop: '10px' }}
+                                    >
+                                        {result}
+                                    </p>
+                                )}
+                            </div>
+
                         </motion.div>
                     </div>
                 </section>

@@ -324,7 +324,7 @@ function Articles() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalArticles = articlesData.articles.length;
   const cardsPerSlide = 3; // Number of cards to slide at a time
-  const visibleCards = 3; // Number of cards visible on screen
+  const visibleCards = 2; // Number of cards visible on screen
 
   // Calculate the maximum index to stop at (last group of 3 cards)
   const maxIndex = Math.max(0, totalArticles - visibleCards);

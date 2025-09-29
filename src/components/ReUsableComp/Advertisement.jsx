@@ -21,8 +21,8 @@ const Advertisement = ({ setShowAdd }) => {
       link: "https://play.google.com/store/apps/details?id=com.vikram1201.TNAPEx",
     },
     { name: "On click go to vencorp website",
-      link:"https://www.vencorp.staciacorp.com/"
-      // link:"https://thevencorp.com/"
+      // link:"https://www.vencorp.staciacorp.com/"
+      link:"https://thevencorp.com/"
      },
   ];
 

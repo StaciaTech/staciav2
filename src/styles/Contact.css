@@ -412,13 +412,15 @@ body.no-scroll {
 
   .contact-form-image-container {
     display: flex;
-    width: 40%;
+    width: 60%;
+    /* width: 40%; */
     padding-right: 60px;
     padding-top: 50px;
   }
 
   .contact-form-content-container {
-    width: 57%;
+    width: 30%;
+    /* width: 57%; */
     padding: 4rem 0rem;
   }
 
