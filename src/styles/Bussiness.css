@@ -1,212 +1,3 @@
-/* .container {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #4c1d95, #7e22ce);
-  color: white;
-  padding: 40px 20px;
-  min-height: 100vh;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 0;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-
-.steps {
-  position: relative;
-  max-width: 600px;
-  width: 100%;
-}
-
-.steps::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  height: 100%;
-  border-left: 2px dashed rgba(255, 255, 255, 0.5);
-  transform: translateX(-50%);
-}
-
-.step {
-  display: flex;
-  align-items: center;
-  margin-bottom: 60px;
-  position: relative;
-  z-index: 1;
-}
-
-.step.left {
-  justify-content: flex-start;
-}
-
-.step.left .content {
-  order: 2;
-  margin-left: 20px;
-}
-
-.step.left .icon {
-  order: 1;
-}
-
-.step.left .number {
-  left: -15px;
-}
-
-.step.right {
-  justify-content: flex-end;
-}
-
-.step.right .content {
-  order: 1;
-  margin-right: 20px;
-}
-
-.step.right .icon {
-  order: 2;
-}
-
-.step.right .number {
-  right: -15px;
-}
-
-.icon {
-  color: white;
-  opacity: 0.8;
-  flex-shrink: 0;
-}
-
-.content {
-  background: #6d28d9;
-  padding: 15px 20px;
-  border-radius: 10px;
-  position: relative;
-  width: 45%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.number {
-  background: #fbbf24;
-  color: black;
-  font-weight: bold;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -15px;
-}
-
-h3 {
-  font-size: 1.3em;
-  margin: 0 0 10px 0;
-}
-
-p {
-  font-size: 1em;
-  line-height: 1.4;
-  margin: 0;
-  color: #e9d5ff;
-} */
-/* new---------->*/
-/* .container {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #2a1e5c, #6b21a8);
-  color: white;
-  padding: 40px 20px;
-  min-height: 100vh;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 0;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-top: 0;
-  margin-bottom: 40px;
-  font-style: italic;
-}
-
-.steps {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.line {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.step {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 60px;
-  position: relative;
-  z-index: 1;
-}
-
-.step .icon {
-  font-size: 2em;
-  margin: 0 10px;
-}
-
-.step .content {
-  background: #4c1d95;
-  padding: 15px;
-  border-radius: 10px;
-  width: 70%;
-  position: relative;
-  text-align: left;
-}
-
-.number {
-  background: #f59e0b;
-  color: black;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -15px;
-  left: -15px;
-}
-
-h3 {
-  font-size: 1.2em;
-  margin: 5px 0;
-}
-
-p {
-  font-size: 0.95em;
-  line-height: 1.4;
-  margin: 0;
-}
-   */
 .steps-container-wrapper {
   display: flex;
   justify-content: center;
@@ -355,21 +146,28 @@ p {
   border-radius: 999px;
   padding: 8px 12px;
   font-weight: 700;
-  cursor: pointer; /* Indicates clickability */
-  transition: all 0.3s ease; /* Smooth transition for hover and active states */
+  cursor: pointer;
+  /* Indicates clickability */
+  transition: all 0.3s ease;
+  /* Smooth transition for hover and active states */
 }
 
 /* Hover state */
 .role-pill:hover {
-  background-color: #e0e0e0; /* Slightly darker gray for hover */
-  color: #333; /* Maintain text color */
+  background-color: #e0e0e0;
+  /* Slightly darker gray for hover */
+  color: #333;
+  /* Maintain text color */
 }
 
 /* Active (selected) state */
 .role-pill.active {
-  background-color: #007bff; /* Primary color for active state (e.g., blue) */
-  color: #fff; /* White text for contrast */
-  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3); /* Subtle shadow for emphasis */
+  background-color: #007bff;
+  /* Primary color for active state (e.g., blue) */
+  color: #fff;
+  /* White text for contrast */
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+  /* Subtle shadow for emphasis */
 }
 
 
@@ -416,7 +214,7 @@ h2 {
 }
 
 /* dotted line connector */
-.steps::before {
+/* .steps::before {
     content: "";
     position: absolute;
     width: 2px;
@@ -427,14 +225,15 @@ h2 {
     top: 0;
     transform: translateX(-50%);
     z-index: 0;
-}
+} */
 
 .step-card {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
-  width: 90%;
-  max-width: 700px;
+  width: 60%;
+  max-width: 500px;
+
   margin: 40px 0;
   position: relative;
   opacity: 0;
@@ -450,15 +249,17 @@ h2 {
 
 .step-card.left {
   flex-direction: row;
+  margin-left: 10%;
 }
 
 .step-card.right {
   flex-direction: row-reverse;
+  margin-right: 10%;
 }
 
 .step-icon {
   /* background: #34d399; */
-  background: #A2DCEA;
+  /* background: #A2DCEA; */
   /* background: #a2dfd9; */
   color: white;
   font-size: 2.5rem;
@@ -469,6 +270,7 @@ h2 {
   justify-content: center;
   margin: 0 20px;
   z-index: 2;
+  position: absolute;
 }
 
 .step-content {
@@ -477,9 +279,15 @@ h2 {
 
   padding: 20px;
   border-radius: 12px;
-  text-align: left;
+  /* text-align: left; */
   position: relative;
   flex: 1;
+}
+.step-content.first-step {
+  text-align: right
+}
+ .step-content.second-step {
+  text-align: left
 }
 
 .step-number {
@@ -512,7 +320,7 @@ p {
   flex: 1;
   margin-top: 30px;
   padding: 8%;
- 
+
   color: #6c757d;
   background-color: #f9f9f9;
   /* Light background to contrast with the left panel */
@@ -552,4 +360,35 @@ p {
 .role-description li:last-child {
   margin-bottom: 0;
   /* Remove margin from the last item */
+}
+
+.svg-container {
+  position: absolute;
+  top: -90px;
+  width: 120px;
+  height: 120px;
+  z-index: 0;
+}
+
+.svg-container.left {
+  right: 300px;
+}
+
+.svg-container.right {
+  left: 300px;
+}
+
+.decorative-img.none {
+  display: none;
+}
+
+.decorative-img {
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+}
+.phone-img {
+  width: 20%;
+  height: 30%;
+  object-fit: contain;
 }

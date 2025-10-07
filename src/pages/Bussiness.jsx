@@ -415,7 +415,9 @@ import {
     FaBriefcase,
 } from "react-icons/fa";
 import "../styles/Bussiness.css";
-import img from '.././assets/cir.svg';
+import phone from '../assets/phone.svg';
+import arrright from '.././assets/arrow_right.svg';
+import arrleft from '.././assets/arrow_left.svg';
 
 // Map icon names to Font Awesome components
 const iconMap = {
@@ -516,9 +518,12 @@ const BusinessSteps = ({ dept }) => {
                                 className={`step-card ${index % 2 === 0 ? "left" : "right"}`}
                             >
                                 <div
-                                    className="step-icon"
-                                >{IconComponent ? <IconComponent /> : step.icon}</div>
-                                <div className="step-content">
+                                        className="step-icon"
+                                    >
+                                    {/* {IconComponent ? <IconComponent /> : step.icon} */}
+                                    {/* <img src={phone} alt="phone" className="phone-img" /> */}
+                                    </div>
+                                <div className={`step-content ${index %2 === 0 ? 'first-step' : 'second-step'}`}>
                                     <div className="step-number">{step.id}</div>
                                     <h3>{step.title}</h3>
                                     <p>{step.description}</p>
@@ -529,7 +534,12 @@ const BusinessSteps = ({ dept }) => {
                                         ))}
                                     </div>
                                 </div>
+
+                                <div className={`svg-container ${index % 2 === 0 ? 'left' : 'right'}`}>
+                                    <img src={`${index % 2 === 0 ? arrleft : arrright}`} alt="decorative" className={`decorative-img ${index === 0 ? 'none' : ''}`} />
+                                </div>
                             </div>
+
                         );
                     })}
                 </div>
@@ -565,7 +575,7 @@ const BusinessSteps = ({ dept }) => {
                 </div>
                 <div className="spacer-desc">
                     <p className="role-description">
-                       " {selectedRole ? selectedRole.description : ''} "
+                        " {selectedRole ? selectedRole.description : ''} "
                     </p>
                 </div>
             </div>

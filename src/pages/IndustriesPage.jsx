@@ -37,37 +37,55 @@ const industries = [
     id: 1,
     title: 'Food-Processing',
     description: 'Stacia Corp specializes in innovative engineering solutions for the food processing industry, including custom machinery design, automation systems, and prototyping to enhance efficiency, safety, and compliance in food production and handling.',
-    icon: <MdOutlineFoodBank />
+    icon: <MdOutlineFoodBank />,
+    services: ['e-commerce'],
+    projects: ['Food-Processing'],
+    caseStudies: ['Food-Processing']
   },
   {
     id: 2,
     title: 'Agriculture',
     description: 'In the agriculture sector, Stacia provides advanced CAD engineering and product development services, focusing on equipment design, precision farming tools, and sustainable solutions to optimize crop yields and resource management.',
-    icon: <GiPlantRoots />
+    icon: <GiPlantRoots />,
+    services: ['e-commerce'],
+    projects: ['Food-Processing'],
+    caseStudies: ['Food-Processing']
   },
   {
     id: 3,
     title: 'Energy',
     description: 'Stacia supports the energy industry with cutting-edge design and manufacturing services, including renewable energy components, efficient systems engineering, and prototypes for solar, wind, and other sustainable energy technologies.',
-    icon: <SlEnergy />
+    icon: <SlEnergy />,
+    services: ['e-commerce'],
+    projects: ['Food-Processing'],
+    caseStudies: ['Food-Processing']
   },
   {
     id: 4,
     title: 'Manufacturing',
     description: 'For manufacturing, Stacia offers comprehensive services in product design, CAD modeling, and custom fabrication, helping companies streamline production processes, reduce costs, and bring innovative products to market faster.',
-    icon: <MdOutlinePrecisionManufacturing />
+    icon: <MdOutlinePrecisionManufacturing />,
+    services: ['e-commerce'],
+    projects: ['Food-Processing'],
+    caseStudies: ['Food-Processing']
   },
   {
     id: 5,
     title: 'Consumer Electronic',
     description: 'Stacia excels in consumer electronics by providing electronic system design, PCB development, and integrated tech solutions, ensuring high-quality, user-friendly devices with a focus on innovation and rapid prototyping.',
-    icon: <VscChip />
+    icon: <VscChip />,
+    services: ['e-commerce'],
+    projects: ['Food-Processing'],
+    caseStudies: ['Food-Processing']
   },
   {
     id: 6,
     title: 'Automotive',
     description: 'In the automotive industry, Stacia delivers mechanical and electronic engineering expertise for vehicle components, design optimization, and manufacturing support, contributing to safer, more efficient, and advanced automotive products.',
-    icon: <FaCarSide />
+    icon: <FaCarSide />,
+    services: ['e-commerce'],
+    projects: ['Food-Processing'],
+    caseStudies: ['Food-Processing']
   },
 ];
 

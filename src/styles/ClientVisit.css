@@ -710,13 +710,13 @@
   display: none;
 }
 
-.step-content {
+/* .step-content {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-top: 10px;
-}
+} */
 
 .step-icon {
   font-size: 2.5rem;
