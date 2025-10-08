@@ -2,7 +2,7 @@
   "logos": [
     {
       "name": "Stacia Corp",
-      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis",
+      "description": "Stacia Corp specializes in mechanical engineering, advanced machine solutions, and R&D, providing innovative, precise, and efficient designs that enhance industrial performance and drive technological advancement.",
       "svgFile": {
         "imageUrl": "./assets/Stacia-corp.webp"
       },
@@ -12,7 +12,7 @@
     },
     {
       "name": "Stacia Tech",
-      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis",
+      "description": "Explore our expertise in custom software development, data analytics, AI solutions, and innovative technology-driven applications designed to meet your unique business needs and accelerate digital growth.",
       "svgFile": {
         "imageUrl": "/assets/Stacia-tech.webp"
       },
@@ -22,7 +22,7 @@
     },
     {
       "name": "Sastem  Global  ",
-      "description": "Lorem ipsum dolor sit amet consectetur. Ullamcorper eu egestas tempor nunc nec habitant. Dolor vulputate tempor sagittis",
+      "description": "Sastem Global specializes in electronics product development, delivering innovative and intelligent solutions that drive progress toward a smarter, more connected Society 5.0 future.",
       "svgFile": {
         "imageUrl": "/assets/Stacia-global.webp"
       },
@@ -89,7 +89,7 @@
       "display": {
         "displayUrl": "./assets/mediakit/Stacia-Corp.webp"
       },
-      "name": "Stacia Corp Broucher",
+      "name": "Stacia Corp Brocher",
       "file": {
         "fileUrl": "/assets/mediakit/Stacia-Corp.pdf"
       }
@@ -98,7 +98,7 @@
       "display": {
         "displayUrl": "./assets/mediakit/Sastem-Global.webp"
       },
-      "name": "Sastem Global Broucher",
+      "name": "Sastem Global Brocher",
       "file": {
         "fileUrl": "/assets/mediakit/Sastem-Global.pdf"
       }
@@ -107,7 +107,7 @@
       "display": {
         "displayUrl": "./assets/mediakit/Stacia-Tech.webp"
       },
-      "name": "Stacia Tech Broucher",
+      "name": "Stacia Tech Brocher",
       "file": {
         "fileUrl": "/assets/mediakit/Stacia-Tech.pdf"
       }
@@ -116,7 +116,7 @@
      "display": {
        "displayUrl": "./assets/mediakit/Stacia-Group.webp"
      },
-     "name": "Stacia Broucher",
+     "name": "Stacia Brocher",
      "file": {
        "fileUrl": "/assets/mediakit/Stacia-Group.pdf"
      }

@@ -455,7 +455,7 @@ function HomePage() {
               // backgroundColor: "white"
             }}
           >
-            {isToggleVisible && <ToggleButton onToggle={handleToggleChange} />}
+            {/* {isToggleVisible && <ToggleButton onToggle={handleToggleChange} />} */}
           </div>
           <StackScroll onToggle={selectedToggle} onLastCardVisible={handleLastCardVisible} />
         </div>
@@ -463,9 +463,9 @@ function HomePage() {
         {/* Other Sections */}
         <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
-        {/* <ServiceDisplay /> */}
-        <WhatsNewSection />
-        {/* <OurHistoryTimeline /> */}
+        <ServiceDisplay />  
+        {/* <WhatsNewSection /> */}
+        <OurHistoryTimeline />
         <EventsHosted />
         <HomeCaseStudy />
         <OurProjects />

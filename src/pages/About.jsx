@@ -7,6 +7,9 @@ import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
 import Stacialogo from "../assets/aboutstacialogo.svg";
 import fiveLogo from "../assets/5yrs.png";
+import mission from "../assets/mission.png";
+import story from "../assets/story.png";
+// import fiveLogo from "../assets/6th anniversary_0.svg";
 // import { PiPottedPlant } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 // import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
@@ -272,7 +275,7 @@ function About() {
           </div>
           <div className="about-section2-img-container">
             <img
-              src="https://plus.unsplash.com/premium_photo-1687382111414-7b87afa5da34?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGltYWdlfGVufDB8fDB8fHwws"
+              src={story}
               alt=""
             />
           </div>
@@ -351,7 +354,7 @@ function About() {
           </div>
           <div>
             <img
-              src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+              src={mission}
               alt=""
             />
           </div>
