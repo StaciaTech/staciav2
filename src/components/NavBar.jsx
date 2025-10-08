@@ -5,6 +5,7 @@ import Star from "../components/Star";
 import StaciaLogo from "../assets/Stacia Monogram.svg";
 import StaciaLogoText from "../assets/Stacia logo.svg";
 import five from "../assets/5yr logo.svg";
+// import five from "../assets/home page.svg";
 import ContactIcon from "../assets/ContactIcon.svg";
 import { NavLink, Link } from "react-router-dom";
 import MobileNav from "../assets/MobileNav.png";
@@ -302,7 +303,7 @@ function NavBar() {
               ref={navAreaRef}
               onMouseLeave={() => setActiveDropdown(null)} // Close dropdowns when leaving nav area
             >
-              <Star />
+              {/* <Star /> */}
               <NavLink
                 to={"/services"}
                 onClick={() => {
@@ -372,8 +373,30 @@ function NavBar() {
                 style={{ position: "relative" }}
                 onMouseEnter={() => setActiveDropdown(null)} // No dropdown for Competition
               >
-                Competition
+                Events
               </NavLink>
+              {/* <NavLink
+                to={"/industries"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+                className="nav-items"
+                style={{ position: "relative" }}
+                onMouseEnter={() => setActiveDropdown(null)} // No dropdown for Competition
+              >
+                Industries
+              </NavLink>
+              <NavLink
+                to={"/client-visit"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+                className="nav-items"
+                style={{ position: "relative" }}
+                onMouseEnter={() => setActiveDropdown(null)} // No dropdown for Competition
+              >
+                Client
+              </NavLink> */}
               <NavLink
                 to={"/about"}
                 onClick={() => {

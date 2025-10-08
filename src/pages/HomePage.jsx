@@ -112,7 +112,7 @@
 //         <MobileStackScroll />
 //       </React.Suspense>
 //       {/* client */}
-      
+
 //       <ClientComponent />
 //       {/* our services */}
 //       <div>
@@ -120,7 +120,7 @@
 //           <ServiceDisplay />
 //         </React.Suspense>
 //       </div>
-     
+
 
 
 //       {/* Events */}
@@ -163,15 +163,166 @@
 // export default HomePage;
 
 
-import React, { useEffect, useState, lazy, Suspense } from "react";
+// import React, { useEffect, useState, lazy, Suspense } from "react";
+// import { motion } from "framer-motion";
+// import LoadingStar from "../components/LoadingStar";
+// import Star from "../components/Star";
+// import "../styles/Home.css";
+// import Popup from "../components/Popup";
+
+
+// // Lazy-loaded components
+// const NavBar = lazy(() => import("../components/NavBar"));
+// const Footer = lazy(() => import("../components/Footer"));
+// const ToggleButton = lazy(() => import("../components/Home/ToggleButton"));
+// const StackScroll = lazy(() => import("./StackScroll"));
+// const EventsHosted = lazy(() => import("../components/Home/EventsHosted"));
+// const OurProjects = lazy(() => import("../components/Home/OurProjects"));
+// const Four = lazy(() => import("../components/Home/Four"));
+// const Testimonials = lazy(() => import("../components/Home/Testimonials"));
+// const ServiceDisplay = lazy(() => import("../components/Home/ServiceDisplay"));
+// const MobileStackScroll = lazy(() =>
+//   import("../components/Home/MobileStackScroll")
+// );
+// const MobileFooter = lazy(() => import("../components/MobileFooter"));
+// const Articles = lazy(() => import("../components/Home/Articles"));
+// const SideBar = lazy(() => import("../components/SideBar"));
+// const MobileArticle = lazy(() => import("../components/Home/MobileArticle"));
+// const HomeCaseStudy = lazy(() => import("../components/Home/HomeCaseStudy"));
+// const ClientComponent = lazy(() => import("./Client"));
+// const WhatsNewSection = lazy(() => import("../components/Home/WhatsNewSection"));
+// const OurHistoryTimeline = lazy(() => import("../components/Home/OurHistory"));
+
+// const words = [
+//   "Innovation",
+//   "Growth",
+//   "Productivity",
+//   "Efficiency",
+//   "Development",
+//   "Transformation",
+//   "Optimization",
+//   "Progress",
+//   "Sustainability",
+//   "Scalability",
+// ];
+
+// function HomePage() {
+//   // State management
+//   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+//   const [isMounted, setIsMounted] = useState(false);
+//   const [selectedToggle, setSelectedToggle] = useState("products");
+
+//   // Scroll to top on mount
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, []);
+
+//   // Word-changing animation effect
+//   useEffect(() => {
+//     setIsMounted(true);
+//     const interval = setInterval(() => {
+//       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   // Handle toggle button selection
+//   const handleToggleChange = (selection) => {
+//     setSelectedToggle(selection);
+//     console.log("Selected:", selection);
+//   };
+
+//   return (
+//     <React.Suspense fallback={<LoadingStar />}>
+//       <div>
+//         {/* Navigation */}
+//         <div className="nav_style">
+//           <NavBar />
+//           <SideBar />
+//         </div>
+
+//         {/* Hero Section */}
+//         <div className="home">
+//           <div className="homeSection">
+//             <div className="texts">
+//               <div className="heroText" style={{ display: "flex" }}>
+//                 <span>Stacia Corp Redefining </span> <Star />
+//               </div>
+//               <Popup />
+
+//               <div className="changingText">
+//                 {isMounted && (
+//                   <motion.div
+//                     key={currentWordIndex}
+//                     initial={{ opacity: 0, y: 20 }}
+//                     animate={{ opacity: 1, y: 0 }}
+//                     exit={{ opacity: 0, y: -20 }}
+//                     transition={{ duration: 0.5 }}
+//                     className="changing-word"
+//                   >
+//                     {words[currentWordIndex]}
+//                   </motion.div>
+//                 )}
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Stack Scroll Section with Toggle */}
+//         <div className="stack-scroll-container">
+//           <div
+//             style={{
+//               display: "flex",
+//               margin: "1rem",
+//               paddingBottom: "1rem",
+//               justifyContent: "flex-end",
+//               alignItems: "center",
+//               position: " sticky",
+//               top: "20px",
+//               // backgroundColor: "white", 
+//               zIndex: "100"
+
+//             }}
+//           // className="toggle-container1"
+//           >
+//             <ToggleButton onToggle={handleToggleChange} />
+//           </div>
+//           <StackScroll onToggle={selectedToggle} />
+//         </div>
+
+//         {/* Other Sections */}
+//         <MobileStackScroll onToggle={selectedToggle} />
+//         <ClientComponent />
+//         {/* <ServiceDisplay /> */}
+//         <WhatsNewSection />
+//         <OurHistoryTimeline />
+//         <EventsHosted />
+//         <HomeCaseStudy />
+//         <OurProjects />
+//         <Articles />
+//         <MobileArticle />
+//         <Four />
+//         <Testimonials />
+//         <Footer />
+//         <MobileFooter />
+//       </div>
+//     </React.Suspense>
+//   );
+// }
+
+// export default HomePage;
+
+import React, { useEffect, useState, lazy, Suspense, useRef } from "react";
 import { motion } from "framer-motion";
 import LoadingStar from "../components/LoadingStar";
 import Star from "../components/Star";
-import "../styles/Home.css"; // Inline critical CSS and minify this file
+import "../styles/Home.css";
 import Popup from "../components/Popup";
+
 // Lazy-loaded components
 const NavBar = lazy(() => import("../components/NavBar"));
 const Footer = lazy(() => import("../components/Footer"));
+const ToggleButton = lazy(() => import("../components/Home/ToggleButton"));
 const StackScroll = lazy(() => import("./StackScroll"));
 const EventsHosted = lazy(() => import("../components/Home/EventsHosted"));
 const OurProjects = lazy(() => import("../components/Home/OurProjects"));
@@ -187,8 +338,9 @@ const SideBar = lazy(() => import("../components/SideBar"));
 const MobileArticle = lazy(() => import("../components/Home/MobileArticle"));
 const HomeCaseStudy = lazy(() => import("../components/Home/HomeCaseStudy"));
 const ClientComponent = lazy(() => import("./Client"));
-// Uncomment if reverse.png is used in the critical path
-// import reverse from "../assets/reverse.png";
+const WhatsNewSection = lazy(() => import("../components/Home/WhatsNewSection"));
+const OurHistoryTimeline = lazy(() => import("../components/Home/OurHistory"));
+
 const words = [
   "Innovation",
   "Growth",
@@ -201,21 +353,56 @@ const words = [
   "Sustainability",
   "Scalability",
 ];
+
 function HomePage() {
+  // State management
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
+  const [selectedToggle, setSelectedToggle] = useState("products");
+  const [isToggleVisible, setIsToggleVisible] = useState(true);
+  const headerRef = useRef(null);
+  const containerRef = useRef(null);
+
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  // Word-changing animation state
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [isMounted, setIsMounted] = useState(false);
+
+  // Word-changing animation effect
   useEffect(() => {
-    setIsMounted(true); // Delay animation until after initial render
+    setIsMounted(true);
     const interval = setInterval(() => {
       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 3000); // Change word every 3 seconds
-    return () => clearInterval(interval); // Cleanup on unmount
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
+
+  // Handle scroll for sticky header
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = headerRef.current;
+      if (header) {
+        const headerRect = header.getBoundingClientRect();
+        const isSticky = headerRect.top <= 20; // Matches top: 20px
+        header.style.justifyContent = isSticky ? "center" : "flex-end";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Handle toggle button selection
+  const handleToggleChange = (selection) => {
+    setSelectedToggle(selection);
+    console.log("Selected:", selection);
+  };
+
+  // Callback for last card visibility
+  const handleLastCardVisible = (isVisible) => {
+    setIsToggleVisible(isVisible);
+  };
+
   return (
     <React.Suspense fallback={<LoadingStar />}>
       <div>
@@ -223,16 +410,16 @@ function HomePage() {
         <div className="nav_style">
           <NavBar />
           <SideBar />
-        </div>        
+        </div>
+
         {/* Hero Section */}
         <div className="home">
           <div className="homeSection">
-            
             <div className="texts">
-              <div className="heroText" style={{display:"flex"}}>
+              <div className="heroText" style={{ display: "flex" }}>
                 <span>Stacia Corp Redefining </span> <Star />
               </div>
-        <Popup/>
+              <Popup />
 
               <div className="changingText">
                 {isMounted && (
@@ -251,14 +438,34 @@ function HomePage() {
             </div>
           </div>
         </div>
-        {/* Stack Scroll Section */}
-        <div className="stack-scroll-container">
-          <StackScroll />
+
+        {/* Stack Scroll Section with Toggle */}
+        <div className="stack-scroll-container" ref={containerRef}>
+          <div
+            ref={headerRef}
+            style={{
+              display: "flex",
+              margin: "1rem",
+              paddingBottom: "1rem",
+              justifyContent: "flex-end",
+              alignItems: "center",
+              position: "sticky",
+              top: "20px",
+              zIndex: "100",
+              // backgroundColor: "white"
+            }}
+          >
+            {/* {isToggleVisible && <ToggleButton onToggle={handleToggleChange} />} */}
+          </div>
+          <StackScroll onToggle={selectedToggle} onLastCardVisible={handleLastCardVisible} />
         </div>
+
         {/* Other Sections */}
-        <MobileStackScroll />
+        <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
-        <ServiceDisplay />
+        <ServiceDisplay />  
+        {/* <WhatsNewSection /> */}
+        <OurHistoryTimeline />
         <EventsHosted />
         <HomeCaseStudy />
         <OurProjects />
@@ -272,4 +479,5 @@ function HomePage() {
     </React.Suspense>
   );
 }
+
 export default HomePage;

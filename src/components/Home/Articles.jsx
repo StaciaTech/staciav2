@@ -260,6 +260,7 @@ import React, { useState } from "react";
 import "../../styles/Home/Articles.css";
 import { useNavigate } from "react-router-dom";
 import articlesData from "../../Data/SingleArticle.json";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 function SingleArticleCard({ article }) {
   const navigate = useNavigate();
@@ -323,7 +324,7 @@ function Articles() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalArticles = articlesData.articles.length;
   const cardsPerSlide = 3; // Number of cards to slide at a time
-  const visibleCards = 3; // Number of cards visible on screen
+  const visibleCards = 2; // Number of cards visible on screen
 
   // Calculate the maximum index to stop at (last group of 3 cards)
   const maxIndex = Math.max(0, totalArticles - visibleCards);
@@ -347,37 +348,39 @@ function Articles() {
       <div className="articles-header">
         <div className="articles-title">Articles</div>
         <div className="carousel-controls">
-          <button
+          {/* <button
             className="carousel-arrow carousel-arrow-left"
             onClick={handlePrev}
             disabled={currentIndex === 0}
+           hidden={totalArticles > 3 ? false : true}
           >
-            ←
+            <GoArrowLeft />
           </button>
           <button
             className="carousel-arrow carousel-arrow-right"
             onClick={handleNext}
             disabled={currentIndex >= maxIndex}
+            hidden={currentIndex >= 2 ? false : true}
           >
-            →
-          </button>
+            <GoArrowRight />
+          </button> */}
         </div>
       </div>
       <div className="carousel-divider"></div>
       <div className="article-slider">
         <div className="carousel-content">
-          <div
+          {/* <div
             className="carousel-slide"
             style={{
               transform: `translateX(calc(-${currentIndex} * (100% / ${visibleCards})))`,
             }}
-          >
+          > */}
             {articlesData.articles.map((article, index) => (
               <div key={index} className="carousel-card">
                 <SingleArticleCard article={article} />
               </div>
             ))}
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </div>
