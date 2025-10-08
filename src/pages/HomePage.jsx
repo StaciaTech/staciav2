@@ -465,7 +465,7 @@ function HomePage() {
         <ClientComponent />
         {/* <ServiceDisplay /> */}
         <WhatsNewSection />
-        <OurHistoryTimeline />
+        {/* <OurHistoryTimeline /> */}
         <EventsHosted />
         <HomeCaseStudy />
         <OurProjects />

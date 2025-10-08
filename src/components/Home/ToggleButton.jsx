@@ -29,6 +29,7 @@ const ToggleButton = ({ onToggle }) => {
         aria-selected={isProductsSelected}
         aria-label={`Toggle between Products and Services. Currently selected: ${isProductsSelected ? 'Products' : 'Services'}`}
         tabIndex={0}
+        style={{boxShadow : "1px 1px 20px 5px #adadad"}}
       >
         <span className="toggle-text">Products</span>
         <span className="toggle-text">Services</span>

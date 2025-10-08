@@ -88,12 +88,17 @@
   color: #111827;
   font-size: 18px;
   font-weight: 800;
+  font-family: EuclidBold;
+  font-style: normal;
 }
 
 .dept-desc {
   color: #4b5563;
   font-size: 14px;
-  margin: 0 0 14px 0
+  margin: 0 0 14px 0;
+  font-weight: 500;
+  line-height: 1.4;
+  font-family: EuclidMedium;
 }
 
 .dept-meta {
@@ -175,6 +180,106 @@
   color: #06b6d4
 }
 
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.number {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6b48ff;
+  border: 2px solid #6b48ff;
+  background: #f0eaff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto 10px;
+}
+
+.number1 {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #52a2f7;
+  border: 2px solid #52a2f7;
+  background: #f0eaff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto 10px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.role {
+  background: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.content-clt h2 {
+  font-size: 1.25rem;
+  font-style: normal;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: left;
+  font-family: EuclidSemibold;
+}
+
+.content-clt ul {
+  /* list-style-type: disc; */
+  font-family: EuclidMedium;
+  font-size: 0.8rem;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.content-clt li {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.content-clt p {
+  font-size: 14px;
+  color: #666;
+  background: #e6f3ff;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: EuclidMedium;
+}
+
 @media (max-width: 991px) {
   .steps-container-wrapper {
     flex-direction: column;
@@ -231,7 +336,7 @@ h2 {
   display: flex;
   /* align-items: center; */
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
   max-width: 500px;
 
   margin: 40px 0;
@@ -261,9 +366,12 @@ h2 {
   /* background: #34d399; */
   /* background: #A2DCEA; */
   /* background: #a2dfd9; */
+  background: #007bff;
   color: white;
   font-size: 2.5rem;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  /* border-radius: 65% 35% 45% 55% / 60% 40% 60% 40%; */
+  transition: all 0.5s ease;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -271,7 +379,92 @@ h2 {
   margin: 0 20px;
   z-index: 2;
   position: absolute;
+  top: 8%;
+  border-radius: 65% 35% 45% 55% / 60% 40% 60% 40%;
+
+  /* Optional: Box Shadow for depth */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  /* --- Continuous Effect: Morphing & Color Shift --- */
+  animation:
+    morph 6s ease-in-out infinite both alternate,
+    /* Slower duration for subtle morphing */
+    colorShift 15s ease infinite alternate;
+  /* Gradient shift animation */
 }
+
+/* --- Keyframes for the Morphing Shape (border-radius) --- */
+@keyframes morph {
+  0% {
+    /* Initial shape state */
+    border-radius: 65% 35% 45% 55% / 60% 40% 60% 40%;
+  }
+
+  33% {
+    /* First morph state */
+    border-radius: 42% 58% 70% 30% / 41% 70% 30% 59%;
+  }
+
+  66% {
+    /* Second morph state */
+    border-radius: 75% 25% 65% 35% / 55% 58% 42% 45%;
+  }
+
+  100% {
+    /* Returns to or near the initial state (or a fourth distinct state) */
+    border-radius: 30% 70% 55% 45% / 70% 30% 45% 55%;
+  }
+}
+
+/* --- Keyframes for the Color Shift (background-position) --- */
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* --- Optional: Ensure the text remains centered during morphing --- */
+.break-message {
+  /* ... other styles ... */
+  /* This flexbox setup on the parent should keep the text centered */
+}
+
+/* BreakBlob.css */
+/* .container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.centered-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #eaeaea;
+  font-size: 1.7rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  z-index: 2;
+  font-weight: 400;
+} */
 
 .step-content {
   /* background: #4c1d95; */
@@ -283,11 +476,15 @@ h2 {
   position: relative;
   flex: 1;
 }
+
 .step-content.first-step {
-  text-align: right
+  justify-items: right;
+  /* text-align: left   */
 }
- .step-content.second-step {
-  text-align: left
+
+.step-content.second-step {
+  justify-items: left;
+  /* text-align: right */
 }
 
 .step-number {
@@ -301,8 +498,18 @@ h2 {
   justify-content: center;
   font-weight: bold;
   position: absolute;
+
+
+}
+
+.one-step {
   top: -15px;
   left: -15px;
+}
+
+.two-step {
+  top: -15px;
+  left: 510px;
 }
 
 h3 {
@@ -313,7 +520,22 @@ h3 {
 p {
   margin: 0;
   font-size: 0.95rem;
+  line-height: 1.5
+}
+
+.step-title-clt {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  width: 70%;
+  text-align: left;
+}
+
+.step-des-clt {
+  margin: 0;
+  font-size: 0.95rem;
   line-height: 1.5;
+  width: 70%;
+  text-align: left;
 }
 
 .spacer-desc {
@@ -387,6 +609,7 @@ p {
   height: 90%;
   object-fit: contain;
 }
+
 .phone-img {
   width: 20%;
   height: 30%;

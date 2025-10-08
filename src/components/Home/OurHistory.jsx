@@ -153,7 +153,7 @@ const OurHistoryTimeline = () => {
             <div className="timeline-img">
               <img src={step.img} alt={step.title} />
             </div>
-            <div className='timeline-line'></div>
+            {/* <div className='timeline-line'></div> */}
             <div className="timeline-text">
               <span
                 className={`timeline-label ${step.color === "purple" ? "label-purple" : "label-black"

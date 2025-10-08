@@ -348,7 +348,7 @@ function Articles() {
       <div className="articles-header">
         <div className="articles-title">Articles</div>
         <div className="carousel-controls">
-          <button
+          {/* <button
             className="carousel-arrow carousel-arrow-left"
             onClick={handlePrev}
             disabled={currentIndex === 0}
@@ -363,7 +363,7 @@ function Articles() {
             hidden={currentIndex >= 2 ? false : true}
           >
             <GoArrowRight />
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="carousel-divider"></div>
