@@ -668,7 +668,7 @@ export default function SingleProduct() {
             </div>
             
             {/* Know More About Product Section */}
-            <KnowMoreSection productData={SelectedProduct} />
+            {/* <KnowMoreSection productData={SelectedProduct} /> */}
           </div>
           <div className="remaining-products-card-container-holder">
             <div className="single-other-service-title">Other Products</div>

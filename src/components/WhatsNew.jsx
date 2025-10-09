@@ -288,7 +288,7 @@ export default function WhatsNew({ handleClose }) {
             handleClose();
           }}
         >
-          See More
+          {/* See More */}
         </div>
       </div>
     </div>
