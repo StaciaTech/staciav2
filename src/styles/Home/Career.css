@@ -1,116 +1,123 @@
 /* :root {
-  --bg-color: #2b6b70;
-  --text-color: #ffffff;
-  --btn-bg: #ffffff;
-  --btn-text: #000000;
+    --bg-color: #2b6b70;
+    --text-color: #ffffff;
+    --btn-bg: #ffffff;
+    --btn-text: #000000;
 } */
 
 /* Section layout */
 .careers-section {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 8%;
-  position: relative;
-  overflow: hidden;
-  font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
+    color: #ffffff;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 8%;
+    position: relative;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+    width: 90%;
+    border-radius: 1.5rem;
+    margin: auto;
+    margin-bottom: 3%;
 }
 
 /* Inner flex layout */
 .careers-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 30px;
 }
 
 /* Left text content */
 .careers-text {
-  flex: 1;
+    flex: 1;
 }
 
 .careers-title {
-  font-size: 64px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #fff;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: EuclidSemiBold;
 }
 
 .careers-desc {
-  font-size: 17px;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 600px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 600px;
+    font-family:EuclidMedium;
 }
 
 /* Right button */
 .careers-button-container {
-  flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 .careers-button {
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  border: none;
-  padding: 16px 40px;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family:EuclidMedium;
+    cursor: pointer;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
 }
 
 .careers-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* Decorative diamond */
 .diamond {
-  position: absolute;
-  right: 30px;
-  bottom: 25px;
-  width: 25px;
-  height: 25px;
-  background: rgba(255, 255, 255, 0.15);
-  transform: rotate(45deg);
-  border-radius: 3px;
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(45deg);
+    border-radius: 3px;
 }
 
 /* Responsive layout */
 @media (max-width: 900px) {
-  .careers-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-  }
+    .careers-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
 
-  .careers-title {
-    font-size: 48px;
-  }
+    .careers-title {
+        font-size: 48px;
+    }
 
-  .careers-button-container {
-    align-self: flex-start;
-  }
+    .careers-button-container {
+        align-self: flex-start;
+    }
 }
 
 @media (max-width: 600px) {
-  .careers-title {
-    font-size: 38px;
-  }
+    .careers-title {
+        font-size: 38px;
+    }
 
-  .careers-desc {
-    font-size: 15px;
-  }
+    .careers-desc {
+        font-size: 15px;
+    }
 
-  .careers-button {
-    font-size: 16px;
-    padding: 14px 30px;
-  }
+    .careers-button {
+        font-size: 16px;
+        padding: 14px 30px;
+    }
 }

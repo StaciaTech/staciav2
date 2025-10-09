@@ -123,7 +123,7 @@
 }
 
 .about-section3-info-container {
-  display: flex;  
+  display: flex;
   column-gap: 5rem;
   align-items: center;
   margin: 5rem 0rem;
@@ -255,6 +255,8 @@
   align-items: center;
   column-gap: 5rem;
   width: 100%;
+  /* background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%); */
+  
 }
 
 .about-section6-container>div {
@@ -264,6 +266,7 @@
 .about-section6-img-container {
   display: flex;
   justify-content: center;
+  /* background-color: #000088; */
 }
 
 .about-section6-title {
@@ -378,7 +381,8 @@
   column-gap: 5rem;
   overflow-x: auto;
   margin: 2rem 0rem;
-  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+  scroll-snap-type: x mandatory;
+  /* Enable snap scrolling */
   scrollbar-width: none;
 }
 
@@ -399,7 +403,8 @@
   /* height: 400px; */
   /* background-color: red; */
   background-color: #f8faff;
-  flex: 0 0 100%; /* Each card takes full width of the container */
+  flex: 0 0 100%;
+  /* Each card takes full width of the container */
   scroll-snap-align: start;
 }
 
@@ -442,6 +447,7 @@
 .about-section8-mob-btn-container {
   display: none;
 }
+
 .about-section9-container {
   margin: 10rem 0rem;
 }
@@ -546,6 +552,7 @@
   font-size: 1.25rem;
   width: 60%;
 }
+
 /* Container for the Meet Our Team section */
 /* Container for the Meet Our Team section */
 .about-section11-container {
@@ -597,10 +604,12 @@
 .about-team-marquee-desk:hover .about-team-marquee {
   animation-play-state: paused;
 }
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-100% / 5 * 4));
   }
@@ -636,7 +645,7 @@
   transition: width 0.3s ease;
 }
 
-.about-team-img > img {
+.about-team-img>img {
   object-fit: contain;
   width: 100%;
   border-radius: 0.5rem;
@@ -693,6 +702,7 @@
 .about-team-marquee-mob {
   display: none;
 }
+
 @media screen and (max-width: 1024px) {
   .about-team-marquee-desk {
     display: none;

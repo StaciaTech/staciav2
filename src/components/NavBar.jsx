@@ -5,7 +5,7 @@ import Star from "../components/Star";
 import StaciaLogo from "../assets/Stacia Monogram.svg";
 import StaciaLogoText from "../assets/Stacia logo.svg";
 import five from "../assets/5yr logo.svg";
-// import five from "../assets/home page.svg";
+// import five from "../assets/64.svg";
 import ContactIcon from "../assets/ContactIcon.svg";
 import { NavLink, Link } from "react-router-dom";
 import MobileNav from "../assets/MobileNav.png";
@@ -249,7 +249,7 @@ function NavBar() {
   return (
     <div className={`navbar ${showNavbar ? "show" : "hide"}`}>
       {/* Advertisement */}
-      {showAdd && <Advertisement setShowAdd={setShowAdd} />}
+      {/* {showAdd && <Advertisement setShowAdd={setShowAdd} />} */}
       <div className="nav-container">
         <div className="nav-items-container">
           <div className="nav-left">
@@ -355,7 +355,7 @@ function NavBar() {
                 Resource
               </div>
               <NavLink
-                to={"/career"}
+                to={"/about/career"}
                 onClick={() => {
                   window.scrollTo(0, 0);
                 }}
@@ -429,12 +429,16 @@ function NavBar() {
             </div>
           </div>
           <div className="nav-right">
-            <img
+            {/* <img
               src={ContactIcon}
               alt=""
               style={{ cursor: "pointer", width: "2rem", height: "2rem" }}
               onClick={() => setShowContact(true)}
-            />
+            /> */}
+            <div onClick={() => setShowContact(true)}>
+              <p className="contact-us-nav">Contact Us</p>
+
+            </div>
             <Modal
               style={ModelStyles}
               isOpen={showContact}

@@ -51,7 +51,7 @@ function App() {
         <Route path="/sitemap" element={<Sitemap />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
-        <Route path="/career" element={<CareerPage />} />
+        <Route path="about/career" element={<CareerPage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route
           path="/products/:department/:category"
@@ -164,7 +164,7 @@ function App() {
         <Route path="/events/:title" element={<SpecificEvent />} />
         <Route path="*" element={<PageNotFound />} />
 
-        <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="about/industries-covered" element={<IndustriesPage />} />
         <Route path="/client-visit" element={<ClientVisit />} />
       </Routes>
       <ScrollArrow />

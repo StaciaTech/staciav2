@@ -311,7 +311,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import "../styles/AboutDropdown.css";
 import { useNavigate } from "react-router-dom";
-import PlcImg from "../assets/abt-dd-logo.png";
+import PlcImg from "../assets/stacia-media.svg";
 import Star from "../assets/loadingStar.svg";
 import data from "../Data/About.json"; // Importing JSON data
 

@@ -474,7 +474,7 @@ function HomePage() {
         <MobileArticle />
         <Four />
         <Testimonials />
-        {/* <Career /> */}
+        <Career />
         <Footer />
         <MobileFooter />
       </div>
