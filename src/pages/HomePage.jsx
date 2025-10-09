@@ -340,6 +340,7 @@ const HomeCaseStudy = lazy(() => import("../components/Home/HomeCaseStudy"));
 const ClientComponent = lazy(() => import("./Client"));
 const WhatsNewSection = lazy(() => import("../components/Home/WhatsNewSection"));
 const OurHistoryTimeline = lazy(() => import("../components/Home/OurHistory"));
+const Career = lazy(() => import("../components/Home/career"));
 
 const words = [
   "Innovation",
@@ -465,7 +466,7 @@ function HomePage() {
         <ClientComponent />
         <ServiceDisplay />  
         {/* <WhatsNewSection /> */}
-        <OurHistoryTimeline />
+        {/* <OurHistoryTimeline /> */}
         <EventsHosted />
         <HomeCaseStudy />
         <OurProjects />
@@ -473,6 +474,7 @@ function HomePage() {
         <MobileArticle />
         <Four />
         <Testimonials />
+        {/* <Career /> */}
         <Footer />
         <MobileFooter />
       </div>
