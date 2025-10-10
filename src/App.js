@@ -164,7 +164,7 @@ function App() {
         <Route path="/events/:title" element={<SpecificEvent />} />
         <Route path="*" element={<PageNotFound />} />
 
-        <Route path="about/industries-covered" element={<IndustriesPage />} />
+        <Route path="industries-covered" element={<IndustriesPage />} />
         <Route path="/client-visit" element={<ClientVisit />} />
       </Routes>
       <ScrollArrow />

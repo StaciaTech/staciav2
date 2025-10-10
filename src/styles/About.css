@@ -194,6 +194,7 @@
 .about-section4-container {
   display: flex;
   align-items: center;
+   column-gap: 5rem;
   margin: 7rem 0rem;
 }
 
@@ -571,7 +572,7 @@
   color: #6B6084;
   text-align: center;
   width: 50%;
-  margin: 0.5rem auto;
+  margin: 1.5rem auto;
 }
 
 .about-section4-des {

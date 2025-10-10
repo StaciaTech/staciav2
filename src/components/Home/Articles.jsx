@@ -223,7 +223,7 @@
 //           // loop={0}
 //           // pauseOnHover={true}
 //           style={{  display: "flex", alignItems: "flex-end",overflow: "hidden", height: "100%", whiteSpace: "nowrap" }}
-            
+
 //           speed={30}
 //           loop
 //           pauseOnHover
@@ -261,6 +261,9 @@ import "../../styles/Home/Articles.css";
 import { useNavigate } from "react-router-dom";
 import articlesData from "../../Data/SingleArticle.json";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { MdOutlineInfo } from "react-icons/md";
+import { LuPenTool, LuTimerReset } from "react-icons/lu";
+import { FaPenNib } from "react-icons/fa";
 
 function SingleArticleCard({ article }) {
   const navigate = useNavigate();
@@ -292,12 +295,21 @@ function SingleArticleCard({ article }) {
           backgroundImage: `linear-gradient(to bottom, #0d022500, #0d0225cc), url(${article.mainImageUrl})`,
         }}
       >
-        <div className="article-text-container">
+        <div className="article-text-container1">
           <div className="article-author-name test-seclection-white">
-            {article.author}
+            <FaPenNib  size={20} center />{article.author}
           </div>
+          <div className="article-author-name test-seclection-white">
+             <LuTimerReset size={20} center />{article?.audioData?.time}
+          </div>
+
+        </div>
+        <div className="article-text-container">
+          {/* <div className="article-author-name test-seclection-white">
+            {article.author}
+          </div> */}
           <div className="card-article-title test-seclection-white">
-            {article.title}
+           {article.title}
           </div>
 
           <div
@@ -375,11 +387,11 @@ function Articles() {
               transform: `translateX(calc(-${currentIndex} * (100% / ${visibleCards})))`,
             }}
           > */}
-            {articlesData.articles.map((article, index) => (
-              <div key={index} className="carousel-card">
-                <SingleArticleCard article={article} />
-              </div>
-            ))}
+          {articlesData.articles.map((article, index) => (
+            <div key={index} className="carousel-card">
+              <SingleArticleCard article={article} />
+            </div>
+          ))}
           {/* </div> */}
         </div>
       </div>

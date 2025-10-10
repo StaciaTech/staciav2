@@ -46,11 +46,12 @@
         },
         {
           "name": "Our Leadership",
-          "path": "about/leadership"
+          "path": "about/our-leadership"
         },
+        
         {
           "name": "Meet our team",
-          "path": "about/team"
+          "path": "about/meet-our-team"
         }
       ]
     },
@@ -72,8 +73,8 @@
           "path": "about/leader/Mr-Lakshman-PV"
         },
         {
-          "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",
-          "des": "I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
+          "description": "A DevSecOps Specialist with 6 years of Infrastructure Automation and Deployment expertise with a Mechanical Engineering background. Driven by a passion for technology, Revanth leverages AWS, Digital Ocean and other cloud service providers to streamline Operations and Infrastructure and build robust mobile and web applications",
+          "des": "I'm a DevSecOps Specialist with 6 years of expertise in Infrastructure Automation and Deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on Infrastructure Automation, Deployment and cloud solutions. Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available and Robust Infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and building efficient mobile and web applications. My journey from mechanical engineering to DevSecOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
           "imageUrl": "/assets/LeaderPage/Mr-Revanth.webp",
           "name": "Mr Revanth S",
           "path": "about/leader/Mr-Revanth-S"
@@ -119,7 +120,6 @@
         }
       ]
     }
-   
   ],
   "staciaHistory": [
     {
@@ -140,7 +140,6 @@
       "year": "May 2020",
       "_id": "673450557a970b308b574ea1"
     },
-    
     {
       "description": "Startup india certification recognized by DPIIT in July 2020",
       "id": "673450607a970b308b574ea2",
@@ -168,7 +167,6 @@
       "year": "Feb 2023",
       "_id": "6734505a7a970b308b574ea4"
     },
-    
     {
       "description": "Hydrogen is an AI-powered smart water bottle with rapid heating/cooling, hydration tracking, and personalized reminders. Its sleek squircle design combines style, comfort, and advanced technology for intelligent, on-the-go hydration",
       "id": "6734505a7a970b308b574ea5",
@@ -196,8 +194,6 @@
       "year": "Jan 2025",
       "_id": "6734505a7a970b308b574ea7"
     }
-    
-    
   ],
   "teamData": [
     {
@@ -422,8 +418,8 @@
       ]
     },
     {
-      "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",
-      "des": "I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
+      "description": "A DevSecOps Specialist with 6 years of Infrastructure Automation and Deployment expertise with a Mechanical Engineering background. Driven by a passion for technology, Revanth leverages AWS, Digital Ocean and other cloud service providers to streamline Operations and Infrastructure and build robust mobile and web applications.",
+      "des": "I'm a DevSecOps Specialist with 6 years of expertise in Infrastructure Automation and Deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on Infrastructure Automation, Deployment and cloud solutions. Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available and Robust Infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and building efficient mobile and web applications. My journey from mechanical engineering to DevSecOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
       "quote": "“The people who are crazy enough to think they can change the world are the ones who do.” — Steve Jobs",
       "designation": "Chief Technical Officer",
       "imageUrl": "/assets/LeaderPage/Mr-Revanth.webp",

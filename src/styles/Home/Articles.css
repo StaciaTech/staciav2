@@ -43,6 +43,7 @@
   display: flex;
   justify-content: flex-start;
   column-gap: 50px;
+  margin-left: 1.8rem;
   /* Center the visible cards */
 }
 
@@ -77,7 +78,8 @@
 
 .carousel-card {
   flex: 0 0 auto;
-  width: calc(100% / 3); /* Each card takes 1/3 of the carousel-content width */
+  width: calc(100% / 3);
+  /* Each card takes 1/3 of the carousel-content width */
   /* opacity: 0.7; */
   transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
 }
@@ -99,11 +101,11 @@
   width: 100%;
   max-width: 597px;
   border-radius: 30px;
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   color: white;
   font-family: "Euclid";
   margin-left: 1rem;
@@ -112,10 +114,21 @@
   transition: all 0.3s ease;
   cursor: pointer;
   transform-origin: bottom;
+  transition: background-size 0.6s ease, transform 0.6s ease;
 
 }
 
+.single-article-card-image:hover {
+  background-size: cover;
+  transition: background-size 0.12s ease, transform 0.12s ease
+}
+
 .article-text-container {
+  display: none;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.article-text-container1 {
   display: none;
   padding: 0 1rem 2rem 1rem;
 }
@@ -125,7 +138,17 @@
   transition: all 1s ease-in-out;
 }
 
+.single-article-card-image:hover .article-text-container1 {
+  display: flex;
+  justify-content: space-between;
+  transition: all 1s ease-in-out;
+}
+
 .article-text-container:hover {
+  transition: all 1s ease-in-out;
+}
+
+.article-text-container1:hover {
   transition: all 1s ease-in-out;
 }
 
@@ -159,7 +182,10 @@
   font-family: "EuclidMedium";
   font-size: 1rem;
   font-weight: 500;
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
 }
 
 .card-article-title {
@@ -188,7 +214,8 @@
   user-select: none;
 
 }
-.article-learn-more-link>span{
+
+.article-learn-more-link>span {
   color: white;
   font-size: 1rem;
   font-family: "EuclidMedium";
@@ -290,6 +317,7 @@
   .mobile-article {
     display: none;
   }
+
   @media (min-width: 1025px) and (max-width: 1366px) {
     .articles-container {
       margin-bottom: 1rem;
@@ -306,15 +334,19 @@
 
     .articles-title {
       color: #6B6084;
-      font-size: 48px; /* Reduced from 60px for better fit */
+      font-size: 48px;
+      /* Reduced from 60px for better fit */
       font-style: normal;
       font-weight: 600;
-      line-height: 1.2; /* Added for better spacing */
+      line-height: 1.2;
+      /* Added for better spacing */
       margin-top: 1rem;
       margin-right: 1rem;
-      overflow: hidden; /* Prevent title overflow */
+      overflow: hidden;
+      /* Prevent title overflow */
       text-overflow: ellipsis;
-      white-space: nowrap; /* Ensure single-line title */
+      white-space: nowrap;
+      /* Ensure single-line title */
     }
 
     .carousel-controls {
@@ -327,7 +359,8 @@
       align-items: flex-end;
       height: 50vh;
       width: 100%;
-      padding: 0 20px; /* Reduced from 30px for more space */
+      padding: 0 20px;
+      /* Reduced from 30px for more space */
       position: relative;
       justify-content: center;
       overflow: hidden;
@@ -344,7 +377,8 @@
       display: flex;
       transition: transform 0.5s ease;
       will-change: transform;
-      width: 300%; /* 3 cards visible */
+      width: 300%;
+      /* 3 cards visible */
     }
 
     .carousel-card {
@@ -364,18 +398,22 @@
 
     .single-article-card-image {
       height: 45vh;
-      width: 95%; /* Increased from 90% to use more space */
-      max-width: 450px; /* Reduced from 547px for smaller screens */
+      width: 95%;
+      /* Increased from 90% to use more space */
+      max-width: 450px;
+      /* Reduced from 547px for smaller screens */
       border-radius: 30px;
       background-size: cover;
       background-position: center;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: space-between;
       color: white;
       font-family: "Euclid";
-      margin-left: 1.5rem; /* Reduced from 3rem */
-      margin-right: 0.5rem; /* Reduced from 1rem */
+      margin-left: 1.5rem;
+      /* Reduced from 3rem */
+      margin-right: 0.5rem;
+      /* Reduced from 1rem */
       align-self: flex-end;
       transition: all 0.3s ease;
       cursor: pointer;
@@ -384,16 +422,36 @@
 
     .article-text-container {
       display: none;
-      padding: 0 0.8rem 1.5rem 0.8rem; /* Reduced padding for more text space */
+      padding: 0 0.8rem 1.5rem 0.8rem;
+      /* Reduced padding for more text space */
+
+    }
+
+    .article-text-container1 {
+      display: none;
+      padding: 0 0.8rem 1.5rem 0.8rem;
+      /* Reduced padding for more text space */
 
     }
 
     .single-article-card-image:hover .article-text-container {
-      display: block;
-      transition: all 0.3s ease; /* Shortened transition for smoother hover */
+      display: flex;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      /* Shortened transition for smoother hover */
+    }
+
+    .single-article-card-image:hover .article-text-container1 {
+      /* display: block; */
+      transition: all 0.3s ease;
+      /* Shortened transition for smoother hover */
     }
 
     .article-text-container:hover {
+      transition: all 0.3s ease;
+    }
+
+    .article-text-container1:hover {
       transition: all 0.3s ease;
     }
 
@@ -426,30 +484,36 @@
 
     .article-author-name {
       font-family: "EuclidMedium";
-      font-size: 0.9rem; /* Reduced from 1rem */
+      font-size: 0.9rem;
+      /* Reduced from 1rem */
       font-weight: 500;
       margin: 0.4rem 0;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap; /* Prevent wrapping */
+      white-space: nowrap;
+      /* Prevent wrapping */
     }
 
     .card-article-title {
-      font-size: 1.3rem; /* Reduced from 1.5rem */
+      font-size: 1.3rem;
+      /* Reduced from 1.5rem */
       font-weight: 600;
       margin: 0.1rem 0;
       padding: 0.4rem 0;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap; /* Prevent wrapping */
+      white-space: nowrap;
+      /* Prevent wrapping */
     }
 
     .card-article-body {
-      font-size: 0.9rem; /* Reduced from 1rem */
+      font-size: 0.9rem;
+      /* Reduced from 1rem */
       font-family: "EuclidMedium";
       font-weight: 400;
       margin: 0.8rem 0;
-      line-height: 1.2rem; /* Reduced for better fit */
+      line-height: 1.2rem;
+      /* Reduced for better fit */
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -462,9 +526,10 @@
       user-select: none;
     }
 
-    .article-learn-more-link > span {
+    .article-learn-more-link>span {
       color: white;
-      font-size: 0.9rem; /* Reduced from 1rem */
+      font-size: 0.9rem;
+      /* Reduced from 1rem */
       font-family: "EuclidMedium";
       font-weight: 400;
     }

@@ -52,7 +52,7 @@ export default function Four(data, path) {
   return (
     <div className="four">
       <div className="four2">
-        <div className="four-text test-seclection-blue">Management Team</div>
+        <div className="four-text test-seclection-blue">Team</div>
         <div className="four-grid">
           {fourData.map((data, i) => (
             <FourCard data={data} path={"about/leader"} key={i} />
