@@ -1,13 +1,14 @@
 /* Toggle Button Container */
 .toggle-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0.5rem;
   width: 100%;
   max-width: 100%;
   /* background-color: #bcbcbc; */
+  background-color: none;
   box-sizing: border-box;
   position: sticky;
   z-index: 1;
@@ -19,8 +20,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #9c27b0;
-  border: none;
+  background-color: transparent;
+  /* fixed */
+  border: 1px solid white;
   border-radius: 20px;
   padding: 4px;
   cursor: pointer;
@@ -32,26 +34,29 @@
   min-width: 200px;
   max-width: 100%;
   font-family: EuclidMedium;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif; */
-  /* box-shadow: 0 2px 8px rgba(156, 39, 176, 0.2); */
   box-shadow: 10px 10px 20px 15px #adadad;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   box-sizing: border-box;
+}
 
+.toggle-container-title h3 {
+  margin: 0 0 0.5rem 0;
+  font-family: EuclidMedium;
+  color: #ffffff;
 }
 
 .toggle-button:hover {
-  background-color: #8e24aa;
+  /* background-color: #8e24aa; */
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+  /* box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3); */
 }
 
 .toggle-button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(156, 39, 176, 0.2);
+  /* box-shadow: 0 2px 8px rgba(156, 39, 176, 0.2); */
 }
 
 .toggle-button:focus {
@@ -78,22 +83,22 @@
 
 /* Selected state - First text (Products) */
 .toggle-button.selected .toggle-text:first-child {
-  color: #9c27b0;
+  color: #ffffff;
   font-weight: 700;
   text-shadow: none;
 }
 
 .toggle-button.selected .toggle-text:last-child {
-  color: #ffffff;
+  color: #9c27b0;
   font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
 }
 
 /* Unselected state - Second text (Services) */
 .toggle-button:not(.selected) .toggle-text:first-child {
-  color: #ffffff;
+  color: #9c27b0;
   font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
 }
 
 .toggle-button:not(.selected) .toggle-text:last-child {
@@ -420,12 +425,12 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   .toggle-button {
-    background-color: #9c27b0;
+    /* background-color: #9c27b0; */
     box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3);
   }
 
   .toggle-button:hover {
-    background-color: #8e24aa;
+    /* background-color: #8e24aa; */
     box-shadow: 0 4px 12px rgba(156, 39, 176, 0.4);
   }
 

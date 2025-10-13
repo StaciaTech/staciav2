@@ -13,7 +13,7 @@ function StackCard({
 }) {
   const navigateTo = useNavigate();
   const scale = useTransform(progress, range, [1, targetScale]);
-  const topPosition = `calc(100% - 90% + ${40 * i}px)`;
+  const topPosition = `calc(100% - 90% + ${30 * i}px)`;
 
   // Determine if this is a product or service
   const isService = !!eachHomeService;

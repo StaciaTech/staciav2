@@ -516,7 +516,8 @@ import "../styles/navbar.css";
 import Star from "../components/Star";
 import StaciaLogo from "../assets/Stacia Monogram.svg";
 import StaciaLogoText from "../assets/Stacia logo.svg";
-import five from "../assets/5yr logo.svg";
+// import five from "../assets/5yr logo.svg";
+import five from "../assets/68.svg";
 import MobileNav from "../assets/MobileNav.png";
 import WhatsNew from "./WhatsNew";
 import Modal from "react-modal";
@@ -764,10 +765,10 @@ function NavBar() {
                 key={logo}
                 src={logo}
                 alt=""
-                className="logo-rotate"
+                className="logo-rotate "
                 style={{
-                  height: "2.5rem",
-                  width: "2.5rem",
+                  height: "3rem",
+                  width: "3rem",
                   objectFit: "contain",
                 }}
                 initial="hidden"
@@ -841,7 +842,7 @@ function NavBar() {
               >
                 Resource
               </div>
-              <NavLink
+              {/* <NavLink
                 to={"/about/career"}
                 onClick={() => {
                   window.scrollTo(0, 0);
@@ -850,7 +851,7 @@ function NavBar() {
                 onMouseEnter={() => setActiveDropdown(null)}
               >
                 Careers
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 to={"/competition"}
                 onClick={() => {

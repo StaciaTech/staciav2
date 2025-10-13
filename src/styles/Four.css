@@ -13,8 +13,8 @@
   font-weight: 600;
   font-family: EuclidSemibold;
 
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  /* padding-bottom: 1rem; */
+  margin-bottom: 0rem;
 }
 .sty {
   color: #0047FF;

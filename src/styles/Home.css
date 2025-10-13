@@ -647,10 +647,10 @@ section {
 
 /* toggle button */
 
-.toggle-container {
+/* .toggle-container {
   display: flex;
   width: 200px;
-  /* background-color: #bcbcbc; */
+ 
   border-radius: 25px;
   padding: 0.5rem;
   cursor: pointer; 
@@ -673,4 +673,188 @@ transition: all 0.3s ease;
 
   background-color: #81497b;
   color: white;
+} */
+
+/* Base styles for the container and h1 */
+.toggle-title-container-home {
+  /* background: #0d0225; Deep blue gradient for immersive "Stacia" theme */
+  min-height: 10vh;
+  min-width: 100%;
+  /* Full viewport height */
+  color: #ffffff;
+  /* White text for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  font-family: EuclidSemiBold;
+  /* Fallback to sans-serif */
+  border-top: none;
+}
+
+.toggle-title-header-home {
+  color: #ffffff;
+  /* White text for contrast */
+  font-size: 3.5rem;
+  /* Large, bold heading */
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  animation: fadeIn 1s ease-in-out;
+  /* Smooth fade-in animation */
+  padding-bottom: 10px;
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop: 1920px (Full HD and above) */
+@media screen and (min-width: 1920px) {
+  .toggle-title-header-home {
+    font-size: 5rem;
+    /* Larger for high-resolution screens */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    /* Stronger shadow for depth */
+  }
+
+  .toggle-title-container-home {
+    padding: 10px;
+    /* More padding for larger screens */
+    min-height: 3vh;
+    /* Slightly taller container */
+  }
+}
+
+/* Laptop: 1024px (Laptop screens, smaller desktops) */
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .toggle-title-header-home {
+    font-size: 4.5rem;
+    /* Adjusted for laptop screens */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    /* Moderate shadow */
+  }
+
+  .toggle-title-container-home {
+    padding: 40px;
+    /* Balanced padding */
+    min-height: 10vh;
+  }
+}
+
+/* Tablet: 768px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .toggle-title-header-home {
+    font-size: 3.5rem;
+    /* Slightly smaller for tablets */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow */
+  }
+
+  .toggle-title-container-home {
+    padding: 30px;
+    /* Moderate padding */
+    min-height: 9vh;
+    /* Adjusted height */
+  }
+}
+
+/* Mobile: 320px (Small mobile screens) */
+@media screen and (max-width: 320px) {
+  .toggle-title-header-home {
+    font-size: 1.2rem;
+    /* Smaller for tiny screens */
+    padding-bottom: 6px;
+    /* Thinner padding */
+  }
+
+  .toggle-title-container-home {
+    padding: 8px;
+    /* Minimal padding */
+    min-height: 7vh;
+    /* Shorter container */
+  }
+}
+
+/* Mobile: General (321px to 767px) */
+@media screen and (min-width: 321px) and (max-width: 767px) {
+  .toggle-title-header-home {
+    font-size: 1.8rem;
+    /* Readable for most mobile devices */
+    padding-bottom: 8px;
+    /* Slightly thicker padding */
+  }
+
+  .toggle-title-container-home {
+    padding: 12px;
+    /* Balanced padding for mobile */
+    min-height: 8vh;
+    /* Adjusted height */
+  }
+}
+
+/* Mobile: Landscape orientation */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .toggle-title-header-home {
+    font-size: 2.5rem;
+    /* Larger for landscape */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow */
+  }
+
+  .toggle-title-container-home {
+    padding: 15px;
+    /* Adjusted padding */
+    min-height: 9vh;
+    /* Slightly taller for landscape */
+  }
+}
+
+/* Device Categories */
+
+/* Desktop (1024px and above, overlaps with 1024px and 1920px) */
+@media screen and (min-width: 1024px) {
+  .toggle-title-container-home {
+    /* background: #0d0225; Subtle gradient for desktops */
+  }
+
+  .toggle-title-header-home {
+    font-size: 4.5rem;
+    /* Default for desktops */
+  }
+}
+
+/* Laptop (1024px to 1440px, refined for clarity) */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .toggle-title-header-home {
+    font-size: 4rem;
+    /* Slightly smaller for smaller laptops */
+  }
+
+  .toggle-title-container-home {
+    padding: 35px;
+    /* Adjusted padding */
+  }
+}
+
+/* Mobile (up to 767px, overlaps with 320px and general mobile) */
+@media screen and (max-width: 767px) {
+  .toggle-title-container-home {
+    /* background: #0d0225; Solid color for performance on mobile */
+  }
+
+  .toggle-title-header-home {
+    font-size: 1.5rem;
+    /* Default mobile size */
+  }
 }

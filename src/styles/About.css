@@ -252,11 +252,12 @@
 .about-section6-container {
   margin: 10rem 0rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   column-gap: 5rem;
   width: 100%;
-  /* background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%); */
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
   
 }
 
@@ -267,13 +268,16 @@
 .about-section6-img-container {
   display: flex;
   justify-content: center;
+  
+
   /* background-color: #000088; */
 }
 
 .about-section6-title {
   font-family: EuclidSemibold;
   font-size: 3rem;
-  padding: 1rem 0rem;
+  padding: 1rem 2rem;
+  color: #fff;
 }
 
 .about-section6-des {

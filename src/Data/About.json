@@ -48,7 +48,6 @@
           "name": "Our Leadership",
           "path": "about/our-leadership"
         },
-        
         {
           "name": "Meet our team",
           "path": "about/meet-our-team"
@@ -117,6 +116,28 @@
         {
           "name": "Brochers",
           "path": "media-kit"
+        }
+      ]
+    },
+    {
+      "section": "career",
+      "path": "career",
+      "SectionItems": [
+        {
+          "name": "opportunities",
+          "path": "career/opportunities"
+        },
+        {
+          "name": "hiringprocedure",
+          "path": "career/hiringprocedure"
+        },
+        {
+          "name": "lifestaciacorp",
+          "path": "career/lifestaciacorp"
+        },
+        {
+          "name": "ourculture",
+          "path": "career/ourculture"
         }
       ]
     }
@@ -421,7 +442,7 @@
       "description": "A DevSecOps Specialist with 6 years of Infrastructure Automation and Deployment expertise with a Mechanical Engineering background. Driven by a passion for technology, Revanth leverages AWS, Digital Ocean and other cloud service providers to streamline Operations and Infrastructure and build robust mobile and web applications.",
       "des": "I'm a DevSecOps Specialist with 6 years of expertise in Infrastructure Automation and Deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on Infrastructure Automation, Deployment and cloud solutions. Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available and Robust Infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and building efficient mobile and web applications. My journey from mechanical engineering to DevSecOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
       "quote": "“The people who are crazy enough to think they can change the world are the ones who do.” — Steve Jobs",
-      "designation": "Chief Technical Officer",
+      "designation": "Chief Technology Officer",
       "imageUrl": "/assets/LeaderPage/Mr-Revanth.webp",
       "name": "Mr Revanth S",
       "position": 3,

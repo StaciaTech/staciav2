@@ -247,10 +247,10 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
           {/* dont remove below code */}
           <div
             style={{
-              height: "60vh",
+              height: "50vh",
               position: "sticky",
               zIndex: "-1",
-              top: `calc(100% - 90% + ${40 * homeProductData?.length + 1}px)`,
+              top: `calc(100% - 50% + ${40 * homeProductData?.length + 1}px)`,
             }}
           ></div>
         </ul>

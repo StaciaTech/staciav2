@@ -21,6 +21,7 @@ const ToggleButton = ({ onToggle }) => {
 
   return (
     <div className="toggle-container" role="tablist">
+      
       <button
         className={`toggle-button ${isProductsSelected ? 'selected' : ''}`}
         onClick={toggleSelection}
@@ -29,14 +30,18 @@ const ToggleButton = ({ onToggle }) => {
         aria-selected={isProductsSelected}
         aria-label={`Toggle between Products and Services. Currently selected: ${isProductsSelected ? 'Products' : 'Services'}`}
         tabIndex={0}
-        style={{boxShadow : "1px 1px 20px 5px #adadad"}}
+        // style={{ boxShadow: "1px 1px 20px 5px #adadad" }}
+        // style={{ boxShadow: "1px 1px 20px 5px #adadad" }}
+
       >
-        <span className="toggle-text">Products</span>
         <span className="toggle-text">Services</span>
+        <span className="toggle-text">Products</span>
         <div
           className="toggle-slider"
           style={{
-            left: isProductsSelected ? '4px' : 'calc(50% + 2px)'
+            // left: isProductsSelected ? '4px' : 'calc(50% + 2px)'
+            left: isProductsSelected ? 'calc(50% + 2px)' : '4px'
+
           }}
         />
       </button>

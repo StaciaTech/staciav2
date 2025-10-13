@@ -385,7 +385,7 @@ function HomePage() {
       if (header) {
         const headerRect = header.getBoundingClientRect();
         const isSticky = headerRect.top <= 20; // Matches top: 20px
-        header.style.justifyContent = isSticky ? "center" : "flex-end";
+        header.style.justifyContent = isSticky ? "center" : "center";
       }
     };
 
@@ -439,24 +439,33 @@ function HomePage() {
             </div>
           </div>
         </div>
-
+        {/* <div className="toggle-title-container-home">
+          <h1 className="toggle-title-header-home">Delve deep into stacia's </h1>
+        </div> */}
         {/* Stack Scroll Section with Toggle */}
-        <div className="stack-scroll-container" ref={containerRef}>
+        <div className="stack-scroll-container"
+        //  ref={containerRef}
+        >
+
           <div
             ref={headerRef}
             style={{
               display: "flex",
               margin: "1rem",
+              flexWrap: "wrap",
               paddingBottom: "1rem",
-              justifyContent: "flex-end",
+              justifyContent: "center",
               alignItems: "center",
               position: "sticky",
-              top: "20px",
+              top: "-20px",
               zIndex: "100",
               // backgroundColor: "white"
             }}
           >
-            {/* {isToggleVisible && <ToggleButton onToggle={handleToggleChange} />} */}
+            {isToggleVisible && <div className="toggle-title-container-home">
+              <h1 className="toggle-title-header-home">Delve deep into Stacia's </h1>
+            </div>}
+            {isToggleVisible && <ToggleButton onToggle={handleToggleChange} />}
           </div>
           <StackScroll onToggle={selectedToggle} onLastCardVisible={handleLastCardVisible} />
         </div>
@@ -464,7 +473,7 @@ function HomePage() {
         {/* Other Sections */}
         <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
-        <ServiceDisplay />  
+        {/* <ServiceDisplay />   */}
         {/* <WhatsNewSection /> */}
         {/* <OurHistoryTimeline /> */}
         <EventsHosted />

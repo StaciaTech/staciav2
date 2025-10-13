@@ -6,12 +6,14 @@ import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
 import Stacialogo from "../assets/aboutstacialogo.svg";
-import fiveLogo from "../assets/5yrs.png";
+import whitelogo from "../assets/whitelogo.svg";
+// import fiveLogo from "../assets/5yrs.png";
 import mission from "../assets/mission-about.webp";
 import story from "../assets/story-about.webp";
 import vision from "../assets/vision.webp";
 import partnerabout from "../assets/parternship.webp";
-// import fiveLogo from "../assets/66.png";
+import purpose from "../assets/purpose.webp";
+import fiveLogo from "../assets/66.png";
 // import { PiPottedPlant } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 // import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
@@ -389,14 +391,14 @@ function About() {
         <div className="about-section6-container">
           <div>
             <div>
-              <img src={Stacialogo} alt="" />
+              <img src={whitelogo} alt="" style={{ padding: "1rem  2rem" , width:"15rem"}} />
               <div className="about-section6-title test-seclection-blue">
                 Celebrating Five Years Excellence
               </div>
             </div>
           </div>
           <div className="about-section6-img-container">
-            <img src={fiveLogo} alt="" />
+            <img src={fiveLogo} alt="" style={{ padding: "1rem  2rem" }}/>
           </div>
           <div>
             <p className="about-section6-des test-seclection-blue">
@@ -464,7 +466,7 @@ function About() {
           </div>
           <div>
             <img
-              src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+              src={purpose}
               alt=""
             />
           </div>
