@@ -558,18 +558,28 @@ export default function SingleProduct() {
 
               }}
             >
-              {/* <img
+              <img
                 src={SelectedProduct?.imageUrl}
                 alt={SelectedProduct?.title}
                 loading="lazy"
-              /> */}// inside render
-              <SingleProductImage
+              />
+              {/* inside render */}
+              {/* <SingleProductImage
               
                 modelUrl={SelectedProduct?.animationUrl}  // e.g. "/models/bottle.glb" or null
                 imageUrl={SelectedProduct?.imageUrl}      // fallback image
                 autoRotate={true}
-              />
+              /> */}
             </div>
+            {/* <div className="img-box" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              {SelectedProduct?.animationUrl ? (
+                // if you have a 3D model url (glb/gltf)
+                <ThreeModelViewer modelUrl={SelectedProduct.animationUrl} height="60vh" />
+              ) : (
+                // fall back to textured plane viewer for images
+                <ThreeImageViewer imageUrl={SelectedProduct?.imageUrl} height="60vh" />
+              )}
+            </div> */}
             <div className="rotate-text"></div>
             {SelectedProduct.productDetails && (
               <div
