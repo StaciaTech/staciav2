@@ -517,7 +517,7 @@ import Star from "../components/Star";
 import StaciaLogo from "../assets/Stacia Monogram.svg";
 import StaciaLogoText from "../assets/Stacia logo.svg";
 // import five from "../assets/5yr logo.svg";
-import five from "../assets/68.svg";
+import six from "../assets/68.svg";
 import MobileNav from "../assets/MobileNav.png";
 import WhatsNew from "./WhatsNew";
 import Modal from "react-modal";
@@ -602,10 +602,10 @@ function NavBar() {
   // Logo and text animation interval
   useEffect(() => {
     const interval = setInterval(() => {
-      setLogo((prevLogo) => (prevLogo === StaciaLogo ? five : StaciaLogo));
+      setLogo((prevLogo) => (prevLogo === StaciaLogo ? six : StaciaLogo));
       setText((prevText) =>
         prevText === "Innovating for you"
-          ? `Celebrating 5th Anniversary`
+          ? `Celebrating 6th Anniversary`
           : "Innovating for you"
       );
     }, 7000);
@@ -765,7 +765,7 @@ function NavBar() {
                 key={logo}
                 src={logo}
                 alt=""
-                className="logo-rotate "
+                className="logo-rotate"
                 style={{
                   height: "3rem",
                   width: "3rem",

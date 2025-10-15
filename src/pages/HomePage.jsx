@@ -340,6 +340,7 @@ const HomeCaseStudy = lazy(() => import("../components/Home/HomeCaseStudy"));
 const ClientComponent = lazy(() => import("./Client"));
 const WhatsNewSection = lazy(() => import("../components/Home/WhatsNewSection"));
 const OurHistoryTimeline = lazy(() => import("../components/Home/OurHistory"));
+const IndustriesCoverd = lazy(() => import("../components/Home/Industries"));
 const Career = lazy(() => import("../components/Home/career"));
 
 const words = [
@@ -457,7 +458,7 @@ function HomePage() {
               justifyContent: "center",
               alignItems: "center",
               position: "sticky",
-              top: "-20px",
+              top: "-15px",
               zIndex: "100",
               // backgroundColor: "white"
             }}
@@ -473,7 +474,8 @@ function HomePage() {
         {/* Other Sections */}
         <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
-        {/* <ServiceDisplay />   */}
+        {/* <ServiceDisplay />  */}
+        <IndustriesCoverd /> 
         {/* <WhatsNewSection /> */}
         {/* <OurHistoryTimeline /> */}
         <EventsHosted />

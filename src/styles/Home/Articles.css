@@ -111,7 +111,7 @@
   margin-left: 1rem;
   margin-right: 1rem;
   align-self: flex-end;
-  transition: all 0.3s ease;
+  transition: all 0.12s ease-in-out;
   cursor: pointer;
   transform-origin: bottom;
   transition: background-size 0.6s ease, transform 0.6s ease;
@@ -120,7 +120,7 @@
 
 .single-article-card-image:hover {
   background-size: cover;
-  transition: background-size 0.12s ease, transform 0.12s ease
+  transition: background-size 0.24s ease-in-out, transform 0.24s ease-in-out;
 }
 
 .article-text-container {
@@ -130,7 +130,7 @@
 
 .article-text-container1 {
   display: none;
-  padding: 0 1rem 2rem 1rem;
+  padding: 0 1rem 0rem 1rem;
 }
 
 .single-article-card-image:hover .article-text-container {
@@ -142,6 +142,9 @@
   display: flex;
   justify-content: space-between;
   transition: all 1s ease-in-out;
+  backdrop-filter: blur(8px);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 
 .article-text-container:hover {
@@ -180,9 +183,9 @@
 
 .article-author-name {
   font-family: "EuclidMedium";
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  margin: 0.8rem 0;
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
   gap: 0.2rem;

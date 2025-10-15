@@ -474,7 +474,7 @@
 
 .about-section9-item-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 10px;
   margin: 4rem 0rem;

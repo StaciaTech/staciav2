@@ -142,7 +142,7 @@ right: 14px;
 @media (max-width: 1024px) {
   .four-text {
     font-size: 36px;
-    border-bottom: 1.5px solid rgba(107, 96, 132, 0.5);
+    /* border-bottom: 1.5px solid rgba(107, 96, 132, 0.5); */
     padding-bottom: 0.8rem;
     margin-bottom: 1.5rem;
   }
@@ -162,7 +162,7 @@ right: 14px;
 
   .four-text {
     font-size: 28px;
-    border-bottom: 1px solid rgba(107, 96, 132, 0.5);
+    /* border-bottom: 1px solid rgba(107, 96, 132, 0.5); */
     padding-bottom: 0.6rem;
     margin-bottom: 1rem;
   }
@@ -199,7 +199,7 @@ right: 14px;
 @media (max-width: 425px) {
   .four-text {
     font-size: 24px;
-    border-bottom: 1px solid rgba(107, 96, 132, 0.5);
+    /* border-bottom: 1px solid rgba(107, 96, 132, 0.5); */
     padding-bottom: 0.5rem;
     margin-bottom: 0.8rem;
   }

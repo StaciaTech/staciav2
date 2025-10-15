@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Food-Processing",
+    "imageUrl": "/assets/industries/healthcare.jpg"
+  },
+  {
+    "title": "Agriculture",
+    "imageUrl": "/assets/industries/finance.jpg"
+  },
+  {
+    "title": "Energy",
+    "imageUrl": "/assets/industries/education.jpg"
+  },
+  {
+      "title": "Manufacturing",
+      "imageUrl": "/assets/industries/manufacturing.jpg"
+    },
+    {
+      "title": "Consumer Electronic",
+      "imageUrl": "/assets/industries/retail.jpg"
+    },
+    {
+      "title": "Automotive",
+      "imageUrl": "/assets/industries/retail.jpg"
+    }
+]
+

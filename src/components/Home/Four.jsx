@@ -9,7 +9,7 @@ import p4 from "../../assets/Mr Prahlad Saravanapriyan1.webp";
 const fourData = [
   {
     id: 1,
-    pos: "Founder Partner, CEO",
+    pos: "Founder, Partner",
     img: p1,
     name: "Mr Sarabesh Sriram",
     about: `Sarabesh Sriram is a visionary entrepreneur and innovator driving change. With a deep-tech mindset, empathetic leadership, and purpose-driven approach, he transforms complex challenges into impactful solutions that shape industries and position India at the forefront of global innovation.`,
