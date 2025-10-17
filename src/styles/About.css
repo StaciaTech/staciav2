@@ -87,7 +87,8 @@
 .about-section2-img-container>img {
   width: 100%;
   object-fit: cover;
-  aspect-ratio: 1;
+  /* aspect-ratio: 1; */
+  aspect-ratio: 16/9;
 }
 
 .about-section3-container {
@@ -194,7 +195,7 @@
 .about-section4-container {
   display: flex;
   align-items: center;
-   column-gap: 5rem;
+  column-gap: 5rem;
   margin: 7rem 0rem;
 }
 
@@ -258,7 +259,7 @@
   width: 100%;
   border-radius: 20px;
   background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
-  
+
 }
 
 .about-section6-container>div {
@@ -268,7 +269,7 @@
 .about-section6-img-container {
   display: flex;
   justify-content: center;
-  
+
 
   /* background-color: #000088; */
 }

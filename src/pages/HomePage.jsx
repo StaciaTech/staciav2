@@ -475,7 +475,7 @@ function HomePage() {
         <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
         {/* <ServiceDisplay />  */}
-        <IndustriesCoverd /> 
+        {/* <IndustriesCoverd />  */}
         {/* <WhatsNewSection /> */}
         {/* <OurHistoryTimeline /> */}
         <EventsHosted />

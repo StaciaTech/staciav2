@@ -297,6 +297,14 @@ import activearrow from "../../assets/active-arrow.png";
 import industriesData from "../../Data/IndustriesHome.json";
 import "../../styles/Home/IndustriesHome.css";
 
+import * as MdIcons from "react-icons/md";
+import * as GiIcons from "react-icons/gi";
+import * as SlIcons from "react-icons/sl";
+import * as VscIcons from "react-icons/vsc";
+import * as FaIcons from "react-icons/fa";
+
+const iconSets = { ...MdIcons, ...GiIcons, ...SlIcons, ...VscIcons, ...FaIcons };
+
 export default function IndustriesDisplay() {
   const navigateTo = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -330,13 +338,16 @@ export default function IndustriesDisplay() {
   const currentIndustry = industries[currentSlide] || {
     title: "Industry",
     description: "Select an industry from the left to view details.",
-    icon: "🏭",
+    icon: "MdBusiness", // Example: a valid icon name from react-icons
   };
+
+  const IconComponent = iconSets[currentIndustry.icon];
+
 
   return (
     <div className="industry-display">
       <div className="our-industry-display-title test-seclection-blue">
-        Industries We Serve
+        Industries Covered
       </div>
 
       <div className="industry-display1">
@@ -367,8 +378,8 @@ export default function IndustriesDisplay() {
                   cursor: "pointer",
                 }}
                 onClick={() => {
-                  navigateTo(`/industries/${data.title}`);
-                  window.scrollTo(0, 0);
+                  // navigateTo(`/industries/${data.title}`);
+                  // window.scrollTo(0, 0);
                 }}
               >
                 {industries[currentSlide]?.title === data.title ? (
@@ -399,60 +410,68 @@ export default function IndustriesDisplay() {
 
         {/* RIGHT SIDE */}
         <div className="industry-right">
-          <div className="featured-card">
-            <div className="featured-header">
-              <div className="featured-icon" aria-hidden="true">
-                {currentIndustry.icon || ""}
-              </div>
-              <div className="featured-subtitle">Featured Industry</div>
-            </div>
+          <div className="vertical-carousel">
+            {industries?.map((data, i) => {
+              const IconComp = iconSets[data.icon];
+              return (
+                <div className="featured-card" key={i}>
+                  <div className="featured-header">
+                    <div className="featured-icon">
+                      {IconComp && <IconComp />}
+                    </div>
+                    <div className="featured-subtitle">Featured Industry</div>
+                  </div>
 
-            <h3 className="featured-heading">{currentIndustry.title}</h3>
+                  <h3 className="featured-heading">{data?.title}</h3>
 
-            <p className="featured-desc">
-              {currentIndustry.description ||
-                "We deliver tailored, innovative solutions for each industry, helping clients achieve long-term impact and efficiency."}
-            </p>
+                  <p className="featured-desc">
+                    {data?.description ||
+                      "We deliver tailored, innovative solutions for each industry, helping clients achieve long-term impact and efficiency."}
+                  </p>
 
-            <div className="featured-actions">
-              <button
-                className="dept-btn-ind"
-                style={{ "--dept-color": "#0d0225" }}
-                onClick={() => {
-                  navigateTo(`/industries/${currentIndustry.title}/services`);
-                  window.scrollTo(0, 0);
-                }}
-              >
-                <span>Explore Services</span>
-                <img src={arrow} alt="arrow" />
-              </button>
+                  <div className="featured-actions">
+                    <button
+                      className="dept-btn-ind"
+                      style={{ "--dept-color": "#0d0225" }}
+                      onClick={() => {
+                        navigateTo(`/industries/${data?.title}/services`);
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <span>Explore Services</span>
+                      <img src={arrow} alt="arrow" />
+                    </button>
 
-              <button
-                className="dept-btn-ind"
-                style={{ "--dept-color": "#0d0225" }}
-                onClick={() => {
-                  navigateTo(`/industries/${currentIndustry.title}/projects`);
-                  window.scrollTo(0, 0);
-                }}
-              >
-                <span>View Projects</span>
-                <img src={arrow} alt="arrow" />
-              </button>
+                    <button
+                      className="dept-btn-ind"
+                      style={{ "--dept-color": "#0d0225" }}
+                      onClick={() => {
+                        navigateTo(`/industries/${data?.title}/projects`);
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <span>View Projects</span>
+                      <img src={arrow} alt="arrow" />
+                    </button>
 
-              <button
-                className="dept-btn-ind"
-                style={{ "--dept-color": "#0d0225" }}
-                onClick={() => {
-                  navigateTo(`/industries/${currentIndustry.title}/case-studies`);
-                  window.scrollTo(0, 0);
-                }}
-              >
-                <span>Case Studies</span>
-                <img src={arrow} alt="arrow" />
-              </button>
-            </div>
+                    <button
+                      className="dept-btn-ind"
+                      style={{ "--dept-color": "#0d0225" }}
+                      onClick={() => {
+                        navigateTo(`/industries/${data?.title}/case-studies`);
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <span>Case Studies</span>
+                      <img src={arrow} alt="arrow" />
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
+
       </div>
     </div>
   );
