@@ -96,7 +96,7 @@
 
 //   const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro?.title?.split(" ").join("-") !== params.id)
 //   // const RemainingProducts = FoundCat?.products.filter((eachPro)=> eachPro.title.split() !== params.id)
- 
+
 //   // console.log(RemainingProducts, "Remaining Products");
 
 //   const [currentSlide, setCurrentSlide] = useState(0);
@@ -438,6 +438,7 @@ import data from "../../Data/ProductPage.json";
 import SuggestionProducts from "../ReUsableComp/SuggestionProducts";
 import SuggestionService from "../ReUsableComp/SuggestionService";
 import KnowMoreSection from "./KnowMoreSection";
+import SingleProductImage from "../ThreeJS/SingleProductImage";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
@@ -505,7 +506,7 @@ export default function SingleProduct() {
   const previousSlide = () => {
     setCurrentSlide(
       (currentSlide - 1 + SelectedProduct?.productDetails?.length) %
-        SelectedProduct?.productDetails.length
+      SelectedProduct?.productDetails.length
     );
   };
 
@@ -562,7 +563,23 @@ export default function SingleProduct() {
                 alt={SelectedProduct?.title}
                 loading="lazy"
               />
+              {/* inside render */}
+              {/* <SingleProductImage
+              
+                modelUrl={SelectedProduct?.animationUrl}  // e.g. "/models/bottle.glb" or null
+                imageUrl={SelectedProduct?.imageUrl}      // fallback image
+                autoRotate={true}
+              /> */}
             </div>
+            {/* <div className="img-box" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              {SelectedProduct?.animationUrl ? (
+                // if you have a 3D model url (glb/gltf)
+                <ThreeModelViewer modelUrl={SelectedProduct.animationUrl} height="60vh" />
+              ) : (
+                // fall back to textured plane viewer for images
+                <ThreeImageViewer imageUrl={SelectedProduct?.imageUrl} height="60vh" />
+              )}
+            </div> */}
             <div className="rotate-text"></div>
             {SelectedProduct.productDetails && (
               <div
@@ -666,7 +683,7 @@ export default function SingleProduct() {
                 {SelectedProduct?.briefDetails}
               </div>
             </div>
-            
+
             {/* Know More About Product Section */}
             {/* <KnowMoreSection productData={SelectedProduct} /> */}
           </div>
@@ -727,9 +744,9 @@ export default function SingleProduct() {
         </div>
       )}
       <div>
-          <SuggestionService/>
-          <SuggestionProducts/>
-        </div>
+        <SuggestionService />
+        <SuggestionProducts />
+      </div>
       <Footer />
       <MobileFooter />
     </Suspense>

@@ -137,6 +137,239 @@
 // export default StackScroll;
 
 
+// import React, { useEffect, useRef } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchProducts } from "../redux/slice/productSlice";
+// import { fetchServices } from "../redux/slice/serviceSlice";
+// import StackCard from "../components/Home/StackCard";
+// import { useScroll } from "framer-motion";
+
+// const StackScroll = ({ onToggle }) => {
+//   const proDetails = [
+//     {
+//       id: 1,
+//       background: "linear-gradient(259deg, #003362 -8.27%, #81497B 95.27%)",
+//     },
+//     {
+//       id: 2,
+//       background: "linear-gradient(259deg, #8566ea -8.27%, #d296fa 86.58%)",
+//     },
+//     {
+//       id: 3,
+//       background: "linear-gradient(259deg, #2A35B3 4.78%, #1485CB 94.3%)",
+//     },
+//     {
+//       id: 4,
+//       background: "linear-gradient(259deg, #CB2B5E -8.27%, #773987 86.58%)",
+//     },
+//     {
+//       id: 5,
+//       background: "linear-gradient(259deg, #260931 4.78%, #C9B0CE 94.3%)",
+//     },
+//     {
+//       id: 6,
+//       background: "linear-gradient(259deg, #232131 -8.27%, #8C87A4 86.58%)",
+//     },
+//   ];
+
+//   const dispatch = useDispatch();
+//   const homeData = useSelector((state) => state.product);
+//   const homeServData = useSelector((state) => state.service);
+
+//   useEffect(() => {
+//     dispatch(fetchProducts());
+//   }, [dispatch]);
+
+//   useEffect(() => {
+//     dispatch(fetchServices());
+//   }, [dispatch]);
+
+//   const homeProductData = homeData?.data || [];
+//   const homeServiceData = homeServData?.data || [];
+//   const containerRef = useRef(null);
+//   const { scrollYProgress } = useScroll({
+//     target: containerRef,
+//     offset: ["start start", "end end"],
+//   });
+
+//   return (
+//     <div ref={containerRef} className="stack-scroll-container">
+//       <div className="stack-scroll">
+//         <ul id="cards">
+//           {onToggle === "products" &&
+//             homeProductData.map((eachHomeProduct, i) => {
+//               const targetScale = 1 - (homeProductData.length - i) * 0.05;
+//               return (
+//                 <StackCard
+//                   key={eachHomeProduct.id}
+//                   eachHomeProduct={eachHomeProduct}
+//                   i={i}
+//                   proDetails={proDetails}
+//                   range={[i * 0.16, 1]}
+//                   targetScale={targetScale}
+//                   progress={scrollYProgress}
+//                 />
+//               );
+//             })}
+
+//           {onToggle === "services" &&
+//             homeServiceData.map((eachHomeService, i) => {
+//               const targetScale = 1 - (homeServiceData.length - i) * 0.05;
+//               return (
+//                 <StackCard
+//                   key={eachHomeService.id}
+//                   eachHomeService={eachHomeService}
+//                   i={i}
+//                   proDetails={proDetails}
+//                   range={[i * 0.16, 1]}
+//                   targetScale={targetScale}
+//                   progress={scrollYProgress}
+//                 />
+//               );
+//             })}
+
+//           {/* don't remove below code */}
+//           <div
+//             style={{
+//               height: "50vh",
+//               position: "sticky",
+//               zIndex: "-1",
+//               top: `calc(100% - 50% + ${40 * homeProductData?.length + 1}px)`,
+//             }}
+//           ></div>
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default StackScroll;
+
+// import React, { useEffect, useRef } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchProducts } from "../redux/slice/productSlice";
+// import { fetchServices } from "../redux/slice/serviceSlice";
+// import StackCard from "../components/Home/StackCard";
+// import { useScroll } from "framer-motion";
+
+// const StackScroll = ({ onToggle, onLastCardVisible }) => {
+//   const proDetails = [
+//     {
+//       id: 1,
+//       background: "linear-gradient(259deg, #003362 -8.27%, #81497B 95.27%)",
+//     },
+//     {
+//       id: 2,
+//       background: "linear-gradient(259deg, #8566ea -8.27%, #d296fa 86.58%)",
+//     },
+//     {
+//       id: 3,
+//       background: "linear-gradient(259deg, #2A35B3 4.78%, #1485CB 94.3%)",
+//     },
+//     {
+//       id: 4,
+//       background: "linear-gradient(259deg, #CB2B5E -8.27%, #773987 86.58%)",
+//     },
+//     {
+//       id: 5,
+//       background: "linear-gradient(259deg, #260931 4.78%, #C9B0CE 94.3%)",
+//     },
+//     {
+//       id: 6,
+//       background: "linear-gradient(259deg, #232131 -8.27%, #8C87A4 86.58%)",
+//     },
+//   ];
+
+//   const dispatch = useDispatch();
+//   const homeData = useSelector((state) => state.product);
+//   const homeServData = useSelector((state) => state.service);
+
+//   useEffect(() => {
+//     dispatch(fetchProducts());
+//   }, [dispatch]);
+
+//   useEffect(() => {
+//     dispatch(fetchServices());
+//   }, [dispatch]);
+
+//   const homeProductData = homeData?.data || [];
+//   const homeServiceData = homeServData?.data || [];
+//   const containerRef = useRef(null);
+//   const { scrollYProgress } = useScroll({
+//     target: containerRef,
+//     offset: ["start start", "end end"],
+//   });
+
+//   // Detect when the last card is reached
+//   useEffect(() => {
+//     const unsubscribe = scrollYProgress.on("change", (progress) => {
+//       const data = onToggle === "products" ? homeProductData : homeServiceData;
+//       const lastCardIndex = data.length - 1;
+//       const lastCardRangeEnd = lastCardIndex * 0.16 + 0.16; // Assuming range for last card
+
+//       // Check if scroll progress is at or beyond the last card's range
+//       if (progress >= lastCardRangeEnd && data.length > 0) {
+//         onLastCardVisible(false); // Hide toggle button
+//       } else {
+//         onLastCardVisible(true); // Show toggle button
+//       }
+//     });
+
+//     return () => unsubscribe();
+//   }, [scrollYProgress, onToggle, homeProductData, homeServiceData, onLastCardVisible]);
+
+//   return (
+//     <div ref={containerRef} className="stack-scroll-container">
+//       <div className="stack-scroll">
+//         <ul id="cards">
+//           {onToggle === "products" &&
+//             homeProductData.map((eachHomeProduct, i) => {
+//               const targetScale = 1 - (homeProductData.length - i) * 0.05;
+//               return (
+//                 <StackCard
+//                   key={eachHomeProduct.id}
+//                   eachHomeProduct={eachHomeProduct}
+//                   i={i}
+//                   proDetails={proDetails}
+//                   range={[i * 0.16, 1]}
+//                   targetScale={targetScale}
+//                   progress={scrollYProgress}
+//                 />
+//               );
+//             })}
+//           {onToggle === "services" &&
+//             homeServiceData.map((eachHomeService, i) => {
+//               const targetScale = 1 - (homeServiceData.length - i) * 0.05;
+//               return (
+//                 <StackCard
+//                   key={eachHomeService.id}
+//                   eachHomeService={eachHomeService}
+//                   i={i}
+//                   proDetails={proDetails}
+//                   range={[i * 0.16, 1]}
+//                   targetScale={targetScale}
+//                   progress={scrollYProgress}
+//                 />
+//               );
+//             })}
+//           {/* dont remove below code */}
+//           <div
+//             style={{
+//               height: "50vh",
+//               position: "sticky",
+//               zIndex: "-1",
+//               top: `calc(100% - 50% + ${40 * homeProductData?.length + 1}px)`,
+//             }}
+//           ></div>
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default StackScroll;
+
+
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../redux/slice/productSlice";
@@ -187,23 +420,32 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
   const homeProductData = homeData?.data || [];
   const homeServiceData = homeServData?.data || [];
   const containerRef = useRef(null);
+
+  // track previous visibility to avoid redundant calls
+  const prevVisibleRef = useRef(true);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
-  // Detect when the last card is reached
+  // Use scroll progress to hide/show toggle at 90% completion
   useEffect(() => {
+    if (!scrollYProgress) return;
     const unsubscribe = scrollYProgress.on("change", (progress) => {
-      const data = onToggle === "products" ? homeProductData : homeServiceData;
-      const lastCardIndex = data.length - 1;
-      const lastCardRangeEnd = lastCardIndex * 0.16 + 0.16; // Assuming range for last card
-
-      // Check if scroll progress is at or beyond the last card's range
-      if (progress >= lastCardRangeEnd && data.length > 0) {
-        onLastCardVisible(false); // Hide toggle button
-      } else {
-        onLastCardVisible(true); // Show toggle button
+      // progress is [0, 1] for the container
+      const shouldBeVisible = progress < 1; // visible until 90%
+      // Only call the callback if visibility actually changed
+      if (prevVisibleRef.current !== shouldBeVisible) {
+        prevVisibleRef.current = shouldBeVisible;
+        // ensure we only hide/show when there's data to show
+        const data = onToggle === "products" ? homeProductData : homeServiceData;
+        if (data.length > 0) {
+          onLastCardVisible(shouldBeVisible);
+        } else {
+          // If there's no data, always show the toggle (or keep previous behavior)
+          onLastCardVisible(true);
+        }
       }
     });
 
@@ -247,10 +489,10 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
           {/* dont remove below code */}
           <div
             style={{
-              height: "60vh",
+              height: "50vh",
               position: "sticky",
               zIndex: "-1",
-              top: `calc(100% - 90% + ${40 * homeProductData?.length + 1}px)`,
+              top: `calc(100% - 50% + ${40 * homeProductData?.length + 1}px)`,
             }}
           ></div>
         </ul>

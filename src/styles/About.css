@@ -87,7 +87,8 @@
 .about-section2-img-container>img {
   width: 100%;
   object-fit: cover;
-  aspect-ratio: 1;
+  /* aspect-ratio: 1; */
+  aspect-ratio: 16/9;
 }
 
 .about-section3-container {
@@ -194,6 +195,7 @@
 .about-section4-container {
   display: flex;
   align-items: center;
+  column-gap: 5rem;
   margin: 7rem 0rem;
 }
 
@@ -251,12 +253,13 @@
 .about-section6-container {
   margin: 10rem 0rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   column-gap: 5rem;
   width: 100%;
-  /* background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%); */
-  
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(49, 8, 139, 1) 0%, rgba(13, 2, 37, 1) 80%, rgba(13, 2, 37, 1) 100%);
+
 }
 
 .about-section6-container>div {
@@ -266,13 +269,16 @@
 .about-section6-img-container {
   display: flex;
   justify-content: center;
+
+
   /* background-color: #000088; */
 }
 
 .about-section6-title {
   font-family: EuclidSemibold;
   font-size: 3rem;
-  padding: 1rem 0rem;
+  padding: 1rem 2rem;
+  color: #fff;
 }
 
 .about-section6-des {
@@ -469,7 +475,7 @@
 
 .about-section9-item-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 10px;
   margin: 4rem 0rem;
@@ -571,7 +577,7 @@
   color: #6B6084;
   text-align: center;
   width: 50%;
-  margin: 0.5rem auto;
+  margin: 1.5rem auto;
 }
 
 .about-section4-des {
