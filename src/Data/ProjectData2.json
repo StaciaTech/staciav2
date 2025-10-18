@@ -1892,11 +1892,11 @@
             },
             {
               "id": 14,
-              "title": "Sharada Store Mobile App",
-              "mainDesc": "A mobile e-commerce app for Sharada Store, offering seamless product browsing, secure payments, and real-time order tracking for an enhanced shopping experience.",
+              "title": "Sharadha Store Mobile App",
+              "mainDesc": "A mobile e-commerce app for Sharadha Store, offering seamless product browsing, secure payments, and real-time order tracking for an enhanced shopping experience.",
               "mainImageUrl": "/assets/ProjectPage/saradha-store.webp",
-              "Executive-Summary": "The Sharada Store Mobile App, developed by Stacia Corp, revolutionizes the shopping experience for a Chennai-based retail chain. Featuring intuitive product browsing, secure payment gateways, real-time order tracking, and personalized recommendations, the app increased customer retention by 45% and sales by 30% within four months. Built using Flutter for cross-platform compatibility and a Node.js backend on AWS, the project was delivered in seven months using Agile methodologies, achieving a five-month ROI through in-app purchases and subscriptions.",
-              "Client-Overview": "Sharada Store, a mid-sized retail chain in Chennai, specializes in groceries and household goods. With a growing customer base, they needed a mobile app to enhance accessibility, streamline purchases, and compete with larger e-commerce platforms.",
+              "Executive-Summary": "The Sharadha Store Mobile App, developed by Stacia Corp, revolutionizes the shopping experience for a Chennai-based retail chain. Featuring intuitive product browsing, secure payment gateways, real-time order tracking, and personalized recommendations, the app increased customer retention by 45% and sales by 30% within four months. Built using Flutter for cross-platform compatibility and a Node.js backend on AWS, the project was delivered in seven months using Agile methodologies, achieving a five-month ROI through in-app purchases and subscriptions.",
+              "Client-Overview": "Sharadha Store, a mid-sized retail chain in Chennai, specializes in groceries and household goods. With a growing customer base, they needed a mobile app to enhance accessibility, streamline purchases, and compete with larger e-commerce platforms.",
               "Project-Objective": [
                 "Create a user-friendly mobile app for browsing and purchasing products.",
                 "Integrate secure payment systems and real-time order tracking.",
@@ -1996,7 +1996,7 @@
                   "des": "Expanded customer base by 20% through mobile accessibility."
                 }
               ],
-              "Conclusion": "The Sharada Store Mobile App elevated the client’s retail operations by offering a seamless, personalized shopping experience. Its robust architecture and user-focused design ensure long-term scalability and customer loyalty in a competitive e-commerce landscape.",
+              "Conclusion": "The Sharadha Store Mobile App elevated the client’s retail operations by offering a seamless, personalized shopping experience. Its robust architecture and user-focused design ensure long-term scalability and customer loyalty in a competitive e-commerce landscape.",
               "References": [
                 "Flutter Official Documentation",
                 "Firebase Real-Time Database Guide",

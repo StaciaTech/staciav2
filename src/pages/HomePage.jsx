@@ -1,7 +1,7 @@
 // import React, { useEffect, useState, lazy, Suspense } from "react";
 // import NavBar from "../components/NavBar";
 // import Footer from "../components/Footer";
-// import "../styles/Home.css";  
+// import "../styles/Home.css";
 
 // import ClientComponent from "./Client";
 // import reverse from "../assets/reverse.png";
@@ -38,7 +38,6 @@
 // const MobileArticle = React.lazy(() =>
 //   import("../components/Home/MobileArticle")
 // );
-
 
 // const words = [
 //   "Innovation",
@@ -121,19 +120,14 @@
 //         </React.Suspense>
 //       </div>
 
-
-
 //       {/* Events */}
 //       <EventsHosted />
-
 
 //       {/* case study */}
 //       <HomeCaseStudy />
 
-
 //       {/* Home Projects */}
-//       <OurProjects /> 
-
+//       <OurProjects />
 
 //       {/* Home Articles  */}
 
@@ -162,14 +156,12 @@
 
 // export default HomePage;
 
-
 // import React, { useEffect, useState, lazy, Suspense } from "react";
 // import { motion } from "framer-motion";
 // import LoadingStar from "../components/LoadingStar";
 // import Star from "../components/Star";
 // import "../styles/Home.css";
 // import Popup from "../components/Popup";
-
 
 // // Lazy-loaded components
 // const NavBar = lazy(() => import("../components/NavBar"));
@@ -279,7 +271,7 @@
 //               alignItems: "center",
 //               position: " sticky",
 //               top: "20px",
-//               // backgroundColor: "white", 
+//               // backgroundColor: "white",
 //               zIndex: "100"
 
 //             }}
@@ -338,7 +330,9 @@ const SideBar = lazy(() => import("../components/SideBar"));
 const MobileArticle = lazy(() => import("../components/Home/MobileArticle"));
 const HomeCaseStudy = lazy(() => import("../components/Home/HomeCaseStudy"));
 const ClientComponent = lazy(() => import("./Client"));
-const WhatsNewSection = lazy(() => import("../components/Home/WhatsNewSection"));
+const WhatsNewSection = lazy(() =>
+  import("../components/Home/WhatsNewSection")
+);
 const OurHistoryTimeline = lazy(() => import("../components/Home/OurHistory"));
 const IndustriesCoverd = lazy(() => import("../components/Home/Industries"));
 const Career = lazy(() => import("../components/Home/career"));
@@ -444,10 +438,10 @@ function HomePage() {
           <h1 className="toggle-title-header-home">Delve deep into stacia's </h1>
         </div> */}
         {/* Stack Scroll Section with Toggle */}
-        <div className="stack-scroll-container"
-        //  ref={containerRef}
+        <div
+          className="stack-scroll-container"
+          //  ref={containerRef}
         >
-
           <div
             ref={headerRef}
             style={{
@@ -463,17 +457,25 @@ function HomePage() {
               // backgroundColor: "white"
             }}
           >
-            {isToggleVisible && <div className="toggle-title-container-home">
-              <h1 className="toggle-title-header-home">Delve deep into Stacia's </h1>
-            </div>}
+            {isToggleVisible && (
+              <div className="toggle-title-container-home">
+                <h1 className="toggle-title-header-home">
+                  Delve deep into Stacia's{" "}
+                </h1>
+              </div>
+            )}
             {isToggleVisible && <ToggleButton onToggle={handleToggleChange} />}
           </div>
-          <StackScroll onToggle={selectedToggle} onLastCardVisible={handleLastCardVisible} />
+          <StackScroll
+            onToggle={selectedToggle}
+            onLastCardVisible={handleLastCardVisible}
+          />
         </div>
 
         {/* Other Sections */}
         <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
+        <WhatsNewSection />
         {/* <ServiceDisplay />  */}
         {/* <IndustriesCoverd />  */}
         {/* <WhatsNewSection /> */}
