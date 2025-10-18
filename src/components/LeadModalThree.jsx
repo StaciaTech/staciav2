@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaTimes,
@@ -11,17 +11,18 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-// Assuming this path is correct for your CSS
-import "../styles/LeadModalTwo.css";
-import StaciaContactLogo from "../assets/StaciaContactLogo.svg";
+import "../styles/LeadModalThree.css";
+import StaciaContactLogo from "../assets/colorstaciacorp.svg";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import {
   HiOutlineArrowNarrowLeft,
   HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import successLottie from "../assets/success.lottie";
 
-const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
+const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -32,8 +33,6 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // **NEW STATE** to control when errors should be displayed for the current step.
   const [isCurrentFieldTouched, setIsCurrentFieldTouched] = useState(false);
 
   const steps = [
@@ -59,14 +58,73 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
     },
   ];
 
-  // Validation function: returns boolean (isValid) and updates errors state
+  // Enhanced phone validation function
+  const validatePhoneNumber = (phoneNumber) => {
+    if (!phoneNumber) return false;
+
+    try {
+      // Remove all non-digit characters except +
+      const cleaned = phoneNumber.replace(/[^\d+]/g, "");
+
+      // Check if it's a valid international format
+      if (cleaned.startsWith("+")) {
+        // International format - extract country code and national number
+        const withoutPlus = cleaned.slice(1);
+
+        // For Indian numbers: country code (91) + 10 digits = 12 total
+        // For other countries: country code (1-3 digits) + national number (varies)
+        if (withoutPlus.startsWith("91")) {
+          // Indian number with country code: +91XXXXXXXXXX (12 digits total)
+          const nationalNumber = withoutPlus.slice(2); // Remove country code
+          return (
+            nationalNumber.length === 10 && /^[6-9]\d{9}$/.test(nationalNumber)
+          );
+        } else {
+          // Other international numbers
+          // Minimum: country code (1 digit) + national number (7 digits) = 8
+          // Maximum: country code (3 digits) + national number (12 digits) = 15
+          return withoutPlus.length >= 8 && withoutPlus.length <= 15;
+        }
+      } else {
+        // Local format - should be exactly 10 digits starting with 6-9
+        return cleaned.length === 10 && /^[6-9]\d{9}$/.test(cleaned);
+      }
+    } catch (error) {
+      return false;
+    }
+  };
+
+  // Get clean phone number for submission
+  const getCleanPhoneNumber = (phoneNumber) => {
+    if (!phoneNumber) return "";
+    // Remove all non-digit characters except +
+    return phoneNumber.replace(/[^\d+]/g, "");
+  };
+
+  // ESC key handler
+  const handleEscKey = useCallback(
+    (event) => {
+      if (event.keyCode === 27) {
+        onClose();
+      }
+    },
+    [onClose]
+  );
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscKey, false);
+      return () => {
+        document.removeEventListener("keydown", handleEscKey, false);
+      };
+    }
+  }, [isOpen, handleEscKey]);
+
   const validateField = (field, value) => {
     let isValid = true;
 
     setErrors((prevErrors) => {
       const newErrors = { ...prevErrors };
-
-      // Clear error initially
       delete newErrors[field];
 
       switch (field) {
@@ -95,8 +153,52 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
           if (!value) {
             newErrors.phone = "Phone number is required";
             isValid = false;
-          } else if (value.length < 10) {
-            newErrors.phone = "Please enter a valid phone number";
+          } else if (!validatePhoneNumber(value)) {
+            // Provide specific error messages based on the issue
+            const cleaned = value.replace(/[^\d+]/g, "");
+
+            if (cleaned.startsWith("+")) {
+              const withoutPlus = cleaned.slice(1);
+
+              if (withoutPlus.startsWith("91")) {
+                // Indian international number
+                const nationalNumber = withoutPlus.slice(2);
+                if (nationalNumber.length < 10) {
+                  newErrors.phone =
+                    "Indian number should have 10 digits after +91";
+                } else if (nationalNumber.length > 10) {
+                  newErrors.phone =
+                    "Indian number should have exactly 10 digits after +91";
+                } else if (!/^[6-9]/.test(nationalNumber)) {
+                  newErrors.phone =
+                    "Indian mobile number should start with 6, 7, 8, or 9";
+                } else {
+                  newErrors.phone = "Please enter a valid Indian phone number";
+                }
+              } else {
+                // Other international numbers
+                if (withoutPlus.length < 8) {
+                  newErrors.phone = "International phone number is too short";
+                } else if (withoutPlus.length > 15) {
+                  newErrors.phone = "International phone number is too long";
+                } else {
+                  newErrors.phone =
+                    "Please enter a valid international phone number";
+                }
+              }
+            } else {
+              // Local format
+              if (cleaned.length < 10) {
+                newErrors.phone = "Phone number should have 10 digits";
+              } else if (cleaned.length > 10) {
+                newErrors.phone = "Phone number should have exactly 10 digits";
+              } else if (!/^[6-9]/.test(cleaned)) {
+                newErrors.phone =
+                  "Indian mobile number should start with 6, 7, 8, or 9";
+              } else {
+                newErrors.phone = "Please enter a valid phone number";
+              }
+            }
             isValid = false;
           }
           break;
@@ -124,7 +226,6 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
     return isValid;
   };
 
-  // Prevent background scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
       const isDesktop = window.innerWidth > 1024;
@@ -146,7 +247,6 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
     }
   }, [isOpen]);
 
-  // Reset form state when modal opens
   useEffect(() => {
     if (isOpen && item) {
       setFormData({
@@ -159,12 +259,10 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
       setFormSubmitted(false);
       setErrors({});
       setIsSubmitting(false);
-      // **MODIFIED: Reset touched state**
       setIsCurrentFieldTouched(false);
     }
   }, [isOpen, item]);
 
-  // Run validation when step or form data changes to update button visibility
   useEffect(() => {
     if (isOpen) {
       const currentField = steps[currentStep].field;
@@ -184,7 +282,6 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
     formData.message,
   ]);
 
-  // **NEW: Reset touched state when moving steps**
   useEffect(() => {
     setIsCurrentFieldTouched(false);
   }, [currentStep]);
@@ -195,21 +292,22 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
       ...formData,
       [name]: value,
     });
-    // Validation runs via useEffect
   };
 
   const handlePhoneChange = (value) => {
+    // Limit the input length to prevent excessively long numbers
+    if (value && value.length > 20) {
+      return;
+    }
+
     setFormData({
       ...formData,
       phone: value || "",
     });
-    // Validation runs via useEffect
   };
 
-  // **NEW: Handle blur/focus out to mark field as touched and show errors**
   const handleInputBlur = () => {
     setIsCurrentFieldTouched(true);
-    // Force validation on blur for the current field
     const currentField = steps[currentStep].field;
     if (currentField === "contactAndRequirements") {
       validateField("phone", formData.phone);
@@ -224,22 +322,18 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
     if (!currentStepData.required) return true;
 
     if (currentStepData.field === "contactAndRequirements") {
-      const phoneValid =
-        formData.phone && formData.phone.length >= 10 && !errors.phone;
+      const phoneValid = validatePhoneNumber(formData.phone) && !errors.phone;
       const messageValid =
         formData.message && formData.message.trim() !== "" && !errors.message;
       return phoneValid && messageValid;
     }
 
     const value = formData[currentStepData.field];
-
     return value && value.trim() !== "" && !errors[currentStepData.field];
   };
 
   const nextStep = () => {
-    // **MODIFIED: Force touched state to true when attempting to proceed**
     setIsCurrentFieldTouched(true);
-
     const currentField = steps[currentStep].field;
 
     if (currentField === "contactAndRequirements") {
@@ -267,7 +361,6 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
     }
   };
 
-  // Prevent form submission on Enter key
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
@@ -285,10 +378,8 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
     }
 
     setIsSubmitting(true);
-    // **MODIFIED: Force touched state to true on submission attempt**
     setIsCurrentFieldTouched(true);
 
-    // Final global validation before submission
     let isValid = true;
     if (
       !validateField("name", formData.name) ||
@@ -299,17 +390,25 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
       isValid = false;
     }
 
+    // Final phone validation check
+    if (!validatePhoneNumber(formData.phone)) {
+      setErrors((prev) => ({
+        ...prev,
+        phone: "Please enter a valid phone number",
+      }));
+      isValid = false;
+    }
+
     if (!isValid) {
       setIsSubmitting(false);
       return;
     }
 
-    // Prepare form data for submission
     const submissionData = new FormData();
-    submissionData.append("access_key", "e94ad995-f110-472a-81f9-66ff8ca65e98");
+    submissionData.append("access_key", "31997e7a-b269-417f-8543-e6c4adc63ad9");
     submissionData.append("name", formData.name);
     submissionData.append("email", formData.email);
-    submissionData.append("phone", formData.phone);
+    submissionData.append("phone", getCleanPhoneNumber(formData.phone));
     submissionData.append("message", formData.message);
     submissionData.append("subject", `Interest in: ${item.title}`);
     submissionData.append("from_name", "Stacia Corp Website");
@@ -341,9 +440,6 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
   if (!isOpen || !item) return null;
 
   const isLastStep = currentStep === steps.length - 1;
-  const showDesktopNextArrow = !isLastStep && isStepValid();
-
-  // **NEW: Helper function to determine if an error should be visible**
   const isErrorVisible = (fieldName) => {
     return errors[fieldName] && isCurrentFieldTouched;
   };
@@ -363,18 +459,10 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
         </button>
 
         <div className="modal-container-two">
-          {/* Left Side - Brand Section (UNMODIFIED) */}
+          {/* Left Side - Enhanced Brand Section */}
           <div className="modal-left-two">
             <div className="brand-section-two">
-              <div className="logo-container-two">
-                <img
-                  src={StaciaContactLogo}
-                  alt="Stacia Logo"
-                  className="company-logo-two"
-                />
-              </div>
-
-              {/* Item Image Section */}
+              {/* Item Image as Background */}
               <div className="modal-item-image-section-two">
                 <div className="item-image-container-two">
                   <img
@@ -385,51 +473,10 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                 </div>
               </div>
 
+              {/* Enhanced Glassmorphism Context */}
               <div className="modal-item-info-two">
                 <h4>{item.title}</h4>
                 <p className="modal-item-description-two">{item.description}</p>
-              </div>
-
-              <div className="social-section-two">
-                <h5>Connect With Us</h5>
-                <div className="contact-socials-two">
-                  <a
-                    href="https://www.facebook.com/staciacorp/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="social-icon-container-two">
-                      <FaFacebookF className="social-facebook-icon-two" />
-                    </div>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/staciacorp"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="social-icon-container-two">
-                      <FaLinkedinIn className="social-linkedin-icon-two" />
-                    </div>
-                  </a>
-                  <a
-                    href="https://x.com/StaciaCorp"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="social-icon-container-two">
-                      <BsTwitterX className="social-twitter-icon-two" />
-                    </div>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/stacia_corp_?igsh=MTA5MGdnZms5ZjhwMA=="
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="social-icon-container-two">
-                      <FaInstagram className="social-insta-icon-two" />
-                    </div>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -439,6 +486,13 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
             <div className="form-section-two">
               {!formSubmitted ? (
                 <>
+                  <div className="logo-container-two">
+                    <img
+                      src={StaciaContactLogo}
+                      alt="Stacia Logo"
+                      className="company-logo-two"
+                    />
+                  </div>
                   <div className="form-intro-two">
                     <h3>Express Your Interest</h3>
                     <p className="modal-description-two">
@@ -460,7 +514,7 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                     </div>
                   </div>
 
-                  {/* Form Step Container (No <form> tag) */}
+                  {/* Form Step Container */}
                   <div className="lead-form-two">
                     <AnimatePresence mode="wait">
                       <motion.div
@@ -471,7 +525,7 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                         exit={{ opacity: 0, x: -50 }}
                         transition={{ duration: 0.3 }}
                       >
-                        {/* Previous Arrow - Positioned above header and left side (Desktop/Tablet Only) */}
+                        {/* Previous Arrow */}
                         {currentStep > 0 && (
                           <button
                             type="button"
@@ -489,7 +543,7 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                           </h4>
                         </div>
 
-                        {/* Field Container with Right-Side Arrow (Desktop/Tablet Only) */}
+                        {/* Field Container */}
                         <div
                           className={`step-field-and-arrow-container ${
                             isLastStep ? "last-step-container" : ""
@@ -506,14 +560,14 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                                       defaultCountry="IN"
                                       value={formData.phone}
                                       onChange={handlePhoneChange}
-                                      onBlur={handleInputBlur} // **MODIFIED: Add onBlur**
+                                      onBlur={handleInputBlur}
                                       placeholder="Enter your phone number"
                                       className={`phone-input-field ${
-                                        isErrorVisible("phone") ? "error" : "" // **MODIFIED: Use isErrorVisible**
+                                        isErrorVisible("phone") ? "error" : ""
                                       }`}
                                     />
                                   </div>
-                                  {isErrorVisible("phone") && ( // **MODIFIED: Use isErrorVisible**
+                                  {isErrorVisible("phone") && (
                                     <span className="error-message">
                                       {errors.phone}
                                     </span>
@@ -525,15 +579,15 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleInputChange}
-                                    onBlur={handleInputBlur} // **MODIFIED: Add onBlur**
+                                    onBlur={handleInputBlur}
                                     onKeyDown={handleKeyDown}
                                     rows="4"
                                     placeholder="Tell us about your specific needs or questions..."
                                     className={`single-field-input ${
-                                      isErrorVisible("message") ? "error" : "" // **MODIFIED: Use isErrorVisible**
+                                      isErrorVisible("message") ? "error" : ""
                                     }`}
                                   />
-                                  {isErrorVisible("message") && ( // **MODIFIED: Use isErrorVisible**
+                                  {isErrorVisible("message") && (
                                     <span className="error-message">
                                       {errors.message}
                                     </span>
@@ -547,17 +601,17 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                                   name={steps[currentStep].field}
                                   value={formData[steps[currentStep].field]}
                                   onChange={handleInputChange}
-                                  onBlur={handleInputBlur} // **MODIFIED: Add onBlur**
+                                  onBlur={handleInputBlur}
                                   onKeyDown={handleKeyDown}
                                   placeholder={steps[currentStep].placeholder}
                                   className={`single-field-input elegant-input ${
                                     isErrorVisible(steps[currentStep].field)
                                       ? "error"
-                                      : "" // **MODIFIED: Use isErrorVisible**
+                                      : ""
                                   }`}
                                   autoFocus
                                 />
-                                {isErrorVisible(steps[currentStep].field) && ( // **MODIFIED: Use isErrorVisible**
+                                {isErrorVisible(steps[currentStep].field) && (
                                   <span className="error-message">
                                     {errors[steps[currentStep].field]}
                                   </span>
@@ -566,8 +620,8 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                             )}
                           </div>
 
-                          {/* Next Arrow - Show only if NOT last step AND is valid */}
-                          {showDesktopNextArrow && (
+                          {/* Next Arrow */}
+                          {!isLastStep && isStepValid() && (
                             <div className="elegant-next-arrow-wrapper">
                               <button
                                 type="button"
@@ -581,7 +635,7 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                           )}
                         </div>
 
-                        {/* Centered Submit Button on the last step (Desktop/Tablet Only) */}
+                        {/* Centered Submit Button */}
                         {isLastStep && (
                           <div className="centered-submit-wrapper">
                             <button
@@ -609,55 +663,53 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                         )}
                       </motion.div>
                     </AnimatePresence>
+                  </div>
 
-                    {/* Mobile Navigation (Mobile Only) */}
-                    <div className="mobile-form-navigation">
-                      {currentStep > 0 && (
-                        <button
-                          type="button"
-                          className="mobile-nav-button mobile-prev-button"
-                          onClick={prevStep}
-                        >
-                          <FaChevronLeft />
-                          <span>Back</span>
-                        </button>
-                      )}
-
-                      {currentStep < steps.length - 1 ? (
-                        <button
-                          type="button"
-                          className="mobile-nav-button mobile-next-button"
-                          onClick={nextStep}
-                          disabled={!isStepValid()}
-                        >
-                          <span>Continue</span>
-                          <HiOutlineArrowNarrowRight />
-                        </button>
-                      ) : (
-                        <button
-                          type="button"
-                          className="mobile-nav-button mobile-submit-button mobile-submit-button-final"
-                          onClick={handleSubmitClick}
-                          disabled={!isStepValid() || isSubmitting}
-                          style={{
-                            backgroundColor: isStepValid() ? "#4CAF50" : "",
-                          }} // Inline style for guaranteed green on valid state
-                        >
-                          {isSubmitting ? (
-                            "Submitting..."
-                          ) : (
-                            <>
-                              <span>Submit Interest</span>
-                              <FaCheck />
-                            </>
-                          )}
-                        </button>
-                      )}
+                  {/* Social Section */}
+                  <div className="social-section-two">
+                    <h5>Connect With Us</h5>
+                    <div className="contact-socials-two">
+                      <a
+                        href="https://www.facebook.com/staciacorp/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <div className="social-icon-container-two">
+                          <FaFacebookF className="social-facebook-icon-two" />
+                        </div>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/company/staciacorp"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <div className="social-icon-container-two">
+                          <FaLinkedinIn className="social-linkedin-icon-two" />
+                        </div>
+                      </a>
+                      <a
+                        href="https://x.com/StaciaCorp"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <div className="social-icon-container-two">
+                          <BsTwitterX className="social-twitter-icon-two" />
+                        </div>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/stacia_corp_?igsh=MTA5MGdnZms5ZjhwMA=="
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <div className="social-icon-container-two">
+                          <FaInstagram className="social-insta-icon-two" />
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </>
               ) : (
-                /* Thank You Card (UNMODIFIED) */
+                /* Enhanced Thank You Card with Social Media */
                 <div className="thank-you-card">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -666,7 +718,14 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                     className="thank-you-content"
                   >
                     <div className="success-icon">
-                      <FaCheck />
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        className="thank-you-content"
+                      >
+                        <DotLottieReact src={successLottie} autoplay />
+                      </motion.div>
                     </div>
                     <h3 className="thank-you-title">Thank You!</h3>
                     <p className="thank-you-message">
@@ -692,6 +751,47 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
                         </div>
                       </div>
                     </div>
+
+                    {/* Social Media Section in Thank You Card */}
+                    <div className="thank-you-social-section">
+                      <div className="thank-you-divider">
+                        <span className="thank-you-divider-text">or</span>
+                      </div>
+                      <div className="thank-you-social-icons">
+                        <a
+                          href="https://www.facebook.com/staciacorp/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="thank-you-social-link"
+                        >
+                          <FaFacebookF className="thank-you-social-icon" />
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/company/staciacorp"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="thank-you-social-link"
+                        >
+                          <FaLinkedinIn className="thank-you-social-icon" />
+                        </a>
+                        <a
+                          href="https://x.com/StaciaCorp"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="thank-you-social-link"
+                        >
+                          <BsTwitterX className="thank-you-social-icon" />
+                        </a>
+                        <a
+                          href="https://www.instagram.com/stacia_corp_?igsh=MTA5MGdnZms5ZjhwMA=="
+                          target="_blank"
+                          rel="noreferrer"
+                          className="thank-you-social-link"
+                        >
+                          <FaInstagram className="thank-you-social-icon" />
+                        </a>
+                      </div>
+                    </div>
                   </motion.div>
                 </div>
               )}
@@ -703,4 +803,4 @@ const LeadModalTwo = ({ isOpen, onClose, item, onSubmit }) => {
   );
 };
 
-export default LeadModalTwo;
+export default LeadModalThree;

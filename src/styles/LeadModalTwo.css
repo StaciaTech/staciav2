@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
   backdrop-filter: blur(10px);
 }
 
@@ -121,7 +121,7 @@
 .company-logo-two {
   height: 52px;
   width: auto;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 
 /* ============================================================= */
@@ -276,7 +276,7 @@
 }
 
 .form-intro-two {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -302,7 +302,7 @@
 /* PROGRESS BAR */
 /* ============================================================= */
 .progress-bar-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .progress-bar-container {
@@ -350,9 +350,9 @@
 .lead-form-two {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  flex: 1;
+  gap: 1rem;
   width: 100%;
+  justify-content: center;
 }
 
 .form-step {
@@ -360,6 +360,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .step-field {
@@ -367,27 +369,42 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+}
+
+/* Combined Fields Layout */
+.combined-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.phone-field-container,
+.message-field-container {
+  width: 100%;
 }
 
 .single-field-input {
   padding: 1rem 1.25rem;
-  border: 2px solid #e9ecef;
-  border-radius: 12px;
   font-size: 1rem;
   transition: all 0.3s ease;
   font-family: inherit;
-  background: #f8f9fa;
   color: #0d0225;
   box-sizing: border-box;
   resize: vertical;
   width: 100%;
+  border: none;
+  border-bottom: 2px solid #0047ff;
+}
+
+textarea.single-field-input {
+  border: 2px solid #0047ff;
+  border-radius: 12px;
 }
 
 .single-field-input:focus {
   outline: none;
-  border-color: #0047ff;
-  box-shadow: 0 0 0 4px rgba(0, 71, 255, 0.15);
   background: #ffffff;
   transform: translateY(-1px);
 }
@@ -398,13 +415,12 @@
 }
 
 .single-field-input.error {
-  border-color: #e74c3c;
+  border-bottom-color: #e74c3c;
   background: #fdf2f2;
 }
 
 .single-field-input.error:focus {
-  border-color: #e74c3c;
-  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.15);
+  border-bottom-color: #e74c3c;
 }
 
 /* ============================================================= */
@@ -430,25 +446,22 @@
 .phone-input-field {
   width: 100%;
   padding: 1rem 1.25rem;
-  border: 2px solid #e9ecef;
-  border-radius: 12px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: #f8f9fa;
   color: #0d0225;
   box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #0047ff;
 }
 
 .phone-input-field:focus {
   outline: none;
-  border-color: #0047ff;
-  box-shadow: 0 0 0 4px rgba(0, 71, 255, 0.15);
   background: #ffffff;
   transform: translateY(-1px);
 }
 
 .phone-input-field.error {
-  border-color: #e74c3c;
+  border-bottom-color: #e74c3c;
   background: #fdf2f2;
 }
 
@@ -490,12 +503,10 @@
   gap: 1rem;
 }
 
-/* Force next/submit button to the right when no previous button */
 .form-navigation:not(:has(.prev-button)) {
   justify-content: flex-end;
 }
 
-/* Alternative approach for browsers that don't support :has() */
 .form-navigation:only-child {
   justify-content: flex-end;
 }
@@ -583,14 +594,14 @@
 .success-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #4caf50, #45a049);
+  /* background: linear-gradient(135deg, #4caf50, #45a049); */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 2rem;
-  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+  /* box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3); */
   flex-shrink: 0;
 }
 
@@ -685,6 +696,29 @@
   flex: 1;
   min-width: 0;
   margin: 0;
+}
+
+/* ============================================================= */
+/* LARGE DESKTOP (≥1400px) - TIGHTER STEP TITLE SPACING */
+/* ============================================================= */
+@media (min-width: 1400px) {
+  .form-step {
+    gap: 0.25rem;
+    padding: 0.25rem 0;
+  }
+
+  .step-field {
+    gap: 0.5rem;
+  }
+
+  .step-header {
+    margin-bottom: 0.25rem;
+  }
+
+  .step-title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
 }
 
 /* ============================================================= */
@@ -800,7 +834,6 @@
     padding: 0 0.5rem;
   }
 
-  /* Mobile navigation alignment */
   .form-navigation {
     flex-direction: column;
     gap: 0.75rem;
@@ -856,6 +889,10 @@
   .nav-button {
     padding: 0.875rem 1.5rem;
     font-size: 0.95rem;
+  }
+
+  .combined-fields {
+    gap: 1.25rem;
   }
 }
 
@@ -938,6 +975,10 @@
   .contact-value {
     font-size: 1rem;
   }
+
+  .combined-fields {
+    gap: 1rem;
+  }
 }
 
 /* ============================================================= */
@@ -1006,6 +1047,10 @@
     align-items: center;
     text-align: center;
   }
+
+  .combined-fields {
+    gap: 0.875rem;
+  }
 }
 
 /* ============================================================= */
@@ -1048,6 +1093,10 @@
 
   .contact-options {
     max-width: 280px;
+  }
+
+  .combined-fields {
+    gap: 0.75rem;
   }
 }
 
@@ -1092,6 +1141,7 @@
   .form-step {
     justify-content: center;
     padding-top: 0;
+    gap: 0.75rem;
   }
 
   .step-header {
@@ -1104,7 +1154,7 @@
 
   .step-field {
     justify-content: center;
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
   .single-field-input {
@@ -1137,6 +1187,10 @@
   .modal-item-description-two {
     font-size: 1.05rem;
   }
+
+  .combined-fields {
+    gap: 1.75rem;
+  }
 }
 
 /* ============================================================= */
@@ -1162,6 +1216,10 @@
 
   .modal-item-image-two {
     height: 180px;
+  }
+
+  .combined-fields {
+    gap: 2rem;
   }
 }
 
@@ -1204,15 +1262,6 @@ body.modal-open-two {
     border: 2px solid #000000;
   }
 
-  .single-field-input {
-    border: 2px solid #000000;
-  }
-
-  .single-field-input:focus {
-    border-color: #0047ff;
-    outline: 2px solid #0047ff;
-  }
-
   .nav-button {
     border: 2px solid transparent;
   }
@@ -1221,84 +1270,299 @@ body.modal-open-two {
     border-color: #000000;
   }
 }
+/*
+|--------------------------------------------------------------------------
+| ARROW AND INPUT POSITIONING
+|--------------------------------------------------------------------------
+*/
 
-/* ============================================================= */
-/* STEP HEADER - REDUCED SPACE */
-/* ============================================================= */
-.step-header {
-  margin-bottom: 0.5rem; /* Already reduced, but let's make it even smaller */
-  text-align: center;
+/* 1. Set the form step to be the positioning context for the arrows */
+.lead-form-two .form-step {
+  position: relative;
+  /* Add any necessary padding or width here */
 }
 
-.step-title {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #0d0225;
-  line-height: 1.3;
+/* 2. Style and position the elegant PREVIOUS arrow (top-left) */
+.elegant-prev-arrow-positioned {
+  position: absolute;
+  top: 5px; /* Space above the header */
+  left: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333; /* Dark, simple color */
+  padding: 0;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  transition: color 0.2s, opacity 0.2s;
+  z-index: 10; /* Ensure it's above other elements */
 }
 
-/* ============================================================= */
-/* FORM STEP CONTAINER - REDUCE VERTICAL SPACING */
-/* ============================================================= */
-.form-step {
-  flex: 1;
+.elegant-prev-arrow-positioned:hover {
+  color: var(--primary-color, #007bff); /* Use a primary/accent color */
+  opacity: 1;
+}
+
+/* 3. Adjust the Step Header position to give space for the previous arrow */
+.elegant-step-header {
+  margin-top: 30px; /* Pushes the header down from the previous arrow */
+  /* margin-bottom: 25px; */
+}
+
+/* 4. Use Flexbox for the input field and the next/submit arrow */
+.step-field-and-arrow-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem; /* Add small gap between header and field */
-  padding: 0.5rem 0; /* Reduce vertical padding */
-}
-
-.step-field {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.75rem; /* Reduced gap between label and input */
-}
-
-/* ============================================================= */
-/* LEAD FORM STYLES - ADJUST VERTICAL SPACING */
-/* ============================================================= */
-.lead-form-two {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; /* Reduced from 1.5rem */
-  flex: 1;
+  align-items: center; /* Vertical alignment */
+  gap: 15px; /* Gap between the input and the arrow button */
   width: 100%;
-  justify-content: center; /* Center content vertically */
 }
 
-/* ============================================================= */
-/* PROGRESS BAR - REDUCE MARGIN */
-/* ============================================================= */
-.progress-bar-section {
-  margin-bottom: 1rem; /* Reduced from 1.5rem */
+/* 5. Make the input field take up the main space */
+.step-field {
+  flex-grow: 1;
+  position: relative; /* Essential for positioning error messages */
+  width: 100%; /* For nested elements */
 }
 
-/* ============================================================= */
-/* FORM INTRO - REDUCE MARGIN */
-/* ============================================================= */
-.form-intro-two {
-  margin-bottom: 1rem; /* Reduced from 1.5rem */
-  text-align: center;
+/* Ensure single input fields use the full width of their container (.step-field) */
+.single-field-input.elegant-input {
+  width: 100%;
+  /* Define standard input styling here */
+  padding: 15px 20px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px; */
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  color: #0d0225;
+  box-sizing: border-box;
+  resize: vertical;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #0047ff;
+  border-radius: 0;
 }
 
-/* ============================================================= */
-/* LARGE DESKTOP (≥1440px) - ADJUST SPACING */
-/* ============================================================= */
-@media (min-width: 1440px) {
-  .form-step {
-    gap: 0.75rem; /* Slightly more space on larger screens */
-    padding: 0.75rem 0;
-  }
+/* 6. Style the NEXT/SUBMIT arrows (right side, next to input) */
+.elegant-next-arrow-wrapper {
+  flex-shrink: 0; /* Prevents the arrow from shrinking */
+}
 
-  .step-field {
-    gap: 1rem; /* Comfortable gap on large screens */
-  }
+.elegant-next-arrow,
+.elegant-submit-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; /* Fixed size */
+  height: 44px; /* Fixed size, should match input height or slightly larger */
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color, #007bff);
+  color: white;
+  font-size: 1.5rem;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Simple shadow */
+}
 
-  .lead-form-two {
-    gap: 1.25rem;
+.elegant-next-arrow:hover,
+.elegant-submit-arrow:hover {
+  background-color: var(--dark-primary-color, #0056b3);
+  transform: translateY(-1px);
+}
+
+.elegant-submit-arrow[disabled],
+.elegant-next-arrow[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner styling (if needed) */
+.submit-spinner {
+  /* Add your custom spinner styles here */
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
+}
+
+/* Hide the mobile navigation wrapper by default (on large screens) */
+.mobile-form-navigation {
+  display: none;
+  /* Important: Set a max-width for "desktop" */
+}
+
+/* Hide the desktop arrows/wrappers on small screens */
+.elegant-prev-arrow-positioned,
+.step-field-and-arrow-container {
+  /* Ensure these are only for screens large enough to be considered desktop */
+}
+
+/* Style for the mobile submit button at the last step */
+.mobile-submit-button-final {
+  background-color: #4caf50 !important; /* Green background */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+
+.mobile-submit-button-final:hover {
+  background-color: #45a049 !important;
+}
+
+.mobile-submit-button-final[disabled] {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+}
+
+/* Add or modify these styles in your LeadModalTwo.css */
+
+/* 1. Ensure the combined fields container uses a column layout */
+.combined-fields {
+  display: flex;
+  flex-direction: column; /* Stacks phone and message vertically */
+  gap: 1.5rem; /* Space between phone and message field groups */
+  width: 100%;
+  /* You might need to adjust width or margin here based on your overall layout */
+}
+
+/* 2. Style for the container on the last step (desktop/tablet only) */
+/* This overrides the default 'step-field-and-arrow-container' to use a column layout */
+.step-field-and-arrow-container.last-step-container {
+  display: flex;
+  flex-direction: column;
+  /* Remove any alignment that was centering items horizontally if needed */
+  width: 100%;
+}
+
+/* 3. New wrapper for the centered submit button */
+.centered-submit-wrapper {
+  /* margin-top: 2rem; */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the button within the wrapper */
+}
+
+/* 4. Style the new centered submit button */
+.centered-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+  gap: 0.5rem; /* Space between 'Submit Interest' text and the checkmark icon */
+  background-color: #3f51b5; /* Default blue for example, will be overridden by inline green */
+  color: white;
+  width: 100%; /* Make it full width of its container (max-width 400px set above) */
+}
+
+.centered-submit-button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc !important; /* Grey color when disabled */
+  color: #666 !important;
+}
+
+/* Ensure the submit button spinner is styled (if you use one) */
+.submit-spinner {
+  /* Basic spinner style */
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Query to hide the arrow wrappers on mobile (or small screens) 
+   and ensure the centered button logic only applies to desktop/tablet */
+
+/* Add or modify these styles in your LeadModalTwo.css */
+
+/* 1. Ensure the combined fields container uses a column layout (This is correct) */
+.combined-fields {
+  display: flex;
+  flex-direction: column; /* Stacks phone and message vertically */
+  gap: 1.5rem; /* Space between phone and message field groups */
+  width: 100%;
+}
+
+/* 2. Style for the container on the last step (desktop/tablet only) */
+/* REMOVE the centering on the .last-step-container itself to keep the inputs left-aligned */
+.step-field-and-arrow-container.last-step-container {
+  display: flex;
+  flex-direction: column;
+  /* --- REMOVED: align-items: center; --- */
+  /* --- REMOVED: max-width: 400px; --- */
+  /* --- REMOVED: margin: 0 auto; --- */
+  width: 100%; /* Ensure it uses full available width */
+}
+
+/* 3. New wrapper for the centered submit button (This will now be responsible for centering the button) */
+.centered-submit-wrapper {
+  /* margin-top: 2rem; */
+  width: 100%; /* Essential: take full width of the form area */
+  display: flex;
+  justify-content: center; /* CENTER THE BUTTON */
+}
+
+/* 4. Style for the actual centered submit button (new style for a modern look) */
+.centered-submit-button {
+  /* Base Button Styling */
+  border: none;
+  padding: 15px 30px; /* Generous padding for a single-line button */
+  border-radius: 50px; /* Pill shape for a modern look */
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.centered-submit-button:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.centered-submit-button[disabled] {
+  background-color: #ccc !important;
+  color: #666 !important;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }

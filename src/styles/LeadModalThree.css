@@ -1,0 +1,2439 @@
+/* ============================================================= */
+/* MODAL OVERLAY & BASE STRUCTURE */
+/* ============================================================= */
+.modal-overlay-two {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.modal-content-two {
+  background: #ffffff;
+  border-radius: 24px;
+  width: 85%;
+  max-width: 1100px;
+  max-height: 90vh;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* ============================================================= */
+/* CLOSE BUTTON */
+/* ============================================================= */
+.modal-close-two {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.modal-close-two:hover {
+  color: #e74c3c;
+  background: #ffffff;
+}
+
+/* ============================================================= */
+/* MODAL INNER CONTAINER */
+/* ============================================================= */
+.modal-container-two {
+  display: flex;
+  height: 100%;
+  min-height: 650px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ============================================================= */
+/* LEFT SIDE - BRAND SECTION */
+/* ============================================================= */
+.modal-left-two {
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  /* flex: 0 0; */
+  background: linear-gradient(135deg, #0d0225 0%, #2d1b69 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.brand-section-two {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  gap: 1rem !important;
+  z-index: 1;
+}
+
+.modal-item-image-section-two {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 !important;
+  z-index: 0;
+}
+
+.item-image-container-two {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.modal-item-image-two {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+.modal-left-two::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+  background: linear-gradient(
+    to top,
+    rgba(13, 2, 37, 0.95) 0%,
+    rgba(13, 2, 37, 0.7) 50%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.modal-item-info-two {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  ) !important;
+  backdrop-filter: blur(40px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(200%) !important;
+  border-radius: 24px !important;
+  padding: 2rem !important;
+  margin: 0 !important;
+  height: auto !important;
+  position: relative;
+  z-index: 2;
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.2) !important; */
+  flex: none !important;
+}
+
+.modal-item-info-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(198, 141, 252, 0.1) 0%,
+    rgba(168, 85, 247, 0.05) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 24px;
+  z-index: -1;
+}
+
+.modal-item-info-two h4 {
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  margin: 0 0 1rem 0 !important;
+  background: linear-gradient(135deg, #ffffff, #e9d5ff, #c68dfc) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+  letter-spacing: -0.5px;
+}
+
+.modal-item-description-two {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+  /* text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(198, 141, 252, 0.2) !important; */
+}
+
+/* ============================================================= */
+/* SOCIAL SECTION */
+/* ============================================================= */
+.social-section-two {
+  margin-top: auto;
+  padding-top: 0.95rem;
+  flex-shrink: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-section-two h5 {
+  margin: 0 0 1.2rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0d0225;
+  text-align: center;
+}
+
+.contact-socials-two {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon-container-two {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #350b91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.social-icon-container-two:hover {
+  background: #c68dfc;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(198, 141, 252, 0.4);
+  border-color: #c68dfc;
+}
+
+.social-facebook-icon-two,
+.social-linkedin-icon-two,
+.social-twitter-icon-two,
+.social-insta-icon-two {
+  color: white;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icon-container-two:hover .social-facebook-icon-two,
+.social-icon-container-two:hover .social-linkedin-icon-two,
+.social-icon-container-two:hover .social-twitter-icon-two,
+.social-icon-container-two:hover .social-insta-icon-two {
+  transform: scale(1.1);
+}
+
+/* ============================================================= */
+/* RIGHT SIDE - FORM SECTION */
+/* ============================================================= */
+.modal-right-two {
+  flex: 1.2;
+  padding: 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.form-section-two {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-intro-two {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-intro-two h3 {
+  margin: 0.75rem 0 0.75rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0d0225;
+  background: linear-gradient(135deg, #0d0225, #0047ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: left;
+}
+
+.modal-description-two {
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* ============================================================= */
+/* PROGRESS BAR */
+/* ============================================================= */
+.progress-bar-section {
+  margin-bottom: 1rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background: #f1f3f4;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #0047ff, #c68dfc);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* ============================================================= */
+/* LEAD FORM STYLES */
+/* ============================================================= */
+.lead-form-two {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.lead-form-two .form-step {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.elegant-step-header {
+  margin-top: 30px;
+}
+
+.elegant-step-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d0225;
+  line-height: 1.3;
+}
+
+.step-field-and-arrow-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.step-field-and-arrow-container.last-step-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.step-field {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Combined Fields Layout */
+.combined-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.phone-field-container,
+.message-field-container {
+  width: 100%;
+}
+
+.single-field-input {
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  color: #0d0225;
+  box-sizing: border-box;
+  resize: vertical;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #0047ff;
+}
+
+.single-field-input.elegant-input {
+  width: 100%;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #0047ff;
+  border-radius: 0;
+}
+
+textarea.single-field-input {
+  border: 2px solid #0047ff;
+  border-radius: 12px;
+}
+
+.single-field-input:focus {
+  outline: none;
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.single-field-input::placeholder {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.single-field-input.error {
+  border-bottom-color: #e74c3c;
+  /* background: #fdf2f2; */
+}
+
+.single-field-input.error:focus {
+  border-bottom-color: #e74c3c;
+}
+
+/* ============================================================= */
+/* ERROR MESSAGE STYLES */
+/* ============================================================= */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ============================================================= */
+/* PHONE INPUT STYLES */
+/* ============================================================= */
+.phone-input-container {
+  width: 100%;
+}
+
+.phone-input-field {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #0d0225;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #0047ff;
+}
+
+.phone-input-field:focus {
+  outline: none;
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.phone-input-field.error {
+  border-bottom-color: #e74c3c;
+  background: #fdf2f2;
+}
+
+.PhoneInput {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.PhoneInputCountry {
+  margin-right: 0.5rem;
+}
+
+.PhoneInputInput {
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  font-size: 1rem !important;
+  padding: 0 !important;
+  flex: 1;
+  width: 100%;
+}
+
+.PhoneInputInput:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ============================================================= */
+/* ARROW NAVIGATION STYLING */
+/* ============================================================= */
+.elegant-prev-arrow-positioned {
+  display: block !important;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background: none;
+  border: none;
+  color: #2c3e50;
+  padding: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.elegant-prev-arrow-positioned:hover {
+  color: #0047ff;
+  opacity: 1;
+  transform: translateX(-2px);
+}
+
+.elegant-next-arrow-wrapper {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.elegant-next-arrow {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #0047ff;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 71, 255, 0.3);
+  opacity: 1;
+}
+
+.elegant-next-arrow:hover:not(:disabled) {
+  background-color: #1a5aff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 71, 255, 0.4);
+}
+
+.elegant-next-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+  background-color: #ccc;
+}
+
+.centered-submit-wrapper {
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+}
+
+.centered-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  min-width: 200px;
+}
+
+.centered-submit-button:hover:not(:disabled) {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.centered-submit-button:disabled {
+  background-color: #ccc !important;
+  color: #666 !important;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.submit-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================= */
+/* THANK YOU CARD */
+/* ============================================================= */
+.thank-you-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.thank-you-content {
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.success-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.success-icon > .thank-you-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon > .thank-you-content > div {
+  width: 100%;
+  height: 100%;
+}
+
+.thank-you-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d0225;
+  margin: 0;
+  background: linear-gradient(135deg, #0d0225, #0047ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.thank-you-message {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+  max-width: 380px;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-color: #0047ff;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #0047ff;
+  flex-shrink: 0;
+  min-width: 24px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  text-align: left;
+}
+
+.contact-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0 0 0.25rem 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  color: #0d0225;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ============================================================= */
+/* THANK YOU SOCIAL SECTION */
+/* ============================================================= */
+.thank-you-social-section {
+  width: 100%;
+  text-align: center;
+}
+
+.thank-you-divider {
+  position: relative;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.thank-you-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e9ecef;
+}
+
+.thank-you-divider-text {
+  background: white;
+  padding: 0 1rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.thank-you-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.thank-you-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d0225, #2d1b69);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 2, 37, 0.2);
+}
+
+.thank-you-social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(13, 2, 37, 0.3);
+  background: linear-gradient(135deg, #2d1b69, #4c1d95);
+}
+
+.thank-you-social-icon {
+  font-size: 1.2rem;
+}
+
+.thank-you-social-text {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ============================================================= */
+/* HIDE MOBILE NAVIGATION */
+/* ============================================================= */
+.mobile-form-navigation {
+  display: none !important;
+}
+
+/* ============================================================= */
+/* RESPONSIVE STYLES */
+/* ============================================================= */
+
+/* DESKTOP (≥1025px) */
+@media (min-width: 1025px) {
+  .modal-content-two {
+    overflow: hidden;
+  }
+
+  .modal-right-two::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .modal-right-two::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  .modal-right-two::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+
+  .modal-right-two::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+
+  .thank-you-content {
+    padding: 0 1rem;
+  }
+}
+
+/* TABLET + MOBILE (≤1024px) */
+@media (max-width: 1024px) {
+  .modal-overlay-two {
+    overflow-y: auto;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  .modal-content-two {
+    width: 95%;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 2rem 0;
+    min-height: auto;
+    height: auto;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .modal-container-two {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+    width: 100%;
+  }
+
+  .modal-left-two {
+    padding: 2rem 1.5rem;
+    height: auto;
+    flex: none;
+    min-height: 400px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .modal-right-two {
+    padding: 2rem 1.5rem;
+    height: auto;
+    overflow: visible;
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .modal-item-image-two {
+    height: 140px;
+  }
+
+  .elegant-step-title {
+    font-size: 1rem;
+  }
+
+  .contact-options {
+    max-width: 100%;
+  }
+
+  .thank-you-content {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .brand-section-two {
+    padding: 1.5rem;
+  }
+
+  .modal-item-info-two {
+    padding: 1.5rem !important;
+    border-radius: 20px !important;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.5rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 1rem !important;
+  }
+
+  .thank-you-social-icons {
+    gap: 0.75rem;
+  }
+
+  .thank-you-social-link {
+    width: 45px;
+    height: 45px;
+  }
+
+  .success-icon {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* MEDIUM MOBILE (≤768px) */
+@media (max-width: 768px) {
+  .modal-content-two {
+    width: 98%;
+    max-width: 98vw;
+    margin: 1rem 0;
+    border-radius: 20px;
+  }
+
+  .modal-left-two,
+  .modal-right-two {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .form-intro-two h3 {
+    font-size: 1.6rem;
+  }
+
+  .elegant-step-title {
+    font-size: 1rem;
+  }
+
+  .thank-you-title {
+    font-size: 1.75rem;
+  }
+
+  .thank-you-message {
+    font-size: 1rem;
+  }
+
+  .contact-option {
+    padding: 1rem;
+  }
+
+  .combined-fields {
+    gap: 1.25rem;
+  }
+
+  .elegant-next-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .elegant-prev-arrow-positioned {
+    font-size: 1.3rem;
+    top: 3px;
+  }
+
+  .centered-submit-button {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    min-width: 180px;
+  }
+
+  .step-field-and-arrow-container {
+    gap: 12px;
+  }
+
+  .brand-section-two {
+    padding: 1.25rem;
+  }
+
+  .modal-item-info-two {
+    padding: 1.25rem !important;
+    border-radius: 18px !important;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .thank-you-social-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .success-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* SMALL MOBILE (≤480px) */
+@media (max-width: 480px) {
+  .modal-overlay-two {
+    padding: 0.5rem;
+  }
+
+  .modal-content-two {
+    width: 100%;
+    border-radius: 18px;
+    max-height: 95vh;
+    margin: 0.5rem 0;
+  }
+
+  .modal-left-two,
+  .modal-right-two {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .modal-close-two {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.25rem;
+    width: 38px;
+    height: 38px;
+  }
+
+  .modal-item-image-two {
+    height: 120px;
+  }
+
+  .brand-section-two {
+    padding: 1rem;
+  }
+
+  .elegant-step-title {
+    font-size: 1rem;
+  }
+
+  .single-field-input {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .thank-you-title {
+    font-size: 1.6rem;
+  }
+
+  .thank-you-message {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .success-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contact-options {
+    gap: 0.75rem;
+  }
+
+  .contact-option {
+    padding: 0.875rem;
+  }
+
+  .contact-icon {
+    font-size: 1.25rem;
+  }
+
+  .contact-label {
+    font-size: 0.85rem;
+  }
+
+  .contact-value {
+    font-size: 1rem;
+  }
+
+  .combined-fields {
+    gap: 1rem;
+  }
+
+  .elegant-next-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  .elegant-prev-arrow-positioned {
+    font-size: 1.2rem;
+    top: 2px;
+  }
+
+  .centered-submit-button {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    min-width: 160px;
+  }
+
+  .step-field-and-arrow-container {
+    gap: 10px;
+  }
+
+  .modal-item-info-two {
+    padding: 1rem !important;
+    border-radius: 16px !important;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .thank-you-social-icons {
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .thank-you-social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .thank-you-social-icon {
+    font-size: 1rem;
+  }
+
+  .thank-you-social-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* VERY SMALL MOBILE (≤360px) */
+@media (max-width: 360px) {
+  .modal-left-two,
+  .modal-right-two {
+    padding: 1.25rem 1rem;
+  }
+
+  .modal-left-two {
+    min-height: 380px;
+  }
+
+  .modal-item-image-two {
+    height: 100px;
+  }
+
+  .contact-socials-two {
+    gap: 0.75rem;
+  }
+
+  .social-icon-container-two {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social-facebook-icon-two,
+  .social-linkedin-icon-two,
+  .social-twitter-icon-two,
+  .social-insta-icon-two {
+    font-size: 0.9rem;
+  }
+
+  .elegant-step-title {
+    font-size: 0.95rem;
+  }
+
+  .form-intro-two h3 {
+    font-size: 1rem;
+  }
+  .modal-description-two {
+    font-size: 0.75rem;
+  }
+
+  .thank-you-title {
+    font-size: 1.5rem;
+  }
+
+  .thank-you-message {
+    font-size: 0.95rem;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-option {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .combined-fields {
+    gap: 0.875rem;
+  }
+}
+
+/* EXTRA SMALL MOBILE (≤320px) */
+@media (max-width: 320px) {
+  .modal-content-two {
+    border-radius: 16px;
+  }
+
+  .modal-left-two,
+  .modal-right-two {
+    padding: 1rem 0.875rem;
+  }
+
+  .modal-item-image-two {
+    height: 90px;
+  }
+
+  .form-intro-two h3 {
+    font-size: 1.3rem;
+  }
+
+  .elegant-step-title {
+    font-size: 1rem;
+  }
+
+  .thank-you-title {
+    font-size: 1.4rem;
+  }
+
+  .centered-submit-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-options {
+    max-width: 280px;
+  }
+
+  .combined-fields {
+    gap: 0.75rem;
+  }
+}
+
+/* LARGE DESKTOP (≥1440px) */
+@media (min-width: 1440px) {
+  .modal-content-two {
+    max-width: 1200px;
+    min-height: 650px;
+  }
+
+  .modal-container-two {
+    min-height: 650px;
+  }
+
+  .modal-left-two {
+    padding: 2.5rem 2rem;
+  }
+
+  .modal-right-two {
+    padding: 1.5rem 3rem;
+    overflow: hidden;
+  }
+
+  .form-section-two {
+    justify-content: center;
+  }
+
+  .form-intro-two {
+    margin-bottom: 1.5rem;
+  }
+
+  .progress-bar-section {
+    margin-bottom: 1rem;
+  }
+
+  .lead-form-two {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .form-step {
+    justify-content: center;
+    padding-top: 0;
+    gap: 0.75rem;
+  }
+
+  .elegant-step-header {
+    margin-bottom: 1rem;
+  }
+
+  .elegant-step-title {
+    font-size: 1rem;
+  }
+
+  .step-field {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .single-field-input {
+    padding: 1.125rem 1.375rem;
+    font-size: 1.05rem;
+  }
+
+  .phone-input-field {
+    padding: 0.85rem 1.375rem;
+    font-size: 1.05rem;
+  }
+
+  textarea.single-field-input {
+    min-height: 100px;
+  }
+
+  .modal-item-image-two {
+    height: 170px;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.6rem;
+  }
+
+  .modal-item-description-two {
+    font-size: 1.05rem;
+  }
+
+  .combined-fields {
+    gap: 1.75rem;
+  }
+}
+
+/* EXTRA LARGE DESKTOP (≥1920px) */
+@media (min-width: 1920px) {
+  .modal-content-two {
+    max-width: 1300px;
+    min-height: 700px;
+  }
+
+  .modal-container-two {
+    min-height: 700px;
+  }
+
+  .elegant-step-title {
+    font-size: 1.2rem;
+  }
+
+  .single-field-input {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .modal-item-image-two {
+    height: 180px;
+  }
+
+  .combined-fields {
+    gap: 2rem;
+  }
+}
+
+/* ============================================================= */
+/* BODY LOCK WHEN MODAL OPEN */
+/* ============================================================= */
+body.modal-open-two {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================================================= */
+/* ACCESSIBILITY IMPROVEMENTS */
+/* ============================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .modal-content-two,
+  .modal-close-two,
+  .single-field-input,
+  .social-icon-container-two,
+  .contact-option,
+  .item-image-container-two {
+    transition: none;
+  }
+
+  .motion-div {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================= */
+/* HIGH CONTRAST MODE SUPPORT */
+/* ============================================================= */
+@media (prefers-contrast: high) {
+  .modal-content-two {
+    border: 2px solid #000000;
+  }
+
+  .centered-submit-button {
+    border: 2px solid transparent;
+  }
+}
+
+/* ============================================================= */
+/* LOGO CONTAINER STYLES */
+/* ============================================================= */
+.logo-container-two {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.company-logo-two {
+  height: 18px;
+  width: auto;
+}
+
+/* ============================================================= */
+/* ANIMATION KEYFRAMES */
+/* ============================================================= */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ============================================================= */
+/* FORM NAVIGATION BACKUP STYLES (HIDDEN) */
+/* ============================================================= */
+.form-navigation {
+  display: none !important;
+}
+
+.nav-button {
+  display: none !important;
+}
+
+.prev-button,
+.next-button,
+.submit-button-two {
+  display: none !important;
+}
+
+/* ============================================================= */
+/* MOBILE NAVIGATION BACKUP STYLES (HIDDEN) */
+/* ============================================================= */
+.mobile-form-navigation {
+  display: none !important;
+}
+
+.mobile-submit-button-final {
+  display: none !important;
+}
+
+/* ============================================================= */
+/* ALTERNATIVE SUCCESS TICK STYLES (HIDDEN) */
+/* ============================================================= */
+.success-tick-gif {
+  display: none !important;
+}
+
+/* ============================================================= */
+/* LEGACY STEP HEADER STYLES (HIDDEN) */
+/* ============================================================= */
+.step-header {
+  display: none !important;
+}
+
+.step-title {
+  display: none !important;
+}
+
+/* ============================================================= */
+/* LEGACY THANK YOU ACTIONS (HIDDEN) */
+/* ============================================================= */
+.thank-you-actions {
+  display: none !important;
+}
+
+/* ============================================================= */
+/* LEGACY ELEGANT SUBMIT ARROW (HIDDEN) */
+/* ============================================================= */
+.elegant-submit-arrow {
+  display: none !important;
+}
+
+/* ============================================================= */
+/* LARGE DESKTOP TIGHT SPACING OVERRIDE */
+/* ============================================================= */
+@media (min-width: 1400px) {
+  .form-step {
+    gap: 0.25rem;
+    padding: 0.25rem 0;
+  }
+
+  .step-field {
+    gap: 0.5rem;
+  }
+
+  .elegant-step-header {
+    margin-bottom: 0.25rem;
+  }
+
+  .elegant-step-title {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
+/* ============================================================= */
+/* FIX FOR MODAL LEFT TWO BACKGROUND OVERLAY */
+/* ============================================================= */
+.modal-left-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, #c68dfc30, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================= */
+/* ENSURE PROPER Z-INDEX LAYERING */
+/* ============================================================= */
+.modal-item-image-section-two {
+  z-index: 0;
+}
+
+.modal-left-two::after {
+  z-index: 1;
+}
+
+.modal-item-info-two {
+  z-index: 2;
+}
+
+.brand-section-two {
+  z-index: 1;
+}
+
+/* ============================================================= */
+/* REMOVE UNWANTED HOVER EFFECTS */
+/* ============================================================= */
+.item-image-container-two:hover,
+.item-image-container-two:hover .modal-item-image-two {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ============================================================= */
+/* FORM STEP ANIMATION SUPPORT */
+/* ============================================================= */
+.form-step {
+  position: relative;
+}
+
+/* ============================================================= */
+/* INPUT FOCUS ENHANCEMENTS */
+/* ============================================================= */
+.single-field-input:focus,
+.phone-input-field:focus {
+  /* box-shadow: 0 2px 8px rgba(0, 71, 255, 0.1); */
+}
+
+/* ============================================================= */
+/* ERROR STATE ENHANCEMENTS */
+/* ============================================================= */
+.single-field-input.error:focus,
+.phone-input-field.error:focus {
+  /* box-shadow: 0 2px 8px rgba(231, 76, 60, 0.1); */
+}
+
+/* ============================================================= */
+/* SOCIAL ICONS COLOR CONSISTENCY */
+/* ============================================================= */
+.social-facebook-icon-two,
+.social-linkedin-icon-two,
+.social-twitter-icon-two,
+.social-insta-icon-two {
+  color: white;
+}
+
+/* ============================================================= */
+/* PROGRESS BAR ANIMATION */
+/* ============================================================= */
+.progress-bar-fill {
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================= */
+/* MODAL CONTENT ENTRANCE ANIMATION SUPPORT */
+/* ============================================================= */
+.modal-content-two {
+  transform-origin: center center;
+}
+
+/* ============================================================= */
+/* SCROLLBAR STYLING FOR FIREFOX */
+/* ============================================================= */
+.modal-right-two {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* ============================================================= */
+/* TOUCH DEVICE OPTIMIZATIONS */
+/* ============================================================= */
+@media (hover: none) and (pointer: coarse) {
+  .elegant-next-arrow:hover,
+  .elegant-prev-arrow-positioned:hover,
+  .centered-submit-button:hover,
+  .social-icon-container-two:hover,
+  .contact-option:hover,
+  .thank-you-social-link:hover {
+    transform: none;
+  }
+
+  .elegant-next-arrow:active,
+  .elegant-prev-arrow-positioned:active,
+  .centered-submit-button:active,
+  .social-icon-container-two:active,
+  .contact-option:active,
+  .thank-you-social-link:active {
+    transform: scale(0.95);
+  }
+}
+
+/* ============================================================= */
+/* PRINT STYLES */
+/* ============================================================= */
+@media print {
+  .modal-overlay-two {
+    position: static;
+    background: white;
+    padding: 0;
+  }
+
+  .modal-content-two {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .modal-close-two {
+    display: none;
+  }
+}
+
+/* ============================================================= */
+/* DARK MODE SUPPORT (OPTIONAL) */
+/* ============================================================= */
+/* @media (prefers-color-scheme: dark) {
+  .modal-content-two {
+    background: #1a1a1a;
+    border-color: #333;
+  }
+
+  .modal-right-two {
+    background: #1a1a1a;
+  }
+
+  .form-intro-two h3,
+  .elegant-step-title,
+  .single-field-input,
+  .phone-input-field {
+    color: #ffffff;
+  }
+
+  .modal-description-two,
+  .progress-text {
+    color: #a0a0a0;
+  }
+
+  .progress-bar-container {
+    background: #333;
+  }
+
+  .single-field-input,
+  .phone-input-field {
+    background: #2a2a2a;
+    border-bottom-color: #555;
+  }
+
+  .single-field-input:focus,
+  .phone-input-field:focus {
+    background: #333;
+  }
+
+  .contact-option {
+    background: #2a2a2a;
+    border-color: #444;
+  }
+
+  .contact-value {
+    color: #ffffff;
+  }
+} */
+
+/* ============================================================= */
+/* FINAL CLEANUP - HIDE ANY REMAINING DUPLICATE ELEMENTS */
+/* ============================================================= */
+
+/* Hide any legacy form navigation that might still be in HTML */
+.form-navigation,
+.mobile-form-navigation,
+.thank-you-actions {
+  display: none !important;
+}
+
+/* Ensure only the final centered submit button is visible */
+.centered-submit-wrapper {
+  display: flex !important;
+}
+
+/* Hide any legacy submit buttons */
+.submit-button-two,
+.mobile-submit-button-final,
+.elegant-submit-arrow {
+  display: none !important;
+}
+
+/* Ensure arrow navigation is always visible */
+.elegant-prev-arrow-positioned,
+.elegant-next-arrow-wrapper {
+  display: block !important;
+}
+
+/* Hide legacy step headers */
+.step-header,
+.step-title {
+  display: none !important;
+}
+
+/* Ensure only the elegant step header is visible */
+.elegant-step-header,
+.elegant-step-title {
+  display: block !important;
+}
+
+/* ============================================================= */
+/* PERFORMANCE OPTIMIZATIONS */
+/* ============================================================= */
+.modal-content-two {
+  will-change: transform, opacity;
+}
+
+.elegant-next-arrow,
+.elegant-prev-arrow-positioned,
+.centered-submit-button {
+  will-change: transform;
+}
+
+/* ============================================================= */
+/* LOADING STATE OPTIMIZATIONS */
+/* ============================================================= */
+.submit-spinner {
+  will-change: transform;
+}
+
+/* ============================================================= */
+/* FINAL MEDIA QUERY FOR EXTREMELY LARGE SCREENS */
+/* ============================================================= */
+@media (min-width: 2500px) {
+  .modal-content-two {
+    max-width: 1400px;
+    min-height: 800px;
+  }
+
+  .modal-container-two {
+    min-height: 800px;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 2rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 1.2rem !important;
+  }
+
+  .elegant-step-title {
+    font-size: 1.8rem;
+  }
+
+  .single-field-input {
+    padding: 1.5rem 1.75rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================================================= */
+/* END OF CSS FILE */
+/* ============================================================= */
+/* ============================================================= */
+/* PREMIUM GLASSMORPHISM EFFECT FOR MODAL LEFT TWO */
+/* ============================================================= */
+
+.modal-left-two {
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.brand-section-two {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  gap: 1rem !important;
+  z-index: 1;
+}
+
+/* Full Background Image */
+.modal-item-image-section-two {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 !important;
+  z-index: 0;
+}
+
+.item-image-container-two {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.modal-item-image-two {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8) contrast(1.1);
+}
+
+/* Premium Glassmorphism Overlay */
+.modal-item-info-two {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  ) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  /* border: 1px solid rgba(255, 255, 255, 0.18) !important; */
+  border-radius: 20px !important;
+  padding: 2.5rem !important;
+  margin: 0 !important;
+  height: auto !important;
+  position: relative;
+  z-index: 2;
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.1) !important; */
+  flex: none !important;
+}
+
+/* Subtle gradient overlay for better text readability */
+.modal-item-info-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 2, 37, 0.1) 0%,
+    rgba(45, 27, 105, 0.05) 50%,
+    rgba(198, 141, 252, 0.08) 100%
+  );
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/* Premium Text Styles */
+.modal-item-info-two h4 {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 1rem 0 !important;
+  color: #ffffff !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+  /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 4px 8px rgba(0, 0, 0, 0.6),
+    0 6px 12px rgba(0, 0, 0, 0.4) !important; */
+  letter-spacing: -0.02em;
+}
+
+.modal-item-description-two {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+  /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6) !important; */
+}
+
+/* Remove old overlays and effects */
+.modal-left-two::after,
+.modal-left-two::before {
+  display: none;
+}
+
+/* Enhanced hover effect for glassmorphism */
+.modal-item-info-two {
+  transition: all 0.3s ease;
+}
+
+.modal-item-info-two:hover {
+  backdrop-filter: blur(25px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(200%) !important;
+  /* box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.15) !important; */
+}
+
+/* ============================================================= */
+/* RESPONSIVE ADJUSTMENTS FOR GLASSMORPHISM */
+/* ============================================================= */
+
+@media (max-width: 1024px) {
+  .brand-section-two {
+    padding: 1.5rem;
+  }
+
+  .modal-item-info-two {
+    padding: 2rem !important;
+    border-radius: 18px !important;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.5rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-section-two {
+    padding: 1.25rem;
+  }
+
+  .modal-item-info-two {
+    padding: 1.75rem !important;
+    border-radius: 16px !important;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-section-two {
+    padding: 1rem;
+  }
+
+  .modal-item-info-two {
+    padding: 1.5rem !important;
+    border-radius: 14px !important;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Reduce blur on mobile for performance */
+  .modal-item-info-two {
+    backdrop-filter: blur(15px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(160%) !important;
+  }
+}
+
+/* ============================================================= */
+/* PERFORMANCE OPTIMIZATION FOR GLASSMORPHISM */
+/* ============================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .modal-item-info-two {
+    transition: none;
+  }
+}
+
+/* Support for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(20px)) {
+  .modal-item-info-two {
+    background: linear-gradient(
+      135deg,
+      rgba(13, 2, 37, 0.85) 0%,
+      rgba(45, 27, 105, 0.8) 100%
+    ) !important;
+  }
+}
+/* ============================================================= */
+/* MOBILE OPTIMIZATION FOR MODAL LEFT TWO (Up to 1440px) */
+/* ============================================================= */
+
+@media (max-width: 1440px) {
+  .modal-container-two {
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .modal-left-two {
+    border-radius: 0 !important;
+    position: relative;
+  }
+
+  /* Remove all existing border radius from left side */
+  .modal-left-two,
+  .brand-section-two,
+  .modal-item-image-section-two,
+  .item-image-container-two,
+  .modal-item-image-two {
+    border-radius: 0 !important;
+  }
+
+  /* Full cover image for mobile */
+  .modal-item-image-two {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.7) contrast(1.1);
+  }
+
+  /* Glassmorphism context styling for mobile */
+  .modal-item-info-two {
+    border-radius: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: linear-gradient(
+      to top,
+      rgba(13, 2, 37, 0.95) 0%,
+      rgba(13, 2, 37, 0.7) 50%,
+      transparent 100%
+    ) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+
+  .modal-item-info-two::before {
+    border-radius: 0 !important;
+    background: linear-gradient(
+      to top,
+      rgba(13, 2, 37, 0.9) 0%,
+      rgba(45, 27, 105, 0.6) 50%,
+      transparent 100%
+    ) !important;
+  }
+
+  /* Text styling for mobile glassmorphism */
+  .modal-item-info-two h4 {
+    font-size: 1.5rem !important;
+    /* text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important; */
+    margin-bottom: 1rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    /* text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important; */
+  }
+}
+
+/* ============================================================= */
+/* SPECIFIC MOBILE BREAKPOINT ENHANCEMENTS */
+/* ============================================================= */
+
+/* Tablet & Mobile (≤1024px) */
+@media (max-width: 1024px) {
+  .modal-left-two {
+    min-height: 300px;
+    height: 40vh;
+  }
+
+  .brand-section-two {
+    padding: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  .modal-item-info-two {
+    padding: 1.5rem !important;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.4rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Medium Mobile (≤768px) */
+@media (max-width: 768px) {
+  .modal-left-two {
+    min-height: 280px;
+    height: 35vh;
+  }
+
+  .brand-section-two {
+    padding: 1.25rem;
+  }
+
+  .modal-item-info-two {
+    padding: 1.25rem !important;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .modal-left-two {
+    min-height: 250px;
+    height: 30vh;
+  }
+
+  .brand-section-two {
+    padding: 1rem;
+  }
+
+  .modal-item-info-two {
+    padding: 1rem !important;
+  }
+
+  .modal-item-info-two h4 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .modal-item-description-two {
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
+/* ============================================================= */
+/* ENHANCED GLASSMORPHISM FOR MOBILE */
+/* ============================================================= */
+
+@media (max-width: 1440px) {
+  .modal-item-info-two {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.08) 100%
+    ) !important;
+    backdrop-filter: blur(20px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+
+    border-radius: 16px !important;
+    margin: 1rem !important;
+    /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.1) !important; */
+  }
+
+  .modal-item-info-two::before {
+    border-radius: 16px !important;
+    background: linear-gradient(
+      135deg,
+      rgba(198, 141, 252, 0.1) 0%,
+      rgba(168, 85, 247, 0.05) 50%,
+      rgba(255, 255, 255, 0.08) 100%
+    ) !important;
+  }
+}
+
+/* ============================================================= */
+/* PERFORMANCE OPTIMIZATION FOR MOBILE GLASSMORPHISM */
+/* ============================================================= */
+
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .modal-item-info-two {
+    backdrop-filter: blur(15px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(140%) !important;
+  }
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(20px)) {
+  @media (max-width: 1440px) {
+    .modal-item-info-two {
+      background: linear-gradient(
+        135deg,
+        rgba(13, 2, 37, 0.9) 0%,
+        rgba(45, 27, 105, 0.8) 100%
+      ) !important;
+    }
+  }
+}
+
+/* ============================================================= */
+/* TOUCH-FRIENDLY INTERACTIONS FOR MOBILE */
+/* ============================================================= */
+
+@media (max-width: 1440px) and (hover: none) and (pointer: coarse) {
+  .modal-item-info-two:hover {
+    transform: none;
+    backdrop-filter: blur(20px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+  }
+
+  .modal-item-info-two:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* ============================================================= */
+/* FIX FOR MODAL SCROLLING ISSUE ON MOBILE */
+/* ============================================================= */
+
+@media (max-width: 1440px) {
+  .modal-overlay-two {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem;
+  }
+
+  .modal-content-two {
+    overflow-y: auto;
+    max-height: 95vh;
+    margin: auto;
+  }
+
+  .modal-container-two {
+    overflow: visible;
+  }
+
+  .modal-left-two,
+  .modal-right-two {
+    overflow: visible;
+  }
+
+  .form-section-two {
+    overflow: visible;
+  }
+
+  /* Prevent individual sections from scrolling */
+  .modal-right-two {
+    overflow-y: visible;
+  }
+
+  /* Ensure the entire modal scrolls together */
+  .modal-content-two::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .modal-content-two::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  .modal-content-two::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+
+  .modal-content-two::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+}
+
+/* ============================================================= */
+/* SPECIFIC FIXES FOR DIFFERENT SCREEN SIZES */
+/* ============================================================= */
+
+/* Tablet & Mobile (≤1024px) */
+@media (max-width: 1024px) {
+  .modal-content-two {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-container-two {
+    min-height: auto;
+    height: auto;
+  }
+}
+
+/* Medium Mobile (≤768px) */
+@media (max-width: 768px) {
+  .modal-content-two {
+    max-height: 85vh;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .modal-content-two {
+    max-height: 80vh;
+  }
+
+  .modal-overlay-two {
+    padding: 0.5rem;
+  }
+}
+
+/* ============================================================= */
+/* FIREFOX SCROLLBAR SUPPORT */
+/* ============================================================= */
+@media (max-width: 1440px) {
+  .modal-content-two {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+  }
+}
+
+/* ============================================================= */
+/* TOUCH SCROLLING OPTIMIZATION */
+/* ============================================================= */
+@media (max-width: 1440px) and (hover: none) and (pointer: coarse) {
+  .modal-content-two {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .modal-overlay-two {
+    -webkit-overflow-scrolling: touch;
+  }
+}
