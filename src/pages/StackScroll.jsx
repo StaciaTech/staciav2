@@ -25,7 +25,7 @@
 //     {
 //       id: 4,
 //       background: "linear-gradient(259deg, #CB2B5E -8.27%, #773987 86.58%)",
-//       // background: "linear-gradient(259.24deg, #FF035B -8.27%, #052B8E 95.27%)", 
+//       // background: "linear-gradient(259.24deg, #FF035B -8.27%, #052B8E 95.27%)",
 //     },
 //     {
 //       id: 5,
@@ -88,7 +88,7 @@
 //     <div ref={containerRef} className="stack-scroll-container">
 //       <div className="stack-scroll">
 //         <ul id="cards">
-//           {onToggle === "products" && 
+//           {onToggle === "products" &&
 //             homeProductData.map((eachHomeProduct, i) => {
 //               const targetScale = 1 - (homeProductData.length - i) * 0.05;
 //               return (
@@ -104,7 +104,7 @@
 //               );
 //             })
 //           }
-//           {onToggle === "services" && 
+//           {onToggle === "services" &&
 //             homeServiceData.map((eachHomeService, i) => {
 //               const targetScale = 1 - (homeServiceData.length - i) * 0.05;
 //               return (
@@ -135,7 +135,6 @@
 //   );
 // };
 // export default StackScroll;
-
 
 // import React, { useEffect, useRef } from "react";
 // import { useDispatch, useSelector } from "react-redux";
@@ -369,7 +368,6 @@
 
 // export default StackScroll;
 
-
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../redux/slice/productSlice";
@@ -434,12 +432,13 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
     if (!scrollYProgress) return;
     const unsubscribe = scrollYProgress.on("change", (progress) => {
       // progress is [0, 1] for the container
-      const shouldBeVisible = progress < 1; // visible until 90%
+      const shouldBeVisible = progress < 0.98; // visible until 90%
       // Only call the callback if visibility actually changed
       if (prevVisibleRef.current !== shouldBeVisible) {
         prevVisibleRef.current = shouldBeVisible;
         // ensure we only hide/show when there's data to show
-        const data = onToggle === "products" ? homeProductData : homeServiceData;
+        const data =
+          onToggle === "products" ? homeProductData : homeServiceData;
         if (data.length > 0) {
           onLastCardVisible(shouldBeVisible);
         } else {
@@ -450,7 +449,13 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
     });
 
     return () => unsubscribe();
-  }, [scrollYProgress, onToggle, homeProductData, homeServiceData, onLastCardVisible]);
+  }, [
+    scrollYProgress,
+    onToggle,
+    homeProductData,
+    homeServiceData,
+    onLastCardVisible,
+  ]);
 
   return (
     <div ref={containerRef} className="stack-scroll-container">

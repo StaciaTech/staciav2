@@ -20,7 +20,7 @@ const WhatsNewSection = () => {
         title: "Onedril (SSM) - Advanced Agricultural Solution",
         description:
           "OneDril is a manual, portable seed-sowing machine designed for precise and efficient planting. Capable of handling seeds between 2 to 25mm, it follows the line-sowing principle for uniform crop growth. Ideal for micro and large seeds alike, OneDril’s ergonomic design ensures convenience and accuracy. It empowers farmers with a cost-effective, versatile solution for boosting agricultural productivity.",
-        image: "/assets/ProductPage/onedrillssm.webp",
+        image: "/assets/ProductPage/update-onedrill.webp",
         category: "Agri and Food Processing SPM",
         date: "2024-01-15",
         status: "New Launch",
@@ -110,8 +110,8 @@ const WhatsNewSection = () => {
         id: 3,
         title: "Sharadha Store Mobile App",
         description:
-          "The Sharadha Store Mobile App is a user-centric e-commerce platform designed to bridge the gap between traditional homemade foods and modern digital shopping experiences. Crafted using Figma, the app offers a seamless interface that allows users to explore, order, and enjoy authentic regional delicacies with ease. The project was completed successfully, with the design repository available on Figma for further reference.",
-        image: "/assets/CaseStudy/MandiBanner.webp",
+          "A mobile e-commerce app for Sharada Store, offering seamless product browsing, secure payments, and real-time order tracking for an enhanced shopping experience.",
+        image: "/assets/ProjectPage/saradha-store.webp",
         category: "Technology",
         date: "2024-03-01",
         status: "Research & Development",
@@ -119,7 +119,7 @@ const WhatsNewSection = () => {
         duration: "24 months",
         action: "Explore",
         type: "project",
-        detailed_link: "/project/Tech/Agri-Tech/Sharada-Store-Mobile-App",
+        detailed_link: "/project/Tech/Agri-Tech/Sharadha-Store-Mobile-App",
       },
     ],
     services: [
@@ -129,7 +129,7 @@ const WhatsNewSection = () => {
         description:
           "Industrial Automation integrates technologies such as SPMs, precision test rigs, vision inspection systems, and robotic handling units to enhance manufacturing efficiency, accuracy, and safety. It minimizes human intervention, reduces errors, and increases productivity. Custom jigs and fixtures further ensure process stability. Widely used in automotive, electronics, FMCG, and heavy industries, it supports consistent output and scalable production.",
         image: "/assets/2d-drafting.webp",
-        category: "Artificial Intelligence",
+        category: "Mechatronics & Automation Engineering",
         date: "2024-01-20",
         status: "Available Now",
         pricing: "Custom Quote",
