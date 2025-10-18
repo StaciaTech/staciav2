@@ -3,8 +3,8 @@
         {
             "id": "1",
             "imageUrl": "/assets/one-drill-updated.webp",
-            "depName":"Mechanical",
-            "catName":"Agri and Food Processing SPM",
+            "depName": "Mechanical",
+            "catName": "Agri and Food Processing SPM",
             "title": "Onedril (SSM)",
             "pDes1": "Designed to handle a wide range of seed sizes, from tiny 2mm to larger 25mm seeds",
             "pDes2": "Tailored for micro millets and small-sized seeds, this innovative machine ensures accurate and efficient planting.",
@@ -13,8 +13,8 @@
         {
             "id": "2",
             "imageUrl": "/assets/ThermoHydrate.webp",
-            "depName":"Electronics",
-            "catName":"IoT Smart Products",
+            "depName": "Electronics",
+            "catName": "IoT Smart Products",
             "title": "Hydrogen (Smart water bottle)",
             "pDes1": "Hydrogen is an AI-powered smart water bottle that features rapid heating and cooling.",
             "pDes2": " Its ergonomic squircle design ensures style and comfort, while its innovative technology offers superior functionality.",
@@ -23,8 +23,8 @@
         {
             "id": "3",
             "imageUrl": "/assets/Side_Table.webp",
-            "depName":"Electronics",
-            "catName":"IoT Smart Products",
+            "depName": "Electronics",
+            "catName": "IoT Smart Products",
             "title": "Smart Furniture",
             "pDes1": "Elevate your living space with carBon's immersive features.",
             "pDes2": "Stay organized with retractable trays, wireless charging, and pop-up sockets.",
@@ -33,8 +33,8 @@
         {
             "id": "4",
             "imageUrl": "/assets/smart-speaker.webp",
-            "depName":"Electronics",
-            "catName":"IoT Smart Products",
+            "depName": "Electronics",
+            "catName": "IoT Smart Products",
             "title": "S Connect (Smart Speaker)",
             "pDes1": "Experience the perfect blend of style and functionality with the Connect S.",
             "pDes2": "The Connect S is the perfect addition to your home, office, or studio.",
@@ -43,8 +43,8 @@
         {
             "id": "5",
             "imageUrl": "/assets/chilli-table.webp",
-            "depName":"Mechanical",
-            "catName":"Agri and Food Processing SPM",
+            "depName": "Mechanical",
+            "catName": "Agri and Food Processing SPM",
             "title": "Chilli Ladling Machine",
             "pDes1": "Experience unmatched efficiency with our battery-powered chilli ladling machine.",
             "pDes2": "Designed specifically for the Aachi Group, our custom chilli ladling machine is a testament to precision engineering.",
@@ -55,33 +55,44 @@
         {
             "id": "1",
             "imageUrl": "/assets/Research and development.webp",
-            "title": "Research & Development"
+            "title": "Research & Development",
+            "pDes1": "Our R&D services drive innovation by exploring new technologies and solutions tailored to your industry needs.",
+            "pDes2": "We focus on creating prototypes and testing concepts to bring cutting-edge ideas to life efficiently."
         },
         {
             "id": "2",
             "imageUrl": "/assets/3D Modling.png",
-            "title": "3D Modeling"
+            "title": "3D Modeling",
+            "pDes1": "We provide precise 3D modeling services for product design, visualization, and manufacturing preparation.",
+            "pDes2": "Using advanced CAD tools, we create detailed models that enhance design accuracy and speed up development."
         },
         {
             "id": "3",
             "imageUrl": "/assets/New Product Development.webp",
-            "title": "New Product Development"
+            "title": "New Product Development",
+            "pDes1": "From concept to launch, we handle end-to-end product development with a focus on functionality and market fit.",
+            "pDes2": "Our process includes ideation, prototyping, testing, and optimization to deliver innovative, high-quality products."
         },
         {
             "id": "4",
             "imageUrl": "/assets/IOT.webp",
-            "title": "IoT Solutions"
+            "title": "IoT Solutions",
+            "pDes1": "We design and implement IoT systems that connect devices for smarter operations and data-driven insights.",
+            "pDes2": "Our solutions enhance efficiency in industries like manufacturing and consumer electronics with secure, scalable connectivity."
         },
         {
             "id": "5",
             "imageUrl": "/assets/Robotic Process Automation.webp",
-            "title": "Robotic Process Automation"
+            "title": "Robotic Process Automation",
+            "pDes1": "Automate repetitive tasks with RPA to boost productivity and reduce errors in business processes.",
+            "pDes2": "We integrate robotics for pick-and-place, inspection, and end-of-line automation in industrial settings."
         },
         {
             "id": "6",
             "imageUrl": "/assets/Custom Software solutions.webp",
-            "title": "Custom Software Solutions"
+            "title": "Custom Software Solutions",
+            "pDes1": "Tailored software development to meet unique business requirements, from apps to enterprise systems.",
+            "pDes2": "We ensure seamless integration, performance optimization, and ongoing maintenance for reliable operations."
         }
     ]
-    
 }

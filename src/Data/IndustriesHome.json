@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Food Processing",
+    "imageUrl": "/assets/industries/healthcare.jpg",
+    "description": "The food processing industry transforms raw ingredients into packaged and ready-to-eat products using advanced technology and quality control systems.",
+    "icon": "MdOutlineFoodBank"
+  },
+  {
+    "id": 2,
+    "title": "Agriculture",
+    "imageUrl": "/assets/industries/finance.jpg",
+    "description": "Modern agriculture leverages smart farming, automation, and analytics to improve crop yields and sustainability across global food systems.",
+    "icon": "GiPlantRoots"
+  },
+  {
+    "id": 3,
+    "title": "Energy",
+    "imageUrl": "/assets/industries/education.jpg",
+    "description": "The energy sector focuses on renewable and non-renewable power generation, supporting sustainability and innovation in power infrastructure.",
+    "icon": "SlEnergy"
+  },
+  {
+    "id": 4,
+    "title": "Manufacturing",
+    "imageUrl": "/assets/industries/manufacturing.jpg",
+    "description": "Manufacturing integrates automation, robotics, and precision engineering to produce high-quality goods efficiently and at scale.",
+    "icon": "MdOutlinePrecisionManufacturing"
+  },
+  {
+    "id": 5,
+    "title": "Consumer Electronics",
+    "imageUrl": "/assets/industries/retail.jpg",
+    "description": "This sector designs and builds innovative electronic devices — from smartphones to IoT systems — enhancing modern digital lifestyles.",
+    "icon": "VscChip"
+  },
+  {
+    "id": 6,
+    "title": "Automotive",
+    "imageUrl": "/assets/industries/retail.jpg",
+    "description": "The automotive industry drives innovation in electric vehicles, automation, and safety systems to shape the future of mobility.",
+    "icon": "FaCarSide"
+  }
+]

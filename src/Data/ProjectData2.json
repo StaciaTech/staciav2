@@ -7,7 +7,7 @@
           "name": "Food-Processing",
           "projects": [
             {
-              "id":1,
+              "id": 1,
               "title": "Chili Ladling Machine for Aachi Group",
               "mainDesc": "A battery-powered, portable chili ladling machine with a cleated belt conveyor, IP69K-rated components, and PLC/SCADA controls for automated chili handling.",
               "mainImageUrl": "/assets/ProjectPage/chilli-lading-machine.webp",
@@ -89,7 +89,6 @@
                   "Line3": "Between each gate, two-week Agile sprints were used to incorporate real-world insights rapidly, aligning with Agile-Stage-Gate best practices for manufacturing innovations ⁽⁸⁾."
                 }
               ],
-
               "Gate": [
                 {
                   "id": 1,
@@ -259,7 +258,7 @@
               "Conclusion2": "By integrating advanced hygienic conveyor technologies from Intralox and Van der Graaf, high-performance PLC/SCADA control from Mitsubishi Electric, and modular design principles, Stacia Corp delivered a turnkey chili ladling solution that transforms Aachi Group’s operations with enhanced efficiency, safety, and scalability. This project exemplifies how strategic engineering partnerships can drive sustainable automation in the food industry, setting a new benchmark for portable, high-temperature, and fully connected processing equipment"
             },
             {
-              "id":2,
+              "id": 2,
               "title": "Precision Slicing Machine",
               "mainDesc": "A compact, IP69K-rated machine for slicing up to five artisan bread loaves simultaneously with ultra-fine thickness control (3 mm upward).",
               "mainImageUrl": "/assets/ProductPage/Precision Slicing Machine.webp",
@@ -320,7 +319,7 @@
                 }
               ],
               "Development-Process": "Stacia adopted a hybrid Stage-Gate and agile approach to ensure rigor and flexibility",
-              "title1":"Stage Gate Framework",
+              "title1": "Stage Gate Framework",
               "stage-Gate-Framework": "A five-stage Phase-Gate model guided ideation through launch, with formal “gates” to review scope, risk, and resource allocation citeturn0search0turn0search5",
               "Stage": [
                 {
@@ -468,7 +467,6 @@
                   "des": "Rolled out production units; implemented remote monitoring for ongoing performance optimization"
                 }
               ],
-
               "Impacts": [
                 {
                   "title": "Labor Savings",
@@ -505,7 +503,6 @@
                 "Stage Gate Process: The Complete Practice Guide. Designorate. “The Stage-Gate Process guides product development through six main phases, including Discovery, Scoping, Define Business Case, Development, Testing & Validation, and Launch.” Designorate"
               ]
             },
-           
             {
               "id": 4,
               "title": "Tamarind Pod Breaking Machine",
@@ -530,15 +527,12 @@
                 },
                 {
                   "id": 3,
-                  "des":  "Creating a conveyor system that handles the delicate pulp without causing damage."
+                  "des": "Creating a conveyor system that handles the delicate pulp without causing damage."
                 },
                 {
                   "id": 4,
-                  "des":  
-                "Developing a compact and cost-effective design suitable for small to medium-scale operations."
+                  "des": "Developing a compact and cost-effective design suitable for small to medium-scale operations."
                 }
-
-             
               ],
               "Solutions": [
                 {
@@ -617,7 +611,7 @@
         {
           "name": "Waste Management",
           "projects": [
-             {
+            {
               "id": 5,
               "title": "Stacia Bailing Machine For GCC (Greater Chennai Corporation)",
               "mainDesc": "An automated machine with a silent pod breaker, husk-separating fan, and conveyor belt for efficient tamarind pulp processing.",
@@ -766,7 +760,6 @@
                 "Smartsheet: Phase-Gate approach for structured development Smartsheet"
               ]
             }
-           
           ]
         },
         {
@@ -786,88 +779,88 @@
               ],
               "Challenges": [
                 {
-                  "id":1,
+                  "id": 1,
                   "title": "Material Selection",
                   "des": "Choosing materials that offer both durability and a sleek appearance."
                 },
                 {
-                  "id":2,
+                  "id": 2,
                   "title": "Heat Distribution",
                   "des": "Ensuring even heat distribution across all burners."
                 },
                 {
-                  "id":3,
+                  "id": 3,
                   "title": "User Safety",
                   "des": "Integrating safety features without affecting the stove's design."
                 }
               ],
               "Solutions": [
                 {
-                  "id":1,
+                  "id": 1,
                   "title": "Toughened Glass Top",
                   "des": "Implemented a 6mm ultra-thick toughened glass top, tested to withstand high temperatures and heavy weights, ensuring both durability and elegance."
                 },
                 {
-                  "id":2,
+                  "id": 2,
                   "title": "High-Efficiency Brass Burners",
                   "des": "Equipped with brass burners that provide consistent flame and efficient cooking."
                 },
                 {
-                  "id":3,
+                  "id": 3,
                   "title": "Ergonomic Design",
                   "des": "Introduced ergonomically designed knobs and a precisely angled metal frame for ease of use."
                 },
                 {
-                  "id":4,
+                  "id": 4,
                   "title": "Safety Features",
                   "des": "Incorporated anti-skid feet and heat-resistant knobs to enhance user safety. . Amazon IndiaYouTube+2Reliance Digital+2butterflyindia.com+2mint"
                 }
               ],
               "Development-Process": [
                 {
-                  "id":1,
+                  "id": 1,
                   "title": "Research & Analysis",
                   "des": "Studied user preferences and market trends to identify key features and design elements."
                 },
                 {
-                  "id":2,
+                  "id": 2,
                   "title": "Design Prototyping",
                   "des": "Developed prototypes focusing on aesthetics, functionality, and safety."
                 },
                 {
-                  "id":3,
+                  "id": 3,
                   "title": "Testing",
                   "des": "Conducted rigorous testing for durability, heat resistance, and user safety."
                 },
                 {
-                  "id":4,
+                  "id": 4,
                   "title": "Feedback Integration",
                   "des": "Gathered user feedback to refine design and features."
                 },
                 {
-                  "id":5,
+                  "id": 5,
                   "title": "Final Production",
                   "des": "Launched the final product, ensuring quality control and adherence to safety standards."
                 }
               ],
               "Impact": [
                 {
-                  "id":1,
+                  "id": 1,
                   "title": "Enhanced Kitchen Aesthetics",
                   "des": "The stove's sleek design complements modern kitchen interiors."
                 },
                 {
-                  "id":2,
+                  "id": 2,
                   "title": "Efficient Cooking",
                   "des": "High thermal efficiency burners reduce cooking time and gas consumption."
                 },
                 {
-                  "id":3,
+                  "id": 3,
                   "title": "User Satisfaction",
                   "des": "Positive user reviews highlight the stove's performance and design."
                 },
                 {
-                  "id":4,
+                  "id": 4,
                   "title": "Safety Assurance",
                   "des": "Integrated safety features provide users with peace of mind during cooking..Rasoi Shop+1butterflyindia.com+1"
                 }
@@ -932,8 +925,7 @@
                   "title": "Portability & Power",
                   "des": "Enable 8 hrs of playback on a single charge via a 3,000 mAh Li-ion battery, housed in a <1 kg chassis for easy relocation"
                 }
-              ]
-              ,
+              ],
               "Challenges": [
                 {
                   "id": 1,
@@ -960,8 +952,7 @@
                   "title": "Regulatory Compliance",
                   "des": "Certifying for FCC, CE, and RoHS with dual-assistant voice microphones requiring far-field pickup validation Amazon Web Services, Inc."
                 }
-              ]
-              ,
+              ],
               "Solutions": [
                 {
                   "id": 1,
@@ -1073,7 +1064,7 @@
               "id": 8,
               "title": "HydroGen: The Smart Bottle Revolutionizing Personalized Hydration",
               "mainDesc": "A smart bottle with dual temperature control (heating/cooling), Bluetooth-enabled hydration tracking, LED indicators, a 5000 mAh battery, and eco-friendly zero-CFC technology.",
-              "mainImageUrl": "/assets/ProjectPage/Hydrogen Bottle.webp",              
+              "mainImageUrl": "/assets/ProjectPage/Hydrogen Bottle.webp",
               "Executive-Summary": "The HydroGen is a next-generation smart bottle designed by Stacia Corp to transform the way individuals manage their hydration. Combining cutting-edge temperature control, smart connectivity, eco-conscious engineering, and human-centered design, HydroGen serves as a daily essential for modern, health-conscious users. With instant heating and cooling features, Bluetooth-enabled smart control, and a powerful 5000 mAh battery, HydroGen is built for performance, portability, and sustainability. This Project explores the journey from ideation to impact of this revolutionary device.",
               "Client-Overview": "Stacia Corp, a leading innovator in smart consumer products, envisioned the HydroGen to align with modern lifestyle demands—sustainability, personalization, and technological integration. Targeting health-focused individuals, fitness enthusiasts, and on-the-go professionals, HydroGen bridges the gap between hydration and intelligent living.",
               "Project-Objective": [
@@ -1090,27 +1081,20 @@
                 },
                 {
                   "id": 2,
-                  "des":  "Achieving safe and sustainable thermal insulation that is both efficient and eco-friendly."
+                  "des": "Achieving safe and sustainable thermal insulation that is both efficient and eco-friendly."
                 },
                 {
                   "id": 3,
-                  "des":     "Designing an intuitive and non-intrusive user interface with multi-color LED feedback."
+                  "des": "Designing an intuitive and non-intrusive user interface with multi-color LED feedback."
                 },
                 {
                   "id": 4,
-                  "des":  "Ensuring long battery life without increasing the product’s weight or form factor."
-              
+                  "des": "Ensuring long battery life without increasing the product’s weight or form factor."
                 },
                 {
                   "id": 5,
                   "des": "Syncing hardware functionality with a robust mobile application for remote operation."
-              
                 }
-                
-               
-             
-              
-                
               ],
               "Solutions": [
                 {
@@ -1240,7 +1224,7 @@
                   "title": "Durability & Maintenance",
                   "des": "Ensure components withstand 50 °C ambient and routine high-pressure cleaning, while enabling tool-free service access"
                 }
-              ],              
+              ],
               "Challenges": [
                 {
                   "id": 1,
@@ -1268,7 +1252,6 @@
                   "des": "Certifying combined furniture–electronics under FCC, CE, RoHS, and local fire-safety standards"
                 }
               ],
-              
               "Solutions": [
                 {
                   "id": 1,
@@ -1300,7 +1283,7 @@
                   "title": "Maintenance Access",
                   "des": "ITool-free latch panels allow quick service of electronics and heating modules, minimizing downtime"
                 }
-              ],              
+              ],
               "Development-Process": {
                 "stage": [
                   {
@@ -1361,8 +1344,7 @@
                   "title": "Revenue Uplift",
                   "des": "Pre-orders exceeded forecasts by 30 %, driven by strong design-tech press coverage."
                 }
-              ]
-              ,
+              ],
               "Conclusion": "Stacia Smart Furniture demonstrates how converging AI, thermal control, wireless power, and modular design can redefine living spaces. By applying disciplined Stage-Gate governance and Agile iteration, Stacia Corp delivered a standout product that meets emerging market demands, accelerates smart-home adoption, and sets a new benchmark for multifunctional, tech-enabled furniture",
               "References": [
                 "Univio. What Will the Furniture Industry Be Like in 2025? “Another rapidly expanding trend in the furniture industry is the use of AI.” Published 2 months ago. Univio",
@@ -1410,7 +1392,7 @@
                   "title": "Durability & Convenience",
                   "des": "Achieve IP67 water/dust resilience, wireless charging, and >24 hrs battery life in a <50 g enclosure Android Central"
                 }
-              ],              
+              ],
               "Challenges": [
                 {
                   "id": 1,
@@ -1437,8 +1419,7 @@
                   "title": "App Usability",
                   "description": "Designing an intuitive UI for non-technical parents to manage multi-tag detection, set safe zones, and review history logs Verizon"
                 }
-              ]
-              ,
+              ],
               "Solutions": [
                 {
                   "id": 1,
@@ -1470,8 +1451,7 @@
                   "title": "Mobile App & Cloud",
                   "des": "A React Native app interfaces via AWS IoT Core for real-time location, history playback, and remote device controls"
                 }
-              ]
-              ,
+              ],
               "Development-Process": {
                 "stage": [
                   {
@@ -1546,7 +1526,7 @@
                 "Unlocking the Potential of Agile Hardware Development in IoT Devices. Agile was first utilized in software development, but it is now widely adopted in hardware… Valispace. 2.3 years ago.",
                 "Life360: Stay Connected & Safe. Apple App Store. “Life360 memberships include essential safety features like SOS Alerts…” Apple"
               ]
-            }            
+            }
           ]
         }
       ]
@@ -1558,10 +1538,10 @@
           "name": "Pest Contol",
           "projects": [
             {
-              "id":11,
+              "id": 11,
               "title": "ENVU Pest Control Management App",
               "mainDesc": "A platform connecting manufacturing, fabricating, and machining vendors with OEMs, facilitating seamless vendor selection, order tracking, and project management through a user-centric interface",
-              "mainImageUrl": "/assets/ProjectPage/AI chatbot.webp",
+              "mainImageUrl": "/assets/ProjectPage/envu.webp",
               "Executive-Summary": "The ENVU Pest Control Management App is envisioned as a centralized digital platform designed to streamline and digitize pest control processes across the urban food supply ecosystem. This application aims to enhance transparency, optimize chemical usage, strengthen compliance, and foster collaboration among key stakeholders such as pest management agencies (PMA), food business operators (FBO), chemical/equipment suppliers, and regulatory auditors.",
               "Client-Overview": "ENVU is a leading player in urban pest management, facing challenges of site specificity, chemical traceability, vendor coordination, and compliance management. The need for a unified digital solution that offers real-time tracking, auditing, and data sharing has driven the development of this application",
               "Project-Objective": [
@@ -1674,7 +1654,7 @@
           "name": "Agri-Tech",
           "projects": [
             {
-              "id":12,
+              "id": 12,
               "title": "Edifai – Idhayam Suite: Digitizing Field Operations for Enhanced Efficiency",
               "mainDesc": "Creating an AI-powered customer support chatbot.A procurement ERP tool for IDHAYAM, linked to Indian agricultural markets, streamlining supply chain processes with data-driven insights and automation",
               "mainImageUrl": "/assets/ProjectPage/AI chatbot version.webp",
@@ -1797,293 +1777,366 @@
               ]
             },
             {
-              "id":13,
-                "title": "Parikshan Website Revamp",
-                "executive_summary": {
-                  "description": "The Parikshan website revamp project successfully transformed an outdated platform into a modern, user-centric digital experience. By addressing critical issues such as poor usability, lack of mobile responsiveness, and unstructured information architecture, the revamped site now offers improved navigation, accessibility, and performance. Built with scalability and compliance with WCAG standards, the new design enhances user engagement, streamlines service discovery, and supports Parikshan’s mission to deliver food safety, testing, and training services effectively. Phase 1 of the project was completed using Figma for design, delivering wireframes, a refined UI, and a cohesive brand style guide."
-                },
-                "client_overview": "Parikshan is a leading provider of food safety services, offering lab testing, food safety audits, training programs, and FSSAI compliance support. Catering to food industry professionals, regulatory bodies, and trainees, Parikshan aims to uphold quality and safety standards through its comprehensive services. The organization sought to modernize its digital presence to better reflect its expertise, improve user trust, and facilitate seamless access to its offerings.",
-                "project_objective": {
-                  "primary_objective": "Create a modern, accessible, and scalable platform that enhances user experience and aligns with contemporary UI/UX standards.",
-                  "specific_goals": [
-                    "Improving usability and navigation for faster service discovery.",
-                    "Ensuring mobile responsiveness and WCAG-compliant accessibility.",
-                    "Enhancing visual appeal and brand consistency.",
-                    "Optimizing performance for faster load times and better SEO.",
-                    "Creating a scalable architecture for future feature integration."
-                  ]
-                },
-                "challenges": [
-                  {
-                    "id": 1,
-                    "title": "Outdated User Interface and Experience",
-                    "des": "The old design featured inconsistent visual elements, poor navigation, and a lack of engaging content, leading to low user trust and high bounce rates."
-                  },
-                  {
-                    "id": 2,
-                    "title": "Unstructured Information Architecture",
-                    "des": "Disorganized content made it difficult for users to locate services, resulting in inefficiencies and missed opportunities for engagement."
-                  },
-                  {
-                    "id": 3,
-                    "title": "Lack of Mobile Responsiveness and Accessibility",
-                    "des": "The site was not optimized for mobile devices, causing layout issues and slow load times, while also lacking accessibility features for users with disabilities."
-                  }
-                ],
-                "solution": [
-                  {
-                    "id": 1,
-                    "title": "Modernized User Interface and Enhanced Experience",
-                    "des": [
-                      "Designed a clean, visually appealing UI with consistent typography, high-contrast colors, and strategic use of Parikshan’s brand palette (Green #008E2F, Slate Blue #625EC8).",
-                      "Introduced interactive elements like a dynamic hero carousel, micro-animations, and clear CTAs to improve engagement."
-                    ]
-                  },
-                  {
-                    "id": 2,
-                    "title": "Streamlined Information Architecture",
-                    "des": [
-                      "Reorganized content into intuitive sections (Home, About Us, Services, FSSAI Related, Founder’s Desk, Careers, Contact Us) with a clean top navigation bar.",
-                      "Implemented a searchable service directory and dropdown menus to simplify access to testing, auditing, and training services."
-                    ]
-                  },
-                  {
-                    "id": 3,
-                    "title": "Fully Responsive and Accessible Design",
-                    "des": [
-                      "Developed a mobile-friendly layout optimized for desktops, tablets, and smartphones.",
-                      "Ensured compliance with WCAG standards through accessible typography, high-contrast visuals, and role-based content personalization."
-                    ]
-                  }
-                ],
-                "key_features": [
-                  "Modern hero section",
-                  "Event highlights section",
-                  "Structured service page with a side panel",
-                  "Interactive About Us section",
-                  "Contact section with an integrated map"
-                ],
-                "development_process": [
-                  {
-                    "stage": "Research and Analysis",
-                    "details": [
-                      "Conducted user research to identify pain points and preferences.",
-                      "Analyzed competitor websites to benchmark best practices."
-                    ]
-                  },
-                  {
-                    "stage": "Wireframing and Design",
-                    "details": [
-                      "Created wireframes in Figma to outline the site structure (available at: https://www.figma.com/design/3Jki1IeTM17cAE2eFeBSFA/Parikshan?node-id=3906-1367&t=0A7vTMmg4cgqj2Um-4).",
-                      "Developed a comprehensive style guide defining colors, typography (Clash Display, Raleway), buttons, forms, and icons."
-                    ]
-                  },
-                  {
-                    "stage": "Prototyping and Feedback",
-                    "details": [
-                      "Iterated on designs based on client feedback, addressing issues like weak carousel visuals and overloaded service pages.",
-                      "Enhanced the carousel with bold titles, high-resolution images, and CTAs; introduced a dropdown-based service directory for better navigation."
-                    ]
-                  },
-                  {
-                    "stage": "Implementation and Testing",
-                    "details": [
-                      "Ensured responsiveness across devices and compliance with accessibility standards.",
-                      "Optimized images and scripts for faster load times and SEO performance."
-                    ]
-                  },
-                  {
-                    "stage": "Launch",
-                    "details": [
-                      "Successfully completed Phase 1, delivering a fully functional, modern website."
-                    ]
-                  }
-                ],
-                "impact_and_benefits": [
-                  {
-                    "id": 1,
-                    "title": "Research and Analysis",
-                    "des": [
-                      "Conducted user research to identify pain points and preferences.",
-                      "Analyzed competitor websites to benchmark best practices."
-                    ]
-                  },
-                  {
-                    "id": 2,
-                    "title": "Wireframing and Design",
-                    "des": [
-                      "Created wireframes in Figma to outline the site structure (available at: https://www.figma.com/design/3Jki1IeTM17cAE2eFeBSFA/Parikshan?node-id=3906-1367&t=0A7vTMmg4cgqj2Um-4).",
-                      "Developed a comprehensive style guide defining colors, typography (Clash Display, Raleway), buttons, forms, and icons."
-                    ]
-                  },
-                  {
-                    "id": 3,
-                    "title": "Prototyping and Feedback",
-                    "des": [
-                      "Iterated on designs based on client feedback, addressing issues like weak carousel visuals and overloaded service pages.",
-                      "Enhanced the carousel with bold titles, high-resolution images, and CTAs; introduced a dropdown-based service directory for better navigation."
-                    ]
-                  },
-                  {
-                    "id": 4,
-                    "title": "Implementation and Testing",
-                    "des": [
-                      "Ensured responsiveness across devices and compliance with accessibility standards.",
-                      "Optimized images and scripts for faster load times and SEO performance."
-                    ]
-                  },
-                  {
-                    "id": 5,
-                    "title": "Launch",
-                    "des": [
-                      "Successfully completed Phase 1, delivering a fully functional, modern website."
-                    ]
-                  }
-                ],
-                "conclusions": "The Parikshan website revamp successfully addressed the challenges of an outdated platform, delivering a modern, accessible, and user-friendly digital experience. By prioritizing usability, responsiveness, and scalability, the project not only met but exceeded client expectations, positioning Parikshan as a trusted leader in food safety services. The completion of Phase 1 lays a strong foundation for future enhancements, ensuring the platform remains adaptable to evolving user needs and industry trends.",
-                "references": [
-                  {
-                    "id": 1,
-                    "title": "Figma Design Repository",
-                    "url": "https://www.figma.com/design/3Jki1IeTM17cAE2eFeBSFA/Parikshan?node-id=14-2&t=0A7vTMmg4cgqj2Um-1"
-                  },
-                  {
-                    "id": 2,
-                    "title": "Wireframes",
-                    "url": "https://www.figma.com/design/3Jki1IeTM17cAE2eFeBSFA/Parikshan?node-id=3906-1367&t=0A7vTMmg4cgqj2Um-4"
-                  },
-                  {
-                    "id": 3,
-                    "title": "Web Content Accessibility Guidelines (WCAG)",
-                    "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
-                  }
-                ]
-              },
-            {
-              
-              "title": "Sharada Store Mobile App",
-              "executive_summary": "The Sharada Store Mobile App is a user-centric e-commerce platform designed to bridge the gap between traditional homemade foods and modern digital shopping experiences. Crafted using Figma, the app offers a seamless interface that allows users to explore, order, and enjoy authentic regional delicacies with ease. The project was completed successfully, with the design repository available on Figma for further reference.",
-              "client_overview": "Sharada Stores is an identity in Chennai West Mambalam preserving and promoting traditional food products. The store specializes in authentic, homemade, and regionally crafted food items, aiming to provide customers with a digital storefront where they can explore and purchase these delicacies.",
-              "project_objective": [
-                [
-                  {
-                    "id": 1,
-                    "title": "Enhance Accessibility",
-                    "des": "Provide a platform where customers can easily access traditional food products that are often region-specific and not readily available in mainstream retail or online stores."
-                  },
-                  {
-                    "id": 2,
-                    "title": "Ensure Authenticity",
-                    "des": "Offer a curated selection of homemade and regionally crafted food items, ensuring quality and authenticity."
-                  },
-                  {
-                    "id": 3,
-                    "title": "Improve User Experience",
-                    "des": "Design a seamless and intuitive shopping experience that allows users to browse categories, read product details, and place orders effortlessly."
-                  }
-                ]
+              "id": 13,
+              "title": "Parikshan Website Revamp",
+              "mainDesc": "A revamped website for Parikshan, featuring a modern UI/UX, responsive design, and integrated analytics for enhanced user engagement and service visibility.",
+              "mainImageUrl": "/assets/ProjectPage/parikshan.webp",
+              "Executive-Summary": "The Parikshan Website Revamp, executed by Stacia Corp, transformed an outdated platform into a modern, responsive, and user-centric website for Parikshan, a pest control service provider. The revamp included a sleek UI/UX, SEO optimization, integrated booking forms, and real-time analytics, resulting in a 50% increase in site traffic and a 30% boost in lead conversions within three months. Built using React.js and hosted on AWS, the project was completed in five months using Agile sprints, achieving a four-month ROI through enhanced customer acquisition.",
+              "Client-Overview": "Parikshan, a Chennai-based pest control company, serves residential and commercial clients with eco-friendly solutions. Facing low online visibility and an outdated website, they sought a modern digital presence to attract and retain customers.",
+              "Project-Objective": [
+                "Redesign the website with a modern, user-friendly interface.",
+                "Ensure responsive design for seamless access across devices.",
+                "Integrate booking forms and analytics for lead tracking.",
+                "Optimize for SEO to improve online visibility."
               ],
-              "challenges": [
+              "Challenges": [
                 {
                   "id": 1,
-                  "title": "Availability & Accessibility",
-                  "des": "Traditional food products are often region-specific and not easily accessible through mainstream e-commerce platforms."
+                  "title": "Outdated Design",
+                  "des": "Overhauling a legacy website with poor navigation and aesthetics."
                 },
                 {
                   "id": 2,
-                  "title": "Authenticity & Trust",
-                  "des": "Consumers are concerned about the authenticity and quality of traditional food products, especially when sourced from unverified vendors."
+                  "title": "Mobile Responsiveness",
+                  "des": "Ensuring consistent performance across desktops, tablets, and mobiles."
                 },
                 {
                   "id": 3,
-                  "title": "E-commerce Gaps",
-                  "des": "Existing e-commerce platforms lack dedicated sections for traditional food products, making it difficult for customers to discover and purchase these items."
+                  "title": "SEO Performance",
+                  "des": "Improving search engine rankings for competitive pest control keywords."
                 },
                 {
                   "id": 4,
-                  "title": "User Experience & Convenience",
-                  "des": "Many e-commerce platforms do not provide a tailored experience for traditional food lovers, lacking proper categorization and cultural storytelling."
+                  "title": "User Engagement",
+                  "des": "Creating interactive features to reduce bounce rates and increase conversions."
                 }
               ],
-              "solution": [
-                [
-                  {
-                    "id": 1,
-                    "title": "Enhanced Categorization",
-                    "des": "The app features clear categorization of products into sections like Vadam, Podi, Pickles, and Oils, making it easier for users to browse and discover items."
-                  },
-                  {
-                    "id": 2,
-                    "title": "Authenticity Assurance",
-                    "des": "Each product listing includes detailed descriptions, sourcing information, and maker stories to build trust and ensure authenticity."
-                  },
-                  {
-                    "id": 3,
-                    "title": "Tailored User Experience",
-                    "des": "The app's design focuses on cultural storytelling, with high-quality images and descriptions that highlight the heritage of each product."
-                  },
-                  {
-                    "id": 4,
-                    "title": "Seamless Shopping Journey",
-                    "des": "The user flow is designed to be intuitive, allowing users to search, browse, add items to the cart, and place orders with minimal effort."
-                  }
-                ]
-              ],
-              "development_process": [
+              "Solutions": [
                 {
                   "id": 1,
-                  "title": "Research & Discovery",
-                  "des": "Understanding the target audience and their needs, as well as analyzing competitors in the traditional food e-commerce space."
+                  "title": "Modern UI/UX",
+                  "des": "Designed a clean, intuitive interface using React.js and Tailwind CSS for fast rendering and visual appeal."
                 },
                 {
                   "id": 2,
-                  "title": "Wireframing & Prototyping",
-                  "des": "Creating wireframes and prototypes to visualize the app's structure and user flow."
+                  "title": "Responsive Design",
+                  "des": "Implemented a mobile-first approach with CSS Grid and media queries for cross-device compatibility."
                 },
                 {
                   "id": 3,
-                  "title": "UI/UX Design",
-                  "des": "Designing the user interface with a focus on simplicity, accessibility, and cultural richness."
+                  "title": "SEO Optimization",
+                  "des": "Integrated Yoast SEO and Google Analytics for keyword optimization and performance tracking."
                 },
                 {
                   "id": 4,
-                  "title": "User Testing",
-                  "des": "Conducting user testing to gather feedback and make necessary adjustments to the design."
+                  "title": "Interactive Features",
+                  "des": "Added booking forms, live chat via Tawk.to, and customer testimonials to enhance engagement."
+                }
+              ],
+              "Development-Process": [
+                {
+                  "id": 1,
+                  "title": "Discovery & Planning",
+                  "des": "Analyzed user needs and competitor websites to define design goals."
+                },
+                {
+                  "id": 2,
+                  "title": "Wireframing & Design",
+                  "des": "Created prototypes in Figma, iterating based on client feedback."
+                },
+                {
+                  "id": 3,
+                  "title": "Development",
+                  "des": "Built the frontend with React.js and backend with Node.js, hosted on AWS Amplify."
+                },
+                {
+                  "id": 4,
+                  "title": "Testing & Optimization",
+                  "des": "Performed usability, performance, and SEO tests to ensure quality."
                 },
                 {
                   "id": 5,
-                  "title": "Handoff to Development",
-                  "des": "Providing developers with the necessary design assets and specifications for implementation."
+                  "title": "Launch & Maintenance",
+                  "des": "Deployed the site and provided ongoing SEO and content updates."
                 }
               ],
-              "impact_and_benefits": [
+              "Impacts": [
                 {
                   "id": 1,
-                  "title": "Increased Accessibility",
-                  "des": "Customers can now easily access traditional food products from the comfort of their homes."
+                  "title": "Increased Traffic",
+                  "des": "50% surge in monthly visitors due to improved SEO and design."
                 },
                 {
                   "id": 2,
-                  "title": "Enhanced Trust",
-                  "des": "Detailed product information and maker stories have built customer trust in the authenticity of the products."
+                  "title": "Higher Conversions",
+                  "des": "30% increase in lead generation through integrated booking forms."
                 },
                 {
                   "id": 3,
-                  "title": "Improved User Engagement",
-                  "des": "The intuitive design and cultural storytelling have enhanced user engagement and satisfaction."
+                  "title": "Improved Engagement",
+                  "des": "Reduced bounce rate by 25% with interactive features."
                 },
                 {
                   "id": 4,
-                  "title": "Business Growth",
-                  "des": "The app has attracted a wider customer base, leading to increased sales and brand recognition."
+                  "title": "Brand Visibility",
+                  "des": "Ranked on the first page of Google for key pest control terms."
                 }
               ],
-              "conclusions": "The Sharada Store Mobile App successfully addresses the challenges faced by traditional food enthusiasts in accessing authentic regional delicacies. Through thoughtful design and user-centric features, the app provides a seamless and engaging shopping experience, promoting the preservation and appreciation of traditional food products.",
-              "references": [
-                "Sharada Store Mobile App Design Repository on Figma",
-                "Design Assets & Deliverables",
-                "User Flow & Information Architecture",
-                "Design-to-Development Handoff Specifications"
+              "Conclusion": "The Parikshan Website Revamp modernized the client’s digital presence, significantly boosting online visibility and customer engagement. Its scalable design and robust analytics lay a foundation for sustained growth in a competitive market.",
+              "References": [
+                "React.js Official Documentation",
+                "Tailwind CSS Framework Guide",
+                "Google Analytics Integration Best Practices",
+                "AWS Amplify Hosting Documentation"
+              ]
+            },
+            {
+              "id": 14,
+              "title": "Sharada Store Mobile App",
+              "mainDesc": "A mobile e-commerce app for Sharada Store, offering seamless product browsing, secure payments, and real-time order tracking for an enhanced shopping experience.",
+              "mainImageUrl": "/assets/ProjectPage/saradha-store.webp",
+              "Executive-Summary": "The Sharada Store Mobile App, developed by Stacia Corp, revolutionizes the shopping experience for a Chennai-based retail chain. Featuring intuitive product browsing, secure payment gateways, real-time order tracking, and personalized recommendations, the app increased customer retention by 45% and sales by 30% within four months. Built using Flutter for cross-platform compatibility and a Node.js backend on AWS, the project was delivered in seven months using Agile methodologies, achieving a five-month ROI through in-app purchases and subscriptions.",
+              "Client-Overview": "Sharada Store, a mid-sized retail chain in Chennai, specializes in groceries and household goods. With a growing customer base, they needed a mobile app to enhance accessibility, streamline purchases, and compete with larger e-commerce platforms.",
+              "Project-Objective": [
+                "Create a user-friendly mobile app for browsing and purchasing products.",
+                "Integrate secure payment systems and real-time order tracking.",
+                "Implement personalized recommendations to boost sales.",
+                "Ensure scalability for a growing user base."
+              ],
+              "Challenges": [
+                {
+                  "id": 1,
+                  "title": "Complex Inventory",
+                  "des": "Managing a diverse product catalog with frequent updates."
+                },
+                {
+                  "id": 2,
+                  "title": "Payment Integration",
+                  "des": "Ensuring secure, multi-gateway payment processing."
+                },
+                {
+                  "id": 3,
+                  "title": "User Retention",
+                  "des": "Encouraging repeat usage through personalized features."
+                },
+                {
+                  "id": 4,
+                  "title": "Performance Optimization",
+                  "des": "Delivering fast load times and smooth navigation under high traffic."
+                }
+              ],
+              "Solutions": [
+                {
+                  "id": 1,
+                  "title": "Dynamic Catalog",
+                  "des": "Built a flexible product database with Firebase for real-time inventory updates."
+                },
+                {
+                  "id": 2,
+                  "title": "Secure Payments",
+                  "des": "Integrated Stripe and Razorpay for secure, multi-gateway transactions."
+                },
+                {
+                  "id": 3,
+                  "title": "Personalization",
+                  "des": "Used machine learning algorithms to offer tailored product recommendations."
+                },
+                {
+                  "id": 4,
+                  "title": "Performance Tuning",
+                  "des": "Leveraged Flutter’s optimized rendering and AWS Elastic Beanstalk for scalable performance."
+                }
+              ],
+              "Development-Process": [
+                {
+                  "id": 1,
+                  "title": "Market Research",
+                  "des": "Studied competitor apps and customer preferences to define features."
+                },
+                {
+                  "id": 2,
+                  "title": "Prototyping",
+                  "des": "Developed UI/UX mockups in Figma, validated through user feedback."
+                },
+                {
+                  "id": 3,
+                  "title": "Development",
+                  "des": "Built the app with Flutter and a Node.js backend, integrated with Firebase and AWS."
+                },
+                {
+                  "id": 4,
+                  "title": "Testing",
+                  "des": "Conducted stress, usability, and security tests to ensure reliability."
+                },
+                {
+                  "id": 5,
+                  "title": "Launch & Updates",
+                  "des": "Released on iOS and Android, with regular feature updates based on analytics."
+                }
+              ],
+              "Impacts": [
+                {
+                  "id": 1,
+                  "title": "Sales Growth",
+                  "des": "30% increase in monthly sales due to streamlined purchasing."
+                },
+                {
+                  "id": 2,
+                  "title": "Customer Retention",
+                  "des": "45% improvement in repeat purchases driven by personalization."
+                },
+                {
+                  "id": 3,
+                  "title": "Operational Efficiency",
+                  "des": "Reduced order processing time by 35% with automated tracking."
+                },
+                {
+                  "id": 4,
+                  "title": "Market Reach",
+                  "des": "Expanded customer base by 20% through mobile accessibility."
+                }
+              ],
+              "Conclusion": "The Sharada Store Mobile App elevated the client’s retail operations by offering a seamless, personalized shopping experience. Its robust architecture and user-focused design ensure long-term scalability and customer loyalty in a competitive e-commerce landscape.",
+              "References": [
+                "Flutter Official Documentation",
+                "Firebase Real-Time Database Guide",
+                "Stripe Payment Integration Documentation",
+                "AWS Elastic Beanstalk Best Practices"
+              ]
+            },
+            {
+              "id": 15,
+              "title": "Edifai: Accelerate Your AI Transformation",
+              "mainDesc": "Close Your AI Skills Gap — Fast. Edifai is the expert-led, practical training platform built to equip your leaders and employees with essential AI skills to drive immediate business value through human-AI synergy.",
+              "mainImageUrl": "/assets/ProjectPage/AI chatbot.webp",
+              "Executive-Summary": "Edifai, developed by Stacia Corp, is a revolutionary AI training platform that transforms organizational AI fluency through expert-led, cohort-based learning. Featuring hyper-relevant customized programs, hands-on AI application, adaptive assessments, and community-driven growth, Edifai delivered 3.9 hours/week time savings, 100% productivity impact, and 100% confidence increase for participants. Built using React Native for cross-platform access and AWS for scalable backend, the platform was launched in six months using Agile methodologies, achieving immediate ROI through enterprise subscriptions.",
+              "Client-Overview": "Edifai serves global enterprises seeking rapid AI transformation. Facing widespread AI skills gaps and fragmented training solutions, organizations needed a comprehensive platform to upskill leaders and employees, enabling immediate business impact and enterprise-wide AI adoption.",
+              "Project-Objective": [
+                "Build a scalable AI training platform for enterprise-wide skill development.",
+                "Deliver customized, hands-on AI programs aligned with business goals.",
+                "Create adaptive learning experiences with real-time feedback.",
+                "Foster community-driven learning through cohort-based models."
+              ],
+              "Challenges": [
+                {
+                  "id": 1,
+                  "title": "AI Skills Gap",
+                  "des": "Organizations lacked practical AI training bridging theory and application."
+                },
+                {
+                  "id": 2,
+                  "title": "Customization Needs",
+                  "des": "Creating hyper-relevant content for diverse industries and roles."
+                },
+                {
+                  "id": 3,
+                  "title": "Engagement Retention",
+                  "des": "Maintaining learner motivation in self-paced digital environments."
+                },
+                {
+                  "id": 4,
+                  "title": "Scalable Delivery",
+                  "des": "Supporting thousands of concurrent learners with adaptive content."
+                }
+              ],
+              "Solutions": [
+                {
+                  "id": 1,
+                  "title": "Tailored Learning Paths",
+                  "des": "Customized programs for Leaders, L&D, and Developers with industry-specific content."
+                },
+                {
+                  "id": 2,
+                  "title": "Hands-on AI Labs",
+                  "des": "Interactive modules for workflow automation, productivity hacks, and strategic planning."
+                },
+                {
+                  "id": 3,
+                  "title": "Adaptive AI Assessment",
+                  "des": "Real-time personalized feedback and dynamic content adjustment."
+                },
+                {
+                  "id": 4,
+                  "title": "Cohort Community",
+                  "des": "Expert-led sessions and peer networking for accountability and knowledge sharing."
+                },
+                {
+                  "id": 5,
+                  "title": "Progress Analytics",
+                  "des": "Dashboard tracking time savings, productivity gains, and confidence metrics."
+                },
+                {
+                  "id": 6,
+                  "title": "Human-AI Synergy Framework",
+                  "des": "Curiosity-Capability-Community philosophy embedded in all learning experiences."
+                }
+              ],
+              "Development-Process": [
+                {
+                  "id": 1,
+                  "title": "AI Skills Research",
+                  "des": "Analyzed enterprise needs and benchmarked against leading AI platforms."
+                },
+                {
+                  "id": 2,
+                  "title": "Content Architecture",
+                  "des": "Designed modular learning paths with Figma prototypes and expert validation."
+                },
+                {
+                  "id": 3,
+                  "title": "Platform Development",
+                  "des": "Built with React Native frontend, Node.js backend, and AWS for scalability."
+                },
+                {
+                  "id": 4,
+                  "title": "AI Integration",
+                  "des": "Implemented adaptive algorithms and assessment engines with ML models."
+                },
+                {
+                  "id": 5,
+                  "title": "Beta Testing",
+                  "des": "Pilot with 200 enterprise users, refined based on engagement metrics."
+                },
+                {
+                  "id": 6,
+                  "title": "Global Launch",
+                  "des": "Deployed with multi-language support and enterprise onboarding programs."
+                }
+              ],
+              "Impact": [
+                {
+                  "id": 1,
+                  "title": "Time Savings",
+                  "des": "3.9 hours/week per participant through AI productivity tools."
+                },
+                {
+                  "id": 2,
+                  "title": "Productivity Boost",
+                  "des": "100% of participants report immediate workflow improvements."
+                },
+                {
+                  "id": 3,
+                  "title": "Confidence Growth",
+                  "des": "100% increase in AI capability and strategic confidence."
+                },
+                {
+                  "id": 4,
+                  "title": "High Engagement",
+                  "des": "NPS of 75+ with 85% course completion rates."
+                },
+                {
+                  "id": 5,
+                  "title": "Enterprise Adoption",
+                  "des": "40% average increase in organizational AI project success rates."
+                }
+              ],
+              "Conclusion": "Edifai revolutionized enterprise AI transformation by delivering practical, scalable training that bridges human potential with technological capability. Its human-AI synergy philosophy and proven results establish it as the global standard for building AI-fluent organizations ready to innovate and compete in the AI era.",
+              "References": [
+                "McKinsey: The State of AI in 2024",
+                "Gartner: Enterprise AI Training Best Practices",
+                "React Native Documentation",
+                "AWS Machine Learning Services Guide",
+                "Forbes: Future of Work and AI Skills"
               ]
             }
           ]

@@ -10,7 +10,7 @@
         "imageUrl": "/assets/2d-drafting.webp",
         "position": 1,
         "services": [
-          { 
+          {
             "title": "SPM",
             "description": "",
             "imageUrl": "/assets/Machine Drawing.webp",
@@ -1503,7 +1503,7 @@
             ]
           },
           {
-            "title":"Compliance and Certification Consultancy",
+            "title": "Compliance and Certification Consultancy",
             "description": "",
             "imageUrl": "/assets/Machine Drawing.webp",
             "position": 2,
@@ -1612,549 +1612,437 @@
   },
   {
     "name": "Tech",
-    "des": "Department focused on software, IoT, and IT consulting solutions.",
+    "description": "Department focused on software, IoT, and IT consulting solutions.",
     "position": 3,
     "categories": [
       {
-        "description": "Our Design Services deliver visually compelling, user-focused solutions aligned with your brand and goals. We specialize in UI/UX design, graphic design, and prototyping to create seamless digital experiences. From intuitive interfaces to detailed visual assets, we enhance usability and engagement across platforms. Our creative, functional approach ensures designs that not only look great but also drive meaningful user interactions",
-        "imageUrl": "/assets/Design-Services.webp",
+        "description": "Our comprehensive design services empower your vision, transforming ideas into compelling visual experiences. We blend creativity with strategic thinking to craft designs that resonate with your audience and achieve your business objectives...",
+        "imageUrl": "/assets/Services/designservices-ser.webp",
         "departmentId": "672eefbf81be8191d93ce4bd",
         "id": "67529615d6387bac980467b3",
         "name": "Design Services",
         "position": 1,
         "services": [
           {
-            "description": "UI/UX Design is central to building successful digital products that prioritize user experience and functionality. Our team combines user-centered design principles with innovative strategies to create intuitive, responsive interfaces. By focusing on the user’s needs and goals, we design interfaces that enhance engagement, retention, and conversion. Whether designing a mobile app, website, or complex enterprise platform, we ensure that every element, from layout to navigation, is tailored to provide users with a seamless and enjoyable experience. We work collaboratively with you to ensure that the design not only meets functional requirements but also elevates the user experience.",
-            "imageUrl": "/assets/UI-UX-Design.webp",
+            "oneLine": "We craft intuitive and engaging user interfaces alongside seamless user experiences, ensuring your digital products are not just visually appealing but also incredibly easy and delightful to navigate...",
+            "imageUrl": "/assets/Services/UIUX Design-ser.webp",
             "id": "6752966fd6387bac980467b4",
             "categoryId": "67529615d6387bac980467b3",
             "title": "UI and UX Design",
             "position": 1,
             "whatWeDo": [
               {
-                "des": " We conduct in-depth user research to understand your target audience and their needs, allowing us to design a user interface that resonates with users.",
+                "des": "We conduct in-depth user research to understand target audience needs, behaviors, and pain points, forming the foundation for user-centered design decisions.",
                 "id": "6752a160d6387bac980467e9",
                 "serviceId": "6752966fd6387bac980467b4",
-                "title": "User Research and Analysis",
+                "title": "User Research",
                 "position": 1
               },
               {
-                "des": "We create wireframes and prototypes to visualize the design flow and gather feedback early in the development cycle.",
+                "des": "Structuring content logically, we create clear and intuitive navigation paths, allowing users to effortlessly find information and achieve their goals within your product.",
                 "id": "6752a17dd6387bac980467ea",
                 "serviceId": "6752966fd6387bac980467b4",
-                "title": "Wireframing and Prototyping",
+                "title": "Information Architecture",
                 "position": 2
               },
               {
-                "des": "Our team builds interactive designs to ensure that users can engage seamlessly with your product, offering a dynamic experience.",
+                "des": "We define how users interact with your product, designing smooth transitions, feedback mechanisms, and interactive elements for an engaging and efficient experience.",
                 "id": "6752a190d6387bac980467eb",
                 "serviceId": "6752966fd6387bac980467b4",
-                "title": "Interactive Designs",
+                "title": "Interaction Design",
                 "position": 3
               },
               {
-                "des": "We regularly conduct user testing to identify pain points and refine the design based on real-user feedback to ensure maximum usability.",
+                "des": "Through rigorous usability testing, we identify areas for improvement, ensuring the final design is both effective and enjoyable for real-world users.",
                 "id": "6752a1a6d6387bac980467ec",
                 "serviceId": "6752966fd6387bac980467b4",
-                "title": "User Testing and Iteration",
+                "title": "Usability Testing",
                 "position": 4
-              },
-              {
-                "des": "We collaborate with clients throughout the process to ensure the design aligns with business objectives and brand identity.",
-                "id": "6752a1b9d6387bac980467ed",
-                "serviceId": "6752966fd6387bac980467b4",
-                "title": "Collaboration",
-                "position": 5
               }
             ]
           },
           {
-            "description": "Graphic Design is essential for creating visually compelling and memorable brand experiences across various media. Whether you need logos, marketing collateral, web graphics, or print materials, our designers ensure every piece of visual content reflects your brand’s identity and communicates your message effectively. We use advanced design tools and creative techniques to deliver high-quality designs that stand out. Our graphic design services focus on crafting designs that are not only aesthetically pleasing but also strategically aligned with your business goals, ensuring your brand resonates with your target audience and leaves a lasting impression.",
-            "imageUrl": "/assets/Graphic-Design.webp",
+            "oneLine": "Our graphic design services create powerful visual communications that elevate your brand, from distinctive logos and captivating marketing materials to cohesive brand guidelines...",
+            "imageUrl": "/assets/Services/Graphic Design-ser.webp",
             "id": "67529694d6387bac980467b5",
             "categoryId": "67529615d6387bac980467b3",
             "title": "Graphic Design",
             "position": 2,
             "whatWeDo": [
               {
-                "des": "We craft unique brand identities that resonate with your audience and make a lasting impact.",
+                "des": "We align all graphic design elements with your core brand strategy, ensuring consistency and reinforcing your unique identity across all visuals.",
                 "id": "6752a225d6387bac980467ee",
                 "serviceId": "67529694d6387bac980467b5",
-                "title": "Brand Identity Design",
+                "title": "Brand Strategy Integration",
                 "position": 1
               },
               {
-                "des": "Our team designs logos and branding elements that reflect your business ethos and set you apart in the market",
+                "des": "Our designers brainstorm and develop innovative concepts, translating your ideas into striking visual representations that capture attention effectively.",
                 "id": "6752a278d6387bac980467ef",
                 "serviceId": "67529694d6387bac980467b5",
-                "title": "Logo and Branding Design",
+                "title": "Creative Conceptualization",
                 "position": 2
               },
               {
-                "des": "We create brochures, flyers, and banners that visually communicate your product’s benefits and features.",
+                "des": "We work collaboratively through feedback loops, refining designs until they perfectly meet your expectations and achieve the desired visual impact.",
                 "id": "6752a29ad6387bac980467f0",
                 "serviceId": "67529694d6387bac980467b5",
-                "title": "Marketing Material Design",
+                "title": "Iterative Design Process",
                 "position": 3
               },
               {
-                "des": "We design engaging digital graphics for social media, websites, and email campaigns, boosting your digital presence.",
+                "des": "We stay updated with current design trends and apply best practices to ensure your graphics are modern, relevant, and stand out in the competitive landscape.",
                 "id": "6752a315d6387bac980467f1",
                 "serviceId": "67529694d6387bac980467b5",
-                "title": "Digital Graphics Creation",
+                "title": "Market Trend Analysis",
                 "position": 4
-              },
-              {
-                "des": " We provide creative direction to ensure all design elements align with your overall marketing and branding strategy.",
-                "id": "6752a32fd6387bac980467f2",
-                "serviceId": "67529694d6387bac980467b5",
-                "title": "Creative Consultation",
-                "position": 5
               }
             ]
           },
           {
-            "description": "Wireframing and Prototyping are essential steps in the design process that allow businesses to visualize and test their ideas before full development. Wireframes serve as the blueprint for a website or app, outlining basic structure and functionality, while prototypes bring these wireframes to life with interactive features. Our team creates wireframes that focus on usability and user flow, ensuring the design meets functional requirements. By developing clickable prototypes, we give stakeholders and users a tangible preview of the final product, enabling quick feedback and iterative improvement, leading to a more efficient design-to-development process.",
-            "imageUrl": "/assets/wireframing-and-prototype.webp",
-            "id": "67529694d6387bac980467b5",
+            "oneLine": "We transform abstract concepts into tangible, interactive models through detailed wireframing and prototyping, allowing you to visualize and test your product's structure and functionality...",
+            "imageUrl": "/assets/Services/wireframing and prototype-ser.webp",
+            "id": "67529694d6387bac980467b6",
             "categoryId": "67529615d6387bac980467b3",
             "title": "Wireframing and Prototyping",
-            "position": 2,
+            "position": 3,
             "whatWeDo": [
               {
-                "des": "We create wireframes with basic structures to focus on layout, functionality, and content placement.",
+                "des": "We start by clearly defining your product's core concepts and user requirements, laying the ground for effective structural design.",
                 "id": "6752a225d6387bac980467ee",
-                "serviceId": "67529694d6387bac980467b5",
-                "title": "Low-Fidelity Wireframes",
+                "serviceId": "67529694d6387bac980467b6",
+                "title": "Concept Definition",
                 "position": 1
               },
               {
-                "des": " Our team builds clickable prototypes to simulate the final product's user interactions and gather valuable feedback.",
+                "des": "We create basic structural outlines (wireframes) to map out content, layout, and functionality, focusing on user flow without visual distractions.",
                 "id": "6752a278d6387bac980467ef",
-                "serviceId": "67529694d6387bac980467b5",
-                "title": "Interactive Prototypes",
+                "serviceId": "67529694d6387bac980467b6",
+                "title": "Low-Fidelity Wireframing",
                 "position": 2
               },
               {
-                "des": "We collaborate with stakeholders to refine wireframes and prototypes, ensuring alignment with business goals",
+                "des": "We develop interactive prototypes that closely mimic the final product's look and feel, allowing for realistic testing and stakeholder feedback.",
                 "id": "6752a29ad6387bac980467f0",
-                "serviceId": "67529694d6387bac980467b5",
-                "title": "Collaborative Design Feedback",
+                "serviceId": "67529694d6387bac980467b6",
+                "title": "High-Fidelity Prototyping",
                 "position": 3
               },
               {
-                "des": "We conduct user testing on prototypes to identify areas for improvement before development begins.",
+                "des": "Based on testing and feedback, we continuously refine wireframes and prototypes, ensuring the design is optimized before development begins.",
                 "id": "6752a315d6387bac980467f1",
-                "serviceId": "67529694d6387bac980467b5",
-                "title": "User Testing",
-                "position": 4
-              },
-              {
-                "des": "Based on feedback, we continuously iterate on the design to enhance the user experience.",
-                "id": "6752a32fd6387bac980467f2",
-                "serviceId": "67529694d6387bac980467b5",
+                "serviceId": "67529694d6387bac980467b6",
                 "title": "Iterative Refinement",
-                "position": 5
+                "position": 4
               }
             ]
           }
         ]
       },
       {
-        "description": "Our Development Services provide end-to-end solutions for building dynamic, high-performance applications and websites. We specialize in full-stack web development, mobile app development, custom software, and API integration. Our team creates scalable, secure systems that deliver exceptional user experiences, from robust backends to intuitive frontends and mobile apps. We use the latest technologies to ensure reliability, functionality, and scalability, helping businesses achieve their goals.",
-        "imageUrl": "/assets/Development-Services.webp",
+        "description": "Our development services translate innovative ideas into robust, scalable, and high-performance digital solutions. Specializing in cutting-edge technologies, we engineer bespoke software tailored to your unique business needs...",
+        "imageUrl": "/assets/Services/developmentservices-ser.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
         "id": "6769383a51dcda17a0f93888",
         "name": "Development Services",
         "position": 2,
         "services": [
           {
-            "description": "Our Web Development services cover both Frontend and Backend development to create fully functional, responsive websites and web applications. We design user-friendly interfaces (UI) for frontend development and powerful backend systems to ensure seamless performance. Whether it's a dynamic website, e-commerce platform, or web application, we use industry-standard technologies to develop scalable and secure solutions. Our team works collaboratively with clients to ensure the design aligns with business needs, and we integrate all required functionalities to deliver a seamless user experience and optimize performance across devices and platforms.",
-            "imageUrl": "/assets/Web-Development(Frontend&Backend).webp",
+            "oneLine": "We deliver comprehensive web development, crafting captivating frontend experiences with intuitive design and powerful backend architectures that ensure your web applications are fast, secure, and scalable...",
+            "imageUrl": "/assets/Services/Web Development (Frontend & Backend)-ser.webp",
             "id": "676e5561e0bbb25e4ee93315",
             "categoryId": "6769383a51dcda17a0f93888",
             "title": "Web Development (Frontend & Backend)",
             "position": 1,
             "whatWeDo": [
               {
-                "des": "We develop intuitive, responsive web interfaces using modern frontend technologies",
+                "des": "We collaborate to define your web application's scope, goals, and technical requirements, ensuring alignment with your business objectives from the outset.",
                 "id": "676e56cde0bbb25e4ee93319",
                 "serviceId": "676e5561e0bbb25e4ee93315",
-                "title": "Frontend Development",
+                "title": "Strategic Planning",
                 "position": 1
               },
               {
-                "des": " We build scalable backends using modern frameworks and databases, ensuring functionality and performance.",
+                "des": "Utilizing leading frameworks like React, Angular, Node.js, and Django, we build efficient, maintainable, and high-performance web solutions.",
                 "id": "676e56e9e0bbb25e4ee9331a",
                 "serviceId": "676e5561e0bbb25e4ee93315",
-                "title": "Backend Development",
+                "title": "Modern Frameworks",
                 "position": 2
               },
               {
-                "des": "We integrate databases seamlessly with web applications for data storage and management.",
+                "des": "We design and implement robust database solutions (SQL/NoSQL) to ensure optimal data storage, retrieval, and security for your application's needs.",
                 "id": "676e56fce0bbb25e4ee9331b",
                 "serviceId": "676e5561e0bbb25e4ee93315",
-                "title": "Database Integration",
+                "title": "Database Management",
                 "position": 3
               },
               {
-                "des": " We develop robust APIs to support interactions between the frontend, backend, and external systems",
+                "des": "Comprehensive testing, including unit, integration, and end-to-end tests, guarantees a stable, bug-free web application ready for deployment.",
                 "id": "676e570ce0bbb25e4ee9331c",
                 "serviceId": "676e5561e0bbb25e4ee93315",
-                "title": "API Development",
+                "title": "Rigorous Testing",
                 "position": 4
-              },
-              {
-                "des": " We conduct extensive testing to ensure your web application is error-free, secure, and performs optimally across all devices",
-                "id": "676e570ce0bbb25e4ee9331d",
-                "serviceId": "676e5561e0bbb25e4ee93315",
-                "title": "Testing & Debugging",
-                "position": 5
-              },
-              {
-                "des": "We implement new features and improvements to keep applications aligned with new technologies and user needs.",
-                "id": "676e571ee0bbb25e4ee9331e",
-                "serviceId": "676e5561e0bbb25e4ee93315",
-                "title": "Application Enhancements",
-                "position": 6
               }
             ]
           },
           {
-            "description": "Our Mobile App Development services cover both iOS and Android platforms, creating robust and feature-rich mobile applications that are tailored to meet your specific business needs. We focus on developing native, hybrid, and cross-platform apps that deliver excellent user experiences while ensuring scalability and performance. Our team leverages cutting-edge technologies to build mobile apps that seamlessly integrate with backends and other systems, ensuring smooth interactions across all devices. Whether you're building an enterprise app, e-commerce solution, or consumer-facing product, we deliver high-quality, reliable mobile solutions that drive user engagement.",
-            "imageUrl": "/assets/Mobile-App-Development.webp",
+            "oneLine": "We engineer innovative mobile applications for both iOS and Android platforms, delivering engaging user experiences and robust functionality tailored to your business needs...",
+            "imageUrl": "/assets/Services/Mobile App Development (iOS & Android)-ser.webp",
             "id": "676e5597e0bbb25e4ee93316",
             "categoryId": "6769383a51dcda17a0f93888",
             "title": "Mobile App Development (iOS & Android)",
             "position": 2,
             "whatWeDo": [
               {
-                "des": " Our UI/UX design approach ensures that mobile apps are user-friendly, intuitive, and visually engaging.",
+                "des": "Guiding you from initial idea generation and user experience design through development, testing, and successful deployment to app stores.",
                 "id": "676e5758e0bbb25e4ee9331f",
                 "serviceId": "676e5597e0bbb25e4ee93316",
-                "title": "User-Centric Design",
+                "title": "Concept to Launch",
                 "position": 1
               },
               {
-                "des": " We build native iOS and Android apps using platform-specific technologies for optimal performance.",
+                "des": "Our team possesses deep expertise in native iOS (Swift/Objective-C) and Android (Kotlin/Java) development, ensuring optimal performance and user experience.",
                 "id": "676e5787e0bbb25e4ee93320",
                 "serviceId": "676e5597e0bbb25e4ee93316",
-                "title": "Native App Development",
+                "title": "Platform Expertise",
                 "position": 2
               },
               {
-                "des": " We use frameworks like React Native or Flutter for building apps that run seamlessly on both iOS and Android",
+                "des": "We utilize agile development cycles to ensure flexibility, rapid iteration, and continuous feedback integration throughout the project lifecycle.",
                 "id": "676e579fe0bbb25e4ee93321",
                 "serviceId": "676e5597e0bbb25e4ee93316",
-                "title": "Cross-Platform Development",
+                "title": "Agile Methodologies",
                 "position": 3
               },
               {
-                "des": " We integrate custom or third-party APIs to extend app functionality, such as payment gateways, social sharing, or real-time notifications.",
+                "des": "Focusing on speed, responsiveness, and efficient resource usage, we ensure your app delivers a smooth and satisfying experience for all users.",
                 "id": "676e57bbe0bbb25e4ee93322",
                 "serviceId": "676e5597e0bbb25e4ee93316",
-                "title": "Backend Integration",
+                "title": "Performance Optimization",
                 "position": 4
-              },
-              {
-                "des": "We rigorously test apps across devices to ensure stability, performance, and usability before launch.",
-                "id": "676e57e2e0bbb25e4ee93323",
-                "serviceId": "676e5597e0bbb25e4ee93316",
-                "title": "App Testing",
-                "position": 5
               }
             ]
           },
           {
-            "description": "Our Custom Software Development services focus on creating tailored software solutions that meet your specific business needs. Whether it's a CRM, ERP, or industry-specific application, we build software that is scalable, secure, and flexible. We collaborate with your team to understand your unique requirements and design solutions that integrate seamlessly with your business processes. Our custom software development ensures that you get a solution that fits perfectly with your objectives, enabling you to optimize operations, increase efficiency, and stay competitive in the market.",
-            "imageUrl": "/assets/Custom-Software-Development.webp",
+            "oneLine": "We design and build bespoke software solutions precisely aligned with your unique business processes and challenges, optimizing operations, boosting efficiency...",
+            "imageUrl": "/assets/Services/Custom Software Development-ser.webp",
             "id": "676e55bce0bbb25e4ee93317",
             "categoryId": "6769383a51dcda17a0f93888",
             "title": "Custom Software Development",
             "position": 3,
             "whatWeDo": [
               {
-                "des": " We work closely with clients to gather detailed requirements for custom software.",
+                "des": "We conduct thorough discovery sessions to understand your exact operational workflows, pain points, and strategic objectives in detail.",
                 "id": "676e584fe0bbb25e4ee93326",
                 "serviceId": "676e55bce0bbb25e4ee93317",
-                "title": "Requirement Gathering",
+                "title": "Deep Requirement Analysis",
                 "position": 1
               },
               {
-                "des": "We design scalable, secure, and flexible software architecture to meet business needs.",
+                "des": "Crafting a custom software architecture specifically designed to meet your current needs while ensuring future scalability and flexibility.",
                 "id": "676e588de0bbb25e4ee93327",
                 "serviceId": "676e55bce0bbb25e4ee93317",
-                "title": "Architecture Design",
+                "title": "Tailored Architecture Design",
                 "position": 2
               },
               {
-                "des": " We use agile methodologies to ensure flexibility, collaboration, and timely delivery.",
+                "des": "Employing a modular approach, we build robust, easily maintainable, and adaptable software that can evolve with your business over time.",
                 "id": "676e58a6e0bbb25e4ee93328",
                 "serviceId": "676e55bce0bbb25e4ee93317",
-                "title": "Agile Development",
+                "title": "Modular Development",
                 "position": 3
               },
               {
-                "des": "We develop the software and integrate it with existing systems and databases.",
+                "des": "Rigorous testing and quality checks at every stage guarantee a stable, secure, and high-performing custom software solution.",
                 "id": "676e58c8e0bbb25e4ee93329",
                 "serviceId": "676e55bce0bbb25e4ee93317",
-                "title": "Development & Integration",
+                "title": "Quality Assurance",
                 "position": 4
-              },
-              {
-                "des": "We ensure the software works as expected by performing rigorous testing at every stage.",
-                "id": "676e5923e0bbb25e4ee9332a",
-                "serviceId": "676e55bce0bbb25e4ee93317",
-                "title": "Testing & Quality Assurance",
-                "position": 5
-              },
-              {
-                "des": "We provide ongoing maintenance and support to ensure the software remains efficient and up-to-date.",
-                "id": "676e5940e0bbb25e4ee9332b",
-                "serviceId": "676e55bce0bbb25e4ee93317",
-                "title": "Post-Deployment Support",
-                "position": 6
               }
             ]
           },
           {
-            "description": "Our API Development and Integration services help connect disparate systems, allowing seamless communication between applications, databases, and third-party services. We develop secure, scalable APIs that allow your systems to exchange data efficiently. Whether you need to integrate with external systems or create custom APIs for your own platform, we provide full-service solutions to meet your requirements. With expertise in RESTful APIs, SOAP, and GraphQL, our team ensures that your integrations are robust, secure, and provide a smooth user experience.",
-            "imageUrl": "/assets/API-Development.webp",
+            "oneLine": "We develop secure and scalable APIs, facilitating seamless communication between disparate systems and applications, enabling efficient data exchange...",
+            "imageUrl": "/assets/Services/API Development & Integration-ser.webp",
             "id": "676e55dbe0bbb25e4ee93318",
             "categoryId": "6769383a51dcda17a0f93888",
             "title": "API Development & Integration",
             "position": 4,
             "whatWeDo": [
               {
-                "des": " We develop APIs tailored to your business requirements, enabling seamless communication between systems.",
+                "des": "We meticulously design APIs with clear, consistent endpoints and provide comprehensive documentation for easy adoption and integration by developers.",
                 "id": "676e5a08e0bbb25e4ee9332e",
                 "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Custom API Development",
+                "title": "Design & Documentation",
                 "position": 1
               },
               {
-                "des": "We integrate third-party APIs to enhance functionality, such as payment gateways, CRM systems, and social media platforms.",
+                "des": "Implementing robust authentication and authorization mechanisms (e.g., OAuth 2.0, API keys) to ensure secure data exchange and protect sensitive information.",
                 "id": "676e5a39e0bbb25e4ee9332f",
                 "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "API Integration",
+                "title": "Security Protocols",
                 "position": 2
               },
               {
-                "des": "Our APIs are designed to handle increased traffic and integrate with various platforms as your business scales.",
+                "des": "Focusing on low latency and high throughput, we build APIs that respond quickly and efficiently, supporting high-volume data transactions.",
                 "id": "676e5a63e0bbb25e4ee93330",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Scalable Solutions",
-                "position": 3
-              },
-              {
-                "des": " We implement secure authentication protocols like OAuth and JWT to protect sensitive data",
-                "id": "676e5a81e0bbb25e4ee93331",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Security & Authentication",
-                "position": 4
-              },
-              {
-                "des": " We thoroughly test APIs for performance, security, and reliability, ensuring smooth operation.",
-                "id": "676e5aa0e0bbb25e4ee93332",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "API Testing & Monitoring",
-                "position": 5
-              }
-            ]
-          },
-          {
-            "description": "Our Cloud Application Development services focus on building scalable, flexible, and secure applications that leverage the power of the cloud. We help businesses build cloud-native applications that are optimized for performance, scalability, and cost-efficiency. Our team ensures that your cloud applications can scale seamlessly as your business grows while providing real-time access to data and resources from anywhere, ensuring a competitive advantage.",
-            "imageUrl": "/assets/Cloud-Application-Development.webp",
-            "id": "676e55dbe0bbb25e4ee93318",
-            "categoryId": "6769383a51dcda17a0f93888",
-            "title": "Cloud Application Development",
-            "position": 4,
-            "whatWeDo": [
-              {
-                "des": "We assess your requirements and provide a roadmap for cloud application development.",
-                "id": "676e5a08e0bbb25e4ee9332e",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Cloud Strategy & Consultation",
-                "position": 1
-              },
-              {
-                "des": "We design and develop cloud-native applications that are optimized for scalability, performance, and availability.",
-                "id": "676e5a39e0bbb25e4ee9332f",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Cloud-Native Applications",
-                "position": 2
-              },
-              {
-                "des": "We handle the setup and configuration of cloud infrastructure to ensure secure, high-performing applications.",
-                "id": "676e5a63e0bbb25e4ee93330",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Cloud Infrastructure Setup",
-                "position": 3
-              },
-              {
-                "des": " We integrate applications with cloud services, databases, and APIs for enhanced functionality",
-                "id": "676e5a81e0bbb25e4ee93331",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Cloud Integration",
-                "position": 4
-              },
-              {
-                "des": "We leverage DevOps practices to automate deployment, monitoring, and scaling of cloud applications.",
-                "id": "676e5aa0e0bbb25e4ee93332",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "DevOps Automation",
-                "position": 5
-              },
-              {
-                "des": "We implement robust security measures, access control, and backup strategies and ensure compliance with relevant standards and regulations.",
-                "id": "676e5aa0e0bbb25e4ee93332",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Cloud Security & Compliance",
-                "position": 5
-              },
-              {
-                "des": "We monitor cloud applications for performance and optimize for cost-efficiency and scalability.",
-                "id": "676e5aa0e0bbb25e4ee93332",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Monitoring & Optimization",
-                "position": 5
-              }
-            ]
-          },
-          {
-            "description": "Our Cross-Platform App Development services focus on building applications that run seamlessly on both iOS and Android platforms. We use modern frameworks to write a single codebase that can be deployed on multiple platforms, saving time and development costs. This approach ensures consistency across devices, while providing a native-like experience. Whether you’re building a consumer-facing mobile app or an enterprise solution, we prioritize usability, performance, and scalability, enabling businesses to reach a wider audience and streamline their mobile app development process.",
-            "imageUrl": "/assets/Cross-Platform-App-Development.webp",
-            "id": "676e55dbe0bbb25e4ee93318",
-            "categoryId": "6769383a51dcda17a0f93888",
-            "title": "Cross Platform App Development",
-            "position": 4,
-            "whatWeDo": [
-              {
-                "des": "We choose the best cross-platform framework for your project needs.",
-                "id": "676e5a08e0bbb25e4ee9332e",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Framework Selection",
-                "position": 1
-              },
-              {
-                "des": " We develop a single codebase for both iOS and Android platforms, ensuring consistency and cost efficiency.",
-                "id": "676e5a39e0bbb25e4ee9332f",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Unified Codebase",
-                "position": 2
-              },
-              {
-                "des": "We design user interfaces that adapt seamlessly to different screen sizes and devices.",
-                "id": "676e5a63e0bbb25e4ee93330",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Responsive Design",
-                "position": 3
-              },
-              {
-                "des": "We integrate native device features like camera, GPS, and push notifications for a rich user experience.",
-                "id": "676e5a81e0bbb25e4ee93331",
-                "serviceId": "676e55dbe0bbb25e4ee93318",
-                "title": "Native Features Integration",
-                "position": 4
-              },
-              {
-                "des": "We optimize the app's performance to ensure smooth functioning across all platforms.",
-                "id": "676e5aa0e0bbb25e4ee93332",
                 "serviceId": "676e55dbe0bbb25e4ee93318",
                 "title": "Performance Optimization",
-                "position": 5
+                "position": 3
+              },
+              {
+                "des": "Managing API versions effectively to ensure backward compatibility and smooth transitions for existing integrations as new features are released.",
+                "id": "676e5a81e0bbb25e4ee93331",
+                "serviceId": "676e55dbe0bbb25e4ee93318",
+                "title": "Version Control",
+                "position": 4
+              }
+            ]
+          },
+          {
+            "oneLine": "We build scalable, resilient, and cost-effective cloud-native applications, leveraging leading platforms like AWS, Azure, and Google Cloud...",
+            "imageUrl": "/assets/Services/Cloud Application Development-ser.webp",
+            "id": "676e55f1e0bbb25e4ee93319",
+            "categoryId": "6769383a51dcda17a0f93888",
+            "title": "Cloud Application Development",
+            "position": 5,
+            "whatWeDo": [
+              {
+                "des": "Designing applications from the ground up to fully leverage cloud benefits, including microservices, containerization, and serverless computing.",
+                "id": "676e5a08e0bbb25e4ee9332e",
+                "serviceId": "676e55f1e0bbb25e4ee93319",
+                "title": "Cloud-Native Architecture",
+                "position": 1
+              },
+              {
+                "des": "Guiding you in choosing the optimal cloud platform (AWS, Azure, GCP) based on your specific needs, scalability requirements, and budget.",
+                "id": "676e5a39e0bbb25e4ee9332f",
+                "serviceId": "676e55f1e0bbb25e4ee93319",
+                "title": "Platform Selection",
+                "position": 2
+              },
+              {
+                "des": "Automating infrastructure provisioning and management using tools like Terraform or CloudFormation for consistency and rapid deployment.",
+                "id": "676e5a63e0bbb25e4ee93330",
+                "serviceId": "676e55f1e0bbb25e4ee93319",
+                "title": "Infrastructure as Code (IaC)",
+                "position": 3
+              },
+              {
+                "des": "Implementing robust cloud security best practices and ensuring compliance with industry regulations to protect your data and applications.",
+                "id": "676e5a81e0bbb25e4ee93331",
+                "serviceId": "676e55f1e0bbb25e4ee93319",
+                "title": "Security & Compliance",
+                "position": 4
+              }
+            ]
+          },
+          {
+            "oneLine": "We develop versatile mobile applications that run seamlessly across both iOS and Android from a single codebase, accelerating time-to-market...",
+            "imageUrl": "/assets/Services/Cross-Platform App Development-ser.webp",
+            "id": "676e5610e0bbb25e4ee9331a",
+            "categoryId": "6769383a51dcda17a0f93888",
+            "title": "Cross Platform App Development",
+            "position": 6,
+            "whatWeDo": [
+              {
+                "des": "Utilizing frameworks like React Native or Flutter, we write code once and deploy it across multiple platforms, optimizing development efficiency.",
+                "id": "676e5a08e0bbb25e4ee9332e",
+                "serviceId": "676e5610e0bbb25e4ee9331a",
+                "title": "Unified Codebase",
+                "position": 1
+              },
+              {
+                "des": "Employing best practices and specific platform optimizations to ensure cross-platform apps deliver near-native performance and responsiveness.",
+                "id": "676e5a39e0bbb25e4ee9332f",
+                "serviceId": "676e5610e0bbb25e4ee9331a",
+                "title": "Native Performance",
+                "position": 2
+              },
+              {
+                "des": "Manage and deploy updates simultaneously to both iOS and Android versions, ensuring consistency and faster feature rollouts.",
+                "id": "676e5a63e0bbb25e4ee93330",
+                "serviceId": "676e5610e0bbb25e4ee9331a",
+                "title": "Streamlined Updates",
+                "position": 3
+              },
+              {
+                "des": "Thoroughly testing across diverse devices and operating system versions to guarantee stability, compatibility, and a uniform user experience.",
+                "id": "676e5a81e0bbb25e4ee93331",
+                "serviceId": "676e5610e0bbb25e4ee9331a",
+                "title": "Extensive Testing",
+                "position": 4
               }
             ]
           }
         ]
       },
       {
-        "description": "Our DevOps and Infrastructure Management services optimize the development lifecycle, ensuring reliable system operations. We automate deployment, testing, and monitoring to accelerate software delivery with consistency. By focusing on infrastructure as code (IaC), CI/CD, and server management, we ensure scalability, security, and efficiency. Our services reduce downtime, foster collaboration between teams, and maintain application reliability.",
-        "imageUrl": "/assets/DevOps-Infrastructure-Management.webp",
+        "description": "Our DevOps and Infrastructure Management services are designed to streamline your development lifecycle and optimize your operational efficiency...",
+        "imageUrl": "/assets/Services/_DevOps and Infrastructure Management-ser.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
         "id": "6769386151dcda17a0f93889",
         "name": "DevOps and Infrastructure Management",
         "position": 3,
         "services": [
           {
-            "description": "Infrastructure as Code (IaC) allows you to manage and provision your infrastructure using code, automating the entire process. By adopting IaC, businesses can maintain version-controlled and consistent infrastructure, making it easier to replicate environments across development, staging, and production. We use tools like Terraform, AWS CloudFormation, and Ansible to define and automate infrastructure setup. This approach reduces human error, accelerates deployments, and ensures that your infrastructure is scalable, secure, and compliant with industry standards, helping businesses achieve agility and maintain control over their environments.",
-            "imageUrl": "/assets/Infrastructure-as-code(IaC).webp",
+            "oneLine": "We automate your infrastructure provisioning and management using Infrastructure as Code, ensuring consistent, repeatable, and version-controlled environments...",
+            "imageUrl": "/assets/Services/Infrastructure as Code (IaC)-ser.webp",
             "id": "676e5ae7e0bbb25e4ee93333",
             "categoryId": "6769386151dcda17a0f93889",
             "title": "Infrastructure as Code (IaC)",
             "position": 1,
             "whatWeDo": [
               {
-                "des": "We use tools like Terraform and AWS CloudFormation to automate the provisioning and management of cloud infrastructure, ensuring consistency and reducing human error",
+                "des": "We define your entire infrastructure (servers, databases, networks) using code templates, enabling automated and consistent resource deployment.",
                 "id": "676e5ba5e0bbb25e4ee93337",
                 "serviceId": "676e5ae7e0bbb25e4ee93333",
-                "title": "Code-Based Infrastructure",
+                "title": "Templated Provisioning",
                 "position": 1
               },
               {
-                "des": "Our IaC solutions are designed to scale automatically, adapting to fluctuating traffic demands while minimizing resource wastage.",
+                "des": "All infrastructure configurations are managed under version control systems, allowing for easy tracking, auditing, and rollback of changes.",
                 "id": "676e5be0e0bbb25e4ee93338",
                 "serviceId": "676e5ae7e0bbb25e4ee93333",
-                "title": "Scalability and Flexibility",
+                "title": "Version Control Integration",
                 "position": 2
               },
               {
-                "des": " We automate the process of deploying and managing infrastructure across different environments.",
+                "des": "Implement CI/CD pipelines to automatically provision, update, and deprovision infrastructure, speeding up release cycles and reducing manual effort.",
                 "id": "676e5bfbe0bbb25e4ee93339",
                 "serviceId": "676e5ae7e0bbb25e4ee93333",
-                "title": "Automated Provisioning",
+                "title": "Automated Deployments",
                 "position": 3
               },
               {
-                "des": " We ensure that development, staging, and production environments are consistent by using IaC.",
+                "des": "Ensure development, staging, and production environments are identical, preventing 'it works on my machine' issues and improving reliability.",
                 "id": "676e5c13e0bbb25e4ee9333a",
                 "serviceId": "676e5ae7e0bbb25e4ee93333",
                 "title": "Environment Consistency",
                 "position": 4
-              },
-              {
-                "des": "We implement security best practices in the infrastructure code to ensure compliance and protection.",
-                "id": "676e5c30e0bbb25e4ee9333b",
-                "serviceId": "676e5ae7e0bbb25e4ee93333",
-                "title": "Security Compliance",
-                "position": 5
-              },
-              {
-                "des": " We enable collaboration among development and operations teams, providing transparent access to infrastructure configurations.",
-                "id": "676e5c50e0bbb25e4ee9333c",
-                "serviceId": "676e5ae7e0bbb25e4ee93333",
-                "title": "Collaboration and Transparency",
-                "position": 6
-              },
-              {
-                "des": "We provide regular updates and patches to infrastructure configurations, ensuring your environment is secure and up-to-date.",
-                "id": "676e5c70e0bbb25e4ee9333d",
-                "serviceId": "676e5ae7e0bbb25e4ee93333",
-                "title": "Ongoing Maintenance and Updates",
-                "position": 7
               }
             ]
           },
           {
-            "description": "Microservices architecture involves designing applications as a collection of independently deployable, modular services. Each service runs in its own process, communicating via lightweight protocols such as REST or gRPC. This architecture promotes agility, scalability, and resilience, allowing businesses to rapidly deploy updates and optimize resource usage. By decoupling services, development teams can work concurrently, resulting in faster delivery cycles and easier debugging. Microservices also enable the use of diverse technologies for different components, tailored to specific needs. Our expertise in microservices architecture ensures robust applications that adapt seamlessly to evolving business demands.",
-            "imageUrl": "/assets/Microservices-Architecture.webp",
+            "oneLine": "We design and implement robust Microservices Architectures, breaking down complex applications into smaller, independent services...",
+            "imageUrl": "/assets/Services/Microservices Architecture-ser.webp",
             "id": "676e5b1ee0bbb25e4ee93334",
             "categoryId": "6769386151dcda17a0f93889",
             "title": "Microservices Architecture",
             "position": 2,
             "whatWeDo": [
               {
-                "des": "We design applications by breaking them into independent, loosely coupled services, enabling parallel development and streamlined scalability for your business needs.",
+                "des": "We identify distinct business capabilities and decompose your application into independent, loosely coupled services for enhanced agility and maintainability.",
                 "id": "676e5ca5e0bbb25e4ee9333e",
                 "serviceId": "676e5b1ee0bbb25e4ee93334",
-                "title": "Modular Service Design",
+                "title": "Modular Design",
                 "position": 1
               },
               {
                 "des": "We package services into lightweight containers using Docker, ensuring consistency across development, testing, and production environments.",
                 "id": "676e5cd5e0bbb25e4ee9333f",
                 "serviceId": "676e5b1ee0bbb25e4ee93334",
-                "title": "Containerization for Portability",
+                "title": "Containerization",
                 "position": 2
               },
               {
@@ -2181,676 +2069,515 @@
             ]
           },
           {
-            "description": "Containerization involves packaging applications and their dependencies into lightweight, portable containers. This technology ensures consistency across development, testing, and production environments, streamlining the deployment process. Containers enable faster scaling, efficient resource utilization, and reduced deployment errors. With tools like Docker, developers can encapsulate application code, runtime, and libraries, making it easier to manage updates and rollbacks. Our containerization expertise enhances productivity, improves portability, and enables rapid deployment for modern, cloud-native applications.",
-            "imageUrl": "/assets/Containerization.webp",
+            "oneLine": "We leverage containerization technologies like Docker and Kubernetes to package your applications and their dependencies into lightweight, portable units...",
+            "imageUrl": "/assets/Services/containerization-ser.webp",
             "id": "676e5b43e0bbb25e4ee93335",
             "categoryId": "6769386151dcda17a0f93889",
             "title": "Containerization",
             "position": 3,
             "whatWeDo": [
               {
-                "des": "We build containerized environments with all necessary dependencies, ensuring seamless portability and compatibility across platforms.",
+                "des": "We create optimized Docker images for your applications, bundling all necessary code, libraries, and configurations for consistent execution.",
                 "id": "676e5d4fe0bbb25e4ee93343",
                 "serviceId": "676e5b43e0bbb25e4ee93335",
-                "title": "Comprehensive Container Setup",
+                "title": "Docker Image Creation",
                 "position": 1
               },
               {
-                "des": "We orchestrate containerized applications ensuring automated scaling, fault tolerance, and optimized resource usage.",
+                "des": "We implement and manage Kubernetes clusters to automate the deployment, scaling, and management of your containerized applications efficiently.",
                 "id": "676e5d81e0bbb25e4ee93344",
                 "serviceId": "676e5b43e0bbb25e4ee93335",
-                "title": "Container Orchestration",
+                "title": "Container Orchestration (Kubernetes)",
                 "position": 2
               },
               {
-                "des": "We integrate containerization with CI/CD pipelines, enabling automated builds, testing, and deployments with minimal downtime.",
+                "des": "Containers provide isolated, consistent environments, eliminating compatibility issues between development, staging, and production stages.",
                 "id": "676e5d98e0bbb25e4ee93345",
                 "serviceId": "676e5b43e0bbb25e4ee93335",
-                "title": "Streamlined CI/CD Pipelines",
+                "title": "Environment Standardization",
                 "position": 3
               },
               {
-                "des": "We optimize resource utilization by running multiple containers on shared infrastructure, minimizing costs while maintaining performance.",
+                "des": "Implementing best practices for container security, including image scanning, network policies, and access control to protect your applications.",
                 "id": "676e5db3e0bbb25e4ee93346",
                 "serviceId": "676e5b43e0bbb25e4ee93335",
-                "title": "Efficient Resource Allocation",
+                "title": "Security Hardening",
                 "position": 4
-              },
-              {
-                "des": "We implement robust security measures and monitoring tools, ensuring secure and high-performing containerized applications.",
-                "id": "676e5dd0e0bbb25e4ee93347",
-                "serviceId": "676e5b43e0bbb25e4ee93335",
-                "title": "Security and Monitoring",
-                "position": 5
               }
             ]
           },
           {
-            "description": "Web servers are crucial for hosting and delivering web applications to users. They handle HTTP requests, manage static and dynamic content delivery, and ensure secure and efficient data exchange between users and applications. Proper web server management ensures high performance, reliability, and security for your applications. Our expertise includes configuring, optimizing, and maintaining web servers tailored to meet the needs of your business. We ensure seamless integration with your applications, enabling fast, secure, and scalable delivery of content to users.",
-            "imageUrl": "/assets/Web-Server-Management.webp",
+            "oneLine": "We provide expert Web Server Management, ensuring your applications are always available, secure, and performing optimally...",
+            "imageUrl": "/assets/Services/Web Server Management-ser.webp",
             "id": "676e5b60e0bbb25e4ee93336",
             "categoryId": "6769386151dcda17a0f93889",
             "title": "Web Server Management",
             "position": 4,
             "whatWeDo": [
               {
-                "des": "We configure web servers to suit your application’s needs, optimizing for performance, security, and scalability while minimizing resource usage.",
+                "des": "We set up and configure popular web servers like Nginx, Apache, and IIS, tailoring them for optimal performance and security specific to your application.",
                 "id": "676e5e44e0bbb25e4ee9334a",
                 "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Custom Web Server Configuration",
+                "title": "Installation & Configuration",
                 "position": 1
               },
               {
-                "des": "We set up load balancers with web servers to distribute traffic evenly, enhancing reliability and ensuring consistent user experience under high demand",
+                "des": "Implementing advanced caching strategies, load balancing, and connection optimizations to ensure your web servers handle traffic efficiently and rapidly.",
                 "id": "676e5e9ee0bbb25e4ee9334b",
                 "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Load Balancing Integration",
+                "title": "Performance Tuning",
                 "position": 2
               },
               {
-                "des": "We secure your web servers with SSL/TLS certificates, ensuring encrypted communication and protecting user data against unauthorized access",
+                "des": "Applying robust security measures, including SSL/TLS configuration, firewall rules, and regular vulnerability patching, to protect your web presence from threats.",
                 "id": "676e5eafe0bbb25e4ee9334c",
                 "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "SSL/TLS Implementation",
+                "title": "Security Hardening",
                 "position": 3
               },
               {
-                "des": "We continuously monitor server performance, adjusting configurations and optimizing resources to maintain peak efficiency and uptime.",
+                "des": "Continuous monitoring of server health, resource usage, and application logs with automated alerts for rapid issue detection and resolution.",
                 "id": "676e5ed1e0bbb25e4ee9334d",
                 "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Monitoring and Optimization",
+                "title": "Proactive Monitoring & Alerting",
                 "position": 4
-              },
-              {
-                "des": "We implement robust backup and recovery strategies, ensuring data and service availability in case of unexpected failures or incidents",
-                "id": "676e5ef4e0bbb25e4ee9334e",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Backup and Disaster Recovery",
-                "position": 5
               }
             ]
           },
           {
-            "description": "Our Continuous Integration and Deployment (CI/CD) services ensure the efficient and automated flow of code from development to production. We set up robust CI/CD pipelines that automatically test, build, and deploy applications, enabling faster development cycles and reduced manual intervention. We ensure that new code changes are seamlessly integrated and deployed with minimal downtime. This allows teams to focus more on development while maintaining consistent and high-quality releases, enhancing productivity, and delivering software faster to the end user.",
-            "imageUrl": "/assets/Continuous-Integration-and-Deployment(CI-CD).webp",
-            "id": "676e5b60e0bbb25e4ee93336",
+            "oneLine": "We implement robust CI/CD pipelines, automating the entire software delivery process from code commit to production deployment...",
+            "imageUrl": "/assets/Services/Continuous Integration and Deployment (CICD) -ser.webp",
+            "id": "676e5b7de0bbb25e4ee93337",
             "categoryId": "6769386151dcda17a0f93889",
-            "title": "Continuous Integration and Deployment (CI or CD)",
-            "position": 4,
+            "title": "Continuous Integration and Deployment (CI/CD)",
+            "position": 5,
             "whatWeDo": [
               {
-                "des": "We integrate automated build and testing pipelines to ensure that code is built, tested, and verified on every change.",
+                "des": "We architect end-to-end CI/CD pipelines tailored to your development workflow, automating build, test, and deployment stages effectively.",
                 "id": "676e5e44e0bbb25e4ee9334a",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Automated Build and Testing",
+                "serviceId": "676e5b7de0bbb25e4ee93337",
+                "title": "Pipeline Design",
                 "position": 1
               },
               {
-                "des": "We automate deployment processes, allowing for smooth and consistent releases across multiple environments with minimal downtime.",
+                "des": "Integrate automated unit, integration, and functional tests into the pipeline, ensuring immediate feedback on code quality and functionality.",
                 "id": "676e5e9ee0bbb25e4ee9334b",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Seamless Deployment",
+                "serviceId": "676e5b7de0bbb25e4ee93337",
+                "title": "Automated Testing Integration",
                 "position": 2
               },
               {
-                "des": "Our CI/CD pipelines integrate with version control systems to manage source code and trigger build pipelines.",
+                "des": "Connect pipelines directly to your version control system (Git), triggering builds and tests automatically upon every code commit for efficiency.",
                 "id": "676e5eafe0bbb25e4ee9334c",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
+                "serviceId": "676e5b7de0bbb25e4ee93337",
                 "title": "Version Control Integration",
                 "position": 3
               },
               {
-                "des": "We set up monitoring and alert systems to detect issues early in the deployment process, allowing for quick resolution.",
+                "des": "Implement advanced deployment strategies like blue-green, canary, or rolling deployments to minimize downtime and ensure smooth, risk-free releases.",
                 "id": "676e5ed1e0bbb25e4ee9334d",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Monitoring and Alerts",
+                "serviceId": "676e5b7de0bbb25e4ee93337",
+                "title": "Deployment Strategies",
                 "position": 4
-              },
-              {
-                "des": "We continuously refine and optimize our CI/CD pipelines, ensuring faster and more efficient delivery of high-quality software.",
-                "id": "676e5ef4e0bbb25e4ee9334e",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Iterative Improvement",
-                "position": 5
               }
             ]
           },
           {
-            "description": " Server Configuration and Management involves setting up, managing, and optimizing servers to ensure they are secure, reliable, and high-performing. We configure servers based on specific needs and industry best practices to meet scalability and security requirements. From web servers to application servers, we handle tasks such as server provisioning, patching, load balancing, and performance tuning. We use tools like Ansible, Chef, and Puppet to automate server configuration, ensuring that businesses can scale effectively and maintain a secure and optimized infrastructure.",
-            "imageUrl": "/assets/Server-Configuration-and-Management.webp",
-            "id": "676e5b60e0bbb25e4ee93336",
+            "oneLine": "We provide comprehensive server configuration and management services, ensuring your physical and virtual servers are optimally set up, secure, and consistently maintained...",
+            "imageUrl": "/assets/Services/serverconfiguratureanmanagement-sev.webp",
+            "id": "676e5b9ae0bbb25e4ee93338",
             "categoryId": "6769386151dcda17a0f93889",
             "title": "Server Configuration and Management",
-            "position": 4,
+            "position": 6,
             "whatWeDo": [
               {
-                "des": "We configure servers according to best practices for security, performance, and scalability, ensuring optimal resource allocation",
+                "des": "Configure servers from scratch, applying security best practices, access controls, and necessary services for a secure and optimized foundation.",
                 "id": "676e5e44e0bbb25e4ee9334a",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Initial Setup and Configuration",
-                "position": 0
-              },
-              {
-                "des": "We implement industry-standard security measures, including firewalls, encryption, and access controls, to protect your servers from potential threats.",
-                "id": "676e5e44e0bbb25e4ee9334a",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Security Hardening",
+                "serviceId": "676e5b9ae0bbb25e4ee93338",
+                "title": "Initial Setup & Hardening",
                 "position": 1
               },
               {
-                "des": "We automate deployment processes, allowing for smooth and consistent releases across multiple environments with minimal downtime.",
+                "des": "Utilize tools like Ansible, Puppet, or Chef to automate server configuration, ensuring consistency and preventing configuration drift across your fleet.",
                 "id": "676e5e9ee0bbb25e4ee9334b",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Configuration Management",
-                "position": 3
-              },
-              {
-                "des": " We regularly update and patch servers to protect them from vulnerabilities and maintain system security.",
-                "id": "676e5ed1e0bbb25e4ee9334d",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Security Patching",
-                "position": 4
-              },
-              {
-                "des": "We regularly optimize server configurations to improve performance, reduce latency, and handle increasing traffic demands.",
-                "id": "676e5ef4e0bbb25e4ee9334e",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Performance Optimization and Maintenance",
-                "position": 5
-              },
-              {
-                "des": "We implement robust backup and disaster recovery strategies to ensure business continuity in case of server failures or data loss.",
-                "id": "676e5ef4e0bbb25e4ee9334e",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Backup and Recovery",
-                "position": 6
-              },
-              {
-                "des": "We set up automated monitoring systems to track server health, resource usage, and performance metrics.",
-                "id": "676e5ef4e0bbb25e4ee9334e",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Automated Monitoring and Alerts",
-                "position": 7
-              }
-            ]
-          },
-          {
-            "description": "Cloud Infrastructure Management focuses on designing, deploying, and managing cloud environments to support scalable applications. We help businesses move to the cloud, manage cloud resources, and optimize their infrastructure for cost and performance. Our team ensures that your cloud infrastructure is optimized for high availability, security, and performance. With cloud-native services and automation tools, we enable businesses to scale efficiently and maintain a competitive edge while minimizing costs associated with traditional infrastructure management.",
-            "imageUrl": "/assets/Cloud-Infrastructure-Management.webp",
-            "id": "676e5b60e0bbb25e4ee93336",
-            "categoryId": "6769386151dcda17a0f93889",
-            "title": "Cloud Infrastructure Management",
-            "position": 4,
-            "whatWeDo": [
-              {
-                "des": "We assess your business needs and design a cloud strategy that aligns with your goals and budget",
-                "id": "676e5e44e0bbb25e4ee9334a",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Cloud Strategy",
-                "position": 1
-              },
-              {
-                "des": " We provision cloud resources on platforms ensuring scalability and flexibility to meet growing business demands.",
-                "id": "676e5e9ee0bbb25e4ee9334b",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Cloud Resource Provisioning",
+                "serviceId": "676e5b9ae0bbb25e4ee93338",
+                "title": "Automated Configuration Management",
                 "position": 2
               },
               {
-                "des": "We monitor cloud infrastructure to ensure optimal performance, security, and resource usage, with real-time alerts for any issues.",
+                "des": "Implement robust patching strategies to keep operating systems and installed software up-to-date, protecting against known vulnerabilities and improving stability.",
                 "id": "676e5eafe0bbb25e4ee9334c",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Cloud Monitoring",
+                "serviceId": "676e5b9ae0bbb25e4ee93338",
+                "title": "Patch Management",
                 "position": 3
               },
               {
-                "des": "We implement cost optimization strategies, including resource allocation and scaling policies, to reduce cloud expenses without sacrificing performance.",
+                "des": "Design and implement comprehensive backup solutions and disaster recovery plans to safeguard your data and ensure business continuity.",
                 "id": "676e5ed1e0bbb25e4ee9334d",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Cost Optimization",
+                "serviceId": "676e5b9ae0bbb25e4ee93338",
+                "title": "Backup & Disaster Recovery",
                 "position": 4
+              }
+            ]
+          },
+          {
+            "oneLine": "We expertly manage your cloud infrastructure across leading providers like AWS, Azure, and Google Cloud, ensuring optimal performance, cost efficiency, and robust security...",
+            "imageUrl": "/assets/Services/Cloud Infrastructure Management-ser.webp",
+            "id": "676e5bb7e0bbb25e4ee93339",
+            "categoryId": "6769386151dcda17a0f93889",
+            "title": "Cloud Infrastructure Management",
+            "position": 7,
+            "whatWeDo": [
+              {
+                "des": "We strategically provision and configure cloud resources (EC2, S3, RDS, etc.), continuously optimizing them for performance and cost efficiency.",
+                "id": "676e5e44e0bbb25e4ee9334a",
+                "serviceId": "676e5bb7e0bbb25e4ee93339",
+                "title": "Resource Provisioning & Optimization",
+                "position": 1
               },
               {
-                "des": "We design cloud infrastructures with high availability, leveraging multiple availability zones to ensure your applications are always accessible.",
-                "id": "676e5ef4e0bbb25e4ee9334e",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "High Availability and Redundancy",
-                "position": 5
+                "des": "Implementing cloud cost management strategies, budgeting, and governance policies to prevent overspending and ensure efficient resource utilization.",
+                "id": "676e5e9ee0bbb25e4ee9334b",
+                "serviceId": "676e5bb7e0bbb25e4ee93339",
+                "title": "Cost Management & Governance",
+                "position": 2
               },
               {
-                "des": "We ensure that your cloud environment complies with industry standards and regulations, using encryption, access control, and monitoring to safeguard your data.",
-                "id": "676e5ef4e0bbb25e4ee9334e",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Security and Compliance",
-                "position": 6
+                "des": "Establishing robust cloud security frameworks, access controls, and compliance adherence to protect data and meet regulatory requirements across your cloud footprint.",
+                "id": "676e5eafe0bbb25e4ee9334c",
+                "serviceId": "676e5bb7e0bbb25e4ee93339",
+                "title": "Security & Compliance",
+                "position": 3
               },
               {
-                "des": " We do continuous monitoring and incident response to quickly identify and mitigate any issues affecting your cloud infrastructure and ensure optimal performance, security, and resource usage, with real-time alerts for any issues.",
-                "id": "676e5ef4e0bbb25e4ee9334e",
-                "serviceId": "676e5b60e0bbb25e4ee93336",
-                "title": "Proactive Monitoring and Incident Response",
-                "position": 7
+                "des": "Deploying comprehensive monitoring tools to track cloud resource health, performance, and usage, with automated alerts for proactive issue resolution.",
+                "id": "676e5ed1e0bbb25e4ee9334d",
+                "serviceId": "676e5bb7e0bbb25e4ee93339",
+                "title": "Monitoring & Alerting",
+                "position": 4
               }
             ]
           }
         ]
       },
       {
-        "description": "Our Data and Analytics Services help businesses harness the power of data for better decision-making. We provide efficient data management, analysis, and visualization using advanced tools and technologies. From database management to big data solutions and BI, we ensure businesses can access and interpret data effectively. Our insights drive competitive advantage and operational optimization.",
-        "imageUrl": "/assets/Data-Analytics-Services.webp",
+        "description": "Our Data and Analytics Services empower businesses to transform raw data into actionable insights, driving informed decision-making and strategic growth...",
+        "imageUrl": "/assets/Services/Data and Analytics Services-ser.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
         "id": "6769388d51dcda17a0f9388a",
         "name": "Data and Analytics Services",
         "position": 4,
         "services": [
           {
-            "description": "Database Management involves designing, implementing, and maintaining databases that are secure, efficient, and scalable. We work with a variety of database technologies ensuring data integrity, performance, and availability. Our team handles everything from data modeling and schema design to query optimization and backup strategies. By implementing best practices in database administration, we ensure that your databases can support growing amounts of data while maintaining security, compliance, and high performance.",
-            "imageUrl": "/assets/Database-Management.webp",
+            "oneLine": "We provide comprehensive database management services, ensuring your data is securely stored, efficiently organized, and readily accessible for all your business needs...",
+            "imageUrl": "/assets/Services/Database Management-ser.webp",
             "id": "676e5f95e0bbb25e4ee9334f",
             "categoryId": "6769388d51dcda17a0f9388a",
             "title": "Database Management",
             "position": 1,
             "whatWeDo": [
               {
-                "des": "We design efficient, scalable database architectures that ensure your data is organized and optimized for quick access that meet business requirements and handle large volumes of data.",
+                "des": "We architect scalable and efficient database solutions tailored to your specific data storage, retrieval, and processing requirements.",
                 "id": "676e60bbe0bbb25e4ee93351",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Database Design and Architecture",
+                "title": "Database Design & Implementation",
                 "position": 1
               },
               {
-                "des": " We implement mechanisms to ensure data consistency, accuracy, and integrity across systems.",
+                "des": "Proactively monitor and fine-tune database queries, indexing, and configurations to ensure rapid data access and optimal application performance.",
                 "id": "676e6144e0bbb25e4ee93352",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Data Integrity",
+                "title": "Performance Optimization",
                 "position": 2
               },
               {
-                "des": "We optimize database queries to improve performance and reduce load times for users and optimize database performance by indexing, partitioning, and query optimization to ensure quick data retrieval and scalability.",
+                "des": "Implement robust security measures, including encryption, access controls, and regular audits, to protect sensitive data and meet regulatory standards.",
                 "id": "676e615ee0bbb25e4ee93353",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Database & Query Optimization",
+                "title": "Security & Compliance",
                 "position": 3
               },
               {
-                "des": "We establish reliable backup and disaster recovery procedures to protect against data loss and recoverable in case of failure to ensure business continuity.",
+                "des": "Establish automated backup strategies and disaster recovery plans, ensuring data resilience and minimizing downtime in case of unforeseen events.",
                 "id": "676e617fe0bbb25e4ee93354",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
                 "title": "Backup & Recovery",
                 "position": 4
-              },
-              {
-                "des": " We implement database security measures such as encryption, role-based access control, and data masking to protect sensitive information and to prevent unauthorized access and ensure compliance with relevant regulations.",
-                "id": "676e619ae0bbb25e4ee93355",
-                "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Security & Compliance",
-                "position": 5
-              },
-              {
-                "des": " We continuously monitor database performance and provide tuning to address any bottlenecks or issues that arise.",
-                "id": "676e61b3e0bbb25e4ee93356",
-                "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Performance Monitoring",
-                "position": 6
               }
             ]
           },
           {
-            "description": "Data Visualization transforms complex data into clear, visual representations that make it easier to understand and analyze. We use tools like Tableau, Power BI, and D3.js to create interactive dashboards, reports, and visualizations that highlight key insights. By presenting data in a visual format, businesses can quickly identify trends, patterns, and anomalies, leading to more informed decisions. Our team ensures that the visualizations are tailored to the specific needs of the business, enabling stakeholders to explore data and gain actionable insights.",
-            "imageUrl": "/assets/Data-Visualization.webp",
+            "oneLine": "We transform complex datasets into clear, intuitive, and interactive visual representations, enabling stakeholders to quickly grasp key insights...",
+            "imageUrl": "/assets/Services/Data Visualization-ser.webp",
             "id": "676e607de0bbb25e4ee93350",
             "categoryId": "6769388d51dcda17a0f9388a",
             "title": "Data Visualization",
             "position": 2,
             "whatWeDo": [
               {
-                "des": "We create custom dashboards that provide real-time insights into your data, making it accessible and actionable for stakeholders.",
+                "des": "We create visualizations tailored to your audience's needs, ensuring the most relevant information is highlighted for effective communication.",
                 "id": "676e625ce0bbb25e4ee93357",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Custom Dashboards",
+                "title": "Audience-Centric Design",
                 "position": 1
               },
               {
-                "des": "Our data visualizations are interactive, allowing users to explore different aspects of the data and make informed decisions.",
+                "des": "Leveraging powerful tools like Tableau, Power BI, and D3.js, we develop dynamic and interactive dashboards and reports for diverse data sets.",
                 "id": "676e628fe0bbb25e4ee93358",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Interactive Visuals",
+                "title": "Tool Expertise",
                 "position": 2
               },
               {
-                "des": "We craft compelling data stories that highlight key trends, patterns, and insights to drive decision-making.",
+                "des": "We focus on crafting compelling narratives from your data, making complex information accessible and actionable through visual storytelling techniques.",
                 "id": "676e62b9e0bbb25e4ee93359",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Data Storytelling",
+                "title": "Storytelling with Data",
                 "position": 3
               },
               {
-                "des": "Our visualizations are designed to be compatible across various devices and platforms, ensuring accessibility.",
+                "des": "Collaborating closely with you, we refine visualizations based on feedback to ensure they perfectly address your analytical questions and insights requirements.",
                 "id": "676e62d6e0bbb25e4ee9335a",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Cross-Platform Compatibility",
+                "title": "Iterative Feedback",
                 "position": 4
-              },
-              {
-                "des": "We integrate data from multiple sources into a single visualization, providing a holistic view of your business performance.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Data Integration",
-                "position": 5
               }
             ]
           },
           {
-            "description": "Business Intelligence (BI) Tools help businesses gather, process, and analyze data to make better decisions. We integrate powerful BI tools to provide businesses with actionable insights. These tools enable organizations to track KPIs, perform predictive analytics, and visualize business performance in real-time. With our BI solutions, businesses can create custom reports, detect trends, and monitor operational efficiency, ensuring that decision-makers have access to accurate and timely data to optimize performance and drive growth.",
-            "imageUrl": "/assets/Business-Intelligence-Tools.webp",
-            "id": "676e607de0bbb25e4ee93350",
+            "oneLine": "We implement and optimize powerful Business Intelligence tools, integrating diverse data sources to provide comprehensive insights into business performance...",
+            "imageUrl": "/assets/Services/Business Intelligence (BI) Tools-ser.webp",
+            "id": "676e609be0bbb25e4ee93351",
             "categoryId": "6769388d51dcda17a0f9388a",
             "title": "Business Intelligence (BI) Tools",
-            "position": 2,
+            "position": 3,
             "whatWeDo": [
               {
-                "des": "We integrate popular BI tools with your existing data sources for real-time reporting.",
+                "des": "We connect and consolidate data from various disparate systems (CRM, ERP, databases) into a unified platform for holistic analysis.",
                 "id": "676e625ce0bbb25e4ee93357",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "BI Tool Integration",
+                "serviceId": "676e609be0bbb25e4ee93351",
+                "title": "Data Source Integration",
                 "position": 1
               },
               {
-                "des": "We develop custom reports tailored to your business needs, focusing on KPIs and critical metrics.",
+                "des": "Design and build tailored dashboards and reports using leading BI tools, presenting critical metrics relevant to your business objectives.",
                 "id": "676e628fe0bbb25e4ee93358",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Custom Reporting",
+                "serviceId": "676e609be0bbb25e4ee93351",
+                "title": "Custom Dashboard Development",
                 "position": 2
               },
               {
-                "des": "We implement predictive analytics to help you forecast trends and plan for future growth.",
+                "des": "Provide comprehensive training for your teams to effectively utilize BI tools, ensuring maximum adoption and proficiency in data-driven decision-making.",
                 "id": "676e62b9e0bbb25e4ee93359",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Predictive Analytics",
+                "serviceId": "676e609be0bbb25e4ee93351",
+                "title": "User Training & Support",
                 "position": 3
               },
               {
-                "des": " We ensure that data used in BI tools is accurate, consistent, and compliant with relevant regulations",
+                "des": "Optimize BI tool configurations and data models for rapid query execution and seamless user experience, even with large datasets.",
                 "id": "676e62d6e0bbb25e4ee9335a",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Data Governance",
+                "serviceId": "676e609be0bbb25e4ee93351",
+                "title": "Performance Tuning",
                 "position": 4
-              },
-              {
-                "des": " We provide actionable insights based on data analysis, helping businesses make data-driven decisions.",
-                "id": "676e62d6e0bbb25e4ee9335a",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Actionable Insights",
-                "position": 5
               }
             ]
           }
         ]
       },
       {
-        "description": "Our Maintenance and Support Services ensure your applications remain smooth and up-to-date. We handle bug fixes, performance optimization, and system availability, providing timely updates and proactive monitoring. Our team resolves issues quickly to minimize downtime and enhance user satisfaction. Focus on innovation while we manage the technical maintenance, helping your business stay competitive and efficient",
-        "imageUrl": "/assets/Maintenance-Support-Services.webp",
+        "description": "Our comprehensive Maintenance and Support Services ensure the continuous, optimal operation of your digital assets. We provide proactive monitoring, rapid incident response, and continuous optimization...",
+        "imageUrl": "/assets/Services/Maintenance and Support Services-ser.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
-        "id": "6769388d51dcda17a0f9388a",
+        "id": "676938b951dcda17a0f9388b",
         "name": "Maintenance and Support Services",
-        "position": 4,
+        "position": 5,
         "services": [
           {
-            "description": "Application Support services ensure that your applications function seamlessly and meet user expectations. Our team provides round-the-clock support to troubleshoot issues, resolve bugs, and address performance problems. From application upgrades to bug fixes, we ensure that your applications run smoothly, allowing your users to have an optimal experience. We work proactively to monitor application performance and provide timely updates, helping businesses maintain application reliability and enhance customer satisfaction.",
-            "imageUrl": "/assets/Application-Support.webp",
+            "oneLine": "We offer dedicated application support, providing timely assistance and expert guidance to resolve user queries, troubleshoot issues...",
+            "imageUrl": "/assets/Services/Application Support-ser.webp",
             "id": "676e5f95e0bbb25e4ee9334f",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "categoryId": "676938b951dcda17a0f9388b",
             "title": "Application Support",
             "position": 1,
             "whatWeDo": [
               {
-                "des": "We quickly identify and resolve issues affecting the application’s functionality and user experience.",
+                "des": "Implement a multi-tiered support system to efficiently address issues, from basic user inquiries to complex technical troubleshooting.",
                 "id": "676e60bbe0bbb25e4ee93351",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Issue Resolution",
+                "title": "Tiered Support Structure",
                 "position": 1
               },
               {
-                "des": "We continuously monitor the application’s performance to ensure optimal functioning and prevent downtime",
+                "des": "Our team is equipped for quick diagnosis and resolution of critical application issues, minimizing downtime and business impact.",
                 "id": "676e6144e0bbb25e4ee93352",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Performance Monitoring",
+                "title": "Rapid Incident Response",
                 "position": 2
               },
               {
-                "des": " We regularly update applications and apply security updates and patches to fix bugs and protect applications from vulnerabilities to ensure they perform as expected.",
+                "des": "Create and maintain comprehensive documentation and FAQs, enabling users to find solutions independently and reducing support ticket volume.",
                 "id": "676e615ee0bbb25e4ee93353",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Bug Fixes and Security Patches",
+                "title": "Knowledge Base Development",
                 "position": 3
               },
               {
-                "des": " We offer user support through various channels to resolve queries and improve the user experience.",
+                "des": "Offer multiple channels for support requests, including email, phone, and ticketing systems, for convenient and accessible assistance.",
                 "id": "676e617fe0bbb25e4ee93354",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "User Support",
+                "title": "Dedicated Support Channels",
                 "position": 4
-              },
-              {
-                "des": "We focus on continuous improvement by gathering feedback and implementing necessary updates and enhancements",
-                "id": "676e619ae0bbb25e4ee93355",
-                "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Continuous Improvement",
-                "position": 5
-              },
-              {
-                "des": "We provide periodic updates and enhancements to ensure your applications stay current with new technologies and user needs.",
-                "id": "676e61b3e0bbb25e4ee93356",
-                "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Application Enhancements",
-                "position": 6
               }
             ]
           },
           {
-            "description": "Bug Fixes and Updates are an essential part of maintaining application functionality. Our team ensures that any bugs or issues are quickly addressed and fixed, minimizing disruptions to the user experience. We also implement updates to improve performance, enhance features, and address security vulnerabilities. Our approach to bug fixing and updates is focused on maintaining system stability and improving overall user satisfaction. By staying proactive with maintenance, we ensure that your applications remain reliable and continue to meet user needs effectively.",
-            "imageUrl": "/assets/Bug-Fixes-and-Updates.webp",
+            "oneLine": "We proactively identify, address, and resolve software bugs while delivering timely updates, ensuring your applications remain secure, stable, and current...",
+            "imageUrl": "/assets/Services/Bug Fixes and Updates-ser.webp",
             "id": "676e607de0bbb25e4ee93350",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "categoryId": "676938b951dcda17a0f9388b",
             "title": "Bug Fixes and Updates",
             "position": 2,
             "whatWeDo": [
               {
-                "des": "We use automated testing and monitoring tools to detect bugs before they impact users.",
+                "des": "Utilize robust systems to log, track, and prioritize bugs based on severity and impact, ensuring critical issues are addressed first.",
                 "id": "676e625ce0bbb25e4ee93357",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Proactive Bug Identification",
+                "title": "Issue Tracking & Prioritization",
                 "position": 1
               },
               {
-                "des": "We prioritize critical bugs and address them swiftly to minimize impact on your users.",
+                "des": "Our experienced developers meticulously diagnose root causes of bugs and implement effective, sustainable code fixes.",
                 "id": "676e628fe0bbb25e4ee93358",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Prioritization and Resolution",
+                "title": "Code Diagnosis & Remediation",
                 "position": 2
               },
               {
-                "des": " We refactor code to eliminate bugs, enhance performance, and improve code readability",
+                "des": "Implement comprehensive testing procedures for every fix and update, ensuring stability and preventing the introduction of new issues.",
                 "id": "676e62b9e0bbb25e4ee93359",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Code Refactoring",
+                "title": "Thorough Testing",
                 "position": 3
               },
               {
-                "des": "We schedule regular updates to keep applications up to date with new features and improvements.",
+                "des": "Plan and execute updates efficiently, minimizing disruption and ensuring smooth deployment of new features and patches.",
                 "id": "676e62d6e0bbb25e4ee9335a",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Routine Updates",
+                "title": "Scheduled Release Management",
                 "position": 4
-              },
-              {
-                "des": "We apply security patches to address vulnerabilities and ensure the application is secure.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Security Patches",
-                "position": 5
-              },
-              {
-                "des": " We ensure that updates are compatible with existing systems and do not cause new issues",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Compatibility Testing",
-                "position": 5
-              },
-              {
-                "des": "We use version control systems to manage code changes, ensuring smooth updates and rollbacks if necessary.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Version Control",
-                "position": 5
               }
             ]
           },
           {
-            "description": "Performance Optimization focuses on improving the speed, responsiveness, and overall performance of applications. Our team identifies bottlenecks, optimizes code, and implements best practices to ensure that your applications run smoothly under heavy traffic and resource constraints. Whether it’s optimizing databases, improving front-end performance, or tuning back-end servers, we ensure that your users experience minimal delays and maximum efficiency. We also monitor application performance over time and make adjustments as needed to maintain a high standard of performance.",
-            "imageUrl": "/assets/Performance-Optimization.webp",
-            "id": "676e607de0bbb25e4ee93350",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "oneLine": "We fine-tune your applications and infrastructure to achieve peak performance, enhancing speed, responsiveness, and efficiency...",
+            "imageUrl": "/assets/Services/Performance Optimization-ser.webp",
+            "id": "676e609be0bbb25e4ee93351",
+            "categoryId": "676938b951dcda17a0f9388b",
             "title": "Performance Optimization",
-            "position": 2,
+            "position": 3,
             "whatWeDo": [
               {
-                "des": "We review and optimize code to ensure efficient resource use and faster execution.",
+                "des": "Conduct in-depth analysis of your application code, database queries, and infrastructure configurations to pinpoint performance bottlenecks.",
                 "id": "676e625ce0bbb25e4ee93357",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Code Optimization",
+                "serviceId": "676e609be0bbb25e4ee93351",
+                "title": "Performance Audits",
                 "position": 1
               },
               {
-                "des": "We optimize database queries and indexing to reduce latency and improve data retrieval times.",
+                "des": "Optimize application code for efficiency, reducing resource consumption and accelerating execution times through best coding practices.",
                 "id": "676e628fe0bbb25e4ee93358",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Database Tuning:",
+                "serviceId": "676e609be0bbb25e4ee93351",
+                "title": "Code Refactoring",
                 "position": 2
               },
               {
-                "des": "We enhance user interfaces for faster load times and smoother interactions.",
+                "des": "Implement advanced indexing, query optimization, and caching strategies to enhance database response times and throughput significantly.",
                 "id": "676e62b9e0bbb25e4ee93359",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Front-End Improvements",
+                "serviceId": "676e609be0bbb25e4ee93351",
+                "title": "Database Tuning",
                 "position": 3
               },
               {
-                "des": " We optimize server configurations and APIs to ensure fast data processing and scalability.",
+                "des": "Recommend and implement scalable infrastructure solutions, including load balancing and auto-scaling, to handle variable traffic loads effectively.",
                 "id": "676e62d6e0bbb25e4ee9335a",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Backend Optimization",
+                "serviceId": "676e609be0bbb25e4ee93351",
+                "title": "Infrastructure Scaling",
                 "position": 4
-              },
-              {
-                "des": " We implement real-time performance monitoring to track the health of your applications and identify performance bottlenecks.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Performance Monitoring",
-                "position": 5
-              },
-              {
-                "des": " We implement real-time performance monitoring to track the health of your applications and identify performance bottlenecks.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Load Testing",
-                "position": 5
-              },
-              {
-                "des": "We implement caching mechanisms to store frequently accessed data, reducing load times and improving responsiveness.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Caching Strategies",
-                "position": 5
-              },
-              {
-                "des": "We design scalable infrastructure and solutions that grow with your business, ensuring consistent performance even as demands increase.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Scalability Improvements",
-                "position": 5
               }
             ]
           },
           {
-            "description": "Server Monitoring and Maintenance ensures the health, security, and performance of your server infrastructure. We provide continuous monitoring of server metrics like CPU usage, memory, and disk space to detect potential issues before they cause system failures. Our team handles routine maintenance tasks such as software updates, patches, and backups to ensure servers remain secure and efficient. With our monitoring services, businesses can reduce downtime, improve system reliability, and ensure that their server infrastructure supports growth without interruptions.",
-            "imageUrl": "/assets/Server-Monitoring-and-Maintenance.webp",
-            "id": "676e607de0bbb25e4ee93350",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "oneLine": "We provide vigilant server monitoring and proactive maintenance, ensuring the continuous health, security, and optimal performance of your server infrastructure...",
+            "imageUrl": "/assets/Services/Server Monitoring and Maintenance-ser.webp",
+            "id": "676e60b9e0bbb25e4ee93352",
+            "categoryId": "676938b951dcda17a0f9388b",
             "title": "Server Monitoring and Maintenance",
-            "position": 2,
+            "position": 4,
             "whatWeDo": [
               {
-                "des": "We analyze server performance to identify potential bottlenecks and optimize resource allocation.",
+                "des": "Implement continuous monitoring of server health, resource utilization (CPU, RAM, disk), network traffic, and application logs with automated alerts.",
                 "id": "676e625ce0bbb25e4ee93357",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Performance Analytics",
+                "serviceId": "676e60b9e0bbb25e4ee93352",
+                "title": "24/7 Proactive Monitoring",
                 "position": 1
               },
               {
-                "des": "We apply regular software updates and security patches to maintain system stability and security.",
+                "des": "Conduct regular updates, patch management, and system health checks during off-peak hours to minimize disruption and ensure system integrity.",
                 "id": "676e628fe0bbb25e4ee93358",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Routine Patches & Updates",
+                "serviceId": "676e60b9e0bbb25e4ee93352",
+                "title": "Scheduled Maintenance",
                 "position": 2
               },
               {
-                "des": " We set up automated alerts to notify your team of any server performance issues, allowing for immediate action.",
+                "des": "Perform periodic security scans, vulnerability assessments, and apply hardening measures to protect your servers from cyber threats.",
                 "id": "676e62b9e0bbb25e4ee93359",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Automated Alerts",
+                "serviceId": "676e60b9e0bbb25e4ee93352",
+                "title": "Security Audits & Hardening",
                 "position": 3
               },
               {
-                "des": "We fine-tune server configurations, updating software and managing resources to enhance performance and prevent bottlenecks",
+                "des": "Fine-tune server configurations, services, and network settings to ensure maximum efficiency and responsiveness for hosted applications.",
                 "id": "676e62d6e0bbb25e4ee9335a",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Server Optimization",
+                "serviceId": "676e60b9e0bbb25e4ee93352",
+                "title": "Performance Optimization",
                 "position": 4
-              },
-              {
-                "des": "We implement and test backup solutions regularly to ensure that your server data is secure and can be restored in the event of a disaster.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Backup and Recovery",
-                "position": 5
               }
             ]
           }
         ]
       },
       {
-        "description": "Our Quality Assurance (QA) and Testing Services ensure robust, secure applications that meet the highest standards. We perform functional, performance, and security testing to guarantee a seamless user experience. By applying industry best practices, we identify and fix issues before deployment, reducing defects and ensuring your software performs as expected in real-world scenarios.",
+        "description": "Our Quality Assurance (QA) and Testing Services ensure robust, secure applications that meet the highest standards. We perform functional, performance, and security testing...",
         "imageUrl": "/assets/Quality-Assurance(QA).webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
-        "id": "6769388d51dcda17a0f9388a",
+        "id": "676938d751dcda17a0f9388c",
         "name": "Quality Assurance (QA) and Testing Services",
-        "position": 4,
+        "position": 6,
         "services": [
           {
-            "description": "Functional Testing ensures that all features of an application work as intended. Our team tests the functionality of each feature to ensure it performs as expected under different conditions. We identify and address any discrepancies or defects, ensuring that the application meets functional requirements. Functional testing includes verifying that each feature works properly, the user interface functions smoothly, and the system behaves correctly across various devices and platforms.",
+            "oneLine": "Functional Testing ensures that all features of an application work as intended. Our team tests the functionality of each feature to ensure it performs as expected...",
             "imageUrl": "/assets/Functional-Testing.webp",
             "id": "676e5f95e0bbb25e4ee9334f",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "categoryId": "676938d751dcda17a0f9388c",
             "title": "Functional Testing",
             "position": 1,
             "whatWeDo": [
               {
-                "des": "We thoroughly analyze your application’s requirements to design test cases that cover all functional aspects of the product",
+                "des": "We thoroughly analyze your application’s requirements to design test cases that cover all functional aspects of the product.",
                 "id": "676e60bbe0bbb25e4ee93351",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
                 "title": "Requirement Analysis",
                 "position": 1
               },
               {
-                "des": "cases that cover all functional aspects of the product.Test Planning: We create detailed test plans based on functional specifications to ensure all features are tested thoroughly.",
+                "des": "We create detailed test plans based on functional specifications to ensure all features are tested thoroughly.",
                 "id": "676e6144e0bbb25e4ee93352",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
                 "title": "Test Planning",
                 "position": 2
               },
               {
-                "des": " We identify and report defects or issues with functionality, ensuring prompt resolution.",
+                "des": "We identify and report defects or issues with functionality, ensuring prompt resolution.",
                 "id": "676e615ee0bbb25e4ee93353",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
                 "title": "Defect Identification",
@@ -2871,15 +2598,15 @@
                 "position": 5
               },
               {
-                "des": " We perform both manual and automated testing to ensure comprehensive test coverage and efficiency.",
+                "des": "We perform both manual and automated testing to ensure comprehensive test coverage and efficiency.",
                 "id": "676e61b3e0bbb25e4ee93356",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
                 "title": "Manual and Automated Testing",
                 "position": 6
               },
               {
-                "des": " We simulate real-world usage scenarios to ensure the application meets user expectations under various conditions.",
-                "id": "676e61b3e0bbb25e4ee93356",
+                "des": "We simulate real-world usage scenarios to ensure the application meets user expectations under various conditions.",
+                "id": "676e61d1e0bbb25e4ee93357",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
                 "title": "User Scenario Testing",
                 "position": 7
@@ -2887,15 +2614,15 @@
             ]
           },
           {
-            "description": "Automation testing focuses on improving the efficiency, accuracy, and consistency of the testing process by using specialized tools and scripts to execute test cases. It reduces human intervention, accelerates testing timelines, and ensures extensive test coverage across different features, platforms, and browsers. Ideal for repetitive and time-intensive tasks, automation testing enhances software quality by detecting defects early in the development cycle. With frameworks like Selenium, Appium, and Cypress, automation ensures seamless integration with CI/CD pipelines. This approach empowers teams to focus on innovation while maintaining software reliability, making it a critical part of modern development and quality assurance processes.",
+            "oneLine": "Automation testing focuses on improving the efficiency, accuracy, and consistency of the testing process by using specialized tools and scripts to execute test cases...",
             "imageUrl": "/assets/Automation-Testing.webp",
             "id": "676e607de0bbb25e4ee93350",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "categoryId": "676938d751dcda17a0f9388c",
             "title": "Automation Testing",
             "position": 2,
             "whatWeDo": [
               {
-                "des": " We select the best automation testing tools based on your project requirements, including Selenium, Appium, and others",
+                "des": "We select the best automation testing tools based on your project requirements, including Selenium, Appium, and others.",
                 "id": "676e625ce0bbb25e4ee93357",
                 "serviceId": "676e607de0bbb25e4ee93350",
                 "title": "Tool Selection",
@@ -2909,21 +2636,21 @@
                 "position": 2
               },
               {
-                "des": " We integrate automated testing into your CI/CD pipeline to ensure ongoing quality throughout the development process",
+                "des": "We integrate automated testing into your CI/CD pipeline to ensure ongoing quality throughout the development process.",
                 "id": "676e62b9e0bbb25e4ee93359",
                 "serviceId": "676e607de0bbb25e4ee93350",
                 "title": "Continuous Testing",
                 "position": 3
               },
               {
-                "des": "We ensure that your application functions correctly across different browsers and platforms through automated tests ",
+                "des": "We ensure that your application functions correctly across different browsers and platforms through automated tests.",
                 "id": "676e62d6e0bbb25e4ee9335a",
                 "serviceId": "676e607de0bbb25e4ee93350",
                 "title": "Cross-Browser and Cross-Platform Testing",
                 "position": 4
               },
               {
-                "des": "We continuously update and maintain test scripts to accommodate changes in the codebase, keeping automation effective",
+                "des": "We continuously update and maintain test scripts to accommodate changes in the codebase, keeping automation effective.",
                 "id": "676e62f6e0bbb25e4ee9335b",
                 "serviceId": "676e607de0bbb25e4ee93350",
                 "title": "Maintenance of Test Scripts",
@@ -2932,241 +2659,185 @@
             ]
           },
           {
-            "description": "Performance Testing focuses on assessing how well an application performs under various loads. Our team conducts stress tests, load tests, and scalability tests to determine how the application behaves under different traffic volumes and system configurations. Performance testing ensures that the application can handle heavy user traffic and continue to deliver a smooth user experience. By identifying performance bottlenecks, we help businesses optimize their applications for speed and responsiveness.",
-            "imageUrl": "/assets/Security-Testing.webp",
-            "id": "676e607de0bbb25e4ee93350",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "oneLine": "Performance Testing focuses on assessing how well an application performs under various loads. Our team conducts stress tests, load tests, and scalability tests...",
+            "imageUrl": "/assets/Performance-Testing.webp",
+            "id": "676e609be0bbb25e4ee93351",
+            "categoryId": "676938d751dcda17a0f9388c",
             "title": "Performance Testing",
-            "position": 2,
+            "position": 3,
             "whatWeDo": [
               {
                 "des": "We simulate high traffic scenarios to understand how your application performs under peak loads.",
                 "id": "676e625ce0bbb25e4ee93357",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "serviceId": "676e609be0bbb25e4ee93351",
                 "title": "Load Testing",
                 "position": 1
               },
               {
-                "des": " We test the application beyond normal operational limits to identify breaking points and areas that need improvement",
+                "des": "We test the application beyond normal operational limits to identify breaking points and areas that need improvement.",
                 "id": "676e628fe0bbb25e4ee93358",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "serviceId": "676e609be0bbb25e4ee93351",
                 "title": "Stress Testing",
                 "position": 2
               },
               {
-                "des": "We assess the ability of the application to scale under increasing user load and optimize performance accordingly",
+                "des": "We assess the ability of the application to scale under increasing user load and optimize performance accordingly.",
                 "id": "676e62b9e0bbb25e4ee93359",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "serviceId": "676e609be0bbb25e4ee93351",
                 "title": "Scalability Testing",
                 "position": 3
               },
               {
-                "des": "We identify performance bottlenecks and recommend solutions to optimize the application",
+                "des": "We identify performance bottlenecks and recommend solutions to optimize the application.",
                 "id": "676e62d6e0bbb25e4ee9335a",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "serviceId": "676e609be0bbb25e4ee93351",
                 "title": "Bottleneck Analysis",
                 "position": 4
               },
               {
                 "des": "We implement improvements to enhance speed, reduce latency, and optimize resource usage.",
                 "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "serviceId": "676e609be0bbb25e4ee93351",
                 "title": "Optimization",
                 "position": 5
               },
               {
                 "des": "We monitor application performance throughout the testing phase, ensuring resource consumption is balanced and performance is consistent.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "id": "676e6314e0bbb25e4ee9335c",
+                "serviceId": "676e609be0bbb25e4ee93351",
                 "title": "Performance Monitoring",
                 "position": 6
               },
               {
                 "des": "Based on testing results, we provide actionable recommendations to enhance performance and improve user experience.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "id": "676e6332e0bbb25e4ee9335d",
+                "serviceId": "676e609be0bbb25e4ee93351",
                 "title": "Optimization Recommendations",
                 "position": 7
               }
             ]
           },
           {
-            "description": "Security Testing ensures that applications are secure and resistant to cyber threats. Our team performs vulnerability assessments, penetration testing, and risk analysis to identify potential security flaws and weaknesses. We work proactively to protect your data and systems from cyber threats by implementing robust security measures. Security testing ensures that your application is compliant with industry regulations and protects both your business and your users from security breaches.",
+            "oneLine": "Security Testing ensures that applications are secure and resistant to cyber threats. Our team performs vulnerability assessments, penetration testing, and risk analysis...",
             "imageUrl": "/assets/Security-Testing.webp",
-            "id": "676e607de0bbb25e4ee93350",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "id": "676e60d7e0bbb25e4ee93353",
+            "categoryId": "676938d751dcda17a0f9388c",
             "title": "Security Testing",
-            "position": 2,
+            "position": 4,
             "whatWeDo": [
               {
                 "des": "We scan applications for potential security vulnerabilities that could be exploited by attackers.",
                 "id": "676e625ce0bbb25e4ee93357",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "serviceId": "676e60d7e0bbb25e4ee93353",
                 "title": "Vulnerability Assessment",
                 "position": 1
               },
               {
-                "des": " We conduct thorough security audits to assess the effectiveness of your security measures and recommend improvements.",
+                "des": "We conduct thorough security audits to assess the effectiveness of your security measures and recommend improvements.",
                 "id": "676e628fe0bbb25e4ee93358",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "serviceId": "676e60d7e0bbb25e4ee93353",
                 "title": "Security Audits",
                 "position": 2
               },
               {
-                "des": "We help you develop an incident response plan to quickly respond to security breaches and minimize damage",
+                "des": "We help you develop an incident response plan to quickly respond to security breaches and minimize damage.",
                 "id": "676e62b9e0bbb25e4ee93359",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "serviceId": "676e60d7e0bbb25e4ee93353",
                 "title": "Incident Response Planning",
                 "position": 3
               },
               {
-                "des": " We optimize server configurations and APIs to ensure fast data processing and scalability.",
-                "id": "676e62d6e0bbb25e4ee9335a",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Backend Optimization",
-                "position": 4
-              },
-              {
                 "des": "We simulate cyberattacks to test the system’s defenses and identify weaknesses.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
+                "id": "676e62d6e0bbb25e4ee9335a",
+                "serviceId": "676e60d7e0bbb25e4ee93353",
                 "title": "Penetration Testing",
-                "position": 5
-              },
-              {
-                "des": "We help you develop an incident response plan to quickly respond to security breaches and minimize damage",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Incident Response Planning",
-                "position": 5
+                "position": 4
               }
             ]
           }
         ]
       },
       {
-        "description": "Our Consulting Services offer expert guidance to optimize IT strategies, digital transformation, and technology adoption. We align IT infrastructure with business goals and implement cutting-edge solutions to drive efficiency and innovation. Our consultants provide actionable insights across industries, helping businesses thrive in the digital age and ensuring long-term growth and success.",
-        "imageUrl": "/assets/Consulting-Services.webp",
+        "description": "Our consulting services empower organizations to navigate complex technological landscapes and unlock their full potential...",
+        "imageUrl": "/assets/Services/Consulting Services-ser.webp",
         "departmentId": "672eefd2bf4e5705ff670c69",
-        "id": "6769388d51dcda17a0f9388a",
-        "name": " Consulting Services",
-        "position": 4,
+        "id": "676938ff51dcda17a0f9388d",
+        "name": "Consulting Services",
+        "position": 7,
         "services": [
           {
-            "description": "IT Strategy Consulting helps organizations align their IT investments with business goals, ensuring that technology serves as a catalyst for growth. Our consultants assess current IT systems, identify opportunities for improvement, and develop comprehensive IT strategies that focus on performance, scalability, and cost-efficiency. We help businesses optimize their technology infrastructure and develop a roadmap that supports long-term goals, enabling them to leverage technology to gain a competitive edge and drive digital transformation.",
-            "imageUrl": "/assets/IT-Strategy-Consulting.webp",
+            "oneLine": "We help businesses define and implement robust IT strategies that align perfectly with their overarching business goals, optimizing technology investments...",
+            "imageUrl": "/assets/Services/IT Strategy Consulting-ser.webp",
             "id": "676e5f95e0bbb25e4ee9334f",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "categoryId": "676938ff51dcda17a0f9388d",
             "title": "IT Strategy Consulting",
             "position": 1,
             "whatWeDo": [
               {
-                "des": "We conduct thorough assessments of existing IT systems to identify inefficiencies and areas for improvement",
+                "des": "We meticulously assess your existing IT infrastructure, processes, and capabilities to identify strengths, weaknesses, and areas for improvement.",
                 "id": "676e60bbe0bbb25e4ee93351",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "IT Assessment",
+                "title": "Current State Analysis",
                 "position": 1
               },
               {
-                "des": "We ensure that IT infrastructure aligns with business goals to drive efficiency and scalability.",
+                "des": "Develop a clear, actionable IT roadmap outlining key initiatives, timelines, and resource allocation to achieve your defined business objectives.",
                 "id": "676e6144e0bbb25e4ee93352",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Technology Alignment",
+                "title": "Strategic Roadmapping",
                 "position": 2
               },
               {
-                "des": "We create a strategic roadmap for future IT investments that align with business growth.",
+                "des": "Recommend and evaluate the most suitable technologies and platforms, ensuring your IT stack is efficient, scalable, and cost-effective.",
                 "id": "676e615ee0bbb25e4ee93353",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Roadmap Development",
+                "title": "Technology Stack Optimization",
                 "position": 3
               },
               {
-                "des": "We analyze potential risks and implement strategies to mitigate them, ensuring business continuity.",
+                "des": "Identify potential IT risks, including cybersecurity and compliance, and formulate strategies to minimize exposure and ensure business continuity.",
                 "id": "676e617fe0bbb25e4ee93354",
                 "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Risk Management  ",
+                "title": "Risk Assessment & Mitigation",
                 "position": 4
-              },
-              {
-                "des": "We provide cost-effective solutions that optimize IT spending and maximize ROI on technology investments.",
-                "id": "676e619ae0bbb25e4ee93355",
-                "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Cost Optimization",
-                "position": 5
-              },
-              {
-                "des": "  We help you transition to the cloud, selecting the right cloud solutions and architectures for scalability, flexibility, and cost-effectiveness.",
-                "id": "676e61b3e0bbb25e4ee93356",
-                "serviceId": "676e5f95e0bbb25e4ee9334f",
-                "title": "Cloud Strategy",
-                "position": 6
               }
             ]
           },
           {
-            "description": "Digital Transformation Consulting guides businesses through the process of adopting digital technologies to enhance operations, customer experiences, and business models. Our consultants work closely with organizations to implement cloud computing, automation, AI, and data analytics, helping them stay competitive in a rapidly evolving market. We focus on delivering value through innovation and helping businesses become more agile, efficient, and customer-centric, positioning them for future growth in the digital economy.",
-            "imageUrl": "/assets/Digital-Transformation-Consulting.webp",
+            "oneLine": "We guide organizations through successful digital transformation journeys, integrating innovative technologies into every aspect of your business...",
+            "imageUrl": "/assets/Services/Digital Transformation Consulting-ser.webp",
             "id": "676e607de0bbb25e4ee93350",
-            "categoryId": "6769388d51dcda17a0f9388a",
+            "categoryId": "676938ff51dcda17a0f9388d",
             "title": "Digital Transformation Consulting",
             "position": 2,
             "whatWeDo": [
               {
-                "des": " We evaluate the latest digital technologies to identify opportunities for adoption.",
+                "des": "Collaboratively define your digital transformation vision, objectives, and a clear strategy to achieve measurable business outcomes.",
                 "id": "676e625ce0bbb25e4ee93357",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Technology Evaluation",
+                "title": "Vision & Strategy Definition",
                 "position": 1
               },
               {
-                "des": "We manage the change process, helping organizations adopt new technologies smoothly and effectively.",
+                "des": "Identify and integrate cutting-edge digital technologies (AI, IoT, Cloud) that best suit your business, ensuring seamless implementation.",
                 "id": "676e628fe0bbb25e4ee93358",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Change Management",
+                "title": "Technology Adoption Planning",
                 "position": 2
               },
               {
-                "des": "We help you identify and implement the best digital tools, platforms, and technologies that can optimize your workflows and business operations.",
+                "des": "Guide your teams through the cultural and operational shifts necessary for successful digital adoption, ensuring smooth transitions and buy-in.",
                 "id": "676e62b9e0bbb25e4ee93359",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Technology Selection",
+                "title": "Organizational Change Management",
                 "position": 3
               },
               {
-                "des": "We analyze and streamline business processes, leveraging automation, AI, and other technologies to boost efficiency and reduce operational costs.",
+                "des": "Establish key performance indicators (KPIs) to track progress and measure the tangible impact of digital initiatives on your business.",
                 "id": "676e62d6e0bbb25e4ee9335a",
                 "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Process Optimization ",
+                "title": "Performance Measurement",
                 "position": 4
-              },
-              {
-                "des": "We focus on improving customer experience by leveraging digital channels and technologies.",
-                "id": "676e62d6e0bbb25e4ee9335a",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Customer-Centric Solutions",
-                "position": 5
-              },
-              {
-                "des": "  We implement solutions that enable organizations to become more agile, adaptive, and innovative.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Agility & Innovation",
-                "position": 6
-              },
-              {
-                "des": "  We work with your team to understand your current operations and business objectives, tailoring the transformation plan to your unique needs.",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Needs and Goals Analysis",
-                "position": 7
-              },
-              {
-                "des": "  We offer continued support to refine and evolve your digital transformation initiatives, helping you stay competitive in a rapidly changing market",
-                "id": "676e62f6e0bbb25e4ee9335b",
-                "serviceId": "676e607de0bbb25e4ee93350",
-                "title": "Ongoing Support and Evolution",
-                "position": 8
               }
             ]
           }

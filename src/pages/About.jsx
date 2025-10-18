@@ -6,11 +6,14 @@ import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import Star from "../components/Star";
 import Stacialogo from "../assets/aboutstacialogo.svg";
-import fiveLogo from "../assets/5yrs.png";
+import whitelogo from "../assets/whitelogo.svg";
+// import fiveLogo from "../assets/5yrs.png";
 import mission from "../assets/mission-about.webp";
 import story from "../assets/story-about.webp";
 import vision from "../assets/vision.webp";
-// import fiveLogo from "../assets/66.png";
+import partnerabout from "../assets/parternship.webp";
+import purpose from "../assets/purpose.webp";
+import sixLogo from "../assets/66.png";
 // import { PiPottedPlant } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 // import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
@@ -25,8 +28,8 @@ import { SlEnergy } from "react-icons/sl";
 import { VscChip } from "react-icons/vsc";
 
 import Loadingstar from "../components/LoadingStar"
-const AboutCarousel = React.lazy(()=>import("../components/ReUsableComp/AboutCarousel"));
-const ClientComponent = React.lazy(()=> import("./Client"));
+const AboutCarousel = React.lazy(() => import("../components/ReUsableComp/AboutCarousel"));
+const ClientComponent = React.lazy(() => import("./Client"));
 
 
 const Industries = [
@@ -79,7 +82,7 @@ function About() {
   const containerRef = useRef(null);
 
 
-    // Ensure first dot is active on initial load or URL param scroll to milestone
+  // Ensure first dot is active on initial load or URL param scroll to milestone
   useEffect(() => {
     if (params.key === "milestone" || !params.key) {
       const firstSection = sectionsRef.current[0];
@@ -93,7 +96,7 @@ function About() {
     }
   }, [params.key, staciaHistory]);
 
- 
+
 
 
   // IntersectionObserver for scrolling 
@@ -179,7 +182,7 @@ function About() {
     }
   };
 
-  
+
   // Scroll by params
   useEffect(() => {
     if (params.key) {
@@ -195,7 +198,7 @@ function About() {
     }
   }, [params.key]);
 
-  
+
 
   return (
     <div>
@@ -285,9 +288,9 @@ function About() {
           <div className="about-section3-dot-container">
             {staciaHistory?.map((a, i) => (
               <div
-                key={i}               
-                className={`about-section3-dots ${activeSection===i ?'about-active-dot':""}`}
-                onClick={()=>scrollToSection(i)}
+                key={i}
+                className={`about-section3-dots ${activeSection === i ? 'about-active-dot' : ""}`}
+                onClick={() => scrollToSection(i)}
               ></div>
             ))}
           </div>
@@ -307,7 +310,7 @@ function About() {
                             {eachAch.title}
                           </div>
                           <p className="about-section3-achivment-des test-seclection-blue">
-                            {eachAch.des} 
+                            {eachAch.des}
                           </p>
                         </div>
                       ))}
@@ -388,18 +391,18 @@ function About() {
         <div className="about-section6-container">
           <div>
             <div>
-              <img src={Stacialogo} alt="" />
+              <img src={whitelogo} alt="" style={{ padding: "1rem  2rem" , width:"15rem"}} />
               <div className="about-section6-title test-seclection-blue">
                 Celebrating Five Years Excellence
               </div>
             </div>
           </div>
           <div className="about-section6-img-container">
-            <img src={fiveLogo} alt="" />
+            <img src={sixLogo} alt="" style={{ padding: "1rem  2rem" }}/>
           </div>
           <div>
             <p className="about-section6-des test-seclection-blue">
-              Five years ago, we embarked on a journey of innovation and growth.
+              Six years ago, we embarked on a journey of innovation and growth.
               Today, we celebrate the remarkable achievements and milestones
               we've reached together. Thank you to our dedicated team, loyal
               customers, and supportive partners for making this possible.
@@ -463,15 +466,15 @@ function About() {
           </div>
           <div>
             <img
-              src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+              src={purpose}
               alt=""
             />
           </div>
         </div>
         <div className="about-section8-container" id="our-expertise">
           <Suspense fallback={<div>Loading carousel....</div>}>
-          <AboutCarousel />
-          </Suspense> 
+            <AboutCarousel />
+          </Suspense>
         </div>
         <div className="about-section9-container" id="industries-covered">
           <div className="about-section9-title test-seclection-blue">
@@ -511,11 +514,7 @@ function About() {
               Stacia: Building Bridges, Driving Growth.
             </div>
             <p className="about-section4-des test-seclection-blue">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-              rem temporibus quibusdam quo, sunt nostrum debitis minus nesciunt
-              adipisci illo praesentium facere distinctio, dolorem iure non
-              libero quam accusamus cum voluptatem obcaecati labore explicabo.
-              Sit voluptatibus quae molestiae modi temporibus!
+              Our success is built on a foundation of strong, collaborative relationships, fostering a vibrant ecosystem with valued partners and satisfied clients worldwide. We believe in working hand-in-hand, pooling expertise and resources to drive innovation and achieve shared objectives. Through open communication and mutual respect, we forge enduring connections that transcend transactions, becoming true extensions of our collective vision. Together, we navigate challenges, celebrate successes, and continuously strive to deliver exceptional results that fuel mutual growth and lasting impact.
             </p>
             <div
               className="know-more"
@@ -529,14 +528,16 @@ function About() {
           </div>
           <div>
             <img
-              src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGltYWdlfGVufDB8fDB8fHww"
+              src={partnerabout}
               alt=""
             />
           </div>
         </div>
-        <Suspense fallback={<div><Loadingstar/></div>}>
-        <ClientComponent />
-        </Suspense>
+        <div id="our-client">
+          <Suspense fallback={<div><Loadingstar /></div>}>
+            <ClientComponent />
+          </Suspense>
+        </div>
         <div className="about-section10-container" id="our-leadership">
           <div className="about-section-title test-seclection-blue">
             Our Leadership
@@ -576,60 +577,60 @@ function About() {
         </div>
       </div>
       <div>
-       <div className="about-section11-container" id="meet-our-team">
-        {/* Title */}
-        <div className="about-section11-title test-seclection-blue">
-          Meet Our Team
-        </div>
+        <div className="about-section11-container" id="meet-our-team">
+          {/* Title */}
+          <div className="about-section11-title test-seclection-blue">
+            Meet Our Team
+          </div>
 
-        {/* Description */}
-        <p className="about-section11-des test-seclection-blue">
-          At Stacia Corp, our talented team, led by founders Mr. Sarabesh Sriram
-          and Mr. Lakshman PV, combines expertise in engineering, software, and
-          electronics. Together, we drive innovation, delivering transformative
-          solutions with creativity, collaboration, and a passion for
-          excellence, shaping the future of industries worldwide.
-        </p>
+          {/* Description */}
+          <p className="about-section11-des test-seclection-blue">
+            At Stacia Corp, our talented team, led by founders Mr. Sarabesh Sriram
+            and Mr. Lakshman PV, combines expertise in engineering, software, and
+            electronics. Together, we drive innovation, delivering transformative
+            solutions with creativity, collaboration, and a passion for
+            excellence, shaping the future of industries worldwide.
+          </p>
 
-        {/* Desktop Card Marquee */}
-        <div className="about-team-marquee-desk">
-          <div className="about-team-marquee">
-            {/* Render teamData three times for smoother looping */}
-            <div className="marquee-content">
-              {teamData?.map((eachMem, i) => (
-                <TeamCard key={`set1-${i}`} eachMem={eachMem} />
-              ))}
-            </div>
-            <div className="marquee-content">
-              {teamData?.map((eachMem, i) => (
-                <TeamCard key={`set2-${i}`} eachMem={eachMem} />
-              ))}
-            </div>
-            <div className="marquee-content">
-              {teamData?.map((eachMem, i) => (
-                <TeamCard key={`set3-${i}`} eachMem={eachMem} />
-              ))}
-            </div>
-            <div className="marquee-content">
-              {teamData?.map((eachMem, i) => (
-                <TeamCard key={`set4-${i}`} eachMem={eachMem} />
-              ))}
-            </div>
-            <div className="marquee-content">
-              {teamData?.map((eachMem, i) => (
-                <TeamCard key={`set5-${i}`} eachMem={eachMem} />
-              ))}
+          {/* Desktop Card Marquee */}
+          <div className="about-team-marquee-desk">
+            <div className="about-team-marquee">
+              {/* Render teamData three times for smoother looping */}
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set1-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set2-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set3-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set4-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set5-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Mobile Static Cards */}
-        <div className="about-team-marquee-mob">
-          {teamData?.map((eachMem, i) => (
-            <TeamCard key={`mob-${i}`} eachMem={eachMem} />
-          ))}
+          {/* Mobile Static Cards */}
+          <div className="about-team-marquee-mob">
+            {teamData?.map((eachMem, i) => (
+              <TeamCard key={`mob-${i}`} eachMem={eachMem} />
+            ))}
+          </div>
         </div>
-      </div>
       </div>
       <Footer />
       <MobileFooter />

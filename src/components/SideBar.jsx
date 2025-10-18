@@ -469,7 +469,8 @@ import StaciaLogo from "../assets/Stacia Monogram.svg";
 import { useAnimation, motion } from "framer-motion";
 import { NavLink, Link } from "react-router-dom";
 import StaciaLogoText from "../assets/Stacia logo.svg";
-import five from "../assets/5yr logo.svg";
+import five from "../assets/68.svg";
+// import five from "../assets/5yr logo.svg";
 import gsap from "gsap";
 
 
