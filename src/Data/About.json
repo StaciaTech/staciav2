@@ -107,15 +107,15 @@
       "SectionItems": [
         {
           "name": "Logos ",
-          "path": "media-kit"
+          "path": "mediakit/logos"
         },
         {
           "name": "Leaders",
-          "path": "media-kit"
+          "path": "mediakit/leaders"
         },
         {
           "name": "Brochers",
-          "path": "media-kit"
+          "path": "media-kit/brochers"
         }
       ]
     },
@@ -124,19 +124,19 @@
       "path": "career",
       "SectionItems": [
         {
-          "name": "opportunities",
+          "name": "Opportunities",
           "path": "career/opportunities"
         },
         {
-          "name": "hiringprocedure",
+          "name": "Hiring Procedure",
           "path": "career/hiringprocedure"
         },
         {
-          "name": "lifestaciacorp",
+          "name": "Life Stacia Corp",
           "path": "career/lifestaciacorp"
         },
         {
-          "name": "ourculture",
+          "name": "Our Culture",
           "path": "career/ourculture"
         }
       ]

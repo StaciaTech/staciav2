@@ -52,7 +52,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="/career" element={<CareerPage />} />
-        <Route path="/career/:subsection" element={<CareerPage />} />
+        <Route path="/career/:key?" element={<CareerPage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route
           path="/products/:department/:category"
@@ -151,7 +151,7 @@ function App() {
         <Route path="/about/:key" element={<About />} />
         <Route path="/about" element={<About />} />
         <Route path="/partners" element={<Partners />} />
-        <Route path="/media-kit" element={<MediaKit />} />
+        <Route path="/media-kit/:key?" element={<MediaKit />} />
         <Route path="/about/leader/:name" element={<LeaderPage />} />
 
         <Route path="/about" element={<About />} />
