@@ -255,6 +255,8 @@
 
 
 
+
+// src/pages/MediaKit.jsx
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "../components/NavBar";
@@ -267,59 +269,106 @@ import { FiDownload } from "react-icons/fi";
 
 import Star from "../components/Star";
 import data from "../Data/MediaKit.json";
+import placeholder from "../assets/white logo.png"; // <-- add a small placeholder image here
+
+// Convert JSON path -> absolute/root-relative URL
+function resolveStaticUrl(url) {
+  if (!url) return "";
+  const u = String(url).trim();
+  // absolute urls keep as-is
+  if (u.startsWith("http://") || u.startsWith("https://")) return u;
+  // already root-relative
+  if (u.startsWith("/")) return u;
+  // treat as public/<path>
+  return `/${u}`;
+}
+
+// Safe image that falls back to placeholder and logs broken URLs
+const SafeImg = ({ src, alt = "", className }) => {
+  const resolved = resolveStaticUrl(src) || placeholder;
+  const handleError = (e) => {
+    console.warn("Image failed to load:", src);
+    e.currentTarget.onerror = null;
+    e.currentTarget.src = placeholder;
+  };
+  return <img src={resolved} alt={alt || ""} className={className} onError={handleError} />;
+};
 
 function MediaKit() {
-  const { key } = useParams(); // Get URL param
-  const [mediaData, setMediaData] = useState();
+  const { key } = useParams(); // path param (e.g. "logos" or "media-kit/logos")
+  const [mediaData, setMediaData] = useState(null);
 
-  // Fetch media data (mocked here as JSON)
-  const fetchMediaData = async () => {
-    try {
-      // const res = await axios.get(`${apiUrl}/client/index`);
-      setMediaData(data); // store as object, not string
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
+  // Load static JSON (or fetch from API if needed)
   useEffect(() => {
+    const fetchMediaData = async () => {
+      try {
+        // If you later fetch from API, map/resolve urls as needed
+        setMediaData(data);
+      } catch (err) {
+        console.error("Error loading media data:", err);
+        setMediaData(data); // fallback to local data
+      }
+    };
+
     fetchMediaData();
-    window.scrollTo(0, 0); // default scroll to top
+    window.scrollTo(0, 0);
   }, []);
 
-  // Scroll to section based on URL param
+  // Scroll to section based on URL param (robust, with alias mapping and retries)
   useEffect(() => {
     if (!key) return;
 
-    // Extract last segment in case of path like "mediakit/logos"
-    const sectionKey = key.split("/").pop().toLowerCase();
+    // handle both "logos" and possible full path "media-kit/logos"
+    const raw = String(key).trim();
+    const seg = raw.split("/").filter(Boolean).pop().toLowerCase();
 
+    // Accept several common aliases for brochures/brochers
+    const aliases = {
+      logos: "logos",
+      leaders: "leaders",
+      brouchers: "brochers",
+      brochers: "brochers",
+      brochure: "brochers",
+      brochures: "brochers",
+      brocher: "brochers",
+    };
+
+    const canonical = aliases[seg] || seg;
     const validSections = ["logos", "leaders", "brochers"];
-    if (!validSections.includes(sectionKey)) return;
+    if (!validSections.includes(canonical)) {
+      console.warn("Unknown MediaKit section:", seg);
+      return;
+    }
 
     let cancelled = false;
-    const maxAttempts = 10;
+    const maxAttempts = 12;
 
     const attemptScroll = (attempt = 1) => {
       if (cancelled) return;
-
-      const section = document.getElementById(sectionKey);
-      if (section) {
-        const y = section.getBoundingClientRect().top + window.pageYOffset - 80; // offset for navbar
+      const el = document.getElementById(canonical);
+      if (el) {
+        const headerOffset = 80; // adjust if navbar height different
+        const y = el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       } else if (attempt < maxAttempts) {
-        setTimeout(() => requestAnimationFrame(() => attemptScroll(attempt + 1)), 250 * attempt);
+        const delay = 200 * attempt;
+        setTimeout(() => requestAnimationFrame(() => attemptScroll(attempt + 1)), delay);
       } else {
+        console.warn(`Could not find section id="${canonical}" after ${maxAttempts} attempts.`);
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     };
 
-    const starterTimer = setTimeout(() => requestAnimationFrame(() => attemptScroll(1)), 300);
+    const starter = setTimeout(() => requestAnimationFrame(() => attemptScroll(1)), 250);
     return () => {
       cancelled = true;
-      clearTimeout(starterTimer);
+      clearTimeout(starter);
     };
   }, [key]);
+
+  // helper to accept multiple possible keys for brochures in JSON
+  const getBrochuresArray = () =>
+    mediaData?.brouchers || mediaData?.brochers || mediaData?.brochures || [];
 
   return (
     <div>
@@ -340,7 +389,7 @@ function MediaKit() {
           {/* Logos Section */}
           <div id="logos" style={{ borderBottom: "1px solid #e5e5e5" }}>
             <div className="media-section-heading">Logos</div>
-            {mediaData?.logos?.map((eachLogo, i) => (
+            {(mediaData?.logos || []).map((eachLogo, i) => (
               <MediaLogoContainer key={i} eachLogo={eachLogo} />
             ))}
           </div>
@@ -349,7 +398,7 @@ function MediaKit() {
           <div id="leaders" style={{ borderBottom: "1px solid #e5e5e5" }}>
             <div className="media-section-heading">Leaders</div>
             <div className="media-leader-card-container">
-              {mediaData?.founders?.map((eachfounder, i) => (
+              {(mediaData?.founders || []).map((eachfounder, i) => (
                 <MediaLeadersContainer key={i} eachfounder={eachfounder} />
               ))}
             </div>
@@ -359,7 +408,7 @@ function MediaKit() {
           <div id="brochers">
             <div className="media-section-heading">Brochers</div>
             <div className="media-leader-card-container">
-              {mediaData?.brouchers?.map((eachBroucher, i) => (
+              {getBrochuresArray().map((eachBroucher, i) => (
                 <MediaBroucherContainer key={i} eachBroucher={eachBroucher} />
               ))}
             </div>
@@ -375,19 +424,20 @@ function MediaKit() {
 
 export default MediaKit;
 
-// --- Child Components remain the same ---
+/* ---------------- Child components (use resolveStaticUrl + SafeImg) ---------------- */
 
 const MediaLogoContainer = ({ eachLogo }) => {
   async function downloadFile(s3Url, format, name) {
     try {
+      if (!s3Url) throw new Error("No file URL");
       const mimeType = format === "svg" ? "image/svg+xml" : "image/png";
-      const response = await axios.get(s3Url, { responseType: "blob" });
+      const response = await axios.get(resolveStaticUrl(s3Url), { responseType: "blob" });
       const blob = new Blob([response.data], { type: mimeType });
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement("a");
       link.href = url;
-      link.download = `${name}.${format}`;
+      link.download = `${(name || "file").replace(/\s+/g, "_")}.${format}`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -400,20 +450,26 @@ const MediaLogoContainer = ({ eachLogo }) => {
   return (
     <div className="media-logos-container">
       <div className="media-logo-content-container">
-        <div className="media-logo-title">{eachLogo.name}</div>
-        <p className="media-logo-des">{eachLogo.description}</p>
+        <div className="media-logo-title">{eachLogo?.name}</div>
+        <p className="media-logo-des">{eachLogo?.description}</p>
         <div className="media-logo-format-title">File Formats</div>
         <div className="media-logo-format-container">
-          <div onClick={() => downloadFile(eachLogo.pngFile.imageUrl, "png", eachLogo.name)} className="pointer">
+          <div
+            onClick={() => downloadFile(eachLogo?.pngFile?.imageUrl, "png", eachLogo?.name)}
+            className="pointer"
+          >
             Download PNG
           </div>
-          <div onClick={() => downloadFile(eachLogo.svgFile.imageUrl, "svg", eachLogo.name)} className="pointer">
+          <div
+            onClick={() => downloadFile(eachLogo?.svgFile?.imageUrl, "svg", eachLogo?.name)}
+            className="pointer"
+          >
             Download SVG
           </div>
         </div>
       </div>
       <div className="media-logo-img">
-        <img src={eachLogo.svgFile.imageUrl} alt="" />
+        <SafeImg src={eachLogo?.svgFile?.imageUrl} alt={eachLogo?.name} />
       </div>
     </div>
   );
@@ -422,13 +478,14 @@ const MediaLogoContainer = ({ eachLogo }) => {
 const MediaLeadersContainer = ({ eachfounder }) => {
   async function downloadFile(s3Url, name) {
     try {
-      const response = await axios.get(s3Url, { responseType: "blob" });
+      if (!s3Url) throw new Error("No file URL");
+      const response = await axios.get(resolveStaticUrl(s3Url), { responseType: "blob" });
       const blob = new Blob([response.data], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement("a");
       link.href = url;
-      link.download = `${name}.pdf`;
+      link.download = `${(name || "file").replace(/\s+/g, "_")}.pdf`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -441,14 +498,17 @@ const MediaLeadersContainer = ({ eachfounder }) => {
   return (
     <div className="media-leader-card">
       <div className="media-leader-img">
-        <img src={eachfounder.imageUrl} alt="" />
+        <SafeImg src={eachfounder?.imageUrl} alt={eachfounder?.name} />
       </div>
       <div className="media-leader-contet-container">
         <div>
-          <div className="media-leader-card-name">{eachfounder.name}</div>
-          <div className="media-leader-card-role">{eachfounder.designation}</div>
+          <div className="media-leader-card-name">{eachfounder?.name}</div>
+          <div className="media-leader-card-role">{eachfounder?.designation}</div>
         </div>
-        <div className="media-leader-download-bg" onClick={() => downloadFile(eachfounder.file.fileUrl, eachfounder.name)}>
+        <div
+          className="media-leader-download-bg"
+          onClick={() => downloadFile(eachfounder?.file?.fileUrl, eachfounder?.name)}
+        >
           <FiDownload color="#0047ff" fontSize={24} />
         </div>
       </div>
@@ -459,13 +519,14 @@ const MediaLeadersContainer = ({ eachfounder }) => {
 const MediaBroucherContainer = ({ eachBroucher }) => {
   async function downloadPDF(s3Url, name) {
     try {
-      const response = await axios.get(s3Url, { responseType: "blob" });
+      if (!s3Url) throw new Error("No file URL");
+      const response = await axios.get(resolveStaticUrl(s3Url), { responseType: "blob" });
       const blob = new Blob([response.data], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement("a");
       link.href = url;
-      link.download = `${name}.pdf`;
+      link.download = `${(name || "file").replace(/\s+/g, "_")}.pdf`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -478,13 +539,16 @@ const MediaBroucherContainer = ({ eachBroucher }) => {
   return (
     <div className="media-leader-card">
       <div className="media-leader-img">
-        <img src={eachBroucher?.display?.displayUrl} alt="" />
+        <SafeImg src={eachBroucher?.display?.displayUrl} alt={eachBroucher?.name} />
       </div>
       <div className="media-leader-contet-container">
         <div>
-          <div className="media-leader-card-name">{eachBroucher.name}</div>
+          <div className="media-leader-card-name">{eachBroucher?.name}</div>
         </div>
-        <div className="media-leader-download-bg" onClick={() => downloadPDF(eachBroucher.file.fileUrl, eachBroucher.name)}>
+        <div
+          className="media-leader-download-bg"
+          onClick={() => downloadPDF(eachBroucher?.file?.fileUrl, eachBroucher?.name)}
+        >
           <FiDownload color="#0047ff" fontSize={24} />
         </div>
       </div>

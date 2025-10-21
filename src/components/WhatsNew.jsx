@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import whatsNewData from "../Data/Whatsnew.json";
 import "../styles/whatsNew.css";
-import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp, IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 
 export default function WhatsNew({ handleClose }) {
   const [whatsNew] = useState(whatsNewData);
@@ -18,7 +18,7 @@ export default function WhatsNew({ handleClose }) {
     "Achievements",
     "Awards",
   ];
-  
+
   const newsroomSubCatContainerRef = useRef(null);
   const scrollRef = useRef(null); // Ref to scroll target
   const location = useLocation();
@@ -279,16 +279,19 @@ export default function WhatsNew({ handleClose }) {
           style={{
             color: "#0047ff",
             paddingTop: "1rem",
+            paddingRight: "initial",
             textAlign: "end",
             cursor: "pointer",
           }}
+          className="navProComp-products-more"
           onClick={() => {
             window.scrollTo(0, 0);
             navigate("/news");
             handleClose();
           }}
         >
-          {/* See More */}
+          <span>See More</span>
+          <IoIosArrowForward />
         </div>
       </div>
     </div>

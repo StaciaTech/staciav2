@@ -107,11 +107,11 @@
       "SectionItems": [
         {
           "name": "Logos ",
-          "path": "mediakit/logos"
+          "path": "media-kit/logos"
         },
         {
           "name": "Leaders",
-          "path": "mediakit/leaders"
+          "path": "media-kit/leaders"
         },
         {
           "name": "Brochers",

@@ -1,3 +1,5 @@
+
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import CareerPage from "./pages/CareerPage";
@@ -41,7 +43,33 @@ import Sitemap from "./components/Sitemap";
 import IndustriesPage from "./pages/IndustriesPage";
 import ClientVisit from "./pages/ClientVisit";
 
+
+import ShapeAnimationIntro from "./pages/ShapeAnimationIntro";
+
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
+  useEffect(() => {
+    // Option A: always show intro for 5 seconds
+    const t = setTimeout(() => setShowIntro(false), 5000);
+
+    // Option B: show only once per session (uncomment to enable)
+    // if (!sessionStorage.getItem("introShown")) {
+    //   const t = setTimeout(() => {
+    //     sessionStorage.setItem("introShown", "1");
+    //     setShowIntro(false);
+    //   }, 5000);
+    //   return () => clearTimeout(t);
+    // } else {
+    //   setShowIntro(false);
+    // }
+
+    return () => clearTimeout(t);
+  }, []);
+
+  if (showIntro) {
+    return <ShapeAnimationIntro />;
+  }
   return (
     <div className="App">
       {/* Lwdnkjgkufefkl */}
@@ -107,7 +135,7 @@ function App() {
         /> */}
         <Route
           path="/project/:department/:category/:title"
-          element={< Template5/>}
+          element={< Template5 />}
         />
         {/* <Route path="/project/:department/:title" element={<SingleProject />} /> */}
 
