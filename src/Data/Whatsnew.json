@@ -3,70 +3,83 @@
       {
         "title": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design - June 2025",
         "des": "Annual technology conference featuring latest innovations",
-        "imageUrl": "/assets/banner1.webp"
+        "imageUrl": "/assets/banner1.webp",
+        "link": "/competition"
       },
       {
         "title": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design - July 2025",
         "des": "Local developer community gathering",
-        "imageUrl": "/assets/banner2.webp"
+        "imageUrl": "/assets/banner2.webp",
+        "link": "/competition"
       },
       {
         "title": "Design Your Dream - Be Your Own Entrepreneur Hackathon for 3D Product Design - May 2025",
         "des": "Local developer community gathering",
-        "imageUrl": "/assets/Banner.webp"
+        "imageUrl": "/assets/Banner.webp",
+        "link": "/competition"
       }
     ],
     "products": [
       {
         "title": "Onedril (SSM)",
         "des": "Agri and Food Processing SPM",
-        "imageUrl": "/assets/ProductPage/onedrillssm.webp"
+        "imageUrl": "/assets/ProductPage/onedrillssm.webp",
+        "link":"/products/Mechanical/Agri-and-Food-Processing-SPM/Onedril-(SSM)"
       },
       {
         "title": "Hydration tracking (G-sensor)",
         "des": "Research & Development",
-        "imageUrl": "/assets/ProductPage/Default.webp"
+        "imageUrl": "/assets/ProductPage/Default.webp",
+        "link":"/products/Electronics/Research-&-Development/Hydration-tracking-(G-sensor)"
       },
       {
         "title": "Edifai (Simplify your business)",
         "des": "Edifai ",
-        "imageUrl": "/assets/New Product Development.webp"
+        "imageUrl": "/assets/New Product Development.webp",
+        "link":"/products/Tech/Edifai-(Simplify-your-business)"
       }
     ],
     "caseStudy": [
       {
         "title": "Spicing Up Efficiency: The Impact of Mechanization on the Chilli Industry",
         "des": "Mechanical",
-        "imageUrl": "/assets/CaseStudy/ChilliBannerImage.webp"
+        "imageUrl": "/assets/CaseStudy/ChilliBannerImage.webp",
+        "link":"/case-study/single-caseStudy/Case-Study-1"
       },
       {
         "title": "Navigating the Future of Sustainable Electronics",
         "des": "Electronics",
-        "imageUrl": "/assets/CaseStudy/ElectronicBanner.webp"
+        "imageUrl": "/assets/CaseStudy/ElectronicBanner.webp",
+        "link":"/case-study/single-caseStudy/Case-Study-4"
       },
       {
         "title": "Transforming Indian Agriculture",
         "des": "Tech",
-        "imageUrl": "/assets/CaseStudy/MandiBanner.webp"
+        "imageUrl": "/assets/CaseStudy/MandiBanner.webp",
+        "link":"/case-study/single-caseStudy/Case-Study-2"
       }
     ],
     "articles": [
       {
         "title": "Ascendant Intelligence",
         "des": "AI’s Transformative Role in the Future",
-        "imageUrl": "/assets/Article/ascendent.webp"
+        "imageUrl": "/assets/Article/ascendent.webp",
+        "link":"/article/ai/single-article/Ascendant-Intelligence:-AI’s-Transformative-Role-in-the-Future"
       },
       {
         "title": "Nanostructured Photovoltaic Cells",
         "des": "Nanostructured Photovoltaics is a new type of solar technology that uses nanometer-sized structures to harvest sunlight.",
-        "imageUrl": "/assets/Article/nanostructured.webp"
+        "imageUrl": "/assets/Article/nanostructured.webp",
+        "link":"/article/electronics/nanostructured-photovoltaic-cells-have-the-potential-to-revolutionize-solar-energy"
+
       }
     ],
     "newsroom": [
       {
         "title": "Company Milestone",
-        "des": "Celebrating 10 years in business",
-        "imageUrl": "/assets/case2.2.webp"
+        "des": "Celebrating 6 years in business",
+        "imageUrl": "/assets/case2.2.webp",
+        "link":"/news"
       }
     ]
   }

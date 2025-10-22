@@ -89,6 +89,7 @@
   object-fit: cover;
   /* aspect-ratio: 1; */
   aspect-ratio: 16/9;
+  border-radius: 1.2rem;
 }
 
 .about-section3-container {
@@ -138,6 +139,7 @@
   object-fit: cover;
   width: 100%;
   aspect-ratio: 1;
+  border-radius: 1.2rem;
 }
 
 .about-section3-achivment-card {
@@ -207,6 +209,7 @@
   width: 100%;
   object-fit: cover;
   aspect-ratio: 16/9;
+  border-radius: 1.2rem;
 }
 
 .about-section4-heading {
@@ -236,6 +239,7 @@
   width: 100%;
   object-fit: cover;
   aspect-ratio: 16/9;
+  border-radius: 1.2rem;
 }
 
 .about-section5-heading {
@@ -333,6 +337,7 @@
   width: 100%;
   object-fit: cover;
   aspect-ratio: 16/9;
+  border-radius: 1.2rem;
 }
 
 .about-section7-heading {

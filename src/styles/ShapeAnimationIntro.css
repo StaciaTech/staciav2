@@ -1,51 +1,88 @@
-/* ===== DemoOne Component Styles ===== */
-
-/* Main container */
-.demo-one-container {
+.hero-container {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    /* border: 2px solid rgba(255, 255, 255, 0.2); */
-    /* border-radius: 1rem; */
-    /* rounded-xl equivalent */
-    /* background-color: #1e3a8a; */
-    /* Tailwind's bg-blue-700 */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: radial-gradient(circle at 20% 20%, #0b0b0b, #000);
+    box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.8);
 }
 
-/* Title overlay text */
-.demo-one-title {
+/* Center wrapper */
+.hero-content {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
     z-index: 10;
-    pointer-events: none;
-    text-align: center;
-    font-size: clamp(2rem, 8vw, 4.5rem);
-    font-weight: 700;
-    line-height: 1;
-    color: #ffffff;
-    letter-spacing: -0.02em;
-    text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap;
 }
 
-/* Optional subtle animation for the title */
-.demo-one-title {
-    animation: fadeInUp 1s ease-out forwards;
+/* 6 Years Logo Animation */
+.hero-logo {
+    height: clamp(90px, 14vw, 170px);
+    width: auto;
+    opacity: 0;
+    transform: translateX(-60px) scale(0.95);
+    animation: fadeSlideInLeft 1.2s ease-out forwards;
 }
 
-/* Simple fade-in motion */
-@keyframes fadeInUp {
+/* STACIA Text Animation */
+.hero-title {
+    height: clamp(50px, 10vw, 130px);
+    width: auto;
+    opacity: 0;
+    transform: translateX(60px) scale(0.95);
+    animation: fadeSlideInRight 1.2s ease-out 1s forwards;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2));
+}
+
+/* Animations */
+@keyframes fadeSlideInLeft {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateX(-80px) scale(0.95);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes fadeSlideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(80px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Optional shimmer glow on STACIA */
+.hero-title:hover {
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.45));
+    transition: all 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-logo,
+    .hero-title {
+        transform: none;
+        animation: none;
+        opacity: 1;
     }
 }

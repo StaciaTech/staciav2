@@ -45,6 +45,7 @@ import ClientVisit from "./pages/ClientVisit";
 
 
 import ShapeAnimationIntro from "./pages/ShapeAnimationIntro";
+import SpecificIndustries from "./components/Industries/SpecificIndustries";
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -193,7 +194,8 @@ function App() {
         <Route path="/events/:title" element={<SpecificEvent />} />
         <Route path="*" element={<PageNotFound />} />
 
-        <Route path="industries-covered" element={<IndustriesPage />} />
+        <Route path="/industries-covered" element={<IndustriesPage />} />
+        <Route path="/industries-covered/:industryName" element={<SpecificIndustries />} />
         <Route path="/client-visit" element={<ClientVisit />} />
       </Routes>
       <ScrollArrow />

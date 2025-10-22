@@ -1,0 +1,27 @@
+[
+    {
+        "name": "FoodProcessing",
+        "description": "Conversion of raw food materials into packaged goods and ingredients, including preservation, packaging, and quality control."
+    },
+    {
+        "name": "Agriculture",
+        "description": "Cultivation of crops and livestock production, including farm management, crop science, and sustainable practices."
+    },
+    {
+        "name": "Energy",
+        "description": "Production, distribution, and management of power from fossil fuels, renewables, and nuclear sources; grid and storage solutions.",
+        "highlighted": true
+    },
+    {
+        "name": "Manufacturing",
+        "description": "Transformation of raw materials into finished products through assembly lines, fabrication, and industrial automation."
+    },
+    {
+        "name": "ConsumerElectronics",
+        "description": "Design, production, and distribution of electronic devices for personal and home use, including hardware and firmware."
+    },
+    {
+        "name": "Automotive",
+        "description": "Design, manufacturing, and servicing of vehicles and components, including electric and autonomous vehicle technologies."
+    }
+]

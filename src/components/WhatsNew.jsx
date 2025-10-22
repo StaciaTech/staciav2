@@ -258,7 +258,7 @@ export default function WhatsNew({ handleClose }) {
               className="whats-new-grid-item"
               onClick={() => {
                 window.scrollTo(0, 0);
-                navigate("/competition");
+                navigate((eachItem.link || "/news"));
                 handleClose();
               }}
               style={{

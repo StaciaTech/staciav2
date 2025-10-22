@@ -588,7 +588,7 @@ function Popup() {
   const navigate = useNavigate();
 
   // Show popup only if last shown was more than 1 hour ago
-  const ONE_DAY_MS =  6 * 1000;
+  const ONE_DAY_MS =  24 * 60 * 60 * 1000;
   const STORAGE_KEY = "stacia_popup_last_shown";
 
   const [show, setShow] = useState(() => {
