@@ -53,21 +53,99 @@
 
 
 
-import React, { useState, useEffect, useRef } from "react";
-import "../../styles/Home/ToggleButton.css";
-import { MdMiscellaneousServices, MdOutlineMiscellaneousServices } from "react-icons/md";
-import { LuPackage } from 'react-icons/lu';
+// import React, { useState, useEffect, useRef } from "react";
+// import "../../styles/Home/ToggleButton.css";
+// import { MdMiscellaneousServices, MdOutlineMiscellaneousServices } from "react-icons/md";
+// import { LuPackage } from 'react-icons/lu';
 
-const ToggleButton = ({ initial = "products", onToggle }) => {
-  const [selected, setSelected] = useState(initial === "products" ? "products" : "services");
+// const ToggleButton = ({ initial = "products", onToggle }) => {
+//   const [selected, setSelected] = useState(initial === "products" ? "products" : "services");
+//   const containerRef = useRef(null);
+
+//   useEffect(() => {
+//     if (onToggle) onToggle(selected);
+//   }, [selected, onToggle]);
+
+//   const select = (value) => {
+//     if (value !== selected) setSelected(value);
+//   };
+
+//   const handleKeyDown = (e) => {
+//     if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+//       select("services");
+//     } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+//       select("products");
+//     } else if (e.key === "Enter" || e.key === " ") {
+//       // toggle on Enter / Space
+//       select(selected === "products" ? "services" : "products");
+//       e.preventDefault();
+//     }
+//   };
+
+//   return (
+//     <div
+//       className="toggle-root"
+//       role="tablist"
+//       aria-label="Toggle between Services and Products"
+//       onKeyDown={handleKeyDown}
+//       ref={containerRef}
+//       tabIndex={0} // allow keyboard focus on whole control
+//     >
+//       <div className="toggle-track">
+//         <div
+//           className={`toggle-thumb ${selected === "products" ? "thumb-right" : "thumb-left"}`}
+//           aria-hidden="true"
+//         />
+//         <button
+//           role="tab"
+//           aria-selected={selected === "services"}
+//           className={`toggle-option ${selected === "services" ? "option-selected" : ""}`}
+//           onClick={() => select("services")}
+//         >
+//           <MdOutlineMiscellaneousServices style={{ marginRight: "0.4rem" }} />
+//           Services
+//         </button>
+
+//         <button
+//           role="tab"
+//           aria-selected={selected === "products"}
+//           className={`toggle-option ${selected === "products" ? "option-selected" : ""}`}
+//           onClick={() => select("products")}
+//         >
+//           <LuPackage style={{ marginRight: "0.4rem" }} />
+//           Products
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ToggleButton;
+
+
+
+
+// src/components/Home/ToggleButton.jsx
+import React, { useState, useRef } from "react";
+import "../../styles/Home/ToggleButton.css";
+import { MdOutlineMiscellaneousServices } from "react-icons/md";
+import { LuPackage } from "react-icons/lu";
+
+const ToggleButton = ({ value, onToggle, initial = "services" }) => {
+  // If parent provides `value` we act as a controlled component.
+  // Otherwise we keep internal state (uncontrolled fallback).
+  const isControlled = value !== undefined;
+  const [internalSelected, setInternalSelected] = useState(initial);
+  const selected = isControlled ? value : internalSelected;
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    if (onToggle) onToggle(selected);
-  }, [selected, onToggle]);
-
-  const select = (value) => {
-    if (value !== selected) setSelected(value);
+  const select = (val) => {
+    if (isControlled) {
+      if (onToggle) onToggle(val);
+    } else {
+      setInternalSelected(val);
+      if (onToggle) onToggle(val);
+    }
   };
 
   const handleKeyDown = (e) => {
@@ -76,7 +154,6 @@ const ToggleButton = ({ initial = "products", onToggle }) => {
     } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
       select("products");
     } else if (e.key === "Enter" || e.key === " ") {
-      // toggle on Enter / Space
       select(selected === "products" ? "services" : "products");
       e.preventDefault();
     }
@@ -89,7 +166,7 @@ const ToggleButton = ({ initial = "products", onToggle }) => {
       aria-label="Toggle between Services and Products"
       onKeyDown={handleKeyDown}
       ref={containerRef}
-      tabIndex={0} // allow keyboard focus on whole control
+      tabIndex={0}
     >
       <div className="toggle-track">
         <div
@@ -97,6 +174,7 @@ const ToggleButton = ({ initial = "products", onToggle }) => {
           aria-hidden="true"
         />
         <button
+          type="button"
           role="tab"
           aria-selected={selected === "services"}
           className={`toggle-option ${selected === "services" ? "option-selected" : ""}`}
@@ -107,6 +185,7 @@ const ToggleButton = ({ initial = "products", onToggle }) => {
         </button>
 
         <button
+          type="button"
           role="tab"
           aria-selected={selected === "products"}
           className={`toggle-option ${selected === "products" ? "option-selected" : ""}`}

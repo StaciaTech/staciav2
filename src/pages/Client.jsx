@@ -84,7 +84,7 @@ const clients = [
     },
     {
         id: 5,
-        link: "https://beakindia.com/",
+        link: "https://brakesindia.com/",
         img: client5,
     },
     {
