@@ -21,6 +21,8 @@ import {
 } from "react-icons/hi";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import successLottie from "../assets/success.lottie";
+import staciaContactLogo from "../assets/StaciaFavicon.svg";
+
 
 const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -246,7 +248,7 @@ const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
       }
     }
   }, [isOpen]);
-
+  console.log(item, "item")
   useEffect(() => {
     if (isOpen && item) {
       setFormData({
@@ -466,8 +468,8 @@ const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
               <div className="modal-item-image-section-two">
                 <div className="item-image-container-two">
                   <img
-                    src={item.image}
-                    alt={item.title}
+                    src={item?.image || item?.imageUrl || staciaContactLogo}
+                    alt={item?.title}
                     className="modal-item-image-two"
                   />
                 </div>
@@ -475,8 +477,8 @@ const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
 
               {/* Enhanced Glassmorphism Context */}
               <div className="modal-item-info-two">
-                <h4>{item.title}</h4>
-                <p className="modal-item-description-two">{item.description}</p>
+                <h4>{item?.title || "Stacia Corp"}</h4>
+                <p className="modal-item-description-two">{item?.description || item?.oneLine || "Stacia Corp specializes in mechanical engineering, advanced machine solutions, and R&D, providing innovative, precise, and efficient designs that enhance industrial performance and drive technological advancement."}</p>
               </div>
             </div>
           </div>
@@ -545,9 +547,8 @@ const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
 
                         {/* Field Container */}
                         <div
-                          className={`step-field-and-arrow-container ${
-                            isLastStep ? "last-step-container" : ""
-                          }`}
+                          className={`step-field-and-arrow-container ${isLastStep ? "last-step-container" : ""
+                            }`}
                         >
                           {/* Input Field Section */}
                           <div className="step-field">
@@ -562,9 +563,8 @@ const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
                                       onChange={handlePhoneChange}
                                       onBlur={handleInputBlur}
                                       placeholder="Enter your phone number"
-                                      className={`phone-input-field ${
-                                        isErrorVisible("phone") ? "error" : ""
-                                      }`}
+                                      className={`phone-input-field ${isErrorVisible("phone") ? "error" : ""
+                                        }`}
                                     />
                                   </div>
                                   {isErrorVisible("phone") && (
@@ -583,9 +583,8 @@ const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
                                     onKeyDown={handleKeyDown}
                                     rows="4"
                                     placeholder="Tell us about your specific needs or questions..."
-                                    className={`single-field-input ${
-                                      isErrorVisible("message") ? "error" : ""
-                                    }`}
+                                    className={`single-field-input ${isErrorVisible("message") ? "error" : ""
+                                      }`}
                                   />
                                   {isErrorVisible("message") && (
                                     <span className="error-message">
@@ -604,11 +603,10 @@ const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
                                   onBlur={handleInputBlur}
                                   onKeyDown={handleKeyDown}
                                   placeholder={steps[currentStep].placeholder}
-                                  className={`single-field-input elegant-input ${
-                                    isErrorVisible(steps[currentStep].field)
+                                  className={`single-field-input elegant-input ${isErrorVisible(steps[currentStep].field)
                                       ? "error"
                                       : ""
-                                  }`}
+                                    }`}
                                   autoFocus
                                 />
                                 {isErrorVisible(steps[currentStep].field) && (

@@ -3,7 +3,11 @@
     margin: 4rem auto;
     height: 100%;
 }
-
+.events-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .events-hosted-title {
     /* color: #E0E0E0; */
     color: #6B6084;

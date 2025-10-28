@@ -426,18 +426,78 @@ export default MediaKit;
 
 /* ---------------- Child components (use resolveStaticUrl + SafeImg) ---------------- */
 
+// const MediaLogoContainer = ({ eachLogo }) => {
+//   async function downloadFile(s3Url, format, name) {
+//     try {
+//       if (!s3Url) throw new Error("No file URL");
+//       const mimeType = format === "svg" ? "image/svg+xml" : "image/png";
+//       const response = await axios.get(resolveStaticUrl(s3Url), { responseType: "blob" });
+//       const blob = new Blob([response.data], { type: mimeType });
+//       const url = URL.createObjectURL(blob);
+
+//       const link = document.createElement("a");
+//       link.href = url;
+//       link.download = `${(name || "file").replace(/\s+/g, "_")}.${format}`;
+//       document.body.appendChild(link);
+//       link.click();
+//       document.body.removeChild(link);
+//       URL.revokeObjectURL(url);
+//     } catch (error) {
+//       console.error(`Error downloading ${format.toUpperCase()}:`, error);
+//     }
+//   }
+
+//   return (
+//     <div className="media-logos-container">
+//       <div className="media-logo-content-container">
+//         <div className="media-logo-title">{eachLogo?.name}</div>
+//         <p className="media-logo-des">{eachLogo?.description}</p>
+//         <div className="media-logo-format-title">File Formats</div>
+//         <div className="media-logo-format-container">
+//           <div
+//             onClick={() => downloadFile(eachLogo?.pngFile?.imageUrl, "png", eachLogo?.name)}
+//             className="pointer"
+//           >
+//             Download PNG
+//           </div>
+//           <div
+//             onClick={() => downloadFile(eachLogo?.svgFile?.imageUrl, "svg", eachLogo?.name)}
+//             className="pointer"
+//           >
+//             Download SVG
+//           </div>
+//         </div>
+//       </div>
+//       <div className="media-logo-img">
+//         <SafeImg src={eachLogo?.svgFile?.imageUrl} alt={eachLogo?.name} />
+//       </div>
+//     </div>
+//   );
+// };
+
 const MediaLogoContainer = ({ eachLogo }) => {
+  const [selectedFormat, setSelectedFormat] = useState("png");
+  const [selectedColor, setSelectedColor] = useState("color");
+
   async function downloadFile(s3Url, format, name) {
     try {
       if (!s3Url) throw new Error("No file URL");
-      const mimeType = format === "svg" ? "image/svg+xml" : "image/png";
+
+      const mimeTypeMap = {
+        svg: "image/svg+xml",
+        png: "image/png",
+        jpeg: "image/jpeg",
+        pdf: "application/pdf",
+      };
+
+      const mimeType = mimeTypeMap[format] || "image/png";
       const response = await axios.get(resolveStaticUrl(s3Url), { responseType: "blob" });
       const blob = new Blob([response.data], { type: mimeType });
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement("a");
       link.href = url;
-      link.download = `${(name || "file").replace(/\s+/g, "_")}.${format}`;
+      link.download = `${(name || "file").replace(/\s+/g, "_")}_${selectedColor}.${format}`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -447,27 +507,59 @@ const MediaLogoContainer = ({ eachLogo }) => {
     }
   }
 
+  const handleDownload = () => {
+    // Pick correct file URL based on format and color
+    let fileUrl;
+
+    // Example file mapping (adjust according to your API)
+    if (selectedFormat === "png") fileUrl = eachLogo?.pngFile?.imageUrl;
+    else if (selectedFormat === "svg") fileUrl = eachLogo?.svgFile?.imageUrl;
+    else if (selectedFormat === "jpeg") fileUrl = eachLogo?.jpegFile?.imageUrl;
+    else if (selectedFormat === "pdf") fileUrl = eachLogo?.pdfFile?.fileUrl;
+
+    downloadFile(fileUrl, selectedFormat, eachLogo?.name);
+  };
+
   return (
     <div className="media-logos-container">
       <div className="media-logo-content-container">
         <div className="media-logo-title">{eachLogo?.name}</div>
         <p className="media-logo-des">{eachLogo?.description}</p>
-        <div className="media-logo-format-title">File Formats</div>
-        <div className="media-logo-format-container">
-          <div
-            onClick={() => downloadFile(eachLogo?.pngFile?.imageUrl, "png", eachLogo?.name)}
-            className="pointer"
-          >
-            Download PNG
-          </div>
-          <div
-            onClick={() => downloadFile(eachLogo?.svgFile?.imageUrl, "svg", eachLogo?.name)}
-            className="pointer"
-          >
-            Download SVG
-          </div>
+
+        {/* --- Format Selection --- */}
+        <div className="media-logo-format-title">Choose File Format</div>
+        <div className="option-buttons">
+          {["png", "svg", "jpeg", "pdf"].map((format) => (
+            <button
+              key={format}
+              onClick={() => setSelectedFormat(format)}
+              className={`option-btn ${selectedFormat === format ? "active" : ""}`}
+            >
+              {format.toUpperCase()}
+            </button>
+          ))}
         </div>
+
+        {/* --- Color Selection --- */}
+        <div className="media-logo-format-title">Choose Color</div>
+        <div className="option-buttons">
+          {["black", "white", "color"].map((color) => (
+            <button
+              key={color}
+              onClick={() => setSelectedColor(color)}
+              className={`option-btn ${selectedColor === color ? "active" : ""}`}
+            >
+              {color.charAt(0).toUpperCase() + color.slice(1)}
+            </button>
+          ))}
+        </div>
+
+        {/* --- Download Button --- */}
+        <button onClick={handleDownload} className="download-btn">
+          Download
+        </button>
       </div>
+
       <div className="media-logo-img">
         <SafeImg src={eachLogo?.svgFile?.imageUrl} alt={eachLogo?.name} />
       </div>

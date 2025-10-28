@@ -523,7 +523,7 @@ export default function SingleProduct() {
       ) : (
         <div>
           <div>
-            encio
+            {/* encio */}
             <div className="product-details">
               <div className="product-details2">
                 <div style={{ marginTop: "40px" }}>

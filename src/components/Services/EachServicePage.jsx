@@ -591,6 +591,7 @@ import LoadingStar from "../LoadingStar";
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
 const SideBar = lazy(() => import("../SideBar"));
+const SpecificHeroSection = lazy(() => import("../SpecificHeroSection"));
 const Star = lazy(() => import("../Star"));
 const Footer = lazy(() => import("../Footer"));
 const MobileFooter = lazy(() => import("../MobileFooter"));
@@ -641,7 +642,7 @@ function EachServicePage() {
             <SideBar />
           </Suspense>
         </div>
-        <div className="each-service-hero-section">
+        {/* <div className="each-service-hero-section">
           <div className="each-service-title">
             <span>{singleService?.title || "Service Not Found"}</span>
             <Suspense
@@ -654,7 +655,8 @@ function EachServicePage() {
               <Star />
             </Suspense>
           </div>
-        </div>
+        </div> */}
+        <SpecificHeroSection item={singleService} />
         <div className="each-service-container">
           <div className="each-service-section1">
             <div className="each-service-section1-img">

@@ -1039,12 +1039,12 @@ import ClientInquiryModal from '../components/Client/ClientInquiryModal';
 import { departments, roadmapStepsData } from '../Data/departmentData.js';
 import { GoArrowDownRight } from 'react-icons/go';
 import { BiMessageDetail } from "react-icons/bi";
-import {  FaRocket, FaChartLine, FaWrench, FaLock, FaPhone } from 'react-icons/fa';
+import { FaRocket, FaChartLine, FaWrench, FaLock, FaPhone } from 'react-icons/fa';
 import CompanyImage from "../assets/StaciaFavicon.svg";
 import BusinessStartupGuide from './Bussiness.jsx'; // Verify this path matches the file location
 import { GrCurrency, GrDocumentPerformance, GrShieldSecurity } from 'react-icons/gr';
 import { AiOutlineSolution } from 'react-icons/ai';
-import {  IoMdMail } from 'react-icons/io';
+import { IoMdMail } from 'react-icons/io';
 import { FaPhoneVolume } from "react-icons/fa6";
 
 // Lazy load components
@@ -1219,6 +1219,40 @@ const ClientVisit = () => {
 
                 <section className="welcome-section">
                     <div className="welcome-container">
+
+
+                        <motion.div
+                            className="welcome-visual"
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                        >
+                            <div className="visual-container">
+                                <div className="product-preview" style={{ backgroundColor: "#f5f5f5" }}>
+                                    <img src={CompanyImage} className="product-image" loading="lazy" alt="Stacia" />
+                                </div>
+
+                                <div className="floating-elements">
+                                    <div className="floating-element element-1" style={{ color: "#ffffff" }}>
+                                        <span><FaChartLine /></span>
+                                        <span>Analytics</span>
+                                    </div>
+                                    <div className="floating-element element-5" style={{ color: "#ffffff" }}>
+                                        <span><GrDocumentPerformance /></span>
+                                        <span>Performance</span>
+                                    </div>
+                                    <div className="floating-element element-3" style={{ color: "#ffffff" }}>
+                                        <span><FaWrench /></span>
+                                        <span>Customization</span>
+                                    </div>
+                                    <div className="floating-element element-4" style={{ color: "#ffffff" }}>
+                                        <span><GrShieldSecurity /></span>
+                                        <span>Security</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
                         <motion.div
                             className="welcome-content"
                             initial={{ opacity: 0, y: 50 }}
@@ -1305,7 +1339,7 @@ const ClientVisit = () => {
                                     }}
                                 >
                                     <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                                        <span style={{ marginRight: '8px', color: '#8E6FFF' }}><IoMdMail size={'1.5rem'}/></span>
+                                        <span style={{ marginRight: '8px', color: '#8E6FFF' }}><IoMdMail size={'1.5rem'} /></span>
                                         <input
                                             type="email"
                                             id="email"
@@ -1360,7 +1394,7 @@ const ClientVisit = () => {
                                     }}
                                 >
                                     <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                                        <span style={{ marginRight: '8px', color: '#8E6FFF' }}><FaPhoneVolume  size={'1.5rem'}/> </span>
+                                        <span style={{ marginRight: '8px', color: '#8E6FFF' }}><FaPhoneVolume size={'1.5rem'} /> </span>
                                         <input
                                             type="email"
                                             id="email"
@@ -1407,38 +1441,6 @@ const ClientVisit = () => {
                                     {result}
                                 </p>
                             )}
-                        </motion.div>
-
-                        <motion.div
-                            className="welcome-visual"
-                            initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: 0.4 }}
-                        >
-                            <div className="visual-container">
-                                <div className="product-preview" style={{ backgroundColor: "#f5f5f5" }}>
-                                    <img src={CompanyImage} className="product-image" loading="lazy" alt="Stacia" />
-                                </div>
-
-                                <div className="floating-elements">
-                                    <div className="floating-element element-1" style={{ color: "#ffffff" }}>
-                                        <span><FaChartLine /></span>
-                                        <span>Analytics</span>
-                                    </div>
-                                    <div className="floating-element element-5" style={{ color: "#ffffff" }}>
-                                        <span><GrDocumentPerformance /></span>
-                                        <span>Performance</span>
-                                    </div>
-                                    <div className="floating-element element-3" style={{ color: "#ffffff" }}>
-                                        <span><FaWrench /></span>
-                                        <span>Customization</span>
-                                    </div>
-                                    <div className="floating-element element-4" style={{ color: "#ffffff" }}>
-                                        <span><GrShieldSecurity /></span>
-                                        <span>Security</span>
-                                    </div>
-                                </div>
-                            </div>
                         </motion.div>
                     </div>
                 </section>
@@ -1559,7 +1561,7 @@ const ClientVisit = () => {
                                         }}
                                     >
                                         <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                                            <span style={{ marginRight: '8px', color: '#8E6FFF',  }}><IoMdMail size={'2rem'}/></span>
+                                            <span style={{ marginRight: '8px', color: '#8E6FFF', }}><IoMdMail size={'2rem'} /></span>
                                             <input
                                                 type="email"
                                                 id="email"

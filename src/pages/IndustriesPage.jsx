@@ -141,7 +141,41 @@ const IndustriesPage = () => {
           </motion.div>
         </div>
       </section>
-
+      {/* Industry cards */}
+      <section className="industries-grid-section">
+        <div className="industries-grid">
+          {industries.map((ind, idx) => (
+            <motion.div
+              key={ind.id}
+              className={`industry-card ${activeIndustry === ind.title ? 'selected' : ''}`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: idx * 0.05 }}
+            >
+              <div className="industry-card-header">
+                <div className="industry-icon">{ind.icon}</div>
+                <div className="industry-title">{ind.title}</div>
+              </div>
+              <p className="industry-desc">
+                {/* Tailored solutions for {ind.title} companies leveraging our multi-disciplinary expertise in product engineering, automation, and digital platforms. */}
+                {ind.description}
+              </p>
+              <div className="industry-actions">
+                <button className="btn-link" onClick={() => navigate(`/services/${departmentKeyByIndustry[ind.title] || 'web-development'}`)}>
+                  Explore Services <GoArrowRight />
+                </button>
+                <button className="btn-link" onClick={() => navigate(`/project/${ind.title}`)}>
+                  View Projects <GoArrowRight />
+                </button>
+                <button className="btn-link" onClick={() => navigate(`/case-study/${ind.title}`)}>
+                  Case Studies <GoArrowRight />
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
       {/*Department Information */}
 
@@ -272,41 +306,7 @@ const IndustriesPage = () => {
         </div>
       </div>
 
-      {/* Industry cards */}
-      <section className="industries-grid-section">
-        <div className="industries-grid">
-          {industries.map((ind, idx) => (
-            <motion.div
-              key={ind.id}
-              className={`industry-card ${activeIndustry === ind.title ? 'selected' : ''}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-            >
-              <div className="industry-card-header">
-                <div className="industry-icon">{ind.icon}</div>
-                <div className="industry-title">{ind.title}</div>
-              </div>
-              <p className="industry-desc">
-                {/* Tailored solutions for {ind.title} companies leveraging our multi-disciplinary expertise in product engineering, automation, and digital platforms. */}
-                {ind.description}
-              </p>
-              <div className="industry-actions">
-                <button className="btn-link" onClick={() => navigate(`/services/${departmentKeyByIndustry[ind.title] || 'web-development'}`)}>
-                  Explore Services <GoArrowRight />
-                </button>
-                <button className="btn-link" onClick={() => navigate(`/project/${ind.title}`)}>
-                  View Projects <GoArrowRight />
-                </button>
-                <button className="btn-link" onClick={() => navigate(`/case-study/${ind.title}`)}>
-                  Case Studies <GoArrowRight />
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+
 
       {/* Horizontal roadmap per department */}
       {/* <section className="industries-roadmap">
