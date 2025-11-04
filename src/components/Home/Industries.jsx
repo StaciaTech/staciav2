@@ -383,6 +383,7 @@ export default function IndustriesDisplay() {
                     .replace(/\s+/g, "-")          // spaces → hyphens
                     .replace(/[^a-z0-9-]/g, "");   // remove special chars
 
+                  // navigateTo("/industries-covered");
                   navigateTo(`/industries-covered/${formattedTitle}`);
                 }}
               >

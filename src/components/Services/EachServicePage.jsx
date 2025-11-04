@@ -582,11 +582,12 @@ import { SlLike } from "react-icons/sl";
 import { useParams } from "react-router-dom";
 import { motion, useTransform, useScroll } from "framer-motion";
 import servicesData from "../../Data/Services.json";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import SuggestionProducts from "../ReUsableComp/SuggestionProducts"
 
 import SuggestionService from "../ReUsableComp/SuggestionService";
 import LoadingStar from "../LoadingStar";
+import BentoCarosel from "./BentoCarosel";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
@@ -596,6 +597,13 @@ const Star = lazy(() => import("../Star"));
 const Footer = lazy(() => import("../Footer"));
 const MobileFooter = lazy(() => import("../MobileFooter"));
 const FAQComp = lazy(() => import("../FAQComp"));
+
+const items = [
+  { title: "Welcome", description: "First slide — will move up then start carousel" },
+  { title: "Feature A", description: "Info about feature A" },
+  { title: "Feature B", description: "Info about feature B" },
+  { title: "End", description: "Last slide" },
+];
 
 // Static card data
 const cardsData = [
@@ -657,8 +665,15 @@ function EachServicePage() {
           </div>
         </div> */}
         <SpecificHeroSection item={singleService} />
+
         <div className="each-service-container">
-          <div className="each-service-section1">
+          <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+            <BentoCarosel items={items} perSlideDuration={2.0} />
+          </div>
+        </div>
+
+        <div className="each-service-container">
+          {/* <div className="each-service-section1">
             <div className="each-service-section1-img">
               <img
                 src={singleService?.imageUrl || "No image available."}
@@ -670,7 +685,7 @@ function EachServicePage() {
               <div>Overview</div>
               <p>{singleService?.oneLine || "No description available."}</p>
             </div>
-          </div>
+          </div> */}
           <div className="each-service-howWeDo-section">
             {singleService?.whatWeDo?.length ? (
               <HorizontalScrollContainer
@@ -710,8 +725,10 @@ function EachServicePage() {
             <FAQComp />
           </Suspense>
         </div>
+
+
         <div>
-          <SuggestionProducts/>
+          <SuggestionProducts />
           <SuggestionService />
         </div>
         <div>

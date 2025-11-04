@@ -526,32 +526,38 @@ const MediaLogoContainer = ({ eachLogo }) => {
         <div className="media-logo-title">{eachLogo?.name}</div>
         <p className="media-logo-des">{eachLogo?.description}</p>
 
-        {/* --- Format Selection --- */}
-        <div className="media-logo-format-title">Choose File Format</div>
-        <div className="option-buttons">
-          {["png", "svg", "jpeg", "pdf"].map((format) => (
-            <button
-              key={format}
-              onClick={() => setSelectedFormat(format)}
-              className={`option-btn ${selectedFormat === format ? "active" : ""}`}
-            >
-              {format.toUpperCase()}
-            </button>
-          ))}
-        </div>
+        <div style={{ display: 'flex' , gap: '2rem' }}>
+          {/* --- Format Selection --- */}
+          <div>
+            <div className="media-logo-format-title">Choose File Format</div>
+            <div className="option-buttons">
+              {["png", "svg", "jpeg", "pdf"].map((format) => (
+                <button
+                  key={format}
+                  onClick={() => setSelectedFormat(format)}
+                  className={`option-btn ${selectedFormat === format ? "active" : ""}`}
+                >
+                  {format.toUpperCase()}
+                </button>
+              ))}
+            </div>
 
-        {/* --- Color Selection --- */}
-        <div className="media-logo-format-title">Choose Color</div>
-        <div className="option-buttons">
-          {["black", "white", "color"].map((color) => (
-            <button
-              key={color}
-              onClick={() => setSelectedColor(color)}
-              className={`option-btn ${selectedColor === color ? "active" : ""}`}
-            >
-              {color.charAt(0).toUpperCase() + color.slice(1)}
-            </button>
-          ))}
+          </div>
+          {/* --- Color Selection --- */}
+          <div>
+            <div className="media-logo-format-title">Choose Color</div>
+            <div className="option-buttons">
+              {["black", "white", "color"].map((color) => (
+                <button
+                  key={color}
+                  onClick={() => setSelectedColor(color)}
+                  className={`option-btn ${selectedColor === color ? "active" : ""}`}
+                >
+                  {color.charAt(0).toUpperCase() + color.slice(1)}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* --- Download Button --- */}
