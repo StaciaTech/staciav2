@@ -89,7 +89,7 @@
       "display": {
         "displayUrl": "./assets/mediakit/Stacia-Corp.webp"
       },
-      "name": "Stacia Corp Brocher",
+      "name": "Stacia Corp brochure",
       "file": {
         "fileUrl": "/assets/mediakit/Stacia-Corp.pdf"
       }
@@ -98,7 +98,7 @@
       "display": {
         "displayUrl": "./assets/mediakit/Sastem-Global.webp"
       },
-      "name": "Sastem Global Brocher",
+      "name": "Sastem Global brochure",
       "file": {
         "fileUrl": "/assets/mediakit/Sastem-Global.pdf"
       }
@@ -107,7 +107,7 @@
       "display": {
         "displayUrl": "./assets/mediakit/Stacia-Tech.webp"
       },
-      "name": "Stacia Tech Brocher",
+      "name": "Stacia Tech brochure",
       "file": {
         "fileUrl": "/assets/mediakit/Stacia-Tech.pdf"
       }
@@ -116,7 +116,7 @@
      "display": {
        "displayUrl": "./assets/mediakit/Stacia-Group.webp"
      },
-     "name": "Stacia Brocher",
+     "name": "Stacia brochure",
      "file": {
        "fileUrl": "/assets/mediakit/Stacia-Group.pdf"
      }

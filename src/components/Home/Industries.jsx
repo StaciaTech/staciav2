@@ -385,6 +385,7 @@ export default function IndustriesDisplay() {
 
                   // navigateTo("/industries-covered");
                   navigateTo(`/industries-covered/${formattedTitle}`);
+                  window.scrollTo(0, 0);
                 }}
               >
                 {industries[currentSlide]?.title === data.title ? (

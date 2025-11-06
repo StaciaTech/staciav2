@@ -406,7 +406,7 @@ function MediaKit() {
 
           {/* Brochers Section */}
           <div id="brochers">
-            <div className="media-section-heading">Brochers</div>
+            <div className="media-section-heading">Brochure</div>
             <div className="media-leader-card-container">
               {getBrochuresArray().map((eachBroucher, i) => (
                 <MediaBroucherContainer key={i} eachBroucher={eachBroucher} />
@@ -486,7 +486,7 @@ const MediaLogoContainer = ({ eachLogo }) => {
       const mimeTypeMap = {
         svg: "image/svg+xml",
         png: "image/png",
-        jpeg: "image/jpeg",
+        // jpeg: "image/jpeg",
         pdf: "application/pdf",
       };
 
@@ -514,7 +514,7 @@ const MediaLogoContainer = ({ eachLogo }) => {
     // Example file mapping (adjust according to your API)
     if (selectedFormat === "png") fileUrl = eachLogo?.pngFile?.imageUrl;
     else if (selectedFormat === "svg") fileUrl = eachLogo?.svgFile?.imageUrl;
-    else if (selectedFormat === "jpeg") fileUrl = eachLogo?.jpegFile?.imageUrl;
+    // else if (selectedFormat === "jpeg") fileUrl = eachLogo?.jpegFile?.imageUrl;
     else if (selectedFormat === "pdf") fileUrl = eachLogo?.pdfFile?.fileUrl;
 
     downloadFile(fileUrl, selectedFormat, eachLogo?.name);
@@ -531,7 +531,7 @@ const MediaLogoContainer = ({ eachLogo }) => {
           <div>
             <div className="media-logo-format-title">Choose File Format</div>
             <div className="option-buttons">
-              {["png", "svg", "jpeg", "pdf"].map((format) => (
+              {["png", "svg", "pdf"].map((format) => (
                 <button
                   key={format}
                   onClick={() => setSelectedFormat(format)}
@@ -567,7 +567,7 @@ const MediaLogoContainer = ({ eachLogo }) => {
       </div>
 
       <div className="media-logo-img">
-        <SafeImg src={eachLogo?.svgFile?.imageUrl} alt={eachLogo?.name} />
+        <SafeImg src={eachLogo?.pngFile?.imageUrl} alt={eachLogo?.name} />
       </div>
     </div>
   );

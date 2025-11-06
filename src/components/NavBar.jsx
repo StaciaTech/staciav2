@@ -666,31 +666,66 @@ function NavBar() {
   const lastScrollYRef = useRef(0);
 
   useEffect(() => {
+    // const handleScrollForShow = () => {
+    //   const currentScrollY = window.scrollY;
+
+    //   // If a dropdown is open or WhatsNew is open, force nav visible
+    //   if (activeDropdown || openWhatsNew) {
+    //     setShowNavbar(true);
+    //   } else {
+    //     // If this is the very first scroll after load, don't hide the nav
+    //     if (!hasScrolledOnceRef.current) {
+    //       hasScrolledOnceRef.current = true;
+    //       setShowNavbar(true);
+    //     } else {
+    //       // Normal show/hide behavior based on scroll direction
+    //       if (currentScrollY > lastScrollYRef.current) {
+    //         // scrolling down -> hide
+    //         setShowNavbar(false);
+    //       } else {
+    //         // scrolling up -> show
+    //         setShowNavbar(true);
+    //       }
+    //     }
+    //   }
+
+    //   lastScrollYRef.current = currentScrollY;
+    // };
+
+
     const handleScrollForShow = () => {
       const currentScrollY = window.scrollY;
+      const scrollDiff = currentScrollY - lastScrollYRef.current;
 
-      // If a dropdown is open or WhatsNew is open, force nav visible
+      // Sensitivity threshold in pixels
+      const threshold = 15;
+
+      // If dropdown or "What's New" open -> always show navbar
       if (activeDropdown || openWhatsNew) {
         setShowNavbar(true);
-      } else {
-        // If this is the very first scroll after load, don't hide the nav
+      }
+      else {
+        // Skip very first scroll
         if (!hasScrolledOnceRef.current) {
           hasScrolledOnceRef.current = true;
           setShowNavbar(true);
-        } else {
-          // Normal show/hide behavior based on scroll direction
-          if (currentScrollY > lastScrollYRef.current) {
-            // scrolling down -> hide
+        }
+        else {
+          // Hide if scrolling down more than threshold
+          if (scrollDiff > threshold) {
             setShowNavbar(false);
-          } else {
-            // scrolling up -> show
+          }
+          // Show if scrolling up more than threshold
+          else if (scrollDiff < -threshold) {
             setShowNavbar(true);
           }
         }
       }
 
+      // Save current position
       lastScrollYRef.current = currentScrollY;
     };
+
 
     window.addEventListener("scroll", handleScrollForShow);
     return () => {

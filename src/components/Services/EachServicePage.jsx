@@ -587,7 +587,8 @@ import SuggestionProducts from "../ReUsableComp/SuggestionProducts"
 
 import SuggestionService from "../ReUsableComp/SuggestionService";
 import LoadingStar from "../LoadingStar";
-import BentoCarosel from "./BentoCarosel";
+import imgban from "../../assets/serviceDefaultImg.png";
+import BentoCarousel from "./BentoCarousel";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
@@ -611,6 +612,7 @@ const cardsData = [
   { des: "lorem ipsum dolor sit amet, consectetur adip occum primis in faucibus et justo" },
   { des: "lorem ipsum dolor sit amet, consectetur adip occum primis in faucibus et justo" },
 ];
+
 
 function EachServicePage() {
   const params = useParams();
@@ -666,12 +668,8 @@ function EachServicePage() {
         </div> */}
         <SpecificHeroSection item={singleService} />
 
-        <div className="each-service-container">
-          <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-            <BentoCarosel items={items} perSlideDuration={2.0} />
-          </div>
-        </div>
-
+      
+        <BentoCarousel />
         <div className="each-service-container">
           {/* <div className="each-service-section1">
             <div className="each-service-section1-img">

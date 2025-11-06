@@ -558,11 +558,11 @@ export default function SingleProduct() {
 
               }}
             >
-              <img
+              {/* <img
                 src={SelectedProduct?.imageUrl}
                 alt={SelectedProduct?.title}
                 loading="lazy"
-              />
+              /> */}
               {/* inside render */}
               {/* <SingleProductImage
               
@@ -580,6 +580,16 @@ export default function SingleProduct() {
                 <ThreeImageViewer imageUrl={SelectedProduct?.imageUrl} height="60vh" />
               )}
             </div> */}
+            {/* here i want to implement three js concept */}
+
+            <SingleProductImage
+              modelUrl={SelectedProduct?.animationUrl || null}
+              imageUrl={SelectedProduct?.imageUrl || null}
+              autoRotate={true}
+              height="60vh"
+            />
+
+
             <div className="rotate-text"></div>
             {SelectedProduct.productDetails && (
               <div

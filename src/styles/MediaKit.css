@@ -17,6 +17,7 @@
   display: flex;
   gap: 10px;
   margin: 8px 0 15px;
+  font-family: EuclidMedium;
 }
 
 .option-btn {
@@ -27,6 +28,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 14px;
+  font-family: EuclidMedium;
 }
 
 .option-btn.active {
@@ -119,7 +121,7 @@
 }
 
 .media-logo-format-title {
-  font-family: EuclidMedium;
+  font-family: EuclidSemibold;
   font-size: 1.25rem;
 }
 

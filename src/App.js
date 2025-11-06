@@ -194,8 +194,10 @@ function App() {
         <Route path="/events/:title" element={<SpecificEvent />} />
         <Route path="*" element={<PageNotFound />} />
 
+        <Route path="/industries-covered/:formattedTitle" element={<IndustriesPage />} />
+
         <Route path="/industries-covered" element={<IndustriesPage />} />
-        <Route path="/industries-covered/:industryName" element={<SpecificIndustries />} />
+        <Route path="/industries-covered-read_more/:industryName" element={<SpecificIndustries />} />
         <Route path="/client-visit" element={<ClientVisit />} />
       </Routes>
       <ScrollArrow />

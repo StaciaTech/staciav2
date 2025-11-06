@@ -476,7 +476,7 @@ const LeadModalThree = ({ isOpen, onClose, item, onSubmit }) => {
               </div>
 
               {/* Enhanced Glassmorphism Context */}
-              <div className="modal-item-info-two">
+              <div className="modal-item-info-two" >
                 <h4>{item?.title || "Stacia Corp"}</h4>
                 <p className="modal-item-description-two">{item?.description || item?.oneLine || "Stacia Corp specializes in mechanical engineering, advanced machine solutions, and R&D, providing innovative, precise, and efficient designs that enhance industrial performance and drive technological advancement."}</p>
               </div>
