@@ -18,6 +18,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import tech from "../assets/TEchnology.lottie";
 import mech from "../assets/Engineer Gears.lottie";
 import elec from "../assets/Circuit Board.lottie";
+import IndustriesCard from '../components/Industries/IndustriesCard';
 
 /* ---------- data / maps (unchanged) ---------- */
 
@@ -81,7 +82,7 @@ const IndustriesPage = () => {
     setActiveIndustry(title);
     const newSlug = toSlug(title);
     navigate(`/industries-covered/${newSlug}`);
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   };
 
   return (
@@ -119,7 +120,7 @@ const IndustriesPage = () => {
       </section>
 
       {/* Industry cards */}
-      <section className="industries-grid-section">
+      {/* <section className="industries-grid-section">
         <div className="industries-grid">
           {industries.map((ind, idx) => (
             <motion.div
@@ -149,7 +150,9 @@ const IndustriesPage = () => {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
+
+      <IndustriesCard industries={industries} activeIndustry={activeIndustry} />
 
       {/* Department Information */}
       <div className="indus-bld-container">
@@ -190,50 +193,16 @@ const IndustriesPage = () => {
           </div>
         </div>
 
-        <div className="indus-bld-quote">
+        {/* <div className="indus-bld-quote">
           <blockquote>
             With Stacia's integrated departments, we can develop products with minimal infrastructure concerns
             <br />
             making operations efficient , cost-effective , and secure.
           </blockquote>
           <p>- <b> Stacia Corp </b></p>
-        </div>
+        </div> */}
 
-        <div className="indus-bld-examples">
-          <h2>See what’s possible</h2>
-          <h3>Example Projects</h3>
-          <p>Dive into our portfolio. Get inspired by our open-source examples and real-world applications developed by Stacia.</p>
 
-          <div className="indus-bld-section">
-            <div className="indus-bld-text">
-              <h3>Product Design Project for Manufacturing</h3>
-              <p>Collaborate across departments to design and manufacture innovative products. This project integrates mechanical, electronic, and tech elements to create a comprehensive solution.</p>
-            </div>
-
-            <div className="indus-bld-image">
-              <img src={""} alt="Jira example" />
-            </div>
-          </div>
-
-          <div className="industries-actions-inner">
-            <button className="action-btn" onClick={() => navigate('/services')}>
-              <span className="action-title">Explore Services</span>
-              <GoArrowRight />
-            </button>
-            <button className="action-btn" onClick={() => navigate('/project')}>
-              <span className="action-title">Browse Projects</span>
-              <GoArrowRight />
-            </button>
-            <button className="action-btn" onClick={() => navigate('/case-study')}>
-              <span className="action-title">See Case Studies</span>
-              <GoArrowRight />
-            </button>
-            <button className="action-btn primary" onClick={() => navigate('/client-visit')}>
-              <span className="action-title">Start Your Project</span>
-              <GoArrowRight />
-            </button>
-          </div>
-        </div>
       </div>
 
       <section className="industries-stats">
@@ -254,7 +223,7 @@ const IndustriesPage = () => {
         </div>
       </section>
 
-      <div className="cta-section">
+      {/* <div className="cta-section">
         <div className="cta-container">
           <div className="cta-content">
             <h2 className="cta-title">Have an industry challenge?</h2>
@@ -266,6 +235,15 @@ const IndustriesPage = () => {
             </a>
           </div>
         </div>
+      </div> */}
+
+      <div className="indus-bld-quote">
+        <blockquote>
+          With Stacia's integrated departments, we can develop products with minimal infrastructure concerns
+          <br />
+          making operations efficient , cost-effective , and secure.
+        </blockquote>
+        <p>- <b> Stacia Corp </b></p>
       </div>
 
       <Footer />
