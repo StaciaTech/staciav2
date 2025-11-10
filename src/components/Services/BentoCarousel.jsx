@@ -3,217 +3,150 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import "../../styles/Services/BentoCarousel.css";
 import imgslide from "../../assets/serviceDefaultImg.png";
 
+
+
+// ────────────────────── SLIDE DATA ──────────────────────
 const slideData = [
-  { id: 1, title: "Slide 1: Upward Motion", pattern: 0, color: "#4f46e5", text: "This slide moves up on exit.", imageUrl: imgslide },
-  { id: 2, title: "Slide 2: Downward Motion", pattern: 1, color: "#e11d48", text: "This slide moves down on exit.", imageUrl: imgslide },
-  { id: 3, title: "Slide 3: Right Motion", pattern: 2, color: "#059669", text: "This slide moves right on exit.", imageUrl: imgslide },
-  { id: 4, title: "Slide 4: Left Motion", pattern: 3, color: "#f59e0b", text: "This slide moves left on exit.", imageUrl: imgslide },
-  { id: 5, title: "Slide 5: Repeat Up", pattern: 0, color: "#06b6d4", text: "Cycle restarts here.", imageUrl: imgslide },
-  { id: 6, title: "Slide 6: Downward", pattern: 1, color: "#7c3aed", text: "More content.", imageUrl: imgslide },
-  { id: 7, title: "Slide 7: Right", pattern: 2, color: "#ec4899", text: "More content.", imageUrl: "https://placehold.co/400x200/ec4899/ffffff?text=Concept" },
-  { id: 8, title: "Slide 8: Left", pattern: 3, color: "#14b8a6", text: "Final concept.", imageUrl: imgslide },
+  { id: 1, title: 'Slide 1: Upward Motion', pattern: 0, color: '#4f46e5', text: 'This slide moves up on exit.', imageUrl: 'https://placehold.co/400x200/4f46e5/ffffff?text=Slide+1' },
+  { id: 2, title: 'Slide 2: Downward Motion', pattern: 1, color: '#e11d48', text: 'This slide moves down on exit.', imageUrl: 'https://placehold.co/400x200/e11d48/ffffff?text=Slide+2' },
+  { id: 3, title: 'Slide 3: Right Motion',  pattern: 2, color: '#059669', text: 'This slide moves right on exit.', imageUrl: 'https://placehold.co/400x200/059669/ffffff?text=Slide+3' },
+  { id: 4, title: 'Slide 4: Left Motion',   pattern: 3, color: '#f59e0b', text: 'This slide moves left on exit.', imageUrl: 'https://placehold.co/400x200/f59e0b/ffffff?text=Slide+4' },
+  { id: 5, title: 'Slide 5: Pattern Repeats', pattern: 0, color: '#06b6d4', text: 'Cycle restarts.', imageUrl: 'https://placehold.co/400x200/06b6d4/ffffff?text=Slide+5' },
+  { id: 6, title: 'Slide 6: Downward Motion', pattern: 1, color: '#7c3aed', text: 'Another down motion.', imageUrl: 'https://placehold.co/400x200/7c3aed/ffffff?text=Slide+6' },
+  { id: 7, title: 'Slide 7: Right Motion',  pattern: 2, color: '#ec4899', text: 'Smooth right exit.', imageUrl: 'https://placehold.co/400x200/ec4899/ffffff?text=Slide+7' },
+  { id: 8, title: 'Slide 8: Left Motion',   pattern: 3, color: '#14b8a6', text: 'Final slide.', imageUrl: 'https://placehold.co/400x200/14b8a6/ffffff?text=Slide+8' },
 ];
 
-const TRANSITION_LOCK_MS = 700;
-
-const getTransformStyle = (index, activeIndex) => {
-  if (index === activeIndex) return `translateX(0) translateY(0)`;
-  const pattern = index % 4;
-  const isBefore = index < activeIndex;
-  // If before active, move it off-screen in the "previous" direction for pattern
-  if (isBefore) {
-    switch (pattern) {
-      case 0: return `translateY(-100vh)`;
-      case 1: return `translateY(100vh)`;
-      case 2: return `translateX(100vw)`;
-      case 3: return `translateX(-100vw)`;
-      default: return ``;
-    }
+/* ────────────────────── TRANSFORM ────────────────────── */
+const getTransform = (i, active) => {
+  if (i === active) return 'translate(0,0)';
+  const p = i % 4;
+  const prev = i < active;
+  if (prev) {
+    return p === 0 ? 'translateY(-100vh)' :
+           p === 1 ? 'translateY(100vh)' :
+           p === 2 ? 'translateX(100vw)' : 'translateX(-100vw)';
   } else {
-    // if after active, move it off-screen in the "next" direction for pattern
-    switch (pattern) {
-      case 0: return `translateY(100vh)`;
-      case 1: return `translateY(-100vh)`;
-      case 2: return `translateX(-100vw)`;
-      case 3: return `translateX(100vw)`;
-      default: return ``;
-    }
+    return p === 0 ? 'translateY(100vh)' :
+           p === 1 ? 'translateY(-100vh)' :
+           p === 2 ? 'translateX(-100vw)' : 'translateX(100vw)';
   }
 };
 
-const Slide = ({ index, data, activeIndex }) => {
-  const isActive = index === activeIndex;
-  const transformStyle = getTransformStyle(index, activeIndex);
-  const [concept, title] = data.title.split(":");
+/* ────────────────────── SLIDE COMPONENT ────────────────────── */
+const Slide = ({ idx, data, active }) => {
+  const isActive = idx === active;
   return (
     <div
-      className="slide"
+      className="ser-car-slide"
       style={{
-        transform: transformStyle,
+        transform: getTransform(idx, active),
         zIndex: isActive ? 20 : 1,
+        // backgroundColor: data.color,
       }}
-      aria-hidden={!isActive}
     >
-      <div className={`slide-card ${isActive ? "active" : ""}`} role="group" aria-roledescription="slide" aria-label={`${index + 1} of ${slideData.length}`}>
-        <div className="card-media">
-          <img
-            src={data.imageUrl}
-            alt={data.title}
-            className="card-image"
-            onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/400x200/333333/ffffff?text=Image+Load+Failed"; }}
-          />
-          <p className="concept-text">{concept?.trim()}</p>
-        </div>
-
-        <h1 className="card-title">{title?.trim()}</h1>
-        <p className="card-desc">{data.text}</p>
-
-        <div className="card-footer">
-          {index + 1} / {slideData.length}
-        </div>
+      <div className={`ser-car-card ${isActive ? 'ser-car-active' : ''}`}>
+        <img src={data.imageUrl} alt={data.title} className="ser-car-img" />
+        <h1 className="ser-car-title">{data.title}</h1>
+        <p className="ser-car-desc">{data.text}</p>
+        <div className="ser-car-footer">{idx + 1} / {slideData.length}</div>
       </div>
     </div>
   );
 };
 
+/* ────────────────────── MAIN CAROUSEL ────────────────────── */
 export default function BentoCarousel() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isLocked, setIsLocked] = useState(false); // to prevent rapid triggers
-  const [inView, setInView] = useState(false);
-  const containerRef = useRef(null);
-  const touchStartRef = useRef(null);
+  const [active, setActive] = useState(0);
+  const containerRef = useRef(null);   // ← useRef – NOT a string
+  const scrolling = useRef(false);
+  const total = slideData.length;
 
-  const lastIndex = slideData.length - 1;
+  // CSS variable for total slides
+  useEffect(() => {
+    document.documentElement.style.setProperty('--total-slides', total);
+  }, [total]);
 
-  const setActiveWithLock = useCallback((newIndex) => {
-    setIsLocked(true);
-    setActiveIndex(newIndex);
-    setTimeout(() => setIsLocked(false), TRANSITION_LOCK_MS);
-  }, []);
-
-  // Intersection observer: set inView when a chunk of the carousel is visible
+  /* ───── WHEEL ───── */
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          // consider it "active" when at least 45% visible
-          setInView(entry.intersectionRatio >= 0.45);
-        });
-      },
-      { threshold: [0, 0.25, 0.45, 0.6, 1] }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
 
-  // handle wheel: return true if handled (we should preventDefault)
-  const handleScrollDelta = useCallback((deltaY) => {
-    if (isLocked) return false;
-    const direction = deltaY > 0 ? 1 : -1; // 1 => scroll down (next), -1 => up (prev)
-    const candidate = activeIndex + direction;
-
-    if (candidate >= 0 && candidate <= lastIndex) {
-      setActiveWithLock(candidate);
-      return true;
-    }
-    // out of carousel range -> not handled (allow page scroll)
-    return false;
-  }, [activeIndex, isLocked, lastIndex, setActiveWithLock]);
-
-  // wheel listener attached to container (passive: false so we can preventDefault)
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
     const onWheel = (e) => {
-      if (!inView) return; // let page handle when not visible
-      const handled = handleScrollDelta(e.deltaY);
-      if (handled) {
-        e.preventDefault(); // stop page scroll only if we handled slide change
-      } else {
-        // allow page scroll to continue to previous/next sections
+      if (scrolling.current) return;
+      e.preventDefault();
+
+      const dir = e.deltaY > 0 ? 1 : -1;
+      const next = active + dir;
+
+      if (next >= 0 && next < total) {
+        scrolling.current = true;
+        setActive(next);
+        setTimeout(() => (scrolling.current = false), 800);
       }
     };
-    el.addEventListener("wheel", onWheel, { passive: false });
-    return () => el.removeEventListener("wheel", onWheel);
-  }, [handleScrollDelta, inView]);
 
-  // Touch support: vertical swipe
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, [active, total]);
+
+  /* ───── TOUCH ───── */
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+    let startY = 0;
 
-    const onTouchStart = (e) => {
-      touchStartRef.current = e.touches[0].clientY;
-    };
-
-    const onTouchEnd = (e) => {
-      if (touchStartRef.current == null) return;
-      const delta = touchStartRef.current - e.changedTouches[0].clientY;
-      const abs = Math.abs(delta);
-      touchStartRef.current = null;
-      if (abs < 30) return;
-
-      if (!inView) return; // let page handle when not visible
-      const handled = handleScrollDelta(delta);
-      if (handled) {
-        // best-effort prevent default
-        e.preventDefault?.();
+    const start = (e) => { startY = e.touches[0].clientY; };
+    const end = (e) => {
+      if (scrolling.current) return;
+      const delta = startY - e.changedTouches[0].clientY;
+      if (Math.abs(delta) > 50) {
+        const dir = delta > 0 ? 1 : -1;
+        const next = active + dir;
+        if (next >= 0 && next < total) {
+          scrolling.current = true;
+          setActive(next);
+          setTimeout(() => (scrolling.current = false), 800);
+        }
       }
     };
 
-    el.addEventListener("touchstart", onTouchStart, { passive: true });
-    el.addEventListener("touchend", onTouchEnd, { passive: false });
-
+    el.addEventListener('touchstart', start, { passive: true });
+    el.addEventListener('touchend', end, { passive: true });
     return () => {
-      el.removeEventListener("touchstart", onTouchStart);
-      el.removeEventListener("touchend", onTouchEnd);
+      el.removeEventListener('touchstart', start);
+      el.removeEventListener('touchend', end);
     };
-  }, [handleScrollDelta, inView]);
-
-  // keyboard navigation (up/down)
-  useEffect(() => {
-    const onKey = (e) => {
-      if (!inView || isLocked) return;
-      if (e.key === "ArrowDown" || e.key === "PageDown") {
-        if (activeIndex < lastIndex) setActiveWithLock(activeIndex + 1);
-      } else if (e.key === "ArrowUp" || e.key === "PageUp") {
-        if (activeIndex > 0) setActiveWithLock(activeIndex - 1);
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [inView, isLocked, activeIndex, lastIndex, setActiveWithLock]);
-
-  const onDotClick = (idx) => {
-    if (idx === activeIndex) return;
-    setActiveWithLock(idx);
-  };
+  }, [active, total]);
 
   return (
-    <section
-      ref={containerRef}
-      className="carousel-root"
-      aria-roledescription="carousel"
-      tabIndex={-1}
-    >
-      <div className="nav-dots" aria-hidden={false}>
-        {slideData.map((slide, idx) => (
-          <button
-            key={slide.id}
-            onClick={() => onDotClick(idx)}
-            className={`dot ${idx === activeIndex ? "dot-active" : ""}`}
-            aria-label={`Go to slide ${idx + 1}`}
-          >
-            <span className="dot-tooltip">{slide.title.split(":")[0]} ({idx + 1})</span>
-          </button>
-        ))}
+    <section className="ser-car-section">
+      {/* STICKY CAROUSEL */}
+      <div ref={containerRef} className="ser-car-sticky">
+        {/* DOTS */}
+        <div className="ser-car-dots">
+          {slideData.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`ser-car-dot ${i === active ? 'ser-car-active-dot' : ''}`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* SLIDES */}
+        <div className="ser-car-slides">
+          {slideData.map((d, i) => (
+            <div key={d.id} className="ser-car-page">
+              <Slide idx={i} data={d} active={active} />
+            </div>
+          ))}
+        </div>
       </div>
 
-      {slideData.map((data, idx) => (
-        <Slide key={data.id} index={idx} data={data} activeIndex={activeIndex} />
-      ))}
+      {/* SPACER – pushes next section down */}
+      <div className="ser-car-spacer" />
     </section>
   );
 }

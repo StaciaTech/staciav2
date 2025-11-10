@@ -1,139 +1,110 @@
+/* src/components/Services/BentoCarousel.css */
+
 :root {
-  --transition-duration: 700ms;
-  --content-fade-duration: 300ms;
-  --content-fade-delay: 100ms;
-  --card-width: 680px;
-  --card-padding: 28px;
+  --transition: 700ms;
+  --fade: 300ms;
+  --delay: 100ms;
+  --card-max-w: 680px;
+  --card-pad: 28px;
 }
 
-/* Basic reset */
-* { box-sizing: border-box; }
-html, body, #root { height: 100%; margin: 0; padding: 0; }
-
-.carousel-root {
+.ser-car-section {
+  height: calc(100vh * var(--total-slides));
   position: relative;
-  width: 90vw;
-  margin: auto;
+}
+
+.ser-car-sticky {
+  position: sticky;
+  top: 0;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
-  background: linear-gradient(180deg, #e6eef8 0%, #b9c1d3 100%);
+  background: #0f172a;
   font-family: "Inter", sans-serif;
 }
 
-/* slide container: absolute full-viewport slide panels */
-.slide {
+.ser-car-page {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  transition: transform var(--transition-duration) ease-in-out;
 }
 
-/* content card inside each slide */
-.slide-card {
-  width: var(--card-width);
-  max-width: calc(100% - 48px);
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 20px;
-  padding: var(--card-padding);
+.ser-car-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition) ease-in-out;
+}
+
+.ser-car-card {
+  width: min(var(--card-max-w), 90vw);
+  background: rgba(0,0,0,0.4);
+  border-radius: 24px;
+  padding: var(--card-pad);
   color: white;
   text-align: center;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.45);
-  border: 3px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(6px);
-
-  transform: scale(0.96);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  border: 4px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
   opacity: 0;
-  transition:
-    opacity var(--content-fade-duration) ease-out,
-    transform var(--content-fade-duration) ease-out;
+  transform: scale(0.95);
+  transition: opacity var(--fade) ease-out, transform var(--fade) ease-out;
 }
-
-.slide-card.active {
+.ser-car-card.ser-car-active {
   opacity: 1;
   transform: scale(1);
-  transition-delay: var(--content-fade-delay);
+  transition-delay: var(--delay);
 }
 
-.card-image {
+.ser-car-img {
   width: 100%;
-  height: auto;
   max-height: 210px;
   border-radius: 12px;
   object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.14);
-  margin: 0 auto;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+.ser-car-title { font-size: clamp(24px,5vw,36px); font-weight:800; margin:12px 0 4px; }
+.ser-car-desc  { font-size: clamp(16px,3vw,18px); font-weight:300; margin:6px 0; }
+.ser-car-footer{ margin-top:18px; font-family:monospace; font-size:clamp(16px,2.5vw,20px); }
 
-.concept-text { margin-top: 8px; font-style: italic; color: rgba(255,255,255,0.9); font-weight: 600; font-size: 14px; }
-.card-title { font-size: 36px; font-weight: 800; margin: 12px 0 4px; line-height: 1.15; }
-.card-desc { font-size: 18px; font-weight: 300; margin: 6px 0; }
-.card-footer { margin-top: 18px; font-family: monospace; font-size: 18px; }
-
-/* Navigation dots */
-.nav-dots {
+.ser-car-dots {
   position: fixed;
-  right: 20px;
+  right: clamp(10px,3vw,24px);
   top: 50%;
   transform: translateY(-50%);
-  z-index: 60;
+  z-index: 50;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  pointer-events: auto;
+  gap: clamp(8px,1.5vw,12px);
 }
-
-.dot {
-  width: 12px;
-  height: 12px;
+.ser-car-dot {
+  width: clamp(10px,1.5vw,12px);
+  height: clamp(10px,1.5vw,12px);
   border-radius: 50%;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.5);
   border: none;
   cursor: pointer;
-  position: relative;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: all .25s ease;
 }
+.ser-car-dot:hover { background:white; }
+.ser-car-active-dot { background:white; transform:scale(1.4); box-shadow:0 0 10px white; }
 
-.dot:hover { transform: scale(1.2); background: rgba(255,255,255,0.95); }
-
-.dot-active {
-  background: white;
-  transform: scale(1.5);
-  box-shadow: 0 0 12px rgba(255,255,255,0.9);
-}
-
-.dot-tooltip {
-  position: absolute;
-  right: 22px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: rgba(15,23,42,0.9);
-  color: white;
-  font-size: 13px;
-  white-space: nowrap;
-  opacity: 0;
+.ser-car-spacer {
+  height: calc(100vh * (var(--total-slides) - 1));
   pointer-events: none;
-  transition: opacity 0.25s ease;
 }
 
-.dot:hover .dot-tooltip { opacity: 1; }
-
-/* responsive */
-@media (max-width: 780px) {
-  .card-title { font-size: 28px; }
-  .card-desc { font-size: 16px; }
-  .nav-dots { right: 8px; }
-  .dot-tooltip { display: none; }
+/* RESPONSIVE */
+@media (max-width:768px) {
+  :root { --card-pad:20px; }
+  .ser-car-img { max-height:160px; }
 }
-
-@media (max-width: 420px) {
-  :root { --card-width: calc(100% - 32px); }
-  .card-title { font-size: 20px; }
-  .card-desc { font-size: 14px; }
+@media (max-width:480px) {
+  .ser-car-dots { right:12px; gap:10px; }
+  .ser-car-dot { width:10px; height:10px; }
 }

@@ -589,6 +589,7 @@ import SuggestionService from "../ReUsableComp/SuggestionService";
 import LoadingStar from "../LoadingStar";
 import imgban from "../../assets/serviceDefaultImg.png";
 import BentoCarousel from "./BentoCarousel";
+import BusinessStartupGuide from "../../pages/Bussiness.jsx";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
@@ -667,8 +668,9 @@ function EachServicePage() {
           </div>
         </div> */}
         <SpecificHeroSection item={singleService} />
+        <BusinessStartupGuide dept={singleService?.department} />
 
-      
+
         <BentoCarousel />
         <div className="each-service-container">
           {/* <div className="each-service-section1">
