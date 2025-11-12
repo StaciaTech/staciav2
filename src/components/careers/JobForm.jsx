@@ -18,11 +18,23 @@ function JobForm({ closeForm }) {
   const [errors, setErrors] = useState({});
   const [formMessage, setFormMessage] = useState({ type: "", text: "" });
   const JobRoles = [
-    "FrontEnd Developer",
-    "Backend Developer",
-    "UI/UX Design",
-    "HR",
-    "Brand Manager Marketing",
+    "MERN Stack Developer",
+
+    "Graphic Designer Intern",
+
+    "MERN Stack Developer Intern",
+
+    "UI/UX Designer Intern",
+
+    "Industrial Designer Intern",
+
+    "Marketing Intern",
+
+    "Embedded Intern",
+
+    "Mechanical Design Engineer Intern",
+
+    "Entrepreneur in Residence (EIR)",
   ];
   const handleemailstore = (e) => {
     const { name, value } = e.target;
@@ -100,7 +112,7 @@ function JobForm({ closeForm }) {
       return;
     }
     const formData = new FormData(event.target);
-    formData.append("access_key", "f05920d0-3b2a-427b-bd0e-de098dfadd58");
+    formData.append("access_key", "f05920d0-3b2a-427b-bd0e-de098dfadd58" || "e94ad995-f110-472a-81f9-66ff8ca65e98");
     formData.append("subject", "New Job Application via Stacia Corp Careers");
     formData.append("from_name", "Stacia Corp Website");
     try {
@@ -295,8 +307,8 @@ function JobForm({ closeForm }) {
                     formMessage.type === "success"
                       ? "green"
                       : formMessage.type === "error"
-                      ? "red"
-                      : "#444",
+                        ? "red"
+                        : "#444",
                   fontWeight: "500",
                 }}
               >

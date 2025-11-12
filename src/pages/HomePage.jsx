@@ -336,6 +336,7 @@ const WhatsNewSection = lazy(() =>
 const OurHistoryTimeline = lazy(() => import("../components/Home/OurHistory"));
 const IndustriesCoverd = lazy(() => import("../components/Home/Industries"));
 const Career = lazy(() => import("../components/Home/career"));
+const WelcomeModel = lazy(() => import("../components/Home/WelcomeModel"));
 
 const words = [
   "Innovation",
@@ -421,7 +422,7 @@ function HomePage() {
                 <span>Stacia Corp Redefining </span> <Star />
               </div>
               <Popup />
-
+              {/* <WelcomeModel /> */}
               <div className="changingText">
                 {isMounted && (
                   <motion.div

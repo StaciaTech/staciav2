@@ -41,7 +41,7 @@
 
 /* Individual card styling */
 .suggestion-casestudy-card {
-  min-width: 209px;
+  min-width: 380px;
   height: 380px;
   border-radius: 12px; /* From Other Case Studies */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* From Other Case Studies */
@@ -164,7 +164,7 @@
 
 
 .suggestion-casestudy-card-1 {
-  min-width: 209px;
+  min-width: 380px;
   height: 320px;
   display: flex;
   flex-direction: column;
@@ -436,7 +436,7 @@
     flex-direction: column;
     height: 100%; /* Only if needed, or ensure equal height via parent */
 
-  min-width: 209px;
+  min-width: 380px;
   height: 350px;
   
 }
@@ -461,7 +461,7 @@
 
 /* Match case study card size and content to article card style */
 .suggestion-casestudy-card {
-  min-width: 290px;
+  min-width: 380px;
   height: auto;
 }
 

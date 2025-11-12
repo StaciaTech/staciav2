@@ -25,13 +25,20 @@ const IndustriesRowSection = ({ industries = [], activeIndustry }) => {
               .replace(/\s+/g, "-");
 
           return (
+            // <article
+            //   key={ind.id || idx}
+            //   className={`industry-row ${
+            //     reverse ? "reverse" : ""
+            //   } industry-card ${
+            //     activeIndustry === ind.title ? "selected" : ""
+            //   }`}
+            //   aria-labelledby={`industry-${idx}-title`}
+            // >
+
             <article
               key={ind.id || idx}
-              className={`industry-row ${
-                reverse ? "reverse" : ""
-              } industry-card ${
-                activeIndustry === ind.title ? "selected" : ""
-              }`}
+              className={`industry-row industry-card ${activeIndustry === ind.title ? "selected" : ""
+                }`}
               aria-labelledby={`industry-${idx}-title`}
             >
               {/* Image Section */}

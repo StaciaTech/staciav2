@@ -671,7 +671,7 @@ function EachServicePage() {
         <BusinessStartupGuide dept={singleService?.department} />
 
 
-        <BentoCarousel />
+        <div ><BentoCarousel /></div>
         <div className="each-service-container">
           {/* <div className="each-service-section1">
             <div className="each-service-section1-img">
