@@ -336,6 +336,7 @@ const WhatsNewSection = lazy(() =>
 const OurHistoryTimeline = lazy(() => import("../components/Home/OurHistory"));
 const IndustriesCoverd = lazy(() => import("../components/Home/Industries"));
 const Career = lazy(() => import("../components/Home/career"));
+const WelcomeModel = lazy(() => import("../components/Home/WelcomeModel"));
 
 const words = [
   "Innovation",
@@ -354,7 +355,9 @@ function HomePage() {
   // State management
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
-  const [selectedToggle, setSelectedToggle] = useState("products");
+  // const [selectedToggle, setSelectedToggle] = useState("services");
+  const [selectedToggle, setSelectedToggle] = useState("services");
+
   const [isToggleVisible, setIsToggleVisible] = useState(true);
   const headerRef = useRef(null);
   const containerRef = useRef(null);
@@ -389,11 +392,14 @@ function HomePage() {
   }, []);
 
   // Handle toggle button selection
+  // const handleToggleChange = (selection) => {
+  //   setSelectedToggle(selection);
+  //   console.log("Selected:", selection);
+  // };
   const handleToggleChange = (selection) => {
     setSelectedToggle(selection);
     console.log("Selected:", selection);
   };
-
   // Callback for last card visibility
   const handleLastCardVisible = (isVisible) => {
     setIsToggleVisible(isVisible);
@@ -416,7 +422,7 @@ function HomePage() {
                 <span>Stacia Corp Redefining </span> <Star />
               </div>
               <Popup />
-
+              {/* <WelcomeModel /> */}
               <div className="changingText">
                 {isMounted && (
                   <motion.div
@@ -440,7 +446,7 @@ function HomePage() {
         {/* Stack Scroll Section with Toggle */}
         <div
           className="stack-scroll-container"
-          //  ref={containerRef}
+        //  ref={containerRef}
         >
           <div
             ref={headerRef}
@@ -457,27 +463,43 @@ function HomePage() {
               // backgroundColor: "white"
             }}
           >
-            {isToggleVisible && (
+            {/* {isToggleVisible && (
               <div className="toggle-title-container-home">
                 <h1 className="toggle-title-header-home">
                   Delve deep into Stacia's{" "}
                 </h1>
               </div>
             )}
-            {isToggleVisible && <ToggleButton onToggle={handleToggleChange} />}
+            {isToggleVisible && <ToggleButton onToggle={handleToggleChange} />} */}
+
+            {isToggleVisible && (
+              <div className="toggle-title-container-home">
+                <h1 className="toggle-title-header-home">Delve deep into Stacia's </h1>
+              </div>
+            )}
+            {isToggleVisible && (
+              <ToggleButton value={selectedToggle} onToggle={handleToggleChange} />
+            )}
+
+
           </div>
-          <StackScroll
+          {/* <StackScroll
             onToggle={selectedToggle}
             onLastCardVisible={handleLastCardVisible}
+          /> */}
+          <StackScroll
+            mode={selectedToggle}
+            onLastCardVisible={handleLastCardVisible}
           />
+
         </div>
 
         {/* Other Sections */}
-        <MobileStackScroll onToggle={selectedToggle} />
+        {/* <MobileStackScroll onToggle={selectedToggle} /> */}
         <ClientComponent />
         <WhatsNewSection />
         {/* <ServiceDisplay />  */}
-        {/* <IndustriesCoverd />  */}
+        {/* <IndustriesCoverd /> */}
         {/* <WhatsNewSection /> */}
         {/* <OurHistoryTimeline /> */}
         <EventsHosted />

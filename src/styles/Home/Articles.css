@@ -373,7 +373,7 @@
       width: 100%;
       overflow: hidden;
       display: flex;
-      justify-content: center;
+      justify-content: initial;
     }
 
     .carousel-slide {
@@ -439,6 +439,7 @@
 
     .single-article-card-image:hover .article-text-container {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       transition: all 0.3s ease;
       /* Shortened transition for smoother hover */

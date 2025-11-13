@@ -16,7 +16,15 @@ function EventsHosted() {
   }
   return (
     <div className="events-hosted-container">
-      <div className="events-hosted-title">Events</div>
+      <div className="events-header-top" >
+        <div className="events-hosted-title">Events</div>
+        <div className="see-more-info" onClick={() => {
+          navigateTo("/events");
+          window.scrollTo(0, 0);
+        }}>
+          See More <FaChevronRight />
+        </div>
+      </div>
       <div className="events-img-container">
         {/* <img src={eventshosted} alt="events hosted" /> */}
         <div className="events-text-holder">
@@ -34,9 +42,9 @@ function EventsHosted() {
               />
             </button>
             <button className="event-btn events-view-details-btn" onClick={() => {
-                        window.scrollTo(0, 0);
-                        navigateTo(`/competition`);
-                      }}>
+              window.scrollTo(0, 0);
+              navigateTo(`/competition`);
+            }}>
               View Details{" "}
               <FaChevronRight
                 style={{ verticalAlign: "middle", marginLeft: "1rem" }}

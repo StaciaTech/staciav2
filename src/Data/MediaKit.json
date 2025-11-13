@@ -3,31 +3,43 @@
     {
       "name": "Stacia Corp",
       "description": "Stacia Corp specializes in mechanical engineering, advanced machine solutions, and R&D, providing innovative, precise, and efficient designs that enhance industrial performance and drive technological advancement.",
-      "svgFile": {
-        "imageUrl": "./assets/Stacia-corp.webp"
+      "svgFiles": {
+        "color": "/assets/mediakit/SVG-SC-C.svg",
+        "black": "/assets/mediakit/SVG-SC-B.svg",
+        "white": "/assets/mediakit/SVG-SC-W.svg"
       },
-      "pngFile": {
-        "imageUrl": "./assets/Stacia-corp-png.png"
+      "pngFiles": {
+        "color": "/assets/mediakit/PNG-SC-C.png",
+        "black": "/assets/mediakit/PNG-SC-B.png",
+        "white": "/assets/mediakit/PNG-SC-W.png"
       }
     },
     {
       "name": "Stacia Tech",
       "description": "Explore our expertise in custom software development, data analytics, AI solutions, and innovative technology-driven applications designed to meet your unique business needs and accelerate digital growth.",
-      "svgFile": {
-        "imageUrl": "/assets/Stacia-tech.webp"
+      "svgFiles": {
+        "color": "/assets/mediakit/SVG-ST-C.svg",
+        "black": "/assets/mediakit/SVG-ST-B.svg",
+        "white": "/assets/mediakit/SVG-ST-W.svg"
       },
-      "pngFile": {
-        "imageUrl": "./assets/Stacia-Tech-png.png"
+      "pngFiles": {
+        "color": "/assets/mediakit/PNG-ST-C.png",
+        "black": "/assets/mediakit/PNG-ST-B.png",
+        "white": "/assets/mediakit/PNG-ST-W.png"
       }
     },
     {
-      "name": "Sastem  Global  ",
+      "name": "Sastem Global",
       "description": "Sastem Global specializes in electronics product development, delivering innovative and intelligent solutions that drive progress toward a smarter, more connected Society 5.0 future.",
-      "svgFile": {
-        "imageUrl": "/assets/Stacia-global.webp"
+      "svgFiles": {
+        "color": "/assets/mediakit/SVG-SG-C.svg",
+        "black": "/assets/mediakit/SVG-SG-B.svg",
+        "white": "/assets/mediakit/SVG-SG-W.svg"
       },
-      "pngFile": {
-        "imageUrl": "./assets/Stacia-Global-png.png"
+      "pngFiles": {
+        "color": "/assets/mediakit/PNG-SG-C.png",
+        "black": "/assets/mediakit/PNG-SG-B.png",
+        "white": "/assets/mediakit/PNG-SG-W.png"
       }
     }
   ],
@@ -60,7 +72,7 @@
   "brouchers": [
     {
       "display": {
-        "displayUrl": "./assets/One-Dril-Brochure.webp"
+        "displayUrl": "/assets/One-Dril-Brochure.webp"
       },
       "name": "One Dril Brochure",
       "file": {
@@ -69,7 +81,7 @@
     },
     {
       "display": {
-        "displayUrl": "./assets/Stacia-Corp-Magazine.webp"
+        "displayUrl": "/assets/Stacia-Corp-Magazine.webp"
       },
       "name": "Stacia Corp Magazine",
       "file": {
@@ -78,7 +90,7 @@
     },
     {
       "display": {
-        "displayUrl": "./assets/5th-year-celebration-Poster.webp"
+        "displayUrl": "/assets/5th-year-celebration-Poster.webp"
       },
       "name": "5th year celebration Poster",
       "file": {
@@ -87,40 +99,39 @@
     },
     {
       "display": {
-        "displayUrl": "./assets/mediakit/Stacia-Corp.webp"
+        "displayUrl": "/assets/mediakit/Stacia-Corp.webp"
       },
-      "name": "Stacia Corp Brocher",
+      "name": "Stacia Corp Brochure",
       "file": {
         "fileUrl": "/assets/mediakit/Stacia-Corp.pdf"
       }
     },
     {
       "display": {
-        "displayUrl": "./assets/mediakit/Sastem-Global.webp"
+        "displayUrl": "/assets/mediakit/Sastem-Global.webp"
       },
-      "name": "Sastem Global Brocher",
+      "name": "Sastem Global Brochure",
       "file": {
         "fileUrl": "/assets/mediakit/Sastem-Global.pdf"
       }
     },
     {
       "display": {
-        "displayUrl": "./assets/mediakit/Stacia-Tech.webp"
+        "displayUrl": "/assets/mediakit/Stacia-Tech.webp"
       },
-      "name": "Stacia Tech Brocher",
+      "name": "Stacia Tech Brochure",
       "file": {
         "fileUrl": "/assets/mediakit/Stacia-Tech.pdf"
       }
     },
     {
-     "display": {
-       "displayUrl": "./assets/mediakit/Stacia-Group.webp"
-     },
-     "name": "Stacia Brocher",
-     "file": {
-       "fileUrl": "/assets/mediakit/Stacia-Group.pdf"
-     }
-   }
-
+      "display": {
+        "displayUrl": "/assets/mediakit/Stacia-Group.webp"
+      },
+      "name": "Stacia Brochure",
+      "file": {
+        "fileUrl": "/assets/mediakit/Stacia-Group.pdf"
+      }
+    }
   ]
 }

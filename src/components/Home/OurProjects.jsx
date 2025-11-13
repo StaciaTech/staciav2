@@ -301,7 +301,18 @@ function OurProjects() {
 
   return (
     <div className="our-projects-container">
-      <div className="our-projects-title">Our Projects</div>
+      <div className="events-header-top">
+        <div className="our-projects-title">Our Projects</div>
+        <div className="see-more-info" onClick={() => {
+          navigate("/project");
+          window.scrollTo(0, 0);
+        }}
+          style={{ cursor: "pointer" }}
+        >
+
+          More Project <FaChevronRight />
+        </div>
+      </div>
       <div className="our-projects-card-grid">
         {firstFourProjects.map((project, index) => (
           <div className={`project-image image${index + 1}`} key={index}>
@@ -355,7 +366,7 @@ function OurProjects() {
               Completed
             </div>
             {/* {totalProjects} */}
-            
+
           </div>
         </div>
         {lastFourProjects.map((project, index) => (
@@ -401,16 +412,16 @@ function OurProjects() {
       </div>
       <div
         className="image5-link"
-        
+
       >
         <div
-        onClick={() => {
-          navigate("/project");
-          window.scrollTo(0, 0);
-        }}
-        style={{ cursor: "pointer" }}>
+          onClick={() => {
+            navigate("/project");
+            window.scrollTo(0, 0);
+          }}
+          style={{ cursor: "pointer" }}>
 
-        See More <FaChevronRight style={{ verticalAlign: "middle" }} />
+          {/* See More <FaChevronRight style={{ verticalAlign: "middle" }} /> */}
 
         </div>
       </div>

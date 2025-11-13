@@ -523,7 +523,7 @@ export default function SingleProduct() {
       ) : (
         <div>
           <div>
-            encio
+            {/* encio */}
             <div className="product-details">
               <div className="product-details2">
                 <div style={{ marginTop: "40px" }}>
@@ -580,6 +580,16 @@ export default function SingleProduct() {
                 <ThreeImageViewer imageUrl={SelectedProduct?.imageUrl} height="60vh" />
               )}
             </div> */}
+            {/* here i want to implement three js concept */}
+
+            {/* <SingleProductImage
+              modelUrl={SelectedProduct?.animationUrl || null}
+              imageUrl={SelectedProduct?.imageUrl || null}
+              autoRotate={true}
+              height="60vh"
+            /> */}
+
+
             <div className="rotate-text"></div>
             {SelectedProduct.productDetails && (
               <div

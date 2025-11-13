@@ -393,7 +393,7 @@ function About() {
             <div>
               <img src={whitelogo} alt="" style={{ padding: "1rem  2rem" , width:"15rem"}} />
               <div className="about-section6-title test-seclection-blue">
-                Celebrating Five Years Excellence
+                Celebrating Six Years Excellence
               </div>
             </div>
           </div>

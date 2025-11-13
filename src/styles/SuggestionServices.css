@@ -70,7 +70,7 @@
 }
 
 .suggestion-casestudy-card-2 {
-  min-width: 209px;
+  min-width: 380px;
   height: 344px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -248,7 +248,7 @@
 
 
 .suggestion-casestudy-card-2 {
-  min-width: 209px;
+  min-width: 380px;
   height: 320px;
   display: flex;
   flex-direction: column;

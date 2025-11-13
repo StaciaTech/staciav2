@@ -1,0 +1,147 @@
+/* BentoCarousel.css - full stylesheet for the carousel */
+
+:root {
+  --transition: 700ms;
+  --fade: 300ms;
+  --delay: 100ms;
+  --card-max-w: 680px;
+  --card-pad: 28px;
+}
+
+/* overall section height equals number of slides */
+.ser-car-section {
+  height: calc(100vh * var(--total-slides, 1));
+  position: relative;
+  overflow: visible;
+}
+
+/* sticky viewport container */
+.ser-car-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #0f172a;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* each page is full-viewport and absolutely positioned */
+.ser-car-page {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* slides are non-interactive unless card allows it */
+}
+
+/* slides move with transform; tuned for performance */
+.ser-car-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition) ease-in-out;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* card styling */
+.ser-car-card {
+  width: min(var(--card-max-w), 90vw);
+  background: rgba(0,0,0,0.4);
+  border-radius: 24px;
+  padding: var(--card-pad);
+  color: white;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  border: 4px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity var(--fade) ease-out, transform var(--fade) ease-out;
+  pointer-events: auto; /* allow interactions inside the card */
+}
+.ser-car-card.ser-car-active {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: var(--delay);
+}
+
+/* media inside card */
+.ser-car-img {
+  width: 100%;
+  max-height: 210px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.18);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.ser-car-title { font-size: clamp(24px,5vw,36px); font-weight:800; margin:12px 0 4px; }
+.ser-car-desc  { font-size: clamp(16px,3vw,18px); font-weight:300; margin:6px 0; }
+.ser-car-footer{ margin-top:18px; font-family:monospace; font-size:clamp(16px,2.5vw,20px); }
+
+/* DOTS - default hidden with fade/scale animation; become interactive when visible */
+.ser-car-dots {
+  position: fixed;
+  right: clamp(10px,3vw,24px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px,1.5vw,12px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 260ms ease, transform 260ms ease;
+  transform-origin: center right;
+}
+
+/* visible / hidden classes toggled from JS */
+.ser-car-dots.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) scale(1);
+}
+.ser-car-dots.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.96);
+}
+
+/* dot button */
+.ser-car-dot {
+  width: clamp(10px,1.5vw,12px);
+  height: clamp(10px,1.5vw,12px);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  border: none;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+.ser-car-dot:hover { background: rgba(255,255,255,0.9); }
+.ser-car-active-dot { background:white; transform:scale(1.4); box-shadow:0 0 10px white; }
+
+/* spacer keeps normal flow after the sticky section */
+.ser-car-spacer {
+  height: calc(100vh * (var(--total-slides, 1) - 1));
+  pointer-events: none;
+}
+
+/* responsive tweaks */
+@media (max-width:768px) {
+  :root { --card-pad: 20px; }
+  .ser-car-img { max-height:160px; }
+  .ser-car-dots { right: 12px; gap: 10px; }
+  .ser-car-dot { width: 10px; height: 10px; }
+}
+
+/* accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .ser-car-slide { transition: none !important; }
+  .ser-car-card { transition: none !important; }
+}

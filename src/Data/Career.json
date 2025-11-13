@@ -56,6 +56,48 @@
             "RESTful APIs"      
         ]
     },
+        {
+        "title": "Graphic Designer Intern",
+        "experience": "0-1 year (Internship)",
+        "qualification": "Visual Communication / Related Fields",
+        "jobType": "Intern",
+        "location": "Chennai, India",
+        "natureOfJob": "On-Site",
+        "description": "We’re seeking a creative and detail-oriented Graphic Designer Intern to join our design team. You will be responsible for creating visually appealing and user-friendly designs for digital and print platforms. This role involves collaborating with other designers and departments to produce engaging visuals, layouts, and campaigns that strengthen our brand identity and enhance user engagement.",
+        "responsibilities": [
+            "Conceptualize visuals based on project requirements and creative briefs.",
+            "Create images, graphics, and layouts using professional design software.",
+            "Test and optimize graphics across various media channels and devices.",
+            "Work with a wide range of media including digital, print, and motion graphics.",
+            "Plan and illustrate concepts by designing rough layouts of art and copy regarding arrangement, size, type size, style, and aesthetics.",
+            "Collaborate with fellow designers to develop new approaches for creating expressive, high-quality graphics for the company.",
+            "Ensure designs align with brand guidelines and maintain visual consistency across all platforms.",
+            "Stay up to date with industry trends, design tools, and best practices."
+        ],
+        "requiredSkills": [
+            "Proficiency in Adobe Photoshop, Illustrator, Premiere Pro, and After Effects.",
+            "Strong understanding of color theory, typography, and composition.",
+            "Ability to translate ideas into visually appealing and effective designs.",
+            "Good communication and collaboration skills.",
+            "Attention to detail and a strong sense of creativity.",
+            "Basic understanding of motion graphics and video editing.",
+            "Ability to handle feedback positively and iterate quickly on design ideas."
+        ],
+        "preferredSkills": [
+            "Knowledge with Figma, Canva, or other digital design tools.",
+            "Understanding of UI/UX design principles.",
+            "Basic knowledge of photography and image editing.",
+            "Knowledge in creating marketing materials, social media graphics, or brand assets.",
+            "Knowledge of animation principles and basic motion design.",
+            "Familiarity with print design standards and formats."
+        ],
+        "requiredTools": [
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "Adobe Premiere Pro",
+            "Adobe After Effects"
+        ]
+    },
     {
         "title": "MERN Stack Developer Intern",
         "experience": "Fresher",

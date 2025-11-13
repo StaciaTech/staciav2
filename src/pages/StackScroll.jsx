@@ -375,7 +375,7 @@ import { fetchServices } from "../redux/slice/serviceSlice";
 import StackCard from "../components/Home/StackCard";
 import { useScroll } from "framer-motion";
 
-const StackScroll = ({ onToggle, onLastCardVisible }) => {
+const StackScroll = ({ mode, onLastCardVisible }) => {
   const proDetails = [
     {
       id: 1,
@@ -438,7 +438,7 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
         prevVisibleRef.current = shouldBeVisible;
         // ensure we only hide/show when there's data to show
         const data =
-          onToggle === "products" ? homeProductData : homeServiceData;
+          mode === "products" ? homeProductData : homeServiceData;
         if (data.length > 0) {
           onLastCardVisible(shouldBeVisible);
         } else {
@@ -451,17 +451,63 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
     return () => unsubscribe();
   }, [
     scrollYProgress,
-    onToggle,
+    mode,
     homeProductData,
     homeServiceData,
     onLastCardVisible,
   ]);
 
   return (
+    // <div ref={containerRef} className="stack-scroll-container">
+    //   <div className="stack-scroll">
+    //     <ul id="cards">
+    //       {onToggle === "products" &&
+    //         homeProductData.map((eachHomeProduct, i) => {
+    //           const targetScale = 1 - (homeProductData.length - i) * 0.05;
+    //           return (
+    //             <StackCard
+    //               key={eachHomeProduct.id}
+    //               eachHomeProduct={eachHomeProduct}
+    //               i={i}
+    //               proDetails={proDetails}
+    //               range={[i * 0.16, 1]}
+    //               targetScale={targetScale}
+    //               progress={scrollYProgress}
+    //             />
+    //           );
+    //         })}
+    //       {onToggle === "services" &&
+    //         homeServiceData.map((eachHomeService, i) => {
+    //           const targetScale = 1 - (homeServiceData.length - i) * 0.05;
+    //           return (
+    //             <StackCard
+    //               key={eachHomeService.id}
+    //               eachHomeService={eachHomeService}
+    //               i={i}
+    //               proDetails={proDetails}
+    //               range={[i * 0.16, 1]}
+    //               targetScale={targetScale}
+    //               progress={scrollYProgress}
+    //             />
+    //           );
+    //         })}
+    //       {/* dont remove below code */}
+    //       <div
+    //         style={{
+    //           height: "50vh",
+    //           position: "sticky",
+    //           zIndex: "-1",
+    //           top: `calc(100% - 50% + ${40 * homeProductData?.length + 1}px)`,
+    //         }}
+    //       ></div>
+    //     </ul>
+    //   </div>
+    // </div>
+
     <div ref={containerRef} className="stack-scroll-container">
       <div className="stack-scroll">
         <ul id="cards">
-          {onToggle === "products" &&
+          {mode === "products" &&
             homeProductData.map((eachHomeProduct, i) => {
               const targetScale = 1 - (homeProductData.length - i) * 0.05;
               return (
@@ -476,7 +522,7 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
                 />
               );
             })}
-          {onToggle === "services" &&
+          {mode === "services" &&
             homeServiceData.map((eachHomeService, i) => {
               const targetScale = 1 - (homeServiceData.length - i) * 0.05;
               return (
@@ -491,7 +537,7 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
                 />
               );
             })}
-          {/* dont remove below code */}
+
           <div
             style={{
               height: "50vh",
@@ -503,6 +549,7 @@ const StackScroll = ({ onToggle, onLastCardVisible }) => {
         </ul>
       </div>
     </div>
+
   );
 };
 

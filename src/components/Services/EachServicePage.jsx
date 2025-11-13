@@ -582,19 +582,30 @@ import { SlLike } from "react-icons/sl";
 import { useParams } from "react-router-dom";
 import { motion, useTransform, useScroll } from "framer-motion";
 import servicesData from "../../Data/Services.json";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import SuggestionProducts from "../ReUsableComp/SuggestionProducts"
 
 import SuggestionService from "../ReUsableComp/SuggestionService";
 import LoadingStar from "../LoadingStar";
+import imgban from "../../assets/serviceDefaultImg.png";
+import BentoCarousel from "./BentoCarousel";
+import BusinessStartupGuide from "../../pages/Bussiness.jsx";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
 const SideBar = lazy(() => import("../SideBar"));
+const SpecificHeroSection = lazy(() => import("../SpecificHeroSection"));
 const Star = lazy(() => import("../Star"));
 const Footer = lazy(() => import("../Footer"));
 const MobileFooter = lazy(() => import("../MobileFooter"));
 const FAQComp = lazy(() => import("../FAQComp"));
+
+const items = [
+  { title: "Welcome", description: "First slide — will move up then start carousel" },
+  { title: "Feature A", description: "Info about feature A" },
+  { title: "Feature B", description: "Info about feature B" },
+  { title: "End", description: "Last slide" },
+];
 
 // Static card data
 const cardsData = [
@@ -602,6 +613,7 @@ const cardsData = [
   { des: "lorem ipsum dolor sit amet, consectetur adip occum primis in faucibus et justo" },
   { des: "lorem ipsum dolor sit amet, consectetur adip occum primis in faucibus et justo" },
 ];
+
 
 function EachServicePage() {
   const params = useParams();
@@ -655,6 +667,11 @@ function EachServicePage() {
             </Suspense>
           </div>
         </div>
+         {/* <SpecificHeroSection item={singleService} /> */}
+        {/*<BusinessStartupGuide dept={singleService?.department} /> */}
+
+
+        {/* <div ><BentoCarousel /></div> */}
         <div className="each-service-container">
           <div className="each-service-section1">
             <div className="each-service-section1-img">
@@ -708,8 +725,10 @@ function EachServicePage() {
             <FAQComp />
           </Suspense>
         </div>
+
+
         <div>
-          <SuggestionProducts/>
+          <SuggestionProducts />
           <SuggestionService />
         </div>
         <div>

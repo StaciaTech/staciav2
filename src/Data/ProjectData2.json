@@ -1552,11 +1552,23 @@
                 "To improve overall pest management effectiveness and accountability"
               ],
               "Challenges": [
-                "Site-specific and seasonal variations in pest occurrence",
-                "Lack of standardized communication between PMAs, FBOs, and suppliers",
-                "Paper-based documentation leads to inefficiency and data loss",
-                "Trust deficit and poor escalation tracking between stakeholders"
-              ],
+                {
+                  "id": 1,
+                  "des": "Site-specific and seasonal variations in pest occurrence"
+                },
+                {
+                  "id": 2,
+                  "des": "Lack of standardized communication between PMAs, FBOs, and suppliers"
+                },
+                {
+                  "id": 3,
+                  "des": "Paper-based documentation leads to inefficiency and data loss"
+                },
+                {
+                  "id": 4,
+                  "des":"Trust deficit and poor escalation tracking between stakeholders"
+                }
+                 ],
               "Solutions": [
                 {
                   "id": 1,

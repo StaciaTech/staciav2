@@ -378,8 +378,14 @@ export default function IndustriesDisplay() {
                   cursor: "pointer",
                 }}
                 onClick={() => {
-                  // navigateTo(`/industries/${data.title}`);
-                  // window.scrollTo(0, 0);
+                  const formattedTitle = data.title
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")          // spaces → hyphens
+                    .replace(/[^a-z0-9-]/g, "");   // remove special chars
+
+                  // navigateTo("/industries-covered");
+                  navigateTo(`/industries-covered/${formattedTitle}`);
+                  window.scrollTo(0, 0);
                 }}
               >
                 {industries[currentSlide]?.title === data.title ? (

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../styles/Home/WhatsNewSection.css";
 import LeadModal from "../LeadModal";
@@ -7,6 +8,8 @@ import { FaChevronRight } from "react-icons/fa";
 import LeadModalThree from "../LeadModalThree";
 
 const WhatsNewSection = () => {
+
+   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("services");
   const [isVisible, setIsVisible] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -279,9 +282,11 @@ const WhatsNewSection = () => {
   const handleCardClick = (item) => {
     if (item.detailed_link) {
       // Use relative path for deployment compatibility
-      const baseUrl = window.location.origin;
-      const fullUrl = `${baseUrl}${item.detailed_link}`;
-      window.open(fullUrl, "_blank");
+      // const baseUrl = window.location.origin;
+      // const fullUrl = `${baseUrl}${item.detailed_link}`;
+      // window.open(fullUrl, "_blank");
+      navigate(item.detailed_link); 
+      window.scrollTo(0, 0);
     }
   };
 
