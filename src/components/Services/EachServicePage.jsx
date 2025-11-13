@@ -653,7 +653,7 @@ function EachServicePage() {
             <SideBar />
           </Suspense>
         </div>
-        {/* <div className="each-service-hero-section">
+        <div className="each-service-hero-section">
           <div className="each-service-title">
             <span>{singleService?.title || "Service Not Found"}</span>
             <Suspense
@@ -666,14 +666,14 @@ function EachServicePage() {
               <Star />
             </Suspense>
           </div>
-        </div> */}
-        <SpecificHeroSection item={singleService} />
-        <BusinessStartupGuide dept={singleService?.department} />
+        </div>
+         {/* <SpecificHeroSection item={singleService} /> */}
+        {/*<BusinessStartupGuide dept={singleService?.department} /> */}
 
 
-        <div ><BentoCarousel /></div>
+        {/* <div ><BentoCarousel /></div> */}
         <div className="each-service-container">
-          {/* <div className="each-service-section1">
+          <div className="each-service-section1">
             <div className="each-service-section1-img">
               <img
                 src={singleService?.imageUrl || "No image available."}
@@ -685,7 +685,7 @@ function EachServicePage() {
               <div>Overview</div>
               <p>{singleService?.oneLine || "No description available."}</p>
             </div>
-          </div> */}
+          </div>
           <div className="each-service-howWeDo-section">
             {singleService?.whatWeDo?.length ? (
               <HorizontalScrollContainer

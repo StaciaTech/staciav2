@@ -499,7 +499,7 @@ function HomePage() {
         <ClientComponent />
         <WhatsNewSection />
         {/* <ServiceDisplay />  */}
-        <IndustriesCoverd />
+        {/* <IndustriesCoverd /> */}
         {/* <WhatsNewSection /> */}
         {/* <OurHistoryTimeline /> */}
         <EventsHosted />

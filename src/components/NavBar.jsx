@@ -1025,7 +1025,7 @@ import Advertisement from "./ReUsableComp/Advertisement";
 
 // <-- NEW: import LeadModalThree and any assets for default item
 import LeadModalThree from "./LeadModalThree";
-import StaciaContactLogo from "../assets/StaciaFavicon.svg";
+import StaciaContactUsLogo from "../assets/611.svg";
 
 function NavBar() {
   const [openWhatsNew, setOpenWhatsNew] = useState(false);
@@ -1046,11 +1046,10 @@ function NavBar() {
   // selectedItem will be passed into the modal. Provide a sensible default.
   const [selectedItem, setSelectedItem] = useState({
     id: "default-contact",
-    title: "General Inquiry — Stacia Corp",
+    title:"",
     oneLine: "Tell us how we can help — product, services or partnership.",
-    imageUrl: StaciaContactLogo,
-    description:
-      "Reach out for sales, partnerships, or general questions. We'll respond within 24 hours.",
+    image: StaciaContactUsLogo,
+    
   });
 
   const isHomepage = location.pathname === "/";

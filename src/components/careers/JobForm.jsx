@@ -1,9 +1,348 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+// import "../../styles/JobForm.css";
+// import "react-phone-number-input/style.css";
+// import PhoneInput from "react-phone-number-input";
+// import UploadIcon from "../../assets/uploadIcon.svg";
+// import { IoIosArrowDown } from "react-icons/io";
+// function JobForm({ closeForm }) {
+//   const [store, setStore] = useState({
+//     firstName: "",
+//     lastName: "",
+//     phoneValue: "",
+//     email: "",
+//     jobRole: "",
+//     file: null,
+//   });
+//   const [dragActive, setDragActive] = useState(false);
+//   const [showRoles, setShowRoles] = useState(false);
+//   const [errors, setErrors] = useState({});
+//   const [formMessage, setFormMessage] = useState({ type: "", text: "" });
+//   const JobRoles = [
+//     "MERN Stack Developer",
+
+//     "Graphic Designer Intern",
+
+//     "MERN Stack Developer Intern",
+
+//     "UI/UX Designer Intern",
+
+//     "Industrial Designer Intern",
+
+//     "Marketing Intern",
+
+//     "Embedded Intern",
+
+//     "Mechanical Design Engineer Intern",
+
+//     "Entrepreneur in Residence (EIR)",
+//   ];
+//   const handleemailstore = (e) => {
+//     const { name, value } = e.target;
+//     setStore((prevState) => ({
+//       ...prevState,
+//       [name]: value,
+//     }));
+//     setErrors((prevErrors) => {
+//       const newErrors = { ...prevErrors };
+//       if (name === "firstName" && value.trim()) delete newErrors.firstName;
+//       if (name === "lastName" && value.trim()) delete newErrors.lastName;
+//       if (name === "email") {
+//         if (!value.trim()) {
+//           newErrors.email = "Email is required";
+//         } else if (!/\S+@\S+\.\S+/.test(value)) {
+//           newErrors.email = "Email is invalid";
+//         } else {
+//           delete newErrors.email;
+//         }
+//       }
+//       return newErrors;
+//     });
+//   };
+//   const handleFileChange = (event) => {
+//     const selectedFile = event.target.files[0];
+//     if (
+//       selectedFile?.type === "application/pdf" &&
+//       selectedFile.size <= 5 * 1024 * 1024
+//     ) {
+//       setStore((prevState) => ({ ...prevState, file: selectedFile }));
+//       setErrors((prev) => ({ ...prev, file: "" }));
+//     } else {
+//       setErrors((prev) => ({
+//         ...prev,
+//         file: "Please upload a valid PDF (max 5MB)",
+//       }));
+//     }
+//   };
+//   const handleDrop = (event) => {
+//     event.preventDefault();
+//     setDragActive(false);
+//     const droppedFile = event.dataTransfer.files[0];
+//     if (
+//       droppedFile?.type === "application/pdf" &&
+//       droppedFile.size <= 5 * 1024 * 1024
+//     ) {
+//       setStore((prevState) => ({ ...prevState, file: droppedFile }));
+//       setErrors((prev) => ({ ...prev, file: "" }));
+//     } else {
+//       setErrors((prev) => ({
+//         ...prev,
+//         file: "Please upload a valid PDF (max 5MB)",
+//       }));
+//     }
+//   };
+//   const openFileInput = () => document.getElementById("resume-box").click();
+//   const onSubmit = async (event) => {
+//     event.preventDefault();
+//     const newErrors = {};
+//     if (!store.firstName.trim()) newErrors.firstName = "First name is required";
+//     if (!store.lastName.trim()) newErrors.lastName = "Last name is required";
+//     if (!store.phoneValue) newErrors.phoneValue = "Phone number is required";
+//     if (!store.email.trim()) {
+//       newErrors.email = "Email is required";
+//     } else if (!/\S+@\S+\.\S+/.test(store.email)) {
+//       newErrors.email = "Email is invalid";
+//     }
+//     if (!store.jobRole.trim()) newErrors.jobRole = "Please select a job role";
+//     if (Object.keys(newErrors).length > 0) {
+//       setErrors(newErrors);
+//       setFormMessage({
+//         type: "error",
+//         text: "Please fill all required fields correctly.",
+//       });
+//       return;
+//     }
+//     const formData = new FormData(event.target);
+//     formData.append("access_key", "f05920d0-3b2a-427b-bd0e-de098dfadd58");
+//     formData.append("subject", "New Job Application via Stacia Corp Careers");
+//     formData.append("from_name", "Stacia Corp Website");
+//     try {
+//       setFormMessage({ type: "info", text: "Submitting your application..." });
+//       const response = await fetch("https://api.web3forms.com/submit", {
+//         method: "POST",
+//         body: formData,
+//       });
+//       const data = await response.json();
+//       if (data.success) {
+//         setFormMessage({
+//           type: "success",
+//           text: "Form Submitted Successfully!",
+//         });
+//         event.target.reset();
+//         closeForm(); // Remove this if you want to keep the form open
+//       } else {
+//         setFormMessage({
+//           type: "error",
+//           text: data.message || "Something went wrong.",
+//         });
+//       }
+//     } catch (error) {
+//       setFormMessage({
+//         type: "error",
+//         text: "Network error. Please try again.",
+//       });
+//     }
+//   };
+//   return (
+//     <div className="job-form">
+//       <div className="job-form-inner">
+//         <div className="job-form-content-container">
+//           <div className="job-form-title">Job Application</div>
+//           <form onSubmit={onSubmit}>
+//             <div className="job-input-container">
+//               <div className="job-input-holder">
+//                 <div>First name*</div>
+//                 <input
+//                   type="text"
+//                   name="firstName"
+//                   value={store.firstName}
+//                   onChange={handleemailstore}
+//                   placeholder="Enter your first name"
+//                 />
+//                 {errors.firstName && (
+//                   <span className="error-span">{errors.firstName}</span>
+//                 )}
+//               </div>
+//               <div className="job-input-holder">
+//                 <div>Last name*</div>
+//                 <input
+//                   type="text"
+//                   name="lastName"
+//                   value={store.lastName}
+//                   onChange={handleemailstore}
+//                   placeholder="Enter your last name"
+//                 />
+//                 {errors.lastName && (
+//                   <span className="error-span">{errors.lastName}</span>
+//                 )}
+//               </div>
+//             </div>
+//             <div className="job-input-container">
+//               <div className="job-input-holder">
+//                 <div>Phone*</div>
+//                 <PhoneInput
+//                   placeholder="Enter phone number"
+//                   value={store.phoneValue}
+//                   name="phoneValue"
+//                   onChange={(value) => {
+//                     setStore((prev) => ({ ...prev, phoneValue: value }));
+//                     setErrors((prev) => {
+//                       const updated = { ...prev };
+//                       if (value) delete updated.phoneValue;
+//                       return updated;
+//                     });
+//                   }}
+//                   className="phone-input"
+//                   defaultCountry="IN"
+//                 />
+//                 {errors.phoneValue && (
+//                   <span className="error-span">{errors.phoneValue}</span>
+//                 )}
+//               </div>
+//               <div className="job-input-holder">
+//                 <div>Email*</div>
+//                 <input
+//                   type="email"
+//                   name="email"
+//                   value={store.email}
+//                   onChange={handleemailstore}
+//                   placeholder="Enter your email"
+//                 />
+//                 {errors.email && (
+//                   <span className="error-span">{errors.email}</span>
+//                 )}
+//               </div>
+//             </div>
+//             <div className="job-domain">
+//               <div className="role-input-holder">
+//                 <div>Select Job Role*</div>
+//                 <div
+//                   style={{
+//                     display: "flex",
+//                     alignItems: "center",
+//                     justifyContent: "space-between",
+//                     border: "1px solid #CADBEA",
+//                     borderRadius: "0.5rem",
+//                   }}
+//                 >
+//                   <input
+//                     type="text"
+//                     name="jobRole"
+//                     value={store.jobRole}
+//                     onChange={handleemailstore}
+//                     placeholder="Select applying role"
+//                     className="job-role-input"
+//                     style={{ border: "none" }}
+//                   />
+//                   <IoIosArrowDown onClick={() => setShowRoles(!showRoles)} />
+//                 </div>
+//                 {errors.jobRole && (
+//                   <span className="error-span">{errors.jobRole}</span>
+//                 )}
+//               </div>
+//               {showRoles && (
+//                 <div className="job-domain-options">
+//                   {JobRoles.map((role, index) => (
+//                     <div key={index} className="role-option">
+//                       <div
+//                         onClick={() => {
+//                           setStore((prevState) => ({
+//                             ...prevState,
+//                             jobRole: role,
+//                           }));
+//                           setShowRoles(false);
+//                           setErrors((prev) => ({ ...prev, jobRole: "" }));
+//                         }}
+//                       >
+//                         {role}
+//                       </div>
+//                     </div>
+//                   ))}
+//                 </div>
+//               )}
+//             </div>
+//             <div>
+//               <div>Resume (optional)</div>
+//               <div
+//                 className={`resume-container ${dragActive ? "active" : ""}`}
+//                 onDragOver={(e) => {
+//                   e.preventDefault();
+//                   setDragActive(true);
+//                 }}
+//                 onDragLeave={(e) => {
+//                   e.preventDefault();
+//                   setDragActive(false);
+//                 }}
+//                 onDrop={handleDrop}
+//                 onClick={openFileInput}
+//               >
+//                 <div className="resume-box">
+//                   {store.file ? (
+//                     <p style={{ color: "#0047FF" }}>{store.file.name}</p>
+//                   ) : (
+//                     <>
+//                       <img src={UploadIcon} alt="Upload" />
+//                       <div>Select a file or drag and drop here</div>
+//                       <div style={{ padding: "0.75rem 0", color: "#0006" }}>
+//                         PDF format, file size not more than 5MB
+//                       </div>
+//                       <button type="button">Select file</button>
+//                     </>
+//                   )}
+//                 </div>
+//               </div>
+//               <input
+//                 type="file"
+//                 accept="application/pdf"
+//                 id="resume-box"
+//                 onChange={handleFileChange}
+//                 style={{ display: "none" }}
+//               />
+//               {errors.file && <span className="error-span">{errors.file}</span>}
+//             </div>
+//             {formMessage.text && (
+//               <div
+//                 style={{
+//                   marginTop: "1rem",
+//                   color:
+//                     formMessage.type === "success"
+//                       ? "green"
+//                       : formMessage.type === "error"
+//                         ? "red"
+//                         : "#444",
+//                   fontWeight: "500",
+//                 }}
+//               >
+//                 {formMessage.text}
+//               </div>
+//             )}
+//             <div className="job-btn-container">
+//               <button className="job-cancel" type="button" onClick={closeForm}>
+//                 Cancel
+//               </button>
+//               <button className="job-submit" type="submit">
+//                 Submit
+//               </button>
+//             </div>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+// export default JobForm;
+
+
+
+
+
+
+import React, { useState, useRef } from "react";
 import "../../styles/JobForm.css";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import UploadIcon from "../../assets/uploadIcon.svg";
 import { IoIosArrowDown } from "react-icons/io";
+
 function JobForm({ closeForm }) {
   const [store, setStore] = useState({
     firstName: "",
@@ -17,25 +356,21 @@ function JobForm({ closeForm }) {
   const [showRoles, setShowRoles] = useState(false);
   const [errors, setErrors] = useState({});
   const [formMessage, setFormMessage] = useState({ type: "", text: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const fileInputRef = useRef(null);
+
   const JobRoles = [
     "MERN Stack Developer",
-
     "Graphic Designer Intern",
-
     "MERN Stack Developer Intern",
-
     "UI/UX Designer Intern",
-
     "Industrial Designer Intern",
-
     "Marketing Intern",
-
     "Embedded Intern",
-
     "Mechanical Design Engineer Intern",
-
     "Entrepreneur in Residence (EIR)",
   ];
+
   const handleemailstore = (e) => {
     const { name, value } = e.target;
     setStore((prevState) => ({
@@ -58,6 +393,7 @@ function JobForm({ closeForm }) {
       return newErrors;
     });
   };
+
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
     if (
@@ -73,6 +409,7 @@ function JobForm({ closeForm }) {
       }));
     }
   };
+
   const handleDrop = (event) => {
     event.preventDefault();
     setDragActive(false);
@@ -90,9 +427,17 @@ function JobForm({ closeForm }) {
       }));
     }
   };
-  const openFileInput = () => document.getElementById("resume-box").click();
+
+  const openFileInput = () => {
+    if (fileInputRef.current) fileInputRef.current.click();
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
+
+    // Prevent parallel submissions
+    if (isSubmitting) return;
+
     const newErrors = {};
     if (!store.firstName.trim()) newErrors.firstName = "First name is required";
     if (!store.lastName.trim()) newErrors.lastName = "Last name is required";
@@ -103,6 +448,7 @@ function JobForm({ closeForm }) {
       newErrors.email = "Email is invalid";
     }
     if (!store.jobRole.trim()) newErrors.jobRole = "Please select a job role";
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       setFormMessage({
@@ -111,43 +457,88 @@ function JobForm({ closeForm }) {
       });
       return;
     }
-    const formData = new FormData(event.target);
-    formData.append("access_key", "f05920d0-3b2a-427b-bd0e-de098dfadd58" || "e94ad995-f110-472a-81f9-66ff8ca65e98");
-    formData.append("subject", "New Job Application via Stacia Corp Careers");
-    formData.append("from_name", "Stacia Corp Website");
+
+    setIsSubmitting(true);
+    setFormMessage({ type: "info", text: "Submitting your application..." });
+
     try {
-      setFormMessage({ type: "info", text: "Submitting your application..." });
+      // Build FormData manually so we are sure all fields are included
+      const formData = new FormData();
+      formData.append("access_key", "f05920d0-3b2a-427b-bd0e-de098dfadd58");
+      formData.append("subject", "New Job Application via Stacia Corp Careers");
+      formData.append("from_name", "Stacia Corp Website");
+
+      // Disable Web3Forms autoresponse (prevents a second email to the user)
+      formData.append("auto_reply", "false");
+
+      // Append form fields (make sure keys match what the endpoint expects)
+      formData.append("firstName", store.firstName);
+      formData.append("lastName", store.lastName);
+      formData.append("email", store.email);
+      formData.append("phone", store.phoneValue || "");
+      formData.append("jobRole", store.jobRole || "");
+
+      // Append file if present
+      if (store.file) {
+        formData.append("resume", store.file, store.file.name);
+      }
+
+      // Debug log (remove in production if you want)
+      // console.log("Submitting form with:", {
+      //   firstName: store.firstName,
+      //   lastName: store.lastName,
+      //   email: store.email,
+      //   phone: store.phoneValue,
+      //   jobRole: store.jobRole,
+      //   fileName: store.file ? store.file.name : null,
+      // });
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
       });
+
       const data = await response.json();
+
       if (data.success) {
-        setFormMessage({
-          type: "success",
-          text: "Form Submitted Successfully!",
+        setFormMessage({ type: "success", text: "Form Submitted Successfully!" });
+        // Clear UI state
+        setStore({
+          firstName: "",
+          lastName: "",
+          phoneValue: "",
+          email: "",
+          jobRole: "",
+          file: null,
         });
-        event.target.reset();
-        closeForm(); // Remove this if you want to keep the form open
+        setErrors({});
+        // Clear file input value (so the same file can be reselected later)
+        if (fileInputRef.current) fileInputRef.current.value = "";
+        // Optionally close the form
+        closeForm();
       } else {
         setFormMessage({
           type: "error",
-          text: data.message || "Something went wrong.",
+          text: data.message || "Something went wrong. Please try again.",
         });
       }
     } catch (error) {
+      console.error("Submission error:", error);
       setFormMessage({
         type: "error",
         text: "Network error. Please try again.",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
+
   return (
     <div className="job-form">
       <div className="job-form-inner">
         <div className="job-form-content-container">
           <div className="job-form-title">Job Application</div>
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} noValidate>
             <div className="job-input-container">
               <div className="job-input-holder">
                 <div>First name*</div>
@@ -176,6 +567,7 @@ function JobForm({ closeForm }) {
                 )}
               </div>
             </div>
+
             <div className="job-input-container">
               <div className="job-input-holder">
                 <div>Phone*</div>
@@ -198,6 +590,7 @@ function JobForm({ closeForm }) {
                   <span className="error-span">{errors.phoneValue}</span>
                 )}
               </div>
+
               <div className="job-input-holder">
                 <div>Email*</div>
                 <input
@@ -212,6 +605,7 @@ function JobForm({ closeForm }) {
                 )}
               </div>
             </div>
+
             <div className="job-domain">
               <div className="role-input-holder">
                 <div>Select Job Role*</div>
@@ -222,6 +616,7 @@ function JobForm({ closeForm }) {
                     justifyContent: "space-between",
                     border: "1px solid #CADBEA",
                     borderRadius: "0.5rem",
+                    padding: "0.375rem",
                   }}
                 >
                   <input
@@ -231,14 +626,19 @@ function JobForm({ closeForm }) {
                     onChange={handleemailstore}
                     placeholder="Select applying role"
                     className="job-role-input"
-                    style={{ border: "none" }}
+                    style={{ border: "none", flex: 1 }}
+                    readOnly={false} // keep as editable if you want users to type; set true to force selection-only
                   />
-                  <IoIosArrowDown onClick={() => setShowRoles(!showRoles)} />
+                  <IoIosArrowDown
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setShowRoles(!showRoles)}
+                  />
                 </div>
                 {errors.jobRole && (
                   <span className="error-span">{errors.jobRole}</span>
                 )}
               </div>
+
               {showRoles && (
                 <div className="job-domain-options">
                   {JobRoles.map((role, index) => (
@@ -252,6 +652,7 @@ function JobForm({ closeForm }) {
                           setShowRoles(false);
                           setErrors((prev) => ({ ...prev, jobRole: "" }));
                         }}
+                        style={{ cursor: "pointer", padding: "0.5rem 0" }}
                       >
                         {role}
                       </div>
@@ -260,6 +661,7 @@ function JobForm({ closeForm }) {
                 </div>
               )}
             </div>
+
             <div>
               <div>Resume (optional)</div>
               <div
@@ -274,6 +676,7 @@ function JobForm({ closeForm }) {
                 }}
                 onDrop={handleDrop}
                 onClick={openFileInput}
+                style={{ cursor: "pointer" }}
               >
                 <div className="resume-box">
                   {store.file ? (
@@ -290,7 +693,9 @@ function JobForm({ closeForm }) {
                   )}
                 </div>
               </div>
+
               <input
+                ref={fileInputRef}
                 type="file"
                 accept="application/pdf"
                 id="resume-box"
@@ -299,6 +704,7 @@ function JobForm({ closeForm }) {
               />
               {errors.file && <span className="error-span">{errors.file}</span>}
             </div>
+
             {formMessage.text && (
               <div
                 style={{
@@ -307,20 +713,44 @@ function JobForm({ closeForm }) {
                     formMessage.type === "success"
                       ? "green"
                       : formMessage.type === "error"
-                        ? "red"
-                        : "#444",
+                      ? "red"
+                      : "#444",
                   fontWeight: "500",
                 }}
               >
                 {formMessage.text}
               </div>
             )}
+
             <div className="job-btn-container">
-              <button className="job-cancel" type="button" onClick={closeForm}>
+              <button
+                className="job-cancel"
+                type="button"
+                onClick={() => {
+                  // Reset local state (optional)
+                  setStore({
+                    firstName: "",
+                    lastName: "",
+                    phoneValue: "",
+                    email: "",
+                    jobRole: "",
+                    file: null,
+                  });
+                  setErrors({});
+                  if (fileInputRef.current) fileInputRef.current.value = "";
+                  closeForm();
+                }}
+              >
                 Cancel
               </button>
-              <button className="job-submit" type="submit">
-                Submit
+
+              <button
+                className="job-submit"
+                type="submit"
+                disabled={isSubmitting}
+                aria-disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
             </div>
           </form>
@@ -329,10 +759,5 @@ function JobForm({ closeForm }) {
     </div>
   );
 }
+
 export default JobForm;
-
-
-
-
-
-

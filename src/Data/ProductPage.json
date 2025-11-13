@@ -327,7 +327,7 @@
           "id": "category-002",
           "name": "Electronics Product Engineering ",
           "description": "Discover the future of connected living with our IoT Smart Products. We design and develop intelligent solutions that integrate seamlessly into everyday life, offering convenience, efficiency, and control. From home automation to industrial monitoring, our products ensure enhanced performance through real-time data and remote accessibility. Revolutionize your operations with smart devices built to meet the demands of modern lifestyles and business environments",
-          "imageUrl": "/assets/ProductPage/iot_devices.webp",
+          "imageUrl": "/assets/ProductPage/Electronics Product Engineering.webp",
           "products": [
             {
               "id": "product-001",
@@ -471,7 +471,7 @@
           "id": "category-001",
           "name": "Vencorp",
           "description": "Your complete startup ecosystem is here. Leverage the Pragati portal for AI-powered validation and seamless growth.",
-          "imageUrl": "assets/Vencorp.webp",
+          "imageUrl": "/assets/ProductPage/Vencorp1.webp",
           "link": "https://thevencorp.com",
           "products": []
         },
@@ -479,7 +479,7 @@
           "id": "category-002",
           "name": "Starweb",
           "description": "Get your business online quickly and easily. We build stunning, professional websites that fit your budget.",
-          "imageUrl": "assets/Starweb.webp",
+          "imageUrl": "/assets/ProductPage/Starweb.webp",
           "link": "",
           "products": []
         },
@@ -487,34 +487,17 @@
           "id": "category-003",
           "name": "Stello",
           "description": "Stop juggling disjointed tools and apps. Stello is the integrated suite of apps designed to power every stage of your startup journey.",
-          "imageUrl": "assets/Stello.webp",
+          "imageUrl": "/assets/ProductPage/Stello1.webp",
           "link": "http://stellairlabs.com",
           "products": [
-            {
-              "id": "product-001",
-              "title": "Stello Calendar",
-              "domainName": "Research & Development",
-              "description": "Stello Calendar is a powerful scheduling tool designed to streamline your workflow and enhance productivity. With its intuitive interface, users can easily create, manage, and share events, appointments, and reminders. The calendar integrates seamlessly with other Stello apps, allowing for efficient task management and collaboration.",
-              "imageUrl": "/assets/ProductPage/Default.webp",
-              "briefDetails": "Stello Calendar is a powerful scheduling tool designed to streamline your workflow and enhance productivity. With its intuitive interface, users can easily create, manage, and share events, appointments, and reminders. The calendar integrates seamlessly with other Stello apps, allowing for efficient task management and collaboration. Features include customizable views, color-coded events, and smart notifications to keep you on track. Whether for personal use or team coordination, Stello Calendar is the ultimate solution for organizing your time effectively.",
-              "link": "https://calendar.staciacorp.com/"
-            },
-            {
-              "id": "product-002",
-              "title": "Stello Forms",
-              "domainName": "Research & Development",
-              "description": " Stello Forms is a versatile form-building tool that enables users to create custom forms for surveys, feedback, registrations, and more. With its user-friendly drag-and-drop interface, users can easily design forms with various question types, themes, and layouts. Stello Forms also offers advanced features such as conditional logic, data validation, and integration with other Stello apps for seamless data management. Whether for business or personal use, Stello Forms provides a comprehensive solution for collecting and analyzing information efficiently.",
-              "imageUrl": "/assets/ProductPage/Default.webp",
-              "briefDetails": "Stello Forms is a versatile form-building tool that enables users to create custom forms for surveys, feedback, registrations, and more. With its user-friendly drag-and-drop interface, users can easily design forms with various question types, themes, and layouts. Stello Forms also offers advanced features such as conditional logic, data validation, and integration with other Stello apps for seamless data management. Whether for business or personal use, Stello Forms provides a comprehensive solution for collecting and analyzing information efficiently.",
-              "link": "https://forms.staciacorp.com/"
-            }
+           
           ]
         },
         {
           "id": "category-004",
           "name": "Edifai",
           "description": "Experience personalized education like never before. Edifai uses AI to create adaptive learning paths tailored just for you.",
-          "imageUrl": "assets/Edifai.webp",
+          "imageUrl": "/assets/ProductPage/Edifai.webp",
           "link": "https://edifai.in/",
           "products": []
         },
@@ -522,18 +505,11 @@
           "id": "category-005",
           "name": "Tezzaract",
           "description": "The dedicated marketplace for 3D design talent. Buy and sell models on the premier e-commerce platform for designers and buyers.",
-          "imageUrl": "assets/Tezzaract.webp",
+          "imageUrl": "/assets/ProductPage/Tezzeract.webp",
           "link": "https://tezzaract.com",
           "products": []
-        },
-        {
-          "id": "category-006",
-          "name": "AigentCy",
-          "description": "Navigate complex tech landscapes with confidence. We provide digital transformation consultancy to modernize your business and maximize efficiency.",
-          "imageUrl": "assets/AigentCy.webp",
-          "link": "https://aigentcy.in",
-          "products": []
         }
+        
       ]
     }
   ]

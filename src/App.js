@@ -52,7 +52,7 @@ function App() {
 
   useEffect(() => {
     // Option A: always show intro for 3 seconds
-    const t = setTimeout(() => setShowIntro(false), 3000);
+    const t = setTimeout(() => setShowIntro(false), 2800);
 
     // Option B: show only once per session (uncomment to enable)
     // if (!sessionStorage.getItem("introShown")) {
