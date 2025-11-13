@@ -1,3 +1,5 @@
+
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import CareerPage from "./pages/CareerPage";
@@ -38,7 +40,37 @@ import EventDetails from "./components/Competition/Event-Detail";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Sitemap from "./components/Sitemap";
 
+import IndustriesPage from "./pages/IndustriesPage";
+import ClientVisit from "./pages/ClientVisit";
+
+
+import ShapeAnimationIntro from "./pages/ShapeAnimationIntro";
+import SpecificIndustries from "./components/Industries/SpecificIndustries";
+
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
+  useEffect(() => {
+    // Option A: always show intro for 3 seconds
+    const t = setTimeout(() => setShowIntro(false), 2800);
+
+    // Option B: show only once per session (uncomment to enable)
+    // if (!sessionStorage.getItem("introShown")) {
+    //   const t = setTimeout(() => {
+    //     sessionStorage.setItem("introShown", "1");
+    //     setShowIntro(false);
+    //   }, 5000);
+    //   return () => clearTimeout(t);
+    // } else {
+    //   setShowIntro(false);
+    // }
+
+    return () => clearTimeout(t);
+  }, []);
+
+  if (showIntro) {
+    return <ShapeAnimationIntro />;
+  }
   return (
     <div className="App">
       {/* Lwdnkjgkufefkl */}
@@ -49,6 +81,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="/career" element={<CareerPage />} />
+        <Route path="/career/:key?" element={<CareerPage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route
           path="/products/:department/:category"
@@ -103,7 +136,7 @@ function App() {
         /> */}
         <Route
           path="/project/:department/:category/:title"
-          element={< Template5/>}
+          element={< Template5 />}
         />
         {/* <Route path="/project/:department/:title" element={<SingleProject />} /> */}
 
@@ -147,7 +180,7 @@ function App() {
         <Route path="/about/:key" element={<About />} />
         <Route path="/about" element={<About />} />
         <Route path="/partners" element={<Partners />} />
-        <Route path="/media-kit" element={<MediaKit />} />
+        <Route path="/media-kit/:key?" element={<MediaKit />} />
         <Route path="/about/leader/:name" element={<LeaderPage />} />
 
         <Route path="/about" element={<About />} />
@@ -160,6 +193,12 @@ function App() {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:title" element={<SpecificEvent />} />
         <Route path="*" element={<PageNotFound />} />
+
+        <Route path="/industries-covered/:formattedTitle" element={<IndustriesPage />} />
+
+        <Route path="/industries-covered" element={<IndustriesPage />} />
+        <Route path="/industries-covered-read_more/:industryName" element={<SpecificIndustries />} />
+        <Route path="/client-visit" element={<ClientVisit />} />
       </Routes>
       <ScrollArrow />
     </div>

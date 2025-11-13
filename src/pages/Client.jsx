@@ -84,7 +84,7 @@ const clients = [
     },
     {
         id: 5,
-        link: "https://beakindia.com/",
+        link: "https://brakesindia.com/",
         img: client5,
     },
     {
@@ -99,9 +99,9 @@ const clients = [
     },
     {
         id: 8,
-        link: "https://www.dynacast.com/",
+        link: "",
         img: client8,
-        
+
     },
     {
         id: 9,
@@ -110,7 +110,7 @@ const clients = [
     },
     {
         id: 10,
-        link: "https://www.nabard.org/Hindi/Default.aspx",
+        link: "https://expressholidays.in/",
         img: client10,
     },
     {
@@ -155,7 +155,7 @@ const clients = [
     },
     {
         id: 19,
-        link: "https://www.nabard.org/Hindi/Default.aspx",
+        link: " https://strides.com/",
         img: client19,
     },
     {
@@ -198,19 +198,19 @@ const clients = [
         link: "https://www.tnapex.tn.gov.in/ords/r/wstnapex/tnapex173136/home",
         img: client27,
     },
-   
+
     {
         id: 28,
         link: "https://play.google.com/store/apps/details?id=com.saradhastores&pcampaignid=web_share",
         img: client28,
     },
-   
+
     {
         id: 29,
         link: "https://www.svce.ac.in/",
         img: client29,
     }
-   
+
     // client1,
     // client2,
     // client3,

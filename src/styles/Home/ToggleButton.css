@@ -1,0 +1,154 @@
+/* Base styles (default desktop) */
+.toggle-root {
+  display: inline-block;
+  outline: none;
+}
+
+/* outer track */
+.toggle-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 320px;
+  height: 64px;
+  border-radius: 20px;
+  background: rgb(28, 7, 73);
+  box-shadow: 0 4px 18px rgb(0, 0, 0);
+  padding: 6px;
+  gap: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* sliding thumb */
+.toggle-thumb {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  width: calc(50% - 6px);
+  border-radius: 16px;
+  background: #f6f5f8;
+  box-shadow: 0 8px 22px rgba(14, 8, 30, 0.5), 0 1px 0 rgba(0, 0, 0, 0.06) inset;
+  transition: left 240ms cubic-bezier(.2, .9, .2, 1), box-shadow 180ms;
+  left: 6px;
+  z-index: 1;
+}
+
+.thumb-left {
+  left: 6px;
+}
+
+.thumb-right {
+  left: calc(50%);
+}
+
+/* option buttons */
+.toggle-option {
+  position: relative;
+  flex: 1 1 50%;
+  z-index: 2;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: EuclidMedium;
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: color 180ms;
+  outline: none;
+}
+
+.option-selected {
+  color: #20162a;
+  font-weight: 600;
+}
+
+.toggle-option:not(.option-selected) {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Focus styles */
+.toggle-root:focus .toggle-track,
+.toggle-option:focus {
+  /* box-shadow: 0 0 0 4px rgba(100, 79, 255, 0.12); */
+  border-radius: 17px;
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* 1920px (large desktop screens) */
+@media (max-width: 1920px) {
+  .toggle-track {
+    width: 360px;
+    height: 60px;
+  }
+
+  .toggle-option {
+    font-size: 1.4rem;
+  }
+}
+
+/* 1440px (standard desktop screens) */
+@media (max-width: 1440px) {
+  .toggle-track {
+    width: 320px;
+    height: 52px;
+  }
+
+  .toggle-option {
+    font-size: 1.3rem;
+  }
+}
+
+/* 1220px (small desktop / large tablet) */
+@media (max-width: 1220px) {
+  .toggle-track {
+    width: 300px;
+    height: 48px;
+  }
+
+  .toggle-option {
+    font-size: 1.2rem;
+  }
+}
+
+/* 1024px (tablet landscape) */
+@media (max-width: 1024px) {
+  .toggle-track {
+    width: 280px;
+    height: 44px;
+  }
+
+  .toggle-option {
+    font-size: 1.1rem;
+  }
+}
+
+/* 678px (tablet portrait / large mobile) */
+@media (max-width: 678px) {
+  .toggle-track {
+    width: 260px;
+    height: 42px;
+  }
+
+  .toggle-option {
+    font-size: 1rem;
+  }
+}
+
+/* 320px (small mobile) */
+@media (max-width: 320px) {
+  .toggle-track {
+    width: 220px;
+    height: 38px;
+  }
+
+  .toggle-option {
+    font-size: 0.95rem;
+  }
+}

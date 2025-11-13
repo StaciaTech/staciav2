@@ -168,7 +168,18 @@ export default function HomeCaseStudy() {
   return (
     <div className="home-case-study">
       <div className="home-case-study2">
-        <div className="case-study-title">Case Study</div>
+        <div className="events-header-top" >
+          <div className="case-study-title">Case Study</div>
+          <div className="see-more-info" onClick={() => {
+            navigate("/case-study");
+            window.scrollTo(0, 0);
+          }}
+            style={{ cursor: "pointer" }}
+          >
+
+            More CaseStudy <FaChevronRight />
+          </div>
+        </div>
         <div className="image-box-full1">
           <div className="image-box-left">
             {formattedData[0] && (
@@ -216,7 +227,7 @@ export default function HomeCaseStudy() {
           }}
           style={{ cursor: "pointer" }}
         >
-          More Case Studies <FaChevronRight style={{ verticalAlign: "middle" }} />
+          {/* More Case Studies <FaChevronRight style={{ verticalAlign: "middle" }} /> */}
         </div>
         <div
           className="more-case-mobile"

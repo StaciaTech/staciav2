@@ -4,6 +4,7 @@ import { useTransform, motion } from "framer-motion";
 // import data from "../../Data/Home.json"
 function StackCard({
   eachHomeProduct,
+  eachHomeService,
   i,
   proDetails,
   range,
@@ -12,20 +13,30 @@ function StackCard({
 }) {
   const navigateTo = useNavigate();
   const scale = useTransform(progress, range, [1, targetScale]);
-  const topPosition = `calc(100% - 90% + ${40 * i}px)`;
+  const topPosition = `calc(100% - 80% + ${40 * i}px)`;
 
-  // const depKey = 
- 
-  const depKey = eachHomeProduct.depName.split(" ").join("-");
-  const productKey = eachHomeProduct.title.split(" ").join("-");
-  const CategoryKey = eachHomeProduct.catName.split(" ").join("-");
+  // Determine if this is a product or service
+  const isService = !!eachHomeService;
+  const item = isService ? eachHomeService : eachHomeProduct;
 
-  console.log(depKey,productKey,CategoryKey)
-  // const productKey = eachHomeProduct.title.split(" ").join("-");
-
-  // const CategoryKey = eachHomeProduct.domainName.split(" ").join("-");
+  // Handle navigation paths for products vs services
+  let depKey, productKey, CategoryKey, navigationPath;
   
+  if (isService) {
+    // For services, use service-specific properties
+    depKey = item.depName ? item.depName.split(" ").join("-") : "services";
+    productKey = item.title ? item.title.split(" ").join("-") : "service";
+    CategoryKey = item.catName ? item.catName.split(" ").join("-") : "general";
+    navigationPath = `/services/${productKey}`;
+  } else {
+    // For products, use product-specific properties
+    depKey = item.depName ? item.depName.split(" ").join("-") : "products";
+    productKey = item.title ? item.title.split(" ").join("-") : "product";
+    CategoryKey = item.catName ? item.catName.split(" ").join("-") : "general";
+    navigationPath = `/products/${depKey}/${CategoryKey}/${productKey}`;
+  }
 
+  console.log(depKey, productKey, CategoryKey, isService ? 'service' : 'product');
   
   return (
     <motion.li
@@ -43,7 +54,7 @@ function StackCard({
       >
         <div className="card-img-box">
           <div className="card-img-cover">
-            <img src={eachHomeProduct.imageUrl} alt="" />
+            <img src={item.imageUrl} alt="" />
           </div>
         </div>
         <div className="card-content-box">
@@ -55,7 +66,7 @@ function StackCard({
             }}
             className="test-seclection-white"
           >
-            {eachHomeProduct.title}
+            {item.title}
           </div>
           <div
             style={{
@@ -66,20 +77,18 @@ function StackCard({
             }}
             className="test-seclection-white"
           >
-            {eachHomeProduct.domainName}
+            {item.domainName || item.category || 'General'}
           </div>
           <div className="content1">
-            <p className="test-seclection-white">{eachHomeProduct.pDes1}</p>
+            <p className="test-seclection-white">{item.pDes1 || item.description || ''}</p>
           </div>
           <div className="content1">
-            <p className="test-seclection-white">{eachHomeProduct.pDes2}</p>
+            <p className="test-seclection-white">{item.pDes2 || item.shortDescription || ''}</p>
           </div>
           <div
             className="learn-more"
             onClick={() => {
-              // navigateTo(`/products/department/${CategoryKey}/${productKey}`);
-              navigateTo(`/products/${depKey}/${CategoryKey}/${productKey}`);
-
+              navigateTo(navigationPath);
               window.scrollTo(0, 0);
             }}
             style={{ cursor: "pointer" }}

@@ -56,6 +56,48 @@
             "RESTful APIs"      
         ]
     },
+        {
+        "title": "Graphic Designer Intern",
+        "experience": "0-1 year (Internship)",
+        "qualification": "Visual Communication / Related Fields",
+        "jobType": "Intern",
+        "location": "Chennai, India",
+        "natureOfJob": "On-Site",
+        "description": "We’re seeking a creative and detail-oriented Graphic Designer Intern to join our design team. You will be responsible for creating visually appealing and user-friendly designs for digital and print platforms. This role involves collaborating with other designers and departments to produce engaging visuals, layouts, and campaigns that strengthen our brand identity and enhance user engagement.",
+        "responsibilities": [
+            "Conceptualize visuals based on project requirements and creative briefs.",
+            "Create images, graphics, and layouts using professional design software.",
+            "Test and optimize graphics across various media channels and devices.",
+            "Work with a wide range of media including digital, print, and motion graphics.",
+            "Plan and illustrate concepts by designing rough layouts of art and copy regarding arrangement, size, type size, style, and aesthetics.",
+            "Collaborate with fellow designers to develop new approaches for creating expressive, high-quality graphics for the company.",
+            "Ensure designs align with brand guidelines and maintain visual consistency across all platforms.",
+            "Stay up to date with industry trends, design tools, and best practices."
+        ],
+        "requiredSkills": [
+            "Proficiency in Adobe Photoshop, Illustrator, Premiere Pro, and After Effects.",
+            "Strong understanding of color theory, typography, and composition.",
+            "Ability to translate ideas into visually appealing and effective designs.",
+            "Good communication and collaboration skills.",
+            "Attention to detail and a strong sense of creativity.",
+            "Basic understanding of motion graphics and video editing.",
+            "Ability to handle feedback positively and iterate quickly on design ideas."
+        ],
+        "preferredSkills": [
+            "Knowledge with Figma, Canva, or other digital design tools.",
+            "Understanding of UI/UX design principles.",
+            "Basic knowledge of photography and image editing.",
+            "Knowledge in creating marketing materials, social media graphics, or brand assets.",
+            "Knowledge of animation principles and basic motion design.",
+            "Familiarity with print design standards and formats."
+        ],
+        "requiredTools": [
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "Adobe Premiere Pro",
+            "Adobe After Effects"
+        ]
+    },
     {
         "title": "MERN Stack Developer Intern",
         "experience": "Fresher",
@@ -319,6 +361,45 @@
             "Interested in mechanical assembly and fabrication techniques.",
             "Strong analytical and problem-solving skills.",
             "Excellent communication and teamwork abilities."
+        ],
+        "preferredSkills": [
+            "Good Knowledge of Design, fabrication, assembly, documentation and MS Excel",
+            "Knowledge of project management principles."         
+        ],
+        "requiredTools": [
+            "AutoCAD",
+            "Fusion 360",
+            "Autodesk inventor"      
+        ]
+    },
+    {
+        "title": "Entrepreneur in Residence (EIR)",
+        "experience": "Fresher",
+        "qualification": "B.E Mechanical Engineer / Related Field",
+        "jobType": "Internship",
+        "location": "Guindy, Chennai, India",
+        "natureOfJob": "On-Site",
+        "description": "We are seeking a skilled Mechanical Design Engineer to join our team. The ideal candidate will have expertise in CAD software, mechanical assembly, and  fabrication  techniques.  This  role  involves designing and developing mechanical components, ensuring precision in assembly, and conducting prototype testing to ensure compliance with specifications",
+        "responsibilities": [
+            "Product Strategy & Vision: Define and refine the product roadmap, market positioning, and long-term vision for this platform, ensuring alignment with Stacia Corp's strategic goals and maximizing market penetration.",
+            "Market Validation & Research: Conduct in-depth market analysis, competitive landscaping, and rigorous customer discovery to identify critical pain points, untapped opportunities, and high-value target segments within the additive manufacturing industry",
+            "Business Model Development: Develop and iterate on robust, scalable, and sustainable business models, pricing strategies, and aggressive go-to-market plans for the platform.",
+            "Team Building: Work with HR to identify and recruit initial key talent for the platform's incubation team, fostering a strong, innovative, and high-performance culture.",
+            "Product Development Oversight: Collaborate closely with the engineering and design teams to guide the agile development process, ensuring features align precisely with market needs and strategic objectives, driving rapid iteration and deployment.",
+            "Partnerships & Ecosystem Development: Identify and establish strategic, high-value partnerships with relevant equipment manufacturers, material suppliers, creator communities, and potential enterprise clients to accelerate adoption and growth",
+            "Fundraising & Investor Relations (if applicable): Prepare compelling pitches and actively support fundraising efforts if this initiative transitions into a standalone venture, securing external investment.",
+            "Thought Leadership: Represent this initiative and Stacia Corp at industry events, conferences, and in influential publications, establishing market leadership and driving industry dialogue."           
+        ],
+        "requiredSkills": [
+            "Entrepreneurial Drive: A proven track record of building and scaling products or businesses from inception, ideally in a startup environment or as a product leader within a large organization, demonstrating a founder's mindset",
+            "Domain Expertise: Deep, demonstrable understanding of the additive manufacturing industry, including cutting-edge technologies, market trends, and key players",
+            "AI/Software Platform Acumen: Strong grasp of AI/ML concepts and extensive experience with complex software platform development, particularly those involving multi-sided marketplaces or intricate ecosystems.",
+            "Product Leadership: Demonstrated ability to define audacious product visions, craft winning strategies, and lead cross-functional teams through the entire product lifecycle, from ideation to successful market launch and scaling",
+            "Strategic Thinker: Exceptional ability to identify transformative market opportunities, dissect complex problems, and engineer innovative, scalable solutions.",
+            "Exceptional Communicator: Superior written and verbal communication skills, capable of articulating complex ideas with clarity, conviction, and persuasion to diverse audiences (technical, business, investors).",
+            "Results-Oriented: A relentless bias for action, with a verifiable track record of delivering tangible, high-impact outcomes in fast-paced, ambiguous, and high-stakes environments",
+            "Technical Background (Preferred): While not strictly required, a technical degree (e.g., Computer Science, Engineering) or strong technical fluency is a significant advantage.",
+            "Experience: 7-10+ years of relevant experience, with at least 3-5 years in a leadership role within product management, business development, or a startup founder capacity."
         ],
         "preferredSkills": [
             "Good Knowledge of Design, fabrication, assembly, documentation and MS Excel",

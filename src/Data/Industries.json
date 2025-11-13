@@ -1,0 +1,161 @@
+{
+  "industries": [
+    {
+      "id": 1,
+      "title": "Food-Processing",
+      "slug": "food-processing",
+      "heroImage": "/images/industries/food-processing-hero.jpg",
+      "overview": "Stacia Corp designs and develops machinery, automation and quality-control systems tailored for food manufacturers. We blend hygienic design, traceability and automation to boost throughput while assuring food-safety compliance.",
+      "marketTrends": "Growing demand for packaging automation, cold-chain monitoring, allergen management, and flexible production lines that support short runs and rapid SKU changes.",
+      "challenges": [
+        "Strict hygiene & washdown requirements (materials and sealing).",
+        "Traceability across processing and packaging for recalls.",
+        "Balancing throughput with gentle handling to avoid product damage."
+      ],
+      "opportunities": [
+        "Retrofit existing lines with modular automation to reduce downtime.",
+        "IoT-enabled sensors for real-time quality metrics and predictive maintenance.",
+        "Small-batch / artisanal production tooling for flexible SKU changes."
+      ],
+      "keyServices": [
+        "Hygienic machinery design",
+        "Automation & PLC integration",
+        "Custom conveyors & dosing systems",
+        "Rapid prototyping & pilot lines"
+      ],
+      "typicalProjects": [
+        "High-speed filling & capping retrofit",
+        "Automatic portioning/dosing system",
+        "Inline metal/density detection integration"
+      ],
+      "caseStudies": [
+        {
+          "slug": "fp-line-retrofit",
+          "title": "High-speed Filling Line Retrofit",
+          "summary": "Retrofitted a 3-SKU line with modular changeover tooling, increasing uptime from 78% to 93% and reducing manual changeover time by 70%.",
+          "impact": { "uptimeIncrease": "15%", "changeoverReduction": "70%", "roiMonths": 9 }
+        }
+      ],
+      "stats": { "avgProjectSize": "₹6L - ₹40L", "typicalLeadTime": "8–20 weeks" },
+      "faqs": [
+        { "q": "Do you design for washdown environments?", "a": "Yes — IP67/food-grade design with removable subassemblies and hygienic welds." },
+        { "q": "Can you integrate our traceability system?", "a": "We integrate barcode/RFID and API hooks to MES/WMS systems." }
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "Agriculture",
+      "slug": "agriculture",
+      "heroImage": "/images/industries/agriculture-hero.jpg",
+      "overview": "We support precision agriculture through design of rugged sensor housings, lightweight implements and automation targeted at improving productivity and conserving resources.",
+      "marketTrends": "Rise of precision farming, affordable sensors for smallholders and edge AI for crop health monitoring.",
+      "challenges": ["Harsh outdoor environment (dust, moisture, UV).", "Power constraints for remote devices.", "Affordability for smallholder adoption."],
+      "opportunities": ["Low-cost telemetry for irrigation scheduling.", "Electrified last-mile implements.", "Edge AI for crop health insights."],
+      "keyServices": ["Ruggedized product design", "Low-power electronics", "CAD for farm equipment", "Field pilot testing"],
+      "typicalProjects": ["Solar drip controller", "Soil-moisture sensor pod", "Lightweight fruit-harvester design"],
+      "caseStudies": [
+        {
+          "slug": "solar-drip-controller",
+          "title": "Solar Drip Controller Pilot",
+          "summary": "Low-cost solar controller reduced water use by 35% in pilot farms and improved irrigation consistency.",
+          "impact": { "waterSavings": "35%", "pilotFarms": 12 }
+        }
+      ],
+      "stats": { "avgProjectSize": "₹2L - ₹20L", "typicalLeadTime": "6–16 weeks" },
+      "faqs": [{ "q": "Do you do field testing?", "a": "Yes — we pilot test across seasons and gather telemetry for iteration." }]
+    },
+
+    {
+      "id": 3,
+      "title": "Energy",
+      "slug": "energy",
+      "heroImage": "/images/industries/energy-hero.jpg",
+      "overview": "Stacia develops components and systems for renewable and distributed energy — from mounting & housing designs for rooftop solar to battery enclosure prototypes and thermal management solutions.",
+      "marketTrends": "Growth in distributed generation, energy storage, microgrids and higher safety/thermal-performance requirements for batteries.",
+      "challenges": ["Thermal management in compact enclosures.", "Certification and grid-connection requirements.", "Mechanical fatigue in outdoor installations."],
+      "opportunities": ["Modular battery packs", "Passive thermal solutions", "Custom rooftop mounts for non-standard structures."],
+      "keyServices": ["Thermal & mechanical design", "Battery enclosure prototyping", "PV mounting design", "EMC-aware enclosures"],
+      "typicalProjects": ["IP65 battery enclosure with passive cooling", "Custom rooftop mounting", "Prototype inverter control-box"],
+      "caseStudies": [
+        {
+          "slug": "battery-enclosure",
+          "title": "Passive-cooled Battery Enclosure",
+          "summary": "Lightweight enclosure design reduced operating temperature by 8–12°C, improving reliability and expected lifetime.",
+          "impact": { "tempDrop": "8–12°C", "lifetimeIncrease": "20%" }
+        }
+      ],
+      "stats": { "avgProjectSize": "₹8L - ₹60L", "typicalLeadTime": "10–24 weeks" },
+      "faqs": [{ "q": "Do you help with certifications?", "a": "We prepare test-ready documentation and design support for IEC/IS certification paths." }]
+    },
+
+    {
+      "id": 4,
+      "title": "Manufacturing",
+      "slug": "manufacturing",
+      "heroImage": "/images/industries/manufacturing-hero.jpg",
+      "overview": "We assist discrete and process manufacturers with product design, tooling and shop-floor automation that reduce cycle time and improve yield — from jigs & fixtures to integrated assembly equipment.",
+      "marketTrends": "Smart factory adoption, IIoT for predictive maintenance and demand for modular automation.",
+      "challenges": ["Legacy machine integration (brownfield).", "Operator skill variability.", "Need for low-cost tooling for small batches."],
+      "opportunities": ["Modular automation cells", "Digital twins for process optimization", "Flexible fixturing for mixed-model lines."],
+      "keyServices": ["Fixturing & jig design", "Automation line design", "Reverse engineering", "DFM & production ramp support"],
+      "typicalProjects": ["Automated assembly cell", "Inspection jig with camera integration", "DFM redesign"],
+      "caseStudies": [
+        {
+          "slug": "assembly-cell",
+          "title": "Modular Assembly Cell",
+          "summary": "Replaced three manual stations with a modular cell, cutting throughput time by 40% and scrap by 15%.",
+          "impact": { "throughputGain": "40%", "scrapReduction": "15%" }
+        }
+      ],
+      "stats": { "avgProjectSize": "₹5L - ₹75L", "typicalLeadTime": "8–26 weeks" },
+      "faqs": [{ "q": "Can you work on-site for installation?", "a": "Yes — we support site surveys, installation supervision and commissioning." }]
+    },
+
+    {
+      "id": 5,
+      "title": "Consumer Electronic",
+      "slug": "consumer-electronic",
+      "heroImage": "/images/industries/consumer-electronic-hero.jpg",
+      "overview": "End-to-end product engineering for consumer electronics — enclosure and industrial design, PCB layout, firmware prototyping and EMI/ESD compliance support.",
+      "marketTrends": "Accelerated product cycles, miniaturization, battery efficiency and focus on UX & sustainability.",
+      "challenges": ["EMI/ESD in compact designs.", "Balancing manufacturability with aesthetics.", "Tight hardware-software co-development cycles."],
+      "opportunities": ["Modular reference designs", "Sustainable materials and reparability", "Integrated HW-SW prototyping services."],
+      "keyServices": ["PCB design & layout", "Enclosure design", "Prototype assembly & testing", "Pre-compliance EMI testing"],
+      "typicalProjects": ["Bluetooth speaker prototype", "Smart remote", "Wearable sensor"],
+      "caseStudies": [
+        {
+          "slug": "wearable-sensor",
+          "title": "Low-Power Wearable Sensor",
+          "summary": "Developed a compact wearable with 10-day battery life using aggressive power-budgeting and firmware sleep modes.",
+          "impact": { "batteryLife": "10 days", "protoUnits": 200 }
+        }
+      ],
+      "stats": { "avgProjectSize": "₹3L - ₹50L", "typicalLeadTime": "6–18 weeks" },
+      "faqs": [{ "q": "Do you offer small-batch PCBA?", "a": "Yes — in-house or partner-managed small-batch PCBA for prototypes and pilots." }]
+    },
+
+    {
+      "id": 6,
+      "title": "Automotive",
+      "slug": "automotive",
+      "heroImage": "/images/industries/automotive-hero.jpg",
+      "overview": "Engineering services for automotive components and subsystems — durability, NVH, ADAS sensor mounts and EV subsystem integration.",
+      "marketTrends": "Electrification, ADAS development and lightweight hybrid materials.",
+      "challenges": ["Stringent safety & reliability.", "High-volume manufacturability.", "Thermal & EMC constraints for EV electronics."],
+      "opportunities": ["BMS housings and connectors", "ADAS sensor mounting systems", "Lightweight structural components."],
+      "keyServices": ["NVH & fatigue-aware component design", "EMC-informed enclosures", "Prototyping & bench testing", "Supplier-ready drawings"],
+      "typicalProjects": ["Battery-pack thermal spacer", "ADAS sensor bracket", "Harness routing design"],
+      "caseStudies": [
+        {
+          "slug": "adas-mount",
+          "title": "ADAS Sensor Mount System",
+          "summary": "Created a vibration-damped mount that improved sensor stability and calibration retention during rough-road testing.",
+          "impact": { "vibrationReduction": "60%", "calibrationRetention": "Improved" }
+        }
+      ],
+      "stats": { "avgProjectSize": "₹10L - ₹1Cr+", "typicalLeadTime": "12–40 weeks" },
+      "faqs": [{ "q": "Do you meet automotive-grade testing needs?", "a": "We prepare packages for third-party validation and support bench testing." }]
+    }
+  ]
+}

@@ -46,11 +46,11 @@
         },
         {
           "name": "Our Leadership",
-          "path": "about/leadership"
+          "path": "about/our-leadership"
         },
         {
           "name": "Meet our team",
-          "path": "about/team"
+          "path": "about/meet-our-team"
         }
       ]
     },
@@ -58,7 +58,6 @@
       "section": "Leadership",
       "path": "about/our-leadership",
       "SectionItems": [
-        
         {
           "description": "Sarabesh Sriram is a visionary entrepreneur and innovator driving change. With a deep-tech mindset, empathetic leadership, and purpose-driven approach, he transforms complex challenges into impactful solutions that shape industries and position India at the forefront of global innovation",
           "imageUrl": "/assets/LeaderPage/Mr-Sarabesh.webp",
@@ -71,10 +70,10 @@
           "imageUrl": "/assets/LeaderPage/Mr-Lakshman.webp",
           "name": "Mr Lakshman PV",
           "path": "about/leader/Mr-Lakshman-PV"
-        },       
+        },
         {
-          "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",
-          "des": "I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
+          "description": "A DevSecOps Specialist with 6 years of Infrastructure Automation and Deployment expertise with a Mechanical Engineering background. Driven by a passion for technology, Revanth leverages AWS, Digital Ocean and other cloud service providers to streamline Operations and Infrastructure and build robust mobile and web applications",
+          "des": "I'm a DevSecOps Specialist with 6 years of expertise in Infrastructure Automation and Deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on Infrastructure Automation, Deployment and cloud solutions. Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available and Robust Infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and building efficient mobile and web applications. My journey from mechanical engineering to DevSecOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
           "imageUrl": "/assets/LeaderPage/Mr-Revanth.webp",
           "name": "Mr Revanth S",
           "path": "about/leader/Mr-Revanth-S"
@@ -108,15 +107,37 @@
       "SectionItems": [
         {
           "name": "Logos ",
-          "path": "media-kit"
+          "path": "media-kit/logos"
         },
         {
           "name": "Leaders",
-          "path": "media-kit"
+          "path": "media-kit/leaders"
         },
         {
-          "name": "Brouchers",
-          "path": "media-kit"
+          "name": "Brochure",
+          "path": "media-kit/brochure"
+        }
+      ]
+    },
+    {
+      "section": "career",
+      "path": "career",
+      "SectionItems": [
+        {
+          "name": "Opportunities",
+          "path": "career/opportunities"
+        },
+        {
+          "name": "Hiring Procedure",
+          "path": "career/hiringprocedure"
+        },
+        {
+          "name": "Life Stacia Corp",
+          "path": "career/lifestaciacorp"
+        },
+        {
+          "name": "Our Culture",
+          "path": "career/ourculture"
         }
       ]
     }
@@ -125,7 +146,7 @@
     {
       "description": "With a burning desire to shape our country with unparalleled Research and Development, we established our company to pioneer groundbreaking technological advancements",
       "id": "67344ec833378f0bfe66253a",
-      "imageUrl": "/assets/Resilience in Motion.webp",
+      "imageUrl": "/assets/About/our journey starts.webp",
       "isAchievement": false,
       "title": "Our Journey Starts",
       "year": "Sept 2019",
@@ -134,38 +155,65 @@
     {
       "description": "Our first major milestone was achieved with MSME certification. This opens up new opportunities for growth and development.",
       "id": "673450557a970b308b574ea1",
-      "imageUrl": "/assets/Resilience in Motion.webp",
+      "imageUrl": "/assets/About/msme.webp",
       "isAchievement": false,
       "title": "MSME Recognition ",
       "year": "May 2020",
       "_id": "673450557a970b308b574ea1"
     },
     {
-      "description": "We successfully commenced our operations in July 2020. This marked a significant achievement for our company.",
-      "id": "6734505a7a970b308b574ea2",
-      "imageUrl": "/assets/Resilience in Motion.webp",
-      "isAchievement": false,
-      "title": "Operations initiation",
-      "year": "Jul 2020",
-      "_id": "6734505a7a970b308b574ea2"
-    },
-    {
       "description": "Startup india certification recognized by DPIIT in July 2020",
-      "id": "673450607a970b308b574ea3",
-      "imageUrl": "/assets/Resilience in Motion.webp",
+      "id": "673450607a970b308b574ea2",
+      "imageUrl": "/assets/About/startup.webp",
       "isAchievement": true,
       "title": "Startup India Certification",
       "year": "Jul 2020",
-      "_id": "673450607a970b308b574ea3"
+      "_id": "673450607a970b308b574ea2"
     },
     {
       "description": "Our Notable innovation Onedril kicked off in August 2020, which was a significant achievement by our team.",
-      "id": "673450667a970b308b574ea4",
-      "imageUrl": "/assets/Resilience in Motion.webp",
+      "id": "673450667a970b308b574ea3",
+      "imageUrl": "/assets/About/onedrill-about.webp",
       "isAchievement": false,
       "title": "Commencement of OneDril",
       "year": "Aug 2020",
-      "_id": "673450667a970b308b574ea4"
+      "_id": "673450667a970b308b574ea3"
+    },
+    {
+      "description": "Stello offers a comprehensive suite of applications, empowering startups with tools designed for every stage of their journey. From ideation to scaling, Stello streamlines operations, fosters growth, and drives innovation for new ventures.",
+      "id": "6734505a7a970b308b574ea4",
+      "imageUrl": "/assets/About/stello.webp",
+      "isAchievement": false,
+      "title": "Stello - Suite of Apps",
+      "year": "Feb 2023",
+      "_id": "6734505a7a970b308b574ea4"
+    },
+    {
+      "description": "Hydrogen is an AI-powered smart water bottle with rapid heating/cooling, hydration tracking, and personalized reminders. Its sleek squircle design combines style, comfort, and advanced technology for intelligent, on-the-go hydration",
+      "id": "6734505a7a970b308b574ea5",
+      "imageUrl": "/assets/About/Hydrogen-(Smart water bottle).webp",
+      "isAchievement": false,
+      "title": "HydroGen - Smart Bottle",
+      "year": "Jul 2023",
+      "_id": "6734505a7a970b308b574ea5"
+    },
+    {
+      "description": "Enabling long-range, low-power IoT applications with robust wireless connectivity.",
+      "id": "6734505a7a970b308b574ea6",
+      "imageUrl": "/assets/About/lora.webp",
+      "isAchievement": false,
+      "title": "LoRa Wireless Communication ",
+      "year": "Mar 2024",
+      "_id": "6734505a7a970b308b574ea6"
+    },
+    {
+      "description": "Stacia's dedication to innovation has fueled significant growth, securing vital grants and unlocking a multitude of further achievements. Through strategic development and persistent effort, Stacia consistently expands its impact and reaches new milestones.",
+      "id": "6734505a7a970b308b574ea7",
+      "imageUrl": "/assets/About/growth grant and more.webp",
+      "isAchievement": false,
+      "title": "Growth, Grant and More",
+      "year": "Jan 2025",
+      "_id": "6734505a7a970b308b574ea7"
     }
   ],
   "teamData": [
@@ -191,7 +239,6 @@
       "outlook": "Dilip crafts engaging visual experiences, blending creativity with functionality. He focuses on user-centered design to enhance brand identity, usability, and digital interface aesthetics across platforms and media.",
       "_id": "67345ab77a970b308b574eab"
     },
-   
     {
       "designation": " Front-End Associate, Software Research and Development",
       "firstName": "Vikram",
@@ -203,8 +250,6 @@
       "outlook": "Vikram develops interactive user interfaces using modern web technologies. He collaborates closely with designers and backend teams to deliver seamless, responsive, and performance-optimized web applications and prototypes",
       "_id": "67345b237a970b308b574ead"
     },
-    
-    
     {
       "designation": "Embedded Design Associate, Electronic Innovation Research And Development",
       "firstName": "Abdul",
@@ -269,7 +314,6 @@
     "assets/PartnerPage/parikshan.webp",
     "assets/PartnerPage/digiguroo.webp",
     "assets/PartnerPage/elleone.webp"
-    
   ],
   "partners": [
     {
@@ -297,7 +341,7 @@
   "leaders": [
     {
       "description": "Sarabesh Sriram is a visionary entrepreneur and innovator driving change. With a deep-tech mindset, empathetic leadership, and purpose-driven approach, he transforms complex challenges into impactful solutions that shape industries and position India at the forefront of global innovation",
-      "des":"Sarabesh Sriram is the visionary founder and strategic mind behind Stacia Corp , an innovation-led R&D powerhouse transforming the future of agriculture, energy, food systems, and smart  Consumer technologies. As a Founding Partner, he bridges deep-tech engineering with purposeful innovation, ensuring every project at Stacia not only solves present-day problems but anticipates the needs of tomorrow. His leadership fuels a culture of invention, impact, and continuous evolution.Also, at the helm of Sastem Global, a consumer electronics brand Crafting seamless connected experiences, Sarabesh balances entrepreneurial agility with a future-forward mindset. He leads with a rare blend of curiosity, compassion, and technical excellence, building pathways where others see only roadblocks. With a passion for innovation and a deep-rooted belief in the power of technology to reshape industries, Sarabesh has built companies that Don't just keep pace with the future—they create it. His work spans from precision agriculture and IoT systems to smart consumer products and AI-driven software platforms, always rooted in purpose and designed for impact. Sarabesh holds a Mechanical Engineering degree from the Sri  Venkateshwara College of Engineering (SVCE). He further specialized with a Post Graduate Diploma in Data Science from the Great Lakes Institute of Management and a certification in Business Analytics from the University of Texas, Austin. His interdisciplinary expertise enables him to bridge the gap between hardware and software, strategy and execution, vision and results. With a unique ability to convert abstract ideas into tangible innovation, Sarabesh continues to shape a future where technology meets humanity with intent.",
+      "des": "Sarabesh Sriram is the visionary founder and strategic mind behind Stacia Corp , an innovation-led R&D powerhouse transforming the future of agriculture, energy, food systems, and smart  Consumer technologies. As a Founding Partner, he bridges deep-tech engineering with purposeful innovation, ensuring every project at Stacia not only solves present-day problems but anticipates the needs of tomorrow. His leadership fuels a culture of invention, impact, and continuous evolution.Also, at the helm of Sastem Global, a consumer electronics brand Crafting seamless connected experiences, Sarabesh balances entrepreneurial agility with a future-forward mindset. He leads with a rare blend of curiosity, compassion, and technical excellence, building pathways where others see only roadblocks. With a passion for innovation and a deep-rooted belief in the power of technology to reshape industries, Sarabesh has built companies that Don't just keep pace with the future—they create it. His work spans from precision agriculture and IoT systems to smart consumer products and AI-driven software platforms, always rooted in purpose and designed for impact. Sarabesh holds a Mechanical Engineering degree from the Sri  Venkateshwara College of Engineering (SVCE). He further specialized with a Post Graduate Diploma in Data Science from the Great Lakes Institute of Management and a certification in Business Analytics from the University of Texas, Austin. His interdisciplinary expertise enables him to bridge the gap between hardware and software, strategy and execution, vision and results. With a unique ability to convert abstract ideas into tangible innovation, Sarabesh continues to shape a future where technology meets humanity with intent.",
       "quote": "The future belongs to those who innovate with empathy, think with clarity, and build with purpose — crafting solutions that are as elegant as they are essential.",
       "designation": "Chief Executive Officer",
       "imageUrl": "/assets/LeaderPage/Mr-Sarabesh.webp",
@@ -320,7 +364,6 @@
           "desc": "This prestigious award, received at the Millionaire Farmer of India (MFOI) event organized by Krishi Jagran and ICAR, celebrates outstanding entrepreneurial vision and execution. The recognition highlights a leader who has demonstrated exceptional innovation, driving significant positive impact. Presented by the honorable Shri Nitin Gadkari, this award underscores the power of entrepreneurial spirit in creating meaningful change and setting new industry benchmarks",
           "img": "/assets/LeaderPage/Entrepreneur of the Year 2024.webp"
         },
-        
         {
           "title": "Top 10 Innovations in India (2021) – For OneDril , a precision seed-sowing innovation Validated by NABARD, TNAU, and Idhayam – For pioneering scalable agri-tech solutions",
           "desc": "For pioneering scalable agri-tech solutions: This award recognizes a groundbreaking agricultural technology with national significance. OneDril's precision seed-sowing innovation has been acknowledged as one of the top innovations in India, further validated by reputable agricultural and financial institutions for its potential in providing scalable solutions to the agri-tech sector.",
@@ -331,13 +374,11 @@
           "desc": "This accolade acknowledges exceptional scholarly work in the field of advanced Internet of Things. The award recognizes the paper's significant contribution to IoT research, its rigor, and its potential impact on the field, further validated by its publication in the esteemed World Research Library.",
           "img": "/assets/LeaderPage/IASTEM Brisbane 2019.webp"
         },
-      
         {
           "title": "Global 3rd Place Winner– IEEE AUV Challenge 2018 – National University of Singapore (NUS)",
           "desc": "This international recognition highlights exceptional technical skills and innovation in autonomous underwater vehicle technology. Achieving a top global ranking in a prestigious IEEE competition demonstrates a high level of engineering prowess, problem-solving abilities, and the capacity to excel in a demanding and competitive field.",
           "img": "/assets/LeaderPage/National University of Singapore.webp"
         },
-       
         {
           "title": "RKVY-RAFTAAR Grantee – Ministry of Agriculture, Government of India",
           "desc": "Being a recipient of this grant from the Ministry of Agriculture signifies government recognition and support for ventures in agriculture and allied sectors. The RKVY-RAFTAAR program aims to promote innovation and entrepreneurship in agriculture, providing financial assistance and mentorship to scale impactful solutions.",
@@ -397,12 +438,11 @@
         }
       ]
     },
-    
     {
-      "description": "I'm a DevOps Specialist with 5 years of deployment expertise and a Mechanical Engineering background. Driven by a passion for technology, I harness AWS to streamline infrastructure and build robust mobile and web applications.",
-      "des": "I'm a DevOps Specialist with 5 years of expertise in deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on deployment and cloud solutions.Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and developing efficient mobile and web applications. My journey from mechanical engineering to DevOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
+      "description": "A DevSecOps Specialist with 6 years of Infrastructure Automation and Deployment expertise with a Mechanical Engineering background. Driven by a passion for technology, Revanth leverages AWS, Digital Ocean and other cloud service providers to streamline Operations and Infrastructure and build robust mobile and web applications.",
+      "des": "I'm a DevSecOps Specialist with 6 years of expertise in Infrastructure Automation and Deployment, holding a Mechanical Engineering undergraduate degree. My passion for technology and science led me to explore innovative solutions, building a hybrid vehicle that secured 8th position in the All India Hybrid Vehicle Competition organized by Formula Imperial under ISIE. This achievement fueled my interest in technology, inspiring me to transition into IT with a focus on Infrastructure Automation, Deployment and cloud solutions. Armed with an AWS Solution Architect certification, I specialize in leveraging cloud services to build scalable, highly available and Robust Infrastructures. My expertise lies in automating infrastructure, streamlining deployment processes, and building efficient mobile and web applications. My journey from mechanical engineering to DevSecOps showcases my dedication to harnessing technology to solve complex problems with precision and creativity. I’m continuously evolving, staying updated with the latest technologies to deliver cutting-edge solutions that bridge the gap between innovation and implementation.",
       "quote": "“The people who are crazy enough to think they can change the world are the ones who do.” — Steve Jobs",
-      "designation": "Chief Technical Officer",
+      "designation": "Chief Technology Officer",
       "imageUrl": "/assets/LeaderPage/Mr-Revanth.webp",
       "name": "Mr Revanth S",
       "position": 3,
