@@ -29,7 +29,7 @@
 //   const [showDownArrow, setShowDownArrow] = useState(false);
 //   const [showSubUpArrow, setShowSubUpArrow] = useState(false);
 //   const [showSubDownArrow, setShowSubDownArrow] = useState(false);
- 
+
 
 //   useEffect(() => {
 //     if(!data.department|| !Array.isArray(data.department)){
@@ -63,7 +63,7 @@
 //     };
 //   }, []);
 
-  
+
 
 //   const DeptArr = productData?.map((item) => item.name) || [];
 
@@ -224,7 +224,7 @@
 //         }
 //       }
 //       return null;
-    
+
 //   }
 
 //   function findCategoryPath(productData =[], productCategory) {
@@ -501,9 +501,656 @@
 //pk
 
 
+// import React, { useEffect, useRef, useState } from "react";
+// import "../../styles/NavProductComp.css";
+// import Star from "../../assets/loadingStar.svg";
+// import {
+//   IoIosArrowDown,
+//   IoIosArrowForward,
+//   IoIosArrowUp,
+// } from "react-icons/io";
+// import { useNavigate } from "react-router-dom";
+// import data from "../../Data/ProductPage.json";
+// import { FaLariSign } from "react-icons/fa6";
+// import LoadingStar from "../LoadingStar";
+
+// function NavProductComp({ handleClose }) {
+//   const navigate = useNavigate();
+//   const [productData, setProductData] = useState();
+//   const deptContainerRef = useRef(null); // Ref for the departments container
+//   const categoryContainerRef = useRef(null); // Ref for the main category container
+//   const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
+
+//   const [showSubCats, setShowSubCats] = useState(false);
+//   const [showProducts, setShowproducts] = useState(false);
+//   const [MainCatArr, setMaincatArr] = useState([]);
+//   const [subCatsArr, setSubccatsArr] = useState([]);
+//   const [deptname, setDeptname] = useState();
+//   const [mainCatName, setMainCatName] = useState();
+//   const [subCatName, setSubCatName] = useState();
+//   const [displayProducts, setDisplayProducts] = useState();
+//   const [finalProductArr, setFinalProductArr] = useState();
+//   const [canScrollDeptUp, setCanScrollDeptUp] = useState(false); // For Departments up arrow
+//   const [canScrollDeptDown, setCanScrollDeptDown] = useState(false); // For Departments down arrow
+//   const [canScrollCatUp, setCanScrollCatUp] = useState(false); // For Categories up arrow
+//   const [canScrollCatDown, setCanScrollCatDown] = useState(false); // For Categories down arrow
+//   const [canScrollSubUp, setCanScrollSubUp] = useState(false); // For Products up arrow
+//   const [canScrollSubDown, setCanScrollSubDown] = useState(false); // For Products down arrow
+
+//   useEffect(() => {
+//     if (!data.department || !Array.isArray(data.department)) {
+//       console.error("Invalid ProductPage.json data", data);
+//       return;
+//     }
+
+//     setProductData(data.department);
+
+//     const defaultDept = data.department?.[0];
+//     const defaultCategory = defaultDept?.category?.[0];
+//     const defaultProduct = defaultCategory?.products?.[0];
+
+//     if (
+//       defaultDept &&
+//       defaultCategory &&
+//       Array.isArray(defaultCategory.products) &&
+//       defaultProduct
+//     ) {
+//       setDeptname(defaultDept.name);
+//       setMaincatArr(defaultDept.category.map((cat) => cat.name));
+//       setMainCatName(defaultCategory.name);
+//       setFinalProductArr(defaultCategory.products);
+//       setSubccatsArr(defaultCategory.products.map((prod) => prod.title));
+//       setSubCatName(defaultProduct.title);
+//       setDisplayProducts(defaultProduct);
+//       setShowSubCats(true);
+//       setShowproducts(true);
+//     } else {
+//       console.warn("No valid default department, category or product found");
+//     }
+
+//     document.body.classList.add("no-scroll");
+//     return () => {
+//       document.body.classList.remove("no-scroll");
+//     };
+//   }, []);
+
+//   const DeptArr = productData?.map((item) => item.name) || [];
+
+//   // Check scrollability for Departments whenever DeptArr changes
+//   useEffect(() => {
+//     const checkDeptScrollability = () => {
+//       if (deptContainerRef.current) {
+//         const container = deptContainerRef.current;
+//         const { scrollHeight, clientHeight } = container;
+//         setCanScrollDeptDown(scrollHeight > clientHeight);
+//         setCanScrollDeptUp(container.scrollTop > 0);
+//       }
+//     };
+
+//     const timer = setTimeout(checkDeptScrollability, 0);
+//     return () => clearTimeout(timer);
+//   }, [DeptArr]);
+
+//   // Check scrollability for Categories whenever MainCatArr changes
+//   useEffect(() => {
+//     const checkCatScrollability = () => {
+//       if (categoryContainerRef.current) {
+//         const container = categoryContainerRef.current;
+//         const { scrollHeight, clientHeight } = container;
+//         setCanScrollCatDown(scrollHeight > clientHeight);
+//         setCanScrollCatUp(container.scrollTop > 0);
+//       }
+//     };
+
+//     const timer = setTimeout(checkCatScrollability, 0);
+//     return () => clearTimeout(timer);
+//   }, [MainCatArr]);
+
+//   // Check scrollability for Products whenever subCatsArr changes
+//   useEffect(() => {
+//     const checkSubScrollability = () => {
+//       if (subCategoryContainerRef.current) {
+//         const container = subCategoryContainerRef.current;
+//         const { scrollHeight, clientHeight } = container;
+//         setCanScrollSubDown(scrollHeight > clientHeight);
+//         setCanScrollSubUp(container.scrollTop > 0);
+//       }
+//     };
+
+//     const timer = setTimeout(checkSubScrollability, 0);
+//     return () => clearTimeout(timer);
+//   }, [subCatsArr]);
+
+//   const HandleDeptHovever = (DeptName) => {
+//     setDeptname(DeptName);
+//     const MainCatArrObj = productData?.find((item) => item.name === DeptName);
+//     if (MainCatArrObj && Array.isArray(MainCatArrObj.category)) {
+//       const categories = MainCatArrObj.category;
+//       const firstCategory = categories[0];
+//       const firstProduct = firstCategory?.products[0];
+//       setMaincatArr(MainCatArrObj?.category?.map((item) => item.name) || []);
+
+//       if (firstCategory && Array.isArray(firstCategory.products)) {
+//         setMainCatName(firstCategory?.name);
+//         setFinalProductArr(firstCategory?.products);
+//         const subCatTitles =
+//           firstCategory?.products?.map((pro) => pro.title) || [];
+//         setSubccatsArr(subCatTitles);
+//         setShowSubCats(true);
+//         if (firstProduct) {
+//           setSubCatName(firstProduct.title);
+//           setDisplayProducts(firstProduct);
+//           setShowproducts(true);
+//         }
+//       } else {
+//         setShowSubCats(false);
+//         setShowproducts(false);
+//         setSubccatsArr([]);
+//         setFinalProductArr([]);
+//         setSubCatName("");
+//         setDisplayProducts(null);
+//       }
+//     }
+//   };
+
+//   const HandleMainCatHover = (MainCat) => {
+//     const MainCatArrObj = productData?.find((item) => item.name === deptname);
+//     const subCatObj = MainCatArrObj?.category?.find(
+//       (item) => item.name === MainCat
+//     );
+
+//     if (
+//       subCatObj &&
+//       Array.isArray(subCatObj.products) &&
+//       subCatObj?.products?.length > 0
+//     ) {
+//       setMainCatName(MainCat);
+//       setFinalProductArr(subCatObj?.products);
+//       if (
+//         subCatObj &&
+//         Array.isArray(subCatObj.products) &&
+//         subCatObj.products.length
+//       ) {
+//         const productTitles =
+//           subCatObj?.products?.map((eachSubCat) => eachSubCat.title) || [];
+//         setSubccatsArr(productTitles);
+//         const firstProduct = subCatObj.products?.[0];
+//         if (firstProduct) {
+//           setSubCatName(firstProduct.title);
+//           setDisplayProducts(firstProduct);
+//           setShowproducts(true);
+//         }
+//       }
+//       setShowSubCats(true);
+//     } else {
+//       setShowSubCats(false);
+//       setShowproducts(false);
+//       setSubccatsArr([]);
+//       setFinalProductArr([]);
+//       setSubCatName(null);
+//       setDisplayProducts(null);
+//     }
+//   };
+
+//   const HandleSubCatHover = (SubCat) => {
+//     setSubCatName(SubCat);
+//     const ProductsFound = finalProductArr?.find(
+//       (item) => item.title === SubCat
+//     );
+//     if (ProductsFound) {
+//       setDisplayProducts(ProductsFound);
+//       setShowproducts(true);
+//     }
+//   };
+
+//   const scrollDeptUp = () => {
+//     if (deptContainerRef.current) {
+//       const container = deptContainerRef.current;
+//       const itemHeight = container.firstChild?.offsetHeight || 40;
+//       container.scrollTop -= itemHeight;
+//     }
+//   };
+
+//   const scrollDeptDown = () => {
+//     if (deptContainerRef.current) {
+//       const container = deptContainerRef.current;
+//       const itemHeight = container.firstChild?.offsetHeight || 40;
+//       container.scrollTop += itemHeight;
+//     }
+//   };
+
+//   const scrollUp = () => {
+//     if (categoryContainerRef.current) {
+//       const container = categoryContainerRef.current;
+//       const itemHeight = container.firstChild?.offsetHeight || 40;
+//       container.scrollTop -= itemHeight;
+//     }
+//   };
+
+//   const scrollDown = () => {
+//     if (categoryContainerRef.current) {
+//       const container = categoryContainerRef.current;
+//       const itemHeight = container.firstChild?.offsetHeight || 40;
+//       container.scrollTop += itemHeight;
+//     }
+//   };
+
+//   const scrollSubUp = () => {
+//     if (subCategoryContainerRef.current) {
+//       const container = subCategoryContainerRef.current;
+//       const itemHeight = container.firstChild?.offsetHeight || 40;
+//       container.scrollTop -= itemHeight;
+//     }
+//   };
+
+//   const scrollSubDown = () => {
+//     if (subCategoryContainerRef.current) {
+//       const container = subCategoryContainerRef.current;
+//       const itemHeight = container.firstChild?.offsetHeight || 40;
+//       container.scrollTop += itemHeight;
+//     }
+//   };
+
+//   const handleDeptScroll = () => {
+//     if (deptContainerRef.current) {
+//       const container = deptContainerRef.current;
+//       const { scrollTop, scrollHeight, clientHeight } = container;
+//       const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+//       setCanScrollDeptUp(scrollTop > 0);
+//       setCanScrollDeptDown(!isAtBottom);
+//       console.log(
+//         "Dept Scroll - scrollTop:",
+//         scrollTop,
+//         "clientHeight:",
+//         clientHeight,
+//         "scrollHeight:",
+//         scrollHeight,
+//         "canScrollDeptDown:",
+//         !isAtBottom
+//       );
+//     }
+//   };
+
+//   const handleScroll = () => {
+//     if (categoryContainerRef.current) {
+//       const container = categoryContainerRef.current;
+//       const { scrollTop, scrollHeight, clientHeight } = container;
+//       const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+//       setCanScrollCatUp(scrollTop > 0);
+//       setCanScrollCatDown(!isAtBottom);
+//       console.log(
+//         "Cat Scroll - scrollTop:",
+//         scrollTop,
+//         "clientHeight:",
+//         clientHeight,
+//         "scrollHeight:",
+//         scrollHeight,
+//         "canScrollCatDown:",
+//         !isAtBottom
+//       );
+//     }
+//   };
+
+//   const handleSubScroll = () => {
+//     if (subCategoryContainerRef.current) {
+//       const container = subCategoryContainerRef.current;
+//       const { scrollTop, scrollHeight, clientHeight } = container;
+//       const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+//       setCanScrollSubUp(scrollTop > 0);
+//       setCanScrollSubDown(!isAtBottom);
+//       console.log(
+//         "Sub Scroll - scrollTop:",
+//         scrollTop,
+//         "clientHeight:",
+//         clientHeight,
+//         "scrollHeight:",
+//         scrollHeight,
+//         "canScrollSubDown:",
+//         !isAtBottom
+//       );
+//     }
+//   };
+
+//   function findProductPath(productData = [], productTitle) {
+//     if (!Array.isArray(productData)) {
+//       console.error("productdata is not an array:", productData);
+//       return null;
+//     }
+//     for (let department of productData) {
+//       if (!department?.category || !Array.isArray(department.category)) {
+//         console.warn("Invalid or missing category for department", department);
+//         continue;
+//       }
+//       for (let category of department.category) {
+//         if (!Array.isArray(category.products)) {
+//           console.warn(
+//             "category products is not iterable for category:",
+//             category
+//           );
+//           continue;
+//         }
+//         for (let product of category.products) {
+//           if (product.title === productTitle) {
+//             return { department, category, product };
+//           }
+//         }
+//       }
+//     }
+//     return null;
+//   }
+
+//   function findCategoryPath(productData = [], productCategory) {
+//     if (!Array.isArray(productData)) {
+//       console.error("productData is not an array:", productData);
+//       return null;
+//     }
+//     for (let department of productData) {
+//       if (!department?.category || !Array.isArray(department.category)) {
+//         console.warn("Invalid or missing category for department", department);
+//         continue;
+//       }
+//       for (let category of department.category) {
+//         if (category.name === productCategory) {
+//           return { department, category };
+//         }
+//       }
+//     }
+//     return null;
+//   }
+
+//   const productCategoryNavigator = (categoryTitle) => {
+//     const result = findCategoryPath(productData, categoryTitle);
+//     if (result) {
+//       navigate(
+//         `/products/${result.department.name
+//           .split(" ")
+//           .join("-")}/${result.category?.name.split(" ").join("-")}`
+//       );
+//       handleClose();
+//     } else {
+//       console.warn("Product not found", categoryTitle);
+//     }
+//   };
+
+//   const singleProductNavigator = (productTitle) => {
+//     if (!productTitle) {
+//       console.warn("Invalid productTitle", productTitle);
+//       return;
+//     }
+
+//     const result = findProductPath(productData, productTitle);
+//     if (result) {
+//       const productKey = productTitle.split(" ").join("-");
+//       navigate(
+//         `/products/${result.department.name
+//           .split(" ")
+//           .join("-")}/${result.category.name
+//           .split(" ")
+//           .join("-")}/${productKey}`
+//       );
+//       handleClose();
+//     } else {
+//       console.warn("Product not found", productTitle);
+//     }
+//   };
+
+//   return (
+//     <div className="NavProductComp-container">
+//       {productData ? (
+//         <div className="navProComp-container">
+//           <div className="navProComp-dept-container">
+//             <div className="navprocomp-items-heading">Departments</div>
+//             <div
+//               className="navproComp-item-holder"
+//               style={{ position: "relative", height: "100%" }}
+//             >
+//               <div className="navProComp-dot-container">
+//                 {/* {DeptArr?.map((dot, i) => (
+//                   <div
+//                     key={i}
+//                     className={`navProComp-dot ${dot === deptname ? "navProComp-dot-active" : ""}`}
+//                   ></div>
+//                 ))} */}
+//               </div>
+//               {DeptArr?.length > 5 && (
+//                 <div className="arrow-wrapper">
+//                   {canScrollDeptUp && (
+//                     <span
+//                       onClick={scrollDeptUp}
+//                       className="arrow-up"
+//                       aria-label="Scroll up"
+//                     >
+//                       <IoIosArrowUp />
+//                     </span>
+//                   )}
+//                   {canScrollDeptDown && (
+//                     <span
+//                       onClick={scrollDeptDown}
+//                       className="arrow-down"
+//                       aria-label="Scroll down"
+//                     >
+//                       <IoIosArrowDown />
+//                     </span>
+//                   )}
+//                 </div>
+//               )}
+//               <div
+//                 className="navProComp-mainCat-item-container"
+//                 ref={deptContainerRef}
+//                 onScroll={handleDeptScroll}
+//               >
+//                 {DeptArr?.map((eachCat, i) => (
+//                   <div
+//                     key={i}
+//                     onMouseEnter={() => HandleDeptHovever(eachCat)}
+//                     onClick={() => {
+//                       navigate(`/products/${eachCat}`);
+//                       handleClose();
+//                     }}
+//                     className="pointer"
+//                   >
+//                     <div
+//                       className={`navProComp-dept-item ${
+//                         eachCat === deptname ? "mainCat-active" : ""
+//                       }`}
+//                     >
+//                       {eachCat}
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+//           {MainCatArr.length > 0 && (
+//             <div className="navProComp-mainCat-container">
+//               <div className="navprocomp-items-heading">Categories</div>
+//               <div
+//                 className="navproComp-item-holder"
+//                 style={{ position: "relative", height: "100%" }}
+//               >
+//                 <div className="navProComp-dot-container">
+//                   {MainCatArr.map((dot, i) => (
+//                     <div
+//                       key={i}
+//                       className={`navProComp-dot ${
+//                         dot === mainCatName ? "navProComp-dot-active" : ""
+//                       }`}
+//                     ></div>
+//                   ))}
+//                 </div>
+//                 {MainCatArr.length > 5 && (
+//                   <div className="arrow-wrapper">
+//                     {canScrollCatUp && (
+//                       <span
+//                         onClick={scrollUp}
+//                         className="arrow-up"
+//                         aria-label="Scroll up"
+//                       >
+//                         <IoIosArrowUp />
+//                       </span>
+//                     )}
+//                     {canScrollCatDown && (
+//                       <span
+//                         onClick={scrollDown}
+//                         className="arrow-down"
+//                         aria-label="Scroll down"
+//                       >
+//                         <IoIosArrowDown />
+//                       </span>
+//                     )}
+//                   </div>
+//                 )}
+//                 <div
+//                   className="navProComp-mainCat-item-container"
+//                   ref={categoryContainerRef}
+//                   onScroll={handleScroll}
+//                 >
+//                   {MainCatArr.map((eachCat, i) => (
+//                     <div
+//                       key={i}
+//                       onMouseEnter={() => HandleMainCatHover(eachCat)}
+//                       onClick={() => {
+//                         window.scrollTo(0, 0);
+//                         productCategoryNavigator(eachCat);
+//                         handleClose();
+//                       }}
+//                       className="pointer"
+//                     >
+//                       <div
+//                         className={`navProComp-mainCat-item ${
+//                           eachCat === mainCatName ? "mainCat-active" : ""
+//                         }`}
+//                       >
+//                         {eachCat}
+//                       </div>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div>
+//             </div>
+//           )}
+//           {showSubCats && subCatsArr.length > 0 && (
+//             <div className="navProComp-subCat-container">
+//               <div className="navprocomp-items-heading">Products</div>
+//               <div
+//                 className="navproComp-item-holder"
+//                 style={{ position: "relative", height: "100%" }}
+//               >
+//                 <div className="navProComp-dot-container">
+//                   {subCatsArr.map((dot, i) => (
+//                     <div
+//                       key={i}
+//                       className={`navProComp-dot ${
+//                         dot === subCatName ? "navProComp-dot-active" : ""
+//                       }`}
+//                     ></div>
+//                   ))}
+//                 </div>
+//                 {subCatsArr.length > 5 && (
+//                   <div className="arrow-wrapper">
+//                     {canScrollSubUp && (
+//                       <span
+//                         onClick={scrollSubUp}
+//                         aria-label="Scroll sub up"
+//                         className="arrow-up"
+//                       >
+//                         <IoIosArrowUp />
+//                       </span>
+//                     )}
+//                     {canScrollSubDown && (
+//                       <span
+//                         onClick={scrollSubDown}
+//                         aria-label="Scroll sub down"
+//                         className="arrow-down"
+//                       >
+//                         <IoIosArrowDown />
+//                       </span>
+//                     )}
+//                   </div>
+//                 )}
+//                 <div
+//                   className="navProComp-subCat-item-container"
+//                   ref={subCategoryContainerRef}
+//                   onScroll={handleSubScroll}
+//                 >
+//                   {subCatsArr.map((eachItem, i) => (
+//                     <div
+//                       key={i}
+//                       onMouseEnter={() => HandleSubCatHover(eachItem)}
+//                       className="pointer"
+//                       onClick={() => {
+//                         window.scrollTo(0, 0);
+//                         singleProductNavigator(eachItem);
+//                         handleClose();
+//                       }}
+//                     >
+//                       <div
+//                         className={`navProComp-mainCat-item ${
+//                           eachItem === subCatName ? "mainCat-active" : ""
+//                         }`}
+//                       >
+//                         {eachItem}
+//                       </div>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div>
+//             </div>
+//           )}
+//           {showProducts && displayProducts && (
+//             <div className="navProComp-products-container">
+//               <div className="navProComp-products-holder">
+//                 <div>
+//                   <div
+//                     onClick={() => {
+//                       window.scrollTo(0, 0);
+//                       singleProductNavigator(displayProducts.title);
+//                       handleClose();
+//                     }}
+//                     style={{ cursor: "pointer" }}
+//                   >
+//                     <div className="navProComp-products-img">
+//                       <img
+//                         src={displayProducts.imageUrl}
+//                         alt=""
+//                         loading="lazy"
+//                       />
+//                     </div>
+//                     <div className="navProComp-products-title">
+//                       {displayProducts.title}
+//                     </div>
+//                     <div className="navProComp-products-des">
+//                       {displayProducts.description}
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//               <div
+//                 className="navProComp-products-more"
+//                 onClick={() => {
+//                   window.scrollTo(0, 0);
+//                   singleProductNavigator(displayProducts.title);
+//                   handleClose();
+//                 }}
+//               >
+//                 <span>See More</span>
+//                 <IoIosArrowForward />
+//               </div>
+//             </div>
+//           )}
+//         </div>
+//       ) : (
+//         <div><LoadingStar/></div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default NavProductComp;
+
+
 import React, { useEffect, useRef, useState } from "react";
 import "../../styles/NavProductComp.css";
-import Star from "../../assets/loadingStar.svg";
 import {
   IoIosArrowDown,
   IoIosArrowForward,
@@ -511,15 +1158,14 @@ import {
 } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import data from "../../Data/ProductPage.json";
-import { FaLariSign } from "react-icons/fa6";
 import LoadingStar from "../LoadingStar";
 
 function NavProductComp({ handleClose }) {
   const navigate = useNavigate();
   const [productData, setProductData] = useState();
-  const deptContainerRef = useRef(null); // Ref for the departments container
-  const categoryContainerRef = useRef(null); // Ref for the main category container
-  const subCategoryContainerRef = useRef(null); // Ref for the sub-category container
+  const deptContainerRef = useRef(null);
+  const categoryContainerRef = useRef(null);
+  const subCategoryContainerRef = useRef(null);
 
   const [showSubCats, setShowSubCats] = useState(false);
   const [showProducts, setShowproducts] = useState(false);
@@ -529,13 +1175,14 @@ function NavProductComp({ handleClose }) {
   const [mainCatName, setMainCatName] = useState();
   const [subCatName, setSubCatName] = useState();
   const [displayProducts, setDisplayProducts] = useState();
-  const [finalProductArr, setFinalProductArr] = useState();
-  const [canScrollDeptUp, setCanScrollDeptUp] = useState(false); // For Departments up arrow
-  const [canScrollDeptDown, setCanScrollDeptDown] = useState(false); // For Departments down arrow
-  const [canScrollCatUp, setCanScrollCatUp] = useState(false); // For Categories up arrow
-  const [canScrollCatDown, setCanScrollCatDown] = useState(false); // For Categories down arrow
-  const [canScrollSubUp, setCanScrollSubUp] = useState(false); // For Products up arrow
-  const [canScrollSubDown, setCanScrollSubDown] = useState(false); // For Products down arrow
+  const [finalProductArr, setFinalProductArr] = useState([]);
+
+  const [canScrollDeptUp, setCanScrollDeptUp] = useState(false);
+  const [canScrollDeptDown, setCanScrollDeptDown] = useState(false);
+  const [canScrollCatUp, setCanScrollCatUp] = useState(false);
+  const [canScrollCatDown, setCanScrollCatDown] = useState(false);
+  const [canScrollSubUp, setCanScrollSubUp] = useState(false);
+  const [canScrollSubDown, setCanScrollSubDown] = useState(false);
 
   useEffect(() => {
     if (!data.department || !Array.isArray(data.department)) {
@@ -549,97 +1196,194 @@ function NavProductComp({ handleClose }) {
     const defaultCategory = defaultDept?.category?.[0];
     const defaultProduct = defaultCategory?.products?.[0];
 
-    if (
-      defaultDept &&
-      defaultCategory &&
-      Array.isArray(defaultCategory.products) &&
-      defaultProduct
-    ) {
+    if (defaultDept && defaultCategory) {
       setDeptname(defaultDept.name);
       setMaincatArr(defaultDept.category.map((cat) => cat.name));
       setMainCatName(defaultCategory.name);
-      setFinalProductArr(defaultCategory.products);
-      setSubccatsArr(defaultCategory.products.map((prod) => prod.title));
-      setSubCatName(defaultProduct.title);
-      setDisplayProducts(defaultProduct);
-      setShowSubCats(true);
-      setShowproducts(true);
+      setFinalProductArr(defaultCategory.products || []);
+
+      if (Array.isArray(defaultCategory.products) && defaultCategory.products.length > 0 && defaultProduct) {
+        setSubccatsArr(defaultCategory.products.map((p) => p.title));
+        setSubCatName(defaultProduct.title);
+        setDisplayProducts(defaultProduct);
+        setShowSubCats(true);
+        setShowproducts(true);
+      } else {
+        // show category preview if category has no products
+        setSubccatsArr([]);
+        setSubCatName("");
+        setDisplayProducts({
+          title: defaultCategory.name,
+          description: defaultCategory.description,
+          imageUrl: defaultCategory.imageUrl,
+          isExternal: !!defaultCategory.link,
+          link: defaultCategory.link || null,
+        });
+        setShowSubCats(false);
+        setShowproducts(true);
+      }
     } else {
-      console.warn("No valid default department, category or product found");
+      console.warn("No valid default department or category found");
     }
 
+    // prevent background scroll while open
     document.body.classList.add("no-scroll");
-    return () => {
-      document.body.classList.remove("no-scroll");
-    };
+    return () => document.body.classList.remove("no-scroll");
   }, []);
 
   const DeptArr = productData?.map((item) => item.name) || [];
 
-  // Check scrollability for Departments whenever DeptArr changes
+  // scroll checks (departments/categories/sub)
   useEffect(() => {
     const checkDeptScrollability = () => {
       if (deptContainerRef.current) {
-        const container = deptContainerRef.current;
-        const { scrollHeight, clientHeight } = container;
-        setCanScrollDeptDown(scrollHeight > clientHeight);
-        setCanScrollDeptUp(container.scrollTop > 0);
+        const c = deptContainerRef.current;
+        setCanScrollDeptDown(c.scrollHeight > c.clientHeight);
+        setCanScrollDeptUp(c.scrollTop > 0);
       }
     };
-
-    const timer = setTimeout(checkDeptScrollability, 0);
-    return () => clearTimeout(timer);
+    const t = setTimeout(checkDeptScrollability, 0);
+    return () => clearTimeout(t);
   }, [DeptArr]);
 
-  // Check scrollability for Categories whenever MainCatArr changes
   useEffect(() => {
     const checkCatScrollability = () => {
       if (categoryContainerRef.current) {
-        const container = categoryContainerRef.current;
-        const { scrollHeight, clientHeight } = container;
-        setCanScrollCatDown(scrollHeight > clientHeight);
-        setCanScrollCatUp(container.scrollTop > 0);
+        const c = categoryContainerRef.current;
+        setCanScrollCatDown(c.scrollHeight > c.clientHeight);
+        setCanScrollCatUp(c.scrollTop > 0);
       }
     };
-
-    const timer = setTimeout(checkCatScrollability, 0);
-    return () => clearTimeout(timer);
+    const t = setTimeout(checkCatScrollability, 0);
+    return () => clearTimeout(t);
   }, [MainCatArr]);
 
-  // Check scrollability for Products whenever subCatsArr changes
   useEffect(() => {
     const checkSubScrollability = () => {
       if (subCategoryContainerRef.current) {
-        const container = subCategoryContainerRef.current;
-        const { scrollHeight, clientHeight } = container;
-        setCanScrollSubDown(scrollHeight > clientHeight);
-        setCanScrollSubUp(container.scrollTop > 0);
+        const c = subCategoryContainerRef.current;
+        setCanScrollSubDown(c.scrollHeight > c.clientHeight);
+        setCanScrollSubUp(c.scrollTop > 0);
       }
     };
-
-    const timer = setTimeout(checkSubScrollability, 0);
-    return () => clearTimeout(timer);
+    const t = setTimeout(checkSubScrollability, 0);
+    return () => clearTimeout(t);
   }, [subCatsArr]);
 
+  // helpers to find product or category path
+  function findProductPath(productData = [], productTitle) {
+    if (!Array.isArray(productData)) return null;
+    for (const department of productData) {
+      if (!department?.category || !Array.isArray(department.category)) continue;
+      for (const category of department.category) {
+        if (!Array.isArray(category.products)) continue;
+        for (const product of category.products) {
+          if (product.title === productTitle) {
+            return { department, category, product };
+          }
+        }
+      }
+    }
+    return null;
+  }
+
+  function findCategoryPath(productData = [], productCategory) {
+    if (!Array.isArray(productData)) return null;
+    for (const department of productData) {
+      if (!department?.category || !Array.isArray(department.category)) continue;
+      for (const category of department.category) {
+        if (category.name === productCategory) return { department, category };
+      }
+    }
+    return null;
+  }
+
+  const productCategoryNavigator = (categoryTitle) => {
+    const result = findCategoryPath(productData, categoryTitle);
+    if (result) {
+      navigate(
+        `/products/${result.department.name.split(" ").join("-")}/${result.category?.name.split(" ").join("-")}`
+      );
+      handleClose();
+    } else {
+      console.warn("Category not found", categoryTitle);
+    }
+  };
+
+  const singleProductNavigator = (productTitleOrDisplay) => {
+    // if incoming argument is a preview object with an external link, open it
+    if (typeof productTitleOrDisplay === "object" && productTitleOrDisplay?.isExternal) {
+      const link = productTitleOrDisplay.link;
+      if (link) {
+        window.open(link, "_blank");
+        handleClose();
+        return;
+      }
+    }
+
+    const productTitle =
+      typeof productTitleOrDisplay === "string"
+        ? productTitleOrDisplay
+        : productTitleOrDisplay?.title;
+
+    if (!productTitle) {
+      console.warn("Invalid productTitle", productTitleOrDisplay);
+      return;
+    }
+
+    const result = findProductPath(productData, productTitle);
+    if (result) {
+      const productKey = productTitle.split(" ").join("-");
+      navigate(
+        `/products/${result.department.name.split(" ").join("-")}/${result.category.name.split(" ").join("-")}/${productKey}`
+      );
+      handleClose();
+    } else {
+      // fallback: category with same name may exist and possibly external link
+      const catResult = findCategoryPath(productData, productTitle);
+      if (catResult) {
+        if ((!catResult.category.products || catResult.category.products.length === 0) && catResult.category.link) {
+          window.open(catResult.category.link, "_blank");
+          handleClose();
+        } else {
+          productCategoryNavigator(productTitle);
+        }
+      } else {
+        console.warn("Product not found", productTitle);
+      }
+    }
+  };
+
+  // hover / click handlers
   const HandleDeptHovever = (DeptName) => {
     setDeptname(DeptName);
-    const MainCatArrObj = productData?.find((item) => item.name === DeptName);
-    if (MainCatArrObj && Array.isArray(MainCatArrObj.category)) {
-      const categories = MainCatArrObj.category;
-      const firstCategory = categories[0];
-      const firstProduct = firstCategory?.products[0];
-      setMaincatArr(MainCatArrObj?.category?.map((item) => item.name) || []);
+    const deptObj = productData?.find((d) => d.name === DeptName);
+    if (deptObj && Array.isArray(deptObj.category)) {
+      setMaincatArr(deptObj.category.map((c) => c.name));
+      const firstCategory = deptObj.category[0];
 
-      if (firstCategory && Array.isArray(firstCategory.products)) {
-        setMainCatName(firstCategory?.name);
-        setFinalProductArr(firstCategory?.products);
-        const subCatTitles =
-          firstCategory?.products?.map((pro) => pro.title) || [];
-        setSubccatsArr(subCatTitles);
-        setShowSubCats(true);
-        if (firstProduct) {
-          setSubCatName(firstProduct.title);
-          setDisplayProducts(firstProduct);
+      if (firstCategory) {
+        setMainCatName(firstCategory.name);
+        setFinalProductArr(firstCategory.products || []);
+
+        if (Array.isArray(firstCategory.products) && firstCategory.products.length > 0) {
+          setSubccatsArr(firstCategory.products.map((p) => p.title));
+          setSubCatName(firstCategory.products[0].title);
+          setDisplayProducts(firstCategory.products[0]);
+          setShowSubCats(true);
+          setShowproducts(true);
+        } else {
+          // category preview (no products) -> show category details and mark as external if link exists
+          setSubccatsArr([]);
+          setSubCatName("");
+          setDisplayProducts({
+            title: firstCategory.name,
+            description: firstCategory.description,
+            imageUrl: firstCategory.imageUrl,
+            isExternal: !!firstCategory.link,
+            link: firstCategory.link || null,
+          });
+          setShowSubCats(false);
           setShowproducts(true);
         }
       } else {
@@ -654,34 +1398,36 @@ function NavProductComp({ handleClose }) {
   };
 
   const HandleMainCatHover = (MainCat) => {
-    const MainCatArrObj = productData?.find((item) => item.name === deptname);
-    const subCatObj = MainCatArrObj?.category?.find(
-      (item) => item.name === MainCat
-    );
+    const deptObj = productData?.find((d) => d.name === deptname);
+    const subCatObj = deptObj?.category?.find((c) => c.name === MainCat);
 
-    if (
-      subCatObj &&
-      Array.isArray(subCatObj.products) &&
-      subCatObj?.products?.length > 0
-    ) {
+    if (subCatObj) {
       setMainCatName(MainCat);
-      setFinalProductArr(subCatObj?.products);
-      if (
-        subCatObj &&
-        Array.isArray(subCatObj.products) &&
-        subCatObj.products.length
-      ) {
-        const productTitles =
-          subCatObj?.products?.map((eachSubCat) => eachSubCat.title) || [];
-        setSubccatsArr(productTitles);
-        const firstProduct = subCatObj.products?.[0];
-        if (firstProduct) {
-          setSubCatName(firstProduct.title);
-          setDisplayProducts(firstProduct);
-          setShowproducts(true);
-        }
+
+      if (Array.isArray(subCatObj.products) && subCatObj.products.length > 0) {
+        setFinalProductArr(subCatObj.products);
+        const titles = subCatObj.products.map((p) => p.title);
+        setSubccatsArr(titles);
+        const firstProduct = subCatObj.products[0];
+        setSubCatName(firstProduct?.title || "");
+        setDisplayProducts(firstProduct);
+        setShowSubCats(true);
+        setShowproducts(true);
+      } else {
+        // preview for category without products
+        setFinalProductArr([]);
+        setSubccatsArr([]);
+        setSubCatName("");
+        setDisplayProducts({
+          title: subCatObj.name,
+          description: subCatObj.description,
+          imageUrl: subCatObj.imageUrl,
+          isExternal: !!subCatObj.link,
+          link: subCatObj.link || null,
+        });
+        setShowSubCats(false);
+        setShowproducts(true);
       }
-      setShowSubCats(true);
     } else {
       setShowSubCats(false);
       setShowproducts(false);
@@ -694,251 +1440,101 @@ function NavProductComp({ handleClose }) {
 
   const HandleSubCatHover = (SubCat) => {
     setSubCatName(SubCat);
-    const ProductsFound = finalProductArr?.find(
-      (item) => item.title === SubCat
-    );
-    if (ProductsFound) {
-      setDisplayProducts(ProductsFound);
+    const found = finalProductArr?.find((p) => p.title === SubCat);
+    if (found) {
+      setDisplayProducts(found);
       setShowproducts(true);
     }
   };
 
-  const scrollDeptUp = () => {
-    if (deptContainerRef.current) {
-      const container = deptContainerRef.current;
-      const itemHeight = container.firstChild?.offsetHeight || 40;
-      container.scrollTop -= itemHeight;
-    }
+  // scrolling helpers (small jump by one item)
+  const scrollByItem = (containerRef, direction = 1) => {
+    if (!containerRef.current) return;
+    const container = containerRef.current;
+    const itemHeight = container.firstChild?.offsetHeight || 40;
+    container.scrollTop += itemHeight * direction;
   };
 
-  const scrollDeptDown = () => {
-    if (deptContainerRef.current) {
-      const container = deptContainerRef.current;
-      const itemHeight = container.firstChild?.offsetHeight || 40;
-      container.scrollTop += itemHeight;
-    }
-  };
-
-  const scrollUp = () => {
-    if (categoryContainerRef.current) {
-      const container = categoryContainerRef.current;
-      const itemHeight = container.firstChild?.offsetHeight || 40;
-      container.scrollTop -= itemHeight;
-    }
-  };
-
-  const scrollDown = () => {
-    if (categoryContainerRef.current) {
-      const container = categoryContainerRef.current;
-      const itemHeight = container.firstChild?.offsetHeight || 40;
-      container.scrollTop += itemHeight;
-    }
-  };
-
-  const scrollSubUp = () => {
-    if (subCategoryContainerRef.current) {
-      const container = subCategoryContainerRef.current;
-      const itemHeight = container.firstChild?.offsetHeight || 40;
-      container.scrollTop -= itemHeight;
-    }
-  };
-
-  const scrollSubDown = () => {
-    if (subCategoryContainerRef.current) {
-      const container = subCategoryContainerRef.current;
-      const itemHeight = container.firstChild?.offsetHeight || 40;
-      container.scrollTop += itemHeight;
-    }
-  };
+  const scrollDeptUp = () => scrollByItem(deptContainerRef, -1);
+  const scrollDeptDown = () => scrollByItem(deptContainerRef, 1);
+  const scrollUp = () => scrollByItem(categoryContainerRef, -1);
+  const scrollDown = () => scrollByItem(categoryContainerRef, 1);
+  const scrollSubUp = () => scrollByItem(subCategoryContainerRef, -1);
+  const scrollSubDown = () => scrollByItem(subCategoryContainerRef, 1);
 
   const handleDeptScroll = () => {
     if (deptContainerRef.current) {
-      const container = deptContainerRef.current;
-      const { scrollTop, scrollHeight, clientHeight } = container;
-      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
-      setCanScrollDeptUp(scrollTop > 0);
-      setCanScrollDeptDown(!isAtBottom);
-      console.log(
-        "Dept Scroll - scrollTop:",
-        scrollTop,
-        "clientHeight:",
-        clientHeight,
-        "scrollHeight:",
-        scrollHeight,
-        "canScrollDeptDown:",
-        !isAtBottom
-      );
+      const c = deptContainerRef.current;
+      const bottom = c.scrollTop + c.clientHeight >= c.scrollHeight - 1;
+      setCanScrollDeptUp(c.scrollTop > 0);
+      setCanScrollDeptDown(!bottom);
     }
   };
 
   const handleScroll = () => {
     if (categoryContainerRef.current) {
-      const container = categoryContainerRef.current;
-      const { scrollTop, scrollHeight, clientHeight } = container;
-      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
-      setCanScrollCatUp(scrollTop > 0);
-      setCanScrollCatDown(!isAtBottom);
-      console.log(
-        "Cat Scroll - scrollTop:",
-        scrollTop,
-        "clientHeight:",
-        clientHeight,
-        "scrollHeight:",
-        scrollHeight,
-        "canScrollCatDown:",
-        !isAtBottom
-      );
+      const c = categoryContainerRef.current;
+      const bottom = c.scrollTop + c.clientHeight >= c.scrollHeight - 1;
+      setCanScrollCatUp(c.scrollTop > 0);
+      setCanScrollCatDown(!bottom);
     }
   };
 
   const handleSubScroll = () => {
     if (subCategoryContainerRef.current) {
-      const container = subCategoryContainerRef.current;
-      const { scrollTop, scrollHeight, clientHeight } = container;
-      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
-      setCanScrollSubUp(scrollTop > 0);
-      setCanScrollSubDown(!isAtBottom);
-      console.log(
-        "Sub Scroll - scrollTop:",
-        scrollTop,
-        "clientHeight:",
-        clientHeight,
-        "scrollHeight:",
-        scrollHeight,
-        "canScrollSubDown:",
-        !isAtBottom
-      );
+      const c = subCategoryContainerRef.current;
+      const bottom = c.scrollTop + c.clientHeight >= c.scrollHeight - 1;
+      setCanScrollSubUp(c.scrollTop > 0);
+      setCanScrollSubDown(!bottom);
     }
   };
 
-  function findProductPath(productData = [], productTitle) {
-    if (!Array.isArray(productData)) {
-      console.error("productdata is not an array:", productData);
-      return null;
-    }
-    for (let department of productData) {
-      if (!department?.category || !Array.isArray(department.category)) {
-        console.warn("Invalid or missing category for department", department);
-        continue;
-      }
-      for (let category of department.category) {
-        if (!Array.isArray(category.products)) {
-          console.warn(
-            "category products is not iterable for category:",
-            category
-          );
-          continue;
-        }
-        for (let product of category.products) {
-          if (product.title === productTitle) {
-            return { department, category, product };
-          }
-        }
-      }
-    }
-    return null;
-  }
+  // when clicking a category: if it has no products and has link -> open external
+  const handleCategoryClick = (categoryName) => {
+    const deptObj = productData?.find((d) => d.name === deptname);
+    const catObj = deptObj?.category?.find((c) => c.name === categoryName);
 
-  function findCategoryPath(productData = [], productCategory) {
-    if (!Array.isArray(productData)) {
-      console.error("productData is not an array:", productData);
-      return null;
-    }
-    for (let department of productData) {
-      if (!department?.category || !Array.isArray(department.category)) {
-        console.warn("Invalid or missing category for department", department);
-        continue;
+    if (catObj) {
+      const hasProducts = Array.isArray(catObj.products) && catObj.products.length > 0;
+      if (!hasProducts && catObj.link) {
+        window.open(catObj.link, "_blank");
+        handleClose();
+        return;
       }
-      for (let category of department.category) {
-        if (category.name === productCategory) {
-          return { department, category };
-        }
-      }
-    }
-    return null;
-  }
-
-  const productCategoryNavigator = (categoryTitle) => {
-    const result = findCategoryPath(productData, categoryTitle);
-    if (result) {
-      navigate(
-        `/products/${result.department.name
-          .split(" ")
-          .join("-")}/${result.category?.name.split(" ").join("-")}`
-      );
-      handleClose();
+      productCategoryNavigator(categoryName);
     } else {
-      console.warn("Product not found", categoryTitle);
+      productCategoryNavigator(categoryName);
     }
   };
 
-  const singleProductNavigator = (productTitle) => {
-    if (!productTitle) {
-      console.warn("Invalid productTitle", productTitle);
-      return;
-    }
-
-    const result = findProductPath(productData, productTitle);
-    if (result) {
-      const productKey = productTitle.split(" ").join("-");
-      navigate(
-        `/products/${result.department.name
-          .split(" ")
-          .join("-")}/${result.category.name
-          .split(" ")
-          .join("-")}/${productKey}`
-      );
-      handleClose();
-    } else {
-      console.warn("Product not found", productTitle);
-    }
-  };
+  // determine if current preview is an external category (used to enlarge the preview)
+  const isPreviewExternal = !!displayProducts?.isExternal;
 
   return (
-    <div className="NavProductComp-container">
+    <div className={`NavProductComp-container ${isPreviewExternal ? "preview-full" : ""}`}>
       {productData ? (
         <div className="navProComp-container">
+          {/* Departments */}
           <div className="navProComp-dept-container">
             <div className="navprocomp-items-heading">Departments</div>
-            <div
-              className="navproComp-item-holder"
-              style={{ position: "relative", height: "100%" }}
-            >
-              <div className="navProComp-dot-container">
-                {/* {DeptArr?.map((dot, i) => (
-                  <div
-                    key={i}
-                    className={`navProComp-dot ${dot === deptname ? "navProComp-dot-active" : ""}`}
-                  ></div>
-                ))} */}
-              </div>
+            <div className="navproComp-item-holder" style={{ position: "relative", height: "100%" }}>
+              <div className="navProComp-dot-container" />
               {DeptArr?.length > 5 && (
                 <div className="arrow-wrapper">
                   {canScrollDeptUp && (
-                    <span
-                      onClick={scrollDeptUp}
-                      className="arrow-up"
-                      aria-label="Scroll up"
-                    >
+                    <span onClick={scrollDeptUp} className="arrow-up" aria-label="Scroll up">
                       <IoIosArrowUp />
                     </span>
                   )}
                   {canScrollDeptDown && (
-                    <span
-                      onClick={scrollDeptDown}
-                      className="arrow-down"
-                      aria-label="Scroll down"
-                    >
+                    <span onClick={scrollDeptDown} className="arrow-down" aria-label="Scroll down">
                       <IoIosArrowDown />
                     </span>
                   )}
                 </div>
               )}
-              <div
-                className="navProComp-mainCat-item-container"
-                ref={deptContainerRef}
-                onScroll={handleDeptScroll}
-              >
+
+              <div className="navProComp-mainCat-item-container" ref={deptContainerRef} onScroll={handleDeptScroll}>
                 {DeptArr?.map((eachCat, i) => (
                   <div
                     key={i}
@@ -949,11 +1545,7 @@ function NavProductComp({ handleClose }) {
                     }}
                     className="pointer"
                   >
-                    <div
-                      className={`navProComp-dept-item ${
-                        eachCat === deptname ? "mainCat-active" : ""
-                      }`}
-                    >
+                    <div className={`navProComp-dept-item ${eachCat === deptname ? "mainCat-active" : ""}`}>
                       {eachCat}
                     </div>
                   </div>
@@ -961,66 +1553,45 @@ function NavProductComp({ handleClose }) {
               </div>
             </div>
           </div>
+
+          {/* Categories */}
           {MainCatArr.length > 0 && (
             <div className="navProComp-mainCat-container">
               <div className="navprocomp-items-heading">Categories</div>
-              <div
-                className="navproComp-item-holder"
-                style={{ position: "relative", height: "100%" }}
-              >
+              <div className="navproComp-item-holder" style={{ position: "relative", height: "100%" }}>
                 <div className="navProComp-dot-container">
                   {MainCatArr.map((dot, i) => (
-                    <div
-                      key={i}
-                      className={`navProComp-dot ${
-                        dot === mainCatName ? "navProComp-dot-active" : ""
-                      }`}
-                    ></div>
+                    <div key={i} className={`navProComp-dot ${dot === mainCatName ? "navProComp-dot-active" : ""}`} />
                   ))}
                 </div>
+
                 {MainCatArr.length > 5 && (
                   <div className="arrow-wrapper">
                     {canScrollCatUp && (
-                      <span
-                        onClick={scrollUp}
-                        className="arrow-up"
-                        aria-label="Scroll up"
-                      >
+                      <span onClick={scrollUp} className="arrow-up" aria-label="Scroll up">
                         <IoIosArrowUp />
                       </span>
                     )}
                     {canScrollCatDown && (
-                      <span
-                        onClick={scrollDown}
-                        className="arrow-down"
-                        aria-label="Scroll down"
-                      >
+                      <span onClick={scrollDown} className="arrow-down" aria-label="Scroll down">
                         <IoIosArrowDown />
                       </span>
                     )}
                   </div>
                 )}
-                <div
-                  className="navProComp-mainCat-item-container"
-                  ref={categoryContainerRef}
-                  onScroll={handleScroll}
-                >
+
+                <div className="navProComp-mainCat-item-container" ref={categoryContainerRef} onScroll={handleScroll}>
                   {MainCatArr.map((eachCat, i) => (
                     <div
                       key={i}
                       onMouseEnter={() => HandleMainCatHover(eachCat)}
                       onClick={() => {
                         window.scrollTo(0, 0);
-                        productCategoryNavigator(eachCat);
-                        handleClose();
+                        handleCategoryClick(eachCat);
                       }}
                       className="pointer"
                     >
-                      <div
-                        className={`navProComp-mainCat-item ${
-                          eachCat === mainCatName ? "mainCat-active" : ""
-                        }`}
-                      >
+                      <div className={`navProComp-mainCat-item ${eachCat === mainCatName ? "mainCat-active" : ""}`}>
                         {eachCat}
                       </div>
                     </div>
@@ -1029,50 +1600,34 @@ function NavProductComp({ handleClose }) {
               </div>
             </div>
           )}
+
+          {/* Sub / Product list */}
           {showSubCats && subCatsArr.length > 0 && (
             <div className="navProComp-subCat-container">
               <div className="navprocomp-items-heading">Products</div>
-              <div
-                className="navproComp-item-holder"
-                style={{ position: "relative", height: "100%" }}
-              >
+              <div className="navproComp-item-holder" style={{ position: "relative", height: "100%" }}>
                 <div className="navProComp-dot-container">
                   {subCatsArr.map((dot, i) => (
-                    <div
-                      key={i}
-                      className={`navProComp-dot ${
-                        dot === subCatName ? "navProComp-dot-active" : ""
-                      }`}
-                    ></div>
+                    <div key={i} className={`navProComp-dot ${dot === subCatName ? "navProComp-dot-active" : ""}`} />
                   ))}
                 </div>
+
                 {subCatsArr.length > 5 && (
                   <div className="arrow-wrapper">
                     {canScrollSubUp && (
-                      <span
-                        onClick={scrollSubUp}
-                        aria-label="Scroll sub up"
-                        className="arrow-up"
-                      >
+                      <span onClick={scrollSubUp} aria-label="Scroll sub up" className="arrow-up">
                         <IoIosArrowUp />
                       </span>
                     )}
                     {canScrollSubDown && (
-                      <span
-                        onClick={scrollSubDown}
-                        aria-label="Scroll sub down"
-                        className="arrow-down"
-                      >
+                      <span onClick={scrollSubDown} aria-label="Scroll sub down" className="arrow-down">
                         <IoIosArrowDown />
                       </span>
                     )}
                   </div>
                 )}
-                <div
-                  className="navProComp-subCat-item-container"
-                  ref={subCategoryContainerRef}
-                  onScroll={handleSubScroll}
-                >
+
+                <div className="navProComp-subCat-item-container" ref={subCategoryContainerRef} onScroll={handleSubScroll}>
                   {subCatsArr.map((eachItem, i) => (
                     <div
                       key={i}
@@ -1084,11 +1639,7 @@ function NavProductComp({ handleClose }) {
                         handleClose();
                       }}
                     >
-                      <div
-                        className={`navProComp-mainCat-item ${
-                          eachItem === subCatName ? "mainCat-active" : ""
-                        }`}
-                      >
+                      <div className={`navProComp-mainCat-item ${eachItem === subCatName ? "mainCat-active" : ""}`}>
                         {eachItem}
                       </div>
                     </div>
@@ -1097,6 +1648,8 @@ function NavProductComp({ handleClose }) {
               </div>
             </div>
           )}
+
+          {/* Product / Category preview */}
           {showProducts && displayProducts && (
             <div className="navProComp-products-container">
               <div className="navProComp-products-holder">
@@ -1104,32 +1657,37 @@ function NavProductComp({ handleClose }) {
                   <div
                     onClick={() => {
                       window.scrollTo(0, 0);
-                      singleProductNavigator(displayProducts.title);
+                      if (displayProducts?.isExternal && displayProducts.link) {
+                        window.open(displayProducts.link, "_blank");
+                        handleClose();
+                        return;
+                      }
+                      singleProductNavigator(displayProducts);
                       handleClose();
                     }}
                     style={{ cursor: "pointer" }}
+                    className={displayProducts?.isExternal ? "navProComp-category-card navProComp-category-card-full" : "navProComp-category-card"}
                   >
                     <div className="navProComp-products-img">
-                      <img
-                        src={displayProducts.imageUrl}
-                        alt=""
-                        loading="lazy"
-                      />
+                      {/* fallback default image if none */}
+                      <img src={displayProducts.imageUrl || "/assets/ProductPage/Default.webp"} alt={displayProducts.title} loading="lazy" />
                     </div>
-                    <div className="navProComp-products-title">
-                      {displayProducts.title}
-                    </div>
-                    <div className="navProComp-products-des">
-                      {displayProducts.description}
-                    </div>
+                    <div className="navProComp-products-title">{displayProducts.title}</div>
+                    <div className="navProComp-products-des">{displayProducts.description}</div>
                   </div>
                 </div>
               </div>
+
               <div
                 className="navProComp-products-more"
                 onClick={() => {
                   window.scrollTo(0, 0);
-                  singleProductNavigator(displayProducts.title);
+                  if (displayProducts?.isExternal && displayProducts.link) {
+                    window.open(displayProducts.link, "_blank");
+                    handleClose();
+                    return;
+                  }
+                  singleProductNavigator(displayProducts);
                   handleClose();
                 }}
               >
@@ -1140,7 +1698,9 @@ function NavProductComp({ handleClose }) {
           )}
         </div>
       ) : (
-        <div><LoadingStar/></div>
+        <div>
+          <LoadingStar />
+        </div>
       )}
     </div>
   );

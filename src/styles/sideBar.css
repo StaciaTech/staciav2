@@ -1,66 +1,112 @@
+/* sideBar.css - cleaned & mobile-friendly sidebar panel + overlay fixes */
+
+/* Base sidebar container (fixed at top so it overlays content when opened) */
 .sidebar-container {
   display: none;
   color: #000;
-  z-index: 99999;
+  z-index: 99999;               /* base z-index; increased when shown */
   padding: 1rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.28s ease, background-color 0.28s ease;
   position: fixed;
   top: 0;
-  width: 100%;
-  overflow-y: auto;
-
-
+  left: 0;
+  right: 0;
   box-sizing: border-box;
   background-color: white;
-  /* z-index: 3; */
-  /* width: 100%; */
+  width: 100%;
+  /* allow dropdown section to scroll separately */
 }
+
+/* When hidden — slide up out of view */
 .sidebar-container.hide {
   transform: translateY(-100%);
+  
+
 }
+
+/* When visible: make it cover the viewport and stay above content */
+.sidebar-container.show {
+  transform: translateY(0);
+  height: 100vh;             
+     /* full viewport height when visible */
+  max-height: 100vh;
+  overflow: hidden;             /* inner area will scroll, not the body */
+  z-index: 200000;              /* ensure it sits above other layers */
+}
+
+/* Prevent background page scroll when this class added to body */
 .no-scroll {
   overflow: hidden !important;
-  height: 100vh;
-  position: relative;
+  height: 100vh !important;
+  position: relative !important;
+  touch-action: none !important;
 }
-.side-bar-item-containers::-webkit-scrollbar {
+
+/* Header area (logo + icons) - first child inside .sidebar-container */
+.sidebar-container > div:first-child {
+  z-index: 200010;
+  position: relative;
+  display: block;
+}
+
+/* Dropdown/main nav content area - second child of container */
+.sidebar-container > div:nth-child(2) {
+  display: none;                /* default hidden; shown when showDropdown true by JS */
+  max-height: calc(100vh - 72px); /* leave room for header; adjust 72px as needed */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  background: #fff;
+  padding-bottom: 2rem;
+}
+
+/* Make dropdown visible when container is visible and JS shows the inner div */
+.sidebar-container.show > div:nth-child(2) {
+  display: block;
+}
+
+/* Remove default scrollbar visual on desktop where desired */
+.side-bar-item-containers::-webkit-scrollbar,
+.sidebar-container > div:nth-child(2)::-webkit-scrollbar {
   display: none;
 }
 
-.sidebar-container.show {
-  transform: translateY(0);
-}
-.horizontal-line {
-  border-top: 1px solid #E0E0E0;
-  width: 100%;
-}
-.side-bar-items {
-  padding: 20px 0px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.sub-side-bar-items {
-  padding: 20px 0px;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 1rem;
-  box-sizing: border-box;
-  /* background: #F0F4FF; */
-}
+/* Individual item styles */
 .side-bar-item-containers {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5rem 0;
 }
+
+.side-bar-items {
+  padding: 20px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d0225;
+}
+
+.sub-side-bar-items {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d0225;
+  box-sizing: border-box;
+}
+
+/* thin horizontal separator between groups */
+.horizontal-line {
+  border-top: 1px solid #E0E0E0;
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* small arrow rotation helper */
 .arrow {
   transform: rotate(90deg);
 }
-@media screen and (max-width: 1024px) {
-  .sidebar-container {
-    display: block;
-  }
-}
 
+/* Top header logo sizing adjustments for mobile */
 @media screen and (max-width: 475px) {
   .nav-logo1 {
     width: 140px;
@@ -68,5 +114,38 @@
   }
   .nav-logo-text1 {
     font-size: 10px;
+  }
+}
+
+/* Show sidebar container on tablet/mobile breakpoints */
+@media screen and (max-width: 1024px) {
+  .sidebar-container {
+    display: block;
+  }
+
+  /* make the header area compact */
+  .sidebar-container > div:first-child {
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+  }
+
+  /* ensure the dropdown content uses full width and full height below header */
+  .sidebar-container > div:nth-child(2) {
+    width: 100%;
+    max-height: calc(100vh - 64px); /* tweak 64px to match your header size */
+  }
+
+  /* style nav items for touch targets */
+  .side-bar-items,
+  .sub-side-bar-items {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+}
+
+/* Desktop behaviour - keep the sidebar visually small (you already hide it on desktop) */
+@media screen and (min-width: 1025px) {
+  .sidebar-container {
+    display: none !important;
   }
 }
