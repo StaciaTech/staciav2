@@ -27,7 +27,7 @@
 /* When visible: make it cover the viewport and stay above content */
 .sidebar-container.show {
   transform: translateY(0);
-  height: 100vh;             
+  /* height: 100vh;              */
      /* full viewport height when visible */
   max-height: 100vh;
   overflow: hidden;             /* inner area will scroll, not the body */

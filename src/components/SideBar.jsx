@@ -141,7 +141,10 @@ function SideBar() {
   };
 
   return (
-    <div className={`sidebar-container ${showNavbar ? "show" : "hide"}`} style={{ backgroundColor: showDropdown ? "#fff" : "#0D0225" }}>
+    <div className={`sidebar-container ${showNavbar ? "show" : "hide"}`} style={{
+      backgroundColor: showDropdown ? "#fff" : "#0D0225",
+      height: showNavbar && showContact ? "100vh" : undefined
+    }}>
       <div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", paddingTop: "10px", paddingBottom: "10px" }}>
@@ -175,7 +178,7 @@ function SideBar() {
 
                 {/* choose mobile panel on mobile, full LeadModalThree on desktop */}
                 {isMobile ? (
-                  <MobileLeadModal isOpen={showContact} onClose={() => setShowContact(false)} item={selectedItem} onSubmit={handleLeadSubmit}  />
+                  <MobileLeadModal isOpen={showContact} onClose={() => setShowContact(false)} item={selectedItem} onSubmit={handleLeadSubmit} />
                 ) : (
                   <LeadModalThree isOpen={showContact} onClose={() => setShowContact(false)} item={selectedItem} onSubmit={handleLeadSubmit} />
                 )}
