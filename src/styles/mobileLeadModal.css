@@ -1,0 +1,251 @@
+/* mobileLeadModal.css - Mobile-first styles with logo image top */
+
+/* overlay */
+.mlm-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(13, 2, 37, 0.6) !important;
+    z-index: 300000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    padding: 0.5rem;
+}
+
+/* panel */
+.mlm-panel {
+    width: 100%;
+    max-width: 920px;
+    height: 100%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+
+/* close */
+.mlm-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #1b1b2b;
+}
+
+/* inner layout */
+.mlm-inner {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+/* left image area */
+.mlm-left {
+    width: 40%;
+    background: linear-gradient(135deg, #0d0225 0%, #2d1b69 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 1rem; */
+}
+
+.mlm-left-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) contrast(1.05);
+}
+
+/* right content */
+.mlm-right {
+    width: 60%;
+    padding: 1rem 1.25rem;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* top logo image (replaces text logo) */
+.mlm-top-logo {
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.mlm-top-logo-img {
+    height: 20px;
+    width: auto;
+    display: inline-block;
+}
+
+/* headings */
+.mlm-title {
+    margin: 6px 0 0;
+    font-size: 18px;
+    color: #0d0225;
+    font-weight: 700;
+    font-family: EuclidMedium;
+    font-style: normal;
+}
+
+.mlm-sub {
+    margin: 6px 0 8px;
+    color: #6b7082;
+    font-size: 13px;
+}
+
+/* progress */
+.mlm-progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 12px;
+}
+
+.mlm-progress {
+    flex: 1;
+    height: 6px;
+    background: #eee;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.mlm-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #1e6bff, #b27dff);
+    transition: width .35s ease;
+}
+
+.mlm-step-text {
+    font-size: 12px;
+    color: #999;
+}
+
+/* form */
+.mlm-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mlm-label {
+    font-weight: 600;
+    color: #1b1b2b;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.mlm-input {
+    border: none;
+    border-bottom: 2px solid #0047FF;
+    padding: 10px 6px;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.mlm-textarea {
+    border: 2px solid #0047FF;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* phone */
+.mlm-phone {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* errors */
+.mlm-error {
+    border-color: #e74c3c !important;
+}
+
+.mlm-error-msg {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+/* actions */
+.mlm-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    gap: 12px;
+}
+
+.mlm-btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mlm-btn.primary {
+    background: #0047FF;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 71, 255, 0.18);
+}
+
+.mlm-btn.ghost {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+/* small screens: stack and make left image smaller */
+@media (max-width: 520px) {
+    .mlm-panel {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mlm-inner {
+        flex-direction: column;
+    }
+
+    .mlm-left {
+        width: 100%;
+        height: 32%;
+        padding: 8px;
+    }
+
+    .mlm-right {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .mlm-top-logo-img {
+        height: 18px;
+    }
+
+    .mlm-title {
+        font-size: 16px;
+    }
+}
+
+/* body lock fallback */
+body.no-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
+    touch-action: none !important;
+}
