@@ -495,7 +495,7 @@ function HomePage() {
         </div>
 
         {/* Other Sections */}
-        {/* <MobileStackScroll onToggle={selectedToggle} /> */}
+        <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
         <WhatsNewSection />
         {/* <ServiceDisplay />  */}

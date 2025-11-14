@@ -6,6 +6,8 @@ import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import LeadModalThree from "./LeadModalThree";
+import StaciaContactUsLogo from "../assets/611.svg";
 import Modal from "react-modal";
 function Footer() {
   const navigate = useNavigate();
@@ -41,6 +43,16 @@ function Footer() {
   const HandleClick = () => {
     navigate("/Privacy-Policy");
   };
+  const [selectedItem] = useState({
+    id: "default-contact",
+    title: "",
+    oneLine: "Tell us how we can help — product, services or partnership.",
+    image: StaciaContactUsLogo,
+  });
+  const handleLeadSubmit = (formData) => {
+    console.log("Footer lead submitted:", formData, selectedItem);
+  };
+
 
   return (
     <div className="footer-contaier">
@@ -244,7 +256,7 @@ function Footer() {
             alignItems: "center",
             opacity: "0.6",
             width: "35%",
-            className:"termm"
+            className: "termm"
           }}
         >
           {/* <a
@@ -324,13 +336,20 @@ function Footer() {
           </div>
         </div>
       </div>{" "}
-      <Modal
+      {/* <Modal
         style={ModelStyles}
         isOpen={showContactForm}
         onRequestClose={closeForm}
       >
         <Contact closeHandle={closeForm} />
-      </Modal>
+      </Modal> */}
+      <LeadModalThree
+        isOpen={showContactForm}
+        onClose={closeForm}
+        item={selectedItem}
+        onSubmit={handleLeadSubmit}
+      />
+
       {/* {showContactForm && <Contact closeHandle={closeForm} />} */}
     </div>
   );
