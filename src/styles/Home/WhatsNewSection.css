@@ -92,6 +92,7 @@
 
 .tab-text {
   font-weight: 600;
+  font-family: EuclidMedium;
 }
 
 /* See More Info */
@@ -173,35 +174,41 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent background */
+  background: rgba(0, 0, 0, 0.4);
+  /* Dark semi-transparent background */
 }
 
 /* Status Colors with Dark Glass */
 .card-status.new-launch,
 .card-status.available-now {
-  background: rgba(46, 125, 50, 0.7); /* Dark green */
+  background: rgba(46, 125, 50, 0.7);
+  /* Dark green */
   border-color: rgba(76, 175, 80, 0.5);
 }
 
 .card-status.beta-testing,
 .card-status.in-progress {
-  background: rgba(239, 108, 0, 0.7); /* Dark orange */
+  background: rgba(239, 108, 0, 0.7);
+  /* Dark orange */
   border-color: rgba(255, 152, 0, 0.5);
 }
 
 .card-status.coming-soon,
 .card-status.planning-phase {
-  background: rgba(21, 101, 192, 0.7); /* Dark blue */
+  background: rgba(21, 101, 192, 0.7);
+  /* Dark blue */
   border-color: rgba(33, 150, 243, 0.5);
 }
 
 .card-status.research-development {
-  background: rgba(123, 31, 162, 0.7); /* Dark purple */
+  background: rgba(123, 31, 162, 0.7);
+  /* Dark purple */
   border-color: rgba(156, 39, 176, 0.5);
 }
 
 .card-status.default {
-  background: rgba(66, 66, 66, 0.7); /* Dark gray */
+  background: rgba(66, 66, 66, 0.7);
+  /* Dark gray */
   border-color: rgba(117, 117, 117, 0.5);
 }
 
@@ -313,6 +320,7 @@
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-size: 0.85rem;
+  font-family: EuclidMedium;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
