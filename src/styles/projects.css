@@ -134,6 +134,22 @@
   background-color: #ebf1ff;
 }
 
+.category-buttons-container {
+  display: flex;
+  padding: 1.5rem;
+  column-gap: 6px;
+  overflow-x: hidden;
+
+  z-index: 1;
+  background: #fff;
+}
+
+
+
+.category-buttons-container::-webkit-scrollbar {
+  display: none;
+}
+
 /* @media screen and (max-width: 1024px) {
   .project-page-hero-section {
     height: 37rem;
@@ -186,24 +202,301 @@
     display: none;
   }
 } */
+/* ====== Mobile-first overrides for very small phones (<= 320px) ====== */
+@media (max-width: 320px) {
+  .project-page-hero-section {
+    height: 60vh;
+    font-size: 8vw;
+    /* slightly larger relative text for tiny screens */
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .project-page-content-container {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: stretch;
+    min-height: auto;
+  }
+
+  .service-page-main-dots-container {
+    display: none;
+    /* hide vertical dots on tiny screens */
+    position: static;
+    top: auto;
+    transform: none;
+  }
+
+  .service-page-dept-container {
+    margin-right: 0;
+    padding: 0.5rem 0;
+  }
+
+  .service-page-dept-name {
+    left: 1rem;
+    transform: translate(0%, -40%);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .mobile-navigation-tabs {
+    display: block;
+    width: 100%;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-buttons-container {
+    padding: 0.5rem;
+    overflow-x: auto;
+    column-gap: 6px;
+  }
+
+  .project-item-tab {
+    font-size: 14px;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .product-dep-name {
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ====== Small phones & large small screens (321px - 767px) ====== */
+@media (min-width: 321px) and (max-width: 767px) {
+  .project-page-hero-section {
+    height: 65vh;
+    font-size: 7.5vw;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .project-page-content-container {
+    flex-direction: column;
+    padding: 1.5rem;
+    align-items: stretch;
+  }
+
+  .service-page-main-dots-container {
+    display: flex;
+    position: static;
+    /* remove sticky for better UX */
+    transform: none;
+    margin: 0.5rem 0;
+    width: auto;
+    flex-direction: row;
+    column-gap: 0.5rem;
+  }
+
+  .service-page-main-dots {
+    width: 12px;
+    height: 12px;
+  }
+
+  .service-page-dept-name {
+    left: 1.25rem;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .mobile-navigation-tabs {
+    display: block;
+  }
+
+  .category-buttons-container {
+    overflow-x: auto;
+    padding: 1rem;
+  }
+
+  .product-dep-name {
+    font-size: 1.5rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .project-item-tab {
+    font-size: 15px;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* ====== Tablet (768px - 1023px) ====== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .project-page-hero-section {
+    height: 75vh;
+    font-size: 5.5vw;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .project-page-content-container {
+    flex-direction: row;
+    padding: 2rem;
+    align-items: flex-start;
+  }
+
+  .service-page-main-dots-container {
+    display: flex;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4.5rem;
+  }
+
+  .service-page-main-dots {
+    width: 13px;
+    height: 13px;
+  }
+
+  .service-page-dept-name {
+    left: 2rem;
+    padding: 0.85rem 1.1rem;
+    font-size: 1rem;
+  }
+
+  .mobile-navigation-tabs {
+    display: none;
+    /* hide mobile tabs on tablet - use desktop layout */
+  }
+
+  .category-buttons-container {
+    padding: 1.25rem;
+    overflow-x: auto;
+  }
+
+  .product-dep-name {
+    font-size: 1.75rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .project-item-tab {
+    font-size: 16px;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* ====== Desktop (1024px - 1919px) ====== */
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .project-page-hero-section {
+    height: 100vh;
+    font-size: 5vw;
+    /* original */
+    padding: 3rem;
+    text-align: left;
+  }
+
+  .project-page-content-container {
+    flex-direction: row;
+    padding: 3rem;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .service-page-main-dots-container {
+    display: flex;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5rem;
+  }
+
+  .service-page-main-dots {
+    width: 14px;
+    height: 14px;
+  }
+
+  .service-page-dept-container {
+    margin-right: 3rem;
+  }
+
+  .service-page-dept-name {
+    left: 2.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .mobile-navigation-tabs {
+    display: none;
+  }
+
+  .category-buttons-container {
+    padding: 1.5rem;
+    overflow-x: hidden;
+  }
+
+  .product-dep-name {
+    font-size: 2rem;
+    padding: 15px 30px;
+  }
+
+  .project-item-tab {
+    font-size: 20px;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* ====== Ultra-wide / Large displays (>= 1920px) ====== */
+@media (min-width: 1920px) {
+  .project-page-hero-section {
+    height: 100vh;
+    font-size: 3.6rem;
+    /* larger absolute size for big screens */
+    padding: 4rem;
+  }
+
+  .project-page-content-container {
+    padding: 4rem 6rem;
+    /* max-width: 1400px; */
+    /* margin: 0 auto; */
+  }
+
+  .service-page-main-dots-container {
+    width: 5.5rem;
+    top: 50%;
+  }
+
+  .service-page-main-dots {
+    width: 16px;
+    height: 16px;
+  }
+
+  .service-page-dept-name {
+    left: 3rem;
+    padding: 1.1rem 1.4rem;
+    font-size: 1.15rem;
+  }
+
+  .product-dep-name {
+    font-size: 2.25rem;
+    padding: 20px 40px;
+  }
+
+  .project-item-tab {
+    font-size: 22px;
+    padding: 0.9rem 1.75rem;
+  }
+}
+
+/* Utility improvements that help responsiveness across breakpoints */
 .category-buttons-container {
-  display: flex;
-  padding: 1.5rem;
-  column-gap: 6px;
-  overflow-x: auto;
-
-  z-index: 1;
-  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  /* smooth scrolling on mobile */
 }
 
-
-
+/* Make scrollbar hidden only where you intended it */
 .category-buttons-container::-webkit-scrollbar {
-  display: none;
+  height: 6px;
+}
+
+/* For accessibility: ensure focus outlines on interactive items */
+.project-item-tab:focus,
+.service-page-main-dots:focus {
+  outline: 2px solid #0047ff;
+  outline-offset: 2px;
 }
 
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .project-page-hero-section {
     height: 37rem;
     padding: 24px;
@@ -214,9 +507,9 @@
   }
 
   .project-item-tab {
-    font-size: 7px;
+    font-size: 0.8rem;
     font-family: EuclidMedium;
-    padding: 2px;
+    padding: 5px;
     background: #F5F5F5;
     border-radius: 5px;
     transition: all 0.3s;
@@ -224,7 +517,7 @@
     min-width: fit-content;
     cursor: pointer;
     border: none;
-    margin-right: 5px;
+    margin-right: 0px;
     height: 26px;
   }
 
@@ -255,9 +548,7 @@
     display: none;
   }
 
-  /* .mobile-navigation-tabs::-webkit-scrollbar-button{
-    display: none
-  }; */
+ 
   .product-dep-name {
     display: block;
     font-size: 1.5rem;
@@ -266,7 +557,7 @@
 
   .category-buttons-container {
     display: flex;
-    padding: 1.5rem;
+    padding: 0;
     column-gap: 6px;
     overflow-x: auto;
     position: sticky;
@@ -277,4 +568,4 @@
   }
 
 
-}
+} */
