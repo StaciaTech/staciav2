@@ -7,10 +7,7 @@
 
 .wel-m-modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(8px);
   display: flex;
@@ -32,34 +29,19 @@
 }
 
 @media (min-width: 640px) {
-  .wel-m-modal-container {
-    max-width: 384px;
-  }
+  .wel-m-modal-container { max-width: 384px; }
 }
 
 @media (min-width: 768px) {
-  .wel-m-modal-container {
-    max-width: 672px;
-    height: 650px;
-  }
+  .wel-m-modal-container { max-width: 672px; height: 650px; }
 }
 
 @media (min-width: 1024px) {
-  .wel-m-modal-container {
-    /* max-width: 800px; */
-    height: 78%;
-    width: 100%;
-  }
+  .wel-m-modal-container { max-width: 800px; }
 }
 
-.wel-m-dark {
-  background: #111827;
-  border: 1px solid #374151;
-}
-
-.wel-m-light {
-  background: #ffffff;
-}
+.wel-m-dark { background: #111827; border: 1px solid #374151; }
+.wel-m-light { background: #ffffff; }
 
 .wel-m-close-btn {
   position: absolute;
@@ -102,24 +84,10 @@
   transition: background 0.3s;
 }
 
-.wel-m-nav-btn:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.wel-m-prev-btn {
-  left: 0;
-  border-radius: 0 8px 8px 0;
-}
-
-.wel-m-next-btn {
-  right: 0;
-  border-radius: 8px 0 0 8px;
-}
-
-.wel-m-nav-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
+.wel-m-nav-btn:hover { background: rgba(0, 0, 0, 0.7); }
+.wel-m-prev-btn { left: 0; border-radius: 0 8px 8px 0; }
+.wel-m-next-btn { right: 0; border-radius: 8px 0 0 8px; }
+.wel-m-nav-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* === INDICATORS === */
 .wel-m-indicators {
@@ -158,9 +126,7 @@
 }
 
 @media (min-width: 768px) {
-  .wel-m-complex-slide {
-    padding: 24px 32px 32px;
-  }
+  .wel-m-complex-slide { padding: 24px 32px 32px; }
 }
 
 .wel-m-featured-title {
@@ -184,8 +150,7 @@
   }
 }
 
-.wel-m-col-left,
-.wel-m-col-right {
+.wel-m-col-left, .wel-m-col-right {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -476,9 +441,7 @@
 }
 
 @media (min-width: 768px) {
-  .wel-m-banner-slide {
-    padding: 32px;
-  }
+  .wel-m-banner-slide { padding: 32px; }
 }
 
 .wel-m-banner-image-wrapper {
@@ -511,9 +474,7 @@
 }
 
 @media (min-width: 768px) {
-  .wel-m-banner-title {
-    font-size: 2.25rem;
-  }
+  .wel-m-banner-title { font-size: 2.25rem; }
 }
 
 .wel-m-banner-desc {
