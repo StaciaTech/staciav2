@@ -594,13 +594,18 @@ export default function MobileFooter() {
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: "23px", marginLeft: "20px" }}>
-        <div className="terms">Terms of service</div>
+        <div className="terms" onClick={() => { navigate("/Terms-of-Service"); window.scrollTo(0, 0); }}
+          style={{ cursor: "pointer" }}>Terms of service</div>
         <div className="dot" />
-        <div className="terms">Privacy Policy</div>
+        <div className="terms"onClick={() => { navigate("/Privacy-Policy"); window.scrollTo(0, 0); }}
+          style={{ cursor: "pointer" }}>Privacy Policy</div>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: "23px", marginLeft: "20px" }}>
         <div className="terms" onClick={() => { navigate("/sitemap"); window.scrollTo(0, 0); }}>Sitemap</div>
+        <div className="dot" />
+        <div className="terms" onClick={() => { navigate("/refund-policy"); window.scrollTo(0, 0); }}
+          style={{ cursor: "pointer"}}>Refund Policy</div>
       </div>
 
       <div className="copy-rights">© Copyright StaciaCorp. All Rights Reserved</div>

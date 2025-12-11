@@ -58,7 +58,7 @@ const KnowMoreSection = ({ productData }) => {
     // Create FormData
     const formData = new FormData();
     formData.append('email', email);
-    formData.append("access_key", "f05920d0-3b2a-427b-bd0e-de098dfadd58");
+    formData.append("access_key", "e94ad995-f110-472a-81f9-66ff8ca65e98");
     formData.append("subject", "New enquiries Stacia Corp Client Visit Page");
     formData.append("from_name", "Stacia Corp Website"); // Replace with your Web3Forms Access Key
     try {

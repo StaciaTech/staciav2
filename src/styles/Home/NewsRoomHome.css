@@ -1,0 +1,119 @@
+/* Carousel layout */
+.carousel-shell {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 8px 0 28px;
+}
+
+.carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 560ms cubic-bezier(.22,.9,.3,1);
+  will-change: transform;
+}
+
+/* each slide flex-basis = 100% / slideCount is handled inline for width of track */
+.carousel-slide {
+  box-sizing: border-box;
+  padding: 18px;
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 28px;
+  align-items: center;
+  min-height: 360px;
+}
+
+/* responsive sliding column layout */
+@media (max-width: 980px) {
+  .carousel-slide {
+    grid-template-columns: 1fr;
+  }
+  .slide-right { order: 2; }
+  .slide-left { order: 1; }
+}
+
+/* slide internal pieces */
+.slide-left { padding: 4px 8px; }
+.slide-right { display: grid; gap: 12px; justify-items: center; }
+
+/* slide meta */
+.slide-meta {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  color: rgba(255,255,255,0.8);
+  margin-top: 6px;
+}
+.badge {
+  background: rgba(255,255,255,0.08);
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:600;
+  color:#fff;
+}
+
+/* read more */
+.link-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted-white);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+/* controls */
+.carousel-controls {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  margin-top: 14px;
+}
+.control {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--muted-white);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition: transform .15s ease;
+}
+.control:hover { transform: translateY(-2px); }
+
+.dots { display:flex; gap:8px; align-items:center; }
+.dot {
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background: rgba(255,255,255,0.12);
+  border:none;
+  cursor:pointer;
+}
+.dot.active { background: var(--base-brand-blue); }
+
+/* accessibility focus */
+.control:focus, .dot:focus, .link-btn:focus {
+  outline: 3px solid rgba(45,98,255,0.18);
+  outline-offset: 3px;
+}
+
+/* small screens */
+@media (max-width: 640px) {
+  .carousel-slide { padding: 10px; min-height: 520px; }
+  .funding-heading { font-size: 20px; }
+  .decorative-image:not(.mobile-only) { display: none; }
+  .decorative-image.mobile-only { display:flex; }
+}

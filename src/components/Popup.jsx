@@ -588,7 +588,7 @@ function Popup() {
   const navigate = useNavigate();
 
   // Show popup only if last shown was more than 1 hour ago
-  const ONE_DAY_MS =   60 * 60 * 1000;
+  const ONE_DAY_MS = 60 * 60 * 1000;
   const STORAGE_KEY = "stacia_popup_last_shown";
 
   const [show, setShow] = useState(() => {
@@ -626,6 +626,11 @@ function Popup() {
       content2: "Tech Summit 2025",
       link: "https://staciacorp.com/competition",
     },
+    {
+      content1: "Grant Achievement",
+      content2: "OneDril Wins RKVY-RAFTAAR Grant",
+      link: "https://staciacorp.com/news",
+    }
   ];
 
   const projectSlides = [
