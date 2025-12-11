@@ -241,7 +241,7 @@
     overflow-x: auto;
     position: sticky;
     top: 80px;
-    z-index: 1;
+    z-index: 3;
     background: #fff;
   }
   .article-page-main-dots-container {
@@ -515,7 +515,7 @@
     overflow-x: auto;
     position: sticky;
     top: 80px;
-    z-index: 1;
+    z-index: 3;
     background: #fff;
   }
   .article-page-main-dots-container {

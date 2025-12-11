@@ -51,7 +51,7 @@ function SideBar() {
     const interval = setInterval(() => {
       setLogo((p) => (p === StaciaLogo ? five : StaciaLogo));
       setText((prev) =>
-        prev === "Innovating for you" ? `Celebrating 5th Anniversary` : "Innovating for you"
+        prev === "Innovating for you" ? `Celebrating 6th Anniversary` : "Innovating for you"
       );
     }, 7000);
     return () => clearInterval(interval);

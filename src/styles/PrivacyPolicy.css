@@ -14,12 +14,15 @@
    }
    .privacy-title {
      font-size: 28px;
+       font-family: EuclidBold;
+       font-style: none;
      font-weight: bold;
      color: #333;
      text-align: center;
      /* margin-bottom: 20px; */
      margin-top: 50px;
      margin-bottom: 20px;
+  
 
    }
    .last-updated {
@@ -74,3 +77,15 @@
        font-size: 14px;
      }
    }
+
+   @media (max-width: 320px) {
+     .privacy-container {
+       padding: 20px 10px;
+       margin-top: 70px;
+       margin-right: 0px;
+       margin-left: 0px;
+     }
+     .privacy-content {
+       padding: 20px;
+     }
+    }

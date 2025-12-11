@@ -46,6 +46,9 @@ import ClientVisit from "./pages/ClientVisit";
 
 import ShapeAnimationIntro from "./pages/ShapeAnimationIntro";
 import SpecificIndustries from "./components/Industries/SpecificIndustries";
+import RefundPolicy from "./components/RefundPolicy";
+
+import TOSPolicy from "./components/PaymentPolicy";
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -80,6 +83,8 @@ function App() {
         <Route path="/sitemap" element={<Sitemap />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/Terms-of-Service" element={<TOSPolicy />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/career/:key?" element={<CareerPage />} />
         <Route path="/community" element={<CommunityPage />} />

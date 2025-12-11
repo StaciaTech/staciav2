@@ -154,59 +154,7 @@
             "RESTful APIs"
         ]
     },
-    {
-        "title": "UI/UX Designer Intern",
-        "experience": "Fresher",
-        "qualification": "Computer Science / Related Fields",
-        "jobType": "Internship",
-        "location": "Chennai",
-        "natureOfJob": "On-Site/Hybrid",
-        "description": "UI/UX designers are responsible for creating and improving the visual and interactive elements of digital products such as websites, mobile applications, and software. They work closely with developers, product managers, and other stakeholders to ensure that the product meets the needs of users and the business.UI/UX designers play a crucial role in creating digital products that are intuitive, visually appealing, and functional. They work with cross-functional teams to ensure that the product meets the needs of users and the business, and continuously iterate and improve the design based on feedback and research. If you have a passion for design and a desire to create products that people love to use, a career in UI/UX design may be right for you.",
-        "responsibilities": [
-            "Conduct research to understand user needs, preferences, and behaviours.",
-            "Develop user personas, user flows, and wireframes to guide the design process.",
-            "Create high-fidelity mockups and prototypes to demonstrate the look and feel of the product.",
-            "Collaborate with developers to ensure that designs are implemented correctly and according to specifications.",
-            "Conduct usability testing and gather feedback to continuously improve the product.",
-            "Stay up-to-date with design trends, tools, and technologies to ensure the product remains competitive and effective."
-        ],
-        "requiredSkills": [
-            "Bachelor's degree in design or a related field",
-            "Proficiency in design tools such as Sketch, Figma, Adobe Creative Suite, or similar",
-            "Strong understanding of user-centered design principles and practices",
-            "Excellent communication skills and ability to work in a collaborative environment",
-            "Portfolio demonstrating your design work and process",
-            "Understanding of marketing, production, website design, corporate identity, advertisements, and multimedia design",
-            "Great sense of typography, iconography, color theory, and visual composition",
-            "Effectively communicate design concepts and detailed logic both verbally and visually to internal stakeholders",
-            "Ability to work with clients to understand detailed requirements and design complete user experiences that meet client needs and vision",
-            "Extensive experience in using UX design best practices to design solutions, and a deep understanding of mobile-first and responsive design",
-            "A solid grasp of user-centered design (UCD), planning and conducting user research, user testing, A/B testing, rapid prototyping, heuristic analysis, usability and accessibility concerns",
-            "Ability to iterate designs and solutions efficiently and intelligently",
-            "Ability to clearly and effectively communicate design processes, ideas, and solutions to teams and clients",
-            "A clear understanding of the importance of user-centered design and design thinking",
-            "Ability to work effectively in a team setting including synthesizing abstract ideas into concrete design implications",
-            "Be excited about collaborating and communicating closely with teams and other stakeholders via a distributed model, to regularly deliver design solutions for approval",
-            "Be passionate about resolving user pain points through great design",
-            "Be open to receiving feedback and constructive criticism",
-            "Be passionate about all things UX and other areas of design and innovation",
-            "innovation. Research and showcase knowledge in the industry’s latest trends and technologies"
-        ],
-        "preferredSkills": [
-            "Knowledge about front-end development technologies such as HTML, CSS, and JavaScript.",
-            "Experience with motion graphics and animation.",
-            "Knowledge of accessibility standards and best practices.",
-            "Familiarity with design thinking and agile development methodologies.",
-            "Experience in creating and working with Design Systems."
-        ],
-        "requiredTools": [
-            "Wireframe.cc, Balsamiq, Figjam",
-            "Figma",
-            "Protopie",
-            "Adobe Illustrator",
-            "Affinity Designer 2"
-        ]
-    },
+   
     {
         "title": "Industrial Designer Intern",
         "experience": "Fresher",

@@ -14,30 +14,71 @@ const SLIDES = [
       { id: 5, type: 'news_dark', title: 'Careers & News', items: ["Join the Stacia Innovator Challenge Q4", "MERN Stack Developer Openings - Apply Now!"], category: 'Updates', linkText: 'View All →' },
     ],
   },
+  // {
+  //   id: 2,
+  //   layoutType: 'banner',
+  //   imageUrl: "https://placehold.co/800x400/40C1A7/1E4B5E?text=New+Feature+Showcase",
+  //   title: "Enhanced Performance",
+  //   description: "Experience blazing-fast loading speeds and a smoother user interface across all devices.",
+  //   buttonText: "See Details"
+  // },
+  // {
+  //   id: 3,
+  //   layoutType: 'banner',
+  //   imageUrl: "https://placehold.co/800x400/FFD966/996600?text=Mobile+Optimized",
+  //   title: "Fully Responsive Design",
+  //   description: "Whether on desktop or mobile, your view is perfectly optimized for clarity and usability.",
+  //   buttonText: "Try Mobile View"
+  // },
+  // {
+  //   id: 4,
+  //   layoutType: 'banner',
+  //   imageUrl: "https://placehold.co/800x400/E87E8E/701C27?text=Special+Offer+Alert",
+  //   title: "Limited Time Offer!",
+  //   description: "Don't miss our exclusive early-access discount. Grab it before it's gone!",
+  //   buttonText: "Claim Discount"
+  // },
+  
   {
     id: 2,
-    layoutType: 'banner',
-    imageUrl: "https://placehold.co/800x400/40C1A7/1E4B5E?text=New+Feature+Showcase",
-    title: "Enhanced Performance",
-    description: "Experience blazing-fast loading speeds and a smoother user interface across all devices.",
-    buttonText: "See Details"
+    title: "Visit our technology partner StaciaTech",
+    description: "Explore cutting-edge software solutions and digital innovations from our trusted partner StaciaTech.",
+    imageUrl: "/assets/slides/staciatech.jpg",
+    layoutType: "banner",
+    buttonText: "Visit StaciaTech",
+    link: "https://staciatech.com"
   },
   {
     id: 3,
-    layoutType: 'banner',
-    imageUrl: "https://placehold.co/800x400/FFD966/996600?text=Mobile+Optimized",
-    title: "Fully Responsive Design",
-    description: "Whether on desktop or mobile, your view is perfectly optimized for clarity and usability.",
-    buttonText: "Try Mobile View"
+    title: "Traditional Food in Your Hand!",
+    description: "Experience authentic traditional South Indian snacks and foods from Sharadha Stores.",
+    imageUrl: "/assets/slides/sharadha-stores.jpg",
+    layoutType: "dark",
+    buttonText: "Open in Play Store",
+    link: "https://play.google.com/store/apps/details?id=com.saradhastores"
   },
   {
     id: 4,
-    layoutType: 'banner',
-    imageUrl: "https://placehold.co/800x400/E87E8E/701C27?text=Special+Offer+Alert",
-    title: "Limited Time Offer!",
-    description: "Don't miss our exclusive early-access discount. Grab it before it's gone!",
-    buttonText: "Claim Discount"
+    title: "Farmers & Food Businesses – One App for Everything!",
+    description: "TNAPEx helps farmers and food-based businesses with easy trading, pricing, and marketplace features.",
+    imageUrl: "/assets/slides/tnapex.jpg",
+    layoutType: "light",
+    buttonText: "View App",
+    link: "https://play.google.com/store/apps/details?id=com.vikram1201.TNAPEx"
   },
+  {
+    id: 5,
+    title: "Visit Vencorp Website",
+    description: "Discover Vencorp – the next level of business innovation, automation, and digital solutions.",
+    imageUrl: "/assets/slides/vencorp.jpg",
+    layoutType: "banner",
+    buttonText: "Go to Website",
+    link: "https://thevencorp.com/"
+  }
+
+
+
+  
 ];
 
 // --- ICONS ---

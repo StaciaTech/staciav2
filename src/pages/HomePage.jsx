@@ -336,6 +336,7 @@ const WhatsNewSection = lazy(() =>
 const OurHistoryTimeline = lazy(() => import("../components/Home/OurHistory"));
 const IndustriesCoverd = lazy(() => import("../components/Home/Industries"));
 const Career = lazy(() => import("../components/Home/career"));
+const NewsRoomHome = lazy(() => import("../components/Home/NewsRoomHome"));
 const WelcomeModel = lazy(() => import("../components/Home/WelcomeModel"));
 
 const words = [
@@ -498,6 +499,7 @@ function HomePage() {
         <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
         <WhatsNewSection />
+        {/* <NewsRoomHome /> */}
         {/* <ServiceDisplay />  */}
         {/* <IndustriesCoverd /> */}
         {/* <WhatsNewSection /> */}
