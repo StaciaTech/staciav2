@@ -194,7 +194,7 @@ function Footer() {
           >
             Articles
           </div>
-          <div
+          {/* <div
             className="footer-grey-tabs"
             onClick={() => {
               //navigate("/whatsnew");
@@ -202,7 +202,7 @@ function Footer() {
             }}
           >
             What's New
-          </div>
+          </div> */}
         </div>
         <div>
           <div>Reach Us</div>

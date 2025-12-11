@@ -22,7 +22,7 @@
      /* margin-bottom: 20px; */
      margin-top: 50px;
      margin-bottom: 20px;
-     font-family: ;
+  
 
    }
    .last-updated {
@@ -77,3 +77,15 @@
        font-size: 14px;
      }
    }
+
+   @media (max-width: 320px) {
+     .privacy-container {
+       padding: 20px 10px;
+       margin-top: 70px;
+       margin-right: 0px;
+       margin-left: 0px;
+     }
+     .privacy-content {
+       padding: 20px;
+     }
+    }
