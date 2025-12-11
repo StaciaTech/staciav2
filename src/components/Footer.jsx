@@ -235,7 +235,7 @@ function Footer() {
           ©Copyright Stacia<span style={{ color: "#0047FF" }}>Corp</span>. All
           Rights Reserved
         </div>
-        <div
+        {/* <div
           className="sitemap"
           onClick={() => {
             navigate("/sitemap");
@@ -245,17 +245,18 @@ function Footer() {
             cursor: "pointer",
             color: "black",
             opacity: "0.6",
-            paddingLeft: "14rem",
+            paddingLeft: "4rem",
           }}
         >
           Sitemap
-        </div>
+        </div> */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
             opacity: "0.6",
-            width: "35%",
+            width: "50%",
+            gap:"2rem",
             className: "termm"
           }}
         >
@@ -264,26 +265,48 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           > */}
-          <div
+          {/* <div
             className="termsofservice"
             style={{
               cursor: "pointer",
               color: "black",
             }}
           >
-            Terms of Service
-          </div>
+           
+          </div> */}
           {/* </a> */}
-          <div
+          {/* <div
             style={{
               height: "10px",
               backgroundColor: "#D9D9D9",
               borderRadius: "50%",
-              marginLeft: "35px",
-              marginRight: "35px",
+              marginLeft: "30px",
+              marginRight: "30px",
+              gap:"1rem"
             }}
-          />
+          /> */}
 
+          <div
+            className="privacypolicy"
+            onClick={() => navigate("/sitemap")}
+            style={{ cursor: "pointer", color: "black", }}
+          >
+             Sitemap
+          </div>
+          <div
+            className="privacypolicy"
+            onClick={() => navigate("/Terms-of-Service")}
+            style={{ cursor: "pointer", color: "black", }}
+          >
+             Terms of Service
+          </div>
+          <div
+            className="privacypolicy"
+            onClick={() => navigate("/refund-policy")}
+            style={{ cursor: "pointer", color: "black", }}
+          >
+            Refund policy
+          </div>
           <div
             className="privacypolicy"
             onClick={() => navigate("/Privacy-Policy")}

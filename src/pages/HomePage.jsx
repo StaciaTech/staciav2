@@ -499,7 +499,7 @@ function HomePage() {
         <MobileStackScroll onToggle={selectedToggle} />
         <ClientComponent />
         <WhatsNewSection />
-        <NewsRoomHome />
+        {/* <NewsRoomHome /> */}
         {/* <ServiceDisplay />  */}
         {/* <IndustriesCoverd /> */}
         {/* <WhatsNewSection /> */}
