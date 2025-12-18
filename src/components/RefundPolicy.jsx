@@ -17,14 +17,9 @@ const RefundPolicy = () => {
                     {/* Introduction */}
                     <section className="section">
                         <p>
-                            Credits are strictly NON-REFUNDABLE under any circumstances.                        </p>
-                        <p>
-
-                            By purchasing, You waive any statutory or common-law right to refund or chargeback. Chargeback attempts = permanent ban + recovery of chargeback fee + â‚¹25,000 liquidated damages.                        </p>
-
+                            Credits are strictly NON-REFUNDABLE under any circumstances.
+                        </p>
                     </section>
-
-
                 </div>
             </div>
         </>
