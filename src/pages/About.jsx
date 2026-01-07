@@ -46,6 +46,42 @@ const teamImages = {
 };
 
 
+const teamData1 =[
+{
+      "designation": " Front-End Associate, Software Research and Development",
+      "firstName": "Vikram",
+      "fullName": "Vikram Varma V",
+      "gender": "Male",
+      "id": "67345b237a970b308b574ead",
+      "imageUrl": "assets/Team/Vikram.webp",
+      "lastName": "Varma V",
+      "outlook": "Vikram develops interactive user interfaces using modern web technologies. He collaborates closely with designers and backend teams to deliver seamless, responsive, and performance-optimized web applications and prototypes",
+      "_id": "67345b237a970b308b574ead"
+    },
+    {
+      "designation": "Embedded Design Associate, Electronic Innovation Research And Development",
+      "firstName": "Abdul",
+      "fullName": "Abdul Raheem M",
+      "gender": "Male",
+      "id": "67345cd77a970b308b574eb0",
+      "imageUrl": "assets/Team/Abdul.webp",
+      "lastName": "Raheem M",
+      "outlook": "Abdul designs and tests embedded systems for innovative electronics solutions. His role includes circuit design, firmware development, and integrating hardware-software systems for advanced technology applications.",
+      "_id": "67345cd77a970b308b574eb0"
+    },
+    
+    {
+      "designation": "Employee Experience Associate, Human Resource",
+      "firstName": "Divya",
+      "fullName": "Divya U",
+      "gender": "Female",
+      "id": "67345efd7a970b308b574eb1",
+      "imageUrl": "assets/Team/Divya.webp",
+      "lastName": "U",
+      "outlook": "Divya handles end-to-end HR operations including talent sourcing, onboarding, payroll, employee engagement, feedback processes, and wellness programs—fostering a productive, inclusive, and growth-oriented workplace culture.",
+      "_id": "67345efd7a970b308b574eb1"
+    }
+]
 const Industries = [
   {
     id: 1,
@@ -611,255 +647,146 @@ function About() {
             <div className="about-team-marquee">
               {/* Render teamData three times for smoother looping */}
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set1-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set2-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set3-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set4-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set5-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set6-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set7-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set8-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set9-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set10-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set11-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set12-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set13-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set14-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set15-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set16-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set17-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set18-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set19-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set20-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set21-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set22-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set23-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set24-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set25-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set26-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set27-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set28-${i}`} eachMem={eachMem} />
                 ))}
               </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set29-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set30-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set31-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set32-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set33-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set34-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set35-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set36-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set37-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set38-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set39-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set40-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set41-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set42-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set43-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set44-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set45-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set46-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set47-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set48-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set49-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
-              <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
-                  <TeamCard key={`set50-${i}`} eachMem={eachMem} />
-                ))}
-              </div>
+             
 
             </div>
           </div>
