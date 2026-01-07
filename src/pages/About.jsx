@@ -27,9 +27,23 @@ import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { SlEnergy } from "react-icons/sl";
 import { VscChip } from "react-icons/vsc";
 
+// our term images
+import abdul from "../assets/Team/Abdul.webp";
+import divya from "../assets/Team/Divya.webp";
+import vikram from "../assets/Team/Vikram.webp";
+
+
 import Loadingstar from "../components/LoadingStar"
 const AboutCarousel = React.lazy(() => import("../components/ReUsableComp/AboutCarousel"));
 const ClientComponent = React.lazy(() => import("./Client"));
+
+//   our term images set if get first name from json
+const teamImages = {
+  Abdul: abdul,
+  Divya: divya,
+  Vikram: vikram,
+  // Add other team member images here
+};
 
 
 const Industries = [
@@ -391,14 +405,14 @@ function About() {
         <div className="about-section6-container">
           <div>
             <div>
-              <img src={whitelogo} alt="" style={{ padding: "1rem  2rem" , width:"15rem"}} />
+              <img src={whitelogo} alt="" style={{ padding: "1rem  2rem", width: "15rem" }} />
               <div className="about-section6-title test-seclection-blue">
                 Celebrating Six Years Excellence
               </div>
             </div>
           </div>
           <div className="about-section6-img-container">
-            <img src={sixLogo} alt="" style={{ padding: "1rem  2rem" }}/>
+            <img src={sixLogo} alt="" style={{ padding: "1rem  2rem" }} />
           </div>
           <div>
             <p className="about-section6-des test-seclection-blue">
@@ -591,7 +605,7 @@ function About() {
             solutions with creativity, collaboration, and a passion for
             excellence, shaping the future of industries worldwide.
           </p>
-
+          {/* add loop */}
           {/* Desktop Card Marquee */}
           <div className="about-team-marquee-desk">
             <div className="about-team-marquee">
@@ -621,6 +635,232 @@ function About() {
                   <TeamCard key={`set5-${i}`} eachMem={eachMem} />
                 ))}
               </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set6-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set7-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set8-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set9-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set10-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set11-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set12-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set13-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set14-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set15-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set16-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set17-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set18-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set19-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set20-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set21-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set22-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set23-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set24-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set25-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set26-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set27-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set28-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set29-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set30-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set31-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set32-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set33-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set34-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set35-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set36-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set37-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set38-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set39-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set40-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set41-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set42-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set43-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set44-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set45-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set46-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set47-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set48-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set49-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData?.map((eachMem, i) => (
+                  <TeamCard key={`set50-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+
             </div>
           </div>
 
@@ -649,7 +889,7 @@ const TeamCard = ({ eachMem }) => {
       onClick={() => setShowCardDetails(!showCardDetails)}
     >
       <div className="about-team-img">
-        <img src={eachMem.imageUrl} alt="" />
+        <img src={teamImages[eachMem.firstName] || ""} alt="" />
       </div>
       <div className="about-team-name test-seclection-blue">
         {eachMem.fullName}
