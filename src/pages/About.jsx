@@ -32,7 +32,7 @@ import { VscChip } from "react-icons/vsc";
 // our term images
 import abdul from "../assets/Team/Abdul.webp";
 import divya from "../assets/Team/Divya.webp";
-import vikram from "../assets/Team/vikram1.png";
+import vikram from "../assets/Team/vikram2.png";
 // import thilak from "../assets/Team/thilak.png";
 import thilak from "../assets/Team/thilak3.png"
 
