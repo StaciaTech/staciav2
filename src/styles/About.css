@@ -592,7 +592,7 @@
 
 }
 
-.about-team-marquee-desk {
+/* .about-team-marquee-desk {
   overflow: hidden;
   width: 100%;
   white-space: nowrap;
@@ -601,10 +601,28 @@
 
 .about-team-marquee {
   display: flex;
+  width: max-content;
   width: 500%;
   animation: scroll 150s linear infinite;
   will-change: transform;
+} */
+
+.about-team-marquee-desk {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
+
+.about-team-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 150s linear infinite;
+  will-change: transform;
+}
+
+/* .about-team-marquee {
+   will-change: transform;
+} */
 
 .marquee-content {
   display: inline-flex;
@@ -616,13 +634,23 @@
   animation-play-state: paused;
 }
 
-@keyframes scroll {
+/* @keyframes scroll {
   0% {
     transform: translateX(0);
   }
 
   100% {
     transform: translateX(calc(-100% / 5 * 4));
+  }
+} */
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
   }
 }
 
@@ -659,7 +687,7 @@
 .about-team-img>img {
   object-fit: contain;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.1rem;
   aspect-ratio: 185 / 220;
 }
 
