@@ -5,202 +5,288 @@ import SideBar from './SideBar';
 
 const PrivacyPolicy = () => {
   return (
-    <>     
-     <div className="nav_style">
-            <NavBar />
-            <SideBar />
+    <>
+      <div className="nav_style">
+        <NavBar />
+        <SideBar />
       </div>
-      <div className="privacy-container">
-        <div className="privacy-content">
+      <div className="privacy-wrapper">
+        <div className="privacy-paper">
+
           <h1 className="privacy-title">Privacy Policy</h1>
+          <p className="last-updated">
+            Effective from: July 12th, 2021
+          </p>
 
-          {/* Introduction */}
+          {/* INTRODUCTION */}
           <section className="section">
             <p>
-              This privacy policy is an electronic record in the form of an electronic contract formed under the Rule 3 of the Information Technology Act, 2000 and the Rules made thereunder and the amended provisions pertaining to electronic documents/records in various statutes as amended by the Information Technology Act, 2000. This privacy policy does not require any physical, electronic, or digital signature.
+              This Privacy Policy describes Our policies and procedures on the
+              collection, use and disclosure of Your information when You use
+              the Service and tells You about Your privacy rights and how the
+              law protects You.
             </p>
             <p>
-              Please read this document carefully. By using the Mobile Application/Website, you indicate that you understand, agree, and consent to this privacy policy. If you do not agree with the terms of this privacy policy, please do not use this Mobile Application/Website. You hereby provide your unconditional/explicit consent or agreements to Sharada Stores as provided under Section 43A and Section 72A of Information Technology Act, 2000.
-            </p>
-            <p>
-              By using our services, you explicitly consent to the collection, recording, organization, structuring, storage, adaptation, retrieval, use, alignment or combination, indexing, sharing, disclosure by transmission, dissemination, or otherwise making available, restriction, erasure, or destruction of your personal data, as outlined in this Privacy Policy. We ensure that all personal data provided by you is processed in accordance with applicable data protection laws, including the Data Protection and Privacy Act (DPDP Act).
-            </p>
-            <p>
-              You have the right to request the erasure of your personal data, or to withdraw your consent for the processing of your personal data at any time. Such requests can be made by sending an email to Sharada Stores. Upon receipt of such a request, we will take necessary actions in accordance with the DPDP Act, subject to any applicable legal obligations or requirements.
-            </p>
-            <p>
-              Please note that withdrawing your consent or requesting the erasure of data may impact your ability to use certain services that require processing of personal data.
+              We use Your Personal Data to provide and improve the Service.
+              By using the Service, You agree to the collection and use of
+              information in accordance with this Privacy Policy.
             </p>
           </section>
 
-          {/* Section 1: Your Privacy */}
+          {/* INTERPRETATION */}
           <section className="section">
-            <h2>1. Your Privacy</h2>
+            <h2>Interpretation and Definitions</h2>
+            <h3>Interpretation</h3>
             <p>
-              <span className="bold">1.1.</span> Your privacy is important to us and we want you to know what information, including your personal and other information, we collect about you and from you and how we use that information. Personal information may be specified as the information that includes names, addresses, e-mail IDs, telephone number, mode of payment, etc.
+              The words of which the initial letter is capitalized have meanings
+              defined under the following conditions. The following definitions
+              shall have the same meaning regardless of whether they appear in
+              singular or in plural.
+            </p>
+
+            <h3>Definitions</h3>
+            <p>For the purposes of this Privacy Policy:</p>
+            <ul className='section-ul-privacy'>
+              <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+              <li>
+                <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Stacia Corp, Ground Floor,
+                C-53, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032
+              </li>
+              <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
+              <li><strong>Country</strong> refers to: Tamil Nadu, India</li>
+              <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+              <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+              <li><strong>Service</strong> refers to the Website.</li>
+              <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
+              <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+              <li><strong>Website</strong> refers to Stacia Corp, accessible from staciacorp.com</li>
+              <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+            </ul>
+          </section>
+
+          {/* DATA COLLECTION */}
+          <section className="section">
+            <h2>Collecting and Using Your Personal Data</h2>
+
+            <h3>Types of Data Collected</h3>
+
+            <h4>Personal Data</h4>
+            <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+            <ul>
+              <li>Email address</li>
+              <li>First name and last name</li>
+              <li>Phone number</li>
+              <li>Address, State, Province, ZIP/Postal code, City</li>
+            </ul>
+
+            <h4>Usage Data</h4>
+            <p>
+              Usage Data is collected automatically when using the Service.
             </p>
             <p>
-              <span className="bold">1.2.</span> When someone visits our Mobile Application/Website, our webservers automatically gather information that allows the Mobile Application/Website to communicate with the visitor's computer or device during the visit. We also collect information such as the number of visits to the Mobile Application/Website, which parts of the Mobile Application/Website visitors select, IP address, domain type, date, and time of day. We use such information only for statistical purposes that help us design and administer the site.
+              Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
             </p>
             <p>
-              <span className="bold">1.3.</span> This privacy policy provides information on the processing of your personal data as a result of being:
-              <ul>
-                <li>One of our customers,</li>
-                <li>A visitor to the Mobile Application/Website, and/or</li>
-                <li>A user of the Mobile Application/Website.</li>
-              </ul>
+              When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.
             </p>
             <p>
-              <span className="bold">1.4.</span> Because we're always looking for new and innovative ways to help you build meaningful connections, this policy may change over time. We request you to update yourself by accessing this Privacy Policy frequently.
+              We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
             </p>
           </section>
 
-          {/* Section 2: Applicability */}
+          {/* COOKIES */}
           <section className="section">
-            <h2>2. Applicability</h2>
+            <h2>Tracking Technologies and Cookies</h2>
             <p>
-              <span className="bold">2.1.</span> This Privacy Policy provides information on the processing of your personal data as a result of being:
-              <ul>
-                <li>One of our customers, including but not limited to our Mobile Application/Website users, etc., and</li>
-                <li>A guest visitor to the Mobile Application/Website.</li>
-              </ul>
+              We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:
+            </p>
+
+            <h4>Cookies or Browser Cookies</h4>
+            <p>
+              A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.
+            </p>
+
+            <h4>Flash Cookies</h4>
+            <p>
+              Certain features of our Service may use local stored objects (or Flash Cookies) to collect and store information about Your preferences or Your activity on our Service. Flash Cookies are not managed by the same browser settings as those used for Browser Cookies. For more information on how You can delete Flash Cookies, please read "Where can I change the settings for disabling, or deleting local shared objects?" available at https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
+            </p>
+
+            <h4>Web Beacons</h4>
+            <p>
+              Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).
+            </p>
+
+            <h4>Cookies Policy</h4>
+            <p>
+              Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. Learn more about cookies: Cookies: What Do They Do?.
             </p>
             <p>
-              <span className="bold">2.2.</span> This Privacy Policy applies to websites, applications, events, and other services operated by Sharada Stores. All of these are together defined as Mobile Application/Website/services offered by Sharada Stores ("Services") in this Privacy Policy.
+              We use both Session and Persistent Cookies for the purposes set out below:
+            </p>
+
+            <h4>Necessary / Essential Cookies</h4>
+            <ul>
+              <li><strong>Type:</strong> Session Cookies</li>
+              <li><strong>Administered by:</strong> Us</li>
+              <li><strong>Purpose:</strong> These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</li>
+            </ul>
+
+            <h4>Cookies Policy / Notice Acceptance Cookies</h4>
+            <ul>
+              <li><strong>Type:</strong> Persistent Cookies</li>
+              <li><strong>Administered by:</strong> Us</li>
+              <li><strong>Purpose:</strong> These Cookies identify if users have accepted the use of cookies on the Website.</li>
+            </ul>
+
+            <h4>Functionality Cookies</h4>
+            <ul>
+              <li><strong>Type:</strong> Persistent Cookies</li>
+              <li><strong>Administered by:</strong> Us</li>
+              <li><strong>Purpose:</strong> These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</li>
+            </ul>
+
+            <p>
+              For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.
             </p>
           </section>
 
-          {/* Section 3: Information We Collect */}
+          {/* USE OF DATA */}
           <section className="section">
-            <h2>3. Information We Collect</h2>
+            <h2>Use of Your Personal Data</h2>
+            <p>The Company may use Personal Data for the following purposes:</p>
+            <ul>
+              <li><strong>To provide and maintain our Service,</strong> including to monitor the usage of our Service.</li>
+              <li><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</li>
+              <li><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</li>
+              <li><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</li>
+              <li><strong>To provide You with news, special offers and general information</strong> about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</li>
+              <li><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</li>
+              <li><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</li>
+              <li><strong>For other purposes:</strong> We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</li>
+            </ul>
+          </section>
+
+          {/* SHARING */}
+          <section className="section">
+            <h2>Sharing of Your Personal Information</h2>
+            <p>We may share Your personal information in the following situations:</p>
+            <ul>
+              <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li>
+              <li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
+              <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
+              <li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
+              <li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
+              <li><strong>With Your consent:</strong> We may disclose Your personal information for any other purpose with Your consent.</li>
+            </ul>
+          </section>
+
+          {/* RETENTION */}
+          <section className="section">
+            <h2>Retention of Your Personal Data</h2>
             <p>
-              Collection of your information is pertinent to provide you the services offered by us. We also collect information generated as you use our services. Details of information we collect include but are not limited to Name, addresses, phone number, email id.
+              The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
+            </p>
+            <p>
+              The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
             </p>
           </section>
 
-          {/* Section 4: Need for Your Information */}
+          {/* TRANSFER */}
           <section className="section">
-            <h2>4. Need for Your Information</h2>
+            <h2>Transfer of Your Personal Data</h2>
             <p>
-              We need your personal information for the following services:
+              Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
             </p>
             <p>
-              <span className="bold">4.1. Development and Improvement of Services Offered</span><br />
-              We regularly conduct market research with our customers. We use your personal information for quality assessments and to improve your customer experience.
+              Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
             </p>
             <p>
-              <span className="bold">4.2. Offers and Other Information</span><br />
-              As our customer, user of the Mobile Application/Website, you may receive general offers and information from us, including:
-              <ul>
-                <li>Electronic newsletters with offers and general information.</li>
-                <li>Discount coupons from us.</li>
-                <li>General Offers by regular mail, email, SMS, Mobile Application/Website (through push notifications), social media, coupons, or any other digital channels used by you.</li>
-              </ul>
-              You can at any time stop receiving offers and information by opting out via the Mobile Application/Website. We will delete or render anonymous any of your personal data that has ever been stored by us. However, we shall continue to maintain a database of the users who have chosen to opt out along with their reasons for the same.
-            </p>
-            <p>
-              <span className="bold">4.3. Analytics</span><br />
-              In order to be able to provide you our services to the best of our ability, we shall need to understand and analyse your information and preferences. For the same, we shall analyse:
-              <ul>
-                <li>Your use of the Mobile Application/Website and e-mails you receive from us.</li>
-                <li>Your participation in promotions.</li>
-                <li>Your responses to surveys.</li>
-                <li>Technical and functional management of the Mobile Application/Website, including IP address, location (if consented), and page visit details.</li>
-              </ul>
-            </p>
-            <p>
-              <span className="bold">4.4. Marketing and Research</span><br />
-              We perform research into market trends through statistical or other analysis. We use the results of such research to evaluate our current services and to adapt our marketing and services to new developments. The research results are only reported on an aggregate basis.
+              The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
             </p>
           </section>
 
-          {/* Section 5: Access to Your Data */}
+          {/* DISCLOSURE */}
           <section className="section">
-            <h2>5. Access to Your Data</h2>
+            <h2>Disclosure of Your Personal Data</h2>
+
+            <h3>Business Transactions</h3>
             <p>
-              <span className="bold">5.1.</span> We shall not disclose your personal data unless necessary. However, your personal data in a readable or non-readable format might be shared with:
-              <ul>
-                <li>Any agents, service providers, and/or subcontractors of Sharada Stores and its affiliates; and</li>
-                <li>Any person to whom Sharada Stores proposes to transfer any of its rights and/or duties.</li>
-              </ul>
+              If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.
             </p>
+
+            <h3>Law enforcement</h3>
             <p>
-              <span className="bold">5.2.</span> We also use third parties for certain processes. The collected personal data may be transferred to authorized third parties, which may be located outside of the Republic of India as part of the services offered to you. As far as these third parties have access to personal data, we have taken the required organizational and/or contractual measures to ensure that your personal data is exclusively processed for the purposes mentioned above.
+              Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
             </p>
+
+            <h3>Other legal requirements</h3>
             <p>
-              <span className="bold">5.3.</span> Except as set out in this Privacy Policy, we will not disclose any personal data without your permission unless we are legally entitled or required to do so or if we believe that such action is necessary to protect and/or defend our rights, property, or personal safety and those of our users/customers or other individuals.
+              The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
+            </p>
+            <ul>
+              <li>Comply with a legal obligation</li>
+              <li>Protect and defend the rights or property of the Company</li>
+              <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+              <li>Protect the personal safety of Users of the Service or the public</li>
+              <li>Protect against legal liability</li>
+            </ul>
+          </section>
+
+          {/* SECURITY */}
+          <section className="section">
+            <h2>Security of Your Personal Data</h2>
+            <p>
+              The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
             </p>
           </section>
 
-          {/* Section 6: How We Share Information */}
+          {/* CHILDREN */}
           <section className="section">
-            <h2>6. How We Share Information</h2>
+            <h2>Children's Privacy</h2>
             <p>
-              <span className="bold">6.1. Service Providers and Partners</span><br />
-              We use third parties to help us operate and improve our services. These third parties assist us with various tasks, including data hosting and maintenance, analytics, customer care, marketing, advertising, payment processing, and security operations. We may also share limited information in hashed, non-human readable form to advertising partners.
+              Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.
             </p>
             <p>
-              <span className="bold">6.2. For Corporate Transaction(s)</span><br />
-              In case we are involved in a merger, sale, acquisition, divestiture, restructuring, reorganization, dissolution, bankruptcy, or other change of ownership or control, we shall share your both personal and non-personal information.
-            </p>
-            <p>
-              <span className="bold">6.3. For Legal Purpose(s)</span><br />
-              We may disclose your information without your permission to comply with a legal process, assist in the prevention or detection of crime, or protect the safety of any person.
+              If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.
             </p>
           </section>
 
-          {/* Section 7: Usage of Cookies */}
+          {/* THIRD PARTY */}
           <section className="section">
-            <h2>7. Usage of Cookies</h2>
+            <h2>Links to Other Websites</h2>
             <p>
-              <span className="bold">7.1.</span> The Mobile Application/Website uses cookies or similar technology as required. A cookie is a small text file that is sent to your internet browser/app so that we are able to recognize you when you return.
+              Our Service may contain links to other websites that are not operated by Us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.
             </p>
             <p>
-              <span className="bold">7.2.</span> Using these technologies, we can collect data on the use of the Mobile Application/Website such as which pages are visited, your interaction with information, and the duration of your visit.
-            </p>
-            <p>
-              <span className="bold">7.3. Functional Cookies</span><br />
-              We store cookies that are essential in providing the functionalities of the Mobile Application/Website, such as remembering your preferences.
-            </p>
-            <p>
-              <span className="bold">7.4. Web Analytics Cookies</span><br />
-              We may use third-party cookies for web analysis to understand the way you use the Mobile Application/Website.
-            </p>
-            <p>
-              <span className="bold">7.5. Advertising Cookies</span><br />
-              We may use third-party cookies for advertising purposes to identify your device and serve relevant ads.
-            </p>
-            <p>
-              <span className="bold">7.6.</span> We use session cookies and permanent cookies. Session cookies are deleted when you close the browser, while permanent cookies remain until deleted by you.
+              We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
             </p>
           </section>
 
-          {/* Section 8: How We Protect Your Information */}
+          {/* CHANGES */}
           <section className="section">
-            <h2>8. How We Protect Your Information</h2>
+            <h2>Changes to this Privacy Policy</h2>
             <p>
-              <span className="bold">8.1.</span> We have implemented industry-level secure technology and policies to protect your privacy from unauthorized access and improper use. However, we cannot assure complete safety of your personal information.
+              We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
             </p>
             <p>
-              <span className="bold">8.2.</span> We regularly monitor our systems for possible vulnerabilities and attacks and may suspend your account without notice if we suspect or detect any breach of security.
+              We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.
+            </p>
+            <p>
+              You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
             </p>
           </section>
 
-          {/* Section 9: Retention of Your Data */}
+          {/* CONTACT */}
           <section className="section">
-            <h2>9. Retention of Your Data</h2>
-            <p>
-              By deleting the Mobile Application/Website, we will close the applicable accounts as soon as reasonably possible. Personal data from closed or deactivated accounts will be deleted or rendered anonymous as soon as is reasonably possible, except in cases required by law.
-            </p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+            <ul>
+              <li><strong>By email:</strong> contactus@staciacorp.com</li>
+              <li><strong>By phone number:</strong> +91 93630 34150</li>
+              <li><strong>By mail:</strong> Ground Floor, C-53, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032</li>
+            </ul>
           </section>
 
-          {/* Section 10: Children's Privacy */}
-          <section className="section">
-            <h2>10. Children's Privacy</h2>
-            <p>
-              Our services are restricted to users who are 18 years of age or older. We do not permit users under the age of 18 on our platform and we do not knowingly collect personal information from anyone under the age of 18.
-            </p>
-          </section>
         </div>
       </div>
     </>
@@ -208,3 +294,224 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
+
+
+
+
+// import React from "react";
+// import "../styles/PrivacyPolicy.css";
+
+// const PrivacyPolicy = () => {
+//   return (
+//     <div className="privacy-wrapper">
+//       <div className="privacy-paper">
+
+//         <h1 className="privacy-title">Privacy Policy</h1>
+//         <p className="last-updated">
+//           Effective from: July 12th, 2021
+//         </p>
+
+//         {/* INTRODUCTION */}
+//         <section className="section">
+//           <p>
+//             This Privacy Policy describes Our policies and procedures on the
+//             collection, use and disclosure of Your information when You use
+//             the Service and tells You about Your privacy rights and how the
+//             law protects You.
+//           </p>
+//           <p>
+//             We use Your Personal Data to provide and improve the Service.
+//             By using the Service, You agree to the collection and use of
+//             information in accordance with this Privacy Policy.
+//           </p>
+//         </section>
+
+//         {/* INTERPRETATION */}
+//         <section className="section">
+//           <h2>Interpretation and Definitions</h2>
+//           <h3>Interpretation</h3>
+//           <p>
+//             The words of which the initial letter is capitalized have meanings
+//             defined under the following conditions. The following definitions
+//             shall have the same meaning regardless of whether they appear in
+//             singular or in plural.
+//           </p>
+
+//           <h3>Definitions</h3>
+//           <ul>
+//             <li><strong>Account</strong> means a unique account created for You to access our Service.</li>
+//             <li>
+//               <strong>Company</strong> refers to Stacia Corp, Ground Floor,
+//               C-53, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032.
+//             </li>
+//             <li><strong>Cookies</strong> are small files placed on Your device containing browsing details.</li>
+//             <li><strong>Country</strong> refers to: Tamil Nadu, India.</li>
+//             <li><strong>Device</strong> means any device that can access the Service.</li>
+//             <li><strong>Personal Data</strong> is information relating to an identifiable individual.</li>
+//             <li><strong>Service</strong> refers to the Website.</li>
+//             <li><strong>Service Provider</strong> means third-party processors working on behalf of the Company.</li>
+//             <li><strong>Usage Data</strong> refers to automatically collected data from the Service.</li>
+//             <li><strong>Website</strong> refers to Stacia Corp (staciacorp.com).</li>
+//             <li><strong>You</strong> means the individual or legal entity using the Service.</li>
+//           </ul>
+//         </section>
+
+//         {/* DATA COLLECTION */}
+//         <section className="section">
+//           <h2>Collecting and Using Your Personal Data</h2>
+
+//           <h3>Types of Data Collected</h3>
+
+//           <h4>Personal Data</h4>
+//           <p>We may collect:</p>
+//           <ul>
+//             <li>Email address</li>
+//             <li>First name and last name</li>
+//             <li>Phone number</li>
+//             <li>Address, State, Province, ZIP/Postal code, City</li>
+//             <li>Usage Data</li>
+//           </ul>
+
+//           <h4>Usage Data</h4>
+//           <p>
+//             Usage Data is collected automatically and may include IP address,
+//             browser type, browser version, pages visited, time spent, device
+//             identifiers and diagnostic data.
+//           </p>
+//         </section>
+
+//         {/* COOKIES */}
+//         <section className="section">
+//           <h2>Tracking Technologies and Cookies</h2>
+//           <p>
+//             We use Cookies and similar tracking technologies to track activity
+//             and improve our Service.
+//           </p>
+
+//           <ul>
+//             <li><strong>Necessary Cookies</strong> – Essential for website functionality.</li>
+//             <li><strong>Notice Acceptance Cookies</strong> – Identify cookie consent acceptance.</li>
+//             <li><strong>Functionality Cookies</strong> – Remember user preferences.</li>
+//           </ul>
+
+//           <p>
+//             Cookies may be Session or Persistent. You can control cookies via
+//             your browser settings.
+//           </p>
+//         </section>
+
+//         {/* USE OF DATA */}
+//         <section className="section">
+//           <h2>Use of Your Personal Data</h2>
+//           <ul>
+//             <li>To provide and maintain our Service</li>
+//             <li>To manage Your Account</li>
+//             <li>To perform contracts</li>
+//             <li>To contact You</li>
+//             <li>To send news and offers</li>
+//             <li>To manage requests</li>
+//             <li>For business transfers</li>
+//             <li>For analytics and improvements</li>
+//           </ul>
+//         </section>
+
+//         {/* SHARING */}
+//         <section className="section">
+//           <h2>Sharing of Your Personal Information</h2>
+//           <ul>
+//             <li>With Service Providers</li>
+//             <li>For business transfers</li>
+//             <li>With affiliates</li>
+//             <li>With business partners</li>
+//             <li>With other users (public areas)</li>
+//             <li>With Your consent</li>
+//           </ul>
+//         </section>
+
+//         {/* RETENTION */}
+//         <section className="section">
+//           <h2>Retention of Your Personal Data</h2>
+//           <p>
+//             We retain Personal Data only as long as necessary to fulfill
+//             the purposes outlined in this Privacy Policy and comply with
+//             legal obligations.
+//           </p>
+//         </section>
+
+//         {/* TRANSFER */}
+//         <section className="section">
+//           <h2>Transfer of Your Personal Data</h2>
+//           <p>
+//             Your information may be transferred to and maintained on
+//             computers located outside Your jurisdiction where data protection
+//             laws may differ.
+//           </p>
+//         </section>
+
+//         {/* DISCLOSURE */}
+//         <section className="section">
+//           <h2>Disclosure of Your Personal Data</h2>
+//           <ul>
+//             <li>Business transactions</li>
+//             <li>Law enforcement requirements</li>
+//             <li>Compliance with legal obligations</li>
+//             <li>Protection against legal liability</li>
+//           </ul>
+//         </section>
+
+//         {/* SECURITY */}
+//         <section className="section">
+//           <h2>Security of Your Personal Data</h2>
+//           <p>
+//             We use commercially acceptable means to protect Your Personal Data,
+//             but no method of transmission over the Internet is 100% secure.
+//           </p>
+//         </section>
+
+//         {/* CHILDREN */}
+//         <section className="section">
+//           <h2>Children's Privacy</h2>
+//           <p>
+//             Our Service does not address anyone under 13. We do not knowingly
+//             collect personal data from children under 13.
+//           </p>
+//         </section>
+
+//         {/* THIRD PARTY */}
+//         <section className="section">
+//           <h2>Links to Other Websites</h2>
+//           <p>
+//             Our Service may contain links to third-party websites. We are not
+//             responsible for their privacy practices.
+//           </p>
+//         </section>
+
+//         {/* CHANGES */}
+//         <section className="section">
+//           <h2>Changes to this Privacy Policy</h2>
+//           <p>
+//             We may update this Privacy Policy from time to time.
+//             Changes are effective when posted on this page.
+//           </p>
+//         </section>
+
+//         {/* CONTACT */}
+//         <section className="section">
+//           <h2>Contact Us</h2>
+//           <p>If you have any questions, contact us:</p>
+//           <ul>
+//             <li>Email: contactus@staciacorp.com</li>
+//             <li>Phone: +91 93630 34150</li>
+//             <li>
+//               Address: Ground Floor, C-53, SIDCO Industrial Estate,
+//               Guindy, Chennai, Tamil Nadu 600032
+//             </li>
+//           </ul>
+//         </section>
+
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default PrivacyPolicy;
