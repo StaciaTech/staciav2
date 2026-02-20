@@ -17,7 +17,7 @@ import sixLogo from "../assets/66.png";
 // import { PiPottedPlant } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 // import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import data from "../Data/About.json";
 // import ClientComponent from "./Client";
 import { MdOutlineFoodBank } from "react-icons/md";
@@ -27,11 +27,81 @@ import { MdOutlinePrecisionManufacturing } from "react-icons/md";
 import { SlEnergy } from "react-icons/sl";
 import { VscChip } from "react-icons/vsc";
 
+// import { useLocation } from "react-router-dom";
+
+// our term images
+import abdul from "../assets/Team/Abdul.webp";
+import divya from "../assets/Team/Divya.webp";
+import vikram from "../assets/Team/vikram2.png";
+// import thilak from "../assets/Team/thilak.png";
+import thilak from "../assets/Team/thilak3.png"
+
+
 import Loadingstar from "../components/LoadingStar"
 const AboutCarousel = React.lazy(() => import("../components/ReUsableComp/AboutCarousel"));
 const ClientComponent = React.lazy(() => import("./Client"));
 
+//   our term images set if get first name from json
+const teamImages = {
+  Abdul: abdul,
+  Divya: divya,
+  Vikram: vikram,
+  Thilak: thilak,
+  // Add other team member images here
+};
 
+
+const teamData1 = [
+  {
+    "designation": " Front-End Associate, Software Research and Development",
+    "firstName": "Vikram",
+    "fullName": "Vikram Varma V",
+    "gender": "Male",
+    "id": "67345b237a970b308b574ead",
+    "imageUrl": "assets/Team/Vikram.webp",
+    "lastName": "Varma V",
+    "outlook": "Vikram develops interactive user interfaces using modern web technologies. He collaborates closely with designers and backend teams to deliver seamless, responsive, and performance-optimized web applications and prototypes",
+    "_id": "67345b237a970b308b574ead"
+  },
+  {
+    "designation": "Embedded Design Associate, Electronic Innovation Research And Development",
+    "firstName": "Abdul",
+    "fullName": "Abdul Raheem M",
+    "gender": "Male",
+    "id": "67345cd77a970b308b574eb0",
+    "imageUrl": "assets/Team/Abdul.webp",
+    "lastName": "Raheem M",
+    "outlook": "Abdul designs and tests embedded systems for innovative electronics solutions. His role includes circuit design, firmware development, and integrating hardware-software systems for advanced technology applications.",
+    "_id": "67345cd77a970b308b574eb0"
+  },
+
+  {
+    "designation": "Employee Experience Associate, Human Resource",
+    "firstName": "Divya",
+    "fullName": "Divya U",
+    "gender": "Female",
+    "id": "67345efd7a970b308b574eb1",
+    "imageUrl": "assets/Team/Divya.webp",
+    "lastName": "U",
+    "outlook": "Divya handles end-to-end HR operations including talent sourcing, onboarding, payroll, employee engagement, feedback processes, and wellness programs—fostering a productive, inclusive, and growth-oriented workplace culture.",
+    "_id": "67345efd7a970b308b574eb1"
+  },
+  {
+    "designation": " Front-End Associate, Software Research and Development",
+    "firstName": "Thilak",
+    "fullName": "Thilak Chandran",
+    "gender": "Male",
+    "id": "67345b237a970b308b574eab",
+    "imageUrl": "assets/Team/Vikram.webp",
+    "lastName": "chandran",
+
+    // "outlook": "Thilak builds clean and scalable web interfaces using modern front-end technologies. He collaborates with designers and backend teams to deliver intuitive, reliable, and performance-driven web applications.",
+   "outlook": "Thilak develops responsive and scalable web interfaces using modern front-end technologies, collaborating with designers and backend teams to deliver reliable, high-quality web applications.",
+
+
+    "_id": "67345b237a970b308b574eab"
+  },
+]
 const Industries = [
   {
     id: 1,
@@ -74,7 +144,10 @@ function About() {
   const [staciaHistory, setStaciaHistory] = useState(data.staciaHistory);
   const [teamData, setTeamData] = useState(data.teamData);
   const [whyus, setWhyus] = useState(data.whyus);
-  const [activeSection, setActiveSection] = useState(0)
+  const [activeSection, setActiveSection] = useState(0);
+
+
+
 
   // Years section animation
   const [activeIndex, setActiveIndex] = useState(0);
@@ -82,6 +155,23 @@ function About() {
   const containerRef = useRef(null);
 
 
+  const [showTeam, setShowTeam] = useState(false);
+
+  const location = useLocation();
+
+  const marqueeTeam = [...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1, ...teamData1];
+
+
+
+  useEffect(() => {
+    setShowTeam(false);
+
+    const timer = setTimeout(() => {
+      setShowTeam(true);
+    }, 100); // small delay ensures DOM is ready
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
   // Ensure first dot is active on initial load or URL param scroll to milestone
   useEffect(() => {
     if (params.key === "milestone" || !params.key) {
@@ -391,14 +481,14 @@ function About() {
         <div className="about-section6-container">
           <div>
             <div>
-              <img src={whitelogo} alt="" style={{ padding: "1rem  2rem" , width:"15rem"}} />
+              <img src={whitelogo} alt="" style={{ padding: "1rem  2rem", width: "15rem" }} />
               <div className="about-section6-title test-seclection-blue">
                 Celebrating Six Years Excellence
               </div>
             </div>
           </div>
           <div className="about-section6-img-container">
-            <img src={sixLogo} alt="" style={{ padding: "1rem  2rem" }}/>
+            <img src={sixLogo} alt="" style={{ padding: "1rem  2rem" }} />
           </div>
           <div>
             <p className="about-section6-des test-seclection-blue">
@@ -591,38 +681,179 @@ function About() {
             solutions with creativity, collaboration, and a passion for
             excellence, shaping the future of industries worldwide.
           </p>
-
+          {/* add loop */}
           {/* Desktop Card Marquee */}
-          <div className="about-team-marquee-desk">
+          {/* <div className="about-team-marquee-desk">
             <div className="about-team-marquee">
-              {/* Render teamData three times for smoother looping */}
+              Render teamData three times for smoother looping
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set1-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set2-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set3-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set4-${i}`} eachMem={eachMem} />
                 ))}
               </div>
               <div className="marquee-content">
-                {teamData?.map((eachMem, i) => (
+                {teamData1?.map((eachMem, i) => (
                   <TeamCard key={`set5-${i}`} eachMem={eachMem} />
                 ))}
               </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set6-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set7-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set8-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set9-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set10-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set11-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set12-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set13-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set14-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set15-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set16-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set17-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set18-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set19-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set20-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set21-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set22-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set23-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set24-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set25-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set26-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set27-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+              <div className="marquee-content">
+                {teamData1?.map((eachMem, i) => (
+                  <TeamCard key={`set28-${i}`} eachMem={eachMem} />
+                ))}
+              </div>
+
+
             </div>
-          </div>
+          </div> */}
+
+          {showTeam && (
+            <div className="about-team-marquee-desk">
+              <div className="about-team-marquee">
+                {marqueeTeam.map((member, index) => (
+                  <div className="about-team-card" key={index}>
+                    <div className="about-team-img">
+                      <img
+                        src={teamImages[member.firstName]}
+                        alt={member.fullName}
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div className="about-team-name">{member.fullName}</div>
+                    <div className="about-team-role">{member.designation}</div>
+                    <div className="about-team-des">{member.outlook}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+
 
           {/* Mobile Static Cards */}
           <div className="about-team-marquee-mob">
@@ -649,7 +880,7 @@ const TeamCard = ({ eachMem }) => {
       onClick={() => setShowCardDetails(!showCardDetails)}
     >
       <div className="about-team-img">
-        <img src={eachMem.imageUrl} alt="" />
+        <img src={teamImages[eachMem.firstName] || ""} alt="" />
       </div>
       <div className="about-team-name test-seclection-blue">
         {eachMem.fullName}

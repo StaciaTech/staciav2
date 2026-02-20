@@ -63,7 +63,7 @@
     {
       "imageUrl": "/assets/LeaderPage/Mr-Revanth.webp",
       "name": "Mr Revanth",
-      "designation": "Chief Technical Officer",
+      "designation": "Chief Technology Officer",
       "file": {
         "fileUrl": "/assets/revanth.pdf"
       }
@@ -74,9 +74,9 @@
       "display": {
         "displayUrl": "/assets/One-Dril-Brochure.webp"
       },
-      "name": "One Dril Brochure",
+      "name": "One Dril Flyer",
       "file": {
-        "fileUrl": "/assets/One-Dril-Brochure.pdf"
+        "fileUrl": "/assets/OneDrillFlyer.pdf"
       }
     },
     {
@@ -130,7 +130,7 @@
       },
       "name": "Stacia Brochure",
       "file": {
-        "fileUrl": "/assets/mediakit/Stacia-Group.pdf"
+        "fileUrl": "/assets/StaciaBrochure.pdf"
       }
     }
   ]
