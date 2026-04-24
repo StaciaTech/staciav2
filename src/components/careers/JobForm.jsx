@@ -479,9 +479,9 @@ function JobForm({ closeForm }) {
       formData.append("jobRole", store.jobRole || "");
 
       // Append file if present
-      if (store.file) {
-        formData.append("resume", store.file, store.file.name);
-      }
+      // if (store.file) {
+      //   formData.append("resume", store.file, store.file.name);
+      // }
 
       // Debug log (remove in production if you want)
       // console.log("Submitting form with:", {
