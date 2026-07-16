@@ -96,7 +96,7 @@ const teamData1 = [
     "lastName": "chandran",
 
     // "outlook": "Thilak builds clean and scalable web interfaces using modern front-end technologies. He collaborates with designers and backend teams to deliver intuitive, reliable, and performance-driven web applications.",
-   "outlook": "Thilak develops responsive and scalable web interfaces using modern front-end technologies, collaborating with designers and backend teams to deliver reliable, high-quality web applications.",
+    "outlook": "Thilak develops responsive and scalable web interfaces using modern front-end technologies, collaborating with designers and backend teams to deliver reliable, high-quality web applications.",
 
 
     "_id": "67345b237a970b308b574eab"
@@ -426,6 +426,7 @@ function About() {
             ))}
           </div>
         </div>
+
         <div className="about-section4-container" id="our-mission">
           <div>
             <div className="about-section-title test-seclection-blue">

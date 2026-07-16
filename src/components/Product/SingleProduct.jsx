@@ -439,6 +439,9 @@ import SuggestionProducts from "../ReUsableComp/SuggestionProducts";
 import SuggestionService from "../ReUsableComp/SuggestionService";
 import KnowMoreSection from "./KnowMoreSection";
 import SingleProductImage from "../ThreeJS/SingleProductImage";
+import goiLogo from "../../assets/emblem-goi.jpg";
+import pmRkvyLogo from "../../assets/pm-rkvy-logo.jpg";
+import manageCiaLogo from "../../assets/manage-cia-logo.png";
 
 // Lazy load components
 const NavBar = lazy(() => import("../NavBar"));
@@ -697,6 +700,42 @@ export default function SingleProduct() {
             {/* Know More About Product Section */}
             {/* <KnowMoreSection productData={SelectedProduct} /> */}
           </div>
+
+          {params.department === "Mechanical" &&
+            params.category === "Agri-and-Food-Processing-SPM" &&
+            params.id === "Onedril-(SSM)" && (
+              <div className="product-support-container" id="support-and-incubation">
+                <div>
+                  <div className="product-support-title test-seclection-blue">
+                    Support & Incubation
+                  </div>
+                  <div className="product-support-heading test-seclection-blue">
+                    Supported by PM-RKVY and Incubated at MANAGE-CIA
+                  </div>
+                  <p className="product-support-des test-seclection-blue">
+                    We are proud to acknowledge the support received under the <strong>Prime Minister Rashtriya Krishi Vikas Yojana (PM-RKVY)</strong> for our product <strong>Onedril-(SSM)</strong>. Our startup has been incubated at <strong>MANAGE-Centre for Innovation and Agripreneurship (MANAGE-CIA)</strong> and has received <strong>Grant-in-Aid</strong> support for the development of <strong>Onedril-(SSM)</strong> under the PM-RKVY programme of the <strong>Ministry of Agriculture & Farmers Welfare, Government of India</strong>.
+                  </p>
+                  <p className="product-support-des test-seclection-blue">
+                    This support has enabled us to accelerate innovation, strengthen our product development, and contribute towards sustainable growth in the agriculture and allied sectors.
+                  </p>
+                  <p className="product-support-des-highlight test-seclection-blue">
+                    Supported by PM-RKVY Programme of the Ministry of Agriculture & Farmers welfare and incubated at MANAGE - CIA
+                  </p>
+                </div>
+                <div className="product-support-logos-container">
+                  <div className="product-support-logo-card">
+                    <img src={goiLogo} alt="Government of India Emblem" />
+                  </div>
+                  <div className="product-support-logo-card">
+                    <img src={pmRkvyLogo} alt="PM-RKVY Logo" />
+                  </div>
+                  <div className="product-support-logo-card">
+                    <img src={manageCiaLogo} alt="MANAGE-CIA Logo" />
+                  </div>
+                </div>
+              </div>
+            )}
+
           <div className="remaining-products-card-container-holder">
             <div className="single-other-service-title">Other Products</div>
             <div className="remaining-products-card-container">
