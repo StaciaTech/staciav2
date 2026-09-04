@@ -19,7 +19,7 @@
             "Troubleshoot and resolve technical issues promptly and effectively",
             "Collaborate with cross-functional teams to identify and address performance bottlenecks",
             "Participate in code reviews to uphold high-quality standards throughout the codebase",
-            "Contribute to a fast-paced and collaborative work environment"           
+            "Contribute to a fast-paced and collaborative work environment"
         ],
         "requiredSkills": [
             "Bachelor's degree in Computer Science or a related field (preferred).",
@@ -39,7 +39,7 @@
             "Experience with JavaScript, TypeScript and development on both client and server-side",
             "Experience in iOS and Android Application development.",
             "Experience with modern frameworks and design patterns",
-            "Hands-on experience with Object-Relational Mapping (ORM) and building applications using Reac", 
+            "Hands-on experience with Object-Relational Mapping (ORM) and building applications using Reac",
             "Experience with high-traffic, public-facing web applications",
             "Familiarity with cloud technologies (AWS preferred)",
             "Experience creating secure RESTful web services in XML and JSON.",
@@ -53,10 +53,10 @@
             "HTML/CSS/JS",
             "Mongoose",
             "Git &gitHub",
-            "RESTful APIs"      
+            "RESTful APIs"
         ]
     },
-        {
+    {
         "title": "Graphic Designer Intern",
         "experience": "0-1 year (Internship)",
         "qualification": "Visual Communication / Related Fields",
@@ -118,7 +118,7 @@
             "Troubleshoot and resolve technical issues promptly and effectively",
             "Collaborate with cross-functional teams to identify and address performance bottlenecks",
             "Participate in code reviews to uphold high-quality standards throughout the codebase",
-            "Contribute to a fast-paced and collaborative work environment"           
+            "Contribute to a fast-paced and collaborative work environment"
         ],
         "requiredSkills": [
             "Bachelor's degree in Computer Science or a related field (preferred).",
@@ -137,7 +137,7 @@
             "Experience in designing and developing API endpoints.",
             "Database management and query optimization.",
             "State management and component lifecycle handling.",
-            "Version control and collaborative development.", 
+            "Version control and collaborative development.",
             "Custom middleware development for backend logic.",
             "Familiarity with AWS, Firebase, and cloud deployments.",
             "Continuous integration and containerized deployment.",
@@ -154,7 +154,6 @@
             "RESTful APIs"
         ]
     },
-   
     {
         "title": "Industrial Designer Intern",
         "experience": "Fresher",
@@ -172,16 +171,15 @@
             "Collaborate on iterative prototyping and usability improvements",
             "Prepare design documentation including mood boards, storyboards, and tech packs",
             "Support manufacturing and production planning with design-for-manufacturing inputs"
-
         ],
         "requiredSkills": [
-           "Pursuing or completed a degree in Mechanical engineering, Industrial Design, Product Design, or related field",
-           "Proficiency in 3D modeling and rendering tools (e.g., SolidWorks, KeyShot, Fusion 360)",
-           "Understanding of user-centered design principles",
-           "Basic knowledge of materials, ergonomics, and manufacturing processes",
-           "Interest in prototyping, product styling, and physical model making",
-           "Strong visualization, sketching, and storytelling abilities",
-           "Good communication and collaboration skills"
+            "Pursuing or completed a degree in Mechanical engineering, Industrial Design, Product Design, or related field",
+            "Proficiency in 3D modeling and rendering tools (e.g., SolidWorks, KeyShot, Fusion 360)",
+            "Understanding of user-centered design principles",
+            "Basic knowledge of materials, ergonomics, and manufacturing processes",
+            "Interest in prototyping, product styling, and physical model making",
+            "Strong visualization, sketching, and storytelling abilities",
+            "Good communication and collaboration skills"
         ],
         "preferredSkills": [
             "Knowledge of Adobe Creative Suite (Photoshop, Illustrator)",
@@ -206,14 +204,13 @@
         "location": "Guindy, Chennai, Indiai",
         "natureOfJob": "On-Site",
         "description": "As  a  Marketing  Intern  at  Stacia  Corp,  you  will  play  a  crucial  role  in developing  and  executing  marketing  strategies  that  enhance  brand awareness,  drive  customer  engagement,  and  generate  business  leads This is an exciting opportunity to gain hands-on experience in B2B and B2C marketing,  working  to  implement  data-driven  campaigns  across digital and traditional marketing channels",
-        "responsibilities": [          
-            "Develop and execute a robust brand strategy that aligns with Stacia Corp's vision and values.",            
+        "responsibilities": [
+            "Develop and execute a robust brand strategy that aligns with Stacia Corp's vision and values.",
             "Create  a  strong  brand  identity  and  positioning  across  all touchpoints.",
             "Conduct  in-depth  market  research  to  identify  target  audiences, understand customer needs, and analyze competitive landscapes.",
             "Develop  and  implement  effective go-to-market strategies for new product launches and services.",
             "Lead  digital  marketing  efforts,  including  SEO,  SEM,  social  media marketing, email marketing, and content marketing.",
             "Design and execute campaigns to drive qualified leads for the sales team, focusing on both B2B and B2C channels."
-           
         ],
         "requiredSkills": [
             "Proven  track  record  of  developing  and  executing  successful marketing campaigns in a startup environment",
@@ -229,12 +226,12 @@
             "Ability to effectively communicate brand messaging to internal and external stakeholders",
             "In-depth  knowledge  of  digital  marketing  channels  and  tactics, including social media, SEO, content marketing, and email marketing.",
             "Proficiency in data analysis and reporting",
-            "Strong  project  management  skills  to  oversee  multiple  marketing initiatives simultaneously."            
+            "Strong  project  management  skills  to  oversee  multiple  marketing initiatives simultaneously."
         ],
         "requiredTools": [
             "SEO",
             "Google Analytics",
-            "Mail chimp"         
+            "Mail chimp"
         ]
     },
     {
@@ -263,7 +260,7 @@
             "Knowledge in SDLC process (Waterfall/V Model/ASPICE)",
             "Knowledge in developing FW drivers and test cases for automotive products (Advantage)",
             "Knowledge in development over Processor boards (TI, ST, NXP, MCU) (Advantage)",
-            "Knowledge with GitHub and Continuous Integration"           
+            "Knowledge with GitHub and Continuous Integration"
         ],
         "preferredSkills": [
             "Bootloaders – Programs that initialize hardware and load the main software during startup.",
@@ -273,7 +270,7 @@
             "Firmware – Low-level software programmed into hardware devices to control their functions.",
             "Microcontrollers – Compact integrated circuits that control embedded systems in various applications.",
             "RS-232 – A standard protocol for serial communication between devices.",
-            "PCB Design – The process of designing printed circuit boards for electronic devices."        
+            "PCB Design – The process of designing printed circuit boards for electronic devices."
         ],
         "requiredTools": [
             "Bootloaders",
@@ -284,7 +281,7 @@
             "Microcontrollers",
             "RS 232, pcb design"
         ]
-    },   
+    },
     {
         "title": "Mechanical Design Engineer Intern",
         "experience": "Fresher",
@@ -300,7 +297,7 @@
             "Conduct testing and evaluations of prototypes to ensure adherence to specifications",
             "Create and maintain detailed documentation for designs, processes, and revisions.",
             "Utilize CAD software to produce and modify engineering drawings and models.",
-            "Assist in material selection and manufacturing process planning."           
+            "Assist in material selection and manufacturing process planning."
         ],
         "requiredSkills": [
             "Diploma in Mechanical Design Engineering or a related field.",
@@ -312,12 +309,12 @@
         ],
         "preferredSkills": [
             "Good Knowledge of Design, fabrication, assembly, documentation and MS Excel",
-            "Knowledge of project management principles."         
+            "Knowledge of project management principles."
         ],
         "requiredTools": [
             "AutoCAD",
             "Fusion 360",
-            "Autodesk inventor"      
+            "Autodesk inventor"
         ]
     },
     {
@@ -336,7 +333,7 @@
             "Product Development Oversight: Collaborate closely with the engineering and design teams to guide the agile development process, ensuring features align precisely with market needs and strategic objectives, driving rapid iteration and deployment.",
             "Partnerships & Ecosystem Development: Identify and establish strategic, high-value partnerships with relevant equipment manufacturers, material suppliers, creator communities, and potential enterprise clients to accelerate adoption and growth",
             "Fundraising & Investor Relations (if applicable): Prepare compelling pitches and actively support fundraising efforts if this initiative transitions into a standalone venture, securing external investment.",
-            "Thought Leadership: Represent this initiative and Stacia Corp at industry events, conferences, and in influential publications, establishing market leadership and driving industry dialogue."           
+            "Thought Leadership: Represent this initiative and Stacia Corp at industry events, conferences, and in influential publications, establishing market leadership and driving industry dialogue."
         ],
         "requiredSkills": [
             "Entrepreneurial Drive: A proven track record of building and scaling products or businesses from inception, ideally in a startup environment or as a product leader within a large organization, demonstrating a founder's mindset",
@@ -351,13 +348,54 @@
         ],
         "preferredSkills": [
             "Good Knowledge of Design, fabrication, assembly, documentation and MS Excel",
-            "Knowledge of project management principles."         
+            "Knowledge of project management principles."
         ],
         "requiredTools": [
             "AutoCAD",
             "Fusion 360",
-            "Autodesk inventor"      
+            "Autodesk inventor"
+        ]
+    },
+    {
+        "title": "Human Resource Intern",
+        "experience": "Fresher",
+        "qualification": "MBA (Human Resource) / Related Fields",
+        "jobType": "Internship",
+        "location": "Guindy, Chennai, India",
+        "natureOfJob": "On-Site",
+        "description": "We are seeking a motivated Human Resource Intern to join our team. The ideal candidate should have strong communication, organizational, and time-management skills, along with an interest in recruitment, employee engagement, and HR operations. This role offers hands-on exposure to various HR functions and an opportunity to contribute to a growing startup.",
+        "responsibilities": [
+            "Assist in preparing job descriptions, posting job advertisements, and coordinating recruitment activities.",
+            "Support the recruitment and selection process, including candidate screening and interview coordination.",
+            "Assist with employee onboarding, orientation, and training activities.",
+            "Maintain employee records, attendance, and HR documentation.",
+            "Support payroll and benefits administration processes.",
+            "Contribute to employee engagement activities and internal events.",
+            "Assist in preparing HR reports, presentations, and other internal documents.",
+            "Help maintain accurate and up-to-date employee information.",
+            "Support the implementation of HR policies and systematic staff development procedures.",
+            "Collaborate with team members to ensure smooth day-to-day HR operations."
+        ],
+        "requiredSkills": [
+            "MBA (Human Resource) / Related Fields.",
+            "Strong written and verbal communication skills.",
+            "Good organizational and time-management abilities.",
+            "Basic knowledge of recruitment and HR operations.",
+            "Proficiency in MS Office, especially MS Excel and MS Word.",
+            "Strong interpersonal and teamwork skills.",
+            "Ability to multitask and work in a fast-paced environment.",
+            "Willingness to learn and take initiative."
+        ],
+        "preferredSkills": [
+            "Basic knowledge of HR policies and procedures.",
+            "Familiarity with recruitment platforms and HR tools.",
+            "Knowledge of employee engagement and performance management.",
+            "Good documentation and reporting skills.",
+            "Basic understanding of payroll and attendance management."
+        ],
+        "requiredTools": [
+            "MS Office (Excel, Word, PowerPoint)",
+            "Google Workspace – Google Docs, Sheets, and Forms."
         ]
     }
-
 ]
