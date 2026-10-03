@@ -13,7 +13,8 @@ import story from "../assets/story-about.webp";
 import vision from "../assets/vision.webp";
 import partnerabout from "../assets/parternship.webp";
 import purpose from "../assets/purpose.webp";
-import sixLogo from "../assets/66.png";
+// import sixLogo from "../assets/66.png";
+import sevenLogo from "../assets/seven.png";
 // import { PiPottedPlant } from "react-icons/pi";
 import Marquee from "react-fast-marquee";
 // import AboutCarousel from "../components/ReUsableComp/AboutCarousel";
@@ -322,7 +323,7 @@ function About() {
                   <p className="test-seclection-blue">projects</p>
                 </div>
                 <div className="about-section1-left-title-item">
-                  <div className="test-seclection-blue">5+ years</div>
+                  <div className="test-seclection-blue">7+ years</div>
                   <p className="test-seclection-blue">Experience</p>
                 </div>
               </div>
@@ -484,16 +485,16 @@ function About() {
             <div>
               <img src={whitelogo} alt="" style={{ padding: "1rem  2rem", width: "15rem" }} />
               <div className="about-section6-title test-seclection-blue">
-                Celebrating Six Years Excellence
+                Celebrating Seven Years Of Innovation
               </div>
             </div>
           </div>
           <div className="about-section6-img-container">
-            <img src={sixLogo} alt="" style={{ padding: "1rem  2rem" }} />
+            <img src={sevenLogo} alt="" style={{ padding: "1rem  2rem" }} />
           </div>
           <div>
             <p className="about-section6-des test-seclection-blue">
-              Six years ago, we embarked on a journey of innovation and growth.
+              Seven years ago, we embarked on a journey of innovation and growth.
               Today, we celebrate the remarkable achievements and milestones
               we've reached together. Thank you to our dedicated team, loyal
               customers, and supportive partners for making this possible.

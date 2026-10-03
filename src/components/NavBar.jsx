@@ -1010,7 +1010,7 @@ import "../styles/navbar.css";
 import Star from "../components/Star";
 import StaciaLogo from "../assets/Stacia Monogram.svg";
 import StaciaLogoText from "../assets/Stacia logo.svg";
-import six from "../assets/68.svg";
+import six from "../assets/sevent-check.svg";
 import MobileNav from "../assets/MobileNav.png";
 import WhatsNew from "./WhatsNew";
 // removed Modal + Contact since we'll open LeadModalThree directly
@@ -1094,7 +1094,7 @@ function NavBar() {
       setLogo((prevLogo) => (prevLogo === StaciaLogo ? six : StaciaLogo));
       setText((prevText) =>
         prevText === "Innovating for you"
-          ? `Celebrating 6th Anniversary`
+          ? `Celebrating 7th Anniversary`
           : "Innovating for you"
       );
     }, 7000);
