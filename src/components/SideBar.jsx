@@ -10,7 +10,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import StaciaLogo from "../assets/Stacia Monogram.svg";
 import { useAnimation, motion } from "framer-motion";
 import StaciaLogoText from "../assets/Stacia logo.svg";
-import five from "../assets/68.svg";
+import five from "../assets/sevent-check.svg";
 import gsap from "gsap";
 
 import LeadModalThree from "./LeadModalThree";
@@ -51,7 +51,7 @@ function SideBar() {
     const interval = setInterval(() => {
       setLogo((p) => (p === StaciaLogo ? five : StaciaLogo));
       setText((prev) =>
-        prev === "Innovating for you" ? `Celebrating 6th Anniversary` : "Innovating for you"
+        prev === "Innovating for you" ? `Celebrating 7th Anniversary` : "Innovating for you"
       );
     }, 7000);
     return () => clearInterval(interval);
